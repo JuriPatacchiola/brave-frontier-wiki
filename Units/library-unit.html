@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brave Frontier Library - Unità</title>
+    <link rel="stylesheet" href="../Units/assets/unit-list.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo-area">
+                <img class="logo" src="../img/logo.png" alt="">
+            </a>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="library-unit.html" class="nav-link active">Unità</a>
+                <a href="../Story/story.html" class="nav-link notranslate">Story</a>
+                <a href="#" class="nav-link notranslate">Events</a>
+                <a href="#" class="nav-link notranslate">Items</a>
+                <a href="#" class="nav-link notranslate">Sphere</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sticky-header">
+        <div class="filter-container">
+            <div class="search-row">
+                <input type="text" id="mainSearch" placeholder="Cerca Unità (Nome o ID)...">
+                <select id="raritySelector">
+                    <option value="all">Tutte le Rarità</option>
+                    <option value="1" class="notranslate">1★</option>
+                    <option value="2" class="notranslate">2★</option>
+                    <option value="3" class="notranslate">3★</option>
+                    <option value="4" class="notranslate">4★</option>
+                    <option value="5" class="notranslate">5★</option>
+                    <option value="6" class="notranslate">6★</option>
+                    <option value="7" class="notranslate">7★</option>
+                    <option value="Omni" class="notranslate">Omni</option>
+                </select>
+
+                <!-- SELETTORE LINGUA PERSONALIZZATO -->
+                <select id="customLangSelector" onchange="changeLanguage(this.value)">
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="zh-CN">🇨🇳 中文</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                </select>
+
+                <!-- Elemento nascosto ma attivo per Google Translate -->
+                <div id="google_translate_element"></div>
+            </div>
+
+            <div class="element-bar">
+                <button class="btn-elem notranslate" data-elem="Element Fire">Fire</button>
+                <button class="btn-elem notranslate" data-elem="Element Water">Water</button>
+                <button class="btn-elem notranslate" data-elem="Element Earth">Earth</button>
+                <button class="btn-elem notranslate" data-elem="Element Thunder">Thunder</button>
+                <button class="btn-elem notranslate" data-elem="Element Light">Light</button>
+                <button class="btn-elem notranslate" data-elem="Element Dark">Dark</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="gridContainer" class="unit-grid"></main>
+
+    <div id="unitModal" class="modal">
+        <div class="modal-full-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+
+            <div class="unit_main_view">
+                <div class="unit_box_top">
+
+                    <div class="unit_gif">
+                        <div id="container_default" class="anim-container" style="display:inline">
+                            <video id="video_default" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_default" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+
+                        <div id="container_idle" class="anim-container" style="display:none">
+                            <video id="video_idle" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_idle" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+
+                        <div id="container_atk" class="anim-container" style="display:none">
+                            <video id="video_atk" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_atk" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+
+                    <div class="btn_motion" onclick="toggleImg()">
+                        <img src="../img/Button For Change/btm1.png" id="btn_default" style="display:inline">
+                        <img src="../img/Button For Change/btm2.png" id="btn_idle" style="display:none">
+                        <img src="../img/Button For Change/btm3.png" id="btn_atk" style="display:none">
+                    </div>
+                </div>
+
+                <div class="unit_stats_side">
+                    <h2 id="modalName" class="notranslate"></h2>
+
+                    <div class="modal-info-row"
+                        style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <p id="modalId" style="margin:0; color: #bbb;" class="notranslate"></p>
+                        <p id="modalRarity"
+                            style="margin:0; font-weight: bold; color: #ffd700; display: flex; align-items: center; gap: 5px;"
+                            class="notranslate"></p>
+                    </div>
+
+                    <div class="type-mini-selector">
+                        <div class="type-buttons">
+                            <button class="btn-type base notranslate" onclick="changeType('base')">Base</button>
+                            <button class="btn-type lord notranslate" onclick="changeType('lord')">Lord</button>
+                            <button class="btn-type anima notranslate" onclick="changeType('anima')">Anima</button>
+                            <button class="btn-type breaker notranslate"
+                                onclick="changeType('breaker')">Breaker</button>
+                            <button class="btn-type guardian notranslate"
+                                onclick="changeType('guardian')">Guardian</button>
+                            <button class="btn-type oracle notranslate" onclick="changeType('oracle')">Oracle</button>
+                        </div>
+                    </div>
+
+                    <div class="stats_grid">
+                        <div class="stat-item"><span class="notranslate">HP</span> <b id="statHp">---</b></div>
+                        <div class="stat-item"><span class="notranslate">ATK</span> <b id="statAtk">---</b></div>
+                        <div class="stat-item"><span class="notranslate">DEF</span> <b id="statDef">---</b></div>
+                        <div class="stat-item"><span class="notranslate">REC</span> <b id="statRec">---</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit_details_scroll_area">
+                <div class="info_section">
+                    <h3 class="notranslate">Summon Quote</h3>
+                    <p id="summonQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 class="notranslate">Fusion Quote</h3>
+                    <p id="fusionQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 class="notranslate">Evolve Quote</h3>
+                    <p id="evolveQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 class="notranslate">Lore</h3>
+                    <p id="unitLore">...</p>
+                </div>
+
+                <div class="skills_container">
+                    <div class="skill_block"><strong class="notranslate">Leader Skill</strong><span id="lsName"
+                            class="notranslate"></span><br><small id="lsDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">BB</strong><span id="bbName"
+                            class="notranslate"></span><br><small id="bbDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">SBB</strong><span id="sbbName"
+                            class="notranslate"></span><br><small id="sbbDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">UBB</strong><span id="ubbName"
+                            class="notranslate"></span><br><small id="ubbDesc"></small></div>
+                </div>
+
+                <div class="evolution_area">
+                    <div class="evo_block">
+                        <h4 class="notranslate">Pre-Evolution</h4>
+                        <div id="prevEvo"></div>
+                    </div>
+                    <div class="evo_block">
+                        <h4 class="notranslate">Materials</h4>
+                        <div id="evoMats"></div>
+                    </div>
+                    <div class="evo_block">
+                        <h4 class="notranslate">Next-Evolution</h4>
+                        <div id="nextEvo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'it,en,es,fr,zh-CN,ja',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- File Script Applicazione -->
+    <script src="../Units/assets/main.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

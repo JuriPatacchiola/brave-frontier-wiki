@@ -1,0 +1,231 @@
+/* --- 1. RESET E STRUTTURA BASE --- */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    /* Mantiene la home fissa senza scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 2. HEADER DI NAVIGAZIONE (Condiviso) --- */
+.main-header {
+    flex-shrink: 0;
+    background: #000;
+    border-bottom: 1px solid #d4af37;
+    padding: 15px 0;
+    z-index: 1100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-area {
+    text-decoration: none;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+.logo-area h1 {
+    color: #d4af37;
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+    color: #d4af37;
+}
+
+/* --- 3. CONTENUTO SPECIFICO INDEX (HOME PAGE) --- */
+.home-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_80014.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-content h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    letter-spacing: 3px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.big-btn {
+    background: rgba(20, 20, 20, 0.8);
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.big-btn:hover {
+    background: #d4af37;
+    color: black;
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
+
+.big-btn img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.big-btn span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Nasconde hamburger su desktop */
+.hamburger {
+    display: none;
+}
+
+/* --- 4. RESPONSIVE (MOBILE) --- */
+@media (max-width: 600px) {
+    .home-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .big-btn {
+        padding: 20px;
+    }
+
+    html,
+    body {
+        overflow-y: auto;
+    }
+
+    /* MENU HAMBURGER */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #d4af37;
+        transition: 0.3s;
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        border-left: 1px solid #d4af37;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1150;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .main-nav .nav-link {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Animazione X */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
