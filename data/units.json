@@ -14698,7 +14698,7 @@
     "id": 214,
     "realId": "30141",
     "name": "Boxer Nemia",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b7/Unit_ills_thum_30141.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_30141.png",
     "element": "Element Earth",
     "rarity": "2",
     "lore": "Storia non disponibile.",
@@ -14746,7 +14746,7 @@
     "id": 215,
     "realId": "30142",
     "name": "Brawler Nemia",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a2/Unit_ills_thum_30142.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_30142.png",
     "element": "Element Earth",
     "rarity": "3",
     "lore": "Storia non disponibile.",
@@ -14794,7 +14794,7 @@
     "id": 216,
     "realId": "30143",
     "name": "Gaia Fist Nemia",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/00/Unit_ills_thum_30143.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_30143.png",
     "element": "Element Earth",
     "rarity": "4",
     "lore": "Storia non disponibile.",
@@ -14842,7 +14842,7 @@
     "id": 217,
     "realId": "40141",
     "name": "Zeln",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fa/Unit_ills_thum_40141.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_40141.png",
     "element": "Element Thunder",
     "rarity": "2",
     "lore": "Storia non disponibile.",
@@ -14890,7 +14890,7 @@
     "id": 218,
     "realId": "40142",
     "name": "Spark Kick Zeln",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c8/Unit_ills_thum_40142.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_40142.png",
     "element": "Element Thunder",
     "rarity": "3",
     "lore": "Storia non disponibile.",
@@ -14938,7 +14938,7 @@
     "id": 219,
     "realId": "40143",
     "name": "Thunder Kick Zeln",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Unit_ills_thum_40143.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_40143.png",
     "element": "Element Thunder",
     "rarity": "4",
     "lore": "Storia non disponibile.",
@@ -14986,7 +14986,7 @@
     "id": 220,
     "realId": "50141",
     "name": "Traveler Alma",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/71/Unit_ills_thum_50141.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_50141.png",
     "element": "Element Light",
     "rarity": "2",
     "lore": "Storia non disponibile.",
@@ -15015,13 +15015,26 @@
       "default": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-default.gif",
       "idle": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-idle.gif",
       "atk": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-atk.gif"
+    },
+    "evolution": {
+      "prevId": "50141",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50141.png",
+      "nextId": "50142",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50142.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60142.png"
+      ]
     }
   },
   {
     "id": 221,
     "realId": "50142",
     "name": "Adventurer Alma",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fc/Unit_ills_thum_50142.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_50142.png",
     "element": "Element Light",
     "rarity": "3",
     "lore": "Storia non disponibile.",
@@ -15050,13 +15063,26 @@
       "default": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-default.gif",
       "idle": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-idle.gif",
       "atk": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-atk.gif"
+    },
+    "evolution": {
+      "prevId": "50142",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50142.png",
+      "nextId": "50143",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50143.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60143.png"
+      ]
     }
   },
   {
     "id": 222,
     "realId": "50143",
     "name": "Hero Alma",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/08/Unit_ills_thum_50143.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_50143.png",
     "element": "Element Light",
     "rarity": "4",
     "lore": "Storia non disponibile.",
@@ -15085,13 +15111,26 @@
       "default": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-default.gif",
       "idle": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-idle.gif",
       "atk": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-atk.gif"
+    },
+    "evolution": {
+      "prevId": "50143",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50143.png",
+      "nextId": "50143",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50144.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50191.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60143.png"
+      ]
     }
   },
   {
     "id": 223,
     "realId": "60151",
     "name": "Ninja Oboro",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/90/Unit_ills_thum_60151.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_60151.png",
     "element": "Element Dark",
     "rarity": "2",
     "lore": "Storia non disponibile.",
@@ -15120,13 +15159,26 @@
       "default": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-default.gif",
       "idle": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-idle.gif",
       "atk": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-atk.gif"
+    },
+    "evolution": {
+      "prevId": "60151",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60151.png",
+      "nextId": "60152",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60152.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60142.png"
+      ]
     }
   },
   {
     "id": 224,
     "realId": "60152",
     "name": "Assassin Oboro",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a4/Unit_ills_thum_60152.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_60152.png",
     "element": "Element Dark",
     "rarity": "3",
     "lore": "Storia non disponibile.",
@@ -15155,13 +15207,26 @@
       "default": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-default.gif",
       "idle": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-idle.gif",
       "atk": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-atk.gif"
+    },
+    "evolution": {
+      "prevId": "60152",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60152.png",
+      "nextId": "60153",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60153.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60143.png"
+      ]
     }
   },
   {
     "id": 225,
     "realId": "60153",
     "name": "Shadow Oboro",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a6/Unit_ills_thum_60153.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_60153.png",
     "element": "Element Dark",
     "rarity": "4",
     "lore": "Storia non disponibile.",
@@ -15190,6 +15255,19 @@
       "default": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-default.gif",
       "idle": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-idle.gif",
       "atk": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-atk.gif"
+    },
+    "evolution": {
+      "prevId": "60153",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60153.png",
+      "nextId": "60154",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60154.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+        "../img/Unit/Squere Img/unit_ills_thum_60143.png"
+      ]
     }
   },
   {
@@ -19597,9 +19675,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10253/10253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10253/10253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10253/10253_atk.png"
+      "default": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-default.gif",
+      "idle": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-idle.gif",
+      "atk": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-atk.gif"
     }
   },
   {
@@ -19632,9 +19710,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10254/10254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10254/10254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10254/10254_atk.png"
+      "default": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-default.gif",
+      "idle": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-idle.gif",
+      "atk": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-atk.gif"
     }
   },
   {
@@ -19667,9 +19745,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20253/20253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20253/20253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20253/20253_atk.png"
+      "default": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-default.gif",
+      "idle": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-idle.gif",
+      "atk": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-atk.gif"
     }
   },
   {
@@ -19702,9 +19780,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20254/20254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20254/20254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20254/20254_atk.png"
+      "default": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-default.gif",
+      "idle": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-idle.gif",
+      "atk": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-atk.gif"
     }
   },
   {
@@ -19737,9 +19815,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30253/30253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30253/30253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30253/30253_atk.png"
+      "default": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-default.gif",
+      "idle": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-idle.gif",
+      "atk": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-atk.gif"
     }
   },
   {
@@ -19772,9 +19850,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30254/30254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30254/30254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30254/30254_atk.png"
+      "default": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-default.gif",
+      "idle": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-idle.gif",
+      "atk": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-atk.gif"
     }
   },
   {
@@ -19807,9 +19885,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40253/40253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40253/40253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40253/40253_atk.png"
+      "default": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-default.gif",
+      "idle": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-idle.gif",
+      "atk": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-atk.gif"
     }
   },
   {
@@ -19842,9 +19920,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40254/40254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40254/40254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40254/40254_atk.png"
+      "default": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-default.gif",
+      "idle": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-idle.gif",
+      "atk": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-atk.gif"
     }
   },
   {
@@ -19877,9 +19955,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50273/50273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50273/50273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50273/50273_atk.png"
+      "default": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-default.gif",
+      "idle": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-idle.gif",
+      "atk": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-atk.gif"
     }
   },
   {
@@ -19912,9 +19990,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50274/50274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50274/50274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50274/50274_atk.png"
+      "default": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-default.gif",
+      "idle": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-idle.gif",
+      "atk": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-atk.gif"
     }
   },
   {
@@ -19947,9 +20025,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60253/60253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60253/60253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60253/60253_atk.png"
+      "default": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-default.gif",
+      "idle": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-idle.gif",
+      "atk": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-atk.gif"
     }
   },
   {
@@ -19982,9 +20060,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60254/60254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60254/60254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60254/60254_atk.png"
+      "default": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.gif",
+      "idle": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.gif",
+      "atk": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.gif"
     }
   },
   {
@@ -20017,9 +20095,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10083/10083_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10083/10083_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10083/10083_atk.png"
+      "default": "../video/Base enemy/Salamander/Malvan/Malvan-default.gif",
+      "idle": "../video/Base enemy/Salamander/Malvan/Malvan-idle.gif",
+      "atk": "../video/Base enemy/Salamander/Malvan/Malvan-atk.gif"
     }
   },
   {
@@ -20052,9 +20130,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20083/20083_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20083/20083_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20083/20083_atk.png"
+      "default": "../video/Base enemy/Rantoul/Legnaura/Legnaura-default.gif",
+      "idle": "../video/Base enemy/Rantoul/Legnaura/Legnaura-idle.gif",
+      "atk": "../video/Base enemy/Rantoul/Legnaura/Legnaura-atk.gif"
     }
   },
   {
@@ -20087,9 +20165,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30083/30083_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30083/30083_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30083/30083_atk.png"
+      "default": "../video/Base enemy/Trent/Xipe Totec/Xipe-Totec-default.gif",
+      "idle": "../video/Base enemy/Trent/Xipe Totec/Xipe-Totec-idle.gif",
+      "atk": "../video/Base enemy/Trent/Xipe Totec/Xipe-Totec-atk.gif"
     }
   },
   {
@@ -20122,9 +20200,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40083/40083_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40083/40083_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40083/40083_atk.png"
+      "default": "../video/Base enemy/Sylph/Crow Tengu/Crow-Tengu-default.gif",
+      "idle": "../video/Base enemy/Sylph/Crow Tengu/Crow-Tengu-idle.gif",
+      "atk": "../video/Base enemy/Sylph/Crow Tengu/Crow-Tengu-atk.gif"
     }
   },
   {
@@ -20157,9 +20235,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50073/50073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50073/50073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50073/50073_atk.png"
+      "default": "../video/Base enemy/Maria/Saint Maria/Saint-Maria-default.gif",
+      "idle": "../video/Base enemy/Maria/Saint Maria/Saint-Maria-idle.gif",
+      "atk": "../video/Base enemy/Maria/Saint Maria/Saint-Maria-atk.gif"
     }
   },
   {
@@ -20192,9 +20270,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60073/60073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60073/60073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60073/60073_atk.png"
+      "default": "../video/Base enemy/Lilin/Nyx/Nyx-default.gif",
+      "idle": "../video/Base enemy/Lilin/Nyx/Nyx-default.gif",
+      "atk": "../video/Base enemy/Lilin/Nyx/Nyx-default.gif"
     }
   },
   {
@@ -20227,9 +20305,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10094/10094_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10094/10094_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10094/10094_atk.png"
+      "default": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-default.gif",
+      "idle": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-idle.gif",
+      "atk": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-atk.gif"
     }
   },
   {
@@ -20262,9 +20340,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20094/20094_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20094/20094_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20094/20094_atk.png"
+      "default": "../video/Summon/3 srar start/Undine/Meltia/Meltia-default.gif",
+      "idle": "../video/Summon/3 srar start/Undine/Meltia/Meltia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Undine/Meltia/Meltia-atk.gif"
     }
   },
   {
@@ -20297,9 +20375,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30094/30094_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30094/30094_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30094/30094_atk.png"
+      "default": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-default.gif",
+      "idle": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-idle.gif",
+      "atk": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-atk.gif"
     }
   },
   {
@@ -20332,9 +20410,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40094/40094_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40094/40094_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40094/40094_atk.png"
+      "default": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.gif",
+      "idle": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.gif",
+      "atk": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.gif"
     }
   },
   {
@@ -20367,9 +20445,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50084/50084_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50084/50084_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50084/50084_atk.png"
+      "default": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-default.gif",
+      "idle": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-idle.gif",
+      "atk": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-atk.gif"
     }
   },
   {
@@ -20402,9 +20480,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60084/60084_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60084/60084_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60084/60084_atk.png"
+      "default": "../video/Summon/3 srar start/Vampire/Legion/Legion-default.gif",
+      "idle": "../video/Summon/3 srar start/Vampire/Legion/Legion-idle.gif",
+      "atk": "../video/Summon/3 srar start/Vampire/Legion/Legion-atk.gif"
     }
   },
   {
@@ -20437,9 +20515,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10115/10115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10115/10115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10115/10115_atk.png"
+      "default": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-default.gif",
+      "idle": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-idle.gif",
+      "atk": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-atk.gif"
     }
   },
   {
@@ -20472,9 +20550,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20115/20115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20115/20115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20115/20115_atk.png"
+      "default": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-default.gif",
+      "idle": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-idle.gif",
+      "atk": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-atk.gif"
     }
   },
   {
@@ -20507,9 +20585,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30115/30115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30115/30115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30115/30115_atk.png"
+      "default": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-default.gif",
+      "idle": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-atk.gif"
     }
   },
   {
@@ -20542,9 +20620,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40115/40115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40115/40115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40115/40115_atk.png"
+      "default": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-default.gif",
+      "idle": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-idle.gif",
+      "atk": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-atk.gif"
     }
   },
   {
@@ -20577,9 +20655,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50105/50105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50105/50105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50105/50105_atk.png"
+      "default": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-default.gif",
+      "idle": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-idle.gif",
+      "atk": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-atk.gif"
     }
   },
   {
@@ -20612,9 +20690,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60105/60105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60105/60105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60105/60105_atk.png"
+      "default": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-default.gif",
+      "idle": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-idle.gif",
+      "atk": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-atk.gif"
     }
   },
   {
@@ -20647,9 +20725,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60324/60324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60324/60324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60324/60324_atk.png"
+      "default": "../video/Trail/Grahdens/Grahdens/Grahdens-default.gif",
+      "idle": "../video/Trail/Grahdens/Grahdens/Grahdens-default.gif",
+      "atk": "../video/Trail/Grahdens/Grahdens/Grahdens-default.gif"
     }
   },
   {
@@ -20682,9 +20760,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10283/10283_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10283/10283_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10283/10283_atk.png"
+      "default": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-default.gif",
+      "idle": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-idle.gif",
+      "atk": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-atk.gif"
     }
   },
   {
@@ -20717,9 +20795,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10284/10284_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10284/10284_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10284/10284_atk.png"
+      "default": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.gif",
+      "idle": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.gif",
+      "atk": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.gif"
     }
   },
   {
@@ -20752,9 +20830,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20283/20283_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20283/20283_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20283/20283_atk.png"
+      "default": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-default.gif",
+      "idle": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-idle.gif",
+      "atk": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-atk.gif"
     }
   },
   {
@@ -20787,9 +20865,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20284/20284_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20284/20284_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20284/20284_atk.png"
+      "default": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-default.gif",
+      "idle": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-idle.gif",
+      "atk": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-atk.gif"
     }
   },
   {
@@ -20822,9 +20900,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30283/30283_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30283/30283_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30283/30283_atk.png"
+      "default": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-default.gif",
+      "idle": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-idle.gif",
+      "atk": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-atk.gif"
     }
   },
   {
@@ -20857,9 +20935,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30284/30284_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30284/30284_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30284/30284_atk.png"
+      "default": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-default.gif",
+      "idle": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-idle.gif",
+      "atk": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-atk.gif"
     }
   },
   {
@@ -20892,9 +20970,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40283/40283_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40283/40283_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40283/40283_atk.png"
+      "default": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-default.gif",
+      "idle": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-idle.gif",
+      "atk": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-atk.gif"
     }
   },
   {
@@ -20927,9 +21005,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40284/40284_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40284/40284_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40284/40284_atk.png"
+      "default": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-default.gif",
+      "idle": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-idle.gif",
+      "atk": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-atk.gif"
     }
   },
   {
@@ -21600,7 +21678,7 @@
   {
     "id": 413,
     "realId": "10324",
-    "name": "Aisha (5)",
+    "name": "Aisha",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/62/Unit_ills_thum_10324.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -21670,7 +21748,7 @@
   {
     "id": 415,
     "realId": "20314",
-    "name": "Sif (5)",
+    "name": "Sif",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/01/Unit_ills_thum_20314.png",
     "element": "Element Water",
     "rarity": "5",
@@ -21740,7 +21818,7 @@
   {
     "id": 417,
     "realId": "30304",
-    "name": "Claudia (5)",
+    "name": "Claudia",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/90/Unit_ills_thum_30304.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -21810,7 +21888,7 @@
   {
     "id": 419,
     "realId": "40304",
-    "name": "Gray (5)",
+    "name": "Gray",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0d/Unit_ills_thum_40304.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -21880,7 +21958,7 @@
   {
     "id": 421,
     "realId": "50334",
-    "name": "Albert (5)",
+    "name": "Albert",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3d/Unit_ills_thum_50334.png",
     "element": "Element Light",
     "rarity": "5",
@@ -21950,7 +22028,7 @@
   {
     "id": 423,
     "realId": "60304",
-    "name": "Jamil (5)",
+    "name": "Jamil",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a8/Unit_ills_thum_60304.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -32485,7 +32563,7 @@
   {
     "id": 730,
     "realId": "20504",
-    "name": "Primm (5)",
+    "name": "Primm",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/22/Unit_ills_thum_20504.png",
     "element": "Element Water",
     "rarity": "5",
@@ -32555,7 +32633,7 @@
   {
     "id": 732,
     "realId": "30484",
-    "name": "Popoi (5)",
+    "name": "Popoi",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f5/Unit_ills_thum_30484.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -32625,7 +32703,7 @@
   {
     "id": 734,
     "realId": "40484",
-    "name": "Flammie (5)",
+    "name": "Flammie",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e5/Unit_ills_thum_40484.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -32695,7 +32773,7 @@
   {
     "id": 736,
     "realId": "50574",
-    "name": "Aria (5)",
+    "name": "Aria",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d7/Unit_ills_thum_50574.png",
     "element": "Element Light",
     "rarity": "5",
@@ -32765,7 +32843,7 @@
   {
     "id": 738,
     "realId": "60554",
-    "name": "Iris (5)",
+    "name": "Iris",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_60554.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -33816,7 +33894,7 @@
     "id": 768,
     "realId": "50593",
     "name": "Ruruha",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0d/Unit_ills_thum_50593.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_50593.png",
     "element": "Element Light",
     "rarity": "4",
     "lore": "Storia non disponibile.",
@@ -33850,8 +33928,8 @@
   {
     "id": 769,
     "realId": "50594",
-    "name": "Ruruha (5)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/da/Unit_ills_thum_50594.png",
+    "name": "Ruruha",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_50594.png",
     "element": "Element Light",
     "rarity": "5",
     "lore": "Storia non disponibile.",
@@ -33877,14 +33955,84 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_atk.png"
+      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_default.png",
+      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_idle.png",
+      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_atk.png"
+    }
+  },
+  {
+    "id": 768,
+    "realId": "60613",
+    "name": "Nazil",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_60613.png",
+    "element": "Element Dark",
+    "rarity": "4",
+    "lore": "Storia non disponibile.",
+    "stats": {
+      "lord": null
+    },
+    "skills": {
+      "ls": {
+        "name": "---",
+        "desc": "---"
+      },
+      "bb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "sbb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "ubb": {
+        "name": "---",
+        "desc": "---"
+      }
+    },
+    "animations": {
+      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_default.png",
+      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_idle.png",
+      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_atk.png"
+    }
+  },
+  {
+    "id": 769,
+    "realId": "60614",
+    "name": "Nazil",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_60614.png",
+    "element": "Element Dark",
+    "rarity": "5",
+    "lore": "Storia non disponibile.",
+    "stats": {
+      "lord": null
+    },
+    "skills": {
+      "ls": {
+        "name": "---",
+        "desc": "---"
+      },
+      "bb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "sbb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "ubb": {
+        "name": "---",
+        "desc": "---"
+      }
+    },
+    "animations": {
+      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60614/60614_default.png",
+      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60614/60614_idle.png",
+      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60614/60614_atk.png"
     }
   },
   {
     "id": 770,
-    "realId": "20494",
+    "realId": "60614",
     "name": "Noah",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/35/Unit_ills_thum_20494.png",
     "element": "Element Water",
@@ -33990,7 +34138,7 @@
   {
     "id": 773,
     "realId": "10574",
-    "name": "Stahn (5)",
+    "name": "Stahn",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/02/Unit_ills_thum_10574.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -34060,7 +34208,7 @@
   {
     "id": 775,
     "realId": "20544",
-    "name": "Rutee (5)",
+    "name": "Rutee",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/78/Unit_ills_thum_20544.png",
     "element": "Element Water",
     "rarity": "5",
@@ -34130,7 +34278,7 @@
   {
     "id": 777,
     "realId": "30534",
-    "name": "Rita (5)",
+    "name": "Rita",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/dc/Unit_ills_thum_30534.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -34200,7 +34348,7 @@
   {
     "id": 779,
     "realId": "40514",
-    "name": "Arche (5)",
+    "name": "Arche",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5c/Unit_ills_thum_40514.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -34270,7 +34418,7 @@
   {
     "id": 781,
     "realId": "50634",
-    "name": "Cress (5)",
+    "name": "Cress",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/96/Unit_ills_thum_50634.png",
     "element": "Element Light",
     "rarity": "5",
@@ -34620,7 +34768,7 @@
   {
     "id": 791,
     "realId": "30524",
-    "name": "Bilbo Baggins (5)",
+    "name": "Bilbo Baggins",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/28/Unit_ills_thum_30524.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -38188,41 +38336,6 @@
     }
   },
   {
-    "id": 896,
-    "realId": "60676",
-    "name": "Galactic Treasure Ivris",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/58/Unit_ills_thum_60676.png",
-    "element": "Element Dark",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60676/60676_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60676/60676_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60676/60676_atk.png"
-    }
-  },
-  {
     "id": 897,
     "realId": "10126",
     "name": "Phoenix Wings Lava",
@@ -38365,7 +38478,7 @@
   {
     "id": 901,
     "realId": "50704",
-    "name": "Tyrfing (5)",
+    "name": "Tyrfing",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/ff/Unit_ills_thum_50704.png",
     "element": "Element Light",
     "rarity": "5",
@@ -38435,7 +38548,7 @@
   {
     "id": 903,
     "realId": "60714",
-    "name": "Laevateinn (5)",
+    "name": "Laevateinn",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/12/Unit_ills_thum_60714.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -41234,41 +41347,6 @@
   },
   {
     "id": 983,
-    "realId": "60575",
-    "name": "Grudge Flail Sylvia",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8d/Unit_ills_thum_60575.png",
-    "element": "Element Dark",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60575/60575_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60575/60575_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60575/60575_atk.png"
-    }
-  },
-  {
-    "id": 985,
     "realId": "60575",
     "name": "Grudge Flail Sylvia",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8d/Unit_ills_thum_60575.png",
@@ -45015,7 +45093,7 @@
   {
     "id": 1093,
     "realId": "10575",
-    "name": "Stahn (6)",
+    "name": "Stahn",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d7/Unit_ills_thum_10575.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -45050,7 +45128,7 @@
   {
     "id": 1094,
     "realId": "20545",
-    "name": "Rutee (6)",
+    "name": "Rutee",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/02/Unit_ills_thum_20545.png",
     "element": "Element Water",
     "rarity": "6",
@@ -45085,7 +45163,7 @@
   {
     "id": 1095,
     "realId": "30535",
-    "name": "Rita (6)",
+    "name": "Rita",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/19/Unit_ills_thum_30535.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -45120,7 +45198,7 @@
   {
     "id": 1096,
     "realId": "40515",
-    "name": "Arche (6)",
+    "name": "Arche",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/85/Unit_ills_thum_40515.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -45155,7 +45233,7 @@
   {
     "id": 1097,
     "realId": "50635",
-    "name": "Cress (6)",
+    "name": "Cress",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/64/Unit_ills_thum_50635.png",
     "element": "Element Light",
     "rarity": "6",
@@ -47535,7 +47613,7 @@
   {
     "id": 1165,
     "realId": "50705",
-    "name": "Tyrfing (6)",
+    "name": "Tyrfing",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/06/Unit_ills_thum_50705.png",
     "element": "Element Light",
     "rarity": "6",
@@ -67760,6 +67838,41 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30494/30494_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30494/30494_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30494/30494_atk.png"
+    }
+  },
+  {
+    "id": 1808,
+    "realId": "30495",
+    "name": "Maestro Goddess Miku",
+    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_30495.png",
+    "element": "Element Earth",
+    "rarity": "5",
+    "lore": "Storia non disponibile.",
+    "stats": {
+      "lord": null
+    },
+    "skills": {
+      "ls": {
+        "name": "---",
+        "desc": "---"
+      },
+      "bb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "sbb": {
+        "name": "---",
+        "desc": "---"
+      },
+      "ubb": {
+        "name": "---",
+        "desc": "---"
+      }
+    },
+    "animations": {
+      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30495/30495_default.png",
+      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30495/30495_idle.png",
+      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/3049/30495_atk.png"
     }
   },
   {
