@@ -44636,41 +44636,6 @@
     }
   },
   {
-    "id": 1080,
-    "realId": "40645",
-    "name": "Lightning Rain Zoldark",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/96/Unit_ills_thum_40645.png",
-    "element": "Element Thunder",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40645/40645_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40645/40645_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40645/40645_atk.png"
-    }
-  },
-  {
     "id": 1081,
     "realId": "40646",
     "name": "Electrical Storm Eldora",
@@ -67844,7 +67809,7 @@
     "id": 1808,
     "realId": "30495",
     "name": "Maestro Goddess Miku",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_30495.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_30495.png",
     "element": "Element Earth",
     "rarity": "5",
     "lore": "Storia non disponibile.",
