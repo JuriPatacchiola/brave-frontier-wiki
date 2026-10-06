@@ -2,6 +2,7 @@ let allUnits = [];
 let currentFilteredUnits = [];
 let activeElement = null;
 let currentUnitOpen = null;
+let isFullArtOpen = false; // Stato per la visualizzazione della Full Art
 
 let displayedCount = 40;
 const BATCH_SIZE = 40;
@@ -491,6 +492,7 @@ function resetModalScrolls() {
 
 function openModal(u) {
     currentUnitOpen = u;
+    isFullArtOpen = false; // Reset dello stato full art alla chiusura/apertura
 
     // Seleziona un'arena casuale all'apertura della modale
     const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
@@ -538,6 +540,12 @@ function openModal(u) {
         u.evolution.materials.forEach(m => { matCont.innerHTML += `<img src="${m}" class="mat-icon" loading="lazy">`; });
     } else { matCont.innerText = '---'; }
 
+    // Gestione reset Full Art UI
+    const fullArtContainer = document.getElementById('container_fullart');
+    if (fullArtContainer) fullArtContainer.style.display = 'none';
+    const btnBtm5 = document.getElementById('btn_btm5');
+    if (btnBtm5) btnBtm5.classList.remove('active');
+
     changeType('base');
     const unitSlug = getActiveUnitName(u).trim().toLowerCase().replace(/\s+/g, '-');
     window.history.pushState({ unitName: getActiveUnitName(u) }, '', window.location.pathname + "?unit=" + unitSlug);
@@ -561,8 +569,59 @@ function changeArenaBackground() {
     }
 }
 
+// --- GESTIONE FULL ART (btm5) ---
+function toggleFullArt() {
+    if (!currentUnitOpen) return;
+
+    isFullArtOpen = !isFullArtOpen;
+    const fullArtContainer = document.getElementById('container_fullart');
+    const imgFullArt = document.getElementById('img_fullart');
+    const btnBtm5 = document.getElementById('btn_btm5');
+
+    const unitId = currentUnitOpen.realId || currentUnitOpen.id;
+    // Percorso corretto basato sulla cartella "Full Art" e prefisso "unit_ills_full_"
+    const fullArtSrc = `../img/Full Art/unit_ills_full_${unitId}.png`;
+
+    if (isFullArtOpen) {
+        // Nascondi le animazioni/video standard
+        ['default', 'idle', 'atk'].forEach(t => {
+            const container = document.getElementById(`container_${t}`);
+            if (container) container.style.display = 'none';
+            const videoTag = document.getElementById(`video_${t}`);
+            if (videoTag) videoTag.pause();
+        });
+
+        if (imgFullArt) {
+            imgFullArt.onerror = function () {
+                console.error("❌ Immagine Full Art non trovata per il percorso: " + fullArtSrc);
+            };
+            imgFullArt.src = fullArtSrc;
+        }
+
+        if (fullArtContainer) fullArtContainer.style.display = 'block';
+        if (btnBtm5) btnBtm5.classList.add('active');
+    } else {
+        if (fullArtContainer) fullArtContainer.style.display = 'none';
+        if (imgFullArt) imgFullArt.removeAttribute('src');
+        if (btnBtm5) btnBtm5.classList.remove('active');
+
+        // Ritorna all'animazione corrente
+        showMotion('default');
+    }
+}
+
 function showMotion(type) {
     if (!currentUnitOpen) return;
+
+    // Se la Full Art è aperta, la chiudiamo passando a una motion
+    if (isFullArtOpen) {
+        isFullArtOpen = false;
+        const fullArtContainer = document.getElementById('container_fullart');
+        if (fullArtContainer) fullArtContainer.style.display = 'none';
+        const btnBtm5 = document.getElementById('btn_btm5');
+        if (btnBtm5) btnBtm5.classList.remove('active');
+    }
+
     const motions = ['default', 'idle', 'atk'];
 
     motions.forEach(t => {
@@ -618,6 +677,7 @@ function showMotion(type) {
 }
 
 function toggleImg() {
+    if (isFullArtOpen) return; // Disabilita il toggle ciclico se siamo in modalità Full Art
     const dCont = document.getElementById('container_default');
     const iCont = document.getElementById('container_idle');
     if (dCont && dCont.style.display !== 'none') showMotion('idle');
@@ -629,6 +689,10 @@ function closeModal() {
     const modalEl = document.getElementById('unitModal');
     if (modalEl) modalEl.style.display = 'none';
     document.body.classList.remove('modal-open');
+
+    isFullArtOpen = false;
+    const fullArtContainer = document.getElementById('container_fullart');
+    if (fullArtContainer) fullArtContainer.style.display = 'none';
 
     ['default', 'idle', 'atk'].forEach(t => {
         const v = document.getElementById(`video_${t}`);
@@ -671,6 +735,12 @@ function initListeners() {
     const btm4Container = document.getElementById('btn_btm4_container');
     if (btm4Container) {
         btm4Container.onclick = changeArenaBackground;
+    }
+
+    // Collegamento dell'evento click per il pulsante Full Art (btm5)
+    const btm5Btn = document.getElementById('btn_btm5') || document.getElementById('btn_btm5_container');
+    if (btm5Btn) {
+        btm5Btn.onclick = toggleFullArt;
     }
 
     document.querySelectorAll('.btn-elem').forEach(btn => {
