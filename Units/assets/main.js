@@ -7,6 +7,354 @@ let displayedCount = 40;
 const BATCH_SIZE = 40;
 let scrollObserver = null;
 
+// Array completo di tutte le arene estratte dal video
+const arenaBackgrounds = [
+    '../img/Arena Battle/dungeon_battle_10100.jpg',
+    '../img/Arena Battle/dungeon_battle_10200.jpg',
+    '../img/Arena Battle/dungeon_battle_10300.jpg',
+    '../img/Arena Battle/dungeon_battle_10400.jpg',
+    '../img/Arena Battle/dungeon_battle_10500.jpg',
+    '../img/Arena Battle/dungeon_battle_20200.jpg',
+    '../img/Arena Battle/dungeon_battle_20300.jpg',
+    '../img/Arena Battle/dungeon_battle_20400.jpg',
+    '../img/Arena Battle/dungeon_battle_20500.jpg',
+    '../img/Arena Battle/dungeon_battle_20600.jpg',
+    '../img/Arena Battle/dungeon_battle_20700.jpg',
+    '../img/Arena Battle/dungeon_battle_30100.jpg',
+    '../img/Arena Battle/dungeon_battle_30300.jpg',
+    '../img/Arena Battle/dungeon_battle_30400.jpg',
+    '../img/Arena Battle/dungeon_battle_30500.jpg',
+    '../img/Arena Battle/dungeon_battle_30600.jpg',
+    '../img/Arena Battle/dungeon_battle_30700.jpg',
+    '../img/Arena Battle/dungeon_battle_40100.jpg',
+    '../img/Arena Battle/dungeon_battle_40200.jpg',
+    '../img/Arena Battle/dungeon_battle_40300.jpg',
+    '../img/Arena Battle/dungeon_battle_40400.jpg',
+    '../img/Arena Battle/dungeon_battle_40500.jpg',
+    '../img/Arena Battle/dungeon_battle_40600.jpg',
+    '../img/Arena Battle/dungeon_battle_40700.jpg',
+    '../img/Arena Battle/dungeon_battle_50100.jpg',
+    '../img/Arena Battle/dungeon_battle_50200.jpg',
+    '../img/Arena Battle/dungeon_battle_50300.jpg',
+    '../img/Arena Battle/dungeon_battle_50400.jpg',
+    '../img/Arena Battle/dungeon_battle_50500.jpg',
+    '../img/Arena Battle/dungeon_battle_50600.jpg',
+    '../img/Arena Battle/dungeon_battle_60100.jpg',
+    '../img/Arena Battle/dungeon_battle_60200.jpg',
+    '../img/Arena Battle/dungeon_battle_60300.jpg',
+    '../img/Arena Battle/dungeon_battle_60400.jpg',
+    '../img/Arena Battle/dungeon_battle_60500.jpg',
+    '../img/Arena Battle/dungeon_battle_60600.jpg',
+    '../img/Arena Battle/dungeon_battle_60700.jpg',
+    '../img/Arena Battle/dungeon_battle_70100.jpg',
+    '../img/Arena Battle/dungeon_battle_70200.jpg',
+    '../img/Arena Battle/dungeon_battle_70300.jpg',
+    '../img/Arena Battle/dungeon_battle_70400.jpg',
+    '../img/Arena Battle/dungeon_battle_70500.jpg',
+    '../img/Arena Battle/dungeon_battle_70600.jpg',
+    '../img/Arena Battle/dungeon_battle_80000.jpg',
+    '../img/Arena Battle/dungeon_battle_80001.jpg',
+    '../img/Arena Battle/dungeon_battle_80002.jpg',
+    '../img/Arena Battle/dungeon_battle_80003.jpg',
+    '../img/Arena Battle/dungeon_battle_80004.jpg',
+    '../img/Arena Battle/dungeon_battle_80005.jpg',
+    '../img/Arena Battle/dungeon_battle_80006.jpg',
+    '../img/Arena Battle/dungeon_battle_80007.jpg',
+    '../img/Arena Battle/dungeon_battle_80010.jpg',
+    '../img/Arena Battle/dungeon_battle_80011.jpg',
+    '../img/Arena Battle/dungeon_battle_80012.jpg',
+    '../img/Arena Battle/dungeon_battle_80013.jpg',
+    '../img/Arena Battle/dungeon_battle_80014.jpg',
+    '../img/Arena Battle/dungeon_battle_80015.jpg',
+    '../img/Arena Battle/dungeon_battle_80016.jpg',
+    '../img/Arena Battle/dungeon_battle_80020.jpg',
+    '../img/Arena Battle/dungeon_battle_80021.jpg',
+    '../img/Arena Battle/dungeon_battle_80022.jpg',
+    '../img/Arena Battle/dungeon_battle_80023.jpg',
+    '../img/Arena Battle/dungeon_battle_80024.jpg',
+    '../img/Arena Battle/dungeon_battle_80025.jpg',
+    '../img/Arena Battle/dungeon_battle_80026.jpg',
+    '../img/Arena Battle/dungeon_battle_80030.jpg',
+    '../img/Arena Battle/dungeon_battle_80031.jpg',
+    '../img/Arena Battle/dungeon_battle_80032.jpg',
+    '../img/Arena Battle/dungeon_battle_80033.jpg',
+    '../img/Arena Battle/dungeon_battle_80034.jpg',
+    '../img/Arena Battle/dungeon_battle_80035.jpg',
+    '../img/Arena Battle/dungeon_battle_80036.jpg',
+    '../img/Arena Battle/dungeon_battle_80040.jpg',
+    '../img/Arena Battle/dungeon_battle_80041.jpg',
+    '../img/Arena Battle/dungeon_battle_80042.jpg',
+    '../img/Arena Battle/dungeon_battle_80043.jpg',
+    '../img/Arena Battle/dungeon_battle_80044.jpg',
+    '../img/Arena Battle/dungeon_battle_80045.jpg',
+    '../img/Arena Battle/dungeon_battle_80046.jpg',
+    '../img/Arena Battle/dungeon_battle_80050.jpg',
+    '../img/Arena Battle/dungeon_battle_80051.jpg',
+    '../img/Arena Battle/dungeon_battle_80052.jpg',
+    '../img/Arena Battle/dungeon_battle_80053.jpg',
+    '../img/Arena Battle/dungeon_battle_80054.jpg',
+    '../img/Arena Battle/dungeon_battle_80055.jpg',
+    '../img/Arena Battle/dungeon_battle_80056.jpg',
+    '../img/Arena Battle/dungeon_battle_80060.jpg',
+    '../img/Arena Battle/dungeon_battle_80061.jpg',
+    '../img/Arena Battle/dungeon_battle_80062.jpg',
+    '../img/Arena Battle/dungeon_battle_80063.jpg',
+    '../img/Arena Battle/dungeon_battle_80064.jpg',
+    '../img/Arena Battle/dungeon_battle_80065.jpg',
+    '../img/Arena Battle/dungeon_battle_80066.jpg',
+    '../img/Arena Battle/dungeon_battle_80067.jpg',
+    '../img/Arena Battle/dungeon_battle_80068.jpg',
+    '../img/Arena Battle/dungeon_battle_80070.jpg',
+    '../img/Arena Battle/dungeon_battle_80071.jpg',
+    '../img/Arena Battle/dungeon_battle_80072.jpg',
+    '../img/Arena Battle/dungeon_battle_80073.jpg',
+    '../img/Arena Battle/dungeon_battle_80074.jpg',
+    '../img/Arena Battle/dungeon_battle_80075.jpg',
+    '../img/Arena Battle/dungeon_battle_80076.jpg',
+    '../img/Arena Battle/dungeon_battle_80077.jpg',
+    '../img/Arena Battle/dungeon_battle_80080.jpg',
+    '../img/Arena Battle/dungeon_battle_80081.jpg',
+    '../img/Arena Battle/dungeon_battle_80082.jpg',
+    '../img/Arena Battle/dungeon_battle_80083.jpg',
+    '../img/Arena Battle/dungeon_battle_80084.jpg',
+    '../img/Arena Battle/dungeon_battle_80087.jpg',
+    '../img/Arena Battle/dungeon_battle_80090.jpg',
+    '../img/Arena Battle/dungeon_battle_80091.jpg',
+    '../img/Arena Battle/dungeon_battle_80092.jpg',
+    '../img/Arena Battle/dungeon_battle_80100.jpg',
+    '../img/Arena Battle/dungeon_battle_80101.jpg',
+    '../img/Arena Battle/dungeon_battle_80102.jpg',
+    '../img/Arena Battle/dungeon_battle_80103.jpg',
+    '../img/Arena Battle/dungeon_battle_80104.jpg',
+    '../img/Arena Battle/dungeon_battle_80105.jpg',
+    '../img/Arena Battle/dungeon_battle_80106.jpg',
+    '../img/Arena Battle/dungeon_battle_80107.jpg',
+    '../img/Arena Battle/dungeon_battle_80108.jpg',
+    '../img/Arena Battle/dungeon_battle_80110.jpg',
+    '../img/Arena Battle/dungeon_battle_80111.jpg',
+    '../img/Arena Battle/dungeon_battle_80112.jpg',
+    '../img/Arena Battle/dungeon_battle_80113.jpg',
+    '../img/Arena Battle/dungeon_battle_80114.jpg',
+    '../img/Arena Battle/dungeon_battle_80115.jpg',
+    '../img/Arena Battle/dungeon_battle_80116.jpg',
+    '../img/Arena Battle/dungeon_battle_80117.jpg',
+    '../img/Arena Battle/dungeon_battle_80120.jpg',
+    '../img/Arena Battle/dungeon_battle_80121.jpg',
+    '../img/Arena Battle/dungeon_battle_80122.jpg',
+    '../img/Arena Battle/dungeon_battle_80123.jpg',
+    '../img/Arena Battle/dungeon_battle_80124.jpg',
+    '../img/Arena Battle/dungeon_battle_80125.jpg',
+    '../img/Arena Battle/dungeon_battle_80126.jpg',
+    '../img/Arena Battle/dungeon_battle_80127.jpg',
+    '../img/Arena Battle/dungeon_battle_80130.jpg',
+    '../img/Arena Battle/dungeon_battle_80131.jpg',
+    '../img/Arena Battle/dungeon_battle_80132.jpg',
+    '../img/Arena Battle/dungeon_battle_80133.jpg',
+    '../img/Arena Battle/dungeon_battle_80134.jpg',
+    '../img/Arena Battle/dungeon_battle_80135.jpg',
+    '../img/Arena Battle/dungeon_battle_80136.jpg',
+    '../img/Arena Battle/dungeon_battle_80140.jpg',
+    '../img/Arena Battle/dungeon_battle_80141.jpg',
+    '../img/Arena Battle/dungeon_battle_80142.jpg',
+    '../img/Arena Battle/dungeon_battle_80143.jpg',
+    '../img/Arena Battle/dungeon_battle_80144.jpg',
+    '../img/Arena Battle/dungeon_battle_80145.jpg',
+    '../img/Arena Battle/dungeon_battle_80146.jpg',
+    '../img/Arena Battle/dungeon_battle_80147.jpg',
+    '../img/Arena Battle/dungeon_battle_80150.jpg',
+    '../img/Arena Battle/dungeon_battle_80151.jpg',
+    '../img/Arena Battle/dungeon_battle_80152.jpg',
+    '../img/Arena Battle/dungeon_battle_80153.jpg',
+    '../img/Arena Battle/dungeon_battle_80154.jpg',
+    '../img/Arena Battle/dungeon_battle_80155.jpg',
+    '../img/Arena Battle/dungeon_battle_80156.jpg',
+    '../img/Arena Battle/dungeon_battle_80157.jpg',
+    '../img/Arena Battle/dungeon_battle_80160.jpg',
+    '../img/Arena Battle/dungeon_battle_80161.jpg',
+    '../img/Arena Battle/dungeon_battle_80162.jpg',
+    '../img/Arena Battle/dungeon_battle_80163.jpg',
+    '../img/Arena Battle/dungeon_battle_80166.jpg',
+    '../img/Arena Battle/dungeon_battle_80167.jpg',
+    '../img/Arena Battle/dungeon_battle_80170.jpg',
+    '../img/Arena Battle/dungeon_battle_80171.jpg',
+    '../img/Arena Battle/dungeon_battle_80172.jpg',
+    '../img/Arena Battle/dungeon_battle_80173.jpg',
+    '../img/Arena Battle/dungeon_battle_80174.jpg',
+    '../img/Arena Battle/dungeon_battle_80175.jpg',
+    '../img/Arena Battle/dungeon_battle_80176.jpg',
+    '../img/Arena Battle/dungeon_battle_80177.jpg',
+    '../img/Arena Battle/dungeon_battle_80180.jpg',
+    '../img/Arena Battle/dungeon_battle_80181.jpg',
+    '../img/Arena Battle/dungeon_battle_80182.jpg',
+    '../img/Arena Battle/dungeon_battle_80183.jpg',
+    '../img/Arena Battle/dungeon_battle_80184.jpg',
+    '../img/Arena Battle/dungeon_battle_80185.jpg',
+    '../img/Arena Battle/dungeon_battle_80186_01.jpg',
+    '../img/Arena Battle/dungeon_battle_80186_02.jpg',
+    '../img/Arena Battle/dungeon_battle_80186_03.jpg',
+    '../img/Arena Battle/dungeon_battle_80187.jpg',
+    '../img/Arena Battle/dungeon_battle_80190.jpg',
+    '../img/Arena Battle/dungeon_battle_80191.jpg',
+    '../img/Arena Battle/dungeon_battle_80192.jpg',
+    '../img/Arena Battle/dungeon_battle_80193.jpg',
+    '../img/Arena Battle/dungeon_battle_80194.jpg',
+    '../img/Arena Battle/dungeon_battle_80195.jpg',
+    '../img/Arena Battle/dungeon_battle_80801.jpg',
+    '../img/Arena Battle/dungeon_battle_80802.jpg',
+    '../img/Arena Battle/dungeon_battle_89001.jpg',
+    '../img/Arena Battle/dungeon_battle_89002.jpg',
+    '../img/Arena Battle/dungeon_battle_81000.jpg',
+    '../img/Arena Battle/dungeon_battle_81001.jpg',
+    '../img/Arena Battle/dungeon_battle_81002.jpg',
+    '../img/Arena Battle/dungeon_battle_81003.jpg',
+    '../img/Arena Battle/dungeon_battle_81004.jpg',
+    '../img/Arena Battle/dungeon_battle_81005.jpg',
+    '../img/Arena Battle/dungeon_battle_81006.jpg',
+    '../img/Arena Battle/dungeon_battle_81007.jpg',
+    '../img/Arena Battle/dungeon_battle_81010.jpg',
+    '../img/Arena Battle/dungeon_battle_81011.jpg',
+    '../img/Arena Battle/dungeon_battle_81012.jpg',
+    '../img/Arena Battle/dungeon_battle_81013.jpg',
+    '../img/Arena Battle/dungeon_battle_81014.jpg',
+    '../img/Arena Battle/dungeon_battle_81015.jpg',
+    '../img/Arena Battle/dungeon_battle_81016.jpg',
+    '../img/Arena Battle/dungeon_battle_81017.jpg',
+    '../img/Arena Battle/dungeon_battle_81018.jpg',
+    '../img/Arena Battle/dungeon_battle_81019.jpg',
+    '../img/Arena Battle/dungeon_battle_81020.jpg',
+    '../img/Arena Battle/dungeon_battle_81021.jpg',
+    '../img/Arena Battle/dungeon_battle_81022.jpg',
+    '../img/Arena Battle/dungeon_battle_81023.jpg',
+    '../img/Arena Battle/dungeon_battle_81024.jpg',
+    '../img/Arena Battle/dungeon_battle_81025.jpg',
+    '../img/Arena Battle/dungeon_battle_81026.jpg',
+    '../img/Arena Battle/dungeon_battle_81027.jpg',
+    '../img/Arena Battle/dungeon_battle_81028.jpg',
+    '../img/Arena Battle/dungeon_battle_81029.jpg',
+    '../img/Arena Battle/dungeon_battle_81030.jpg',
+    '../img/Arena Battle/dungeon_battle_81031.jpg',
+    '../img/Arena Battle/dungeon_battle_81032.jpg',
+    '../img/Arena Battle/dungeon_battle_81033.jpg',
+    '../img/Arena Battle/dungeon_battle_81034.jpg',
+    '../img/Arena Battle/dungeon_battle_81035.jpg',
+    '../img/Arena Battle/dungeon_battle_81036.jpg',
+    '../img/Arena Battle/dungeon_battle_81037.jpg',
+    '../img/Arena Battle/dungeon_battle_81040.jpg',
+    '../img/Arena Battle/dungeon_battle_81041.jpg',
+    '../img/Arena Battle/dungeon_battle_81042.jpg',
+    '../img/Arena Battle/dungeon_battle_81043.jpg',
+    '../img/Arena Battle/dungeon_battle_81044.jpg',
+    '../img/Arena Battle/dungeon_battle_81045.jpg',
+    '../img/Arena Battle/dungeon_battle_81046.jpg',
+    '../img/Arena Battle/dungeon_battle_81047.jpg',
+    '../img/Arena Battle/dungeon_battle_81048.jpg',
+    '../img/Arena Battle/dungeon_battle_81049.jpg',
+    '../img/Arena Battle/dungeon_battle_81050.jpg',
+    '../img/Arena Battle/dungeon_battle_81060.jpg',
+    '../img/Arena Battle/dungeon_battle_81061.jpg',
+    '../img/Arena Battle/dungeon_battle_81062.jpg',
+    '../img/Arena Battle/dungeon_battle_81063.jpg',
+    '../img/Arena Battle/dungeon_battle_81064.jpg',
+    '../img/Arena Battle/dungeon_battle_81065.jpg',
+    '../img/Arena Battle/dungeon_battle_81066.jpg',
+    '../img/Arena Battle/dungeon_battle_100000.jpg',
+    '../img/Arena Battle/dungeon_battle_100100.jpg',
+    '../img/Arena Battle/dungeon_battle_100200.jpg',
+    '../img/Arena Battle/dungeon_battle_100300.jpg',
+    '../img/Arena Battle/dungeon_battle_100400.jpg',
+    '../img/Arena Battle/dungeon_battle_100500.jpg',
+    '../img/Arena Battle/dungeon_battle_100600.jpg',
+    '../img/Arena Battle/dungeon_battle_100800.jpg',
+    '../img/Arena Battle/dungeon_battle_101400.jpg',
+    '../img/Arena Battle/dungeon_battle_101401.jpg',
+    '../img/Arena Battle/dungeon_battle_101402.jpg',
+    '../img/Arena Battle/dungeon_battle_101403.jpg',
+    '../img/Arena Battle/dungeon_battle_101404.jpg',
+    '../img/Arena Battle/dungeon_battle_101500.jpg',
+    '../img/Arena Battle/dungeon_battle_101600.jpg',
+    '../img/Arena Battle/dungeon_battle_101700.jpg',
+    '../img/Arena Battle/dungeon_battle_101800.jpg',
+    '../img/Arena Battle/dungeon_battle_101900.jpg',
+    '../img/Arena Battle/dungeon_battle_102000.jpg',
+    '../img/Arena Battle/dungeon_battle_102100.jpg',
+    '../img/Arena Battle/dungeon_battle_102200.jpg',
+    '../img/Arena Battle/dungeon_battle_102300.jpg',
+    '../img/Arena Battle/dungeon_battle_102400.jpg',
+    '../img/Arena Battle/dungeon_battle_102500.jpg',
+    '../img/Arena Battle/dungeon_battle_102600.jpg',
+    '../img/Arena Battle/dungeon_battle_102700.jpg',
+    '../img/Arena Battle/dungeon_battle_102701.jpg',
+    '../img/Arena Battle/dungeon_battle_102702.jpg',
+    '../img/Arena Battle/dungeon_battle_102800.jpg',
+    '../img/Arena Battle/dungeon_battle_102900.jpg',
+    '../img/Arena Battle/dungeon_battle_102901.jpg',
+    '../img/Arena Battle/dungeon_battle_103001.jpg',
+    '../img/Arena Battle/dungeon_battle_103010.jpg',
+    '../img/Arena Battle/dungeon_battle_103011.jpg',
+    '../img/Arena Battle/dungeon_battle_103012.jpg',
+    '../img/Arena Battle/dungeon_battle_103013.jpg',
+    '../img/Arena Battle/dungeon_battle_103014.jpg',
+    '../img/Arena Battle/dungeon_battle_103015.jpg',
+    '../img/Arena Battle/dungeon_battle_103020.jpg',
+    '../img/Arena Battle/dungeon_battle_103021.jpg',
+    '../img/Arena Battle/dungeon_battle_103030.jpg',
+    '../img/Arena Battle/dungeon_battle_103042.jpg',
+    '../img/Arena Battle/dungeon_battle_103050.jpg',
+    '../img/Arena Battle/dungeon_battle_103070.jpg',
+    '../img/Arena Battle/dungeon_battle_103071.jpg',
+    '../img/Arena Battle/dungeon_battle_103072.jpg',
+    '../img/Arena Battle/dungeon_battle_103080.jpg',
+    '../img/Arena Battle/dungeon_battle_103081.jpg',
+    '../img/Arena Battle/dungeon_battle_103082.jpg',
+    '../img/Arena Battle/dungeon_battle_103083.jpg',
+    '../img/Arena Battle/dungeon_battle_103090.jpg',
+    '../img/Arena Battle/dungeon_battle_103091.jpg',
+    '../img/Arena Battle/dungeon_battle_800117.jpg',
+    '../img/Arena Battle/dungeon_battle_800118.jpg',
+    '../img/Arena Battle/dungeon_battle_830124.jpg',
+    '../img/Arena Battle/dungeon_battle_830125.jpg',
+    '../img/Arena Battle/dungeon_battle_830127.jpg',
+    '../img/Arena Battle/dungeon_battle_1000000.jpg',
+    '../img/Arena Battle/dungeon_battle_2000000.jpg',
+    '../img/Arena Battle/dungeon_battle_2001000.jpg',
+    '../img/Arena Battle/dungeon_battle_2002000.jpg',
+    '../img/Arena Battle/dungeon_battle_3000000.jpg',
+    '../img/Arena Battle/dungeon_battle_3000001.jpg',
+    '../img/Arena Battle/dungeon_battle_8000110.jpg',
+    '../img/Arena Battle/dungeon_battle_8000120.jpg',
+    '../img/Arena Battle/dungeon_battle_8000130.jpg',
+    '../img/Arena Battle/dungeon_battle_8001422.jpg',
+    '../img/Arena Battle/dungeon_battle_8001423.jpg',
+    '../img/Arena Battle/dungeon_battle_8001431.jpg',
+    '../img/Arena Battle/dungeon_battle_8001432.jpg',
+    '../img/Arena Battle/dungeon_battle_8300101.jpg',
+    '../img/Arena Battle/dungeon_battle_8300102.jpg',
+    '../img/Arena Battle/dungeon_battle_8300103.jpg',
+    '../img/Arena Battle/dungeon_battle_8300104.jpg',
+    '../img/Arena Battle/dungeon_battle_8300105.jpg',
+    '../img/Arena Battle/dungeon_battle_8300106.jpg',
+    '../img/Arena Battle/dungeon_battle_8300107.jpg',
+    '../img/Arena Battle/dungeon_battle_8300108.jpg',
+    '../img/Arena Battle/dungeon_battle_8300109.jpg',
+    '../img/Arena Battle/dungeon_battle_8300110.jpg',
+    '../img/Arena Battle/dungeon_battle_8300111.jpg',
+    '../img/Arena Battle/dungeon_battle_8300112.jpg',
+    '../img/Arena Battle/dungeon_battle_8300113.jpg',
+    '../img/Arena Battle/dungeon_battle_8300114.jpg',
+    '../img/Arena Battle/dungeon_battle_8300115.jpg',
+    '../img/Arena Battle/dungeon_battle_8300116.jpg',
+    '../img/Arena Battle/dungeon_battle_8300117.jpg',
+    '../img/Arena Battle/dungeon_battle_8301200.jpg',
+    '../img/Arena Battle/dungeon_battle_8310060.jpg',
+    '../img/Arena Battle/dungeon_battle_8320060.jpg',
+    '../img/Arena Battle/dungeon_battle_8330060.jpg',
+    '../img/Arena Battle/dungeon_battle_8340060.jpg',
+    '../img/Arena Battle/dungeon_battle_8350060.jpg',
+    '../img/Arena Battle/dungeon_battle_8360060.jpg',
+    '../img/Arena Battle/dungeon_battle_8510001.jpg',
+    '../img/Arena Battle/dungeon_battle_8510002.jpg'
+];
+
 function getActiveUnitName(u) {
     const langSelector = document.getElementById('customLangSelector');
     const currentLang = langSelector ? langSelector.value : 'it';
@@ -61,9 +409,9 @@ function applyFilters(shouldScroll = false) {
     if (shouldScroll) {
         const container = document.getElementById('gridContainer');
         if (container) {
-            container.scrollTop = 0; // Riporta in cima il contenitore con lo scroll
+            container.scrollTop = 0;
         }
-        window.scrollTo(0, 0); // Riporta in cima la pagina principale
+        window.scrollTo(0, 0);
     }
 }
 
@@ -144,6 +492,13 @@ function resetModalScrolls() {
 function openModal(u) {
     currentUnitOpen = u;
 
+    // Seleziona un'arena casuale all'apertura della modale
+    const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
+    const unitBoxTop = document.querySelector('.unit_box_top');
+    if (unitBoxTop) {
+        unitBoxTop.style.backgroundImage = `url('${arenaBackgrounds[randomIndex]}')`;
+    }
+
     const langSelector = document.getElementById('customLangSelector');
     const currentLang = langSelector ? langSelector.value : 'it';
     let localizedTexts = u.textData?.[currentLang] || u.textData?.['en'] || {
@@ -191,11 +546,19 @@ function openModal(u) {
     if (modalEl) modalEl.style.display = 'block';
     document.body.classList.add('modal-open');
 
-    // Attende che la modale si sia aperta prima di decodificare la GIF
     setTimeout(() => {
         showMotion('default');
     }, 50);
     resetModalScrolls();
+}
+
+// Funzione di cambio arena casuale al click su btm4
+function changeArenaBackground() {
+    const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
+    const unitBoxTop = document.querySelector('.unit_box_top');
+    if (unitBoxTop) {
+        unitBoxTop.style.backgroundImage = `url('${arenaBackgrounds[randomIndex]}')`;
+    }
 }
 
 function showMotion(type) {
@@ -234,7 +597,6 @@ function showMotion(type) {
                 }
                 if (imgTag) {
                     imgTag.style.display = 'block';
-                    // Assegna la GIF solo quando il contenitore diventa visibile
                     if (imgTag.getAttribute('src') !== src) {
                         imgTag.src = src;
                     }
@@ -249,7 +611,6 @@ function showMotion(type) {
                 videoTag.removeAttribute('src');
             }
             if (imgTag) {
-                // Rimuove lo src della GIF nascosta per liberare la memoria della CPU su Safari
                 imgTag.removeAttribute('src');
             }
         }
@@ -306,6 +667,11 @@ function initListeners() {
 
     if (search) search.oninput = () => applyFilters(true);
     if (raritySel) raritySel.onchange = () => applyFilters(true);
+
+    const btm4Container = document.getElementById('btn_btm4_container');
+    if (btm4Container) {
+        btm4Container.onclick = changeArenaBackground;
+    }
 
     document.querySelectorAll('.btn-elem').forEach(btn => {
         btn.onclick = () => {

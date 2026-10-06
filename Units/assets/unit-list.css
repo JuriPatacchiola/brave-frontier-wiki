@@ -445,12 +445,13 @@ body {
     z-index: 10;
 }
 
-.btn_motion {
+/* --- BOTTONE IN ALTO (btm5) --- */
+.btn_top {
     position: absolute;
-    bottom: 10px;
+    top: 10px;
     right: 10px;
-    width: 80px !important;
-    height: 80px !important;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     z-index: 100;
     display: flex;
@@ -458,7 +459,51 @@ body {
     align-items: center;
 }
 
+.btn_top img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    pointer-events: none;
+}
+
+/* --- GRUPPO BOTTONI IN BASSO (btm1-3 + btm4 affiancati) --- */
+.bottom_buttons_group {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 100;
+}
+
+.btn_motion {
+    position: static !important;
+    width: 80px !important;
+    height: 80px !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn_motion img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    pointer-events: none;
+}
+
+.btn_extra {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_extra img {
     width: 100% !important;
     height: auto !important;
     display: block;
@@ -842,9 +887,20 @@ body {
         padding: 12px;
     }
 
-    .btn_motion {
+    .btn_motion,
+    .btn_extra,
+    .btn_top {
         width: 40px !important;
         height: 40px !important;
+    }
+
+    .btn_top {
+        /* Se è posizionato in modo assoluto (position: absolute), aumenta il valore di 'top' */
+        top: 70px;
+        /* Prova ad aumentare o diminuire questo valore (es. 55px, 70px) finché non si sposta sotto la croce */
+
+        /* Oppure, se si trova all'interno di un layout flex/grid e usi i margini: */
+        /* margin-top: 15px; */
     }
 
     p {
