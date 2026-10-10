@@ -933,7 +933,7 @@ body.modal-open {
         flex: 1 1 100%;
         width: 100%;
         padding: 12px;
-        font-size: 0.95rem;
+        font-size: 16px !important;
     }
 
     #raritySelector,
@@ -1066,6 +1066,13 @@ body.modal-open {
 
     .btn_top {
         top: 70px;
+        right: 18px !important;
+    }
+
+    .bottom_buttons_group {
+        right: 18px !important;
+        /* Aumentato lo spazio dal bordo destro */
+        bottom: 14px;
     }
 
     p {
