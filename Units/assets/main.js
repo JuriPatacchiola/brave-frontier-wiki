@@ -480,16 +480,21 @@ function displayUnits(appendOnly = false) {
 
         const displayName = getActiveUnitName(u);
         const card = document.createElement('div');
-        card.className = isMobile ? `card-icon ${elementClass}` : `unit-card ${elementClass}`;
+        card.className = `unit-card ${elementClass}`;
 
-        // Inserito l'ID (#realId) sotto l'immagine per la vista mobile
-        card.innerHTML = isMobile ? `
-            <img src="${u.image}" loading="lazy" decoding="async" width="60" height="60">
-            <div class="card-id">#${u.realId}</div>
-        ` : `
-            <div class="card-icon"><img src="${u.image}" loading="lazy" decoding="async" width="60" height="60"></div>
-            <div class="card-title notranslate">${displayName}</div>
-            <div class="card-rarity">${rarityHTML}</div>`;
+        if (isMobile) {
+            card.innerHTML = `
+                <img src="${u.image}" class="mobile-unit-img" loading="lazy" decoding="async">
+                <div class="card-id">#${u.realId}</div>
+            `;
+        } else {
+            card.innerHTML = `
+                <div class="card-icon"><img src="${u.image}" loading="lazy" decoding="async" width="60" height="60"></div>
+                <div class="card-title notranslate">${displayName}</div>
+                <div class="card-rarity">${rarityHTML}</div>
+            `;
+        }
+
         card.onclick = () => openModal(u);
 
         fragment.appendChild(card);
