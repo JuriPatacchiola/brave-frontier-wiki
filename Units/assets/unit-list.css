@@ -1160,4 +1160,26 @@ body.modal-open {
     .hamburger.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .fullart-modal {
+        backdrop-filter: none !important;
+        /* Rimuove l'effetto pesante che fa saltare il rendering su mobile */
+        background: rgba(0, 0, 0, 0.98) !important;
+        height: 100dvh !important;
+        /* Usa l'altezza dinamica stabile dello schermo */
+        padding: 10px;
+    }
+
+    .fullart-modal-content {
+        height: 100% !important;
+        max-height: 100dvh !important;
+    }
+
+    #fullArtModalImage {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        transform: none !important;
+        /* Impedisce qualsiasi movimento anomalo dell'immagine nello spazio */
+    }
 }
