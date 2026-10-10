@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brave Frontier Library - Unità</title>
     <link rel="stylesheet" href="../Units/assets/unit-list.css">
+    <link rel="stylesheet" href="../Units/assets/fullart-modal.css">
 </head>
 
 <body>
@@ -82,6 +83,9 @@
                 <div class="unit_box_top">
 
                     <div class="unit_gif">
+                        <!-- Cerchio Evocativo Rotante Dinamico -->
+                        <img id="evocation_circle" class="evocation-circle-bg" src="" alt="Evocation Circle">
+
                         <div id="container_default" class="anim-container" style="display:inline">
                             <video id="video_default" loop muted playsinline webkit-playsinline
                                 class="unit-media-style"></video>
@@ -100,13 +104,6 @@
                             <video id="video_atk" loop muted playsinline webkit-playsinline
                                 class="unit-media-style"></video>
                             <img id="img_atk" class="unit-media-style" style="display:none">
-                            <div class="shadow"></div>
-                        </div>
-
-                        <!-- Contenitore Full Art (btm5) -->
-                        <div id="container_fullart" class="anim-container" style="display:none">
-                            <img id="img_fullart" class="unit-media-style"
-                                style="object-fit: contain; width: 100%; height: 100%;">
                             <div class="shadow"></div>
                         </div>
                     </div>
@@ -208,6 +205,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modale separata per la Full Art dell'unità con Slider Varianti -->
+    <!-- Modale separata per la Full Art dell'unità con Slider Varianti -->
+    <div id="fullArtModal" class="fullart-modal" aria-hidden="true">
+        <div class="fullart-modal-content" role="dialog" aria-modal="true" aria-label="Full Art dell'unità">
+            <button type="button" id="closeFullArtModal" class="fullart-close"
+                aria-label="Chiudi Full Art">&times;</button>
+
+            <!-- Contatore varianti posizionato in alto a fianco della croce -->
+            <div id="fullArtCounter" class="fullart-counter">1 / 1</div>
+
+            <!-- Pulsanti Slider Full Art (Visibili su PC) -->
+            <button type="button" id="fullArtPrev" class="fullart-nav-btn prev-btn"
+                onclick="prevFullArt()">&#10094;</button>
+            <img id="fullArtModalImage" src="" alt="Full Art dell'unità selezionata">
+            <button type="button" id="fullArtNext" class="fullart-nav-btn next-btn"
+                onclick="nextFullArt()">&#10095;</button>
         </div>
     </div>
 

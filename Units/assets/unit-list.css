@@ -2,7 +2,6 @@
    1. OVERRIDE GOOGLE TRANSLATE E SELETTORE LINGUA
    ========================================================================== */
 
-/* DISTRUZIONE TOTALE DELLA BARRA SUPERIORE DI GOOGLE */
 .goog-te-banner-frame,
 .goog-te-banner-frame.skiptranslate,
 iframe.skiptranslate,
@@ -18,7 +17,6 @@ body {
     position: static !important;
 }
 
-/* RIMOZIONE DELLO SFONDO SUL TESTO TRADOTTO */
 font {
     background: transparent !important;
     background-color: transparent !important;
@@ -32,13 +30,11 @@ font {
     box-shadow: none !important;
 }
 
-/* RIMOZIONE DEI POPUP AL PASSAGGIO DEL MOUSE */
 #goog-gt-tt,
 .goog-te-balloon-frame {
     display: none !important;
 }
 
-/* MODO CORRETTO PER NASCONDERE IL WIDGET DI GOOGLE SENZA SPEGNERLO */
 #google_translate_element {
     position: absolute;
     left: -9999px;
@@ -48,7 +44,6 @@ font {
     overflow: hidden;
 }
 
-/* STILE DEL SELETTORE LINGUA PERSONALIZZATO (DESKTOP) */
 #customLangSelector {
     background-color: #222;
     color: #fff;
@@ -65,7 +60,6 @@ font {
     border-color: #888;
 }
 
-
 /* ==========================================================================
    2. FIX GLOBALE PER FRECCE BIANCHE NEI MENU A TENDINA (SELECT)
    ========================================================================== */
@@ -81,11 +75,9 @@ select {
     color-scheme: dark;
 }
 
-
 /* ==========================================================================
    3. STILI GENERALI E STRUTTURA DEL SITO
    ========================================================================== */
-
 * {
     box-sizing: border-box;
 }
@@ -106,8 +98,10 @@ body {
     flex-direction: column;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
 
-/* --- HEADER DI NAVIGAZIONE --- */
 .main-header {
     flex-shrink: 0;
     background: #000;
@@ -161,8 +155,6 @@ body {
     color: #d4af37;
 }
 
-
-/* --- SEZIONE FILTRI DESKTOP --- */
 .sticky-header {
     flex-shrink: 0;
     background: #1a1a1a;
@@ -252,8 +244,6 @@ body {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-
-/* --- GRIGLIA UNITÀ (DESKTOP) --- */
 .unit-grid {
     flex-grow: 1;
     overflow-y: auto;
@@ -311,7 +301,6 @@ body {
 .card-title {
     font-size: 0.9em;
     font-weight: bold;
-    margin-top: 10px;
     height: 2.4em;
     overflow: hidden;
 }
@@ -338,8 +327,9 @@ body {
     display: none;
 }
 
-
-/* --- MODALE (STRUTTURA FISSA/SCORREVOLE) --- */
+/* ==========================================================================
+   4. MODALE E ANIMAZIONI UNITÀ
+   ========================================================================== */
 .modal {
     display: none;
     position: fixed;
@@ -384,7 +374,6 @@ body {
 
 .unit_box_top {
     flex: 1.5;
-    background-image: url('https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_80014.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -396,9 +385,9 @@ body {
 }
 
 .unit_gif {
-    width: 100%;
-    height: 100%;
     position: relative;
+    width: 140%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -426,12 +415,22 @@ body {
     transform: translateY(-15%) translateX(-1%);
 }
 
+#container_default img,
+#container_default video,
+#container_idle img,
+#container_idle video,
+#container_atk img,
+#container_atk video,
 .unit_gif img {
-    width: 140%;
-    height: 140%;
+    position: absolute;
     object-fit: contain;
-    transform: translateY(-20%) translateX(-36%);
-    display: none;
+    transform: translateZ(0);
+    will-change: transform, top, left, width, height;
+    backface-visibility: hidden;
+    top: -58%;
+    left: -76%;
+    width: 180%;
+    height: 180%;
 }
 
 .shadow {
@@ -445,7 +444,30 @@ body {
     z-index: 10;
 }
 
-/* --- BOTTONE IN ALTO (btm5) --- */
+.evocation-circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.9;
+    animation: rotateEvocationCircle 16s linear infinite;
+}
+
+@keyframes rotateEvocationCircle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 .btn_top {
     position: absolute;
     top: 10px;
@@ -466,7 +488,11 @@ body {
     pointer-events: none;
 }
 
-/* --- GRUPPO BOTTONI IN BASSO (btm1-3 + btm4 affiancati) --- */
+#btn_btm5.active {
+    filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
+    transform: scale(1.05);
+}
+
 .bottom_buttons_group {
     position: absolute;
     bottom: 10px;
@@ -487,7 +513,8 @@ body {
     align-items: center;
 }
 
-.btn_motion img {
+.btn_motion img,
+.btn_extra img {
     width: 100% !important;
     height: auto !important;
     display: block;
@@ -501,13 +528,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.btn_extra img {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    pointer-events: none;
 }
 
 .unit_stats_side {
@@ -686,26 +706,169 @@ body {
 }
 
 /* ==========================================================================
-   4. MEDIA QUERIES (RESPONSIVE TABLET & MOBILE)
+   5. MODALE FULL ART E SLIDER VARIANTI (BTM5)
    ========================================================================== */
+.fullart-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
 
-/* MOBILE (Sotto i 600px) */
+.fullart-modal.is-open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullart-modal-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    max-height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#fullArtModalImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fullart-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(255, 215, 0, 0.85);
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.fullart-close:hover {
+    color: #121212;
+    background: #ffd700;
+    border-color: #fff;
+    transform: scale(1.08);
+}
+
+/* Contatore varianti Full Art in alto a destra vicino alla croce */
+.fullart-counter {
+    position: absolute;
+    top: 20px;
+    right: 75px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffd700;
+    padding: 6px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    z-index: 25;
+    display: none;
+}
+
+/* Frecce dello slider Full Art (Visibili solo su Desktop via media query sotto) */
+.fullart-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 28px;
+    padding: 12px 16px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    display: none;
+}
+
+.fullart-nav-btn:hover {
+    background: rgba(255, 215, 0, 0.8);
+    color: #111;
+    border-color: #ffd700;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1024px) {
+
+    #container_default img,
+    #container_default video,
+    #container_idle img,
+    #container_idle video,
+    #container_atk img,
+    #container_atk video,
+    .unit_gif img {
+        top: -37%;
+        left: -74%;
+        width: 170%;
+        height: 170%;
+    }
+
+    /* Nasconde le frecce grafiche su Tablet e Smartphone (usa lo swipe con le dita) */
+    .fullart-nav-btn {
+        display: none !important;
+    }
+}
+
 @media (max-width: 600px) {
-
-    /* 1. OTTIMIZZAZIONE SCROLL E ACCELERAZIONE HARDWARE */
     .unit-grid {
         grid-template-columns: repeat(5, 1fr);
         grid-auto-rows: min-content;
         gap: 6px;
         padding: 10px;
-
-        /* Forza l'accelerazione GPU e lo scroll fluido su iOS/Android */
         -webkit-overflow-scrolling: touch;
         transform: translateZ(0);
         will-change: scroll-position;
     }
 
-    /* 2. ISOLAMENTO RENDERING: Salva l'80% di memoria RAM/GPU */
     .unit-card,
     .card-icon {
         display: flex !important;
@@ -716,11 +879,8 @@ body {
         margin: 0;
         height: auto;
         min-width: 0;
-
-        /* RENDERING PREDITTIVO: Il browser ignora le carte fuori dallo schermo */
         content-visibility: auto;
         contain-intrinsic-size: 60px 60px;
-        /* Dimensione indicativa delle tue icone 5x5 */
     }
 
     .unit-card .card-title,
@@ -728,12 +888,10 @@ body {
         display: none !important;
     }
 
-    /* 3. OTTIMIZZAZIONE IMMAGINI MOBILE */
     .card-icon {
         width: 100%;
         aspect-ratio: 1 / 1;
         contain: strict;
-        /* Previene il ricalcolo del layout circostante */
     }
 
     .card-icon img {
@@ -741,8 +899,6 @@ body {
         height: 100%;
         object-fit: cover;
         transition: transform 0.15s ease;
-
-        /* Evita la ri-decodifica grafica pesante durante lo scroll */
         backface-visibility: hidden;
         transform: translateZ(0);
     }
@@ -751,7 +907,6 @@ body {
         transform: scale(0.92);
     }
 
-    /* --- RESTO DEI TUOI STILI MOBILE --- */
     .filter-container {
         gap: 12px;
         padding: 0 10px;
@@ -789,7 +944,6 @@ body {
         font-size: 0.75rem;
     }
 
-    /* MODALE SU MOBILE: PARTE SUPERIORE FISSA + PARTE INFERIORE SCORREVOLE */
     .modal-full-content {
         width: 100%;
         height: 100vh;
@@ -799,17 +953,14 @@ body {
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        /* Mantiene la struttura contenuta */
     }
 
     .unit_main_view {
         flex-direction: column;
         height: auto;
         flex-shrink: 0;
-        /* Impedisce alla sezione in alto di restringersi o scorrere */
     }
 
-    /* Riduzione altezza GIF per dare spazio alle statistiche visibili */
     .unit_box_top {
         height: 260px;
         flex: none;
@@ -817,6 +968,19 @@ body {
 
     .unit_gif img {
         width: 140%;
+    }
+
+    #container_default img,
+    #container_default video,
+    #container_idle img,
+    #container_idle video,
+    #container_atk img,
+    #container_atk video,
+    .unit_gif img {
+        top: -40%;
+        left: -60%;
+        width: 160%;
+        height: 160%;
     }
 
     #video_default,
@@ -828,7 +992,6 @@ body {
         transform: translateY(-14%) translateX(-1%);
     }
 
-    /* STATISTICHE FISSE E COMPLETAMENTE VISIBILI */
     .unit_stats_side {
         border-left: none;
         border-top: 1px solid #d4af37;
@@ -855,13 +1018,11 @@ body {
         margin: 6px 0 8px 0;
     }
 
-    /* UNICA AREA SCORREVOLE SOTTO LE STATISTICHE */
     .unit_details_scroll_area {
         padding: 10px;
         flex: 1;
         min-height: 0;
         overflow-y: auto !important;
-        /* Fa scorrere solo le abilità/dettagli */
         -webkit-overflow-scrolling: touch;
     }
 
@@ -895,12 +1056,7 @@ body {
     }
 
     .btn_top {
-        /* Se è posizionato in modo assoluto (position: absolute), aumenta il valore di 'top' */
         top: 70px;
-        /* Prova ad aumentare o diminuire questo valore (es. 55px, 70px) finché non si sposta sotto la croce */
-
-        /* Oppure, se si trova all'interno di un layout flex/grid e usi i margini: */
-        /* margin-top: 15px; */
     }
 
     p {
@@ -915,6 +1071,27 @@ body {
     .mat-icon {
         width: 45px;
         height: 45px;
+    }
+
+    .evocation-circle-bg {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Adattamento contatore per schermi piccoli */
+    .fullart-counter {
+        top: 14px;
+        right: 60px;
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .fullart-close {
+        top: 8px;
+        right: 8px;
+        width: 42px;
+        height: 42px;
+        font-size: 30px;
     }
 
     .hamburger {
@@ -975,98 +1152,4 @@ body {
     .hamburger.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
-
-.modal-open {
-    overflow: hidden;
-}
-
-/* ==========================================================================
-   1. REGOLE STRUTTURALI BASE (Valide per tutti i dispositivi)
-   ========================================================================== */
-/* ==========================================================================
-   1. REGOLE STRUTTURALI BASE (Comuni a tutti i dispositivi)
-   ========================================================================== */
-#container_default,
-#container_idle,
-#container_atk,
-.unit_gif {
-    position: relative;
-    width: 140%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#container_default img,
-#container_default video,
-#container_idle img,
-#container_idle video,
-#container_atk img,
-#container_atk video,
-.unit_gif img {
-    position: absolute;
-    /* Usa 'cover' per riempire la dimensione esatta specificata o 'contain' per non tagliare l'immagine */
-    object-fit: contain;
-    transform: translateZ(0);
-    will-change: transform, top, left, width, height;
-    backface-visibility: hidden;
-}
-
-/* ==========================================================================
-   2. DESKTOP / PC (> 1024px)
-   ========================================================================== */
-#container_default img,
-#container_default video,
-#container_idle img,
-#container_idle video,
-#container_atk img,
-#container_atk video,
-.unit_gif img {
-    top: -58%;
-    left: -76%;
-    width: 180%;
-    height: 180%;
-}
-
-/* ==========================================================================
-   3. TABLET (Da 601px a 1024px)
-   ========================================================================== */
-@media (max-width: 1024px) {
-
-    #container_default img,
-    #container_default video,
-    #container_idle img,
-    #container_idle video,
-    #container_atk img,
-    #container_atk video,
-    .unit_gif img {
-        top: -37%;
-        left: -74%;
-        width: 170%;
-        height: 170%;
-    }
-}
-
-/* ==========================================================================
-   4. MOBILE (Sotto i 600px)
-   ========================================================================== */
-@media (max-width: 600px) {
-
-    #container_default img,
-    #container_default video,
-    #container_idle img,
-    #container_idle video,
-    #container_atk img,
-    #container_atk video,
-    .unit_gif img {
-        top: -40%;
-        left: -60%;
-        width: 160%;
-        height: 160%;
-    }
-}
-
-/* Evita il ricalcolo aggressivo del layout quando la modale è aperta */
-body.modal-open {
-    overflow: hidden;
 }

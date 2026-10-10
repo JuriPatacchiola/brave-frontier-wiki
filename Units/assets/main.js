@@ -2,7 +2,15 @@ let allUnits = [];
 let currentFilteredUnits = [];
 let activeElement = null;
 let currentUnitOpen = null;
-let isFullArtOpen = false; // Stato per la visualizzazione della Full Art
+let isFullArtOpen = false;
+
+// Variabili per lo slider delle varianti Full Art
+let currentFullArtImages = [];
+let currentFullArtIndex = 0;
+
+// Variabili per il rilevamento dello Swipe Touch
+let touchStartX = 0;
+let touchEndX = 0;
 
 let displayedCount = 40;
 const BATCH_SIZE = 40;
@@ -356,6 +364,19 @@ const arenaBackgrounds = [
     '../img/Arena Battle/dungeon_battle_8510002.jpg'
 ];
 
+function getEvocationCircle(rarity) {
+    const r = String(rarity || '').trim();
+    if (r === '1' || r === '2') {
+        return '../img/Evocation%20Circle/Circle_aquirem.png';
+    } else if (r === '3') {
+        return '../img/Evocation%20Circle/Rare_circle.png';
+    } else if (r === '4') {
+        return '../img/Evocation%20Circle/Super_rare_circle.png';
+    } else {
+        return '../img/Evocation%20Circle/Mega_rare_circle.png';
+    }
+}
+
 function getActiveUnitName(u) {
     const langSelector = document.getElementById('customLangSelector');
     const currentLang = langSelector ? langSelector.value : 'it';
@@ -461,7 +482,11 @@ function displayUnits(appendOnly = false) {
         const card = document.createElement('div');
         card.className = isMobile ? `card-icon ${elementClass}` : `unit-card ${elementClass}`;
 
-        card.innerHTML = isMobile ? `<img src="${u.image}" loading="lazy" decoding="async" width="60" height="60">` : `
+        // Inserito l'ID (#realId) sotto l'immagine per la vista mobile
+        card.innerHTML = isMobile ? `
+            <img src="${u.image}" loading="lazy" decoding="async" width="60" height="60">
+            <div class="card-id">#${u.realId}</div>
+        ` : `
             <div class="card-icon"><img src="${u.image}" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="card-title notranslate">${displayName}</div>
             <div class="card-rarity">${rarityHTML}</div>`;
@@ -491,10 +516,16 @@ function resetModalScrolls() {
 }
 
 function openModal(u) {
-    currentUnitOpen = u;
-    isFullArtOpen = false; // Reset dello stato full art alla chiusura/apertura
+    closeFullArtModal();
 
-    // Seleziona un'arena casuale all'apertura della modale
+    currentUnitOpen = u;
+    isFullArtOpen = false;
+
+    const circleImg = document.getElementById('evocation_circle');
+    if (circleImg) {
+        circleImg.src = getEvocationCircle(u.rarity);
+    }
+
     const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
     const unitBoxTop = document.querySelector('.unit_box_top');
     if (unitBoxTop) {
@@ -540,9 +571,6 @@ function openModal(u) {
         u.evolution.materials.forEach(m => { matCont.innerHTML += `<img src="${m}" class="mat-icon" loading="lazy">`; });
     } else { matCont.innerText = '---'; }
 
-    // Gestione reset Full Art UI
-    const fullArtContainer = document.getElementById('container_fullart');
-    if (fullArtContainer) fullArtContainer.style.display = 'none';
     const btnBtm5 = document.getElementById('btn_btm5');
     if (btnBtm5) btnBtm5.classList.remove('active');
 
@@ -560,7 +588,6 @@ function openModal(u) {
     resetModalScrolls();
 }
 
-// Funzione di cambio arena casuale al click su btm4
 function changeArenaBackground() {
     const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
     const unitBoxTop = document.querySelector('.unit_box_top');
@@ -569,58 +596,152 @@ function changeArenaBackground() {
     }
 }
 
-// --- GESTIONE FULL ART (btm5) ---
-function toggleFullArt() {
+// --- GESTIONE MODALE FULL ART, SLIDER VARIANTI & SWIPE TOUCH ---
+
+function checkImageExists(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+    });
+}
+
+async function getValidFullArts(unitId) {
+    const suffixes = ['', '_2', '_3', '_4'];
+    let validImages = [];
+    for (let suf of suffixes) {
+        let url = `../img/Unit/Full Art/unit_ills_full_${unitId}${suf}.png`;
+        let exists = await checkImageExists(url);
+        if (exists) {
+            validImages.push(url);
+        }
+    }
+    return validImages;
+}
+
+function closeFullArtModal() {
+    const modal = document.getElementById('fullArtModal');
+    const image = document.getElementById('fullArtModalImage');
+    const button = document.getElementById('btn_btm5');
+
+    if (modal) {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (image) {
+        image.onerror = null;
+        image.removeAttribute('src');
+    }
+
+    if (button) button.classList.remove('active');
+    isFullArtOpen = false;
+    currentFullArtImages = [];
+    currentFullArtIndex = 0;
+}
+
+async function toggleFullArt() {
     if (!currentUnitOpen) return;
 
-    isFullArtOpen = !isFullArtOpen;
-    const fullArtContainer = document.getElementById('container_fullart');
-    const imgFullArt = document.getElementById('img_fullart');
-    const btnBtm5 = document.getElementById('btn_btm5');
+    const modal = document.getElementById('fullArtModal');
+    const button = document.getElementById('btn_btm5');
+
+    if (!modal) return;
+
+    if (modal.classList.contains('is-open')) {
+        closeFullArtModal();
+        return;
+    }
 
     const unitId = currentUnitOpen.realId || currentUnitOpen.id;
-    // Percorso corretto basato sulla cartella "Full Art" e prefisso "unit_ills_full_"
-    const fullArtSrc = `../img/Full Art/unit_ills_full_${unitId}.png`;
+    if (unitId === undefined || unitId === null || unitId === '') return;
 
-    if (isFullArtOpen) {
-        // Nascondi le animazioni/video standard
-        ['default', 'idle', 'atk'].forEach(t => {
-            const container = document.getElementById(`container_${t}`);
-            if (container) container.style.display = 'none';
-            const videoTag = document.getElementById(`video_${t}`);
-            if (videoTag) videoTag.pause();
-        });
+    currentFullArtImages = await getValidFullArts(unitId);
+    currentFullArtIndex = 0;
 
-        if (imgFullArt) {
-            imgFullArt.onerror = function () {
-                console.error("❌ Immagine Full Art non trovata per il percorso: " + fullArtSrc);
-            };
-            imgFullArt.src = fullArtSrc;
+    if (currentFullArtImages.length === 0) return;
+
+    updateFullArtDisplay();
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    isFullArtOpen = true;
+
+    if (button) button.classList.add('active');
+}
+
+function updateFullArtDisplay() {
+    const image = document.getElementById('fullArtModalImage');
+    const prevBtn = document.getElementById('fullArtPrev');
+    const nextBtn = document.getElementById('fullArtNext');
+    const counter = document.getElementById('fullArtCounter');
+
+    if (!image) return;
+
+    image.src = currentFullArtImages[currentFullArtIndex];
+
+    const total = currentFullArtImages.length;
+    if (total > 1) {
+        if (window.innerWidth > 1024) {
+            if (prevBtn) prevBtn.style.display = 'block';
+            if (nextBtn) nextBtn.style.display = 'block';
+        } else {
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
         }
 
-        if (fullArtContainer) fullArtContainer.style.display = 'block';
-        if (btnBtm5) btnBtm5.classList.add('active');
+        if (counter) {
+            counter.style.display = 'block';
+            counter.innerText = `${currentFullArtIndex + 1} / ${total}`;
+        }
     } else {
-        if (fullArtContainer) fullArtContainer.style.display = 'none';
-        if (imgFullArt) imgFullArt.removeAttribute('src');
-        if (btnBtm5) btnBtm5.classList.remove('active');
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (counter) counter.style.display = 'none';
+    }
+}
 
-        // Ritorna all'animazione corrente
-        showMotion('default');
+function nextFullArt() {
+    if (currentFullArtImages.length <= 1) return;
+    currentFullArtIndex = (currentFullArtIndex + 1) % currentFullArtImages.length;
+    updateFullArtDisplay();
+}
+
+function prevFullArt() {
+    if (currentFullArtImages.length <= 1) return;
+    currentFullArtIndex = (currentFullArtIndex - 1 + currentFullArtImages.length) % currentFullArtImages.length;
+    updateFullArtDisplay();
+}
+
+function initFullArtSwipe() {
+    const modalContent = document.querySelector('.fullart-modal-content');
+    if (!modalContent) return;
+
+    modalContent.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    modalContent.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeGesture();
+    }, { passive: true });
+}
+
+function handleSwipeGesture() {
+    const swipeThreshold = 40;
+    if (currentFullArtImages.length <= 1) return;
+
+    if (touchEndX < touchStartX - swipeThreshold) {
+        nextFullArt();
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+        prevFullArt();
     }
 }
 
 function showMotion(type) {
     if (!currentUnitOpen) return;
-
-    // Se la Full Art è aperta, la chiudiamo passando a una motion
-    if (isFullArtOpen) {
-        isFullArtOpen = false;
-        const fullArtContainer = document.getElementById('container_fullart');
-        if (fullArtContainer) fullArtContainer.style.display = 'none';
-        const btnBtm5 = document.getElementById('btn_btm5');
-        if (btnBtm5) btnBtm5.classList.remove('active');
-    }
 
     const motions = ['default', 'idle', 'atk'];
 
@@ -677,7 +798,7 @@ function showMotion(type) {
 }
 
 function toggleImg() {
-    if (isFullArtOpen) return; // Disabilita il toggle ciclico se siamo in modalità Full Art
+    if (isFullArtOpen) return;
     const dCont = document.getElementById('container_default');
     const iCont = document.getElementById('container_idle');
     if (dCont && dCont.style.display !== 'none') showMotion('idle');
@@ -686,13 +807,13 @@ function toggleImg() {
 }
 
 function closeModal() {
+    closeFullArtModal();
+
     const modalEl = document.getElementById('unitModal');
     if (modalEl) modalEl.style.display = 'none';
     document.body.classList.remove('modal-open');
 
     isFullArtOpen = false;
-    const fullArtContainer = document.getElementById('container_fullart');
-    if (fullArtContainer) fullArtContainer.style.display = 'none';
 
     ['default', 'idle', 'atk'].forEach(t => {
         const v = document.getElementById(`video_${t}`);
@@ -737,11 +858,39 @@ function initListeners() {
         btm4Container.onclick = changeArenaBackground;
     }
 
-    // Collegamento dell'evento click per il pulsante Full Art (btm5)
-    const btm5Btn = document.getElementById('btn_btm5') || document.getElementById('btn_btm5_container');
+    const btm5Btn = document.getElementById('btn_btm5_container') || document.getElementById('btn_btm5');
     if (btm5Btn) {
         btm5Btn.onclick = toggleFullArt;
     }
+
+    const closeFullArtBtn = document.getElementById('closeFullArtModal');
+    const fullArtModal = document.getElementById('fullArtModal');
+
+    if (closeFullArtBtn) {
+        closeFullArtBtn.onclick = closeFullArtModal;
+    }
+
+    if (fullArtModal) {
+        fullArtModal.onclick = function (event) {
+            if (event.target === fullArtModal) {
+                closeFullArtModal();
+            }
+        };
+    }
+
+    initFullArtSwipe();
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            if (document.getElementById('fullArtModal')?.classList.contains('is-open')) {
+                closeFullArtModal();
+            }
+        }
+        if (document.getElementById('fullArtModal')?.classList.contains('is-open')) {
+            if (event.key === 'ArrowLeft') prevFullArt();
+            if (event.key === 'ArrowRight') nextFullArt();
+        }
+    });
 
     document.querySelectorAll('.btn-elem').forEach(btn => {
         btn.onclick = () => {
