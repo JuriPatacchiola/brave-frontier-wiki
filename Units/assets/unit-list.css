@@ -661,32 +661,13 @@ body.modal-open {
 }
 
 .evolution_area {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-}
-
-.evo_block {
-    flex: 1;
-    background: #111;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid #222;
-}
-
-.evo_block h4 {
-    color: #888;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    display: block;
 }
 
 .evo-icon,
 .mat-icon {
     width: 62px;
     height: 62px;
-    border: 2px solid #333;
     border-radius: 8px;
     margin: 4px;
     background: #111;
@@ -833,7 +814,145 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   6. MEDIA QUERIES (TABLET & MOBILE)
+   6. EVOLUZIONE: RICETTA CON MATERIALI, ZEL E KARMA (PALETTA ORO/SCURO)
+   ========================================================================== */
+.evolution-recipe-area {
+    display: block;
+    margin-top: 20px;
+}
+
+.evolution-recipe-area>h3 {
+    color: #d4af37;
+    margin: 0 0 16px;
+}
+
+.evolution-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.evolution-step-block {
+    background: #121212;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.evolution-recipe-panel {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #161616;
+    border-radius: 16px;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+.evo-recipe-unit-wrap {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evo-recipe-unit {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #101010;
+}
+
+.evo-recipe-plus,
+.evo-recipe-equals {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+.evo-recipe-requirements {
+    flex: 1 1 auto;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background: #0d0d0d;
+}
+
+.evo-recipe-materials {
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+}
+
+.evo-recipe-material {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border-radius: 8px;
+    object-fit: contain;
+    background: #111;
+}
+
+.evo-recipe-costs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 12px;
+    background: #121212;
+    border-top: 1px solid #222;
+}
+
+.evo-currency {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #f4f5f7;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.evo-currency img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.evo-no-materials,
+.evo-recipe-empty {
+    color: #aaa;
+    padding: 10px;
+    text-align: center;
+}
+
+.evo-recipe-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 1024px) {
 
@@ -866,7 +985,6 @@ body.modal-open {
         will-change: scroll-position;
     }
 
-    /* CARD SCURA MOBILE: DISPOSTA RIGOROSAMENTE IN COLONNA VERTICALE */
     .unit-card {
         display: flex !important;
         flex-direction: column !important;
@@ -893,7 +1011,6 @@ body.modal-open {
         display: none !important;
     }
 
-    /* CLASSE DEDICATA PER L'IMMAGINE MOBILE */
     .mobile-unit-img {
         width: 100% !important;
         max-width: 58px !important;
@@ -903,7 +1020,6 @@ body.modal-open {
         border-radius: 4px;
     }
 
-    /* ID SOTTO L'IMMAGINE E CENTRATO */
     .card-id {
         display: block !important;
         font-size: 0.65rem !important;
@@ -1050,9 +1166,73 @@ body.modal-open {
         padding: 12px;
     }
 
+    .evolution-recipe-panel {
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        padding: 6px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .evo-recipe-unit-wrap {
+        flex: 0 0 auto;
+    }
+
+    .evo-recipe-unit {
+        width: 38px;
+        height: 38px;
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .evo-recipe-plus,
+    .evo-recipe-equals {
+        flex: 0 0 auto;
+        font-size: 0.95rem;
+        padding: 0 1px;
+    }
+
+    .evo-recipe-requirements {
+        flex: 0 0 auto;
+        min-width: 110px;
+        max-width: 160px;
+        border-radius: 8px;
+    }
+
+    .evo-recipe-materials {
+        min-height: 30px;
+        padding: 3px;
+        gap: 3px;
+        justify-content: center;
+    }
+
+    .evo-recipe-material {
+        width: 26px;
+        height: 26px;
+        border-radius: 4px;
+        border-width: 1px;
+    }
+
+    .evo-recipe-costs {
+        flex-direction: row;
+        gap: 6px;
+        padding: 3px 6px;
+    }
+
+    .evo-currency {
+        font-size: 0.65rem;
+        gap: 3px;
+    }
+
+    .evo-currency img {
+        width: 12px;
+        height: 12px;
+    }
+
     .evolution_area {
-        flex-direction: column;
-        gap: 10px;
+        display: block;
         border-radius: 6px;
         padding: 12px;
     }
@@ -1071,22 +1251,11 @@ body.modal-open {
 
     .bottom_buttons_group {
         right: 18px !important;
-        /* Aumentato lo spazio dal bordo destro */
         bottom: 14px;
     }
 
     p {
         margin: 0.4em;
-    }
-
-    .evo_block {
-        padding: 10px;
-    }
-
-    .evo-icon,
-    .mat-icon {
-        width: 45px;
-        height: 45px;
     }
 
     .evocation-circle-bg {
@@ -1170,10 +1339,8 @@ body.modal-open {
 
     .fullart-modal {
         backdrop-filter: none !important;
-        /* Rimuove l'effetto pesante che fa saltare il rendering su mobile */
         background: rgba(0, 0, 0, 0.98) !important;
         height: 100dvh !important;
-        /* Usa l'altezza dinamica stabile dello schermo */
         padding: 10px;
     }
 
@@ -1187,6 +1354,5 @@ body.modal-open {
         height: 100% !important;
         object-fit: contain !important;
         transform: none !important;
-        /* Impedisce qualsiasi movimento anomalo dell'immagine nello spazio */
     }
 }

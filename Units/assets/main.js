@@ -386,6 +386,135 @@ function getActiveUnitName(u) {
     return u.name;
 }
 
+/**
+ * Formatta qualsiasi numero con il punto delle migliaia (es. 2500 diventa 2.500).
+ */
+function formatEvolutionNumber(value) {
+    return Number(value || 0).toLocaleString('it-IT');
+}
+
+/**
+ * Gestisce dinamicamente tutte le evoluzioni dell'unità evitando doppioni e mostrando la rarità corretta
+ */
+function renderEvolutionRecipes(unit) {
+    const container = document.getElementById('evolutionContainer');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    const evoKeys = Object.keys(unit).filter(key => key.startsWith('evolution'));
+
+    evoKeys.sort((a, b) => {
+        if (a === 'evolution') return -1;
+        if (b === 'evolution') return 1;
+        return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    if (evoKeys.length === 0) {
+        container.innerHTML = `
+            <div class="evo-recipe-empty">
+                <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
+            </div>`;
+        return;
+    }
+
+    // Filtraggio anti-doppioni basato su nextId o nextImage
+    const seenTargets = new Set();
+    const uniqueEvolutions = [];
+
+    evoKeys.forEach(key => {
+        const evoData = unit[key];
+        if (!evoData) return;
+
+        const targetIdentifier = evoData.nextId || evoData.nextImage;
+        if (targetIdentifier) {
+            if (!seenTargets.has(targetIdentifier)) {
+                seenTargets.add(targetIdentifier);
+                uniqueEvolutions.push({ key, evoData });
+            }
+        } else {
+            uniqueEvolutions.push({ key, evoData });
+        }
+    });
+
+    let htmlContent = '';
+
+    uniqueEvolutions.forEach((item, index) => {
+        const evolution = item.evoData;
+        const recipe = evolution.recipe;
+        const currentImage = evolution.prevImage || unit.image || '';
+        const nextImage = evolution.nextImage || '';
+        const altName = getActiveUnitName(unit) || 'Unità';
+
+        if (!recipe || !nextImage) return;
+
+        const targetId = evolution.nextId || evolution.id;
+        const targetUnit = allUnits.find(u => String(u.realId || u.id) === String(targetId));
+
+        let rarityDisplay = '';
+
+        if (targetUnit && targetUnit.rarity) {
+            const r = String(targetUnit.rarity).trim();
+            if (r === 'Omni' || r === 'Dream') {
+                rarityDisplay = `<img src="https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Phantom_icon.png" class="omni-icon" style="width:18px; vertical-align:middle; display:inline-block;"> Omni`;
+            } else {
+                rarityDisplay = `${r}★`;
+            }
+        } else {
+            const currentRarityNum = parseInt(unit.rarity, 10);
+            if (!isNaN(currentRarityNum)) {
+                rarityDisplay = `${currentRarityNum + index + 1}★`;
+            } else {
+                rarityDisplay = `${index + 2}★`;
+            }
+        }
+
+        const levelTitle = `Evoluzione a ${rarityDisplay}`;
+
+        const materials = Array.isArray(recipe.materials) ? recipe.materials : [];
+        const materialHtml = materials.length
+            ? materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="Materiale ${mIndex + 1}">`).join('')
+            : '<span class="evo-no-materials">Materiali non specificati</span>';
+
+        const zelImage = recipe.zelImage || '../img/Money/Zell.png';
+        const karmaImage = recipe.karmaImage || '../img/Money/Karma.png';
+        const karmaHtml = Number(recipe.karma) > 0
+            ? `<div class="evo-currency"><img src="${karmaImage}" alt="Karma"><span>${formatEvolutionNumber(recipe.karma)}</span></div>`
+            : '';
+
+        htmlContent += `
+            <div class="evolution-step-block">
+                <h4 style="color: #d4af37; margin: 0 0 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">${levelTitle}</h4>
+                <div class="evolution-recipe-panel">
+                    <div class="evo-recipe-unit-wrap">
+                        <img src="${currentImage}" alt="${altName}" class="evo-recipe-unit" loading="lazy">
+                    </div>
+                    <div class="evo-recipe-plus">+</div>
+                    <div class="evo-recipe-requirements">
+                        <div class="evo-recipe-materials">${materialHtml}</div>
+                        <div class="evo-recipe-costs">
+                            <div class="evo-currency"><img src="${zelImage}" alt="Zel"><span>${formatEvolutionNumber(recipe.zel)}</span></div>
+                            ${karmaHtml}
+                        </div>
+                    </div>
+                    <div class="evo-recipe-equals">=</div>
+                    <div class="evo-recipe-unit-wrap">
+                        <img src="${nextImage}" alt="Unità evoluta" class="evo-recipe-unit" loading="lazy">
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    if (htmlContent === '') {
+        container.innerHTML = `
+            <div class="evo-recipe-empty">
+                <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
+            </div>`;
+    } else {
+        container.innerHTML = htmlContent;
+    }
+}
+
 async function startApp() {
     try {
         const res = await fetch('../data/units.json?t=' + new Date().getTime());
@@ -567,14 +696,7 @@ function openModal(u) {
         if (descEl) descEl.innerText = u.skills?.[s]?.desc || "";
     });
 
-    document.getElementById('prevEvo').innerHTML = u.evolution?.prevImage ? `<img src="${u.evolution.prevImage}" class="evo-icon" loading="lazy">` : '---';
-    document.getElementById('nextEvo').innerHTML = u.evolution?.nextImage ? `<img src="${u.evolution.nextImage}" class="evo-icon" loading="lazy">` : 'MAX';
-
-    const matCont = document.getElementById('evoMats');
-    matCont.innerHTML = '';
-    if (u.evolution?.materials) {
-        u.evolution.materials.forEach(m => { matCont.innerHTML += `<img src="${m}" class="mat-icon" loading="lazy">`; });
-    } else { matCont.innerText = '---'; }
+    renderEvolutionRecipes(u);
 
     const btnBtm5 = document.getElementById('btn_btm5');
     if (btnBtm5) btnBtm5.classList.remove('active');
