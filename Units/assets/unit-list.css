@@ -1,7 +1,6 @@
 /* ==========================================================================
    1. OVERRIDE GOOGLE TRANSLATE E SELETTORE LINGUA
    ========================================================================== */
-
 .goog-te-banner-frame,
 .goog-te-banner-frame.skiptranslate,
 iframe.skiptranslate,
@@ -126,14 +125,6 @@ body.modal-open {
 .logo {
     width: 20%;
     height: auto;
-}
-
-.logo-area h1 {
-    color: #d4af37;
-    margin: 0;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .main-nav {
@@ -444,30 +435,6 @@ body.modal-open {
     z-index: 10;
 }
 
-.evocation-circle-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 320px;
-    height: 320px;
-    object-fit: contain;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.9;
-    animation: rotateEvocationCircle 16s linear infinite;
-}
-
-@keyframes rotateEvocationCircle {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
 .btn_top {
     position: absolute;
     top: 10px;
@@ -725,18 +692,22 @@ body.modal-open {
     background: transparent;
     border: none;
     box-shadow: none;
+    isolation: isolate;
+    overflow: hidden;
 }
 
 #fullArtModalImage {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     object-position: center;
     user-select: none;
     -webkit-user-drag: none;
+    position: relative;
+    z-index: 2;
 }
 
 .fullart-close {
@@ -814,7 +785,7 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   6. EVOLUZIONE: RICETTA CON MATERIALI, ZEL E KARMA (PALETTA ORO/SCURO)
+   6. EVOLUZIONE: RICETTA CON MATERIALI, ZEL E KARMA
    ========================================================================== */
 .evolution-recipe-area {
     display: block;
@@ -952,7 +923,129 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   7. MEDIA QUERIES (TABLET & MOBILE)
+   7. EFFETTI FULL ART BTM5: CERCHIO 3D + STELLE IN SALITA (COLORI PER RARITÀ)
+   ========================================================================== */
+.fullart-evocation-fx {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    --star-a: #ffffff;
+    --star-b: #d0e1ff;
+}
+
+/* Cerchio evocativo in prospettiva 3D posizionato sotto i piedi nella Full Art */
+.fullart-evocation-circle {
+    position: absolute;
+    left: 53%;
+    bottom: -40%;
+    width: min(142vmin, 840px);
+    height: min(112vmin, 810px);
+    object-fit: contain;
+    transform: translateX(-50%) rotateX(72deg) rotate(0deg);
+    transform-origin: center center;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px var(--star-a));
+    animation: fullArtCircleSpin 24s linear infinite;
+}
+
+@keyframes fullArtCircleSpin {
+    from {
+        transform: translateX(-50%) rotateX(72deg) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotateX(72deg) rotate(360deg);
+    }
+}
+
+.fullart-stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* Stelle che salgono dal basso verso l'alto intorno al cerchio */
+.fullart-star {
+    position: absolute;
+    bottom: 5%;
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--star-a);
+    box-shadow: 0 0 6px var(--star-a), 0 0 12px var(--star-b);
+    opacity: 0;
+    animation: fullArtStarRise var(--duration) ease-in-out var(--delay) infinite;
+}
+
+@keyframes fullArtStarRise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.3);
+    }
+
+    20% {
+        opacity: 0.95;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-340px) scale(1.25);
+    }
+}
+
+/* Rarità 1★ e 2★: Bianco */
+.fullart-evocation-fx.rarity-white {
+    --star-a: #ffffff;
+    --star-b: #d0e1ff;
+}
+
+/* Rarità 3★: Giallo */
+.fullart-evocation-fx.rarity-gold {
+    --star-a: #ffd700;
+    --star-b: #ffaa00;
+}
+
+/* Rarità 4★: Rosso */
+.fullart-evocation-fx.rarity-red {
+    --star-a: #ff3b3b;
+    --star-b: #ff7676;
+}
+
+/* Rarità 5★ fino a Omni: Arcobaleno Multicolore */
+.fullart-evocation-fx.rarity-rainbow {
+    --star-a: #ffffff;
+    --star-b: #ff8cf4;
+}
+
+.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n) {
+    background: #ff4d4d;
+    box-shadow: 0 0 7px #ff4d4d, 0 0 12px #ff8888;
+}
+
+.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 1) {
+    background: #4da6ff;
+    box-shadow: 0 0 7px #4da6ff, 0 0 12px #88c4ff;
+}
+
+.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 2) {
+    background: #ffd700;
+    box-shadow: 0 0 7px #ffd700, 0 0 12px #ffe86b;
+}
+
+.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 3) {
+    background: #bf7fff;
+    box-shadow: 0 0 7px #bf7fff, 0 0 12px #dfbfff;
+}
+
+/* ==========================================================================
+   8. MEDIA QUERIES (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 1024px) {
 
@@ -967,6 +1060,12 @@ body.modal-open {
         left: -74%;
         width: 170%;
         height: 170%;
+    }
+
+    .fullart-evocation-circle {
+        width: min(85vmin, 720px);
+        height: min(85vmin, 880px);
+        bottom: -31%;
     }
 
     .fullart-nav-btn {
@@ -1258,11 +1357,6 @@ body.modal-open {
         margin: 0.4em;
     }
 
-    .evocation-circle-bg {
-        width: 240px;
-        height: 240px;
-    }
-
     .fullart-counter {
         top: 14px;
         right: 60px;
@@ -1354,5 +1448,11 @@ body.modal-open {
         height: 100% !important;
         object-fit: contain !important;
         transform: none !important;
+    }
+
+    .fullart-evocation-circle {
+        width: min(85vmin, 720px);
+        height: min(85vmin, 880px);
+        bottom: 2%;
     }
 }

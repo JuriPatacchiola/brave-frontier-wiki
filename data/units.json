@@ -5072,7 +5072,8 @@
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
         "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5090,6 +5091,10 @@
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
         "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
@@ -5108,6 +5113,10 @@
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
         "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
@@ -5126,7 +5135,11 @@
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
         "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5144,7 +5157,14 @@
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
         "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5264,14 +5284,31 @@
       "atk": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-atk.gif"
     },
     "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "60012",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
       "nextId": "60013",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60121.png"
-      ],
       "recipe": {
         "targetId": "60013",
         "targetRarity": "4",
@@ -5282,6 +5319,97 @@
         "materials": [
           "../img/Unit/Squere Img/unit_ills_thum_60122.png",
           "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60013",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "nextId": "60014",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "recipe": {
+        "targetId": "60014",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60014",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "nextId": "60015",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "recipe": {
+        "targetId": "60015",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5401,17 +5529,50 @@
       "atk": "../video/six heros/Magress/Black Magress/Black-Magress-atk.gif"
     },
     "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60012",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "nextId": "60013",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "recipe": {
+        "targetId": "60013",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "60013",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
       "nextId": "60014",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
-      ],
       "recipe": {
         "targetId": "60014",
         "targetRarity": "5",
@@ -5425,6 +5586,75 @@
           "../img/Unit/Squere Img/unit_ills_thum_60121.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60014",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "nextId": "60015",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "recipe": {
+        "targetId": "60015",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5544,17 +5774,72 @@
       "atk": "../video/six heros/Magress/Death Magress/Death-Magress-atk.gif"
     },
     "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60012",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "nextId": "60013",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "recipe": {
+        "targetId": "60013",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60013",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "nextId": "60014",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "recipe": {
+        "targetId": "60014",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
       "prevId": "60014",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
       "nextId": "60015",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_50354.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
-      ],
       "recipe": {
         "targetId": "60015",
         "targetRarity": "6",
@@ -5568,6 +5853,53 @@
           "../img/Unit/Squere Img/unit_ills_thum_60122.png",
           "../img/Unit/Squere Img/unit_ills_thum_60121.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5691,15 +6023,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10021.png",
       "nextId": "10022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10130.png"
-      ],
       "recipe": {
         "targetId": "10022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -5707,6 +6034,71 @@
           "../img/Unit/Squere Img/unit_ills_thum_10131.png",
           "../img/Unit/Squere Img/unit_ills_thum_10130.png",
           "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "10022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "nextId": "10023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "recipe": {
+        "targetId": "10023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "10023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "nextId": "10024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "recipe": {
+        "targetId": "10024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "10024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "nextId": "10025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10025.png",
+      "recipe": {
+        "targetId": "10025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5826,16 +6218,30 @@
       "atk": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-atk.gif"
     },
     "evolution": {
+      "prevId": "10021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10021.png",
+      "nextId": "10022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "recipe": {
+        "targetId": "10022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "10022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
       "nextId": "10023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10130.png"
-      ],
       "recipe": {
         "targetId": "10023",
         "targetRarity": "4",
@@ -5848,6 +6254,50 @@
           "../img/Unit/Squere Img/unit_ills_thum_10131.png",
           "../img/Unit/Squere Img/unit_ills_thum_10130.png",
           "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "10023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "nextId": "10024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "recipe": {
+        "targetId": "10024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "10024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "nextId": "10025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10025.png",
+      "recipe": {
+        "targetId": "10025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -5967,17 +6417,51 @@
       "atk": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-atk.gif"
     },
     "evolution": {
+      "prevId": "10021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10021.png",
+      "nextId": "10022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "recipe": {
+        "targetId": "10022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "10022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "nextId": "10023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "recipe": {
+        "targetId": "10023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "10023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
       "nextId": "10024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_10133.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10191.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_10130.png"
-      ],
       "recipe": {
         "targetId": "10024",
         "targetRarity": "5",
@@ -5991,6 +6475,28 @@
           "../img/Unit/Squere Img/unit_ills_thum_10132.png",
           "../img/Unit/Squere Img/unit_ills_thum_10132.png",
           "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "10024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "nextId": "10025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10025.png",
+      "recipe": {
+        "targetId": "10025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6114,15 +6620,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20021.png",
       "nextId": "20022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20130.png"
-      ],
       "recipe": {
         "targetId": "20022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -6130,6 +6631,71 @@
           "../img/Unit/Squere Img/unit_ills_thum_20131.png",
           "../img/Unit/Squere Img/unit_ills_thum_20130.png",
           "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "20022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "nextId": "20023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "recipe": {
+        "targetId": "20023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "20023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "nextId": "20024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "recipe": {
+        "targetId": "20024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "20024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "nextId": "20025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20025.png",
+      "recipe": {
+        "targetId": "20025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6249,16 +6815,30 @@
       "atk": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-atk.gif"
     },
     "evolution": {
+      "prevId": "20021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20021.png",
+      "nextId": "20022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "recipe": {
+        "targetId": "20022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "20022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
       "nextId": "20023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20130.png"
-      ],
       "recipe": {
         "targetId": "20023",
         "targetRarity": "4",
@@ -6271,6 +6851,50 @@
           "../img/Unit/Squere Img/unit_ills_thum_20131.png",
           "../img/Unit/Squere Img/unit_ills_thum_20130.png",
           "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "20023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "nextId": "20024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "recipe": {
+        "targetId": "20024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "20024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "nextId": "20025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20025.png",
+      "recipe": {
+        "targetId": "20025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6390,17 +7014,51 @@
       "atk": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-atk.gif"
     },
     "evolution": {
+      "prevId": "20021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20021.png",
+      "nextId": "20022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "recipe": {
+        "targetId": "20022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "20022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "nextId": "20023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "recipe": {
+        "targetId": "20023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "20023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
       "nextId": "20024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_20133.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20191.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_20130.png"
-      ],
       "recipe": {
         "targetId": "20024",
         "targetRarity": "5",
@@ -6414,6 +7072,28 @@
           "../img/Unit/Squere Img/unit_ills_thum_20132.png",
           "../img/Unit/Squere Img/unit_ills_thum_20132.png",
           "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "20024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "nextId": "20025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20025.png",
+      "recipe": {
+        "targetId": "20025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6537,15 +7217,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30021.png",
       "nextId": "30022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30130.png"
-      ],
       "recipe": {
         "targetId": "30022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -6553,6 +7228,71 @@
           "../img/Unit/Squere Img/unit_ills_thum_30131.png",
           "../img/Unit/Squere Img/unit_ills_thum_30130.png",
           "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "30022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "nextId": "30023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "recipe": {
+        "targetId": "30023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "30023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "nextId": "30024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "recipe": {
+        "targetId": "30024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "30024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "nextId": "30025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30025.png",
+      "recipe": {
+        "targetId": "30025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6672,16 +7412,30 @@
       "atk": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-atk.gif"
     },
     "evolution": {
+      "prevId": "30021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30021.png",
+      "nextId": "30022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "recipe": {
+        "targetId": "30022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "30022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
       "nextId": "30023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30130.png"
-      ],
       "recipe": {
         "targetId": "30023",
         "targetRarity": "4",
@@ -6694,6 +7448,50 @@
           "../img/Unit/Squere Img/unit_ills_thum_30131.png",
           "../img/Unit/Squere Img/unit_ills_thum_30130.png",
           "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "30023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "nextId": "30024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "recipe": {
+        "targetId": "30024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "30024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "nextId": "30025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30025.png",
+      "recipe": {
+        "targetId": "30025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6813,17 +7611,51 @@
       "atk": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-atk.gif"
     },
     "evolution": {
+      "prevId": "30021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30021.png",
+      "nextId": "30022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "recipe": {
+        "targetId": "30022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "30022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "nextId": "30023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "recipe": {
+        "targetId": "30023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "30023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
       "nextId": "30024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_30133.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30191.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_30130.png"
-      ],
       "recipe": {
         "targetId": "30024",
         "targetRarity": "5",
@@ -6837,6 +7669,28 @@
           "../img/Unit/Squere Img/unit_ills_thum_30132.png",
           "../img/Unit/Squere Img/unit_ills_thum_30132.png",
           "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "30024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "nextId": "30025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30025.png",
+      "recipe": {
+        "targetId": "30025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -6960,15 +7814,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40021.png",
       "nextId": "40022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40130.png"
-      ],
       "recipe": {
         "targetId": "40022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -6976,6 +7825,71 @@
           "../img/Unit/Squere Img/unit_ills_thum_40131.png",
           "../img/Unit/Squere Img/unit_ills_thum_40130.png",
           "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "40022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "nextId": "40023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "recipe": {
+        "targetId": "40023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "40023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "nextId": "40024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "recipe": {
+        "targetId": "40024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "40024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "nextId": "40025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40025.png",
+      "recipe": {
+        "targetId": "40025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7095,16 +8009,30 @@
       "atk": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-atk.gif"
     },
     "evolution": {
+      "prevId": "40021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40021.png",
+      "nextId": "40022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "recipe": {
+        "targetId": "40022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "40022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
       "nextId": "40023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40130.png"
-      ],
       "recipe": {
         "targetId": "40023",
         "targetRarity": "4",
@@ -7117,6 +8045,50 @@
           "../img/Unit/Squere Img/unit_ills_thum_40131.png",
           "../img/Unit/Squere Img/unit_ills_thum_40130.png",
           "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "40023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "nextId": "40024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "recipe": {
+        "targetId": "40024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "40024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "nextId": "40025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40025.png",
+      "recipe": {
+        "targetId": "40025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7236,17 +8208,51 @@
       "atk": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-atk.gif"
     },
     "evolution": {
+      "prevId": "40021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40021.png",
+      "nextId": "40022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "recipe": {
+        "targetId": "40022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "40022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "nextId": "40023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "recipe": {
+        "targetId": "40023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "40023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
       "nextId": "40024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_40133.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40191.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-        "../img/Unit/Squere Img/unit_ills_thum_40130.png"
-      ],
       "recipe": {
         "targetId": "40024",
         "targetRarity": "5",
@@ -7260,6 +8266,28 @@
           "../img/Unit/Squere Img/unit_ills_thum_40132.png",
           "../img/Unit/Squere Img/unit_ills_thum_40132.png",
           "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "40024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "nextId": "40025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40025.png",
+      "recipe": {
+        "targetId": "40025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7384,15 +8412,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50021.png",
       "nextId": "50022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50120.png"
-      ],
       "recipe": {
         "targetId": "50022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -7400,6 +8423,71 @@
           "../img/Unit/Squere Img/unit_ills_thum_50121.png",
           "../img/Unit/Squere Img/unit_ills_thum_50120.png",
           "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "50022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "nextId": "50023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "recipe": {
+        "targetId": "50023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "50023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "nextId": "50024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "recipe": {
+        "targetId": "50024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "50024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "nextId": "50025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50025.png",
+      "recipe": {
+        "targetId": "50025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7519,16 +8607,30 @@
       "atk": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-atk.gif"
     },
     "evolution": {
+      "prevId": "50021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50021.png",
+      "nextId": "50022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "recipe": {
+        "targetId": "50022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "50022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
       "nextId": "50023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50120.png"
-      ],
       "recipe": {
         "targetId": "50023",
         "targetRarity": "4",
@@ -7541,6 +8643,50 @@
           "../img/Unit/Squere Img/unit_ills_thum_50121.png",
           "../img/Unit/Squere Img/unit_ills_thum_50120.png",
           "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "50023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "nextId": "50024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "recipe": {
+        "targetId": "50024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "50024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "nextId": "50025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50025.png",
+      "recipe": {
+        "targetId": "50025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7660,17 +8806,51 @@
       "atk": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-atk.gif"
     },
     "evolution": {
+      "prevId": "50021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50021.png",
+      "nextId": "50022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "recipe": {
+        "targetId": "50022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "50022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "nextId": "50023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "recipe": {
+        "targetId": "50023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "50023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
       "nextId": "50024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_50123.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50191.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_50120.png"
-      ],
       "recipe": {
         "targetId": "50024",
         "targetRarity": "5",
@@ -7684,6 +8864,28 @@
           "../img/Unit/Squere Img/unit_ills_thum_50122.png",
           "../img/Unit/Squere Img/unit_ills_thum_50122.png",
           "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "50024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "nextId": "50025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50025.png",
+      "recipe": {
+        "targetId": "50025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7807,15 +9009,10 @@
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
       "nextId": "60022",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
-      ],
       "recipe": {
         "targetId": "60022",
         "targetRarity": "3",
-        "zel": 2500,
+        "zel": 50000,
         "karma": 0,
         "zelImage": "../img/Money/Zell.png",
         "karmaImage": "../img/Money/Karma.png",
@@ -7823,6 +9020,96 @@
           "../img/Unit/Squere Img/unit_ills_thum_60121.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "nextId": "60023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "recipe": {
+        "targetId": "60023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "nextId": "60024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "recipe": {
+        "targetId": "60024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -7942,16 +9229,30 @@
       "atk": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-atk.gif"
     },
     "evolution": {
+      "prevId": "60021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
+      "nextId": "60022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
       "prevId": "60022",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
       "nextId": "60023",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
-      ],
       "recipe": {
         "targetId": "60023",
         "targetRarity": "4",
@@ -7964,6 +9265,75 @@
           "../img/Unit/Squere Img/unit_ills_thum_60121.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "nextId": "60024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "recipe": {
+        "targetId": "60024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -8083,17 +9453,51 @@
       "atk": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-atk.gif"
     },
     "evolution": {
+      "prevId": "60021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
+      "nextId": "60022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "nextId": "60023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "recipe": {
+        "targetId": "60023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
       "prevId": "60023",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
       "nextId": "60024",
       "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
-      "materials": [
-        "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60201.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
-      ],
       "recipe": {
         "targetId": "60024",
         "targetRarity": "5",
@@ -8107,6 +9511,53 @@
           "../img/Unit/Squere Img/unit_ills_thum_60122.png",
           "../img/Unit/Squere Img/unit_ills_thum_60122.png",
           "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
         ],
         "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
       }
@@ -23636,7 +25087,91 @@
       "idle": "../video/Enemy boss basic/Zegar/Beast King Zegar/Beast-King-Zegar-idle.gif",
       "atk": "../video/Enemy boss basic/Zegar/Beast King Zegar/Beast-King-Zegar-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "10021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10021.png",
+      "nextId": "10022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "recipe": {
+        "targetId": "10022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "10022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "nextId": "10023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "recipe": {
+        "targetId": "10023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "10023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "nextId": "10024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "recipe": {
+        "targetId": "10024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "10024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "nextId": "10025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10025.png",
+      "recipe": {
+        "targetId": "10025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 328,
@@ -23672,7 +25207,91 @@
       "idle": "../video/Enemy boss basic/Zephu/Dragon Hero Zephu/Dragon-Hero-Zephu-idle.gif",
       "atk": "../video/Enemy boss basic/Zephu/Dragon Hero Zephu/Dragon-Hero-Zephu-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "20021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20021.png",
+      "nextId": "20022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "recipe": {
+        "targetId": "20022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "20022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "nextId": "20023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "recipe": {
+        "targetId": "20023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "20023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "nextId": "20024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "recipe": {
+        "targetId": "20024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "20024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "nextId": "20025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20025.png",
+      "recipe": {
+        "targetId": "20025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 329,
@@ -23708,7 +25327,91 @@
       "idle": "../video/Enemy boss basic/Lario/Bow God Lario/Bow-God-Lario-idle.gif",
       "atk": "../video/Enemy boss basic/Lario/Bow God Lario/Bow-God-Lario-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "30021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30021.png",
+      "nextId": "30022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "recipe": {
+        "targetId": "30022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "30022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "nextId": "30023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "recipe": {
+        "targetId": "30023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "30023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "nextId": "30024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "recipe": {
+        "targetId": "30024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "30024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "nextId": "30025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30025.png",
+      "recipe": {
+        "targetId": "30025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 330,
@@ -23744,7 +25447,91 @@
       "idle": "../video/Enemy boss basic/Weiss/General Weiss/General-Weiss-idle.gif",
       "atk": "../video/Enemy boss basic/Weiss/General Weiss/General-Weiss-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "40021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40021.png",
+      "nextId": "40022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "recipe": {
+        "targetId": "40022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "40022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "nextId": "40023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "recipe": {
+        "targetId": "40023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "40023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "nextId": "40024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "recipe": {
+        "targetId": "40024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "40024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "nextId": "40025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40025.png",
+      "recipe": {
+        "targetId": "40025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 331,
@@ -23780,7 +25567,91 @@
       "idle": "../video/Enemy boss basic/Luna/Holy Empress Luna/Holy-Empress-Luna-idle.gif",
       "atk": "../video/Enemy boss basic/Luna/Holy Empress Luna/Holy-Empress-Luna-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "50021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50021.png",
+      "nextId": "50022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "recipe": {
+        "targetId": "50022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "50022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "nextId": "50023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "recipe": {
+        "targetId": "50023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "50023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "nextId": "50024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "recipe": {
+        "targetId": "50024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "50024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "nextId": "50025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50025.png",
+      "recipe": {
+        "targetId": "50025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 332,
@@ -23816,7 +25687,116 @@
       "idle": "../video/Enemy boss basic/Mifune/Ryujin Mifune/Ryujin-Mifune-idle.gif",
       "atk": "../video/Enemy boss basic/Mifune/Ryujin Mifune/Ryujin-Mifune-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
+      "nextId": "60022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "nextId": "60023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "recipe": {
+        "targetId": "60023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "nextId": "60024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "recipe": {
+        "targetId": "60024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 333,
@@ -25120,7 +27100,137 @@
       "idle": "../video/six heros/Magress/Unholy Magress/Unholy-Magress-idle.gif",
       "atk": "../video/six heros/Magress/Unholy Magress/Unholy-Magress-atk.gif"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60012",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "nextId": "60013",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "recipe": {
+        "targetId": "60013",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60013",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "nextId": "60014",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "recipe": {
+        "targetId": "60014",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60014",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "nextId": "60015",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "recipe": {
+        "targetId": "60015",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 351,
@@ -40528,7 +42638,91 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10025/10025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10025/10025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "10021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10021.png",
+      "nextId": "10022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "recipe": {
+        "targetId": "10022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "10022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10022.png",
+      "nextId": "10023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "recipe": {
+        "targetId": "10023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "10023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10023.png",
+      "nextId": "10024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "recipe": {
+        "targetId": "10024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "10024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10024.png",
+      "nextId": "10025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10025.png",
+      "recipe": {
+        "targetId": "10025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_10132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 785,
@@ -40564,7 +42758,91 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "20021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20021.png",
+      "nextId": "20022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "recipe": {
+        "targetId": "20022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "20022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20022.png",
+      "nextId": "20023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "recipe": {
+        "targetId": "20023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "20023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20023.png",
+      "nextId": "20024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "recipe": {
+        "targetId": "20024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "20024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20024.png",
+      "nextId": "20025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20025.png",
+      "recipe": {
+        "targetId": "20025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_20132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 786,
@@ -40600,7 +42878,91 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30025/30025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30025/30025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "30021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30021.png",
+      "nextId": "30022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "recipe": {
+        "targetId": "30022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "30022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30022.png",
+      "nextId": "30023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "recipe": {
+        "targetId": "30023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "30023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30023.png",
+      "nextId": "30024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "recipe": {
+        "targetId": "30024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "30024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30024.png",
+      "nextId": "30025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30025.png",
+      "recipe": {
+        "targetId": "30025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_30132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 787,
@@ -40636,7 +42998,91 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40025/40025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40025/40025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "40021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40021.png",
+      "nextId": "40022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "recipe": {
+        "targetId": "40022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "40022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40022.png",
+      "nextId": "40023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "recipe": {
+        "targetId": "40023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40131.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "40023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40023.png",
+      "nextId": "40024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "recipe": {
+        "targetId": "40024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40130.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "40024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40024.png",
+      "nextId": "40025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40025.png",
+      "recipe": {
+        "targetId": "40025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40133.png",
+          "../img/Unit/Squere Img/unit_ills_thum_40132.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 788,
@@ -40672,7 +43118,91 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50025/50025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50025/50025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "50021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50021.png",
+      "nextId": "50022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "recipe": {
+        "targetId": "50022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "50022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50022.png",
+      "nextId": "50023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "recipe": {
+        "targetId": "50023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "50023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50023.png",
+      "nextId": "50024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "recipe": {
+        "targetId": "50024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50191.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "50024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50024.png",
+      "nextId": "50025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50025.png",
+      "recipe": {
+        "targetId": "50025",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 789,
@@ -40708,7 +43238,116 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60025/60025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60025/60025_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
+      "nextId": "60022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "nextId": "60023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "recipe": {
+        "targetId": "60023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "nextId": "60024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "recipe": {
+        "targetId": "60024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 790,
@@ -41688,7 +44327,137 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60016/60016_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60016/60016_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60012",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "nextId": "60013",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "recipe": {
+        "targetId": "60013",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60013",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "nextId": "60014",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "recipe": {
+        "targetId": "60014",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60014",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "nextId": "60015",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "recipe": {
+        "targetId": "60015",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 801,
@@ -58796,7 +61565,137 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60017/60017_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60017/60017_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60011",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60011.png",
+      "nextId": "60012",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "materials": [
+        "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+      ],
+      "recipe": {
+        "targetId": "60012",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60012",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60012.png",
+      "nextId": "60013",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "recipe": {
+        "targetId": "60013",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60013",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60013.png",
+      "nextId": "60014",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "recipe": {
+        "targetId": "60014",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60014",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60014.png",
+      "nextId": "60015",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "recipe": {
+        "targetId": "60015",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution5": {
+      "prevId": "60015",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60015.png",
+      "nextId": "60016",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "recipe": {
+        "targetId": "60016",
+        "targetRarity": "7",
+        "zel": 1500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution6": {
+      "prevId": "60016",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60016.png",
+      "nextId": "60017",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60017.png",
+      "recipe": {
+        "targetId": "60017",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 1268,
@@ -60668,7 +63567,116 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60027/60027_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60027/60027_atk.png"
     },
-    "evolution": {}
+    "evolution": {
+      "prevId": "60021",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60021.png",
+      "nextId": "60022",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "3",
+        "zel": 50000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution2": {
+      "prevId": "60022",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60022.png",
+      "nextId": "60023",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "recipe": {
+        "targetId": "60023",
+        "targetRarity": "4",
+        "zel": 100000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60121.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution3": {
+      "prevId": "60023",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60023.png",
+      "nextId": "60024",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "recipe": {
+        "targetId": "60024",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60201.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60120.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolution4": {
+      "prevId": "60024",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60024.png",
+      "nextId": "60025",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "recipe": {
+        "targetId": "60022",
+        "targetRarity": "6",
+        "zel": 500000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60144.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    },
+    "evolutionomni": {
+      "prevId": "60025",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60025.png",
+      "nextId": "60027",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60027.png",
+      "recipe": {
+        "targetId": "60027",
+        "targetRarity": "omni",
+        "zel": 3000000,
+        "karma": 1000000,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60344.png",
+          "../img/Unit/Squere Img/unit_ills_thum_50354.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60123.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60122.png",
+          "../img/Unit/Squere Img/unit_ills_thum_60224.png",
+          "../img/Material Evolve/item_thum_111000.png"
+        ],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
+    }
   },
   {
     "id": 1320,

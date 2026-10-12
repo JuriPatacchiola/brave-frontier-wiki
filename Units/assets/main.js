@@ -386,22 +386,15 @@ function getActiveUnitName(u) {
     return u.name;
 }
 
-/**
- * Formatta qualsiasi numero con il punto delle migliaia (es. 2500 diventa 2.500).
- */
 function formatEvolutionNumber(value) {
     return Number(value || 0).toLocaleString('it-IT');
 }
 
-/**
- * Gestisce dinamicamente tutte le evoluzioni dell'unità evitando doppioni e mostrando la rarità corretta
- */
 function renderEvolutionRecipes(unit) {
     const container = document.getElementById('evolutionContainer');
     if (!container) return;
 
     container.innerHTML = '';
-
     const evoKeys = Object.keys(unit).filter(key => key.startsWith('evolution'));
 
     evoKeys.sort((a, b) => {
@@ -418,7 +411,6 @@ function renderEvolutionRecipes(unit) {
         return;
     }
 
-    // Filtraggio anti-doppioni basato su nextId o nextImage
     const seenTargets = new Set();
     const uniqueEvolutions = [];
 
@@ -441,7 +433,7 @@ function renderEvolutionRecipes(unit) {
 
     uniqueEvolutions.forEach((item, index) => {
         const evolution = item.evoData;
-        const recipe = evolution.recipe;
+        const recipe = evolution.recipe || {};
         const currentImage = evolution.prevImage || unit.image || '';
         const nextImage = evolution.nextImage || '';
         const altName = getActiveUnitName(unit) || 'Unità';
@@ -452,14 +444,15 @@ function renderEvolutionRecipes(unit) {
         const targetUnit = allUnits.find(u => String(u.realId || u.id) === String(targetId));
 
         let rarityDisplay = '';
+        const directTargetRarity = String(evolution.targetRarity || recipe.targetRarity || '').trim().toLowerCase();
+        const targetUnitRarity = targetUnit ? String(targetUnit.rarity || '').trim().toLowerCase() : '';
 
-        if (targetUnit && targetUnit.rarity) {
-            const r = String(targetUnit.rarity).trim();
-            if (r === 'Omni' || r === 'Dream') {
-                rarityDisplay = `<img src="https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Phantom_icon.png" class="omni-icon" style="width:18px; vertical-align:middle; display:inline-block;"> Omni`;
-            } else {
-                rarityDisplay = `${r}★`;
-            }
+        if (directTargetRarity === 'omni' || directTargetRarity === 'dream' || targetUnitRarity === 'omni' || targetUnitRarity === 'dream') {
+            rarityDisplay = `<img src="https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Phantom_icon.png" class="omni-icon" style="width:18px; vertical-align:middle; display:inline-block;"> Omni`;
+        } else if (directTargetRarity) {
+            rarityDisplay = `${directTargetRarity}★`;
+        } else if (targetUnit && targetUnit.rarity) {
+            rarityDisplay = `${targetUnit.rarity}★`;
         } else {
             const currentRarityNum = parseInt(unit.rarity, 10);
             if (!isNaN(currentRarityNum)) {
@@ -470,7 +463,6 @@ function renderEvolutionRecipes(unit) {
         }
 
         const levelTitle = `Evoluzione a ${rarityDisplay}`;
-
         const materials = Array.isArray(recipe.materials) ? recipe.materials : [];
         const materialHtml = materials.length
             ? materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="Materiale ${mIndex + 1}">`).join('')
@@ -505,14 +497,10 @@ function renderEvolutionRecipes(unit) {
             </div>`;
     });
 
-    if (htmlContent === '') {
-        container.innerHTML = `
-            <div class="evo-recipe-empty">
-                <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
-            </div>`;
-    } else {
-        container.innerHTML = htmlContent;
-    }
+    container.innerHTML = htmlContent || `
+        <div class="evo-recipe-empty">
+            <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
+        </div>`;
 }
 
 async function startApp() {
@@ -559,9 +547,7 @@ function applyFilters(shouldScroll = false) {
 
     if (shouldScroll) {
         const container = document.getElementById('gridContainer');
-        if (container) {
-            container.scrollTop = 0;
-        }
+        if (container) container.scrollTop = 0;
         window.scrollTo(0, 0);
     }
 }
@@ -590,12 +576,8 @@ function displayUnits(appendOnly = false) {
     const oldSentinel = document.getElementById('scrollSentinel');
     if (oldSentinel) oldSentinel.remove();
 
-    let startIndex = 0;
-    if (appendOnly) {
-        startIndex = displayedCount - BATCH_SIZE;
-    } else {
-        container.innerHTML = '';
-    }
+    let startIndex = appendOnly ? (displayedCount - BATCH_SIZE) : 0;
+    if (!appendOnly) container.innerHTML = '';
 
     const isMobile = window.innerWidth <= 600;
     const unitsToRender = currentFilteredUnits.slice(startIndex, displayedCount);
@@ -625,7 +607,6 @@ function displayUnits(appendOnly = false) {
         }
 
         card.onclick = () => openModal(u);
-
         fragment.appendChild(card);
     });
 
@@ -654,11 +635,6 @@ function openModal(u) {
 
     currentUnitOpen = u;
     isFullArtOpen = false;
-
-    const circleImg = document.getElementById('evocation_circle');
-    if (circleImg) {
-        circleImg.src = getEvocationCircle(u.rarity);
-    }
 
     const randomIndex = Math.floor(Math.random() * arenaBackgrounds.length);
     const unitBoxTop = document.querySelector('.unit_box_top');
@@ -723,31 +699,32 @@ function changeArenaBackground() {
     }
 }
 
-// --- GESTIONE MODALE FULL ART, SLIDER VARIANTI & SWIPE TOUCH ---
-
-function checkImageExists(url) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = url;
-    });
-}
-
 async function getValidFullArts(unitId) {
-    const suffixes = ['', '_2', '_3', '_4'];
-    let validImages = [];
-    for (let suf of suffixes) {
-        let url = `../img/Unit/Full Art/unit_ills_full_${unitId}${suf}.png`;
-        let exists = await checkImageExists(url);
-        if (exists) {
-            validImages.push(url);
-        }
+    const strId = String(unitId);
+    let validImages = [`../img/Unit/Full Art/unit_ills_full_${strId}.png`];
+
+    const unitsWithVariant2 = [
+        '10017', '10257', '20017', '20157', '30017', '30447', '30566', '40017', '40117',
+        '50017', '50166', '60017', '60116', '60257', '60666', '61097', '810508', '810628',
+        '810758', '810828', '820568', '820758', '820828', '830288', '830328', '830518',
+        '830528', '830558', '830598', '830758', '830798', '830818', '840257', '840278',
+        '840508', '840758', '840798', '840828', '850018', '850278', '850568', '850628',
+        '850788', '850828', '860018', '860158', '860257', '860258', '860688', '860758',
+        '860798', '860828'
+    ];
+
+    if (unitsWithVariant2.includes(strId)) {
+        validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}_2.png`);
     }
+
     return validImages;
 }
 
 function closeFullArtModal() {
+    if (document.activeElement && document.activeElement !== document.body) {
+        document.activeElement.blur();
+    }
+
     const modal = document.getElementById('fullArtModal');
     const image = document.getElementById('fullArtModalImage');
     const button = document.getElementById('btn_btm5');
@@ -762,10 +739,57 @@ function closeFullArtModal() {
         image.removeAttribute('src');
     }
 
+    const fxCircle = document.getElementById('fullArtEvocationCircle');
+    const fxStars = document.getElementById('fullArtStars');
+    if (fxCircle) {
+        fxCircle.onerror = null;
+        fxCircle.removeAttribute('src');
+    }
+    if (fxStars) fxStars.replaceChildren();
+
     if (button) button.classList.remove('active');
     isFullArtOpen = false;
     currentFullArtImages = [];
     currentFullArtIndex = 0;
+}
+
+function setupFullArtEvocationFx(unit) {
+    const fx = document.getElementById('fullArtEvocationFx');
+    const circle = document.getElementById('fullArtEvocationCircle');
+    const stars = document.getElementById('fullArtStars');
+    if (!fx || !circle || !stars || !unit) return;
+
+    const rarity = String(unit.rarity || '').trim().toLowerCase();
+    let className = 'rarity-rainbow';
+
+    if (rarity === '1' || rarity === '2') {
+        className = 'rarity-white';
+    } else if (rarity === '3') {
+        className = 'rarity-gold';
+    } else if (rarity === '4') {
+        className = 'rarity-red';
+    } else {
+        className = 'rarity-rainbow'; // Per 5★, 6★, 7★, Omni e Dream
+    }
+
+    fx.classList.remove('rarity-white', 'rarity-gold', 'rarity-red', 'rarity-rainbow');
+    fx.classList.add(className);
+
+    circle.src = getEvocationCircle(unit.rarity);
+    circle.onerror = function () { circle.style.display = 'none'; };
+    circle.onload = function () { circle.style.display = 'block'; };
+
+    // Genera stelle che salgono dal basso verso l'alto attorno al cerchio nella Full Art
+    stars.replaceChildren();
+    for (let i = 0; i < 36; i++) {
+        const star = document.createElement('span');
+        star.className = 'fullart-star';
+        star.style.setProperty('--x', `${Math.random() * 80 + 10}%`);
+        star.style.setProperty('--size', `${Math.random() * 3 + 1.5}px`);
+        star.style.setProperty('--duration', `${Math.random() * 2.5 + 2}s`);
+        star.style.setProperty('--delay', `${Math.random() * 3}s`);
+        stars.appendChild(star);
+    }
 }
 
 async function toggleFullArt() {
@@ -789,6 +813,7 @@ async function toggleFullArt() {
 
     if (currentFullArtImages.length === 0) return;
 
+    setupFullArtEvocationFx(currentUnitOpen);
     updateFullArtDisplay();
 
     modal.classList.add('is-open');
@@ -805,7 +830,6 @@ function updateFullArtDisplay() {
     const counter = document.getElementById('fullArtCounter');
 
     if (!image) return;
-
     image.src = currentFullArtImages[currentFullArtIndex];
 
     const total = currentFullArtImages.length;
@@ -859,17 +883,12 @@ function handleSwipeGesture() {
     const swipeThreshold = 40;
     if (currentFullArtImages.length <= 1) return;
 
-    if (touchEndX < touchStartX - swipeThreshold) {
-        nextFullArt();
-    }
-    if (touchEndX > touchStartX + swipeThreshold) {
-        prevFullArt();
-    }
+    if (touchEndX < touchStartX - swipeThreshold) nextFullArt();
+    if (touchEndX > touchStartX + swipeThreshold) prevFullArt();
 }
 
 function showMotion(type) {
     if (!currentUnitOpen) return;
-
     const motions = ['default', 'idle', 'atk'];
 
     motions.forEach(t => {
@@ -904,22 +923,17 @@ function showMotion(type) {
                 }
                 if (imgTag) {
                     imgTag.style.display = 'block';
-                    if (imgTag.getAttribute('src') !== src) {
-                        imgTag.src = src;
-                    }
+                    if (imgTag.getAttribute('src') !== src) imgTag.src = src;
                 }
             }
         } else {
             if (container) container.style.display = 'none';
             if (btn) btn.style.display = 'none';
-
             if (videoTag) {
                 videoTag.pause();
                 videoTag.removeAttribute('src');
             }
-            if (imgTag) {
-                imgTag.removeAttribute('src');
-            }
+            if (imgTag) imgTag.removeAttribute('src');
         }
     });
 }
@@ -945,13 +959,8 @@ function closeModal() {
     ['default', 'idle', 'atk'].forEach(t => {
         const v = document.getElementById(`video_${t}`);
         const img = document.getElementById(`img_${t}`);
-        if (v) {
-            v.pause();
-            v.removeAttribute('src');
-        }
-        if (img) {
-            img.removeAttribute('src');
-        }
+        if (v) { v.pause(); v.removeAttribute('src'); }
+        if (img) img.removeAttribute('src');
     });
 
     currentUnitOpen = null;
@@ -981,27 +990,19 @@ function initListeners() {
     if (raritySel) raritySel.onchange = () => applyFilters(true);
 
     const btm4Container = document.getElementById('btn_btm4_container');
-    if (btm4Container) {
-        btm4Container.onclick = changeArenaBackground;
-    }
+    if (btm4Container) btm4Container.onclick = changeArenaBackground;
 
     const btm5Btn = document.getElementById('btn_btm5_container') || document.getElementById('btn_btm5');
-    if (btm5Btn) {
-        btm5Btn.onclick = toggleFullArt;
-    }
+    if (btm5Btn) btm5Btn.onclick = toggleFullArt;
 
     const closeFullArtBtn = document.getElementById('closeFullArtModal');
     const fullArtModal = document.getElementById('fullArtModal');
 
-    if (closeFullArtBtn) {
-        closeFullArtBtn.onclick = closeFullArtModal;
-    }
+    if (closeFullArtBtn) closeFullArtBtn.onclick = closeFullArtModal;
 
     if (fullArtModal) {
         fullArtModal.onclick = function (event) {
-            if (event.target === fullArtModal) {
-                closeFullArtModal();
-            }
+            if (event.target === fullArtModal) closeFullArtModal();
         };
     }
 
@@ -1009,9 +1010,7 @@ function initListeners() {
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-            if (document.getElementById('fullArtModal')?.classList.contains('is-open')) {
-                closeFullArtModal();
-            }
+            if (document.getElementById('fullArtModal')?.classList.contains('is-open')) closeFullArtModal();
         }
         if (document.getElementById('fullArtModal')?.classList.contains('is-open')) {
             if (event.key === 'ArrowLeft') prevFullArt();

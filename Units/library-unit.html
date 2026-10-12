@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brave Frontier Library - Unità</title>
     <link rel="stylesheet" href="../Units/assets/unit-list.css">
-    <link rel="stylesheet" href="../Units/assets/fullart-modal.css">
 </head>
 
 <body>
@@ -83,9 +82,7 @@
                 <div class="unit_box_top">
 
                     <div class="unit_gif">
-                        <!-- Cerchio Evocativo Rotante Dinamico -->
-                        <img id="evocation_circle" class="evocation-circle-bg" src="" alt="Evocation Circle">
-
+                        <!-- Vista animazione pulita (senza cerchio) -->
                         <div id="container_default" class="anim-container" style="display:inline">
                             <video id="video_default" loop muted playsinline webkit-playsinline
                                 class="unit-media-style"></video>
@@ -200,11 +197,17 @@
         </div>
     </div>
 
-    <!-- Modale separata per la Full Art dell'unità con Slider Varianti -->
+    <!-- Modale Full Art con Cerchio 3D e Stelle in Salita (BTM5) -->
     <div id="fullArtModal" class="fullart-modal" aria-hidden="true">
         <div class="fullart-modal-content" role="dialog" aria-modal="true" aria-label="Full Art dell'unità">
             <button type="button" id="closeFullArtModal" class="fullart-close"
                 aria-label="Chiudi Full Art">&times;</button>
+
+            <!-- Cerchio evocativo 3D e particelle stellari in salita -->
+            <div id="fullArtEvocationFx" class="fullart-evocation-fx rarity-white" aria-hidden="true">
+                <img id="fullArtEvocationCircle" class="fullart-evocation-circle" src="" alt="">
+                <div id="fullArtStars" class="fullart-stars"></div>
+            </div>
 
             <!-- Contatore varianti posizionato in alto a fianco della croce -->
             <div id="fullArtCounter" class="fullart-counter">1 / 1</div>
