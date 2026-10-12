@@ -923,7 +923,7 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   7. EFFETTI FULL ART BTM5: CERCHIO 3D + STELLE IN SALITA (POSIZIONATO SOTTO I PIEDI)
+   7. EFFETTI FULL ART BTM5: CERCHIO 3D + STELLE IN SALITA
    ========================================================================== */
 .fullart-evocation-fx {
     position: absolute;
@@ -935,7 +935,7 @@ body.modal-open {
     --star-b: #d0e1ff;
 }
 
-/* Cerchio evocativo in prospettiva 3D posizionato precisamente sotto i piedi dell'unità (PC/Default) */
+/* Cerchio evocativo in prospettiva 3D sotto i piedi (PC/Default) */
 .fullart-evocation-circle {
     position: absolute;
     left: 50%;
@@ -966,10 +966,10 @@ body.modal-open {
     overflow: hidden;
 }
 
-/* Stelle che salgono dal basso verso l'alto intorno al cerchio */
+/* Particelle (stelle) allineate all'altezza del cerchio (partono da 14% invece di 5%) */
 .fullart-star {
     position: absolute;
-    bottom: 5%;
+    bottom: 14%;
     left: var(--x);
     width: var(--size);
     height: var(--size);
@@ -996,7 +996,7 @@ body.modal-open {
 
     100% {
         opacity: 0;
-        transform: translateY(-340px) scale(1.25);
+        transform: translateY(-280px) scale(1.25);
     }
 }
 
@@ -1066,6 +1066,10 @@ body.modal-open {
     .fullart-evocation-circle {
         width: min(70vmin, 480px);
         height: min(70vmin, 480px);
+        bottom: 12%;
+    }
+
+    .fullart-star {
         bottom: 12%;
     }
 
@@ -1455,6 +1459,10 @@ body.modal-open {
     .fullart-evocation-circle {
         width: min(78vmin, 360px);
         height: min(78vmin, 360px);
+        bottom: 12%;
+    }
+
+    .fullart-star {
         bottom: 12%;
     }
 }
