@@ -654,7 +654,7 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   5. MODALE FULL ART E SLIDER VARIANTI (BTM5)
+   5. MODALE FULL ART E PIVOT CORRETTO (BTM5)
    ========================================================================== */
 .fullart-modal {
     display: none;
@@ -663,9 +663,9 @@ body.modal-open {
     z-index: 99999;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 0;
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.94);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(5px);
     opacity: 0;
     visibility: hidden;
@@ -683,11 +683,8 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    max-width: 1600px;
-    max-height: 100%;
-    padding: 20px;
+    width: 100vw;
+    height: 100vh;
     box-sizing: border-box;
     background: transparent;
     border: none;
@@ -696,12 +693,22 @@ body.modal-open {
     overflow: hidden;
 }
 
+/* CONTENITORE PIVOT COMUNE: Posizionato assolutamente per fare da asse unico sia alla Full Art che al Cerchio */
+.fullart-media-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #fullArtModalImage {
     display: block;
-    width: 70%;
-    height: 70%;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     object-position: center;
     user-select: none;
@@ -712,8 +719,8 @@ body.modal-open {
 
 .fullart-close {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 20px;
+    right: 20px;
     z-index: 30;
     display: flex;
     align-items: center;
@@ -741,8 +748,8 @@ body.modal-open {
 
 .fullart-counter {
     position: absolute;
-    top: 20px;
-    right: 75px;
+    top: 25px;
+    right: 80px;
     background: rgba(0, 0, 0, 0.75);
     color: #ffd700;
     padding: 6px 14px;
@@ -923,7 +930,7 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   7. EFFETTI FULL ART BTM5: CERCHIO 3D + STELLE IN SALITA
+   7. EFFETTI FULL ART BTM5: CERCHIO 3D GRANDE E POSIZIONATO AI PIEDI
    ========================================================================== */
 .fullart-evocation-fx {
     position: absolute;
@@ -935,18 +942,18 @@ body.modal-open {
     --star-b: #d0e1ff;
 }
 
-/* Cerchio evocativo in prospettiva 3D sotto i piedi (PC/Default) */
+/* Cerchio 3D Grande: centrato orizzontalmente e posizionato alla base dei piedi dell'Unità */
 .fullart-evocation-circle {
     position: absolute;
     left: 50%;
-    bottom: -39%;
-    width: min(128vmin, 800px);
-    height: min(108vmin, 800px);
+    bottom: -34vh;
+    width: min(130vmin, 950px);
+    height: min(110vmin, 900px);
     object-fit: contain;
     transform: translateX(-50%) rotateX(72deg) rotate(0deg);
     transform-origin: center center;
-    opacity: 0.88;
-    filter: drop-shadow(0 0 12px var(--star-a));
+    opacity: 0.90;
+    filter: drop-shadow(0 0 15px var(--star-a));
     animation: fullArtCircleSpin 24s linear infinite;
 }
 
@@ -966,10 +973,10 @@ body.modal-open {
     overflow: hidden;
 }
 
-/* Particelle (stelle) allineate all'altezza del cerchio (partono da 14% invece di 5%) */
+/* Particelle (stelle) in salita partendo dalla base del cerchio */
 .fullart-star {
     position: absolute;
-    bottom: 14%;
+    bottom: 5vh;
     left: var(--x);
     width: var(--size);
     height: var(--size);
@@ -996,7 +1003,7 @@ body.modal-open {
 
     100% {
         opacity: 0;
-        transform: translateY(-280px) scale(1.25);
+        transform: translateY(-400px) scale(1.25);
     }
 }
 
@@ -1064,13 +1071,13 @@ body.modal-open {
 
     /* Adattamento cerchio per Tablet */
     .fullart-evocation-circle {
-        width: min(100vmin, 630px);
-        height: min(130vmin, 590px);
-        bottom: -27%;
+        width: min(130vmin, 750px);
+        height: min(110vmin, 700px);
+        bottom: -36vh;
     }
 
     .fullart-star {
-        bottom: 12%;
+        bottom: 5vh;
     }
 
     .fullart-nav-btn {
@@ -1449,20 +1456,19 @@ body.modal-open {
     }
 
     #fullArtModalImage {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important;
-        transform: none !important;
+        max-width: 75vw !important;
+        max-height: 75vh !important;
+        bottom: 24px;
     }
 
     /* Adattamento cerchio per Smartphone */
     .fullart-evocation-circle {
-        width: min(78vmin, 360px);
-        height: min(78vmin, 360px);
-        bottom: 12%;
+        width: min(80vmin, 550px);
+        height: min(120vmin, 500px);
+        bottom: 0vh;
     }
 
     .fullart-star {
-        bottom: 12%;
+        bottom: 5vh;
     }
 }

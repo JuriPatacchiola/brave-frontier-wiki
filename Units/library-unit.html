@@ -203,19 +203,22 @@
             <button type="button" id="closeFullArtModal" class="fullart-close"
                 aria-label="Chiudi Full Art">&times;</button>
 
-            <!-- Cerchio evocativo 3D e particelle stellari in salita -->
-            <div id="fullArtEvocationFx" class="fullart-evocation-fx rarity-white" aria-hidden="true">
-                <img id="fullArtEvocationCircle" class="fullart-evocation-circle" src="" alt="">
-                <div id="fullArtStars" class="fullart-stars"></div>
-            </div>
-
             <!-- Contatore varianti posizionato in alto a fianco della croce -->
             <div id="fullArtCounter" class="fullart-counter">1 / 1</div>
 
             <!-- Pulsanti Slider Full Art (Visibili su PC) -->
             <button type="button" id="fullArtPrev" class="fullart-nav-btn prev-btn"
                 onclick="prevFullArt()">&#10094;</button>
-            <img id="fullArtModalImage" src="" alt="Full Art dell'unità selezionata">
+
+            <!-- CONTENITORE PIVOT COMUNE -->
+            <div class="fullart-media-box">
+                <div id="fullArtEvocationFx" class="fullart-evocation-fx rarity-white" aria-hidden="true">
+                    <img id="fullArtEvocationCircle" class="fullart-evocation-circle" src="" alt="">
+                    <div id="fullArtStars" class="fullart-stars"></div>
+                </div>
+                <img id="fullArtModalImage" src="" alt="Full Art dell'unità selezionata">
+            </div>
+
             <button type="button" id="fullArtNext" class="fullart-nav-btn next-btn"
                 onclick="nextFullArt()">&#10095;</button>
         </div>
