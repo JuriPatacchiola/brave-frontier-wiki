@@ -1449,8 +1449,8 @@ body.modal-open {
     }
 
     #fullArtModalImage {
-        width: 80% !important;
-        height: 80% !important;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: contain !important;
         transform: none !important;
     }
