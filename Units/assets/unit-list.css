@@ -1466,9 +1466,9 @@ body.modal-open {
 
     /* Cerchio e personaggio restano ancorati allo stesso pivot anche su smartphone */
     .fullart-evocation-circle {
-        width: min(112vmin, 620px);
+        width: min(78vmin, 620px);
         height: min(112vmin, 620px);
-        bottom: -3vh;
+        bottom: -16vh;
     }
 
     .fullart-star {
