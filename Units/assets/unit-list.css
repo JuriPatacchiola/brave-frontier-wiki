@@ -654,6 +654,15 @@ body.modal-open {
 }
 
 /* ==========================================================================
+   REGOLAZIONE VERTICALE FULL ART
+   Cambia questo valore per spostare insieme Full Art, cerchio evocativo e stelle.
+   Esempi: -30px (un po' più in alto), -60px (più in alto), 0px (posizione originale).
+   ========================================================================== */
+:root {
+    --fullart-group-offset-y: -50px;
+}
+
+/* ==========================================================================
    5. MODALE FULL ART E PIVOT CORRETTO (BTM5)
    ========================================================================== */
 .fullart-modal {
@@ -693,33 +702,30 @@ body.modal-open {
     overflow: hidden;
 }
 
-/* PIVOT UNICO: cerchio, stelle e Full Art condividono lo stesso centro */
+/* CONTENITORE PIVOT COMUNE: Posizionato assolutamente per fare da asse unico sia alla Full Art che al Cerchio */
 .fullart-media-box {
-    position: absolute;
-    inset: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    display: block;
-    overflow: hidden;
-    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Sposta insieme immagine, cerchio evocativo e stelle */
+    transform: translateY(var(--fullart-group-offset-y));
 }
 
 #fullArtModalImage {
     display: block;
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 0;
+    max-width: 90vw;
+    max-height: 85vh;
     width: auto;
     height: auto;
-    max-width: min(90vw, 1000px);
-    max-height: 88vh;
     object-fit: contain;
     object-position: center;
-    transform: translate(calc(-50% + var(--art-shift-x, 0px)), var(--art-shift-y, 0px));
-    transform-origin: center center;
     user-select: none;
     -webkit-user-drag: none;
+    position: relative;
+    z-index: 2;
 }
 
 .fullart-close {
@@ -951,11 +957,11 @@ body.modal-open {
 .fullart-evocation-circle {
     position: absolute;
     left: 50%;
-    bottom: -8vh;
-    width: min(95vmin, 820px);
-    height: min(95vmin, 820px);
+    bottom: -34vh;
+    width: min(130vmin, 950px);
+    height: min(110vmin, 900px);
     object-fit: contain;
-    transform: translateX(-50%) rotateX(68deg) rotate(0deg);
+    transform: translateX(-50%) rotateX(72deg) rotate(0deg);
     transform-origin: center center;
     opacity: 0.90;
     filter: drop-shadow(0 0 15px var(--star-a));
@@ -1074,10 +1080,11 @@ body.modal-open {
         height: 170%;
     }
 
+    /* Adattamento cerchio per Tablet */
     .fullart-evocation-circle {
-        width: min(100vmin, 720px);
-        height: min(100vmin, 720px);
-        bottom: -5vh;
+        width: min(130vmin, 750px);
+        height: min(110vmin, 700px);
+        bottom: -36vh;
     }
 
     .fullart-star {
@@ -1460,15 +1467,16 @@ body.modal-open {
     }
 
     #fullArtModalImage {
-        max-width: 88vw !important;
-        max-height: 78dvh !important;
+        max-width: 75vw !important;
+        max-height: 75vh !important;
+        bottom: -36px;
     }
 
-    /* Cerchio e personaggio restano ancorati allo stesso pivot anche su smartphone */
+    /* Adattamento cerchio per Smartphone */
     .fullart-evocation-circle {
-        width: min(78vmin, 620px);
-        height: min(112vmin, 620px);
-        bottom: -16vh;
+        width: min(82vmin, 550px);
+        height: min(120vmin, 500px);
+        bottom: -12vh;
     }
 
     .fullart-star {
