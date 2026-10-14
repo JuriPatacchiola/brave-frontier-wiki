@@ -823,6 +823,60 @@ async function toggleFullArt() {
     if (button) button.classList.add('active');
 }
 
+/*
+ * Allinea il contenuto visibile della PNG (non solo il suo canvas trasparente).
+ * In questo modo unità con margini trasparenti differenti condividono un pivot.
+ */
+function centerFullArtOnEvocationPivot(image) {
+    if (!image || !image.complete || !image.naturalWidth || !image.naturalHeight) return;
+
+    image.style.setProperty('--art-shift-x', '0px');
+    image.style.setProperty('--art-shift-y', '0px');
+
+    try {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        if (!ctx) return;
+        canvas.width = image.naturalWidth;
+        canvas.height = image.naturalHeight;
+        ctx.drawImage(image, 0, 0);
+        const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+        let minX = canvas.width, minY = canvas.height, maxX = -1, maxY = -1;
+        // Salta alcuni pixel per velocizzare immagini Full Art molto grandi.
+        const step = Math.max(1, Math.floor(Math.max(canvas.width, canvas.height) / 900));
+        for (let y = 0; y < canvas.height; y += step) {
+            for (let x = 0; x < canvas.width; x += step) {
+                if (pixels[(y * canvas.width + x) * 4 + 3] > 12) {
+                    if (x < minX) minX = x;
+                    if (x > maxX) maxX = x;
+                    if (y < minY) minY = y;
+                    if (y > maxY) maxY = y;
+                }
+            }
+        }
+        if (maxX < minX || maxY < minY) return;
+
+        const rendered = image.getBoundingClientRect();
+        const scaleX = rendered.width / canvas.width;
+        const scaleY = rendered.height / canvas.height;
+        const visibleCenterX = (minX + maxX) / 2;
+        const visibleBottomY = maxY;
+        const shiftX = (canvas.width / 2 - visibleCenterX) * scaleX;
+        // I piedi/estremità inferiori visibili vengono portati su una linea comune.
+        const targetBottom = Math.min(window.innerHeight * 0.82, window.innerHeight - 28);
+        const currentBottom = rendered.top + visibleBottomY * scaleY;
+        const shiftY = targetBottom - currentBottom;
+
+        image.style.setProperty('--art-shift-x', `${shiftX}px`);
+        image.style.setProperty('--art-shift-y', `${shiftY}px`);
+    } catch (error) {
+        // Se il browser non consente la lettura del canvas, resta il centraggio CSS.
+        image.style.setProperty('--art-shift-x', '0px');
+        image.style.setProperty('--art-shift-y', '0px');
+    }
+}
+
 function updateFullArtDisplay() {
     const image = document.getElementById('fullArtModalImage');
     const prevBtn = document.getElementById('fullArtPrev');
@@ -830,7 +884,19 @@ function updateFullArtDisplay() {
     const counter = document.getElementById('fullArtCounter');
 
     if (!image) return;
+    image.onload = function () {
+        requestAnimationFrame(() => centerFullArtOnEvocationPivot(image));
+    };
+    image.onerror = function () {
+        image.style.setProperty('--art-shift-x', '0px');
+        image.style.setProperty('--art-shift-y', '0px');
+    };
+    image.style.setProperty('--art-shift-x', '0px');
+    image.style.setProperty('--art-shift-y', '0px');
     image.src = currentFullArtImages[currentFullArtIndex];
+    if (image.complete && image.naturalWidth) {
+        requestAnimationFrame(() => centerFullArtOnEvocationPivot(image));
+    }
 
     const total = currentFullArtImages.length;
     if (total > 1) {
