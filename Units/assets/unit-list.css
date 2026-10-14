@@ -1459,7 +1459,7 @@ body.modal-open {
     #fullArtModalImage {
         max-width: 75vw !important;
         max-height: 75vh !important;
-        top: -30px;
+        top: 0px;
     }
 
     /* Adattamento cerchio per Smartphone */
