@@ -7,6 +7,7 @@ let isFullArtOpen = false;
 // Variabili per lo slider delle varianti Full Art
 let currentFullArtImages = [];
 let currentFullArtIndex = 0;
+let fullArtQuoteStep = 0; // 0 = summon, 1 = fusion, 2 = nessuna frase
 
 // Variabili per il rilevamento dello Swipe Touch
 let touchStartX = 0;
@@ -746,6 +747,8 @@ function closeFullArtModal() {
         fxCircle.removeAttribute('src');
     }
     if (fxStars) fxStars.replaceChildren();
+    fullArtQuoteStep = 0;
+    renderFullArtQuote();
 
     if (button) button.classList.remove('active');
     isFullArtOpen = false;
@@ -792,6 +795,43 @@ function setupFullArtEvocationFx(unit) {
     }
 }
 
+function getFullArtQuoteData() {
+    const unit = currentUnitOpen;
+    if (!unit) return { summon: '', fusion: '' };
+    const selector = document.getElementById('customLangSelector');
+    const lang = selector ? selector.value : 'it';
+    const localized = unit.textData && (unit.textData[lang] || unit.textData.en || unit.textData.it);
+    // I testi vengono letti dai dati dell'unità nella lingua selezionata;
+    // nessuna traduzione inventata viene mostrata se il dato non esiste.
+    const summon = localized?.summonQuote ?? (lang === 'en' ? unit.summonQuote : '');
+    const fusion = localized?.fusionQuote ?? (lang === 'en' ? unit.fusionQuote : '');
+    return { summon: String(summon || '').trim(), fusion: String(fusion || '').trim() };
+}
+
+function renderFullArtQuote() {
+    const panel = document.getElementById('fullArtQuotePanel');
+    const text = document.getElementById('fullArtQuoteText');
+    if (!panel || !text) return;
+    const quotes = getFullArtQuoteData();
+    let quote = '';
+    if (fullArtQuoteStep === 0) quote = quotes.summon;
+    else if (fullArtQuoteStep === 1) quote = quotes.fusion;
+    // Terzo stato: pannello nascosto, rimane solo la Full Art.
+    if (fullArtQuoteStep === 2 || !quote || quote === '---') {
+        panel.classList.remove('is-visible');
+        text.textContent = '';
+        return;
+    }
+    text.textContent = quote;
+    panel.classList.add('is-visible');
+}
+
+function cycleFullArtQuote() {
+    if (!isFullArtOpen) return;
+    fullArtQuoteStep = (fullArtQuoteStep + 1) % 3;
+    renderFullArtQuote();
+}
+
 async function toggleFullArt() {
     if (!currentUnitOpen) return;
 
@@ -814,6 +854,8 @@ async function toggleFullArt() {
     if (currentFullArtImages.length === 0) return;
 
     setupFullArtEvocationFx(currentUnitOpen);
+    fullArtQuoteStep = 0;
+    renderFullArtQuote();
     updateFullArtDisplay();
 
     modal.classList.add('is-open');
@@ -823,60 +865,6 @@ async function toggleFullArt() {
     if (button) button.classList.add('active');
 }
 
-/*
- * Allinea il contenuto visibile della PNG (non solo il suo canvas trasparente).
- * In questo modo unità con margini trasparenti differenti condividono un pivot.
- */
-function centerFullArtOnEvocationPivot(image) {
-    if (!image || !image.complete || !image.naturalWidth || !image.naturalHeight) return;
-
-    image.style.setProperty('--art-shift-x', '0px');
-    image.style.setProperty('--art-shift-y', '0px');
-
-    try {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d', { willReadFrequently: true });
-        if (!ctx) return;
-        canvas.width = image.naturalWidth;
-        canvas.height = image.naturalHeight;
-        ctx.drawImage(image, 0, 0);
-        const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-
-        let minX = canvas.width, minY = canvas.height, maxX = -1, maxY = -1;
-        // Salta alcuni pixel per velocizzare immagini Full Art molto grandi.
-        const step = Math.max(1, Math.floor(Math.max(canvas.width, canvas.height) / 900));
-        for (let y = 0; y < canvas.height; y += step) {
-            for (let x = 0; x < canvas.width; x += step) {
-                if (pixels[(y * canvas.width + x) * 4 + 3] > 12) {
-                    if (x < minX) minX = x;
-                    if (x > maxX) maxX = x;
-                    if (y < minY) minY = y;
-                    if (y > maxY) maxY = y;
-                }
-            }
-        }
-        if (maxX < minX || maxY < minY) return;
-
-        const rendered = image.getBoundingClientRect();
-        const scaleX = rendered.width / canvas.width;
-        const scaleY = rendered.height / canvas.height;
-        const visibleCenterX = (minX + maxX) / 2;
-        const visibleBottomY = maxY;
-        const shiftX = (canvas.width / 2 - visibleCenterX) * scaleX;
-        // I piedi/estremità inferiori visibili vengono portati su una linea comune.
-        const targetBottom = Math.min(window.innerHeight * 0.82, window.innerHeight - 28);
-        const currentBottom = rendered.top + visibleBottomY * scaleY;
-        const shiftY = targetBottom - currentBottom;
-
-        image.style.setProperty('--art-shift-x', `${shiftX}px`);
-        image.style.setProperty('--art-shift-y', `${shiftY}px`);
-    } catch (error) {
-        // Se il browser non consente la lettura del canvas, resta il centraggio CSS.
-        image.style.setProperty('--art-shift-x', '0px');
-        image.style.setProperty('--art-shift-y', '0px');
-    }
-}
-
 function updateFullArtDisplay() {
     const image = document.getElementById('fullArtModalImage');
     const prevBtn = document.getElementById('fullArtPrev');
@@ -884,19 +872,7 @@ function updateFullArtDisplay() {
     const counter = document.getElementById('fullArtCounter');
 
     if (!image) return;
-    image.onload = function () {
-        requestAnimationFrame(() => centerFullArtOnEvocationPivot(image));
-    };
-    image.onerror = function () {
-        image.style.setProperty('--art-shift-x', '0px');
-        image.style.setProperty('--art-shift-y', '0px');
-    };
-    image.style.setProperty('--art-shift-x', '0px');
-    image.style.setProperty('--art-shift-y', '0px');
     image.src = currentFullArtImages[currentFullArtIndex];
-    if (image.complete && image.naturalWidth) {
-        requestAnimationFrame(() => centerFullArtOnEvocationPivot(image));
-    }
 
     const total = currentFullArtImages.length;
     if (total > 1) {
@@ -1104,6 +1080,7 @@ window.changeLanguage = function (langCode) {
     document.cookie = "googtrans=/en/" + langCode + "; path=/;";
 
     if (allUnits.length > 0) applyFilters(true);
+    if (isFullArtOpen) renderFullArtQuote();
 
     const modal = document.getElementById('unitModal');
     if (currentUnitOpen && modal && modal.style.display === 'block') {
@@ -1118,6 +1095,17 @@ window.changeLanguage = function (langCode) {
         location.reload();
     }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fullArtImage = document.getElementById('fullArtModalImage');
+    if (fullArtImage) {
+        fullArtImage.addEventListener('click', cycleFullArtQuote);
+        fullArtImage.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); cycleFullArtQuote(); }
+        });
+        fullArtImage.tabIndex = 0;
+    }
+});
 
 window.addEventListener('resize', () => {
     if (allUnits.length > 0) applyFilters(false);

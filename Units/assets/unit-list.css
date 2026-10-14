@@ -654,15 +654,6 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   REGOLAZIONE VERTICALE FULL ART
-   Cambia questo valore per spostare insieme Full Art, cerchio evocativo e stelle.
-   Esempi: -30px (un po' più in alto), -60px (più in alto), 0px (posizione originale).
-   ========================================================================== */
-:root {
-    --fullart-group-offset-y: -50px;
-}
-
-/* ==========================================================================
    5. MODALE FULL ART E PIVOT CORRETTO (BTM5)
    ========================================================================== */
 .fullart-modal {
@@ -710,14 +701,12 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Sposta insieme immagine, cerchio evocativo e stelle */
-    transform: translateY(var(--fullart-group-offset-y));
 }
 
 #fullArtModalImage {
     display: block;
-    max-width: 90vw;
-    max-height: 85vh;
+    max-width: 80vw;
+    max-height: 65vh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -726,6 +715,7 @@ body.modal-open {
     -webkit-user-drag: none;
     position: relative;
     z-index: 2;
+    top: -50px;
 }
 
 .fullart-close {
@@ -957,7 +947,7 @@ body.modal-open {
 .fullart-evocation-circle {
     position: absolute;
     left: 50%;
-    bottom: -34vh;
+    bottom: -16vh;
     width: min(130vmin, 950px);
     height: min(110vmin, 900px);
     object-fit: contain;
@@ -1084,7 +1074,7 @@ body.modal-open {
     .fullart-evocation-circle {
         width: min(130vmin, 750px);
         height: min(110vmin, 700px);
-        bottom: -36vh;
+        bottom: -14vh
     }
 
     .fullart-star {
@@ -1469,17 +1459,83 @@ body.modal-open {
     #fullArtModalImage {
         max-width: 75vw !important;
         max-height: 75vh !important;
-        bottom: -36px;
+        top: -30px;
     }
 
     /* Adattamento cerchio per Smartphone */
     .fullart-evocation-circle {
-        width: min(82vmin, 550px);
+        width: min(80vmin, 550px);
         height: min(120vmin, 500px);
-        bottom: -12vh;
+        bottom: 0vh;
     }
 
     .fullart-star {
         bottom: 5vh;
+    }
+}
+
+/* ==========================================================================
+   FRASI SUMMON / FUSION NELLA MODALE FULL ART
+   Click 1: frase evocazione | click 2: frase fusione | click 3: solo Full Art
+   ========================================================================== */
+.fullart-quote-panel {
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    bottom: max(18px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(520px, 82vw);
+    aspect-ratio: 640 / 150;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.fullart-quote-panel.is-visible {
+    display: flex;
+}
+
+.fullart-quote-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fullart-quote-text {
+    position: relative;
+    z-index: 1;
+    width: 76%;
+    max-height: 62%;
+    overflow: hidden;
+    margin: 0;
+    color: #fff4c5;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(12px, 1.45vw, 19px);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 0 2px 3px #241300, 0 0 5px #000;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#fullArtModalImage {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .fullart-quote-panel {
+        width: min(92vw, 460px);
+        bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .fullart-quote-text {
+        font-size: clamp(11px, 3.1vw, 15px);
+        width: 74%;
     }
 }
