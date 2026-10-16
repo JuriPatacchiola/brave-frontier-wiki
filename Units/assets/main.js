@@ -702,8 +702,17 @@ function changeArenaBackground() {
 
 async function getValidFullArts(unitId) {
     const strId = String(unitId);
-    let validImages = [`../img/Unit/Full Art/unit_ills_full_${strId}.png`];
+    let validImages = [];
 
+    // Se l'ID inizia con "7", appartiene alle unità europee nella cartella specifica
+    if (strId.startsWith('7')) {
+        validImages.push(`../img/Unit/img Europe/Unit_ills_full_${strId}.png`);
+    } else {
+        // Altrimenti appartiene alle unità standard nella cartella Full Art
+        validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}.png`);
+    }
+
+    // Gestione varianti secondarie (_2) se previste
     const unitsWithVariant2 = [
         '10017', '10257', '20017', '20157', '30017', '30447', '30566', '40017', '40117',
         '50017', '50166', '60017', '60116', '60257', '60666', '61097', '810508', '810628',
@@ -715,7 +724,11 @@ async function getValidFullArts(unitId) {
     ];
 
     if (unitsWithVariant2.includes(strId)) {
-        validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}_2.png`);
+        if (strId.startsWith('7')) {
+            validImages.push(`../img/Unit/img Europe/Unit_ills_full_${strId}_2.png`);
+        } else {
+            validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}_2.png`);
+        }
     }
 
     return validImages;
@@ -772,7 +785,7 @@ function setupFullArtEvocationFx(unit) {
     } else if (rarity === '4') {
         className = 'rarity-red';
     } else {
-        className = 'rarity-rainbow'; // Per 5★, 6★, 7★, Omni e Dream
+        className = 'rarity-rainbow';
     }
 
     fx.classList.remove('rarity-white', 'rarity-gold', 'rarity-red', 'rarity-rainbow');
@@ -782,7 +795,6 @@ function setupFullArtEvocationFx(unit) {
     circle.onerror = function () { circle.style.display = 'none'; };
     circle.onload = function () { circle.style.display = 'block'; };
 
-    // Genera stelle che salgono dal basso verso l'alto attorno al cerchio nella Full Art
     stars.replaceChildren();
     for (let i = 0; i < 36; i++) {
         const star = document.createElement('span');
@@ -801,8 +813,6 @@ function getFullArtQuoteData() {
     const selector = document.getElementById('customLangSelector');
     const lang = selector ? selector.value : 'it';
     const localized = unit.textData && (unit.textData[lang] || unit.textData.en || unit.textData.it);
-    // I testi vengono letti dai dati dell'unità nella lingua selezionata;
-    // nessuna traduzione inventata viene mostrata se il dato non esiste.
     const summon = localized?.summonQuote ?? (lang === 'en' ? unit.summonQuote : '');
     const fusion = localized?.fusionQuote ?? (lang === 'en' ? unit.fusionQuote : '');
     return { summon: String(summon || '').trim(), fusion: String(fusion || '').trim() };
@@ -816,7 +826,7 @@ function renderFullArtQuote() {
     let quote = '';
     if (fullArtQuoteStep === 0) quote = quotes.summon;
     else if (fullArtQuoteStep === 1) quote = quotes.fusion;
-    // Terzo stato: pannello nascosto, rimane solo la Full Art.
+
     if (fullArtQuoteStep === 2 || !quote || quote === '---') {
         panel.classList.remove('is-visible');
         text.textContent = '';
@@ -856,6 +866,7 @@ async function toggleFullArt() {
     setupFullArtEvocationFx(currentUnitOpen);
     fullArtQuoteStep = 0;
     renderFullArtQuote();
+
     updateFullArtDisplay();
 
     modal.classList.add('is-open');
@@ -872,6 +883,8 @@ function updateFullArtDisplay() {
     const counter = document.getElementById('fullArtCounter');
 
     if (!image) return;
+
+    image.onerror = null;
     image.src = currentFullArtImages[currentFullArtIndex];
 
     const total = currentFullArtImages.length;
