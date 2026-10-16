@@ -1459,7 +1459,7 @@ body.modal-open {
     #fullArtModalImage {
         max-width: 75vw !important;
         max-height: 75vh !important;
-        top: 0px;
+        top: -70px;
     }
 
 
@@ -1467,7 +1467,7 @@ body.modal-open {
     .fullart-evocation-circle {
         width: min(80vmin, 550px);
         height: min(120vmin, 500px);
-        bottom: 0vh;
+        bottom: 10vh;
     }
 
     .fullart-star {
