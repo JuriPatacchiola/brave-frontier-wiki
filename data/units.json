@@ -38467,7 +38467,7 @@
   {
     "id": 669,
     "realId": "10484",
-    "name": "Barbara (5)",
+    "name": "Barbara ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/30/Unit_ills_thum_10484.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -40519,7 +40519,7 @@
   {
     "id": 728,
     "realId": "10534",
-    "name": "Randi (5)",
+    "name": "Randi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9c/Unit_ills_thum_10534.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -42571,7 +42571,7 @@
   {
     "id": 783,
     "realId": "60634",
-    "name": "Yuri (5)",
+    "name": "Yuri ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f2/Unit_ills_thum_60634.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -45434,7 +45434,7 @@
   {
     "id": 828,
     "realId": "10564",
-    "name": "Gandalf (5)",
+    "name": "Gandalf ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9b/Unit_ills_thum_10564.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -45506,7 +45506,7 @@
   {
     "id": 830,
     "realId": "50624",
-    "name": "Legolas (5)",
+    "name": "Legolas ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/12/Unit_ills_thum_50624.png",
     "element": "Element Light",
     "rarity": "5",
@@ -54938,7 +54938,7 @@
   {
     "id": 1098,
     "realId": "60635",
-    "name": "Yuri (6)",
+    "name": "Yuri ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/04/Unit_ills_thum_60635.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -54974,7 +54974,7 @@
   {
     "id": 1099,
     "realId": "10764",
-    "name": "Barbatos (5)",
+    "name": "Barbatos ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b9/Unit_ills_thum_10764.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -55010,7 +55010,7 @@
   {
     "id": 1100,
     "realId": "10765",
-    "name": "Barbatos (6)",
+    "name": "Barbatos ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/eb/Unit_ills_thum_10765.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -55046,7 +55046,7 @@
   {
     "id": 1101,
     "realId": "50844",
-    "name": "Dhaos (5)",
+    "name": "Dhaos ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/41/Unit_ills_thum_50844.png",
     "element": "Element Light",
     "rarity": "5",
@@ -55082,7 +55082,7 @@
   {
     "id": 1102,
     "realId": "50845",
-    "name": "Dhaos (6)",
+    "name": "Dhaos ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0f/Unit_ills_thum_50845.png",
     "element": "Element Light",
     "rarity": "6",
@@ -55118,7 +55118,7 @@
   {
     "id": 1103,
     "realId": "50854",
-    "name": "Milla Maxwell (5)",
+    "name": "Milla Maxwell ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6d/Unit_ills_thum_50854.png",
     "element": "Element Light",
     "rarity": "5",
@@ -55154,7 +55154,7 @@
   {
     "id": 1104,
     "realId": "50855",
-    "name": "Milla Maxwell (6)",
+    "name": "Milla Maxwell ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_50855.png",
     "element": "Element Light",
     "rarity": "6",
@@ -62348,7 +62348,7 @@
   {
     "id": 1286,
     "realId": "20784",
-    "name": "Asahi (5)",
+    "name": "Asahi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_20784.png",
     "element": "Element Water",
     "rarity": "5",
@@ -62384,7 +62384,7 @@
   {
     "id": 1287,
     "realId": "20785",
-    "name": "Asahi (6)",
+    "name": "Asahi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9a/Unit_ills_thum_20785.png",
     "element": "Element Water",
     "rarity": "6",
@@ -62420,7 +62420,7 @@
   {
     "id": 1288,
     "realId": "30764",
-    "name": "Nozomi (5)",
+    "name": "Nozomi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Unit_ills_thum_30764.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -62456,7 +62456,7 @@
   {
     "id": 1289,
     "realId": "30765",
-    "name": "Nozomi (6)",
+    "name": "Nozomi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/63/Unit_ills_thum_30765.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -62528,7 +62528,7 @@
   {
     "id": 1291,
     "realId": "50944",
-    "name": "Flynn (5)",
+    "name": "Flynn ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/33/Unit_ills_thum_50944.png",
     "element": "Element Light",
     "rarity": "5",
@@ -62564,7 +62564,7 @@
   {
     "id": 1292,
     "realId": "50945",
-    "name": "Flynn (6)",
+    "name": "Flynn ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/57/Unit_ills_thum_50945.png",
     "element": "Element Light",
     "rarity": "6",
@@ -62636,7 +62636,7 @@
   {
     "id": 1294,
     "realId": "60964",
-    "name": "Dagda (5)",
+    "name": "Dagda ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c5/Unit_ills_thum_60964.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -62672,7 +62672,7 @@
   {
     "id": 1295,
     "realId": "60965",
-    "name": "Dagda (6)",
+    "name": "Dagda ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/63/Unit_ills_thum_60965.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -67281,7 +67281,7 @@
   {
     "id": 1422,
     "realId": "10985",
-    "name": "Rain (6, Original)",
+    "name": "Rain",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a3/Unit_ills_thum_10985.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -67317,7 +67317,7 @@
   {
     "id": 1423,
     "realId": "10986",
-    "name": "Rain (7, Original)",
+    "name": "Rain",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d8/Unit_ills_thum_10986.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -67353,7 +67353,7 @@
   {
     "id": 1426,
     "realId": "20915",
-    "name": "Lasswell (6, Original)",
+    "name": "Lasswell",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/38/Unit_ills_thum_20915.png",
     "element": "Element Water",
     "rarity": "6",
@@ -67389,7 +67389,7 @@
   {
     "id": 1427,
     "realId": "20916",
-    "name": "Lasswell (7, Original)",
+    "name": "Lasswell",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/7c/Unit_ills_thum_20916.png",
     "element": "Element Water",
     "rarity": "7",
@@ -67425,7 +67425,7 @@
   {
     "id": 1428,
     "realId": "51075",
-    "name": "Fina (6, Original)",
+    "name": "Fina",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c3/Unit_ills_thum_51075.png",
     "element": "Element Light",
     "rarity": "6",
@@ -67461,7 +67461,7 @@
   {
     "id": 1429,
     "realId": "51076",
-    "name": "Fina (7, Original)",
+    "name": "Fina",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/1b/Unit_ills_thum_51076.png",
     "element": "Element Light",
     "rarity": "7",
@@ -68505,7 +68505,7 @@
   {
     "id": 1458,
     "realId": "20955",
-    "name": "Claudia (6)",
+    "name": "Claudia ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8f/Unit_ills_thum_20955.png",
     "element": "Element Water",
     "rarity": "6",
@@ -71709,7 +71709,7 @@
   {
     "id": 1549,
     "realId": "61167",
-    "name": "呪骨操姫マリー",
+    "name": "Hexbone Puppeteer Marie",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/23/Unit_ills_thum_61167.png",
     "element": "Element Dark",
     "rarity": "Omni",
@@ -73579,42 +73579,6 @@
     "evolution": {}
   },
   {
-    "id": 1601,
-    "realId": "31007",
-    "name": "Weald Guardian Nagid",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b1/Unit_ills_thum_31007.png",
-    "element": "Element Earth",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31007/31007_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31007/31007_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31007/31007_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 1603,
     "realId": "31007",
     "name": "Weald Guardian Nagid",
@@ -74151,294 +74115,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41017/41017_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41017/41017_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41017/41017_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1630,
-    "realId": "31046",
-    "name": "ディズィー",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/13/Unit_ills_thum_31046.png",
-    "element": "Element Earth",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31046/31046_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31046/31046_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31046/31046_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1631,
-    "realId": "31047",
-    "name": "ディズィー",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9f/Unit_ills_thum_31047.png",
-    "element": "Element Earth",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31047/31047_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31047/31047_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/31047/31047_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1632,
-    "realId": "41026",
-    "name": "ミリア",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/02/Unit_ills_thum_41026.png",
-    "element": "Element Thunder",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41026/41026_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41026/41026_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41026/41026_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1633,
-    "realId": "41027",
-    "name": "ミリア ",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6a/Unit_ills_thum_41027.png",
-    "element": "Element Thunder",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41027/41027_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41027/41027_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/41027/41027_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1634,
-    "realId": "51306",
-    "name": "ジャック・オー",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/49/Unit_ills_thum_51306.png",
-    "element": "Element Light",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51306/51306_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51306/51306_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51306/51306_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1635,
-    "realId": "51307",
-    "name": "ジャック・オー ",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/dd/Unit_ills_thum_51307.png",
-    "element": "Element Light",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51307/51307_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51307/51307_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/51307/51307_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1636,
-    "realId": "61246",
-    "name": "ラムレザル",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/4f/Unit_ills_thum_61246.png",
-    "element": "Element Dark",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61246/61246_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61246/61246_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61246/61246_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 1637,
-    "realId": "61247",
-    "name": "ラムレザル ",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3e/Unit_ills_thum_61247.png",
-    "element": "Element Dark",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61247/61247_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61247/61247_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/61247/61247_atk.png"
     },
     "evolution": {}
   },
@@ -83445,7 +83121,7 @@
   {
     "id": 1934,
     "realId": "810186",
-    "name": "Kyo Kusanagi (6)",
+    "name": "Kyo Kusanagi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d2/Unit_ills_thum_810186.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -83517,7 +83193,7 @@
   {
     "id": 1936,
     "realId": "810176",
-    "name": "Mai Shiranui (6)",
+    "name": "Mai Shiranui ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/61/Unit_ills_thum_810176.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -83589,7 +83265,7 @@
   {
     "id": 1938,
     "realId": "820176",
-    "name": "Kula Diamond (6)",
+    "name": "Kula Diamond ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/47/Unit_ills_thum_820176.png",
     "element": "Element Water",
     "rarity": "6",
@@ -83733,7 +83409,7 @@
   {
     "id": 1942,
     "realId": "840176",
-    "name": "Benimaru Nikaido (6)",
+    "name": "Benimaru Nikaido ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/29/Unit_ills_thum_840176.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -83805,7 +83481,7 @@
   {
     "id": 1944,
     "realId": "850176",
-    "name": "Athena Asamiya (6)",
+    "name": "Athena Asamiya ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/84/Unit_ills_thum_850176.png",
     "element": "Element Light",
     "rarity": "6",
@@ -83949,7 +83625,7 @@
   {
     "id": 1948,
     "realId": "860186",
-    "name": "Omega Rugal (6)",
+    "name": "Omega Rugal ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b7/Unit_ills_thum_860186.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -84597,7 +84273,7 @@
   {
     "id": 1966,
     "realId": "810398",
-    "name": "Rain ",
+    "name": "Rain",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/94/Unit_ills_thum_810398.png",
     "element": "Element Fire",
     "rarity": "Omni",
@@ -84669,7 +84345,7 @@
   {
     "id": 1968,
     "realId": "850398",
-    "name": "Fina ",
+    "name": "Fina",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c0/Unit_ills_thum_850398.png",
     "element": "Element Light",
     "rarity": "Omni",
@@ -84741,7 +84417,7 @@
   {
     "id": 1970,
     "realId": "820398",
-    "name": "Lasswell ",
+    "name": "Lasswell",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/be/Unit_ills_thum_820398.png",
     "element": "Element Water",
     "rarity": "Omni",
@@ -86323,78 +85999,6 @@
     "evolution": {}
   },
   {
-    "id": 2014,
-    "realId": "760226",
-    "name": "Corporal Lancelot",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0d/Unit_ills_thum_760226.png",
-    "element": "Element Dark",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760226/760226_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760226/760226_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760226/760226_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2015,
-    "realId": "760227",
-    "name": "Kingslayer Lancelot",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/20/Unit_ills_thum_760227.png",
-    "element": "Element Dark",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760227/760227_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760227/760227_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760227/760227_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2018,
     "realId": "820277",
     "name": "Storm Shatterer Galea",
@@ -87079,42 +86683,6 @@
     "evolution": {}
   },
   {
-    "id": 2038,
-    "realId": "710217",
-    "name": "Ace Assassin Natalamé",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/82/Unit_ills_thum_710217.png",
-    "element": "Element Fire",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710217/710217_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710217/710217_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710217/710217_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2039,
     "realId": "830357",
     "name": "Ravishing Hetepheres",
@@ -87403,42 +86971,6 @@
     "evolution": {}
   },
   {
-    "id": 2047,
-    "realId": "720157",
-    "name": "Bad Lands Queen Gazolina",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3c/Unit_ills_thum_720157.png",
-    "element": "Element Water",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720157/720157_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720157/720157_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720157/720157_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2048,
     "realId": "840357",
     "name": "Guardian Khepratum",
@@ -87687,42 +87219,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830438/830438_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830438/830438_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830438/830438_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2055,
-    "realId": "740157",
-    "name": "Stratospheric Crash Belt",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_740157.png",
-    "element": "Element Thunder",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740157/740157_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740157/740157_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740157/740157_atk.png"
     },
     "evolution": {}
   },
@@ -91831,42 +91327,6 @@
     "evolution": {}
   },
   {
-    "id": 2178,
-    "realId": "740237",
-    "name": "Lonely Apex Sheriff",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/01/Unit_ills_thum_740237.png",
-    "element": "Element Thunder",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740237/740237_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740237/740237_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740237/740237_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2179,
     "realId": "830597",
     "name": "Nia",
@@ -93703,42 +93163,6 @@
     "evolution": {}
   },
   {
-    "id": 2232,
-    "realId": "730257",
-    "name": "Zodiacal Apex Ophiuchus",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d5/Unit_ills_thum_730257.png",
-    "element": "Element Earth",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730257/730257_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730257/730257_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730257/730257_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2233,
     "realId": "810708",
     "name": "Demoniac Czorag",
@@ -93843,42 +93267,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830698/830698_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830698/830698_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830698/830698_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2236,
-    "realId": "710227",
-    "name": "Magma Apex Surt",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/36/Unit_ills_thum_710227.png",
-    "element": "Element Fire",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710227/710227_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710227/710227_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710227/710227_atk.png"
     },
     "evolution": {}
   },
@@ -94095,42 +93483,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860708/860708_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860708/860708_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860708/860708_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2243,
-    "realId": "740247",
-    "name": "Kaiser Apex Gilgamesh",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/28/Unit_ills_thum_740247.png",
-    "element": "Element Thunder",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740247/740247_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740247/740247_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740247/740247_atk.png"
     },
     "evolution": {}
   },
@@ -94671,42 +94023,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810758/810758_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810758/810758_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810758/810758_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2260,
-    "realId": "720237",
-    "name": "Undefeated Apex Utheria",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2f/Unit_ills_thum_720237.png",
-    "element": "Element Water",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720237/720237_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720237/720237_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720237/720237_atk.png"
     },
     "evolution": {}
   },
@@ -96831,42 +96147,6 @@
       "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820828/820828_default.png",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820828/820828_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820828/820828_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2321,
-    "realId": "760006",
-    "name": "Herald of Yggdrasil",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5b/Unit_ills_thum_760006.png",
-    "element": "Element Dark",
-    "rarity": "Omni",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760006/760006_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760006/760006_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760006/760006_atk.png"
     },
     "evolution": {}
   },
@@ -99393,7 +98673,7 @@
   {
     "id": 2395,
     "realId": "710013",
-    "name": "Wandering Jack (EU)",
+    "name": "Wandering Jack ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/ea/Unit_ills_thum_710013.png",
     "element": "Element Fire",
     "rarity": "4",
@@ -99429,7 +98709,7 @@
   {
     "id": 2396,
     "realId": "710014",
-    "name": "Wandering Lancer Jack (EU)",
+    "name": "Wandering Lancer Jack ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/24/Unit_ills_thum_710014.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -99465,7 +98745,7 @@
   {
     "id": 2397,
     "realId": "710015",
-    "name": "Horseman Jack (EU)",
+    "name": "Horseman Jack ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/60/Unit_ills_thum_710015.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -99501,7 +98781,7 @@
   {
     "id": 2398,
     "realId": "750014",
-    "name": "Santa (EU)",
+    "name": "Santa ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f1/Unit_ills_thum_750014.png",
     "element": "Element Light",
     "rarity": "5",
@@ -99537,7 +98817,7 @@
   {
     "id": 2399,
     "realId": "710254",
-    "name": "Festive Axe Michele (EU)",
+    "name": "Festive Axe Michele ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/49/Unit_ills_thum_710254.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -99573,7 +98853,7 @@
   {
     "id": 2400,
     "realId": "710255",
-    "name": "Party Axe Michele (EU)",
+    "name": "Party Axe Michele ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bb/Unit_ills_thum_710255.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -99609,7 +98889,7 @@
   {
     "id": 2401,
     "realId": "720254",
-    "name": "Festive Apostle Tiara (EU)",
+    "name": "Festive Apostle Tiara ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/02/Unit_ills_thum_720254.png",
     "element": "Element Water",
     "rarity": "5",
@@ -99645,7 +98925,7 @@
   {
     "id": 2402,
     "realId": "720255",
-    "name": "Party Apostle Tiara (EU)",
+    "name": "Party Apostle Tiara ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/15/Unit_ills_thum_720255.png",
     "element": "Element Water",
     "rarity": "6",
@@ -99681,7 +98961,7 @@
   {
     "id": 2403,
     "realId": "730284",
-    "name": "Festive Fist Dilma (EU)",
+    "name": "Festive Fist Dilma ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/57/Unit_ills_thum_730284.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -99717,7 +98997,7 @@
   {
     "id": 2404,
     "realId": "730285",
-    "name": "Party Fist Dilma (EU)",
+    "name": "Party Fist Dilma ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/39/Unit_ills_thum_730285.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -99753,7 +99033,7 @@
   {
     "id": 2405,
     "realId": "740284",
-    "name": "Festive Magus Rashil (EU)",
+    "name": "Festive Magus Rashil ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f7/Unit_ills_thum_740284.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -99789,7 +99069,7 @@
   {
     "id": 2406,
     "realId": "740285",
-    "name": "Party Mage Rashil (EU)",
+    "name": "Party Mage Rashil ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/ea/Unit_ills_thum_740285.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -99825,7 +99105,7 @@
   {
     "id": 2407,
     "realId": "750314",
-    "name": "Festive Cyborg Lilith II (EU)",
+    "name": "Festive Cyborg Lilith II ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/90/Unit_ills_thum_750314.png",
     "element": "Element Light",
     "rarity": "5",
@@ -99861,7 +99141,7 @@
   {
     "id": 2408,
     "realId": "750315",
-    "name": "Party Time Lilith (EU)",
+    "name": "Party Time Lilith ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/39/Unit_ills_thum_750315.png",
     "element": "Element Light",
     "rarity": "6",
@@ -99897,7 +99177,7 @@
   {
     "id": 2409,
     "realId": "760284",
-    "name": "Festive Blades Logan (EU)",
+    "name": "Festive Blades Logan ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/94/Unit_ills_thum_760284.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -99933,7 +99213,7 @@
   {
     "id": 2410,
     "realId": "760285",
-    "name": "Party Swords Logan (EU)",
+    "name": "Party Swords Logan ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d9/Unit_ills_thum_760285.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -99969,7 +99249,7 @@
   {
     "id": 2411,
     "realId": "730125",
-    "name": "Blissful Arms Douglas (EU)",
+    "name": "Blissful Arms Douglas ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0c/Unit_ills_thum_730125.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -100005,7 +99285,7 @@
   {
     "id": 2412,
     "realId": "750202",
-    "name": "Christmas Light Ghost (EU)",
+    "name": "Christmas Light Ghost ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/97/Unit_ills_thum_750202.png",
     "element": "Element Light",
     "rarity": "3",
@@ -100041,7 +99321,7 @@
   {
     "id": 2413,
     "realId": "750203",
-    "name": "Christmas Light King (EU)",
+    "name": "Christmas Light King ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/28/Unit_ills_thum_750203.png",
     "element": "Element Light",
     "rarity": "4",
@@ -100077,7 +99357,7 @@
   {
     "id": 2414,
     "realId": "750204",
-    "name": "Christmas Light God (EU)",
+    "name": "Christmas Light God ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3e/Unit_ills_thum_750204.png",
     "element": "Element Light",
     "rarity": "5",
@@ -100113,7 +99393,7 @@
   {
     "id": 2415,
     "realId": "710113",
-    "name": "Skalmold (EU)",
+    "name": "Skalmold ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c2/Unit_ills_thum_710113.png",
     "element": "Element Fire",
     "rarity": "4",
@@ -100149,7 +99429,7 @@
   {
     "id": 2416,
     "realId": "710114",
-    "name": "Holy Skalmold (EU)",
+    "name": "Holy Skalmold ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/1e/Unit_ills_thum_710114.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -100185,7 +99465,7 @@
   {
     "id": 2417,
     "realId": "710115",
-    "name": "Mischievous Skalmold (EU)",
+    "name": "Mischievous Skalmold ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d8/Unit_ills_thum_710115.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -100221,7 +99501,7 @@
   {
     "id": 2418,
     "realId": "720113",
-    "name": "Svafa (EU)",
+    "name": "Svafa ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/99/Unit_ills_thum_720113.png",
     "element": "Element Water",
     "rarity": "4",
@@ -100257,7 +99537,7 @@
   {
     "id": 2419,
     "realId": "720114",
-    "name": "Holy Svafa (EU)",
+    "name": "Holy Svafa ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fa/Unit_ills_thum_720114.png",
     "element": "Element Water",
     "rarity": "5",
@@ -100293,7 +99573,7 @@
   {
     "id": 2420,
     "realId": "720115",
-    "name": "Goddess Svafa (EU)",
+    "name": "Goddess Svafa ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0b/Unit_ills_thum_720115.png",
     "element": "Element Water",
     "rarity": "6",
@@ -100329,7 +99609,7 @@
   {
     "id": 2421,
     "realId": "730113",
-    "name": "Eir (EU)",
+    "name": "Eir ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/ff/Unit_ills_thum_730113.png",
     "element": "Element Earth",
     "rarity": "4",
@@ -100365,7 +99645,7 @@
   {
     "id": 2422,
     "realId": "730114",
-    "name": "Holy Eir (EU)",
+    "name": "Holy Eir ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3c/Unit_ills_thum_730114.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -100401,7 +99681,7 @@
   {
     "id": 2423,
     "realId": "730115",
-    "name": "Goddess Eir (EU)",
+    "name": "Goddess Eir ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/4c/Unit_ills_thum_730115.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -100437,7 +99717,7 @@
   {
     "id": 2424,
     "realId": "740113",
-    "name": "Thrud (EU)",
+    "name": "Thrud ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5d/Unit_ills_thum_740113.png",
     "element": "Element Thunder",
     "rarity": "4",
@@ -100473,7 +99753,7 @@
   {
     "id": 2425,
     "realId": "740114",
-    "name": "Holy Thrud (EU)",
+    "name": "Holy Thrud ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/83/Unit_ills_thum_740114.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -100509,7 +99789,7 @@
   {
     "id": 2426,
     "realId": "740115",
-    "name": "Goddess Thrud (EU)",
+    "name": "Goddess Thrud ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/72/Unit_ills_thum_740115.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -100545,7 +99825,7 @@
   {
     "id": 2427,
     "realId": "750113",
-    "name": "Alvitr (EU)",
+    "name": "Alvitr ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6f/Unit_ills_thum_750113.png",
     "element": "Element Light",
     "rarity": "4",
@@ -100581,7 +99861,7 @@
   {
     "id": 2428,
     "realId": "750114",
-    "name": "Holy Alvitr (EU)",
+    "name": "Holy Alvitr ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c0/Unit_ills_thum_750114.png",
     "element": "Element Light",
     "rarity": "5",
@@ -100617,7 +99897,7 @@
   {
     "id": 2429,
     "realId": "750115",
-    "name": "Goddess Alvitr (EU)",
+    "name": "Goddess Alvitr ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9a/Unit_ills_thum_750115.png",
     "element": "Element Light",
     "rarity": "6",
@@ -100653,7 +99933,7 @@
   {
     "id": 2430,
     "realId": "760113",
-    "name": "Geirdriful (EU)",
+    "name": "Geirdriful ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/da/Unit_ills_thum_760113.png",
     "element": "Element Dark",
     "rarity": "4",
@@ -100689,7 +99969,7 @@
   {
     "id": 2431,
     "realId": "760114",
-    "name": "Holy Geirdriful (EU)",
+    "name": "Holy Geirdriful ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a3/Unit_ills_thum_760114.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -100725,7 +100005,7 @@
   {
     "id": 2432,
     "realId": "760115",
-    "name": "Goddess Geirdriful (EU)",
+    "name": "Goddess Geirdriful ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f5/Unit_ills_thum_760115.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -100761,7 +100041,7 @@
   {
     "id": 2433,
     "realId": "750122",
-    "name": "Wonder Mirror Idol (EU)",
+    "name": "Wonder Mirror Idol ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9a/Unit_ills_thum_750122.png",
     "element": "Element Light",
     "rarity": "3",
@@ -100797,7 +100077,7 @@
   {
     "id": 2434,
     "realId": "720104",
-    "name": "Lovestruck Sergio (EU)",
+    "name": "Lovestruck Sergio ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/79/Unit_ills_thum_720104.png",
     "element": "Element Water",
     "rarity": "5",
@@ -100833,7 +100113,7 @@
   {
     "id": 2435,
     "realId": "710312",
-    "name": "RoboFrog (EU)",
+    "name": "RoboFrog ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/04/Unit_ills_thum_710312.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -100869,7 +100149,7 @@
   {
     "id": 2436,
     "realId": "730302",
-    "name": "Mystery Frog (EU)",
+    "name": "Mystery Frog ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/98/Unit_ills_thum_730302.png",
     "element": "Element Earth",
     "rarity": "3",
@@ -100905,7 +100185,7 @@
   {
     "id": 2437,
     "realId": "710133",
-    "name": "Etudrev (EU)",
+    "name": "Etudrev ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_710133.png",
     "element": "Element Fire",
     "rarity": "4",
@@ -100941,7 +100221,7 @@
   {
     "id": 2438,
     "realId": "710134",
-    "name": "Holy Etudrev (EU)",
+    "name": "Holy Etudrev ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a9/Unit_ills_thum_710134.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -100977,7 +100257,7 @@
   {
     "id": 2439,
     "realId": "710135",
-    "name": "God Etudrev (EU)",
+    "name": "God Etudrev ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/7a/Unit_ills_thum_710135.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -101013,7 +100293,7 @@
   {
     "id": 2440,
     "realId": "720133",
-    "name": "Aymarks (EU)",
+    "name": "Aymarks ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/43/Unit_ills_thum_720133.png",
     "element": "Element Water",
     "rarity": "4",
@@ -101049,7 +100329,7 @@
   {
     "id": 2441,
     "realId": "720134",
-    "name": "AymarkS sacred (EU)",
+    "name": "AymarkS sacred ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9b/Unit_ills_thum_720134.png",
     "element": "Element Water",
     "rarity": "5",
@@ -101085,7 +100365,7 @@
   {
     "id": 2442,
     "realId": "720135",
-    "name": "Goddess aymarkS (EU)",
+    "name": "Goddess aymarkS ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/34/Unit_ills_thum_720135.png",
     "element": "Element Water",
     "rarity": "6",
@@ -101121,7 +100401,7 @@
   {
     "id": 2443,
     "realId": "730133",
-    "name": "Sotnarg (EU)",
+    "name": "Sotnarg ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d8/Unit_ills_thum_730133.png",
     "element": "Element Earth",
     "rarity": "4",
@@ -101157,7 +100437,7 @@
   {
     "id": 2444,
     "realId": "730134",
-    "name": "Holy Sotnarg (EU)",
+    "name": "Holy Sotnarg ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d9/Unit_ills_thum_730134.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -101193,7 +100473,7 @@
   {
     "id": 2445,
     "realId": "730135",
-    "name": "God Sotnarg (EU)",
+    "name": "God Sotnarg ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/36/Unit_ills_thum_730135.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -101229,7 +100509,7 @@
   {
     "id": 2446,
     "realId": "740133",
-    "name": "Ossoloc (EU)",
+    "name": "Ossoloc ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fd/Unit_ills_thum_740133.png",
     "element": "Element Thunder",
     "rarity": "4",
@@ -101265,7 +100545,7 @@
   {
     "id": 2447,
     "realId": "740134",
-    "name": "Holy Ossoloc (EU)",
+    "name": "Holy Ossoloc ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d1/Unit_ills_thum_740134.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -101301,7 +100581,7 @@
   {
     "id": 2448,
     "realId": "740135",
-    "name": "God Ossoloc (EU)",
+    "name": "God Ossoloc ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5c/Unit_ills_thum_740135.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -101337,7 +100617,7 @@
   {
     "id": 2449,
     "realId": "750133",
-    "name": "Llewxam (EU)",
+    "name": "Llewxam ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/65/Unit_ills_thum_750133.png",
     "element": "Element Light",
     "rarity": "4",
@@ -101373,7 +100653,7 @@
   {
     "id": 2450,
     "realId": "750134",
-    "name": "Holy Llewxam (EU)",
+    "name": "Holy Llewxam ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/62/Unit_ills_thum_750134.png",
     "element": "Element Light",
     "rarity": "5",
@@ -101409,7 +100689,7 @@
   {
     "id": 2451,
     "realId": "750135",
-    "name": "Goddess Llewxam (EU)",
+    "name": "Goddess Llewxam ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a9/Unit_ills_thum_750135.png",
     "element": "Element Light",
     "rarity": "6",
@@ -101445,7 +100725,7 @@
   {
     "id": 2452,
     "realId": "760133",
-    "name": "Arbez (EU)",
+    "name": "Arbez ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/63/Unit_ills_thum_760133.png",
     "element": "Element Dark",
     "rarity": "4",
@@ -101481,7 +100761,7 @@
   {
     "id": 2453,
     "realId": "760134",
-    "name": "Holy Arbez (EU)",
+    "name": "Holy Arbez ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/64/Unit_ills_thum_760134.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -101517,7 +100797,7 @@
   {
     "id": 2454,
     "realId": "760135",
-    "name": "God Arbez (EU)",
+    "name": "God Arbez ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/7b/Unit_ills_thum_760135.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -101553,7 +100833,7 @@
   {
     "id": 2455,
     "realId": "710143",
-    "name": "Lord Heinrich (EU)",
+    "name": "Lord Heinrich",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/69/Unit_ills_thum_710143.png",
     "element": "Element Fire",
     "rarity": "4",
@@ -101589,7 +100869,7 @@
   {
     "id": 2456,
     "realId": "710144",
-    "name": "Count Heinrich (EU)",
+    "name": "Count Heinrich",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/20/Unit_ills_thum_710144.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -101625,7 +100905,7 @@
   {
     "id": 2457,
     "realId": "710145",
-    "name": "King Heinrich (EU)",
+    "name": "King Heinrich",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2b/Unit_ills_thum_710145.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -101661,7 +100941,7 @@
   {
     "id": 2458,
     "realId": "720143",
-    "name": "Lord Cornelius (EU)",
+    "name": "Lord Cornelius",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/66/Unit_ills_thum_720143.png",
     "element": "Element Water",
     "rarity": "4",
@@ -101697,7 +100977,7 @@
   {
     "id": 2459,
     "realId": "720144",
-    "name": "Count Cornelius (EU)",
+    "name": "Count Cornelius",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/43/Unit_ills_thum_720144.png",
     "element": "Element Water",
     "rarity": "5",
@@ -101733,7 +101013,7 @@
   {
     "id": 2460,
     "realId": "720145",
-    "name": "King Cornelius (EU)",
+    "name": "King Cornelius",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c1/Unit_ills_thum_720145.png",
     "element": "Element Water",
     "rarity": "6",
@@ -101769,7 +101049,7 @@
   {
     "id": 2461,
     "realId": "730143",
-    "name": "Lady Jade (EU)",
+    "name": "Lady Jade",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/cd/Unit_ills_thum_730143.png",
     "element": "Element Earth",
     "rarity": "4",
@@ -101805,7 +101085,7 @@
   {
     "id": 2462,
     "realId": "730144",
-    "name": "Countess Jade (EU)",
+    "name": "Countess Jade",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_730144.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -101841,7 +101121,7 @@
   {
     "id": 2463,
     "realId": "730145",
-    "name": "Queen Jade (EU)",
+    "name": "Queen Jade",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_730145.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -101877,7 +101157,7 @@
   {
     "id": 2464,
     "realId": "740143",
-    "name": "Lord Jason (EU)",
+    "name": "Lord Jason",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/4d/Unit_ills_thum_740143.png",
     "element": "Element Thunder",
     "rarity": "4",
@@ -101913,7 +101193,7 @@
   {
     "id": 2465,
     "realId": "740144",
-    "name": "Count Jason (EU)",
+    "name": "Count Jason",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/be/Unit_ills_thum_740144.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -101949,7 +101229,7 @@
   {
     "id": 2466,
     "realId": "740145",
-    "name": "King Jason (EU)",
+    "name": "King Jason",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/94/Unit_ills_thum_740145.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -101985,7 +101265,7 @@
   {
     "id": 2467,
     "realId": "750143",
-    "name": "Lady Magena (EU)",
+    "name": "Lady Magena",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/4a/Unit_ills_thum_750143.png",
     "element": "Element Light",
     "rarity": "4",
@@ -102021,7 +101301,7 @@
   {
     "id": 2468,
     "realId": "750144",
-    "name": "Countess Magena (EU)",
+    "name": "Countess Magena",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/22/Unit_ills_thum_750144.png",
     "element": "Element Light",
     "rarity": "5",
@@ -102057,7 +101337,7 @@
   {
     "id": 2469,
     "realId": "750145",
-    "name": "Queen Magena (EU)",
+    "name": "Queen Magena",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3e/Unit_ills_thum_750145.png",
     "element": "Element Light",
     "rarity": "6",
@@ -102093,7 +101373,7 @@
   {
     "id": 2470,
     "realId": "760143",
-    "name": "Lady Lavinia (EU)",
+    "name": "Lady Lavinia",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/33/Unit_ills_thum_760143.png",
     "element": "Element Dark",
     "rarity": "4",
@@ -102129,7 +101409,7 @@
   {
     "id": 2471,
     "realId": "760144",
-    "name": "Countess Lavinia (EU)",
+    "name": "Countess Lavinia",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_760144.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -102165,7 +101445,7 @@
   {
     "id": 2472,
     "realId": "760145",
-    "name": "Queen Lavinia (EU)",
+    "name": "Queen Lavinia",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/df/Unit_ills_thum_760145.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -102201,7 +101481,7 @@
   {
     "id": 2473,
     "realId": "760013",
-    "name": "Lucy & Little Bogey (EU)",
+    "name": "Lucy & Little Bogey",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/ba/Unit_ills_thum_760013.png",
     "element": "Element Dark",
     "rarity": "4",
@@ -102237,7 +101517,7 @@
   {
     "id": 2474,
     "realId": "760014",
-    "name": "Lucy & Bogey (EU)",
+    "name": "Lucy & Bogey",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/85/Unit_ills_thum_760014.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -102273,7 +101553,7 @@
   {
     "id": 2475,
     "realId": "760015",
-    "name": "Lucy & Big Bogey (EU)",
+    "name": "Lucy & Big Bogey",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_760015.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -102309,7 +101589,7 @@
   {
     "id": 2476,
     "realId": "760017",
-    "name": "Lucy & Prince Bogey (EU)",
+    "name": "Lucy & Prince Bogey",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bb/Unit_ills_thum_760017.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -102345,7 +101625,7 @@
   {
     "id": 2477,
     "realId": "18830",
-    "name": "Pumburkiny (EU)",
+    "name": "Pumburkiny",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_18830.png",
     "element": "Element Fire",
     "rarity": "2",
@@ -102381,7 +101661,7 @@
   {
     "id": 2478,
     "realId": "710153",
-    "name": "Coal Cauldron (EU)",
+    "name": "Coal Cauldron",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/1f/Unit_ills_thum_710153.png",
     "element": "Element Fire",
     "rarity": "4",
@@ -102417,7 +101697,7 @@
   {
     "id": 2479,
     "realId": "710154",
-    "name": "Metal Coal Cauldron (EU)",
+    "name": "Metal Coal Cauldron ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9b/Unit_ills_thum_710154.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -102453,7 +101733,7 @@
   {
     "id": 2480,
     "realId": "710155",
-    "name": "Warlord Coal Cauldron (EU, 6)",
+    "name": "Warlord Coal Cauldron",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c3/Unit_ills_thum_710155.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -102489,7 +101769,7 @@
   {
     "id": 2481,
     "realId": "710157",
-    "name": "Warlord Coal Cauldron (EU, Dream)",
+    "name": "Warlord Coal Cauldron",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d5/Unit_ills_thum_710157.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -102525,7 +101805,7 @@
   {
     "id": 2482,
     "realId": "720153",
-    "name": "Gazolina (EU)",
+    "name": "Gazolina ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3e/Unit_ills_thum_720153.png",
     "element": "Element Water",
     "rarity": "4",
@@ -102561,7 +101841,7 @@
   {
     "id": 2483,
     "realId": "720154",
-    "name": "Gazolina Spray (EU)",
+    "name": "Gazolina Spray ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d7/Unit_ills_thum_720154.png",
     "element": "Element Water",
     "rarity": "5",
@@ -102597,7 +101877,7 @@
   {
     "id": 2484,
     "realId": "720155",
-    "name": "Gazolina Splash (EU)",
+    "name": "Gazolina Splash ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c2/Unit_ills_thum_720155.png",
     "element": "Element Water",
     "rarity": "6",
@@ -102633,7 +101913,7 @@
   {
     "id": 2485,
     "realId": "720157",
-    "name": "Bad Lands Queen Gazolina (EU)",
+    "name": "Bad Lands Queen Gazolina ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3c/Unit_ills_thum_720157.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -102669,7 +101949,7 @@
   {
     "id": 2486,
     "realId": "730153",
-    "name": "Voodoo Child (EU)",
+    "name": "Voodoo Child ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/90/Unit_ills_thum_730153.png",
     "element": "Element Earth",
     "rarity": "4",
@@ -102705,7 +101985,7 @@
   {
     "id": 2487,
     "realId": "730154",
-    "name": "Mystic Voodoo Child (EU)",
+    "name": "Mystic Voodoo Child ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f4/Unit_ills_thum_730154.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -102741,7 +102021,7 @@
   {
     "id": 2488,
     "realId": "730155",
-    "name": "Heavy Voodoo Child (EU)",
+    "name": "Heavy Voodoo Child ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e4/Unit_ills_thum_730155.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -102777,7 +102057,7 @@
   {
     "id": 2489,
     "realId": "740153",
-    "name": "Crash Belt (EU)",
+    "name": "Crash Belt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f2/Unit_ills_thum_740153.png",
     "element": "Element Thunder",
     "rarity": "4",
@@ -102813,7 +102093,7 @@
   {
     "id": 2490,
     "realId": "740154",
-    "name": "High Crash Belt (EU)",
+    "name": "High Crash Belt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f7/Unit_ills_thum_740154.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -102849,7 +102129,7 @@
   {
     "id": 2491,
     "realId": "740155",
-    "name": "Nitronous Crash Belt (EU)",
+    "name": "Nitronous Crash Belt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/38/Unit_ills_thum_740155.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -102885,7 +102165,7 @@
   {
     "id": 2492,
     "realId": "740157",
-    "name": "Stratospheric Crash Belt (EU)",
+    "name": "Stratospheric Crash Belt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_740157.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -102921,7 +102201,7 @@
   {
     "id": 2493,
     "realId": "750153",
-    "name": "Blink (EU)",
+    "name": "Blink ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/51/Unit_ills_thum_750153.png",
     "element": "Element Light",
     "rarity": "4",
@@ -102957,7 +102237,7 @@
   {
     "id": 2494,
     "realId": "750154",
-    "name": "Bloody Blink (EU)",
+    "name": "Bloody Blink ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bd/Unit_ills_thum_750154.png",
     "element": "Element Light",
     "rarity": "5",
@@ -102993,7 +102273,7 @@
   {
     "id": 2497,
     "realId": "750155",
-    "name": "Lightspeed Bloody Blink (EU)",
+    "name": "Lightspeed Bloody Blink ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/30/Unit_ills_thum_750155.png",
     "element": "Element Light",
     "rarity": "6",
@@ -103029,7 +102309,7 @@
   {
     "id": 2498,
     "realId": "750157",
-    "name": "Avenging Angel Blink (EU)",
+    "name": "Avenging Angel Blink ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/22/Unit_ills_thum_750157.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -103065,7 +102345,7 @@
   {
     "id": 2499,
     "realId": "760153",
-    "name": "Pig Bull (EU)",
+    "name": "Pig Bull ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/ba/Unit_ills_thum_760153.png",
     "element": "Element Dark",
     "rarity": "4",
@@ -103101,7 +102381,7 @@
   {
     "id": 2500,
     "realId": "760154",
-    "name": "Endbringer Pig-Bull (EU)",
+    "name": "Endbringer Pig-Bull ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e5/Unit_ills_thum_760154.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -103137,7 +102417,7 @@
   {
     "id": 2501,
     "realId": "760155",
-    "name": "Warlord Pig-Bull (EU)",
+    "name": "Warlord Pig-Bull ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/57/Unit_ills_thum_760155.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -103173,7 +102453,7 @@
   {
     "id": 2502,
     "realId": "720005",
-    "name": "Mermion (EU)",
+    "name": "Mermion ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/47/Unit_ills_thum_720005.png",
     "element": "Element Water",
     "rarity": "6",
@@ -103209,7 +102489,7 @@
   {
     "id": 2503,
     "realId": "750015",
-    "name": "Generous Santa (EU)",
+    "name": "Generous Santa ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2d/Unit_ills_thum_750015.png",
     "element": "Element Light",
     "rarity": "6",
@@ -103245,7 +102525,7 @@
   {
     "id": 2504,
     "realId": "710164",
-    "name": "Morgana (EU)",
+    "name": "Morgana ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_710164.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -103281,7 +102561,7 @@
   {
     "id": 2505,
     "realId": "710165",
-    "name": "Witch Morgana (EU)",
+    "name": "Witch Morgana ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b6/Unit_ills_thum_710165.png",
     "element": "Element Fire",
     "rarity": "6",
@@ -103317,7 +102597,7 @@
   {
     "id": 2506,
     "realId": "710166",
-    "name": "Fallen Morgana (EU)",
+    "name": "Fallen Morgana ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d3/Unit_ills_thum_710166.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -103353,7 +102633,7 @@
   {
     "id": 2507,
     "realId": "720164",
-    "name": "Cyber Viviane (EU)",
+    "name": "Cyber Viviane ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/63/Unit_ills_thum_720164.png",
     "element": "Element Water",
     "rarity": "5",
@@ -103389,7 +102669,7 @@
   {
     "id": 2508,
     "realId": "720165",
-    "name": "Enhanced Viviane (EU)",
+    "name": "Enhanced Viviane ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bb/Unit_ills_thum_720165.png",
     "element": "Element Water",
     "rarity": "6",
@@ -103425,7 +102705,7 @@
   {
     "id": 2509,
     "realId": "720166",
-    "name": "Viviane & Excalibur (EU)",
+    "name": "Viviane & Excalibur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2c/Unit_ills_thum_720166.png",
     "element": "Element Water",
     "rarity": "7",
@@ -103461,7 +102741,7 @@
   {
     "id": 2510,
     "realId": "730164",
-    "name": "Perceval (EU)",
+    "name": "Perceval ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_730164.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -103497,7 +102777,7 @@
   {
     "id": 2511,
     "realId": "730165",
-    "name": "Knight Perceval (EU)",
+    "name": "Knight Perceval ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/32/Unit_ills_thum_730165.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -103533,7 +102813,7 @@
   {
     "id": 2512,
     "realId": "730166",
-    "name": "Crusader Perceval (EU)",
+    "name": "Crusader Perceval ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b7/Unit_ills_thum_730166.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -103569,7 +102849,7 @@
   {
     "id": 2513,
     "realId": "740164",
-    "name": "Armored Knight (EU)",
+    "name": "Armored Knight ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d9/Unit_ills_thum_740164.png",
     "element": "Element Thunder",
     "rarity": "5",
@@ -103605,7 +102885,7 @@
   {
     "id": 2514,
     "realId": "740165",
-    "name": "Mysterious Knight (EU)",
+    "name": "Mysterious Knight ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/79/Unit_ills_thum_740165.png",
     "element": "Element Thunder",
     "rarity": "6",
@@ -103641,7 +102921,7 @@
   {
     "id": 2515,
     "realId": "740166",
-    "name": "Mordred (EU)",
+    "name": "Mordred ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/82/Unit_ills_thum_740166.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -103677,7 +102957,7 @@
   {
     "id": 2516,
     "realId": "750164",
-    "name": "Arthur (EU)",
+    "name": "Arthur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0a/Unit_ills_thum_750164.png",
     "element": "Element Light",
     "rarity": "5",
@@ -103713,7 +102993,7 @@
   {
     "id": 2517,
     "realId": "750165",
-    "name": "King Arthur (EU)",
+    "name": "King Arthur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/25/Unit_ills_thum_750165.png",
     "element": "Element Light",
     "rarity": "6",
@@ -103749,7 +103029,7 @@
   {
     "id": 2518,
     "realId": "750166",
-    "name": "Avalon Arthur (EU)",
+    "name": "Avalon Arthur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e7/Unit_ills_thum_750166.png",
     "element": "Element Light",
     "rarity": "7",
@@ -103785,7 +103065,7 @@
   {
     "id": 2519,
     "realId": "760164",
-    "name": "Merlin (EU)",
+    "name": "Merlin ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b4/Unit_ills_thum_760164.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -103821,7 +103101,7 @@
   {
     "id": 2520,
     "realId": "760165",
-    "name": "Wizard Merlin (EU)",
+    "name": "Wizard Merlin ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e9/Unit_ills_thum_760165.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -103857,7 +103137,7 @@
   {
     "id": 2521,
     "realId": "760166",
-    "name": "Wayward Merlin (EU)",
+    "name": "Wayward Merlin ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b1/Unit_ills_thum_760166.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -103893,7 +103173,7 @@
   {
     "id": 2522,
     "realId": "750012",
-    "name": "Christmas Idol (EU)",
+    "name": "Christmas Idol ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d5/Unit_ills_thum_750012.png",
     "element": "Element Light",
     "rarity": "3",
@@ -103929,7 +103209,7 @@
   {
     "id": 2523,
     "realId": "710146",
-    "name": "Alpha Hunter Heinrich  (EU)",
+    "name": "Alpha Hunter Heinrich  ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c6/Unit_ills_thum_710146.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -103965,7 +103245,7 @@
   {
     "id": 2524,
     "realId": "720146",
-    "name": "Abyssal Admiral Cornelius (EU, 7)",
+    "name": "Abyssal Admiral Cornelius",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5e/Unit_ills_thum_720146.png",
     "element": "Element Water",
     "rarity": "7",
@@ -104001,7 +103281,7 @@
   {
     "id": 2525,
     "realId": "750146",
-    "name": "Predator Empress Magena (EU)",
+    "name": "Predator Empress Magena ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/ad/Unit_ills_thum_750146.png",
     "element": "Element Light",
     "rarity": "7",
@@ -104037,7 +103317,7 @@
   {
     "id": 2526,
     "realId": "720105",
-    "name": "Don Juan Sergio (EU)",
+    "name": "Don Juan Sergio ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/50/Unit_ills_thum_720105.png",
     "element": "Element Water",
     "rarity": "6",
@@ -104073,7 +103353,7 @@
   {
     "id": 2527,
     "realId": "720012",
-    "name": "Love Idol (EU)",
+    "name": "Love Idol ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a1/Unit_ills_thum_720012.png",
     "element": "Element Water",
     "rarity": "3",
@@ -104109,7 +103389,7 @@
   {
     "id": 2528,
     "realId": "760006",
-    "name": "Herald of Yggdrasil (EU)",
+    "name": "Herald of Yggdrasil ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5b/Unit_ills_thum_760006.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -104145,7 +103425,7 @@
   {
     "id": 2529,
     "realId": "710176",
-    "name": "Sagittarius of Renewal (EU)",
+    "name": "Sagittarius of Renewal ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/70/Unit_ills_thum_710176.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -104181,7 +103461,7 @@
   {
     "id": 2530,
     "realId": "720176",
-    "name": "Pisces of Tyranny (EU)",
+    "name": "Pisces of Tyranny ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/eb/Unit_ills_thum_720176.png",
     "element": "Element Water",
     "rarity": "7",
@@ -104217,7 +103497,7 @@
   {
     "id": 2531,
     "realId": "730176",
-    "name": "Capricorn of Devotion (EU)",
+    "name": "Capricorn of Devotion ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/79/Unit_ills_thum_730176.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -104253,7 +103533,7 @@
   {
     "id": 2532,
     "realId": "740176",
-    "name": "Aquarius of Weeping (EU)",
+    "name": "Aquarius of Weeping ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/df/Unit_ills_thum_740176.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -104289,7 +103569,7 @@
   {
     "id": 2533,
     "realId": "750176",
-    "name": "Gemini of Abomination (EU)",
+    "name": "Gemini of Abomination ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/3a/Unit_ills_thum_750176.png",
     "element": "Element Light",
     "rarity": "7",
@@ -104325,7 +103605,7 @@
   {
     "id": 2534,
     "realId": "760176",
-    "name": "Aries of Enslavement (EU)",
+    "name": "Aries of Enslavement ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bc/Unit_ills_thum_760176.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -104361,7 +103641,7 @@
   {
     "id": 2535,
     "realId": "710186",
-    "name": "Leo of Indifference (EU)",
+    "name": "Leo of Indifference ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/01/Unit_ills_thum_710186.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -104397,7 +103677,7 @@
   {
     "id": 2536,
     "realId": "720186",
-    "name": "Cancer of Sacrifice (EU)",
+    "name": "Cancer of Sacrifice ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b8/Unit_ills_thum_720186.png",
     "element": "Element Water",
     "rarity": "7",
@@ -104433,7 +103713,7 @@
   {
     "id": 2537,
     "realId": "730186",
-    "name": "Taurus of Fate (EU)",
+    "name": "Taurus of Fate ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d6/Unit_ills_thum_730186.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -104469,7 +103749,7 @@
   {
     "id": 2538,
     "realId": "740186",
-    "name": "Libra of Judgement (EU)",
+    "name": "Libra of Judgement ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/51/Unit_ills_thum_740186.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -104505,7 +103785,7 @@
   {
     "id": 2539,
     "realId": "750186",
-    "name": "Virgo of Virtue (EU)",
+    "name": "Virgo of Virtue ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8a/Unit_ills_thum_750186.png",
     "element": "Element Light",
     "rarity": "7",
@@ -104541,7 +103821,7 @@
   {
     "id": 2540,
     "realId": "760186",
-    "name": "Scorpio of Secrets (EU)",
+    "name": "Scorpio of Secrets ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6c/Unit_ills_thum_760186.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -104577,7 +103857,7 @@
   {
     "id": 2541,
     "realId": "750156",
-    "name": "Gun Angel Plumatachi (EU)",
+    "name": "Gun Angel Plumatachi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a5/Unit_ills_thum_750156.png",
     "element": "Element Light",
     "rarity": "7",
@@ -104613,7 +103893,7 @@
   {
     "id": 2542,
     "realId": "750136",
-    "name": "Llewxam Weaver of Fate (EU)",
+    "name": "Llewxam Weaver of Fate ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/28/Unit_ills_thum_750136.png",
     "element": "Element Light",
     "rarity": "7",
@@ -104647,585 +103927,9 @@
     "evolution": {}
   },
   {
-    "id": 2543,
-    "realId": "710195",
-    "name": "Mai Shiranui (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0c/Unit_ills_thum_710195.png",
-    "element": "Element Fire",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710195/710195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710195/710195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710195/710195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2544,
-    "realId": "710196",
-    "name": "Mai Shiranui (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/cf/Unit_ills_thum_710196.png",
-    "element": "Element Fire",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710196/710196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710196/710196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710196/710196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2545,
-    "realId": "720195",
-    "name": "Kula Diamond (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/07/Unit_ills_thum_720195.png",
-    "element": "Element Water",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720195/720195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720195/720195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720195/720195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2546,
-    "realId": "720196",
-    "name": "Kula Diamond (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/91/Unit_ills_thum_720196.png",
-    "element": "Element Water",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720196/720196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720196/720196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720196/720196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2547,
-    "realId": "730195",
-    "name": "Terry Bogard (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c8/Unit_ills_thum_730195.png",
-    "element": "Element Earth",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730195/730195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730195/730195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730195/730195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2548,
-    "realId": "730196",
-    "name": "Terry Bogard (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b8/Unit_ills_thum_730196.png",
-    "element": "Element Earth",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730196/730196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730196/730196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730196/730196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2549,
-    "realId": "740195",
-    "name": "Benimaru Nikaido (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/19/Unit_ills_thum_740195.png",
-    "element": "Element Thunder",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740195/740195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740195/740195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740195/740195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2550,
-    "realId": "740196",
-    "name": "Benimaru Nikaido (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/22/Unit_ills_thum_740196.png",
-    "element": "Element Thunder",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740196/740196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740196/740196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740196/740196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2551,
-    "realId": "750195",
-    "name": "Athena Asamiya (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6f/Unit_ills_thum_750195.png",
-    "element": "Element Light",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750195/750195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750195/750195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750195/750195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2552,
-    "realId": "750196",
-    "name": "Athena Asamiya (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_750196.png",
-    "element": "Element Light",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750196/750196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750196/750196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750196/750196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2553,
-    "realId": "760195",
-    "name": "Iori Yagami (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/14/Unit_ills_thum_760195.png",
-    "element": "Element Dark",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760195/760195_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760195/760195_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760195/760195_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2554,
-    "realId": "760196",
-    "name": "Iori Yagami (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0b/Unit_ills_thum_760196.png",
-    "element": "Element Dark",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760196/760196_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760196/760196_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760196/760196_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2555,
-    "realId": "710205",
-    "name": "Kyo Kusanagi (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b7/Unit_ills_thum_710205.png",
-    "element": "Element Fire",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710205/710205_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710205/710205_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710205/710205_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2556,
-    "realId": "710206",
-    "name": "Kyo Kusanagi (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b3/Unit_ills_thum_710206.png",
-    "element": "Element Fire",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710206/710206_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710206/710206_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710206/710206_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2557,
-    "realId": "760205",
-    "name": "Omega Rugal (EU, 6)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/de/Unit_ills_thum_760205.png",
-    "element": "Element Dark",
-    "rarity": "6",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760205/760205_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760205/760205_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760205/760205_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2558,
-    "realId": "760206",
-    "name": "Omega Rugal (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/44/Unit_ills_thum_760206.png",
-    "element": "Element Dark",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760206/760206_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760206/760206_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/760206/760206_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2559,
     "realId": "750216",
-    "name": "Duality Queen Freyja (EU, 7)",
+    "name": "Duality Queen Freyja",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/16/Unit_ills_thum_750216.png",
     "element": "Element Light",
     "rarity": "7",
@@ -105261,7 +103965,7 @@
   {
     "id": 2560,
     "realId": "710116",
-    "name": "Skalmold Last Stand (EU)",
+    "name": "Skalmold Last Stand",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/7b/Unit_ills_thum_710116.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -105297,7 +104001,7 @@
   {
     "id": 2561,
     "realId": "730146",
-    "name": "Penitent Empress Jade (EU)",
+    "name": "Penitent Empress Jade",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/be/Unit_ills_thum_730146.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -105333,7 +104037,7 @@
   {
     "id": 2562,
     "realId": "740216",
-    "name": "Chimerical Prince Amadeus (EU)",
+    "name": "Chimerical Prince Amadeus",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6f/Unit_ills_thum_740216.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -105369,7 +104073,7 @@
   {
     "id": 2563,
     "realId": "760215",
-    "name": "Rift Guide Sedrac (EU)",
+    "name": "Rift Guide Sedrac",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d8/Unit_ills_thum_760215.png",
     "element": "Element Dark",
     "rarity": "6",
@@ -105405,7 +104109,7 @@
   {
     "id": 2564,
     "realId": "760216",
-    "name": "Rift Scholar Sedrac (EU)",
+    "name": "Rift Scholar Sedrac ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c5/Unit_ills_thum_760216.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -105441,7 +104145,7 @@
   {
     "id": 2565,
     "realId": "740146",
-    "name": "Warhammer Jason (EU)",
+    "name": "Warhammer Jason ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/bd/Unit_ills_thum_740146.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -105477,7 +104181,7 @@
   {
     "id": 2566,
     "realId": "730214",
-    "name": "Enki, Sacred Slave (EU)",
+    "name": "Enki, Sacred Slave ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/50/Unit_ills_thum_730214.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -105513,7 +104217,7 @@
   {
     "id": 2567,
     "realId": "730215",
-    "name": "Enki, Gladiator of Ur (EU)",
+    "name": "Enki, Gladiator of Ur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d9/Unit_ills_thum_730215.png",
     "element": "Element Earth",
     "rarity": "6",
@@ -105549,7 +104253,7 @@
   {
     "id": 2568,
     "realId": "730216",
-    "name": "Enki, Kingdom Devourer (EU)",
+    "name": "Enki, Kingdom Devourer ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b8/Unit_ills_thum_730216.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -105585,7 +104289,7 @@
   {
     "id": 2569,
     "realId": "760146",
-    "name": "Executors of the Will (EU)",
+    "name": "Executors of the Will ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/ae/Unit_ills_thum_760146.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -105621,7 +104325,7 @@
   {
     "id": 2570,
     "realId": "720216",
-    "name": "Ninmah, Noblesses' Moon (EU)",
+    "name": "Ninmah, Noblesses' Moon ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6e/Unit_ills_thum_720216.png",
     "element": "Element Water",
     "rarity": "7",
@@ -105657,7 +104361,7 @@
   {
     "id": 2571,
     "realId": "710016",
-    "name": "Jack's Army (EU)",
+    "name": "Jack's Army ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a0/Unit_ills_thum_710016.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -105693,7 +104397,7 @@
   {
     "id": 2572,
     "realId": "750224",
-    "name": "Galahad (EU)",
+    "name": "Galahad ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5d/Unit_ills_thum_750224.png",
     "element": "Element Light",
     "rarity": "5",
@@ -105729,7 +104433,7 @@
   {
     "id": 2573,
     "realId": "750225",
-    "name": "War Lance Galahad (EU)",
+    "name": "War Lance Galahad ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b5/Unit_ills_thum_750225.png",
     "element": "Element Light",
     "rarity": "6",
@@ -105765,7 +104469,7 @@
   {
     "id": 2574,
     "realId": "750226",
-    "name": "Royal Guard Galahad (EU)",
+    "name": "Royal Guard Galahad ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fe/Unit_ills_thum_750226.png",
     "element": "Element Light",
     "rarity": "7",
@@ -105801,7 +104505,7 @@
   {
     "id": 2575,
     "realId": "750167",
-    "name": "Dark Path Arthur (EU)",
+    "name": "Dark Path Arthur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/73/Unit_ills_thum_750167.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -105837,7 +104541,7 @@
   {
     "id": 2576,
     "realId": "760226",
-    "name": "Repented Corporal Lancelot (EU)",
+    "name": "Repented Corporal Lancelot ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0d/Unit_ills_thum_760226.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -105873,7 +104577,7 @@
   {
     "id": 2577,
     "realId": "760227",
-    "name": "Kingslayer Lancelot  (EU)",
+    "name": "Kingslayer Lancelot  ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/20/Unit_ills_thum_760227.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -105909,7 +104613,7 @@
   {
     "id": 2578,
     "realId": "750003",
-    "name": "Dream Frog (EU)",
+    "name": "Dream Frog ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/24/Unit_ills_thum_750003.png",
     "element": "Element Light",
     "rarity": "4",
@@ -105945,7 +104649,7 @@
   {
     "id": 2579,
     "realId": "720107",
-    "name": "Saint of Love Sergio (EU)",
+    "name": "Saint of Love Sergio ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/32/Unit_ills_thum_720107.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -105981,7 +104685,7 @@
   {
     "id": 2580,
     "realId": "740226",
-    "name": "Devoted Priestess Julia (EU)",
+    "name": "Devoted Priestess Julia ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d6/Unit_ills_thum_740226.png",
     "element": "Element Thunder",
     "rarity": "7",
@@ -106017,7 +104721,7 @@
   {
     "id": 2581,
     "realId": "740227",
-    "name": "Disciple of Love Julia (EU)",
+    "name": "Disciple of Love Julia ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b3/Unit_ills_thum_740227.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -106053,7 +104757,7 @@
   {
     "id": 2582,
     "realId": "730226",
-    "name": "Mech Beauty Gwenevere (EU)",
+    "name": "Mech Beauty Gwenevere ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_730226.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -106089,7 +104793,7 @@
   {
     "id": 2583,
     "realId": "730227",
-    "name": "Enhanced Being Gwenevere (EU)",
+    "name": "Enhanced Being Gwenevere ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/00/Unit_ills_thum_730227.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -106123,189 +104827,9 @@
     "evolution": {}
   },
   {
-    "id": 2584,
-    "realId": "740197",
-    "name": "Benimaru Nikaido (EU, Dream)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/47/Unit_ills_thum_740197.png",
-    "element": "Element Thunder",
-    "rarity": "Dream",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740197/740197_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740197/740197_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/740197/740197_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2585,
-    "realId": "750197",
-    "name": "Athena Asamiya (EU, Dream)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e8/Unit_ills_thum_750197.png",
-    "element": "Element Light",
-    "rarity": "Dream",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750197/750197_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750197/750197_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/750197/750197_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2586,
-    "realId": "730236",
-    "name": "Leona (EU, 7)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/a5/Unit_ills_thum_730236.png",
-    "element": "Element Earth",
-    "rarity": "7",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730236/730236_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730236/730236_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730236/730236_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2587,
-    "realId": "720197",
-    "name": "Kula Diamond (EU, Dream)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/1d/Unit_ills_thum_720197.png",
-    "element": "Element Water",
-    "rarity": "Dream",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720197/720197_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720197/720197_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720197/720197_atk.png"
-    },
-    "evolution": {}
-  },
-  {
-    "id": 2588,
-    "realId": "710197",
-    "name": "Mai Shiranui (EU, Dream)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/65/Unit_ills_thum_710197.png",
-    "element": "Element Fire",
-    "rarity": "Dream",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710197/710197_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710197/710197_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710197/710197_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2589,
     "realId": "720226",
-    "name": "Captain Sesir (EU)",
+    "name": "Captain Sesir ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/6e/Unit_ills_thum_720226.png",
     "element": "Element Water",
     "rarity": "7",
@@ -106341,7 +104865,7 @@
   {
     "id": 2590,
     "realId": "720227",
-    "name": "Peacekeeper Sesir (EU)",
+    "name": "Peacekeeper Sesir ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/4d/Unit_ills_thum_720227.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -106377,7 +104901,7 @@
   {
     "id": 2591,
     "realId": "730246",
-    "name": "Nitro Grog Jake (EU)",
+    "name": "Nitro Grog Jake ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_730246.png",
     "element": "Element Earth",
     "rarity": "7",
@@ -106411,45 +104935,9 @@
     "evolution": {}
   },
   {
-    "id": 2592,
-    "realId": "730247",
-    "name": "Nitro Warlord Jake (EU)",
-    "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/71/Unit_ills_thum_730247.png",
-    "element": "Element Earth",
-    "rarity": "Dream",
-    "lore": "Storia non disponibile.",
-    "stats": {
-      "lord": null
-    },
-    "skills": {
-      "ls": {
-        "name": "---",
-        "desc": "---"
-      },
-      "bb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "sbb": {
-        "name": "---",
-        "desc": "---"
-      },
-      "ubb": {
-        "name": "---",
-        "desc": "---"
-      }
-    },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730247/730247_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730247/730247_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730247/730247_atk.png"
-    },
-    "evolution": {}
-  },
-  {
     "id": 2594,
     "realId": "730247",
-    "name": "Nitro Warlord Jake (EU)",
+    "name": "Nitro Warlord Jake ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/71/Unit_ills_thum_730247.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -106485,7 +104973,7 @@
   {
     "id": 2595,
     "realId": "710216",
-    "name": "Merciless Resistant Natalamé (EU)",
+    "name": "Merciless Resistant Natalamé ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c7/Unit_ills_thum_710216.png",
     "element": "Element Fire",
     "rarity": "7",
@@ -106521,7 +105009,7 @@
   {
     "id": 2596,
     "realId": "710217",
-    "name": "Flawless Assassin Natalamé (EU)",
+    "name": "Flawless Assassin Natalamé ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/82/Unit_ills_thum_710217.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -106557,7 +105045,7 @@
   {
     "id": 2597,
     "realId": "750237",
-    "name": "Balance Bringer Plumatachi (EU)",
+    "name": "Balance Bringer Plumatachi ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/b/b4/Unit_ills_thum_750237.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -106593,7 +105081,7 @@
   {
     "id": 2598,
     "realId": "760236",
-    "name": "Tech Hunter Cobalt (EU)",
+    "name": "Tech Hunter Cobalt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/28/Unit_ills_thum_760236.png",
     "element": "Element Dark",
     "rarity": "7",
@@ -106629,7 +105117,7 @@
   {
     "id": 2599,
     "realId": "760237",
-    "name": "Techtonic Ruler Cobalt (EU)",
+    "name": "Techtonic Ruler Cobalt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/de/Unit_ills_thum_760237.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -106665,7 +105153,7 @@
   {
     "id": 2600,
     "realId": "710227",
-    "name": "Magma Apex Surt (EU)",
+    "name": "Magma Apex Surt ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/36/Unit_ills_thum_710227.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -106701,7 +105189,7 @@
   {
     "id": 2601,
     "realId": "760247",
-    "name": "Wisdom Apex Auhlavez (EU)",
+    "name": "Wisdom Apex Auhlavez ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/74/Unit_ills_thum_760247.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -106737,7 +105225,7 @@
   {
     "id": 2602,
     "realId": "760217",
-    "name": "Riftwalker Sedrac (EU)",
+    "name": "Riftwalker Sedrac ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/76/Unit_ills_thum_760217.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -106773,7 +105261,7 @@
   {
     "id": 2603,
     "realId": "750247",
-    "name": "Kaiser Apex Gilgamesh (EU)",
+    "name": "Kaiser Apex Gilgamesh ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/09/Unit_ills_thum_750247.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -106809,7 +105297,7 @@
   {
     "id": 2604,
     "realId": "740237",
-    "name": "Lonely Apex Sheriff (EU)",
+    "name": "Lonely Apex Sheriff ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/01/Unit_ills_thum_740237.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -106845,7 +105333,7 @@
   {
     "id": 2605,
     "realId": "720237",
-    "name": "Undefeated Apex Utheria (EU)",
+    "name": "Undefeated Apex Utheria ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2f/Unit_ills_thum_720237.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -106881,7 +105369,7 @@
   {
     "id": 2606,
     "realId": "730257",
-    "name": "Zodiacal Apex Ophiuchus (EU)",
+    "name": "Zodiacal Apex Ophiuchus ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d5/Unit_ills_thum_730257.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -106917,7 +105405,7 @@
   {
     "id": 2607,
     "realId": "750257",
-    "name": "Trinity Goddess Htilit (EU)",
+    "name": "Trinity Goddess Htilit ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/42/Unit_ills_thum_750257.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -106953,7 +105441,7 @@
   {
     "id": 2608,
     "realId": "750264",
-    "name": "Demented Girl Jeanne (EU)",
+    "name": "Demented Girl Jeanne ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/cd/Unit_ills_thum_750264.png",
     "element": "Element Light",
     "rarity": "5",
@@ -106989,7 +105477,7 @@
   {
     "id": 2609,
     "realId": "750267",
-    "name": "Lunatic Warrior Jeanne (EU)",
+    "name": "Lunatic Warrior Jeanne ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/89/Unit_ills_thum_750267.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107025,7 +105513,7 @@
   {
     "id": 2610,
     "realId": "760254",
-    "name": "Extremist Robespierre (EU)",
+    "name": "Extremist Robespierre ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/4/40/Unit_ills_thum_760254.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -107061,7 +105549,7 @@
   {
     "id": 2611,
     "realId": "760257",
-    "name": "Harsh Terror Robespierre (EU)",
+    "name": "Harsh Terror Robespierre ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/cd/Unit_ills_thum_760257.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -107097,7 +105585,7 @@
   {
     "id": 2612,
     "realId": "720244",
-    "name": "Dark Secret Nelson (EU)",
+    "name": "Dark Secret Nelson ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9e/Unit_ills_thum_720244.png",
     "element": "Element Water",
     "rarity": "5",
@@ -107133,7 +105621,7 @@
   {
     "id": 2613,
     "realId": "720247",
-    "name": "Humanity Betrayer Nelson (EU)",
+    "name": "Humanity Betrayer Nelson ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/7/79/Unit_ills_thum_720247.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -107169,7 +105657,7 @@
   {
     "id": 2614,
     "realId": "730264",
-    "name": "Patriotic Scholar Emily (EU)",
+    "name": "Patriotic Scholar Emily ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/25/Unit_ills_thum_730264.png",
     "element": "Element Earth",
     "rarity": "5",
@@ -107205,7 +105693,7 @@
   {
     "id": 2615,
     "realId": "730267",
-    "name": "Bayonet Poetess Emily (EU)",
+    "name": "Bayonet Poetess Emily ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e3/Unit_ills_thum_730267.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -107241,7 +105729,7 @@
   {
     "id": 2616,
     "realId": "760264",
-    "name": "Genome Child Cosette (EU)",
+    "name": "Genome Child Cosette ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/00/Unit_ills_thum_760264.png",
     "element": "Element Dark",
     "rarity": "5",
@@ -107277,7 +105765,7 @@
   {
     "id": 2617,
     "realId": "760267",
-    "name": "Cruel Matriarch Cosette (EU)",
+    "name": "Cruel Matriarch Cosette ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/ad/Unit_ills_thum_760267.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -107313,7 +105801,7 @@
   {
     "id": 2618,
     "realId": "740217",
-    "name": "Utopian Chimera Amadeus (EU)",
+    "name": "Utopian Chimera Amadeus ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/3/38/Unit_ills_thum_740217.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -107349,7 +105837,7 @@
   {
     "id": 2619,
     "realId": "720217",
-    "name": "Bellicose Princess Ninmah (EU)",
+    "name": "Bellicose Princess Ninmah ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c7/Unit_ills_thum_720217.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -107385,7 +105873,7 @@
   {
     "id": 2620,
     "realId": "730217",
-    "name": "Superior Kaiser Enki (EU)",
+    "name": "Superior Kaiser Enki ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/2b/Unit_ills_thum_730217.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -107421,7 +105909,7 @@
   {
     "id": 2621,
     "realId": "750147",
-    "name": "Tireless Stalker Magena (EU)",
+    "name": "Tireless Stalker Magena ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/05/Unit_ills_thum_750147.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107457,7 +105945,7 @@
   {
     "id": 2622,
     "realId": "710234",
-    "name": "Fire Bird Migina (EU)",
+    "name": "Fire Bird Migina ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/2/20/Unit_ills_thum_710234.png",
     "element": "Element Fire",
     "rarity": "5",
@@ -107493,7 +105981,7 @@
   {
     "id": 2623,
     "realId": "710237",
-    "name": "Living Phoenix Migina (EU)",
+    "name": "Living Phoenix Migina ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8d/Unit_ills_thum_710237.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -107529,7 +106017,7 @@
   {
     "id": 2624,
     "realId": "710147",
-    "name": "Omega Inquisitor Heinrich (EU)",
+    "name": "Omega Inquisitor Heinrich ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/90/Unit_ills_thum_710147.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -107565,7 +106053,7 @@
   {
     "id": 2625,
     "realId": "720257",
-    "name": "Swift Boxer Natasha (EU)",
+    "name": "Swift Boxer Natasha ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9a/Unit_ills_thum_720257.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -107601,7 +106089,7 @@
   {
     "id": 2626,
     "realId": "730277",
-    "name": "Cute Medic Daria (EU)",
+    "name": "Cute Medic Daria ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/84/Unit_ills_thum_730277.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -107637,7 +106125,7 @@
   {
     "id": 2627,
     "realId": "7402470",
-    "name": "Efficient Soldier Tatiana (EU)",
+    "name": "Efficient Soldier Tatiana ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d2/Unit_ills_thum_7402470.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -107673,7 +106161,7 @@
   {
     "id": 2628,
     "realId": "750277",
-    "name": "Lonely Blade Iaroslava (EU)",
+    "name": "Lonely Blade Iaroslava ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/e/e9/Unit_ills_thum_750277.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107709,7 +106197,7 @@
   {
     "id": 2629,
     "realId": "710247",
-    "name": "Esteemed Professor Olga (EU)",
+    "name": "Esteemed Professor Olga ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/99/Unit_ills_thum_710247.png",
     "element": "Element Fire",
     "rarity": "Dream",
@@ -107745,7 +106233,7 @@
   {
     "id": 2630,
     "realId": "760277",
-    "name": "Academy Apex Aleksandra (EU)",
+    "name": "Academy Apex Aleksandra ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c1/Unit_ills_thum_760277.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -107781,7 +106269,7 @@
   {
     "id": 2631,
     "realId": "740167",
-    "name": "Handsome Prince Mordred (EU)",
+    "name": "Handsome Prince Mordred ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f4/Unit_ills_thum_740167.png",
     "element": "Element Thunder",
     "rarity": "Dream",
@@ -107817,7 +106305,7 @@
   {
     "id": 2632,
     "realId": "720167",
-    "name": "Saviors Viviane & Orah (EU)",
+    "name": "Saviors Viviane & Orah ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/d/d6/Unit_ills_thum_720167.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -107853,7 +106341,7 @@
   {
     "id": 2633,
     "realId": "750287",
-    "name": "Hope Champion Arthur (EU)",
+    "name": "Hope Champion Arthur ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/6/68/Unit_ills_thum_750287.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107889,7 +106377,7 @@
   {
     "id": 2634,
     "realId": "730287",
-    "name": "Prescient Goddess Frigg (EU)",
+    "name": "Prescient Goddess Frigg ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/f/fd/Unit_ills_thum_730287.png",
     "element": "Element Earth",
     "rarity": "Dream",
@@ -107925,7 +106413,7 @@
   {
     "id": 2635,
     "realId": "750177",
-    "name": "Gemini of Abomination (Dream)",
+    "name": "Gemini of Abomination ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/8/8e/Unit_ills_thum_750177.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107961,7 +106449,7 @@
   {
     "id": 2636,
     "realId": "750307",
-    "name": "Duality Queen Freyja (EU, Dream)",
+    "name": "Duality Queen Freyja",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/ca/Unit_ills_thum_750307.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -107997,7 +106485,7 @@
   {
     "id": 2637,
     "realId": "750317",
-    "name": "Creation God Odin (EU)",
+    "name": "Creation God Odin ",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/c/c5/Unit_ills_thum_750317.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -108033,7 +106521,7 @@
   {
     "id": 2638,
     "realId": "760187",
-    "name": "Scorpio of Secrets (Dream)",
+    "name": "Scorpio of Secrets",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/9/9c/Unit_ills_thum_760187.png",
     "element": "Element Dark",
     "rarity": "Dream",
@@ -108069,7 +106557,7 @@
   {
     "id": 2639,
     "realId": "720147",
-    "name": "Abyssal Admiral Cornelius (EU, Dream)",
+    "name": "Abyssal Admiral Cornelius",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/a/aa/Unit_ills_thum_720147.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -108105,7 +106593,7 @@
   {
     "id": 2640,
     "realId": "720187",
-    "name": "Cancer of Sacrifice (Dream)",
+    "name": "Cancer of Sacrifice",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/58/Unit_ills_thum_720187.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -108141,7 +106629,7 @@
   {
     "id": 2641,
     "realId": "750137",
-    "name": "Draconic Goddess Llewxam (EU)",
+    "name": "Draconic Goddess Llewxam",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/5/5a/Unit_ills_thum_750137.png",
     "element": "Element Light",
     "rarity": "Dream",
@@ -108177,7 +106665,7 @@
   {
     "id": 2642,
     "realId": "720137",
-    "name": "Pure Aymarks & Ylzzirg (EU)",
+    "name": "Pure Aymarks & Ylzzirg",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/0/0c/Unit_ills_thum_720137.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -108213,7 +106701,7 @@
   {
     "id": 2643,
     "realId": "730137",
-    "name": "Fearless God Sotnarg (EU)",
+    "name": "Fearless God Sotnarg",
     "image": "https://static.wikia.nocookie.net/bravefrontierglobal/images/1/1f/Unit_ills_thum_730137.png",
     "element": "Element Earth",
     "rarity": "Dream",
