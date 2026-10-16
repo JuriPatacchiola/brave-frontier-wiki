@@ -1462,6 +1462,7 @@ body.modal-open {
         top: 0px;
     }
 
+
     /* Adattamento cerchio per Smartphone */
     .fullart-evocation-circle {
         width: min(80vmin, 550px);
