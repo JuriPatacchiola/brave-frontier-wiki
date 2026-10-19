@@ -80628,9 +80628,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810147/810147_default.png",
-      "idle": "../video/Ultor/Herculean Ultor/Herculean-Ultor-idle.gif",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810147/810147_atk.png"
+      "default": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-default.gif",
+      "idle": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-idle.gif",
+      "atk": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-atk.gif"
     },
     "evolution": {}
   },
