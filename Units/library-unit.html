@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Brave Frontier - Home</title>
+    <title>Brave Frontier Library - Unità</title>
+    <link rel="stylesheet" href="../Units/assets/unit-list.css">
 </head>
 
-<body class="home-bg" data-ask-language>
+<body>
     <header class="main-header">
         <div class="header-container">
             <a href="../index.html" class="logo-area">
-                <img class="logo" src="img/logo.png" alt="Logo">
+                <img class="logo" src="../img/logo.png" alt="">
             </a>
 
             <button class="hamburger" id="hamburger">
@@ -22,8 +22,8 @@
             </button>
 
             <nav class="main-nav" id="mainNav">
-                <a href="Units/library-unit.html" class="nav-link" data-i18n="nav.units">Unità</a>
-                <a href="Story/story.html" class="nav-link" data-i18n="nav.story">Story</a>
+                <a href="library-unit.html" class="nav-link active" data-i18n="nav.units">Unità</a>
+                <a href="../Story/story.html" class="nav-link" data-i18n="nav.story">Story</a>
                 <a href="#" class="nav-link" data-i18n="nav.events">Events</a>
                 <a href="#" class="nav-link" data-i18n="nav.items">Items</a>
                 <a href="#" class="nav-link" data-i18n="nav.sphere">Sphere</a>
@@ -31,25 +31,200 @@
         </div>
     </header>
 
-    <main class="home-content">
-        <h2 data-i18n="home.title">Benvenuto nell'Archivio di Grand Gaia</h2>
-        <div class="button-grid">
-            <a href="Units/library-unit.html" class="big-btn">
-                <img src="https://static.wikia.nocookie.net/bravefrontierglobal/images/f/f8/Phantom_icon.png" alt="">
-                <span data-i18n="home.units">Units List</span>
-            </a>
-            <a href="Story/story.html" class="big-btn"><span data-i18n="nav.story">Story</span></a>
-            <a href="#" class="big-btn"><span data-i18n="nav.events">Events</span></a>
-            <a href="#" class="big-btn"><span data-i18n="nav.items">Items</span></a>
-            <a href="#" class="big-btn"><span data-i18n="nav.sphere">Sphere</span></a>
+    <section class="sticky-header">
+        <div class="filter-container">
+            <div class="search-row">
+                <input type="text" id="mainSearch" placeholder="Cerca Unità (Nome o ID)..."
+                    data-i18n-placeholder="filter.search">
+                <select id="raritySelector">
+                    <option value="all" data-i18n="filter.allRarities">Tutte le Rarità</option>
+                    <option value="1" class="notranslate">1★</option>
+                    <option value="2" class="notranslate">2★</option>
+                    <option value="3" class="notranslate">3★</option>
+                    <option value="4" class="notranslate">4★</option>
+                    <option value="5" class="notranslate">5★</option>
+                    <option value="6" class="notranslate">6★</option>
+                    <option value="7" class="notranslate">7★</option>
+                    <option value="Omni" class="notranslate">Omni</option>
+                </select>
+
+            </div>
+
+            <div class="element-bar">
+                <button class="btn-elem notranslate" data-elem="Element Fire" data-i18n="element.fire">Fire</button>
+                <button class="btn-elem notranslate" data-elem="Element Water" data-i18n="element.water">Water</button>
+                <button class="btn-elem notranslate" data-elem="Element Earth" data-i18n="element.earth">Earth</button>
+                <button class="btn-elem notranslate" data-elem="Element Thunder"
+                    data-i18n="element.thunder">Thunder</button>
+                <button class="btn-elem notranslate" data-elem="Element Light" data-i18n="element.light">Light</button>
+                <button class="btn-elem notranslate" data-elem="Element Dark" data-i18n="element.dark">Dark</button>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <script src="script.js"></script>
+    <main id="gridContainer" class="unit-grid"></main>
+
+    <div id="unitModal" class="modal">
+        <div class="modal-full-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+
+            <div class="unit_main_view">
+                <div class="unit_box_top">
+
+                    <div class="unit_gif">
+                        <!-- Vista animazione pulita (senza cerchio) -->
+                        <div id="container_default" class="anim-container" style="display:inline">
+                            <video id="video_default" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_default" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+
+                        <div id="container_idle" class="anim-container" style="display:none">
+                            <video id="video_idle" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_idle" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+
+                        <div id="container_atk" class="anim-container" style="display:none">
+                            <video id="video_atk" loop muted playsinline webkit-playsinline
+                                class="unit-media-style"></video>
+                            <img id="img_atk" class="unit-media-style" style="display:none">
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Bottone in alto (btm5) -->
+                    <div class="btn_top" id="btn_btm5_container">
+                        <img src="../img/Button For Change/btm5.png" id="btn_btm5" alt="Button 5">
+                    </div>
+
+                    <!-- Gruppo bottoni in basso: btm1/2/3 (.btn_motion) + btm4 affiancati -->
+                    <div class="bottom_buttons_group">
+                        <div class="btn_motion" onclick="toggleImg()">
+                            <img src="../img/Button For Change/btm1.png" id="btn_default" style="display:inline">
+                            <img src="../img/Button For Change/btm2.png" id="btn_idle" style="display:none">
+                            <img src="../img/Button For Change/btm3.png" id="btn_atk" style="display:none">
+                        </div>
+
+                        <div class="btn_extra" id="btn_btm4_container">
+                            <img src="../img/Button For Change/btm4.png" id="btn_btm4" alt="Button 4">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="unit_stats_side">
+                    <h2 id="modalName" class="notranslate"></h2>
+
+                    <div class="modal-info-row"
+                        style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <p id="modalId" style="margin:0; color: #bbb;" class="notranslate"></p>
+                        <p id="modalRarity"
+                            style="margin:0; font-weight: bold; color: #ffd700; display: flex; align-items: center; gap: 5px;"
+                            class="notranslate"></p>
+                    </div>
+
+                    <div class="type-mini-selector">
+                        <div class="type-buttons">
+                            <button class="btn-type base notranslate" onclick="changeType('base')">Base</button>
+                            <button class="btn-type lord notranslate" onclick="changeType('lord')">Lord</button>
+                            <button class="btn-type anima notranslate" onclick="changeType('anima')">Anima</button>
+                            <button class="btn-type breaker notranslate"
+                                onclick="changeType('breaker')">Breaker</button>
+                            <button class="btn-type guardian notranslate"
+                                onclick="changeType('guardian')">Guardian</button>
+                            <button class="btn-type oracle notranslate" onclick="changeType('oracle')">Oracle</button>
+                        </div>
+                    </div>
+
+                    <div class="stats_grid">
+                        <div class="stat-item"><span class="notranslate">HP</span> <b id="statHp">---</b></div>
+                        <div class="stat-item"><span class="notranslate">ATK</span> <b id="statAtk">---</b></div>
+                        <div class="stat-item"><span class="notranslate">DEF</span> <b id="statDef">---</b></div>
+                        <div class="stat-item"><span class="notranslate">REC</span> <b id="statRec">---</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit_details_scroll_area">
+                <div class="info_section">
+                    <h3 data-i18n="unit.summonQuote">Summon Quote</h3>
+                    <p id="summonQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 data-i18n="unit.fusionQuote">Fusion Quote</h3>
+                    <p id="fusionQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 data-i18n="unit.evolveQuote">Evolve Quote</h3>
+                    <p id="evolveQuote">...</p>
+                </div>
+                <div class="info_section">
+                    <h3 data-i18n="unit.lore">Lore</h3>
+                    <p id="unitLore">...</p>
+                </div>
+
+                <div class="skills_container">
+                    <div class="skill_block"><strong data-i18n="unit.leaderSkill">Leader Skill</strong><span id="lsName"
+                            class="notranslate"></span><br><small id="lsDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">BB</strong><span id="bbName"
+                            class="notranslate"></span><br><small id="bbDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">SBB</strong><span id="sbbName"
+                            class="notranslate"></span><br><small id="sbbDesc"></small></div>
+                    <div class="skill_block"><strong class="notranslate">UBB</strong><span id="ubbName"
+                            class="notranslate"></span><br><small id="ubbDesc"></small></div>
+                </div>
+
+                <div class="evolution_area evolution-recipe-area">
+                    <h3 data-i18n="unit.evolution">Evolution</h3>
+                    <div id="evolutionContainer" class="evolution-container-wrapper">
+                        <p data-i18n="evo.select">Seleziona un'unità per visualizzare i materiali e i costi di
+                            evoluzione.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Full Art con Cerchio 3D e Stelle in Salita (BTM5) -->
+    <div id="fullArtModal" class="fullart-modal" aria-hidden="true">
+        <div class="fullart-modal-content" role="dialog" aria-modal="true" aria-label="Full Art dell'unità">
+            <button type="button" id="closeFullArtModal" class="fullart-close"
+                aria-label="Chiudi Full Art">&times;</button>
+
+            <!-- Contatore varianti posizionato in alto a fianco della croce -->
+            <div id="fullArtCounter" class="fullart-counter">1 / 1</div>
+
+            <!-- Pulsanti Slider Full Art (Visibili su PC) -->
+            <button type="button" id="fullArtPrev" class="fullart-nav-btn prev-btn"
+                onclick="prevFullArt()">&#10094;</button>
+
+            <!-- CONTENITORE PIVOT COMUNE -->
+            <div class="fullart-media-box">
+                <div id="fullArtEvocationFx" class="fullart-evocation-fx rarity-white" aria-hidden="true">
+                    <img id="fullArtEvocationCircle" class="fullart-evocation-circle" src="" alt="">
+                    <div id="fullArtStars" class="fullart-stars"></div>
+                </div>
+                <img id="fullArtModalImage" src="" alt="Full Art dell'unità selezionata"
+                    title="Clicca per cambiare frase">
+                <div id="fullArtQuotePanel" class="fullart-quote-panel" data-step="1" aria-live="polite"
+                    aria-label="Frase della Full Art">
+                    <img class="fullart-quote-frame" src="../img/Decoration/Decoro_Cornice_word.png" alt="">
+                    <p id="fullArtQuoteText" class="fullart-quote-text"></p>
+                </div>
+            </div>
+
+            <button type="button" id="fullArtNext" class="fullart-nav-btn next-btn"
+                onclick="nextFullArt()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- File Script Applicazione -->
+    <!-- script.js va caricato PRIMA di main.js: gestisce lingua, header e Google Translate -->
+    <script src="../script.js"></script>
+    <script src="../Units/assets/main.js"></script>
 </body>
-<!-- 549,5  362,25
-598,5 375
-
--->
 
 </html>
