@@ -22,11 +22,11 @@
             </button>
 
             <nav class="main-nav" id="mainNav">
-                <a href="library-unit.html" class="nav-link active">Unità</a>
-                <a href="../Story/story.html" class="nav-link notranslate">Story</a>
-                <a href="#" class="nav-link notranslate">Events</a>
-                <a href="#" class="nav-link notranslate">Items</a>
-                <a href="#" class="nav-link notranslate">Sphere</a>
+                <a href="library-unit.html" class="nav-link active" data-i18n="nav.units">Unità</a>
+                <a href="../Story/story.html" class="nav-link" data-i18n="nav.story">Story</a>
+                <a href="#" class="nav-link" data-i18n="nav.events">Events</a>
+                <a href="#" class="nav-link" data-i18n="nav.items">Items</a>
+                <a href="#" class="nav-link" data-i18n="nav.sphere">Sphere</a>
             </nav>
         </div>
     </header>
@@ -34,9 +34,10 @@
     <section class="sticky-header">
         <div class="filter-container">
             <div class="search-row">
-                <input type="text" id="mainSearch" placeholder="Cerca Unità (Nome o ID)...">
+                <input type="text" id="mainSearch" placeholder="Cerca Unità (Nome o ID)..."
+                    data-i18n-placeholder="filter.search">
                 <select id="raritySelector">
-                    <option value="all">Tutte le Rarità</option>
+                    <option value="all" data-i18n="filter.allRarities">Tutte le Rarità</option>
                     <option value="1" class="notranslate">1★</option>
                     <option value="2" class="notranslate">2★</option>
                     <option value="3" class="notranslate">3★</option>
@@ -47,27 +48,16 @@
                     <option value="Omni" class="notranslate">Omni</option>
                 </select>
 
-                <!-- SELETTORE LINGUA PERSONALIZZATO -->
-                <select id="customLangSelector" onchange="changeLanguage(this.value)">
-                    <option value="it">🇮🇹 Italiano</option>
-                    <option value="en">🇬🇧 English</option>
-                    <option value="es">🇪🇸 Español</option>
-                    <option value="fr">🇫🇷 Français</option>
-                    <option value="zh-CN">🇨🇳 中文</option>
-                    <option value="ja">🇯🇵 日本語</option>
-                </select>
-
-                <!-- Elemento nascosto ma attivo per Google Translate -->
-                <div id="google_translate_element"></div>
             </div>
 
             <div class="element-bar">
-                <button class="btn-elem notranslate" data-elem="Element Fire">Fire</button>
-                <button class="btn-elem notranslate" data-elem="Element Water">Water</button>
-                <button class="btn-elem notranslate" data-elem="Element Earth">Earth</button>
-                <button class="btn-elem notranslate" data-elem="Element Thunder">Thunder</button>
-                <button class="btn-elem notranslate" data-elem="Element Light">Light</button>
-                <button class="btn-elem notranslate" data-elem="Element Dark">Dark</button>
+                <button class="btn-elem notranslate" data-elem="Element Fire" data-i18n="element.fire">Fire</button>
+                <button class="btn-elem notranslate" data-elem="Element Water" data-i18n="element.water">Water</button>
+                <button class="btn-elem notranslate" data-elem="Element Earth" data-i18n="element.earth">Earth</button>
+                <button class="btn-elem notranslate" data-elem="Element Thunder"
+                    data-i18n="element.thunder">Thunder</button>
+                <button class="btn-elem notranslate" data-elem="Element Light" data-i18n="element.light">Light</button>
+                <button class="btn-elem notranslate" data-elem="Element Dark" data-i18n="element.dark">Dark</button>
             </div>
         </div>
     </section>
@@ -160,24 +150,24 @@
 
             <div class="unit_details_scroll_area">
                 <div class="info_section">
-                    <h3 class="notranslate">Summon Quote</h3>
+                    <h3 data-i18n="unit.summonQuote">Summon Quote</h3>
                     <p id="summonQuote">...</p>
                 </div>
                 <div class="info_section">
-                    <h3 class="notranslate">Fusion Quote</h3>
+                    <h3 data-i18n="unit.fusionQuote">Fusion Quote</h3>
                     <p id="fusionQuote">...</p>
                 </div>
                 <div class="info_section">
-                    <h3 class="notranslate">Evolve Quote</h3>
+                    <h3 data-i18n="unit.evolveQuote">Evolve Quote</h3>
                     <p id="evolveQuote">...</p>
                 </div>
                 <div class="info_section">
-                    <h3 class="notranslate">Lore</h3>
+                    <h3 data-i18n="unit.lore">Lore</h3>
                     <p id="unitLore">...</p>
                 </div>
 
                 <div class="skills_container">
-                    <div class="skill_block"><strong class="notranslate">Leader Skill</strong><span id="lsName"
+                    <div class="skill_block"><strong data-i18n="unit.leaderSkill">Leader Skill</strong><span id="lsName"
                             class="notranslate"></span><br><small id="lsDesc"></small></div>
                     <div class="skill_block"><strong class="notranslate">BB</strong><span id="bbName"
                             class="notranslate"></span><br><small id="bbDesc"></small></div>
@@ -188,9 +178,10 @@
                 </div>
 
                 <div class="evolution_area evolution-recipe-area">
-                    <h3 class="notranslate">Evolution</h3>
+                    <h3 data-i18n="unit.evolution">Evolution</h3>
                     <div id="evolutionContainer" class="evolution-container-wrapper">
-                        <p>Seleziona un'unità per visualizzare i materiali e i costi di evoluzione.</p>
+                        <p data-i18n="evo.select">Seleziona un'unità per visualizzare i materiali e i costi di
+                            evoluzione.</p>
                     </div>
                 </div>
             </div>
@@ -230,22 +221,10 @@
         </div>
     </div>
 
-    <!-- Script Google Translate -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'it,en,es,fr,zh-CN,ja',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
     <!-- File Script Applicazione -->
-    <script src="../Units/assets/main.js"></script>
+    <!-- script.js va caricato PRIMA di main.js: gestisce lingua, header e Google Translate -->
     <script src="../script.js"></script>
+    <script src="../Units/assets/main.js"></script>
 </body>
 
 </html>

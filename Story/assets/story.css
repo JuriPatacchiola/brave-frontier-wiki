@@ -11,11 +11,41 @@ body {
     background: #121212;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* La pagina intera non scorre: scorre solo il contenuto sotto l'header,
+       così la barra di scorrimento parte sotto l'header (come nella lista unità) */
+    overflow: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
+}
+
+/* --- BARRA DI SCORRIMENTO (stessa grafica della lista unità) --- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6c35a;
+}
+
+/* Firefox (non supporta ::-webkit-scrollbar) */
+@supports not selector(::-webkit-scrollbar) {
+    .story-content {
+        scrollbar-width: thin;
+        scrollbar-color: #d4af37 #1a1a1a;
+    }
 }
 
 /* --- 2. HEADER DI NAVIGAZIONE (Condiviso) --- */
@@ -33,15 +63,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 0 20px;
 }
 
 .logo-area {
     text-decoration: none;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 20%;
+    display: block;
+    width: 170px;
+    max-width: 30vw;
     height: auto;
 }
 
@@ -63,37 +99,49 @@ body {
     text-decoration: none;
     margin-left: 25px;
     font-weight: bold;
-    transition: 0.3s;
+    white-space: nowrap;
+    transition: color 0.3s;
 }
 
 .main-nav .nav-link:hover,
+.main-nav .nav-link:focus-visible,
 .main-nav .nav-link.active {
     color: #d4af37;
+    outline: none;
 }
 
 /* --- 3. CONTENUTO STORY --- */
 .home-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    background-color: #121212;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url('https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_80014.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    /* Lo sfondo resta fermo mentre scorri il testo */
+    /* Lo sfondo resta fermo mentre scorri il testo (scorre solo .story-content) */
 }
 
+/* Area sotto l'header: è l'unica parte che scorre.
+   Occupa tutta la larghezza (così la barra è sul bordo destro della finestra),
+   ma il testo resta in una colonna centrale di max 900px grazie al padding. */
 .story-content {
-    flex-grow: 1;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 40px max(20px, calc((100% - 900px) / 2));
     text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .story-content h2 {
-    font-size: 2rem;
+    /* si adatta alla larghezza: i titoli lunghi in altre lingue non occupano mezzo schermo */
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.25;
     color: #d4af37;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
@@ -102,8 +150,25 @@ body {
     display: none;
 }
 
-/* --- 4. RESPONSIVE (MOBILE) --- */
+/* --- 4. RESPONSIVE --- */
+
+/* Tablet / finestre medie: menu più compatto per far stare anche il selettore lingua */
+@media (max-width: 900px) {
+    .main-nav .nav-link {
+        margin-left: 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
+    .header-container {
+        padding: 0 16px;
+    }
+
+    .story-content {
+        padding: 30px 16px;
+    }
 
     /* MENU HAMBURGER */
     .hamburger {
@@ -112,7 +177,9 @@ body {
         gap: 5px;
         background: none;
         border: none;
+        padding: 6px 0;
         cursor: pointer;
+        position: relative;
         z-index: 1200;
     }
 
@@ -130,6 +197,7 @@ body {
         top: 0;
         width: 70%;
         height: 100vh;
+        height: 100dvh;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(10px);
         border-left: 1px solid #d4af37;
@@ -137,7 +205,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.4s ease-in-out;
+        transition: right 0.4s ease-in-out;
         z-index: 1150;
     }
 
@@ -147,12 +215,11 @@ body {
 
     .main-nav .nav-link {
         margin: 15px 0;
+        margin-left: 0;
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
         padding: 10px 0;
-        margin-left: 0;
-        /* Rimuove il margine sinistro del desktop */
     }
 
     /* Animazione X hamburger */
@@ -166,5 +233,14 @@ body {
 
     .hamburger.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Chi ha attivato "riduci animazioni" nel sistema non vede movimenti */
+@media (prefers-reduced-motion: reduce) {
+
+    .main-nav,
+    .hamburger span {
+        transition: none;
     }
 }

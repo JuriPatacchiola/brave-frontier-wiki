@@ -120,10 +120,17 @@ body.modal-open {
 
 .logo-area {
     text-decoration: none;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
+/* Larghezza fissa: il logo resta identico in tutte le lingue
+   (con width in % cambiava in base alla lunghezza delle voci del menu) */
 .logo {
-    width: 20%;
+    display: block;
+    width: 170px;
+    max-width: 30vw;
     height: auto;
 }
 
@@ -223,16 +230,48 @@ body.modal-open {
     letter-spacing: 1px;
 }
 
-.btn-elem:hover {
+/* Colore dell'alone per ogni elemento (stessi colori dell'hover delle card) */
+.btn-elem {
+    --elem-glow: rgba(212, 175, 55, 0.55);
+}
+
+.btn-elem[data-elem="Element Fire"] {
+    --elem-glow: rgba(255, 80, 50, 0.65);
+}
+
+.btn-elem[data-elem="Element Water"] {
+    --elem-glow: rgba(60, 160, 255, 0.65);
+}
+
+.btn-elem[data-elem="Element Earth"] {
+    --elem-glow: rgba(80, 210, 90, 0.65);
+}
+
+.btn-elem[data-elem="Element Thunder"] {
+    --elem-glow: rgba(255, 215, 0, 0.65);
+}
+
+.btn-elem[data-elem="Element Light"] {
+    --elem-glow: rgba(255, 250, 220, 0.6);
+}
+
+.btn-elem[data-elem="Element Dark"] {
+    --elem-glow: rgba(170, 80, 255, 0.65);
+}
+
+.btn-elem:hover,
+.btn-elem:focus-visible {
     background: #444;
     border-color: #d4af37;
+    box-shadow: 0 0 10px var(--elem-glow), 0 0 26px var(--elem-glow);
+    outline: none;
 }
 
 .btn-elem.active {
     background: #d4af37;
     color: black;
     border-color: #fff;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 10px var(--elem-glow), 0 0 26px var(--elem-glow);
 }
 
 .unit-grid {
@@ -289,11 +328,21 @@ body.modal-open {
     object-fit: contain;
 }
 
+/* Nome nella card: massimo 2 righe, poi "…" (il nome completo appare al passaggio del mouse) */
 .card-title {
     font-size: 0.9em;
     font-weight: bold;
+    line-height: 1.2em;
     height: 2.4em;
+    /* spazio fisso per 2 righe: le card restano allineate */
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+    /* parole lunghissime vanno a capo invece di uscire */
 }
 
 .card-rarity {
@@ -846,6 +895,23 @@ body.modal-open {
     background: #101010;
 }
 
+/* Immagini dell'evoluzione cliccabili: aprono la modale di quell'unità */
+.evo-recipe-unit.evo-unit-link {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.evo-recipe-unit.evo-unit-link:hover,
+.evo-recipe-unit.evo-unit-link:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 2px #d4af37, 0 0 12px rgba(212, 175, 55, 0.6);
+    outline: none;
+}
+
+.evo-recipe-unit.evo-unit-link:active {
+    transform: scale(0.95);
+}
+
 .evo-recipe-plus,
 .evo-recipe-equals {
     flex: 0 0 auto;
@@ -1164,10 +1230,9 @@ body.modal-open {
         font-size: 16px !important;
     }
 
-    #raritySelector,
-    #customLangSelector {
-        flex: 1 1 calc(50% - 5px);
-        width: calc(50% - 5px);
+    #raritySelector {
+        flex: 1 1 100%;
+        width: 100%;
         padding: 12px 8px;
         font-size: 0.85rem;
     }
@@ -1538,5 +1603,270 @@ body.modal-open {
     .fullart-quote-text {
         font-size: clamp(11px, 3.1vw, 15px);
         width: 74%;
+    }
+}
+
+/* ==========================================================================
+   EFFETTO "FIGURA 3D" AL PASSAGGIO DEL MOUSE (solo PC)
+   L'icona si ribalta e sparisce, al suo posto il personaggio (full art) sale dentro la card
+   ========================================================================== */
+.unit-card {
+    position: relative;
+    overflow: hidden;
+    /* il personaggio non esce mai dalla card */
+    --card-glow: rgba(212, 175, 55, 0.45);
+}
+
+.unit-card.fire {
+    --card-glow: rgba(255, 80, 50, 0.55);
+}
+
+.unit-card.water {
+    --card-glow: rgba(60, 160, 255, 0.55);
+}
+
+.unit-card.earth {
+    --card-glow: rgba(80, 210, 90, 0.55);
+}
+
+.unit-card.thunder {
+    --card-glow: rgba(255, 215, 0, 0.55);
+}
+
+.unit-card.light {
+    --card-glow: rgba(255, 250, 220, 0.5);
+}
+
+.unit-card.dark {
+    --card-glow: rgba(170, 80, 255, 0.55);
+}
+
+.unit-card.show-art {
+    border-color: #d4af37;
+    box-shadow: 0 0 18px var(--card-glow);
+}
+
+.unit-card .card-icon {
+    perspective: 400px;
+    /* serve per l'inclinazione 3D della pedana */
+}
+
+/* Icona: all'entrata si ribalta all'indietro "nel pavimento" e sparisce,
+   all'uscita si rialza (aspettando che il personaggio sia sceso) */
+.unit-card .card-icon .card-thumb {
+    transform-origin: 50% 100%;
+    transition:
+        transform 0.35s cubic-bezier(.4, 0, .2, 1) 0.2s,
+        opacity 0.3s ease 0.2s;
+}
+
+.unit-card.show-art .card-icon .card-thumb {
+    transform: rotateX(90deg) scale(0.85);
+    opacity: 0;
+    transition:
+        transform 0.3s cubic-bezier(.4, 0, .2, 1),
+        opacity 0.25s ease;
+}
+
+.unit-card.show-art .card-title {
+    color: #d4af37;
+}
+
+/* Riquadro della figura: dal bordo alto della card fino al nome (altezza calcolata dal JS) */
+.card-figure-box {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    height: var(--figure-box-h, 110px);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Il personaggio: sempre intero dentro il riquadro, con i piedi in basso sulla pedana */
+.card-figure {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 100%;
+    opacity: 0;
+    transform: translateY(14px) scale(0.3);
+    transform-origin: 50% 100%;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.85));
+    /* solo ombra scura, niente alone colorato */
+    /* uscita: il personaggio scende e sparisce subito */
+    transition:
+        transform 0.25s cubic-bezier(.4, 0, 1, 1),
+        opacity 0.2s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* entrata: il personaggio sale con un piccolo rimbalzo, dopo che l'icona è sparita */
+.unit-card.show-art .card-figure {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition:
+        transform 0.45s cubic-bezier(.2, 1.35, .4, 1) 0.2s,
+        opacity 0.2s ease 0.2s;
+}
+
+/* Su telefono e touch non serve */
+@media (hover: none),
+(max-width: 600px) {
+    .card-figure-box {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .unit-card .card-icon .card-thumb,
+    .unit-card.show-art .card-icon .card-thumb,
+    .card-figure,
+    .unit-card.show-art .card-figure {
+        transform: none;
+        transition: opacity 0.15s linear;
+    }
+}
+
+/* Niente barra di scorrimento orizzontale nella griglia */
+.unit-grid {
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   VIDEO EFFETTI (btm6) + BOTTONI ATTACK / BB
+   ========================================================================== */
+
+/* Video dell'effetto: stessa inquadratura dei video default/idle/atk */
+#container_effect video {
+    position: absolute;
+    object-fit: contain;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    top: -36%;
+    left: -40%;
+    width: 180%;
+    height: 136%;
+}
+
+/* btm6 in alto a sinistra (btm5 è in alto a destra) */
+.btn_effects {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.15s ease;
+}
+
+.btn_effects img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    border-radius: 14px;
+}
+
+.btn_effects:hover,
+.btn_effects:focus-visible {
+    transform: scale(1.05);
+    outline: none;
+}
+
+#btn_btm6.active {
+    filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
+}
+
+/* Bottoni Attack (verde) e BB (blu) affiancati, al posto di btm1/2/3 */
+.effect_choice {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn_effect_type {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    height: 52px;
+    line-height: 0;
+    filter: brightness(0.55) saturate(0.7);
+    /* non selezionato: più spento */
+    transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.btn_effect_type img {
+    height: 100%;
+    width: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.btn_effect_type:hover,
+.btn_effect_type:focus-visible {
+    filter: brightness(0.85);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.btn_effect_type.active {
+    filter: brightness(1.1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+    transform: scale(1.05);
+}
+
+.btn_effect_type[data-effect="atk"].active {
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(80, 220, 90, 0.9));
+}
+
+.btn_effect_type[data-effect="bb"].active {
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(60, 170, 255, 0.9));
+}
+
+@media (max-width: 1024px) {
+    #container_effect video {
+        top: -22%;
+        left: -11%;
+        width: 127%;
+        height: 143%;
+    }
+
+    .btn_effect_type {
+        height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    #container_effect video {
+        top: -21%;
+        left: 0%;
+        width: 100%;
+        height: 122%;
+    }
+
+    .btn_effects {
+        width: 40px;
+        height: 40px;
+        top: 70px;
+        left: 18px;
+    }
+
+    .btn_effects img {
+        border-radius: 8px;
+    }
+
+    .btn_effect_type {
+        height: 24px;
+    }
+
+    .effect_choice {
+        gap: 5px;
     }
 }

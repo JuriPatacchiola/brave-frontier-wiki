@@ -379,8 +379,7 @@ function getEvocationCircle(rarity) {
 }
 
 function getActiveUnitName(u) {
-    const langSelector = document.getElementById('customLangSelector');
-    const currentLang = langSelector ? langSelector.value : 'it';
+    const currentLang = getCurrentLang();
     if (u.names && u.names[currentLang]) {
         return u.names[currentLang];
     }
@@ -389,6 +388,50 @@ function getActiveUnitName(u) {
 
 function formatEvolutionNumber(value) {
     return Number(value || 0).toLocaleString('it-IT');
+}
+
+// Trova un'unità a partire dal suo realId
+function findUnitByRealId(realId) {
+    if (realId === undefined || realId === null || realId === '') return null;
+    return allUnits.find(u => String(u.realId || u.id) === String(realId)) || null;
+}
+
+// Crea l'<img> di un'unità nella ricetta: se l'unità esiste ed è diversa da quella aperta, diventa cliccabile
+function evoUnitImgHtml(src, realId, alt, currentUnit) {
+    const target = findUnitByRealId(realId);
+    const isSelf = target && currentUnit && String(target.realId) === String(currentUnit.realId);
+    if (target && !isSelf) {
+        const title = getActiveUnitName(target) || '';
+        return `<img src="${src}" alt="${alt}" title="${title}" class="evo-recipe-unit evo-unit-link" data-unit-id="${target.realId}" loading="lazy" role="button" tabindex="0">`;
+    }
+    return `<img src="${src}" alt="${alt}" class="evo-recipe-unit" loading="lazy">`;
+}
+
+// Click sulle immagini laterali della ricetta: apre la modale di quell'unità
+function initEvolutionLinks() {
+    const container = document.getElementById('evolutionContainer');
+    if (!container || container.dataset.linksReady) return;
+    container.dataset.linksReady = '1';
+
+    const openFromEl = (el) => {
+        const target = findUnitByRealId(el.dataset.unitId);
+        if (target) openModal(target);
+    };
+
+    container.addEventListener('click', (e) => {
+        const el = e.target.closest('.evo-unit-link');
+        if (el) openFromEl(el);
+    });
+    container.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const el = e.target.closest('.evo-unit-link');
+        if (el) { e.preventDefault(); openFromEl(el); }
+    });
+}
+
+// Traduzione dei testi dell'interfaccia (dizionario in script.js)
+function t(key, vars) {
+    return (window.SiteLang && window.SiteLang.t) ? window.SiteLang.t(key, vars) : key;
 }
 
 function renderEvolutionRecipes(unit) {
@@ -407,7 +450,7 @@ function renderEvolutionRecipes(unit) {
     if (evoKeys.length === 0) {
         container.innerHTML = `
             <div class="evo-recipe-empty">
-                <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
+                <div class="evo-recipe-result notranslate">${t('evo.none')}</div>
             </div>`;
         return;
     }
@@ -463,11 +506,11 @@ function renderEvolutionRecipes(unit) {
             }
         }
 
-        const levelTitle = `Evoluzione a ${rarityDisplay}`;
+        const levelTitle = t('evo.to', { r: rarityDisplay });
         const materials = Array.isArray(recipe.materials) ? recipe.materials : [];
         const materialHtml = materials.length
-            ? materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="Materiale ${mIndex + 1}">`).join('')
-            : '<span class="evo-no-materials">Materiali non specificati</span>';
+            ? materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="${t('evo.material', { n: mIndex + 1 })}">`).join('')
+            : `<span class="evo-no-materials notranslate">${t('evo.noMaterials')}</span>`;
 
         const zelImage = recipe.zelImage || '../img/Money/Zell.png';
         const karmaImage = recipe.karmaImage || '../img/Money/Karma.png';
@@ -477,10 +520,10 @@ function renderEvolutionRecipes(unit) {
 
         htmlContent += `
             <div class="evolution-step-block">
-                <h4 style="color: #d4af37; margin: 0 0 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">${levelTitle}</h4>
+                <h4 class="notranslate" style="color: #d4af37; margin: 0 0 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">${levelTitle}</h4>
                 <div class="evolution-recipe-panel">
                     <div class="evo-recipe-unit-wrap">
-                        <img src="${currentImage}" alt="${altName}" class="evo-recipe-unit" loading="lazy">
+                        ${evoUnitImgHtml(currentImage, evolution.prevId, altName, unit)}
                     </div>
                     <div class="evo-recipe-plus">+</div>
                     <div class="evo-recipe-requirements">
@@ -492,7 +535,7 @@ function renderEvolutionRecipes(unit) {
                     </div>
                     <div class="evo-recipe-equals">=</div>
                     <div class="evo-recipe-unit-wrap">
-                        <img src="${nextImage}" alt="Unità evoluta" class="evo-recipe-unit" loading="lazy">
+                        ${evoUnitImgHtml(nextImage, targetId, t('evo.result'), unit)}
                     </div>
                 </div>
             </div>`;
@@ -500,7 +543,7 @@ function renderEvolutionRecipes(unit) {
 
     container.innerHTML = htmlContent || `
         <div class="evo-recipe-empty">
-            <div class="evo-recipe-result">Nessuna evoluzione successiva disponibile nei dati.</div>
+            <div class="evo-recipe-result notranslate">${t('evo.none')}</div>
         </div>`;
 }
 
@@ -517,11 +560,11 @@ async function startApp() {
         initListeners();
         applyFilters(false);
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const unitSlugFromUrl = urlParams.get('unit');
-        if (unitSlugFromUrl) {
-            const found = allUnits.find(u => getActiveUnitName(u).trim().toLowerCase().replace(/\s+/g, '-') === unitSlugFromUrl);
-            if (found) openModal(found);
+        // Apertura diretta da URL (?unit=nome&id=realId): non aggiunge una nuova voce alla cronologia
+        const found = getUnitFromUrl();
+        if (found) {
+            window.history.replaceState({ unitId: String(found.realId) }, '', window.location.href);
+            openModal(found, { pushHistory: false });
         }
     } catch (err) {
         console.error("Errore nel caricamento dati:", err);
@@ -569,6 +612,59 @@ function setupObserver() {
     });
 }
 
+/* ==========================================================================
+   EFFETTO "FIGURA 3D" AL PASSAGGIO DEL MOUSE (solo PC)
+   L'icona della card si ribalta e sparisce; al suo posto il personaggio (full art)
+   sale con un piccolo rimbalzo, restando sempre DENTRO la card. All'uscita il contrario.
+   ========================================================================== */
+const FIGURE_DELAY_MS = 120;
+const canHover = window.matchMedia ? window.matchMedia('(hover: hover) and (pointer: fine)') : null;
+const failedFullArts = new Set();   // full art inesistenti: non le riproviamo
+
+// Spazio per la figura: dal bordo alto della card fino al nome
+function fitFigureBox(card) {
+    const title = card.querySelector('.card-title');
+    if (!title) return;
+    card.style.setProperty('--figure-box-h', `${Math.max(60, title.offsetTop - 10)}px`);
+}
+
+function attachCardArt(card, u) {
+    const img = card.querySelector('.card-figure');
+    if (!img) return;
+    const realId = String(u.realId || u.id);
+    let timer = null;
+    let hovering = false;
+
+    const show = () => {
+        if (!hovering) return;
+        fitFigureBox(card);
+        card.classList.add('show-art');
+    };
+
+    card.addEventListener('mouseenter', () => {
+        if (canHover && !canHover.matches) return;
+        if (failedFullArts.has(realId)) return;
+        hovering = true;
+        clearTimeout(timer);
+        timer = setTimeout(async () => {
+            if (!hovering) return;
+            if (img.dataset.loaded === '1') { show(); return; }
+            const arts = await getValidFullArts(realId);
+            const src = arts && arts[0];
+            if (!src) return;
+            img.onload = () => { img.dataset.loaded = '1'; show(); };
+            img.onerror = () => { failedFullArts.add(realId); img.removeAttribute('src'); };
+            img.src = src;
+        }, FIGURE_DELAY_MS);
+    });
+
+    card.addEventListener('mouseleave', () => {
+        hovering = false;
+        clearTimeout(timer);
+        card.classList.remove('show-art');
+    });
+}
+
 function displayUnits(appendOnly = false) {
     const container = document.getElementById('gridContainer');
     if (!container) return;
@@ -601,13 +697,15 @@ function displayUnits(appendOnly = false) {
             `;
         } else {
             card.innerHTML = `
-                <div class="card-icon"><img src="${u.image}" loading="lazy" decoding="async" width="60" height="60"></div>
+                <div class="card-figure-box" aria-hidden="true"><img class="card-figure" alt="" decoding="async"></div>
+                <div class="card-icon"><img class="card-thumb" src="${u.image}" loading="lazy" decoding="async" width="60" height="60"></div>
                 <div class="card-title notranslate">${displayName}</div>
                 <div class="card-rarity">${rarityHTML}</div>
             `;
         }
 
         card.onclick = () => openModal(u);
+        if (!isMobile) attachCardArt(card, u);
         fragment.appendChild(card);
     });
 
@@ -631,7 +729,33 @@ function resetModalScrolls() {
     });
 }
 
-function openModal(u) {
+function getUnitSlug(u) {
+    return getActiveUnitName(u).trim().toLowerCase().replace(/\s+/g, '-');
+}
+
+// Legge l'unità dall'URL corrente: prima l'id (univoco), poi il nome come fallback per i vecchi link
+function getUnitFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const byId = findUnitByRealId(params.get('id'));
+    if (byId) return byId;
+    const slug = params.get('unit');
+    if (!slug) return null;
+    return allUnits.find(u => getUnitSlug(u) === slug) || null;
+}
+
+// Tasto "indietro"/"avanti" del browser: riapre l'unità della voce di cronologia o chiude la modale
+window.addEventListener('popstate', (event) => {
+    if (allUnits.length === 0) return;
+    const unit = findUnitByRealId(event.state && event.state.unitId) || getUnitFromUrl();
+    if (unit) {
+        openModal(unit, { pushHistory: false });
+    } else {
+        closeModal({ pushHistory: false });
+    }
+});
+
+function openModal(u, options = {}) {
+    const pushHistory = options.pushHistory !== false;
     closeFullArtModal();
 
     currentUnitOpen = u;
@@ -643,8 +767,7 @@ function openModal(u) {
         unitBoxTop.style.backgroundImage = `url('${arenaBackgrounds[randomIndex]}')`;
     }
 
-    const langSelector = document.getElementById('customLangSelector');
-    const currentLang = langSelector ? langSelector.value : 'it';
+    const currentLang = getCurrentLang();
     let localizedTexts = u.textData?.[currentLang] || u.textData?.['en'] || {
         summonQuote: u.summonQuote, fusionQuote: u.fusionQuote, evolveQuote: u.evolveQuote, lore: u.lore
     };
@@ -664,7 +787,7 @@ function openModal(u) {
     document.getElementById('summonQuote').innerText = localizedTexts.summonQuote || "---";
     document.getElementById('fusionQuote').innerText = localizedTexts.fusionQuote || "---";
     document.getElementById('evolveQuote').innerText = localizedTexts.evolveQuote || "---";
-    document.getElementById('unitLore').innerText = localizedTexts.lore || "Story not available.";
+    document.getElementById('unitLore').innerText = localizedTexts.lore || t('unit.loreMissing');
 
     ['ls', 'bb', 'sbb', 'ubb'].forEach(s => {
         const nameEl = document.getElementById(`${s}Name`);
@@ -675,12 +798,22 @@ function openModal(u) {
 
     renderEvolutionRecipes(u);
 
+    // Ogni unità si apre sulle animazioni normali; btm6 compare solo se ha effetti
+    exitEffectMode(false);
+    currentEffect = 'atk';
+    updateEffectsButton();
+
     const btnBtm5 = document.getElementById('btn_btm5');
     if (btnBtm5) btnBtm5.classList.remove('active');
 
     changeType('base');
-    const unitSlug = getActiveUnitName(u).trim().toLowerCase().replace(/\s+/g, '-');
-    window.history.pushState({ unitName: getActiveUnitName(u) }, '', window.location.pathname + "?unit=" + unitSlug);
+    if (pushHistory) {
+        const isSameEntry = window.history.state && String(window.history.state.unitId) === String(u.realId);
+        if (!isSameEntry) {
+            const newUrl = window.location.pathname + "?unit=" + encodeURIComponent(getUnitSlug(u)) + "&id=" + encodeURIComponent(u.realId);
+            window.history.pushState({ unitId: String(u.realId) }, '', newUrl);
+        }
+    }
 
     const modalEl = document.getElementById('unitModal');
     if (modalEl) modalEl.style.display = 'block';
@@ -706,7 +839,7 @@ async function getValidFullArts(unitId) {
 
     // Se l'ID inizia con "7", appartiene alle unità europee nella cartella specifica
     if (strId.startsWith('7')) {
-        validImages.push(`../img/Unit/img Europe/Unit_ills_full_${strId}.png`);
+        validImages.push(`../img/Unit/img Europe/Full Art/Unit_ills_full_${strId}.png`);
     } else {
         // Altrimenti appartiene alle unità standard nella cartella Full Art
         validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}.png`);
@@ -725,7 +858,7 @@ async function getValidFullArts(unitId) {
 
     if (unitsWithVariant2.includes(strId)) {
         if (strId.startsWith('7')) {
-            validImages.push(`../img/Unit/img Europe/Unit_ills_full_${strId}_2.png`);
+            validImages.push(`../img/Unit/img Europe/Full Art/Unit_ills_full_${strId}_2.png`);
         } else {
             validImages.push(`../img/Unit/Full Art/unit_ills_full_${strId}_2.png`);
         }
@@ -810,8 +943,7 @@ function setupFullArtEvocationFx(unit) {
 function getFullArtQuoteData() {
     const unit = currentUnitOpen;
     if (!unit) return { summon: '', fusion: '' };
-    const selector = document.getElementById('customLangSelector');
-    const lang = selector ? selector.value : 'it';
+    const lang = getCurrentLang();
     const localized = unit.textData && (unit.textData[lang] || unit.textData.en || unit.textData.it);
     const summon = localized?.summonQuote ?? (lang === 'en' ? unit.summonQuote : '');
     const fusion = localized?.fusionQuote ?? (lang === 'en' ? unit.fusionQuote : '');
@@ -993,8 +1125,158 @@ function showMotion(type) {
     });
 }
 
+/* ==========================================================================
+   VIDEO EFFETTI (btm6): Attack / BB
+   Nel JSON: "effects": { "atk": "percorso/Atk.mp4", "bb": "percorso/BBAtk.mp4" }
+   ========================================================================== */
+const EFFECT_TYPES = ['atk', 'bb'];
+let effectMode = false;
+let currentEffect = 'atk';
+
+// Percorsi delle immagini dei bottoni effetti
+const EFFECT_BUTTON_IMAGES = {
+    toggle: '../img/Button For Change/btm6.png',   // bottone "effects"
+    atk: '../img/Button For Change/buttonAtkEffect.png',      // bottone verde "Attack"
+    bb: '../img/Button For Change/buttonBBAtkEffect.png'        // bottone blu "BB"
+};
+
+// Crea nella modale gli elementi degli effetti se l'HTML non li contiene già
+function ensureEffectsUI() {
+    const gif = document.querySelector('.unit_gif');
+    if (gif && !document.getElementById('container_effect')) {
+        const box = document.createElement('div');
+        box.id = 'container_effect';
+        box.className = 'anim-container';
+        box.style.display = 'none';
+        box.innerHTML = '<video id="video_effect" loop muted playsinline webkit-playsinline class="unit-media-style"></video><div class="shadow"></div>';
+        gif.appendChild(box);
+    }
+
+    const top = document.querySelector('.unit_box_top');
+    if (top && !document.getElementById('btn_btm6_container')) {
+        const btn = document.createElement('div');
+        btn.className = 'btn_effects';
+        btn.id = 'btn_btm6_container';
+        btn.style.display = 'none';
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('tabindex', '0');
+        btn.setAttribute('aria-label', 'Effects');
+        btn.innerHTML = `<img src="${EFFECT_BUTTON_IMAGES.toggle}" id="btn_btm6" alt="Effects">`;
+        top.appendChild(btn);
+    }
+
+    const group = document.querySelector('.bottom_buttons_group');
+    if (group && !document.getElementById('effectChoice')) {
+        const choice = document.createElement('div');
+        choice.className = 'effect_choice';
+        choice.id = 'effectChoice';
+        choice.style.display = 'none';
+        choice.innerHTML = `
+            <button type="button" class="btn_effect_type" data-effect="atk" aria-label="Attack"><img src="${EFFECT_BUTTON_IMAGES.atk}" alt="Attack"></button>
+            <button type="button" class="btn_effect_type" data-effect="bb" aria-label="BB"><img src="${EFFECT_BUTTON_IMAGES.bb}" alt="BB"></button>`;
+        const motion = group.querySelector('.btn_motion');
+        if (motion && motion.nextSibling) group.insertBefore(choice, motion.nextSibling);
+        else group.appendChild(choice);
+    }
+}
+
+function getUnitEffects(u) {
+    const fx = (u && u.effects) || {};
+    return EFFECT_TYPES.filter(type => fx[type]);
+}
+
+// Mostra btm6 solo se l'unità ha almeno un video effetto
+function updateEffectsButton() {
+    const btn = document.getElementById('btn_btm6_container');
+    if (btn) btn.style.display = getUnitEffects(currentUnitOpen).length ? 'flex' : 'none';
+}
+
+function stopEffectVideo() {
+    const video = document.getElementById('video_effect');
+    if (video) { video.pause(); video.removeAttribute('src'); video.load(); }
+}
+
+function stopMotionVideos() {
+    ['default', 'idle', 'atk'].forEach(type => {
+        const container = document.getElementById(`container_${type}`);
+        const video = document.getElementById(`video_${type}`);
+        const img = document.getElementById(`img_${type}`);
+        if (container) container.style.display = 'none';
+        if (video) { video.pause(); video.removeAttribute('src'); }
+        if (img) img.removeAttribute('src');
+    });
+}
+
+function selectEffect(type) {
+    if (!currentUnitOpen) return;
+    const src = currentUnitOpen.effects && currentUnitOpen.effects[type];
+    if (!src) return;
+    currentEffect = type;
+
+    const container = document.getElementById('container_effect');
+    const video = document.getElementById('video_effect');
+    if (container) container.style.display = 'block';
+    if (video) {
+        video.muted = true;
+        video.playsInline = true;
+        video.loop = true;
+        if (video.getAttribute('src') !== src) {
+            video.src = src;
+            video.load();
+        }
+        video.currentTime = 0;
+        video.play().catch(() => { });
+    }
+
+    document.querySelectorAll('.btn_effect_type').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.effect === type);
+    });
+}
+
+function enterEffectMode(type) {
+    const available = getUnitEffects(currentUnitOpen);
+    if (!available.length) return;
+    effectMode = true;
+    stopMotionVideos();
+
+    const motionBtn = document.querySelector('.btn_motion');
+    const choice = document.getElementById('effectChoice');
+    if (motionBtn) motionBtn.style.display = 'none';
+    if (choice) choice.style.display = 'flex';
+    // mostra solo i bottoni degli effetti che l'unità ha davvero
+    document.querySelectorAll('.btn_effect_type').forEach(btn => {
+        btn.style.display = available.includes(btn.dataset.effect) ? '' : 'none';
+    });
+
+    const btm6 = document.getElementById('btn_btm6');
+    if (btm6) btm6.classList.add('active');
+
+    selectEffect(available.includes(type) ? type : available[0]);
+}
+
+// Esce dalla modalità effetti; se restoreMotion è true torna all'animazione "default"
+function exitEffectMode(restoreMotion = true) {
+    effectMode = false;
+    stopEffectVideo();
+    const container = document.getElementById('container_effect');
+    const motionBtn = document.querySelector('.btn_motion');
+    const choice = document.getElementById('effectChoice');
+    const btm6 = document.getElementById('btn_btm6');
+    if (container) container.style.display = 'none';
+    if (motionBtn) motionBtn.style.display = '';
+    if (choice) choice.style.display = 'none';
+    if (btm6) btm6.classList.remove('active');
+    if (restoreMotion && currentUnitOpen) showMotion('default');
+}
+
+function toggleEffects() {
+    if (!currentUnitOpen || isFullArtOpen) return;
+    if (effectMode) exitEffectMode(true);
+    else enterEffectMode(currentEffect);
+}
+
 function toggleImg() {
-    if (isFullArtOpen) return;
+    if (isFullArtOpen || effectMode) return;
     const dCont = document.getElementById('container_default');
     const iCont = document.getElementById('container_idle');
     if (dCont && dCont.style.display !== 'none') showMotion('idle');
@@ -1002,7 +1284,9 @@ function toggleImg() {
     else showMotion('default');
 }
 
-function closeModal() {
+function closeModal(options = {}) {
+    // Se chiamata dall'onclick della X arriva un evento, non un oggetto opzioni
+    const pushHistory = !(options && options.pushHistory === false);
     closeFullArtModal();
 
     const modalEl = document.getElementById('unitModal');
@@ -1010,6 +1294,7 @@ function closeModal() {
     document.body.classList.remove('modal-open');
 
     isFullArtOpen = false;
+    exitEffectMode(false);
 
     ['default', 'idle', 'atk'].forEach(t => {
         const v = document.getElementById(`video_${t}`);
@@ -1019,7 +1304,7 @@ function closeModal() {
     });
 
     currentUnitOpen = null;
-    window.history.pushState({}, '', window.location.pathname);
+    if (pushHistory) window.history.pushState({}, '', window.location.pathname);
 }
 
 function changeType(type) {
@@ -1050,6 +1335,21 @@ function initListeners() {
     const btm5Btn = document.getElementById('btn_btm5_container') || document.getElementById('btn_btm5');
     if (btm5Btn) btm5Btn.onclick = toggleFullArt;
 
+    // btm6: entra/esce dalla modalità effetti (crea i pulsanti se l'HTML non li ha)
+    ensureEffectsUI();
+    const btm6Btn = document.getElementById('btn_btm6_container');
+    if (btm6Btn) {
+        btm6Btn.onclick = toggleEffects;
+        btm6Btn.onkeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleEffects(); }
+        };
+    }
+
+    // Bottoni Attack (verde) / BB (blu)
+    document.querySelectorAll('.btn_effect_type').forEach(btn => {
+        btn.onclick = () => selectEffect(btn.dataset.effect);
+    });
+
     const closeFullArtBtn = document.getElementById('closeFullArtModal');
     const fullArtModal = document.getElementById('fullArtModal');
 
@@ -1062,6 +1362,7 @@ function initListeners() {
     }
 
     initFullArtSwipe();
+    initEvolutionLinks();
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
@@ -1084,30 +1385,21 @@ function initListeners() {
     setupObserver();
 }
 
-window.changeLanguage = function (langCode) {
-    const langSelector = document.getElementById('customLangSelector');
-    if (langSelector) langSelector.value = langCode;
+// La lingua è gestita da script.js (condiviso da tutto il sito).
+// Qui aggiorniamo solo i contenuti della pagina quando l'utente la cambia.
+function getCurrentLang() {
+    return (window.SiteLang && window.SiteLang.get()) || 'it';
+}
 
-    var domain = window.location.hostname;
-    document.cookie = "googtrans=/en/" + langCode + "; path=/; domain=" + domain;
-    document.cookie = "googtrans=/en/" + langCode + "; path=/;";
-
-    if (allUnits.length > 0) applyFilters(true);
+window.addEventListener('sitelanguagechange', () => {
+    if (allUnits.length > 0) applyFilters(false);
     if (isFullArtOpen) renderFullArtQuote();
 
     const modal = document.getElementById('unitModal');
     if (currentUnitOpen && modal && modal.style.display === 'block') {
-        openModal(currentUnitOpen);
+        openModal(currentUnitOpen, { pushHistory: false });
     }
-
-    var googleSelect = document.querySelector('.goog-te-combo');
-    if (googleSelect) {
-        googleSelect.value = langCode;
-        googleSelect.dispatchEvent(new Event('change'));
-    } else {
-        location.reload();
-    }
-};
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const fullArtImage = document.getElementById('fullArtModalImage');

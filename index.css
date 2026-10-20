@@ -11,13 +11,41 @@ body {
     background: #121212;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* La pagina intera non scorre: scorre solo il contenuto sotto l'header,
+       così la barra di scorrimento parte sotto l'header (come nella lista unità) */
     overflow: hidden;
-    /* Mantiene la home fissa senza scroll */
 }
 
 body {
     display: flex;
     flex-direction: column;
+}
+
+/* --- BARRA DI SCORRIMENTO (stessa grafica della lista unità) --- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6c35a;
+}
+
+/* Firefox (non supporta ::-webkit-scrollbar) */
+@supports not selector(::-webkit-scrollbar) {
+    .home-content {
+        scrollbar-width: thin;
+        scrollbar-color: #d4af37 #1a1a1a;
+    }
 }
 
 /* --- 2. HEADER DI NAVIGAZIONE (Condiviso) --- */
@@ -35,15 +63,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 0 20px;
 }
 
 .logo-area {
     text-decoration: none;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 20%;
+    display: block;
+    width: 170px;
+    max-width: 30vw;
     height: auto;
 }
 
@@ -65,39 +99,61 @@ body {
     text-decoration: none;
     margin-left: 25px;
     font-weight: bold;
-    transition: 0.3s;
+    white-space: nowrap;
+    transition: color 0.3s;
 }
 
 .main-nav .nav-link:hover,
+.main-nav .nav-link:focus-visible,
 .main-nav .nav-link.active {
     color: #d4af37;
+    outline: none;
 }
 
 /* --- 3. CONTENUTO SPECIFICO INDEX (HOME PAGE) --- */
 .home-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background-color: #121212;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_80014.jpg');
     background-size: cover;
     background-position: center;
 }
 
+/* Area sotto l'header: è l'unica parte che scorre */
 .home-content {
-    flex-grow: 1;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+}
+
+/* Centra il contenuto in verticale quando c'è spazio,
+   ma se non entra parte dall'alto e si scorre senza tagliare nulla */
+.home-content> :first-child {
+    margin-top: auto;
+}
+
+.home-content> :last-child {
+    margin-bottom: auto;
 }
 
 .home-content h2 {
-    font-size: 2.5rem;
+    /* si adatta alla larghezza: i titoli lunghi (FR, ES) non occupano metà schermo */
+    font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+    line-height: 1.25;
     color: #d4af37;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
+    max-width: 1000px;
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
     letter-spacing: 3px;
+    overflow-wrap: anywhere;
 }
 
 .button-grid {
@@ -113,21 +169,33 @@ body {
     border: 2px solid #d4af37;
     border-radius: 12px;
     padding: 30px;
+    min-height: 110px;
     text-decoration: none;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* testo sempre centrato in verticale, anche nei pulsanti senza icona */
+    justify-content: center;
     gap: 15px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.big-btn:hover {
+/* Se il numero di pulsanti è dispari, l'ultimo va al centro */
+.button-grid>.big-btn:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 15px);
+}
+
+.big-btn:hover,
+.big-btn:focus-visible {
     background: #d4af37;
     color: black;
     transform: translateY(-10px);
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    outline: none;
 }
 
 .big-btn img {
@@ -148,10 +216,54 @@ body {
     display: none;
 }
 
-/* --- 4. RESPONSIVE (MOBILE) --- */
-@media (max-width: 600px) {
+/* --- 4. RESPONSIVE --- */
+
+/* Tablet / finestre medie: menu più compatto per far stare anche il selettore lingua */
+@media (max-width: 900px) {
+    .main-nav .nav-link {
+        margin-left: 16px;
+        font-size: 0.95rem;
+    }
+
+    .button-grid {
+        gap: 20px;
+    }
+}
+
+/* Schermi bassi (portatili piccoli, finestre ridotte) */
+@media (max-height: 700px) and (min-width: 601px) {
+    .home-content {
+        padding: 24px 20px;
+    }
+
     .home-content h2 {
-        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    .big-btn {
+        padding: 20px;
+        min-height: 80px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .header-container {
+        padding: 0 16px;
+    }
+
+    .home-content {
+        padding: 30px 16px;
+    }
+
+    /* su mobile il contenuto parte sempre dall'alto */
+    .home-content> :first-child {
+        margin-top: 0;
+    }
+
+    .home-content h2 {
+        letter-spacing: 2px;
+        margin-bottom: 30px;
     }
 
     .button-grid {
@@ -159,13 +271,13 @@ body {
         gap: 20px;
     }
 
-    .big-btn {
-        padding: 20px;
+    .button-grid>.big-btn:last-child:nth-child(odd) {
+        width: 100%;
     }
 
-    html,
-    body {
-        overflow-y: auto;
+    .big-btn {
+        padding: 20px;
+        min-height: 0;
     }
 
     /* MENU HAMBURGER */
@@ -175,7 +287,9 @@ body {
         gap: 5px;
         background: none;
         border: none;
+        padding: 6px 0;
         cursor: pointer;
+        position: relative;
         z-index: 1200;
     }
 
@@ -193,6 +307,7 @@ body {
         top: 0;
         width: 70%;
         height: 100vh;
+        height: 100dvh;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(10px);
         border-left: 1px solid #d4af37;
@@ -200,7 +315,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.4s ease-in-out;
+        transition: right 0.4s ease-in-out;
         z-index: 1150;
     }
 
@@ -227,5 +342,20 @@ body {
 
     .hamburger.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Chi ha attivato "riduci animazioni" nel sistema non vede movimenti */
+@media (prefers-reduced-motion: reduce) {
+
+    .big-btn,
+    .main-nav,
+    .hamburger span {
+        transition: none;
+    }
+
+    .big-btn:hover,
+    .big-btn:focus-visible {
+        transform: none;
     }
 }
