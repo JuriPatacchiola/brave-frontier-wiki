@@ -1739,16 +1739,32 @@ body.modal-open {
    VIDEO EFFETTI (btm6) + BOTTONI ATTACK / BB
    ========================================================================== */
 
-/* Video dell'effetto: stessa inquadratura dei video default/idle/atk */
-#container_effect video {
+/* Video dell'effetto: riempie SEMPRE tutto il riquadro visibile, su qualsiasi schermo
+   (PC, tablet, iPhone), senza lasciare bordi vuoti.
+   Per regolarlo cambia solo queste variabili:
+   --fx-zoom  : ingrandimento (1 = riempie giusto, 1.2 = 20% più vicino)
+   --fx-x / --fx-y : punto da tenere al centro (50% 50% = centro del video) */
+#container_effect {
+    --fx-zoom: 1;
+    --fx-x: 50%;
+    --fx-y: 50%;
+}
+
+#container_effect video,
+#container_effect img {
     position: absolute;
-    object-fit: contain;
-    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--fx-x) var(--fx-y);
+    transform: scale(var(--fx-zoom));
+    transform-origin: var(--fx-x) var(--fx-y);
     backface-visibility: hidden;
-    top: -36%;
-    left: -40%;
-    width: 180%;
-    height: 136%;
+    /* Se la GIF è pixel art e ingrandita sembra sfocata, togli il commento alla riga sotto:
+       i pixel restano netti invece di essere sfumati */
+    /* image-rendering: pixelated; */
 }
 
 /* btm6 in alto a sinistra (btm5 è in alto a destra) */
@@ -1784,11 +1800,15 @@ body.modal-open {
     filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
 }
 
-/* Bottoni Attack (verde) e BB (blu) affiancati, al posto di btm1/2/3 */
+/* Bottoni Attack (verde) e BB (blu) affiancati, al posto di btm1/2/3.
+   Stanno appoggiati al bordo inferiore (non centrati sul bottone "change area"),
+   così coprono il meno possibile l'animazione */
 .effect_choice {
     display: flex;
     gap: 8px;
-    align-items: center;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-bottom: -4px;
 }
 
 .btn_effect_type {
@@ -1831,24 +1851,16 @@ body.modal-open {
 }
 
 @media (max-width: 1024px) {
-    #container_effect video {
-        top: -22%;
-        left: -11%;
-        width: 127%;
-        height: 143%;
-    }
-
     .btn_effect_type {
         height: 30px;
     }
 }
 
 @media (max-width: 600px) {
-    #container_effect video {
-        top: -21%;
-        left: 0%;
-        width: 110%;
-        height: 122%;
+
+    /* su telefono il riquadro è più basso: qui puoi dare uno zoom diverso, es. 1.1 */
+    #container_effect {
+        --fx-zoom: 1;
     }
 
     .btn_effects {
@@ -1868,5 +1880,7 @@ body.modal-open {
 
     .effect_choice {
         gap: 5px;
+        margin-bottom: -8px;
+        /* su telefono ancora più in basso, quasi sul bordo */
     }
 }

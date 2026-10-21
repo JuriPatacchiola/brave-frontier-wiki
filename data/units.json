@@ -357,6 +357,10 @@
       "idle": "../video/six heros/Vargas/Burning Vargas/Burning-Vargas-idle.gif",
       "atk": "../video/six heros/Vargas/Burning Vargas/Burning-Vargas-atk.gif"
     },
+    "effects": {
+      "atk": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/BBAtk.mp4"
+    },
     "evolution": {
       "prevId": "10011",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10011.png",
@@ -3034,6 +3038,10 @@
       "idle": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-idle.gif",
       "atk": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-atk.gif"
     },
+    "effects": {
+      "atk": "../video/Effect Video/Six Hero/Eze/Warrior Eze/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Eze/Warrior Eze/BBAtk.mp4"
+    },
     "evolution": {
       "prevId": "40011",
       "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40011.png",
@@ -3275,6 +3283,10 @@
       "default": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-default.gif",
       "idle": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-idle.gif",
       "atk": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-atk.gif"
+    },
+    "effects": {
+      "atk": "../video/Effect Video/Six Hero/Eze/Thunder Eze/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Eze/Thunder Eze/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "40011",
@@ -4001,6 +4013,10 @@
       "default": "../video/six heros/Atro/Squire Atro/Squire-Atro-default.gif",
       "idle": "../video/six heros/Atro/Squire Atro/Squire-Atro-idle.gif",
       "atk": "../video/six heros/Atro/Squire Atro/Squire-Atro-atk.gif"
+    },
+    "effects": {
+      "atk": "../video/Effect Video/Six Hero/Atro/Squire Atro/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Atro/Squire Atro/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "50011",
@@ -5041,6 +5057,10 @@
       "default": "../video/six heros/Magress/Iron Magress/Iron-Magress-default.gif",
       "idle": "../video/six heros/Magress/Iron Magress/Iron-Magress-idle.gif",
       "atk": "../video/six heros/Magress/Iron Magress/Iron-Magress-atk.gif"
+    },
+    "effects": {
+      "atk": "../video/Effect Video/Six Hero/Magress/Iron Magress/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Magress/Iron Magress/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "60011",

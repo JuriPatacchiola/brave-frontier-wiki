@@ -1136,8 +1136,8 @@ let currentEffect = 'atk';
 // Percorsi delle immagini dei bottoni effetti
 const EFFECT_BUTTON_IMAGES = {
     toggle: '../img/Button For Change/btm6.png',   // bottone "effects"
-    atk: '../img/Button For Change/buttonAtkEffect.png',      // bottone verde "Attack"
-    bb: '../img/Button For Change/buttonBBAtkEffect.png'        // bottone blu "BB"
+    atk: '../img/Button For Change/Atk.png',      // bottone verde "Attack"
+    bb: '../img/Button For Change/BBAtk.png'        // bottone blu "BB"
 };
 
 // Crea nella modale gli elementi degli effetti se l'HTML non li contiene già
@@ -1150,6 +1150,16 @@ function ensureEffectsUI() {
         box.style.display = 'none';
         box.innerHTML = '<video id="video_effect" loop muted playsinline webkit-playsinline class="unit-media-style"></video><div class="shadow"></div>';
         gif.appendChild(box);
+    }
+    // immagine per gli effetti in GIF (o WebP/PNG animati)
+    const fxBox = document.getElementById('container_effect');
+    if (fxBox && !document.getElementById('img_effect')) {
+        const img = document.createElement('img');
+        img.id = 'img_effect';
+        img.className = 'unit-media-style';
+        img.alt = '';
+        img.style.display = 'none';
+        fxBox.insertBefore(img, fxBox.querySelector('.shadow'));
     }
 
     const top = document.querySelector('.unit_box_top');
@@ -1193,7 +1203,14 @@ function updateEffectsButton() {
 
 function stopEffectVideo() {
     const video = document.getElementById('video_effect');
-    if (video) { video.pause(); video.removeAttribute('src'); video.load(); }
+    const img = document.getElementById('img_effect');
+    if (video) { video.pause(); video.removeAttribute('src'); video.load(); video.style.display = 'none'; }
+    if (img) { img.removeAttribute('src'); img.style.display = 'none'; }
+}
+
+// true se il file è un video (mp4/webm/mov), false se è un'immagine animata (gif/webp/png)
+function isVideoFile(src) {
+    return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(String(src || ''));
 }
 
 function stopMotionVideos() {
@@ -1215,17 +1232,31 @@ function selectEffect(type) {
 
     const container = document.getElementById('container_effect');
     const video = document.getElementById('video_effect');
+    const img = document.getElementById('img_effect');
     if (container) container.style.display = 'block';
-    if (video) {
-        video.muted = true;
-        video.playsInline = true;
-        video.loop = true;
-        if (video.getAttribute('src') !== src) {
-            video.src = src;
-            video.load();
+
+    if (isVideoFile(src) || !img) {
+        // MP4 / WebM
+        if (img) { img.removeAttribute('src'); img.style.display = 'none'; }
+        if (video) {
+            video.style.display = 'block';
+            video.muted = true;
+            video.playsInline = true;
+            video.loop = true;
+            if (video.getAttribute('src') !== src) {
+                video.src = src;
+                video.load();
+            }
+            video.currentTime = 0;
+            video.play().catch(() => { });
         }
-        video.currentTime = 0;
-        video.play().catch(() => { });
+    } else {
+        // GIF (o WebP/PNG animati): si rimette il src così riparte dal primo fotogramma
+        if (video) { video.pause(); video.removeAttribute('src'); video.style.display = 'none'; }
+        img.style.display = 'block';
+        img.removeAttribute('src');
+        void img.offsetWidth;
+        img.src = src;
     }
 
     document.querySelectorAll('.btn_effect_type').forEach(btn => {
