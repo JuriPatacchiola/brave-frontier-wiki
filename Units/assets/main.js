@@ -456,7 +456,8 @@ const EVO_ITEM_FILES = {
     'Grand Garnet': 'item_thum_110160.png',
     // speciali
     'Twin Stones': 'item_thum_110190.png',
-    'Legend Stone': 'item_thum_111000.png'
+    'Legend Stone': 'item_thum_111000.png',
+    'Love Crystal': 'Item_thum_700042.png'
 };
 
 function getEvoItemImage(name) {
