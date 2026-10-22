@@ -434,6 +434,35 @@ function t(key, vars) {
     return (window.SiteLang && window.SiteLang.t) ? window.SiteLang.t(key, vars) : key;
 }
 
+// Cartella delle immagini degli oggetti evolutivi (pietre ecc.)
+const EVO_ITEM_FOLDER = '../img/Material Evolve/';
+// Nome del file per ogni oggetto. Se un oggetto non è in elenco si usa "<nome oggetto>.png"
+const EVO_ITEM_FILES = {
+    // pietre semplici (ordine elementi: Fuoco, Acqua, Terra, Tuono, Luce, Oscurità)
+    'Ruby': 'item_thum_110000.png',
+    'Sapphire': 'item_thum_110010.png',
+    'Emerald': 'item_thum_110020.png',
+    'Topaz': 'item_thum_110030.png',
+    'Opal': 'item_thum_110040.png',
+    'Amethyst': 'item_thum_110050.png',
+    'Garnet': 'item_thum_110080.png',
+    // pietre "Grand"
+    'Grand Ruby': 'item_thum_110100.png',
+    'Grand Sapphire': 'item_thum_110110.png',
+    'Grand Emerald': 'item_thum_110120.png',
+    'Grand Topaz': 'item_thum_110130.png',
+    'Grand Opal': 'item_thum_110140.png',
+    'Grand Amethyst': 'item_thum_110150.png',
+    'Grand Garnet': 'item_thum_110160.png',
+    // speciali
+    'Twin Stones': 'item_thum_110190.png',
+    'Legend Stone': 'item_thum_111000.png'
+};
+
+function getEvoItemImage(name) {
+    return EVO_ITEM_FOLDER + (EVO_ITEM_FILES[name] || `${name}.png`);
+}
+
 function renderEvolutionRecipes(unit) {
     const container = document.getElementById('evolutionContainer');
     if (!container) return;
@@ -508,8 +537,12 @@ function renderEvolutionRecipes(unit) {
 
         const levelTitle = t('evo.to', { r: rarityDisplay });
         const materials = Array.isArray(recipe.materials) ? recipe.materials : [];
-        const materialHtml = materials.length
-            ? materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="${t('evo.material', { n: mIndex + 1 })}">`).join('')
+        const items = Array.isArray(recipe.items) ? recipe.items.filter(Boolean) : [];
+        const materialImgs = materials.map((matSrc, mIndex) => `<img src="${matSrc}" class="mat-icon evo-recipe-material" loading="lazy" alt="${t('evo.material', { n: mIndex + 1 })}">`);
+        // Oggetti evolutivi (es. "Legend Stone"): immagine = cartella oggetti + nome + .png
+        const itemImgs = items.map(name => `<img src="${getEvoItemImage(name)}" class="mat-icon evo-recipe-material evo-recipe-item" loading="lazy" alt="${name}" title="${name}">`);
+        const materialHtml = (materialImgs.length || itemImgs.length)
+            ? materialImgs.concat(itemImgs).join('')
             : `<span class="evo-no-materials notranslate">${t('evo.noMaterials')}</span>`;
 
         const zelImage = recipe.zelImage || '../img/Money/Zell.png';
@@ -789,12 +822,7 @@ function openModal(u, options = {}) {
     document.getElementById('evolveQuote').innerText = localizedTexts.evolveQuote || "---";
     document.getElementById('unitLore').innerText = localizedTexts.lore || t('unit.loreMissing');
 
-    ['ls', 'bb', 'sbb', 'ubb'].forEach(s => {
-        const nameEl = document.getElementById(`${s}Name`);
-        const descEl = document.getElementById(`${s}Desc`);
-        if (nameEl) nameEl.innerText = u.skills?.[s]?.name || "N/A";
-        if (descEl) descEl.innerText = u.skills?.[s]?.desc || "";
-    });
+    renderSkills(u);
 
     renderEvolutionRecipes(u);
 
@@ -823,6 +851,62 @@ function openModal(u, options = {}) {
         showMotion('default');
     }, 50);
     resetModalScrolls();
+}
+
+/* ==========================================================================
+   SKILL (Leader Skill, BB, SBB, UBB) NELLA LINGUA SCELTA
+   Nel JSON:  "bb": { "name": { "en": "...", "it": "...", ... }, "desc": { "en": "...", ... } }
+   Funziona anche con il vecchio formato  "bb": { "name": "...", "desc": "..." }
+   ========================================================================== */
+const SKILL_TYPES = ['ls', 'bb', 'sbb', 'ubb'];
+
+// Quali skill ha un'unità in base alla rarità (stessa regola dei bottoni effetti)
+function getSkillTypesForRarity(rarity) {
+    const r = String(rarity || '').trim().toLowerCase();
+    if (r === '7' || r === 'omni' || r === 'dream') return ['ls', 'bb', 'sbb', 'ubb'];
+    if (r === '6') return ['ls', 'bb', 'sbb'];
+    return ['ls', 'bb'];
+}
+
+// Testo nella lingua attuale: lingua scelta -> inglese -> italiano -> prima disponibile
+function getLocalizedText(value) {
+    if (value === undefined || value === null) return '';
+    if (typeof value === 'string') return value.trim() === '---' ? '' : value;
+    const lang = getCurrentLang();
+    return value[lang] || value.en || value.it || Object.values(value).find(v => v) || '';
+}
+
+function hasSkillContent(skill) {
+    if (!skill) return false;
+    const has = v => v && (typeof v === 'string' ? v.trim() && v.trim() !== '---' : Object.values(v).some(x => x && String(x).trim()));
+    return has(skill.name) || has(skill.desc);
+}
+
+function renderSkills(u) {
+    // skill previste dalla rarità + eventuali altre che hanno già un testo nel JSON
+    const allowed = getSkillTypesForRarity(u.rarity)
+        .concat(SKILL_TYPES.filter(t => hasSkillContent(u.skills && u.skills[t])));
+    SKILL_TYPES.forEach(type => {
+        const nameEl = document.getElementById(`${type}Name`);
+        const descEl = document.getElementById(`${type}Desc`);
+        const block = nameEl ? nameEl.closest('.skill_block') : null;
+
+        // SBB / UBB nascosti nelle unità che per rarità non li hanno
+        if (block) block.style.display = allowed.includes(type) ? '' : 'none';
+        if (!allowed.includes(type)) return;
+
+        const skill = (u.skills && u.skills[type]) || {};
+        const name = getLocalizedText(skill.name);
+        const desc = getLocalizedText(skill.desc);
+        // se la descrizione esiste già tradotta nella lingua scelta, Google Translate non la ritocca
+        const hasOwnTranslation = skill.desc && typeof skill.desc === 'object' && skill.desc[getCurrentLang()];
+
+        if (nameEl) nameEl.innerText = name || '---';
+        if (descEl) {
+            descEl.innerText = desc || '---';
+            descEl.classList.toggle('notranslate', !!hasOwnTranslation || !desc);
+        }
+    });
 }
 
 function changeArenaBackground() {
@@ -1129,7 +1213,7 @@ function showMotion(type) {
    VIDEO EFFETTI (btm6): Attack / BB
    Nel JSON: "effects": { "atk": "percorso/Atk.mp4", "bb": "percorso/BBAtk.mp4" }
    ========================================================================== */
-const EFFECT_TYPES = ['atk', 'bb'];
+const EFFECT_TYPES = ['atk', 'bb', 'sbb', 'ubb'];
 let effectMode = false;
 let currentEffect = 'atk';
 
@@ -1137,8 +1221,19 @@ let currentEffect = 'atk';
 const EFFECT_BUTTON_IMAGES = {
     toggle: '../img/Button For Change/btm6.png',   // bottone "effects"
     atk: '../img/Button For Change/Atk.png',      // bottone verde "Attack"
-    bb: '../img/Button For Change/BBAtk.png'        // bottone blu "BB"
+    bb: '../img/Button For Change/BBAtk.png',     // bottone blu "BB"
+    sbb: '../img/Button For Change/SBBAtk.png',   // bottone "SBB" (dal 6★)
+    ubb: '../img/Button For Change/UBBAtk.png'    // bottone "UBB" (dal 7★ a Omni)
 };
+
+// Quali effetti può avere un'unità in base alla rarità
+//  1★–5★: Atk, BB  |  6★: Atk, BB, SBB  |  7★ / Omni / Dream: Atk, BB, SBB, UBB
+function getEffectTypesForRarity(rarity) {
+    const r = String(rarity || '').trim().toLowerCase();
+    if (r === '7' || r === 'omni' || r === 'dream') return ['atk', 'bb', 'sbb', 'ubb'];
+    if (r === '6') return ['atk', 'bb', 'sbb'];
+    return ['atk', 'bb'];
+}
 
 // Crea nella modale gli elementi degli effetti se l'HTML non li contiene già
 function ensureEffectsUI() {
@@ -1183,16 +1278,21 @@ function ensureEffectsUI() {
         choice.style.display = 'none';
         choice.innerHTML = `
             <button type="button" class="btn_effect_type" data-effect="atk" aria-label="Attack"><img src="${EFFECT_BUTTON_IMAGES.atk}" alt="Attack"></button>
-            <button type="button" class="btn_effect_type" data-effect="bb" aria-label="BB"><img src="${EFFECT_BUTTON_IMAGES.bb}" alt="BB"></button>`;
+            <button type="button" class="btn_effect_type" data-effect="bb" aria-label="BB"><img src="${EFFECT_BUTTON_IMAGES.bb}" alt="BB"></button>
+            <button type="button" class="btn_effect_type" data-effect="sbb" aria-label="SBB"><img src="${EFFECT_BUTTON_IMAGES.sbb}" alt="SBB"></button>
+            <button type="button" class="btn_effect_type" data-effect="ubb" aria-label="UBB"><img src="${EFFECT_BUTTON_IMAGES.ubb}" alt="UBB"></button>`;
         const motion = group.querySelector('.btn_motion');
         if (motion && motion.nextSibling) group.insertBefore(choice, motion.nextSibling);
         else group.appendChild(choice);
     }
 }
 
+// Effetti disponibili: quelli previsti dalla rarità E con un video già inserito nel JSON
+// (un campo vuoto "" = video non ancora pronto, il bottone non compare)
 function getUnitEffects(u) {
     const fx = (u && u.effects) || {};
-    return EFFECT_TYPES.filter(type => fx[type]);
+    const allowed = getEffectTypesForRarity(u && u.rarity);
+    return EFFECT_TYPES.filter(type => allowed.includes(type) && String(fx[type] || '').trim());
 }
 
 // Mostra btm6 solo se l'unità ha almeno un video effetto

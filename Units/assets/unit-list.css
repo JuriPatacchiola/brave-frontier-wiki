@@ -1884,3 +1884,25 @@ body.modal-open {
         /* su telefono ancora più in basso, quasi sul bordo */
     }
 }
+
+/* Alone del bottone selezionato per SBB e UBB */
+.btn_effect_type[data-effect="sbb"].active {
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 200, 60, 0.9));
+}
+
+.btn_effect_type[data-effect="ubb"].active {
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 70, 70, 0.9));
+}
+
+/* Con 4 bottoni (7★/Omni) su telefono stanno un po' più stretti */
+@media (max-width: 600px) {
+    .effect_choice {
+        gap: 4px;
+    }
+}
+
+/* Oggetti evolutivi (pietre) nella ricetta: senza sfondo scuro, con un leggero alone */
+.evo-recipe-item {
+    background: transparent;
+    filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.45));
+}
