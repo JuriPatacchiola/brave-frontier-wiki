@@ -855,11 +855,12 @@ function openModal(u, options = {}) {
 }
 
 /* ==========================================================================
-   SKILL (Leader Skill, BB, SBB, UBB) NELLA LINGUA SCELTA
+   SKILL (Leader Skill, Extra Skill, BB, SBB, UBB) NELLA LINGUA SCELTA
    Nel JSON:  "bb": { "name": { "en": "...", "it": "...", ... }, "desc": { "en": "...", ... } }
    Funziona anche con il vecchio formato  "bb": { "name": "...", "desc": "..." }
+   L'Extra Skill sta in "skills.extra" e compare solo se l'unità ce l'ha davvero
    ========================================================================== */
-const SKILL_TYPES = ['ls', 'bb', 'sbb', 'ubb'];
+const SKILL_TYPES = ['ls', 'extra', 'bb', 'sbb', 'ubb'];
 
 // Quali skill ha un'unità in base alla rarità (stessa regola dei bottoni effetti)
 function getSkillTypesForRarity(rarity) {
@@ -892,7 +893,7 @@ function renderSkills(u) {
         const descEl = document.getElementById(`${type}Desc`);
         const block = nameEl ? nameEl.closest('.skill_block') : null;
 
-        // SBB / UBB nascosti nelle unità che per rarità non li hanno
+        // SBB / UBB nascosti nelle unità che per rarità non li hanno, Extra Skill nascosta se manca
         if (block) block.style.display = allowed.includes(type) ? '' : 'none';
         if (!allowed.includes(type)) return;
 
