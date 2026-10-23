@@ -458,19 +458,19 @@ body.modal-open {
 #container_default img,
 #container_default video,
 #container_idle img,
-#container_idle video,
 #container_atk img,
 #container_atk video,
+#container_idle video,
 .unit_gif img {
     position: absolute;
     object-fit: contain;
     transform: translateZ(0);
     will-change: transform, top, left, width, height;
     backface-visibility: hidden;
-    top: -58%;
-    left: -76%;
-    width: 180%;
-    height: 180%;
+    width: 200.43%;
+    height: 200.88%;
+    left: -47.15%;
+    top: -51.82%;
 }
 
 .shadow {
@@ -557,6 +557,15 @@ body.modal-open {
     color: #d4af37;
     margin: 0;
     font-size: 1.8em;
+}
+
+/* PC e tablet: il nome va a capo ogni 3 parole (main.js) e lascia spazio alla croce di chiusura */
+@media (min-width: 601px) {
+    #modalName {
+        line-height: 1.15;
+        padding-right: 50px;
+        overflow-wrap: anywhere;
+    }
 }
 
 #modalId {
@@ -1126,14 +1135,14 @@ body.modal-open {
     #container_default img,
     #container_default video,
     #container_idle img,
-    #container_idle video,
     #container_atk img,
     #container_atk video,
+    #container_idle video,
     .unit_gif img {
-        top: -37%;
-        left: -74%;
-        width: 170%;
-        height: 170%;
+        width: 260.43%;
+        height: 260.88%;
+        left: -68.15%;
+        top: -79.82%;
     }
 
     /* Adattamento cerchio per Tablet */
@@ -1275,14 +1284,14 @@ body.modal-open {
     #container_default img,
     #container_default video,
     #container_idle img,
-    #container_idle video,
     #container_atk img,
     #container_atk video,
+    #container_idle video,
     .unit_gif img {
-        top: -40%;
-        left: -60%;
-        width: 160%;
-        height: 160%;
+        width: 170.43%;
+        height: 170.88%;
+        left: -31.15%;
+        top: -24.82%;
     }
 
     #video_default,
@@ -1577,7 +1586,17 @@ body.modal-open {
     z-index: 1;
     width: 76%;
     max-height: 62%;
-    overflow: hidden;
+    /* frase lunga: scorre solo il testo dentro la cornice */
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    pointer-events: auto;
+    cursor: pointer;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 175, 55, 0.8) transparent;
+    padding-right: 4px;
     margin: 0;
     color: #fff4c5;
     font-family: Georgia, 'Times New Roman', serif;
@@ -1906,3 +1925,122 @@ body.modal-open {
     background: transparent;
     filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.45));
 }
+
+/* Barra di scorrimento sottile e dorata per le frasi lunghe della Full Art (Chrome, Edge, Safari) */
+.fullart-quote-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.fullart-quote-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fullart-quote-text::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.8);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   COME OTTENERLA: tabella Tipo | Evento | Banner (in fondo alla modale)
+   ========================================================================== */
+.obtain_area h3 {
+    color: #d4af37;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.obtain-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.obtain-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.obtain-table th {
+    text-align: left;
+    color: #d4af37;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-bottom: 1px solid #333;
+}
+
+.obtain-table td {
+    padding: 10px;
+    border-bottom: 1px solid #222;
+    vertical-align: middle;
+    color: #eee;
+}
+
+.obtain-table tr:last-child td {
+    border-bottom: none;
+}
+
+.obtain-type {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* banner piccolo, affiancato al nome dell'evento */
+.obtain-banner-cell {
+    width: 260px;
+}
+
+.obtain-banner {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 6px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media (max-width: 600px) {
+    .obtain-table {
+        font-size: 0.8rem;
+    }
+
+    .obtain-table th,
+    .obtain-table td {
+        padding: 6px;
+    }
+
+    .obtain-banner-cell {
+        width: 130px;
+    }
+
+    .obtain-banner {
+        max-width: 130px;
+    }
+}
+
+/* ==========================================================================
+   ANIMAZIONI .WEBM NELLA MODALE (default / idle / atk)
+   I .webm usano le STESSE regole di posizione delle gif (sopra, in #container_... video),
+   quindi se il .webm ha la stessa tela della gif (es. 1197x750) si vede identico.
+   --webm-scale serve solo per un .webm con tela diversa (1 = come le gif, 0.5 = metà)
+   --webm-y sposta su/giù (valori negativi = più in alto)
+   ========================================================================== */
+.unit_gif {
+    --webm-scale: 1;
+    --webm-y: 0%;
+}
+
+#container_default video.is-webm,
+#container_atk video.is-webm {
+    transform: translateY(var(--webm-y)) scale(var(--webm-scale));
+    transform-origin: 50% 50%;
+}
+
+/* ==========================================================================
+   SOLO VIDEO IDLE: regole separate dalle altre animazioni
+   (tolto dagli elenchi "#container_... img/video" sopra, così lo regoli da solo)
+   Valori di partenza = quelli che usavi per tutte; cambiali a mano
+ 

@@ -386,6 +386,32 @@ function getActiveUnitName(u) {
     return u.name;
 }
 
+// Nome nella modale: su PC e tablet va a capo ogni 3 parole, così non finisce sotto la croce di chiusura.
+// Su telefono (fino a 600px) resta su una riga come prima.
+const MODAL_NAME_WORDS_PER_LINE = 3;
+
+function setModalName(el, name) {
+    const fullName = String(name || '').trim();
+    el.dataset.fullName = fullName;
+    el.title = fullName;
+    if (window.innerWidth <= 600) {
+        el.innerText = fullName;
+        return;
+    }
+    const words = fullName.split(/\s+/).filter(Boolean);
+    const lines = [];
+    for (let i = 0; i < words.length; i += MODAL_NAME_WORDS_PER_LINE) {
+        lines.push(words.slice(i, i + MODAL_NAME_WORDS_PER_LINE).join(' '));
+    }
+    el.innerText = lines.join('\n');
+}
+
+// Se la finestra passa da telefono a PC/tablet (o viceversa), il nome si risistema
+window.addEventListener('resize', () => {
+    const el = document.getElementById('modalName');
+    if (el && el.dataset.fullName !== undefined) setModalName(el, el.dataset.fullName);
+});
+
 function formatEvolutionNumber(value) {
     return Number(value || 0).toLocaleString('it-IT');
 }
@@ -808,7 +834,7 @@ function openModal(u, options = {}) {
 
     const modalNameEl = document.getElementById('modalName');
     if (modalNameEl) {
-        modalNameEl.innerText = getActiveUnitName(u);
+        setModalName(modalNameEl, getActiveUnitName(u));
         modalNameEl.classList.add('notranslate');
     }
     document.getElementById('modalId').innerText = `ID: #${u.realId}`;
@@ -824,6 +850,7 @@ function openModal(u, options = {}) {
     document.getElementById('unitLore').innerText = localizedTexts.lore || t('unit.loreMissing');
 
     renderSkills(u);
+    renderHowToObtain(u);
 
     renderEvolutionRecipes(u);
 
@@ -909,6 +936,62 @@ function renderSkills(u) {
             descEl.classList.toggle('notranslate', !!hasOwnTranslation || !desc);
         }
     });
+}
+
+/* ==========================================================================
+   COME OTTENERLA (in fondo alla modale, dopo le evoluzioni)
+   Tabella: Tipo | Evento | Banner. Nel JSON:
+   "howToObtain": [
+     { "type": "Vortex",
+       "event": { "en": "...", "it": "...", ... },   (oppure una stringa semplice)
+       "banner": "../img/Bunner Vortex/sp_quest_banner_801006.png" }
+   ]
+   Se l'unità non ha "howToObtain" la sezione resta nascosta
+   ========================================================================== */
+const OBTAIN_TEXTS = {
+    title: { it: 'Come ottenerla', en: 'How to obtain', es: 'Cómo obtenerla', fr: "Comment l'obtenir", 'zh-CN': '获取方式', ja: '入手方法' },
+    type: { it: 'Tipo', en: 'Type', es: 'Tipo', fr: 'Type', 'zh-CN': '类型', ja: '種類' },
+    event: { it: 'Evento', en: 'Event', es: 'Evento', fr: 'Événement', 'zh-CN': '活动', ja: 'イベント' },
+    banner: { it: 'Banner', en: 'Banner', es: 'Banner', fr: 'Bannière', 'zh-CN': '横幅', ja: 'バナー' }
+};
+
+function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function renderHowToObtain(u) {
+    const area = document.getElementById('obtainArea');
+    const body = document.getElementById('obtainBody');
+    if (!area || !body) return;
+
+    // intestazioni nella lingua scelta
+    const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = getLocalizedText(OBTAIN_TEXTS[key]); };
+    setText('obtainTitle', 'title');
+    setText('obtainHeadType', 'type');
+    setText('obtainHeadEvent', 'event');
+    setText('obtainHeadBanner', 'banner');
+
+    const rows = Array.isArray(u && u.howToObtain) ? u.howToObtain.filter(Boolean) : [];
+    if (rows.length === 0) {
+        area.style.display = 'none';
+        body.innerHTML = '';
+        return;
+    }
+
+    body.innerHTML = rows.map(r => {
+        const type = escapeHtml(getLocalizedText(r.type) || '—');
+        const event = escapeHtml(getLocalizedText(r.event) || '—');
+        const banner = String(r.banner || '').trim();
+        const bannerHtml = banner
+            ? `<img class="obtain-banner" src="${escapeHtml(banner)}" alt="${event}" loading="lazy" onerror="this.replaceWith(document.createTextNode('—'))">`
+            : '—';
+        return `<tr>
+            <td class="obtain-type notranslate">${type}</td>
+            <td class="obtain-event notranslate">${event}</td>
+            <td class="obtain-banner-cell">${bannerHtml}</td>
+        </tr>`;
+    }).join('');
+    area.style.display = '';
 }
 
 function changeArenaBackground() {
@@ -1051,6 +1134,7 @@ function renderFullArtQuote() {
         return;
     }
     text.textContent = quote;
+    text.scrollTop = 0; // ogni nuova frase riparte dall'inizio
     panel.classList.add('is-visible');
 }
 
@@ -1176,13 +1260,16 @@ function showMotion(type) {
 
             const src = currentUnitOpen.animations?.[t] || "";
 
-            if (src.toLowerCase().endsWith('.mp4')) {
+            // video (mp4, webm, mov, m4v) -> <video>; gif/webp/png -> <img>
+            if (isVideoFile(src)) {
                 if (videoTag) {
+                    // i .webm hanno una dimensione propria regolabile dal CSS (--webm-scale)
+                    videoTag.classList.toggle('is-webm', /\.webm(\?.*)?$/i.test(src));
                     videoTag.style.display = 'block';
                     videoTag.muted = true;
                     videoTag.playsInline = true;
                     videoTag.loop = true;
-                    if (videoTag.src !== src) {
+                    if (videoTag.getAttribute('src') !== src) {
                         videoTag.src = src;
                         videoTag.load();
                     }
@@ -1542,6 +1629,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); cycleFullArtQuote(); }
         });
         fullArtImage.tabIndex = 0;
+    }
+
+    // Frase lunga: si scorre dentro la cornice. Un tocco/click sulla frase passa alla frase successiva,
+    // e lo scorrimento della frase non fa cambiare immagine (swipe) per sbaglio
+    const quoteText = document.getElementById('fullArtQuoteText');
+    if (quoteText) {
+        quoteText.addEventListener('click', cycleFullArtQuote);
+        quoteText.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true });
+        quoteText.addEventListener('touchend', (e) => e.stopPropagation(), { passive: true });
     }
 });
 
