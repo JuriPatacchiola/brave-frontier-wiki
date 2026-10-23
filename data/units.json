@@ -2539,9 +2539,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-default.webm",
-      "idle": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-idle.webm",
-      "atk": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-atk.webm"
+      "default": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-default.gif",
+      "idle": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-idle.gif",
+      "atk": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-atk.gif"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/Atk.mp4",
@@ -2807,9 +2807,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-default.webm",
-      "idle": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-idle.webm",
-      "atk": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-atk.webm"
+      "default": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-default.gif",
+      "idle": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-idle.gif",
+      "atk": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -3075,9 +3075,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-default.webm",
-      "idle": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-idle.webm",
-      "atk": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-atk.webm"
+      "default": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-default.gif",
+      "idle": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-idle.gif",
+      "atk": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -3343,9 +3343,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-default.webm",
-      "idle": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-idle.webm",
-      "atk": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-atk.webm"
+      "default": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-default.gif",
+      "idle": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-idle.gif",
+      "atk": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -3611,9 +3611,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-default.webm",
-      "idle": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-idle.webm",
-      "atk": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-atk.webm"
+      "default": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-default.gif",
+      "idle": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-idle.gif",
+      "atk": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-atk.gif"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Eze/Warrior Eze/Atk.mp4",
@@ -3879,9 +3879,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-default.webm",
-      "idle": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-idle.webm",
-      "atk": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-atk.webm"
+      "default": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-default.gif",
+      "idle": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-idle.gif",
+      "atk": "../video/six heros/Eze/Thunder Eze/Thunder-Eze-atk.gif"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Eze/Thunder Eze/Atk.mp4",
@@ -4147,9 +4147,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-default.webm",
-      "idle": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-idle.webm",
-      "atk": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-atk.webm"
+      "default": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-default.gif",
+      "idle": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-idle.gif",
+      "atk": "../video/six heros/Eze/Thunder King Eze/Thunder-King-Eze-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -4415,9 +4415,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-default.webm",
-      "idle": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-idle.webm",
-      "atk": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-atk.webm"
+      "default": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-default.gif",
+      "idle": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-idle.gif",
+      "atk": "../video/six heros/Eze/Thunder God Eze/Thunder-God-Eze-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -4683,9 +4683,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Atro/Squire Atro/Squire-Atro-default.webm",
-      "idle": "../video/six heros/Atro/Squire Atro/Squire-Atro-idle.webm",
-      "atk": "../video/six heros/Atro/Squire Atro/Squire-Atro-atk.webm"
+      "default": "../video/six heros/Atro/Squire Atro/Squire-Atro-default.gif",
+      "idle": "../video/six heros/Atro/Squire Atro/Squire-Atro-idle.gif",
+      "atk": "../video/six heros/Atro/Squire Atro/Squire-Atro-atk.gif"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Atro/Squire Atro/Atk.mp4",
@@ -4969,9 +4969,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Atro/Knight Atro/Knight-Atro-default.webm",
-      "idle": "../video/six heros/Atro/Knight Atro/Knight-Atro-idle.webm",
-      "atk": "../video/six heros/Atro/Knight Atro/Knight-Atro-atk.webm"
+      "default": "../video/six heros/Atro/Knight Atro/Knight-Atro-default.gif",
+      "idle": "../video/six heros/Atro/Knight Atro/Knight-Atro-idle.gif",
+      "atk": "../video/six heros/Atro/Knight Atro/Knight-Atro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -5255,9 +5255,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-default.webm",
-      "idle": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-idle.webm",
-      "atk": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-atk.webm"
+      "default": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-default.gif",
+      "idle": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-idle.gif",
+      "atk": "../video/six heros/Atro/Holy Knight Atro/Holy-Knight-Atro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -5541,9 +5541,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Atro/God Atro/God-Atro-Atro-default.webm",
-      "idle": "../video/six heros/Atro/God Atro/God-Atro-Atro-idle.webm",
-      "atk": "../video/six heros/Atro/God Atro/God-Atro-Atro-atk.webm"
+      "default": "../video/six heros/Atro/God Atro/God-Atro-Atro-default.gif",
+      "idle": "../video/six heros/Atro/God Atro/God-Atro-Atro-idle.gif",
+      "atk": "../video/six heros/Atro/God Atro/God-Atro-Atro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -5827,9 +5827,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Magress/Iron Magress/Iron-Magress-default.webm",
-      "idle": "../video/six heros/Magress/Iron Magress/Iron-Magress-idle.webm",
-      "atk": "../video/six heros/Magress/Iron Magress/Iron-Magress-atk.webm"
+      "default": "../video/six heros/Magress/Iron Magress/Iron-Magress-default.gif",
+      "idle": "../video/six heros/Magress/Iron Magress/Iron-Magress-idle.gif",
+      "atk": "../video/six heros/Magress/Iron Magress/Iron-Magress-atk.gif"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Magress/Iron Magress/Atk.mp4",
@@ -6098,9 +6098,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-default.webm",
-      "idle": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-idle.webm",
-      "atk": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-atk.webm"
+      "default": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-default.gif",
+      "idle": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-idle.gif",
+      "atk": "../video/six heros/Magress/Heavy Magress/Heavy-Magress-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -6369,9 +6369,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Magress/Black Magress/Black-Magress-default.webm",
-      "idle": "../video/six heros/Magress/Black Magress/Black-Magress-idle.webm",
-      "atk": "../video/six heros/Magress/Black Magress/Black-Magress-atk.webm"
+      "default": "../video/six heros/Magress/Black Magress/Black-Magress-default.gif",
+      "idle": "../video/six heros/Magress/Black Magress/Black-Magress-idle.gif",
+      "atk": "../video/six heros/Magress/Black Magress/Black-Magress-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -6640,9 +6640,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Magress/Death Magress/Death-Magress-default.webm",
-      "idle": "../video/six heros/Magress/Death Magress/Death-Magress-idle.webm",
-      "atk": "../video/six heros/Magress/Death Magress/Death-Magress-atk.webm"
+      "default": "../video/six heros/Magress/Death Magress/Death-Magress-default.gif",
+      "idle": "../video/six heros/Magress/Death Magress/Death-Magress-idle.gif",
+      "atk": "../video/six heros/Magress/Death Magress/Death-Magress-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -6911,9 +6911,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-default.webm",
-      "idle": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-idle.webm",
-      "atk": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-atk.webm"
+      "default": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-default.gif",
+      "idle": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-idle.gif",
+      "atk": "../video/Enemy boss basic/Zegar/Beast Zegar/Beast-Zegar-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -7134,9 +7134,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-default.webm",
-      "idle": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-idle.webm",
-      "atk": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-atk.webm"
+      "default": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-default.gif",
+      "idle": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-idle.gif",
+      "atk": "../video/Enemy boss basic/Zegar/Rage Beast Zegar/Rage-Beast-Zegar-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -7357,9 +7357,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-default.webm",
-      "idle": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-idle.webm",
-      "atk": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-atk.webm"
+      "default": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-default.gif",
+      "idle": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-idle.gif",
+      "atk": "../video/Enemy boss basic/Zegar/Fire Beast Zegar/Fire-Beast-Zegar-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -7580,9 +7580,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zephu/Zephu/Zephu-default.webm",
-      "idle": "../video/Enemy boss basic/Zephu/Zephu/Zephu-idle.webm",
-      "atk": "../video/Enemy boss basic/Zephu/Zephu/Zephu-atk.webm"
+      "default": "../video/Enemy boss basic/Zephu/Zephu/Zephu-default.gif",
+      "idle": "../video/Enemy boss basic/Zephu/Zephu/Zephu-idle.gif",
+      "atk": "../video/Enemy boss basic/Zephu/Zephu/Zephu-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -7803,9 +7803,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-default.webm",
-      "idle": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-idle.webm",
-      "atk": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-atk.webm"
+      "default": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-default.gif",
+      "idle": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-idle.gif",
+      "atk": "../video/Enemy boss basic/Zephu/Knight Zephu/Knight-Zephu-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -8026,9 +8026,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-default.webm",
-      "idle": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-idle.webm",
-      "atk": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-atk.webm"
+      "default": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-default.gif",
+      "idle": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-idle.gif",
+      "atk": "../video/Enemy boss basic/Zephu/Dragoon Zephu/Dragoon-Zephu-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -8249,9 +8249,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-default.webm",
-      "idle": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-idle.webm",
-      "atk": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-atk.webm"
+      "default": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-default.gif",
+      "idle": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-idle.gif",
+      "atk": "../video/Enemy boss basic/Lario/Archer Lario/Archer-Lario-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -8472,9 +8472,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-default.webm",
-      "idle": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-idle.webm",
-      "atk": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-atk.webm"
+      "default": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-default.gif",
+      "idle": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-idle.gif",
+      "atk": "../video/Enemy boss basic/Lario/Marksman Lario/Marksman-Lario-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -8695,9 +8695,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-default.webm",
-      "idle": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-idle.webm",
-      "atk": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-atk.webm"
+      "default": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-default.gif",
+      "idle": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-idle.gif",
+      "atk": "../video/Enemy boss basic/Lario/Hawkeye Lario/Hawkeye-Lario-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -8918,9 +8918,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-default.webm",
-      "idle": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-idle.webm",
-      "atk": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-atk.webm"
+      "default": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-default.gif",
+      "idle": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-idle.gif",
+      "atk": "../video/Enemy boss basic/Weiss/Advisor Weiss/Advisor-Weiss-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -9141,9 +9141,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-default.webm",
-      "idle": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-idle.webm",
-      "atk": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-atk.webm"
+      "default": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-default.gif",
+      "idle": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-idle.gif",
+      "atk": "../video/Enemy boss basic/Weiss/Strategist Weiss/Strategist-Weiss-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -9364,9 +9364,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-default.webm",
-      "idle": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-idle.webm",
-      "atk": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-atk.webm"
+      "default": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-default.gif",
+      "idle": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-idle.gif",
+      "atk": "../video/Enemy boss basic/Weiss/Commander Weiss/Commander-Weiss-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -9588,9 +9588,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Luna/Luna/Luna-default.webm",
-      "idle": "../video/Enemy boss basic/Luna/Luna/Luna-idle.webm",
-      "atk": "../video/Enemy boss basic/Luna/Luna/Luna-atk.webm"
+      "default": "../video/Enemy boss basic/Luna/Luna/Luna-default.gif",
+      "idle": "../video/Enemy boss basic/Luna/Luna/Luna-idle.gif",
+      "atk": "../video/Enemy boss basic/Luna/Luna/Luna-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -9811,9 +9811,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-default.webm",
-      "idle": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-idle.webm",
-      "atk": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-atk.webm"
+      "default": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-default.gif",
+      "idle": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-idle.gif",
+      "atk": "../video/Enemy boss basic/Luna/Sunshine Luna/Sunshine-Luna-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -10034,9 +10034,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-default.webm",
-      "idle": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-idle.webm",
-      "atk": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-atk.webm"
+      "default": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-default.gif",
+      "idle": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-idle.gif",
+      "atk": "../video/Enemy boss basic/Luna/Holy Queen Luna/Holy-Queen-Luna-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -10257,9 +10257,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Mifune/Mifune/Mifune-default.webm",
-      "idle": "../video/Enemy boss basic/Mifune/Mifune/Mifune-idle.webm",
-      "atk": "../video/Enemy boss basic/Mifune/Mifune/Mifune-atk.webm"
+      "default": "../video/Enemy boss basic/Mifune/Mifune/Mifune-default.gif",
+      "idle": "../video/Enemy boss basic/Mifune/Mifune/Mifune-idle.gif",
+      "atk": "../video/Enemy boss basic/Mifune/Mifune/Mifune-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -10506,9 +10506,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-default.webm",
-      "idle": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-idle.webm",
-      "atk": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-atk.webm"
+      "default": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-default.gif",
+      "idle": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-idle.gif",
+      "atk": "../video/Enemy boss basic/Mifune/Samurai Mifune/Samurai-Mifune-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -10755,9 +10755,9 @@
       }
     },
     "animations": {
-      "default": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-default.webm",
-      "idle": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-idle.webm",
-      "atk": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-atk.webm"
+      "default": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-default.gif",
+      "idle": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-idle.gif",
+      "atk": "../video/Enemy boss basic/Mifune/God Blade Mifune/God-Blade-Mifune-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11004,9 +11004,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Burny/Burny/Burny-default.webm",
-      "idle": "../video/Base enemy/Burny/Burny/Burny-idle.webm",
-      "atk": "../video/Base enemy/Burny/Burny/Burny-atk.webm"
+      "default": "../video/Base enemy/Burny/Burny/Burny-default.gif",
+      "idle": "../video/Base enemy/Burny/Burny/Burny-idle.gif",
+      "atk": "../video/Base enemy/Burny/Burny/Burny-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11188,9 +11188,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Burny/King Burny/King-Burny-default.webm",
-      "idle": "../video/Base enemy/Burny/King Burny/King-Burny-idle.webm",
-      "atk": "../video/Base enemy/Burny/King Burny/King-Burny-atk.webm"
+      "default": "../video/Base enemy/Burny/King Burny/King-Burny-default.gif",
+      "idle": "../video/Base enemy/Burny/King Burny/King-Burny-idle.gif",
+      "atk": "../video/Base enemy/Burny/King Burny/King-Burny-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11372,9 +11372,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Squirty/Squirty/Squirty-default.webm",
-      "idle": "../video/Base enemy/Squirty/Squirty/Squirty-idle.webm",
-      "atk": "../video/Base enemy/Squirty/Squirty/Squirty-atk.webm"
+      "default": "../video/Base enemy/Squirty/Squirty/Squirty-default.gif",
+      "idle": "../video/Base enemy/Squirty/Squirty/Squirty-idle.gif",
+      "atk": "../video/Base enemy/Squirty/Squirty/Squirty-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11556,9 +11556,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Squirty/King Squirty/King-Squirty-default.webm",
-      "idle": "../video/Base enemy/Squirty/King Squirty/King-Squirty-idle.webm",
-      "atk": "../video/Base enemy/Squirty/King Squirty/King-Squirty-atk.webm"
+      "default": "../video/Base enemy/Squirty/King Squirty/King-Squirty-default.gif",
+      "idle": "../video/Base enemy/Squirty/King Squirty/King-Squirty-idle.gif",
+      "atk": "../video/Base enemy/Squirty/King Squirty/King-Squirty-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11740,9 +11740,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mossy/Mossy/Mossy-default.webm",
-      "idle": "../video/Base enemy/Mossy/Mossy/Mossy-idle.webm",
-      "atk": "../video/Base enemy/Mossy/Mossy/Mossy-atk.webm"
+      "default": "../video/Base enemy/Mossy/Mossy/Mossy-default.gif",
+      "idle": "../video/Base enemy/Mossy/Mossy/Mossy-idle.gif",
+      "atk": "../video/Base enemy/Mossy/Mossy/Mossy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -11924,9 +11924,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mossy/King Mossy/King-Mossy-default.webm",
-      "idle": "../video/Base enemy/Mossy/King Mossy/King-Mossy-idle.webm",
-      "atk": "../video/Base enemy/Mossy/King Mossy/King-Mossy-atk.webm"
+      "default": "../video/Base enemy/Mossy/King Mossy/King-Mossy-default.gif",
+      "idle": "../video/Base enemy/Mossy/King Mossy/King-Mossy-idle.gif",
+      "atk": "../video/Base enemy/Mossy/King Mossy/King-Mossy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -12108,9 +12108,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Sparky/Sparky/Sparky-default.webm",
-      "idle": "../video/Base enemy/Sparky/Sparky/Sparky-idle.webm",
-      "atk": "../video/Base enemy/Sparky/Sparky/Sparky-atk.webm"
+      "default": "../video/Base enemy/Sparky/Sparky/Sparky-default.gif",
+      "idle": "../video/Base enemy/Sparky/Sparky/Sparky-idle.gif",
+      "atk": "../video/Base enemy/Sparky/Sparky/Sparky-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -12292,9 +12292,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Sparky/King Sparky/King-Sparky-default.webm",
-      "idle": "../video/Base enemy/Sparky/King Sparky/King-Sparky-idle.webm",
-      "atk": "../video/Base enemy/Sparky/King Sparky/King-Sparky-atk.webm"
+      "default": "../video/Base enemy/Sparky/King Sparky/King-Sparky-default.gif",
+      "idle": "../video/Base enemy/Sparky/King Sparky/King-Sparky-idle.gif",
+      "atk": "../video/Base enemy/Sparky/King Sparky/King-Sparky-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -12476,9 +12476,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Glowy/Glowy/Glowy-default.webm",
-      "idle": "../video/Base enemy/Glowy/Glowy/Glowy-idle.webm",
-      "atk": "../video/Base enemy/Glowy/Glowy/Glowy-atk.webm"
+      "default": "../video/Base enemy/Glowy/Glowy/Glowy-default.gif",
+      "idle": "../video/Base enemy/Glowy/Glowy/Glowy-idle.gif",
+      "atk": "../video/Base enemy/Glowy/Glowy/Glowy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -12660,9 +12660,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Glowy/King Glowy/King-Glowy-default.webm",
-      "idle": "../video/Base enemy/Glowy/King Glowy/King-Glowy-idle.webm",
-      "atk": "../video/Base enemy/Glowy/King Glowy/King-Glowy-atk.webm"
+      "default": "../video/Base enemy/Glowy/King Glowy/King-Glowy-default.gif",
+      "idle": "../video/Base enemy/Glowy/King Glowy/King-Glowy-idle.gif",
+      "atk": "../video/Base enemy/Glowy/King Glowy/King-Glowy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -12844,9 +12844,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Gloomy/Gloomy/Gloomy-default.webm",
-      "idle": "../video/Base enemy/Gloomy/Gloomy/Gloomy-idle.webm",
-      "atk": "../video/Base enemy/Gloomy/Gloomy/Gloomy-atk.webm"
+      "default": "../video/Base enemy/Gloomy/Gloomy/Gloomy-default.gif",
+      "idle": "../video/Base enemy/Gloomy/Gloomy/Gloomy-idle.gif",
+      "atk": "../video/Base enemy/Gloomy/Gloomy/Gloomy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13029,9 +13029,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-default.webm",
-      "idle": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-idle.webm",
-      "atk": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-atk.webm"
+      "default": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-default.gif",
+      "idle": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-idle.gif",
+      "atk": "../video/Base enemy/Gloomy/King Gloomy/King-Gloomy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13213,9 +13213,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-default.webm",
-      "idle": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-idle.webm",
-      "atk": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-atk.webm"
+      "default": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-default.gif",
+      "idle": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-idle.gif",
+      "atk": "../video/Base enemy/Liza/Witch Liza/Witch-Liza-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13395,9 +13395,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-default.webm",
-      "idle": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-idle.webm",
-      "atk": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-atk.webm"
+      "default": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-default.gif",
+      "idle": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-idle.gif",
+      "atk": "../video/Base enemy/Liza/Warlock Liza/Warlock-Liza-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13577,9 +13577,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-default.webm",
-      "idle": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-idle.webm",
-      "atk": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-atk.webm"
+      "default": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-default.gif",
+      "idle": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-idle.gif",
+      "atk": "../video/Base enemy/Merith/Priest Merith/Priest-Merith-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13759,9 +13759,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-default.webm",
-      "idle": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-idle.webm",
-      "atk": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-atk.webm"
+      "default": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-default.gif",
+      "idle": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-idle.gif",
+      "atk": "../video/Base enemy/Merith/Healer Merith/Healer-Merith-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -13941,9 +13941,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-default.webm",
-      "idle": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-idle.webm",
-      "atk": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-atk.webm"
+      "default": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-default.gif",
+      "idle": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-idle.gif",
+      "atk": "../video/Base enemy/Claris/Geomancer Claris/Geomancer-Claris-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -14123,9 +14123,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-default.webm",
-      "idle": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-idle.webm",
-      "atk": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-atk.webm"
+      "default": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-default.gif",
+      "idle": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-idle.gif",
+      "atk": "../video/Base enemy/Claris/Time Mage Claris/Time-Mage-Claris-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -14305,9 +14305,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/May/Dancer May/Dancer-May-default.webm",
-      "idle": "../video/Base enemy/May/Dancer May/Dancer-May-idle.webm",
-      "atk": "../video/Base enemy/May/Dancer May/Dancer-May-atk.webm"
+      "default": "../video/Base enemy/May/Dancer May/Dancer-May-default.gif",
+      "idle": "../video/Base enemy/May/Dancer May/Dancer-May-idle.gif",
+      "atk": "../video/Base enemy/May/Dancer May/Dancer-May-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -14487,9 +14487,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/May/High Dancer May/High-Dancer-May-default.webm",
-      "idle": "../video/Base enemy/May/High Dancer May/High-Dancer-May-idle.webm",
-      "atk": "../video/Base enemy/May/High Dancer May/High-Dancer-May-atk.webm"
+      "default": "../video/Base enemy/May/High Dancer May/High-Dancer-May-default.gif",
+      "idle": "../video/Base enemy/May/High Dancer May/High-Dancer-May-idle.gif",
+      "atk": "../video/Base enemy/May/High Dancer May/High-Dancer-May-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -14669,9 +14669,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-default.webm",
-      "idle": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-idle.webm",
-      "atk": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-atk.webm"
+      "default": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-default.gif",
+      "idle": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-idle.gif",
+      "atk": "../video/Base enemy/Mimir/Sage Mimir/Sage-Mimir-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -14852,9 +14852,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-default.webm",
-      "idle": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-idle.webm",
-      "atk": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-atk.webm"
+      "default": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-default.gif",
+      "idle": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-idle.gif",
+      "atk": "../video/Base enemy/Mimir/Light Lord Mimir/Light-Lord-Mimir-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15034,9 +15034,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-default.webm",
-      "idle": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-idle.webm",
-      "atk": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-atk.webm"
+      "default": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-default.gif",
+      "idle": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-idle.gif",
+      "atk": "../video/Base enemy/Lily/Sorceress Lily/Sorceress-Lily-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15216,9 +15216,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-default.webm",
-      "idle": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-idle.webm",
-      "atk": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-atk.webm"
+      "default": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-default.gif",
+      "idle": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-idle.gif",
+      "atk": "../video/Base enemy/Lily/Magician Lily/Magician-Lily-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15398,9 +15398,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Goblin/Goblin/Goblin-default.webm",
-      "idle": "../video/Base enemy/Goblin/Goblin/Goblin-idle.webm",
-      "atk": "../video/Base enemy/Goblin/Goblin/Goblin-atk.webm"
+      "default": "../video/Base enemy/Goblin/Goblin/Goblin-default.gif",
+      "idle": "../video/Base enemy/Goblin/Goblin/Goblin-idle.gif",
+      "atk": "../video/Base enemy/Goblin/Goblin/Goblin-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15582,9 +15582,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Goblin/Redcap/Redcap-default.webm",
-      "idle": "../video/Base enemy/Goblin/Redcap/Redcap-idle.webm",
-      "atk": "../video/Base enemy/Goblin/Redcap/Redcap-atk.webm"
+      "default": "../video/Base enemy/Goblin/Redcap/Redcap-default.gif",
+      "idle": "../video/Base enemy/Goblin/Redcap/Redcap-idle.gif",
+      "atk": "../video/Base enemy/Goblin/Redcap/Redcap-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15766,9 +15766,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Merman/Merman/Merman-default.webm",
-      "idle": "../video/Base enemy/Merman/Merman/Merman-idle.webm",
-      "atk": "../video/Base enemy/Merman/Merman/Merman-atk.webm"
+      "default": "../video/Base enemy/Merman/Merman/Merman-default.gif",
+      "idle": "../video/Base enemy/Merman/Merman/Merman-idle.gif",
+      "atk": "../video/Base enemy/Merman/Merman/Merman-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -15950,9 +15950,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Merman/Sahuagin/Sahuagin-default.webm",
-      "idle": "../video/Base enemy/Merman/Sahuagin/Sahuagin-idle.webm",
-      "atk": "../video/Base enemy/Merman/Sahuagin/Sahuagin-atk.webm"
+      "default": "../video/Base enemy/Merman/Sahuagin/Sahuagin-default.gif",
+      "idle": "../video/Base enemy/Merman/Sahuagin/Sahuagin-idle.gif",
+      "atk": "../video/Base enemy/Merman/Sahuagin/Sahuagin-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -16134,9 +16134,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mandragora/Mandragora/Mandragora-default.webm",
-      "idle": "../video/Base enemy/Mandragora/Mandragora/Mandragora-idle.webm",
-      "atk": "../video/Base enemy/Mandragora/Mandragora/Mandragora-atk.webm"
+      "default": "../video/Base enemy/Mandragora/Mandragora/Mandragora-default.gif",
+      "idle": "../video/Base enemy/Mandragora/Mandragora/Mandragora-idle.gif",
+      "atk": "../video/Base enemy/Mandragora/Mandragora/Mandragora-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -16318,9 +16318,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Mandragora/Polevik/Polevik-default.webm",
-      "idle": "../video/Base enemy/Mandragora/Polevik/Polevik-idle.webm",
-      "atk": "../video/Base enemy/Mandragora/Polevik/Polevik-atk.webm"
+      "default": "../video/Base enemy/Mandragora/Polevik/Polevik-default.gif",
+      "idle": "../video/Base enemy/Mandragora/Polevik/Polevik-idle.gif",
+      "atk": "../video/Base enemy/Mandragora/Polevik/Polevik-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -16502,9 +16502,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Harpy/Harpy/Harpy-default.webm",
-      "idle": "../video/Base enemy/Harpy/Harpy/Harpy-idle.webm",
-      "atk": "../video/Base enemy/Harpy/Harpy/Harpy-atk.webm"
+      "default": "../video/Base enemy/Harpy/Harpy/Harpy-default.gif",
+      "idle": "../video/Base enemy/Harpy/Harpy/Harpy-idle.gif",
+      "atk": "../video/Base enemy/Harpy/Harpy/Harpy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -16686,9 +16686,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Harpy/Aero/Aero-default.webm",
-      "idle": "../video/Base enemy/Harpy/Aero/Aero-idle.webm",
-      "atk": "../video/Base enemy/Harpy/Aero/Aero-atk.webm"
+      "default": "../video/Base enemy/Harpy/Aero/Aero-default.gif",
+      "idle": "../video/Base enemy/Harpy/Aero/Aero-idle.gif",
+      "atk": "../video/Base enemy/Harpy/Aero/Aero-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -16870,9 +16870,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Angel/Angel/Angel-default.webm",
-      "idle": "../video/Base enemy/Angel/Angel/Angel-idle.webm",
-      "atk": "../video/Base enemy/Angel/Angel/Angel-atk.webm"
+      "default": "../video/Base enemy/Angel/Angel/Angel-default.gif",
+      "idle": "../video/Base enemy/Angel/Angel/Angel-idle.gif",
+      "atk": "../video/Base enemy/Angel/Angel/Angel-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17054,9 +17054,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Angel/Archangel/Archangel-default.webm",
-      "idle": "../video/Base enemy/Angel/Archangel/Archangel-idle.webm",
-      "atk": "../video/Base enemy/Angel/Archangel/Archangel-atk.webm"
+      "default": "../video/Base enemy/Angel/Archangel/Archangel-default.gif",
+      "idle": "../video/Base enemy/Angel/Archangel/Archangel-idle.gif",
+      "atk": "../video/Base enemy/Angel/Archangel/Archangel-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17238,9 +17238,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Skeleton/Skeleton/Skeleton-default.webm",
-      "idle": "../video/Base enemy/Skeleton/Skeleton/Skeleton-idle.webm",
-      "atk": "../video/Base enemy/Skeleton/Skeleton/Skeleton-atk.webm"
+      "default": "../video/Base enemy/Skeleton/Skeleton/Skeleton-default.gif",
+      "idle": "../video/Base enemy/Skeleton/Skeleton/Skeleton-idle.gif",
+      "atk": "../video/Base enemy/Skeleton/Skeleton/Skeleton-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17422,9 +17422,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-default.webm",
-      "idle": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-idle.webm",
-      "atk": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-atk.webm"
+      "default": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-default.gif",
+      "idle": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-idle.gif",
+      "atk": "../video/Base enemy/Skeleton/Skeleton King/Skeleton-King-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17606,9 +17606,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-default.webm",
-      "idle": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-idle.webm",
-      "atk": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-atk.webm"
+      "default": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-default.gif",
+      "idle": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-idle.gif",
+      "atk": "../video/Base enemy/Leon/Thief Leon/Thief-Leon-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17796,9 +17796,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-default.webm",
-      "idle": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-idle.webm",
-      "atk": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-atk.webm"
+      "default": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-default.gif",
+      "idle": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-idle.gif",
+      "atk": "../video/Base enemy/Leon/Head Thief Leon/Head-Thief-Leon-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -17986,9 +17986,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-default.webm",
-      "idle": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-idle.webm",
-      "atk": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-atk.webm"
+      "default": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-default.gif",
+      "idle": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-idle.gif",
+      "atk": "../video/Base enemy/Verica/Pirate Verica/Pirate-Verica-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -18176,9 +18176,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-default.webm",
-      "idle": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-idle.webm",
-      "atk": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-atk.webm"
+      "default": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-default.gif",
+      "idle": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-idle.gif",
+      "atk": "../video/Base enemy/Verica/Plunderer Verica/Plunderer-Verica-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -18366,9 +18366,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-default.webm",
-      "idle": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-idle.webm",
-      "atk": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-atk.webm"
+      "default": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-default.gif",
+      "idle": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-idle.gif",
+      "atk": "../video/Base enemy/Zaza/Bandit Zaza/Bandit-Zaza-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -18556,9 +18556,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-default.webm",
-      "idle": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-idle.webm",
-      "atk": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-atk.webm"
+      "default": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-default.gif",
+      "idle": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-idle.gif",
+      "atk": "../video/Base enemy/Zaza/Head Bandit Zaza/Head-Bandit-Zaza-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -18746,9 +18746,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-default.webm",
-      "idle": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-idle.webm",
-      "atk": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-atk.webm"
+      "default": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-default.gif",
+      "idle": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-idle.gif",
+      "atk": "../video/Base enemy/Grafl/Sky Pirate Grafl/Sky-Pirate-Grafl-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -18936,9 +18936,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-default.webm",
-      "idle": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-idle.webm",
-      "atk": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-atk.webm"
+      "default": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-default.gif",
+      "idle": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-idle.gif",
+      "atk": "../video/Base enemy/Grafl/Sky Boss Grafl/Sky-Boss-Grafl-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -19126,9 +19126,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Orthos/Orthos/Orthos-default.webm",
-      "idle": "../video/Base enemy/Orthos/Orthos/Orthos-idle.webm",
-      "atk": "../video/Base enemy/Orthos/Orthos/Orthos-atk.webm"
+      "default": "../video/Base enemy/Orthos/Orthos/Orthos-default.gif",
+      "idle": "../video/Base enemy/Orthos/Orthos/Orthos-idle.gif",
+      "atk": "../video/Base enemy/Orthos/Orthos/Orthos-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -19316,9 +19316,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Orthos/Cerberus/Cerberus-default.webm",
-      "idle": "../video/Base enemy/Orthos/Cerberus/Cerberus-idle.webm",
-      "atk": "../video/Base enemy/Orthos/Cerberus/Cerberus-atk.webm"
+      "default": "../video/Base enemy/Orthos/Cerberus/Cerberus-default.gif",
+      "idle": "../video/Base enemy/Orthos/Cerberus/Cerberus-idle.gif",
+      "atk": "../video/Base enemy/Orthos/Cerberus/Cerberus-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -19506,9 +19506,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Ramia/Ramia/Ramia-default.webm",
-      "idle": "../video/Base enemy/Ramia/Ramia/Ramia-idle.webm",
-      "atk": "../video/Base enemy/Ramia/Ramia/Ramia-atk.webm"
+      "default": "../video/Base enemy/Ramia/Ramia/Ramia-default.gif",
+      "idle": "../video/Base enemy/Ramia/Ramia/Ramia-idle.gif",
+      "atk": "../video/Base enemy/Ramia/Ramia/Ramia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -19690,9 +19690,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Ramia/Scylla/Scylla-default.webm",
-      "idle": "../video/Base enemy/Ramia/Scylla/Scylla-idle.webm",
-      "atk": "../video/Base enemy/Ramia/Scylla/Scylla-atk.webm"
+      "default": "../video/Base enemy/Ramia/Scylla/Scylla-default.gif",
+      "idle": "../video/Base enemy/Ramia/Scylla/Scylla-idle.gif",
+      "atk": "../video/Base enemy/Ramia/Scylla/Scylla-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -19882,9 +19882,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Fairy/Fairy/Fairy-default.webm",
-      "idle": "../video/Base enemy/Fairy/Fairy/Fairy-idle.webm",
-      "atk": "../video/Base enemy/Fairy/Fairy/Fairy-atk.webm"
+      "default": "../video/Base enemy/Fairy/Fairy/Fairy-default.gif",
+      "idle": "../video/Base enemy/Fairy/Fairy/Fairy-idle.gif",
+      "atk": "../video/Base enemy/Fairy/Fairy/Fairy-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -20074,9 +20074,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Fairy/Titania/Titania-default.webm",
-      "idle": "../video/Base enemy/Fairy/Titania/Titania-idle.webm",
-      "atk": "../video/Base enemy/Fairy/Titania/Titania-atk.webm"
+      "default": "../video/Base enemy/Fairy/Titania/Titania-default.gif",
+      "idle": "../video/Base enemy/Fairy/Titania/Titania-idle.gif",
+      "atk": "../video/Base enemy/Fairy/Titania/Titania-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -20266,9 +20266,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Minotaur/Minotaur/Minotaur-default.webm",
-      "idle": "../video/Base enemy/Minotaur/Minotaur/Minotaur-idle.webm",
-      "atk": "../video/Base enemy/Minotaur/Minotaur/Minotaur-atk.webm"
+      "default": "../video/Base enemy/Minotaur/Minotaur/Minotaur-default.gif",
+      "idle": "../video/Base enemy/Minotaur/Minotaur/Minotaur-idle.gif",
+      "atk": "../video/Base enemy/Minotaur/Minotaur/Minotaur-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -20458,9 +20458,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Minotaur/Cyclops/Cyclops-default.webm",
-      "idle": "../video/Base enemy/Minotaur/Cyclops/Cyclops-idle.webm",
-      "atk": "../video/Base enemy/Minotaur/Cyclops/Cyclops-atk.webm"
+      "default": "../video/Base enemy/Minotaur/Cyclops/Cyclops-default.gif",
+      "idle": "../video/Base enemy/Minotaur/Cyclops/Cyclops-idle.gif",
+      "atk": "../video/Base enemy/Minotaur/Cyclops/Cyclops-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -20650,9 +20650,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Unicorn/Unicorn/Unicorn-default.webm",
-      "idle": "../video/Base enemy/Unicorn/Unicorn/Unicorn-idle.webm",
-      "atk": "../video/Base enemy/Unicorn/Unicorn/Unicorn-atk.webm"
+      "default": "../video/Base enemy/Unicorn/Unicorn/Unicorn-default.gif",
+      "idle": "../video/Base enemy/Unicorn/Unicorn/Unicorn-idle.gif",
+      "atk": "../video/Base enemy/Unicorn/Unicorn/Unicorn-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -20842,9 +20842,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Unicorn/Pegasus/Pegasus-default.webm",
-      "idle": "../video/Base enemy/Unicorn/Pegasus/Pegasus-idle.webm",
-      "atk": "../video/Base enemy/Unicorn/Pegasus/Pegasus-atk.webm"
+      "default": "../video/Base enemy/Unicorn/Pegasus/Pegasus-default.gif",
+      "idle": "../video/Base enemy/Unicorn/Pegasus/Pegasus-idle.gif",
+      "atk": "../video/Base enemy/Unicorn/Pegasus/Pegasus-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21034,9 +21034,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Medusa/Medusa/Medusa-default.webm",
-      "idle": "../video/Base enemy/Medusa/Medusa/Medusa-idle.webm",
-      "atk": "../video/Base enemy/Medusa/Medusa/Medusa-atk.webm"
+      "default": "../video/Base enemy/Medusa/Medusa/Medusa-default.gif",
+      "idle": "../video/Base enemy/Medusa/Medusa/Medusa-idle.gif",
+      "atk": "../video/Base enemy/Medusa/Medusa/Medusa-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21226,9 +21226,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Medusa/Zahhak/Zahhak-default.webm",
-      "idle": "../video/Base enemy/Medusa/Zahhak/Zahhak-idle.webm",
-      "atk": "../video/Base enemy/Medusa/Zahhak/Zahhak-atk.webm"
+      "default": "../video/Base enemy/Medusa/Zahhak/Zahhak-default.gif",
+      "idle": "../video/Base enemy/Medusa/Zahhak/Zahhak-idle.gif",
+      "atk": "../video/Base enemy/Medusa/Zahhak/Zahhak-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21418,9 +21418,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Salamander/Salamander/Salamander-default.webm",
-      "idle": "../video/Base enemy/Salamander/Salamander/Salamander-idle.webm",
-      "atk": "../video/Base enemy/Salamander/Salamander/Salamander-atk.webm"
+      "default": "../video/Base enemy/Salamander/Salamander/Salamander-default.gif",
+      "idle": "../video/Base enemy/Salamander/Salamander/Salamander-idle.gif",
+      "atk": "../video/Base enemy/Salamander/Salamander/Salamander-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21610,9 +21610,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Salamander/Ifrit/Ifrit-default.webm",
-      "idle": "../video/Base enemy/Salamander/Ifrit/Ifrit-idle.webm",
-      "atk": "../video/Base enemy/Salamander/Ifrit/Ifrit-atk.webm"
+      "default": "../video/Base enemy/Salamander/Ifrit/Ifrit-default.gif",
+      "idle": "../video/Base enemy/Salamander/Ifrit/Ifrit-idle.gif",
+      "atk": "../video/Base enemy/Salamander/Ifrit/Ifrit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21802,9 +21802,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Rantoul/Rantoul/Rantoul-default.webm",
-      "idle": "../video/Base enemy/Rantoul/Rantoul/Rantoul-idle.webm",
-      "atk": "../video/Base enemy/Rantoul/Rantoul/Rantoul-atk.webm"
+      "default": "../video/Base enemy/Rantoul/Rantoul/Rantoul-default.gif",
+      "idle": "../video/Base enemy/Rantoul/Rantoul/Rantoul-idle.gif",
+      "atk": "../video/Base enemy/Rantoul/Rantoul/Rantoul-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -21994,9 +21994,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Rantoul/Legtos/Legtos-default.webm",
-      "idle": "../video/Base enemy/Rantoul/Legtos/Legtos-idle.webm",
-      "atk": "../video/Base enemy/Rantoul/Legtos/Legtos-atk.webm"
+      "default": "../video/Base enemy/Rantoul/Legtos/Legtos-default.gif",
+      "idle": "../video/Base enemy/Rantoul/Legtos/Legtos-idle.gif",
+      "atk": "../video/Base enemy/Rantoul/Legtos/Legtos-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -22186,9 +22186,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Trent/Trent/Trent-default.webm",
-      "idle": "../video/Base enemy/Trent/Trent/Trent-idle.webm",
-      "atk": "../video/Base enemy/Trent/Trent/Trent-atk.webm"
+      "default": "../video/Base enemy/Trent/Trent/Trent-default.gif",
+      "idle": "../video/Base enemy/Trent/Trent/Trent-idle.gif",
+      "atk": "../video/Base enemy/Trent/Trent/Trent-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -22378,9 +22378,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Trent/Ent/Ent-default.webm",
-      "idle": "../video/Base enemy/Trent/Ent/Ent-idle.webm",
-      "atk": "../video/Base enemy/Trent/Ent/Ent-atk.webm"
+      "default": "../video/Base enemy/Trent/Ent/Ent-default.gif",
+      "idle": "../video/Base enemy/Trent/Ent/Ent-idle.gif",
+      "atk": "../video/Base enemy/Trent/Ent/Ent-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -22570,9 +22570,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Sylph/Sylph/Sylph-default.webm",
-      "idle": "../video/Base enemy/Sylph/Sylph/Sylph-idle.webm",
-      "atk": "../video/Base enemy/Sylph/Sylph/Sylph-atk.webm"
+      "default": "../video/Base enemy/Sylph/Sylph/Sylph-default.gif",
+      "idle": "../video/Base enemy/Sylph/Sylph/Sylph-idle.gif",
+      "atk": "../video/Base enemy/Sylph/Sylph/Sylph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -22762,9 +22762,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Sylph/Djin/Djin-default.webm",
-      "idle": "../video/Base enemy/Sylph/Djin/Djin-idle.webm",
-      "atk": "../video/Base enemy/Sylph/Djin/Djin-atk.webm"
+      "default": "../video/Base enemy/Sylph/Djin/Djin-default.gif",
+      "idle": "../video/Base enemy/Sylph/Djin/Djin-idle.gif",
+      "atk": "../video/Base enemy/Sylph/Djin/Djin-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -22954,9 +22954,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-default.webm",
-      "idle": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-idle.webm",
-      "atk": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-atk.webm"
+      "default": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-default.gif",
+      "idle": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-idle.gif",
+      "atk": "../video/Base enemy/Maria/Priestess Maria/Priestess-Maria-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -23146,9 +23146,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-default.webm",
-      "idle": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-idle.webm",
-      "atk": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-atk.webm"
+      "default": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-default.gif",
+      "idle": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-idle.gif",
+      "atk": "../video/Base enemy/Maria/Angel Maria/Angel-Maria-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -23338,9 +23338,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Lilin/Lilin/Lilin-default.webm",
-      "idle": "../video/Base enemy/Lilin/Lilin/Lilin-idle.webm",
-      "atk": "../video/Base enemy/Lilin/Lilin/Lilin-atk.webm"
+      "default": "../video/Base enemy/Lilin/Lilin/Lilin-default.gif",
+      "idle": "../video/Base enemy/Lilin/Lilin/Lilin-idle.gif",
+      "atk": "../video/Base enemy/Lilin/Lilin/Lilin-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -23530,9 +23530,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/Lilin/Succubus/Succubus-default.webm",
-      "idle": "../video/Base enemy/Lilin/Succubus/Succubus-idle.webm",
-      "atk": "../video/Base enemy/Lilin/Succubus/Succubus-atk.webm"
+      "default": "../video/Base enemy/Lilin/Succubus/Succubus-default.gif",
+      "idle": "../video/Base enemy/Lilin/Succubus/Succubus-idle.gif",
+      "atk": "../video/Base enemy/Lilin/Succubus/Succubus-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -23722,9 +23722,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-atk.webm"
+      "default": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-default.gif",
+      "idle": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-idle.gif",
+      "atk": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -23940,9 +23940,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-atk.webm"
+      "default": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-default.gif",
+      "idle": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-idle.gif",
+      "atk": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -24158,9 +24158,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Undine/Undine-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Undine/Undine-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Undine/Undine-atk.webm"
+      "default": "../video/Summon/3 srar start/Undine/Undine/Undine-default.gif",
+      "idle": "../video/Summon/3 srar start/Undine/Undine/Undine-idle.gif",
+      "atk": "../video/Summon/3 srar start/Undine/Undine/Undine-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -24376,9 +24376,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Siren/Siren-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Siren/Siren-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Siren/Siren-atk.webm"
+      "default": "../video/Summon/3 srar start/Undine/Siren/Siren-default.gif",
+      "idle": "../video/Summon/3 srar start/Undine/Siren/Siren-idle.gif",
+      "atk": "../video/Summon/3 srar start/Undine/Siren/Siren-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -24594,9 +24594,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-atk.webm"
+      "default": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-default.gif",
+      "idle": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-idle.gif",
+      "atk": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -24812,9 +24812,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-atk.webm"
+      "default": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-default.gif",
+      "idle": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-idle.gif",
+      "atk": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -25030,9 +25030,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-atk.webm"
+      "default": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-default.gif",
+      "idle": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-idle.gif",
+      "atk": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -25248,9 +25248,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-atk.webm"
+      "default": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-default.gif",
+      "idle": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-idle.gif",
+      "atk": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -25466,9 +25466,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-atk.webm"
+      "default": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-default.gif",
+      "idle": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-idle.gif",
+      "atk": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -25684,9 +25684,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-atk.webm"
+      "default": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-default.gif",
+      "idle": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-idle.gif",
+      "atk": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -25902,9 +25902,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-atk.webm"
+      "default": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-default.gif",
+      "idle": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-idle.gif",
+      "atk": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -26120,9 +26120,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Lich/Lich-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Lich/Lich-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Lich/Lich-atk.webm"
+      "default": "../video/Summon/3 srar start/Vampire/Lich/Lich-default.gif",
+      "idle": "../video/Summon/3 srar start/Vampire/Lich/Lich-idle.gif",
+      "atk": "../video/Summon/3 srar start/Vampire/Lich/Lich-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -26338,9 +26338,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-default.gif",
+      "idle": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-idle.gif",
+      "atk": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -26554,9 +26554,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-default.gif",
+      "idle": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-idle.gif",
+      "atk": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -26770,9 +26770,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-atk.webm"
+      "default": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-default.gif",
+      "idle": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-idle.gif",
+      "atk": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -26986,9 +26986,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-atk.webm"
+      "default": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-default.gif",
+      "idle": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-idle.gif",
+      "atk": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -27202,9 +27202,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-atk.webm"
+      "default": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-default.gif",
+      "idle": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -27418,9 +27418,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-atk.webm"
+      "default": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-default.gif",
+      "idle": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -27634,9 +27634,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-atk.webm"
+      "default": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-default.gif",
+      "idle": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-idle.gif",
+      "atk": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -27850,9 +27850,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-atk.webm"
+      "default": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-default.gif",
+      "idle": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-idle.gif",
+      "atk": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -28066,9 +28066,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-atk.webm"
+      "default": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-default.gif",
+      "idle": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-idle.gif",
+      "atk": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -28282,9 +28282,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-atk.webm"
+      "default": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-default.gif",
+      "idle": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-idle.gif",
+      "atk": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -28498,9 +28498,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Shida/Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Shida/Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Shida/Shida-atk.webm"
+      "default": "../video/Summon/3 srar start/Shida/Shida/Shida-default.gif",
+      "idle": "../video/Summon/3 srar start/Shida/Shida/Shida-idle.gif",
+      "atk": "../video/Summon/3 srar start/Shida/Shida/Shida-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -28763,9 +28763,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-atk.webm"
+      "default": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-default.gif",
+      "idle": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-idle.gif",
+      "atk": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -29028,9 +29028,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-atk.webm"
+      "default": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-default.gif",
+      "idle": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-idle.gif",
+      "atk": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -29272,9 +29272,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-atk.webm"
+      "default": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-default.gif",
+      "idle": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-idle.gif",
+      "atk": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -29516,9 +29516,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-atk.webm"
+      "default": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-default.gif",
+      "idle": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-idle.gif",
+      "atk": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -29760,9 +29760,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-atk.webm"
+      "default": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-default.gif",
+      "idle": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-idle.gif",
+      "atk": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -29981,9 +29981,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-atk.webm"
+      "default": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-default.gif",
+      "idle": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-idle.gif",
+      "atk": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -30202,9 +30202,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-atk.webm"
+      "default": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-default.gif",
+      "idle": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-idle.gif",
+      "atk": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -30423,9 +30423,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-atk.webm"
+      "default": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-default.gif",
+      "idle": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -30667,9 +30667,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-atk.webm"
+      "default": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-default.gif",
+      "idle": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -30911,9 +30911,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-atk.webm"
+      "default": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-default.gif",
+      "idle": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -31155,9 +31155,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-atk.webm"
+      "default": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-default.gif",
+      "idle": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-idle.gif",
+      "atk": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -31402,9 +31402,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-atk.webm"
+      "default": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-default.gif",
+      "idle": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-idle.gif",
+      "atk": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -31649,9 +31649,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-atk.webm"
+      "default": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-default.gif",
+      "idle": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-idle.gif",
+      "atk": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -31896,9 +31896,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-atk.webm"
+      "default": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-default.gif",
+      "idle": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-idle.gif",
+      "atk": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -32140,9 +32140,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-atk.webm"
+      "default": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-default.gif",
+      "idle": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-idle.gif",
+      "atk": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -32384,9 +32384,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-atk.webm"
+      "default": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-default.gif",
+      "idle": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-idle.gif",
+      "atk": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -32628,9 +32628,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-atk.webm"
+      "default": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-default.gif",
+      "idle": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-idle.gif",
+      "atk": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -32849,9 +32849,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-atk.webm"
+      "default": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-default.gif",
+      "idle": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-idle.gif",
+      "atk": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -33070,9 +33070,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-atk.webm"
+      "default": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-default.gif",
+      "idle": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-idle.gif",
+      "atk": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -33291,9 +33291,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Lava/Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Lava/Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Lava/Lava-atk.webm"
+      "default": "../video/Summon/3 srar start/Lava/Lava/Lava-default.gif",
+      "idle": "../video/Summon/3 srar start/Lava/Lava/Lava-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lava/Lava/Lava-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -33565,9 +33565,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-atk.webm"
+      "default": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-default.gif",
+      "idle": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -33839,9 +33839,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-atk.webm"
+      "default": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-default.gif",
+      "idle": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -34113,9 +34113,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-atk.webm"
+      "default": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-default.gif",
+      "idle": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-idle.gif",
+      "atk": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -34361,9 +34361,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-atk.webm"
+      "default": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-default.gif",
+      "idle": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-idle.gif",
+      "atk": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -34609,9 +34609,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-atk.webm"
+      "default": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-default.gif",
+      "idle": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-idle.gif",
+      "atk": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -34857,9 +34857,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-atk.webm"
+      "default": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-default.gif",
+      "idle": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-idle.gif",
+      "atk": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -35082,9 +35082,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-atk.webm"
+      "default": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-default.gif",
+      "idle": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-idle.gif",
+      "atk": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -35307,9 +35307,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-atk.webm"
+      "default": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-default.gif",
+      "idle": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-idle.gif",
+      "atk": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -35532,9 +35532,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-atk.webm"
+      "default": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-default.gif",
+      "idle": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -35757,9 +35757,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-atk.webm"
+      "default": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-default.gif",
+      "idle": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -35982,9 +35982,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-atk.webm"
+      "default": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-default.gif",
+      "idle": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -36207,9 +36207,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-atk.webm"
+      "default": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-default.gif",
+      "idle": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-idle.gif",
+      "atk": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -36455,9 +36455,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-atk.webm"
+      "default": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-default.gif",
+      "idle": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-idle.gif",
+      "atk": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -36703,9 +36703,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-atk.webm"
+      "default": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-default.gif",
+      "idle": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-idle.gif",
+      "atk": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -36951,9 +36951,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Alice/Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Alice/Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Alice/Alice-atk.webm"
+      "default": "../video/Summon/3 srar start/Alice/Alice/Alice-default.gif",
+      "idle": "../video/Summon/3 srar start/Alice/Alice/Alice-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alice/Alice/Alice-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -37225,9 +37225,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-atk.webm"
+      "default": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-default.gif",
+      "idle": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -37499,9 +37499,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-atk.webm"
+      "default": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-default.gif",
+      "idle": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-idle.gif",
+      "atk": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -37773,9 +37773,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Fire/Fire Nymph/Fire-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -37961,9 +37961,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Water/Water Nymph/Water-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -38149,9 +38149,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Earth/Earth Nymph/Earth-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -38337,9 +38337,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Thunder/Thunder Nymph/Thunder-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -38525,9 +38525,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Light/Light Nymph/Light-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -38713,9 +38713,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-default.webm",
-      "idle": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-idle.webm",
-      "atk": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-atk.webm"
+      "default": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-default.gif",
+      "idle": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-idle.gif",
+      "atk": "../video/Evolve Material/Dark/Dark Nymph/Dark-Nymph-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -38901,9 +38901,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Fire/Fire Spirit/Fire-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -39089,9 +39089,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Water/Water Spirit/Water-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -39277,9 +39277,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Earth/Earth Spirit/Earth-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -39465,9 +39465,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Thunder/Thunder Spirit/Thunder-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -39653,9 +39653,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Light/Light Spirit/Light-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -39841,9 +39841,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-default.webm",
-      "idle": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-idle.webm",
-      "atk": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-atk.webm"
+      "default": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-default.gif",
+      "idle": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-idle.gif",
+      "atk": "../video/Evolve Material/Dark/Dark Spirit/Dark-Spirit-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40029,9 +40029,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-default.webm",
-      "idle": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-atk.webm"
+      "default": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-default.gif",
+      "idle": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Fire/Fire Idol/Fire-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40217,9 +40217,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Water/Water Idol/Water-Idol-default.webm",
-      "idle": "../video/Evolve Material/Water/Water Idol/Water-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Water/Water Idol/Water-Idol-atk.webm"
+      "default": "../video/Evolve Material/Water/Water Idol/Water-Idol-default.gif",
+      "idle": "../video/Evolve Material/Water/Water Idol/Water-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Water/Water Idol/Water-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40405,9 +40405,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-default.webm",
-      "idle": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-atk.webm"
+      "default": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-default.gif",
+      "idle": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Earth/Earth Idol/Earth-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40593,9 +40593,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-default.webm",
-      "idle": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-atk.webm"
+      "default": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-default.gif",
+      "idle": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Thunder/Thunder Idol/Thunder-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40781,9 +40781,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Light/Light Idol/Light-Idol-default.webm",
-      "idle": "../video/Evolve Material/Light/Light Idol/Light-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Light/Light Idol/Light-Idol-atk.webm"
+      "default": "../video/Evolve Material/Light/Light Idol/Light-Idol-default.gif",
+      "idle": "../video/Evolve Material/Light/Light Idol/Light-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Light/Light Idol/Light-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -40969,9 +40969,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-default.webm",
-      "idle": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-idle.webm",
-      "atk": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-atk.webm"
+      "default": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-default.gif",
+      "idle": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-idle.gif",
+      "atk": "../video/Evolve Material/Dark/Dark Idol/Dark-Idol-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -41157,9 +41157,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-default.webm",
-      "idle": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-atk.webm"
+      "default": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-default.gif",
+      "idle": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Fire/Fire Totem/Fire-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -41345,9 +41345,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Water/Water Totem/Water-Totem-default.webm",
-      "idle": "../video/Evolve Material/Water/Water Totem/Water-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Water/Water Totem/Water-Totem-atk.webm"
+      "default": "../video/Evolve Material/Water/Water Totem/Water-Totem-default.gif",
+      "idle": "../video/Evolve Material/Water/Water Totem/Water-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Water/Water Totem/Water-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -41533,9 +41533,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-default.webm",
-      "idle": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-atk.webm"
+      "default": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-default.gif",
+      "idle": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Earth/Earth Totem/Earth-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -41721,9 +41721,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-default.webm",
-      "idle": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-atk.webm"
+      "default": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-default.gif",
+      "idle": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Thunder/Thunder Totem/Thunder-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -41909,9 +41909,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Light/Light Totem/Light-Totem-default.webm",
-      "idle": "../video/Evolve Material/Light/Light Totem/Light-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Light/Light Totem/Light-Totem-atk.webm"
+      "default": "../video/Evolve Material/Light/Light Totem/Light-Totem-default.gif",
+      "idle": "../video/Evolve Material/Light/Light Totem/Light-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Light/Light Totem/Light-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -42097,9 +42097,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-default.webm",
-      "idle": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-idle.webm",
-      "atk": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-atk.webm"
+      "default": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-default.gif",
+      "idle": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-idle.gif",
+      "atk": "../video/Evolve Material/Dark/Dark Totem/Dark-Totem-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -42285,9 +42285,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-default.webm",
-      "idle": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-idle.webm",
-      "atk": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-atk.webm"
+      "default": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-default.gif",
+      "idle": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-idle.gif",
+      "atk": "../video/Seal material and fusion material/Seal/Jewel Ghost/Jewel-Ghost-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -42473,9 +42473,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-default.webm",
-      "idle": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-idle.webm",
-      "atk": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-atk.webm"
+      "default": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-default.gif",
+      "idle": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-idle.gif",
+      "atk": "../video/Seal material and fusion material/Seal/Jewel King/Jewel-King-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -42661,9 +42661,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-default.webm",
-      "idle": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-idle.webm",
-      "atk": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-atk.webm"
+      "default": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-default.gif",
+      "idle": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-idle.gif",
+      "atk": "../video/Seal material and fusion material/Seal/Jewel God/Jewel-God-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -42849,9 +42849,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-default.webm",
-      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-idle.webm",
-      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-atk.webm"
+      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-default.gif",
+      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-idle.gif",
+      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal Ghost/Metal-Ghost-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43027,9 +43027,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-default.webm",
-      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-idle.webm",
-      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-atk.webm"
+      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-default.gif",
+      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-idle.gif",
+      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal King/Metal-King-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43205,9 +43205,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-default.webm",
-      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-idle.webm",
-      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-atk.webm"
+      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-default.gif",
+      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-idle.gif",
+      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43383,9 +43383,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Mimic/Mimic/Mimic-default.webm",
-      "idle": "../video/Evolve Material/Mimic/Mimic/Mimic-idle.webm",
-      "atk": "../video/Evolve Material/Mimic/Mimic/Mimic-atk.webm"
+      "default": "../video/Evolve Material/Mimic/Mimic/Mimic-default.gif",
+      "idle": "../video/Evolve Material/Mimic/Mimic/Mimic-idle.gif",
+      "atk": "../video/Evolve Material/Mimic/Mimic/Mimic-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43555,9 +43555,9 @@
       }
     },
     "animations": {
-      "default": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-default.webm",
-      "idle": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-idle.webm",
-      "atk": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-atk.webm"
+      "default": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-default.gif",
+      "idle": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-idle.gif",
+      "atk": "../video/Evolve Material/Mimic/Bat Mimic/Bat-Mimic-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43727,9 +43727,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-default.webm",
-      "idle": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-atk.webm"
+      "default": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-default.gif",
+      "idle": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Galant/Blacksmith Galant/Blacksmith-Galant-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -43976,9 +43976,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-default.webm",
-      "idle": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-atk.webm"
+      "default": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-default.gif",
+      "idle": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Galant/Bruiser Galant/Bruiser-Galant-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -44225,9 +44225,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-default.webm",
-      "idle": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-atk.webm"
+      "default": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-default.gif",
+      "idle": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Galant/God Arm Galant/God-Arm-Galant-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -44474,9 +44474,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Stya/Stya/Stya-default.webm",
-      "idle": "../video/Events/Heros For Different County/Stya/Stya/Stya-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Stya/Stya/Stya-atk.webm"
+      "default": "../video/Events/Heros For Different County/Stya/Stya/Stya-default.gif",
+      "idle": "../video/Events/Heros For Different County/Stya/Stya/Stya-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Stya/Stya/Stya-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -44723,9 +44723,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-default.webm",
-      "idle": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-atk.webm"
+      "default": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-default.gif",
+      "idle": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Stya/Snow Blade Stya/Snow-Blade-Stya-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -44972,9 +44972,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-default.webm",
-      "idle": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-atk.webm"
+      "default": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-default.gif",
+      "idle": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Stya/Frost Queen Stya/Frost-Queen-Stya-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -45221,9 +45221,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-default.webm",
-      "idle": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-atk.webm"
+      "default": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-default.gif",
+      "idle": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Nemia/Boxer Nemia/Boxer-Nemia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -45470,9 +45470,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-default.webm",
-      "idle": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-atk.webm"
+      "default": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-default.gif",
+      "idle": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Nemia/Brawler Nemia/Brawler-Nemia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -45719,9 +45719,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-default.webm",
-      "idle": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-atk.webm"
+      "default": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-default.gif",
+      "idle": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Nemia/Gaia Fist Nemia/Gaia-Fist-Nemia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -45968,9 +45968,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-default.webm",
-      "idle": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-atk.webm"
+      "default": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-default.gif",
+      "idle": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Zeln/Zeln/Zeln-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -46217,9 +46217,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-default.webm",
-      "idle": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-atk.webm"
+      "default": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-default.gif",
+      "idle": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Zeln/Spark Kick Zeln/Spark-Kick-Zeln-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -46466,9 +46466,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-default.webm",
-      "idle": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-atk.webm"
+      "default": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-default.gif",
+      "idle": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Zeln/Thunder Kick Zeln/Thunder-Kick-Zeln-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -46715,9 +46715,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-default.webm",
-      "idle": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-atk.webm"
+      "default": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-default.gif",
+      "idle": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Alma/Traveler Alma/Traveler-Alma-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -46957,9 +46957,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-default.webm",
-      "idle": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-atk.webm"
+      "default": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-default.gif",
+      "idle": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Alma/Adventurer Alma/Adventurer-Alma-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -47199,9 +47199,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-default.webm",
-      "idle": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-atk.webm"
+      "default": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-default.gif",
+      "idle": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Alma/Hero Alma/Hero-Alma-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -47441,9 +47441,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-default.webm",
-      "idle": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-atk.webm"
+      "default": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-default.gif",
+      "idle": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Oboro/Ninja Oboro/Ninja-Oboro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -47690,9 +47690,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-default.webm",
-      "idle": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-atk.webm"
+      "default": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-default.gif",
+      "idle": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Oboro/Assassin Oboro/Assassin-Oboro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -47939,9 +47939,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-default.webm",
-      "idle": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-idle.webm",
-      "atk": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-atk.webm"
+      "default": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-default.gif",
+      "idle": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-idle.gif",
+      "atk": "../video/Events/Heros For Different County/Oboro/Shadow Oboro/Shadow-Oboro-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -48188,9 +48188,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-atk.webm"
+      "default": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-default.gif",
+      "idle": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -48393,9 +48393,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-atk.webm"
+      "default": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-default.gif",
+      "idle": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -48598,9 +48598,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-atk.webm"
+      "default": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-default.gif",
+      "idle": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-idle.gif",
+      "atk": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -48803,9 +48803,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-atk.webm"
+      "default": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-default.gif",
+      "idle": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-idle.gif",
+      "atk": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -49057,9 +49057,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-atk.webm"
+      "default": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-default.gif",
+      "idle": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-idle.gif",
+      "atk": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -49311,9 +49311,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-atk.webm"
+      "default": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-default.gif",
+      "idle": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-idle.gif",
+      "atk": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-atk.gif"
     },
     "effects": {
       "atk": "",
@@ -49566,7 +49566,7 @@
     },
     "animations": {
       "default": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-default.webm",
-      "idle": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-idle.webm",
+      "idle": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-idle.gif",
       "atk": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-atk.webm"
     },
     "effects": {
@@ -368337,9 +368337,9 @@
       }
     },
     "animations": {
-      "default": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-default.webm",
-      "idle": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-idle.webm",
-      "atk": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-atk.webm"
+      "default": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-default.gif",
+      "idle": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-idle.gif",
+      "atk": "../video/Greek/Ultor/Herculean Ultor/Herculean-Ultor-atk.gif"
     },
     "effects": {
       "atk": "",

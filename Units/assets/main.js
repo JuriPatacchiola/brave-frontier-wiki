@@ -1244,6 +1244,28 @@ function handleSwipeGesture() {
     if (touchEndX > touchStartX + swipeThreshold) prevFullArt();
 }
 
+/* ==========================================================================
+   .WEBM SU IPHONE / IPAD / SAFARI
+   Safari (e tutti i browser su iPhone/iPad, che usano lo stesso motore) non supporta
+   la trasparenza dei video .webm: il personaggio compare su un riquadro NERO che copre lo sfondo.
+   Su questi dispositivi si usa la .gif con lo stesso nome (es. Vargas-idle.webm -> Vargas-idle.gif).
+   ========================================================================== */
+const NO_WEBM_ALPHA = (() => {
+    const ua = navigator.userAgent || '';
+    const isIOS = /iP(hone|ad|od)/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isMacSafari = /Safari/i.test(ua) && !/Chrome|Chromium|CriOS|FxiOS|Edg|OPR|Android/i.test(ua);
+    return isIOS || isMacSafari;
+})();
+
+function toGifPath(src) {
+    return /\.webm(\?.*)?$/i.test(src || '') ? String(src).replace(/\.webm(\?.*)?$/i, '.gif') : '';
+}
+
+function pickAnimationSrc(src) {
+    if (NO_WEBM_ALPHA && toGifPath(src)) return toGifPath(src);
+    return src || '';
+}
+
 function showMotion(type) {
     if (!currentUnitOpen) return;
     const motions = ['default', 'idle', 'atk'];
@@ -1258,11 +1280,22 @@ function showMotion(type) {
             if (container) container.style.display = 'block';
             if (btn) btn.style.display = 'inline';
 
-            const src = currentUnitOpen.animations?.[t] || "";
+            const originalSrc = currentUnitOpen.animations?.[t] || "";
+            // iPhone/iPad/Safari non mostrano la trasparenza dei .webm (sfondo nero): lì si usa la .gif
+            const src = pickAnimationSrc(originalSrc);
 
             // video (mp4, webm, mov, m4v) -> <video>; gif/webp/png -> <img>
             if (isVideoFile(src)) {
                 if (videoTag) {
+                    // se il video non si carica (file mancante o formato non supportato) si prova la .gif con lo stesso nome
+                    videoTag.onerror = () => {
+                        const gif = toGifPath(src);
+                        if (!gif || !imgTag || currentUnitOpen?.animations?.[t] !== originalSrc) return;
+                        videoTag.style.display = 'none';
+                        videoTag.removeAttribute('src');
+                        imgTag.style.display = 'block';
+                        imgTag.src = gif;
+                    };
                     // i .webm hanno una dimensione propria regolabile dal CSS (--webm-scale)
                     videoTag.classList.toggle('is-webm', /\.webm(\?.*)?$/i.test(src));
                     videoTag.style.display = 'block';
