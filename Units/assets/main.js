@@ -1245,10 +1245,14 @@ function handleSwipeGesture() {
 }
 
 /* ==========================================================================
-   .WEBM SU IPHONE / IPAD / SAFARI
+   .WEBM SU IPHONE / IPAD / SAFARI -> .MOV (con trasparenza) -> .GIF
    Safari (e tutti i browser su iPhone/iPad, che usano lo stesso motore) non supporta
-   la trasparenza dei video .webm: il personaggio compare su un riquadro NERO che copre lo sfondo.
-   Su questi dispositivi si usa la .gif con lo stesso nome (es. Vargas-idle.webm -> Vargas-idle.gif).
+   la trasparenza dei video .webm: il personaggio comparirebbe su un riquadro NERO.
+   Su questi dispositivi, per ogni .webm del JSON si prova nell'ordine:
+     1) il .mov con lo stesso nome  (es. Fencer-Vargas-idle.mov)  -> video con trasparenza
+     2) la .gif con lo stesso nome  (es. Fencer-Vargas-idle.gif)  -> se il .mov non c'è
+   Su PC e Android si usa il .webm (e, se manca, la .gif).
+   Nel JSON si scrive sempre e solo il .webm: i .mov e le .gif vanno nella stessa cartella.
    ========================================================================== */
 const NO_WEBM_ALPHA = (() => {
     const ua = navigator.userAgent || '';
@@ -1257,13 +1261,27 @@ const NO_WEBM_ALPHA = (() => {
     return isIOS || isMacSafari;
 })();
 
+const WEBM_RE = /\.webm(\?.*)?$/i;
+
+function withExtension(src, ext) {
+    return WEBM_RE.test(src || '') ? String(src).replace(WEBM_RE, ext) : '';
+}
+
 function toGifPath(src) {
-    return /\.webm(\?.*)?$/i.test(src || '') ? String(src).replace(/\.webm(\?.*)?$/i, '.gif') : '';
+    return withExtension(src, '.gif') || (/\.mov(\?.*)?$/i.test(src || '') ? String(src).replace(/\.mov(\?.*)?$/i, '.gif') : '');
+}
+
+// Elenco dei file da provare, in ordine, per un'animazione del JSON
+function getAnimationCandidates(src) {
+    if (!src) return [];
+    if (!WEBM_RE.test(src)) return [src];
+    return NO_WEBM_ALPHA
+        ? [withExtension(src, '.mov'), withExtension(src, '.gif')]
+        : [src, withExtension(src, '.gif')];
 }
 
 function pickAnimationSrc(src) {
-    if (NO_WEBM_ALPHA && toGifPath(src)) return toGifPath(src);
-    return src || '';
+    return getAnimationCandidates(src)[0] || '';
 }
 
 function showMotion(type) {
@@ -1281,23 +1299,38 @@ function showMotion(type) {
             if (btn) btn.style.display = 'inline';
 
             const originalSrc = currentUnitOpen.animations?.[t] || "";
-            // iPhone/iPad/Safari non mostrano la trasparenza dei .webm (sfondo nero): lì si usa la .gif
-            const src = pickAnimationSrc(originalSrc);
+            // iPhone/iPad/Safari: .mov (trasparente) al posto del .webm, poi .gif se il .mov manca
+            const candidates = getAnimationCandidates(originalSrc);
+            const src = candidates[0] || '';
 
             // video (mp4, webm, mov, m4v) -> <video>; gif/webp/png -> <img>
             if (isVideoFile(src)) {
                 if (videoTag) {
                     // se il video non si carica (file mancante o formato non supportato) si prova la .gif con lo stesso nome
+                    // se il file non si carica (manca o formato non supportato) si passa al successivo dell'elenco
+                    let attempt = 0;
                     videoTag.onerror = () => {
-                        const gif = toGifPath(src);
-                        if (!gif || !imgTag || currentUnitOpen?.animations?.[t] !== originalSrc) return;
+                        if (currentUnitOpen?.animations?.[t] !== originalSrc) return;
+                        attempt++;
+                        const next = candidates[attempt];
+                        if (!next) return;
+                        if (isVideoFile(next)) {
+                            videoTag.classList.toggle('is-mov', /\.mov(\?.*)?$/i.test(next));
+                            videoTag.src = next;
+                            videoTag.load();
+                            videoTag.play().catch(() => { });
+                            return;
+                        }
+                        if (!imgTag) return;
                         videoTag.style.display = 'none';
                         videoTag.removeAttribute('src');
                         imgTag.style.display = 'block';
-                        imgTag.src = gif;
+                        imgTag.src = next;
                     };
                     // i .webm hanno una dimensione propria regolabile dal CSS (--webm-scale)
-                    videoTag.classList.toggle('is-webm', /\.webm(\?.*)?$/i.test(src));
+                    videoTag.classList.toggle('is-webm', WEBM_RE.test(originalSrc));
+                    // i .mov (iPhone/Safari) hanno una regolazione tutta loro nel CSS (--mov-scale, --mov-x, --mov-y)
+                    videoTag.classList.toggle('is-mov', /\.mov(\?.*)?$/i.test(src));
                     videoTag.style.display = 'block';
                     videoTag.muted = true;
                     videoTag.playsInline = true;

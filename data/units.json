@@ -2539,9 +2539,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-default.gif",
-      "idle": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-idle.gif",
-      "atk": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-atk.gif"
+      "default": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-default.webm",
+      "idle": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-idle.webm",
+      "atk": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-atk.webm"
     },
     "effects": {
       "atk": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/Atk.mp4",
@@ -2807,9 +2807,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-default.gif",
-      "idle": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-idle.gif",
-      "atk": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-atk.gif"
+      "default": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-default.webm",
+      "idle": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-idle.webm",
+      "atk": "../video/six heros/Lance/Vine Pike Lance/Vine-Pike-Lance-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -3075,9 +3075,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-default.gif",
-      "idle": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-idle.gif",
-      "atk": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-atk.gif"
+      "default": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-default.webm",
+      "idle": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-idle.webm",
+      "atk": "../video/six heros/Lance/Earth Pike Lance/Earth-Pike-Lance-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -3343,9 +3343,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-default.gif",
-      "idle": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-idle.gif",
-      "atk": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-atk.gif"
+      "default": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-default.webm",
+      "idle": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-idle.webm",
+      "atk": "../video/six heros/Lance/Nature God Lance/Nature-God-Lance-atk.webm"
     },
     "effects": {
       "atk": "",

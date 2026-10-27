@@ -2040,7 +2040,43 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   SOLO VIDEO IDLE: regole separate dalle altre animazioni
-   (tolto dagli elenchi "#container_... img/video" sopra, così lo regoli da solo)
-   Valori di partenza = quelli che usavi per tutte; cambiali a mano
- 
+   ANIMAZIONI .MOV (iPhone, iPad, Safari) NELLA MODALE
+   Il .mov usa già le STESSE regole di posizione dei .webm e delle gif
+   (gli elenchi "#container_... video" più sopra) e anche --webm-scale / --webm-y.
+   Se il .mov ha la stessa tela del .webm si vede identico e qui non serve toccare niente.
+   Se invece è un po' più grande, più piccolo o spostato, correggilo solo qui:
+   --mov-scale : 1 = uguale, 0.8 = più piccolo, 1.2 = più grande
+   --mov-x     : + = più a destra, - = più a sinistra
+   --mov-y     : + = più in basso,  - = più in alto
+   ========================================================================== */
+.unit_gif {
+    /* PC */
+    --mov-scale: 1;
+    --mov-x: 0%;
+    --mov-y: 0%;
+}
+
+@media (max-width: 1024px) {
+    .unit_gif {
+        /* tablet (iPad) */
+        --mov-scale: 1;
+        --mov-x: 0%;
+        --mov-y: 0%;
+    }
+}
+
+@media (max-width: 600px) {
+    .unit_gif {
+        /* telefono (iPhone) */
+        --mov-scale: 1;
+        --mov-x: 0%;
+        --mov-y: 0%;
+    }
+}
+
+#container_default video.is-mov,
+#container_idle video.is-mov,
+#container_atk video.is-mov {
+    transform: translate(var(--mov-x), calc(var(--webm-y) + var(--mov-y))) scale(calc(var(--webm-scale) * var(--mov-scale)));
+    transform-origin: 50% 50%;
+}
