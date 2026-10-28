@@ -1271,13 +1271,18 @@ function toGifPath(src) {
     return withExtension(src, '.gif') || (/\.mov(\?.*)?$/i.test(src || '') ? String(src).replace(/\.mov(\?.*)?$/i, '.gif') : '');
 }
 
-// Elenco dei file da provare, in ordine, per un'animazione del JSON
+// Elenco dei file da provare, in ordine, per un'animazione del JSON.
+// Nel JSON va bene sia il .webm sia il .mov: il sito sceglie quello giusto per il dispositivo
+const MOV_RE = /\.mov(\?.*)?$/i;
+
 function getAnimationCandidates(src) {
     if (!src) return [];
-    if (!WEBM_RE.test(src)) return [src];
+    let base = src;
+    if (MOV_RE.test(src)) base = String(src).replace(MOV_RE, '.webm');
+    if (!WEBM_RE.test(base)) return [src];
     return NO_WEBM_ALPHA
-        ? [withExtension(src, '.mov'), withExtension(src, '.gif')]
-        : [src, withExtension(src, '.gif')];
+        ? [withExtension(base, '.mov'), withExtension(base, '.gif')]
+        : [base, withExtension(base, '.gif')];
 }
 
 function pickAnimationSrc(src) {
@@ -1328,7 +1333,7 @@ function showMotion(type) {
                         imgTag.src = next;
                     };
                     // i .webm hanno una dimensione propria regolabile dal CSS (--webm-scale)
-                    videoTag.classList.toggle('is-webm', WEBM_RE.test(originalSrc));
+                    videoTag.classList.toggle('is-webm', WEBM_RE.test(originalSrc) || MOV_RE.test(originalSrc));
                     // i .mov (iPhone/Safari) hanno una regolazione tutta loro nel CSS (--mov-scale, --mov-x, --mov-y)
                     videoTag.classList.toggle('is-mov', /\.mov(\?.*)?$/i.test(src));
                     videoTag.style.display = 'block';
