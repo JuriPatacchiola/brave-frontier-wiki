@@ -1245,14 +1245,15 @@ function handleSwipeGesture() {
 }
 
 /* ==========================================================================
-   .WEBM SU IPHONE / IPAD / SAFARI -> .MOV (con trasparenza) -> .GIF
-   Safari (e tutti i browser su iPhone/iPad, che usano lo stesso motore) non supporta
+   ANIMAZIONI SU IPHONE / IPAD / SAFARI -> .WEBP ANIMATA -> .GIF
+   Safari (e tutti i browser su iPhone/iPad, che usano lo stesso motore) non mostra
    la trasparenza dei video .webm: il personaggio comparirebbe su un riquadro NERO.
-   Su questi dispositivi, per ogni .webm del JSON si prova nell'ordine:
-     1) il .mov con lo stesso nome  (es. Fencer-Vargas-idle.mov)  -> video con trasparenza
-     2) la .gif con lo stesso nome  (es. Fencer-Vargas-idle.gif)  -> se il .mov non c'è
+   I .mov funzionano solo se codificati in HEVC con canale alfa (si fanno solo su Mac),
+   quindi su questi dispositivi si usa un'immagine animata con trasparenza:
+     1) la .webp con lo stesso nome  (es. Fencer-Vargas-idle.webp)  -> colori pieni e bordi morbidi
+     2) la .gif con lo stesso nome   (es. Fencer-Vargas-idle.gif)   -> se la .webp non c'è
    Su PC e Android si usa il .webm (e, se manca, la .gif).
-   Nel JSON si scrive sempre e solo il .webm: i .mov e le .gif vanno nella stessa cartella.
+   Nel JSON si scrive sempre e solo il .webm: .webp e .gif vanno nella stessa cartella.
    ========================================================================== */
 const NO_WEBM_ALPHA = (() => {
     const ua = navigator.userAgent || '';
@@ -1262,32 +1263,99 @@ const NO_WEBM_ALPHA = (() => {
 })();
 
 const WEBM_RE = /\.webm(\?.*)?$/i;
+const MOV_RE = /\.mov(\?.*)?$/i;
 
 function withExtension(src, ext) {
     return WEBM_RE.test(src || '') ? String(src).replace(WEBM_RE, ext) : '';
 }
 
 function toGifPath(src) {
-    return withExtension(src, '.gif') || (/\.mov(\?.*)?$/i.test(src || '') ? String(src).replace(/\.mov(\?.*)?$/i, '.gif') : '');
+    const base = MOV_RE.test(src || '') ? String(src).replace(MOV_RE, '.webm') : src;
+    return withExtension(base, '.gif');
 }
 
-// Elenco dei file da provare, in ordine, per un'animazione del JSON.
-// Nel JSON va bene sia il .webm sia il .mov: il sito sceglie quello giusto per il dispositivo
-const MOV_RE = /\.mov(\?.*)?$/i;
-
+// Elenco dei file da provare, in ordine, per un'animazione del JSON
+// (nel JSON va bene anche il .mov: viene trattato come il .webm con lo stesso nome)
 function getAnimationCandidates(src) {
     if (!src) return [];
-    let base = src;
-    if (MOV_RE.test(src)) base = String(src).replace(MOV_RE, '.webm');
+    const base = MOV_RE.test(src) ? String(src).replace(MOV_RE, '.webm') : src;
     if (!WEBM_RE.test(base)) return [src];
     return NO_WEBM_ALPHA
-        ? [withExtension(base, '.mov'), withExtension(base, '.gif')]
+        ? [withExtension(base, '.webp'), withExtension(base, '.gif')]
         : [base, withExtension(base, '.gif')];
 }
 
 function pickAnimationSrc(src) {
     return getAnimationCandidates(src)[0] || '';
 }
+
+/* ==========================================================================
+   GIF ALLINEATE AI .WEBM
+   Le regole CSS di posizione (#container_... img/video) sono regolate sui .webm (tela 2614x1535).
+   Le .gif hanno una tela diversa (1197x750) con il personaggio in un altro punto: con le stesse
+   regole finirebbero piccole in basso nell'angolo. Qui ogni .gif viene spostata e ingrandita
+   in automatico per stare nello stesso posto del .webm, su PC, tablet e telefono.
+   Le piccole correzioni a mano si fanno nel CSS con --gif-scale, --gif-x e --gif-y.
+   ========================================================================== */
+// posizione della tela della gif dentro la tela del webm (misurata sulle unità, 0.1 = 10%)
+const GIF_IN_WEBM = { left: -0.1377, top: -0.0912, width: 0.8838 };
+const WEBM_ASPECT = 2614 / 1535;
+const GIF_RE = /\.gif(\?.*)?$/i;
+
+// rettangolo occupato da un contenuto con proporzioni "aspect" dentro un box (object-fit: contain)
+function containRect(boxW, boxH, aspect) {
+    let w = boxW, h = boxW / aspect;
+    if (h > boxH) { h = boxH; w = boxH * aspect; }
+    return { x: (boxW - w) / 2, y: (boxH - h) / 2, w, h };
+}
+
+function readCssNumber(el, name, fallback) {
+    const v = parseFloat(getComputedStyle(el).getPropertyValue(name));
+    return Number.isFinite(v) ? v : fallback;
+}
+
+function fitGifLikeWebm(img) {
+    if (!img) return;
+    const src = img.getAttribute('src') || '';
+    if (!GIF_RE.test(src) || img.style.display === 'none') {
+        img.classList.remove('is-gif');
+        img.style.transform = '';
+        img.style.transformOrigin = '';
+        return;
+    }
+    img.classList.add('is-gif');
+    const BW = img.clientWidth, BH = img.clientHeight;
+    if (!BW || !BH) return;   // ancora nascosta: ci pensa il ResizeObserver quando compare
+    const gifAspect = (img.naturalWidth && img.naturalHeight) ? img.naturalWidth / img.naturalHeight : 1197 / 750;
+    const extraScale = readCssNumber(img, '--gif-scale', 1);
+    const extraX = readCssNumber(img, '--gif-x', 0) / 100;
+    const extraY = readCssNumber(img, '--gif-y', 0) / 100;
+
+    const webm = containRect(BW, BH, WEBM_ASPECT);   // dove si vede il .webm
+    const gif = containRect(BW, BH, gifAspect);      // dove la gif si disegnerebbe da sola
+    const s = (GIF_IN_WEBM.width * webm.w / gif.w) * extraScale;
+    // il centro della gif va sul centro calcolato dentro il webm (+ correzioni dal CSS)
+    const gifH = GIF_IN_WEBM.width * webm.w / gifAspect;
+    const cx = webm.x + (GIF_IN_WEBM.left + extraX) * webm.w + GIF_IN_WEBM.width * webm.w / 2;
+    const cy = webm.y + (GIF_IN_WEBM.top + extraY) * webm.h + gifH / 2;
+    const dx = cx - s * (gif.x + gif.w / 2);
+    const dy = cy - s * (gif.y + gif.h / 2);
+    img.style.transformOrigin = '0 0';
+    img.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${s.toFixed(4)})`;
+}
+
+const MOTION_IMG_IDS = ['img_default', 'img_idle', 'img_atk'];
+function fitVisibleGifs() {
+    MOTION_IMG_IDS.forEach(id => fitGifLikeWebm(document.getElementById(id)));
+}
+window.addEventListener('resize', fitVisibleGifs);
+const gifResizeObserver = ('ResizeObserver' in window) ? new ResizeObserver(entries => entries.forEach(en => fitGifLikeWebm(en.target))) : null;
+MOTION_IMG_IDS.forEach(id => {
+    const img = document.getElementById(id);
+    if (!img) return;
+    img.addEventListener('load', () => fitGifLikeWebm(img));
+    if (gifResizeObserver) gifResizeObserver.observe(img);
+});
 
 function showMotion(type) {
     if (!currentUnitOpen) return;
@@ -1304,38 +1372,17 @@ function showMotion(type) {
             if (btn) btn.style.display = 'inline';
 
             const originalSrc = currentUnitOpen.animations?.[t] || "";
-            // iPhone/iPad/Safari: .mov (trasparente) al posto del .webm, poi .gif se il .mov manca
             const candidates = getAnimationCandidates(originalSrc);
-            const src = candidates[0] || '';
+            let attempt = 0;
 
-            // video (mp4, webm, mov, m4v) -> <video>; gif/webp/png -> <img>
-            if (isVideoFile(src)) {
-                if (videoTag) {
-                    // se il video non si carica (file mancante o formato non supportato) si prova la .gif con lo stesso nome
-                    // se il file non si carica (manca o formato non supportato) si passa al successivo dell'elenco
-                    let attempt = 0;
-                    videoTag.onerror = () => {
-                        if (currentUnitOpen?.animations?.[t] !== originalSrc) return;
-                        attempt++;
-                        const next = candidates[attempt];
-                        if (!next) return;
-                        if (isVideoFile(next)) {
-                            videoTag.classList.toggle('is-mov', /\.mov(\?.*)?$/i.test(next));
-                            videoTag.src = next;
-                            videoTag.load();
-                            videoTag.play().catch(() => { });
-                            return;
-                        }
-                        if (!imgTag) return;
-                        videoTag.style.display = 'none';
-                        videoTag.removeAttribute('src');
-                        imgTag.style.display = 'block';
-                        imgTag.src = next;
-                    };
-                    // i .webm hanno una dimensione propria regolabile dal CSS (--webm-scale)
-                    videoTag.classList.toggle('is-webm', WEBM_RE.test(originalSrc) || MOV_RE.test(originalSrc));
-                    // i .mov (iPhone/Safari) hanno una regolazione tutta loro nel CSS (--mov-scale, --mov-x, --mov-y)
-                    videoTag.classList.toggle('is-mov', /\.mov(\?.*)?$/i.test(src));
+            // mostra il file numero "attempt" dell'elenco: video (webm/mp4) in <video>, immagini (webp/gif/png) in <img>
+            const showCandidate = () => {
+                const src = candidates[attempt];
+                if (!src) return;
+                if (isVideoFile(src) && videoTag) {
+                    if (imgTag) { imgTag.style.display = 'none'; imgTag.removeAttribute('src'); }
+                    // i .webm hanno una dimensione regolabile dal CSS (--webm-scale)
+                    videoTag.classList.toggle('is-webm', WEBM_RE.test(src));
                     videoTag.style.display = 'block';
                     videoTag.muted = true;
                     videoTag.playsInline = true;
@@ -1345,26 +1392,38 @@ function showMotion(type) {
                         videoTag.load();
                     }
                     videoTag.play().catch(() => { });
-                }
-                if (imgTag) imgTag.style.display = 'none';
-            } else if (src) {
-                if (videoTag) {
-                    videoTag.style.display = 'none';
-                    videoTag.removeAttribute('src');
-                }
-                if (imgTag) {
+                } else if (imgTag) {
+                    if (videoTag) { videoTag.pause(); videoTag.removeAttribute('src'); videoTag.style.display = 'none'; }
                     imgTag.style.display = 'block';
                     if (imgTag.getAttribute('src') !== src) imgTag.src = src;
+                    fitGifLikeWebm(imgTag);
                 }
-            }
+            };
+
+            // se un file manca o non si può riprodurre si passa al successivo dell'elenco
+            const tryNext = (e) => {
+                if (currentUnitOpen?.animations?.[t] !== originalSrc) return;
+                // conta solo l'errore del file che si sta mostrando adesso
+                if (!e || !e.target || e.target.getAttribute('src') !== candidates[attempt]) return;
+                attempt++;
+                showCandidate();
+            };
+            if (videoTag) videoTag.onerror = tryNext;
+            if (imgTag) imgTag.onerror = tryNext;
+
+            showCandidate();
         } else {
             if (container) container.style.display = 'none';
             if (btn) btn.style.display = 'none';
             if (videoTag) {
+                videoTag.onerror = null;
                 videoTag.pause();
                 videoTag.removeAttribute('src');
             }
-            if (imgTag) imgTag.removeAttribute('src');
+            if (imgTag) {
+                imgTag.onerror = null;
+                imgTag.removeAttribute('src');
+            }
         }
     });
 }
