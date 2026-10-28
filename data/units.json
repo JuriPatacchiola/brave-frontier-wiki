@@ -120,9 +120,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-default.webm",
-      "idle": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-idle.webm",
-      "atk": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-atk.webm"
+      "default": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-default.mov",
+      "idle": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-idle.mov",
+      "atk": "../video/six heros/Vargas/Fencer Vargas/Fencer-Vargas-atk.mov"
     },
     "effects": {
       "atk": "",
