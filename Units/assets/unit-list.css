@@ -2081,8 +2081,8 @@ body.modal-open {
     #container_default img[src*=".gif"],
     #container_idle img[src*=".gif"],
     #container_atk img[src*=".gif"] {
-        --char-x: -21.5;
-        --char-y: -19.6;
+        --char-x: 1;
+        --char-y: -31;
         --canvas-ratio: 1197 / 750;
         --canvas-size: calc(var(--anim-size) * 0.8838);
     }
@@ -2093,7 +2093,7 @@ body.modal-open {
     /* Telefono */
     .unit_gif {
         --anim-size: 750px;
-        --anim-zoom: 2.5;
+        --anim-zoom: 2;
         --anim-x: 0px;
         --anim-y: 0px;
     }
