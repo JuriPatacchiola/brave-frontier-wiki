@@ -328,7 +328,7 @@ body.modal-open {
     object-fit: contain;
 }
 
-/* Nome nella card: massimo 2 righe, poi "…" (il nome completo appare al passaggio del mouse) */
+/* Nome nella card: massimo 2 righe, poi “…” (il nome completo appare al passaggio del mouse) */
 .card-title {
     font-size: 0.9em;
     font-weight: bold;
@@ -1984,10 +1984,6 @@ body.modal-open {
 
 /* ==========================================================================
    ANIMAZIONI .WEBM NELLA MODALE (default / idle / atk)
-   I .webm usano le STESSE regole di posizione delle gif (sopra, in #container_... video),
-   quindi se il .webm ha la stessa tela della gif (es. 1197x750) si vede identico.
-   --webm-scale serve solo per un .webm con tela diversa (1 = come le gif, 0.5 = metà)
-   --webm-y sposta su/giù (valori negativi = più in alto)
    ========================================================================== */
 .unit_gif {
     --webm-scale: 1;
@@ -2002,13 +1998,6 @@ body.modal-open {
 
 /* ==========================================================================
    ANIMAZIONI .GIF NELLA MODALE
-   Le gif hanno una tela diversa dai .webm: main.js le sposta e le ingrandisce da solo
-   per metterle nello stesso posto del .webm (e del .webp su iPhone/iPad/Mac).
-   Se una gif è un po' più grande, più piccola o spostata, correggila solo qui:
-   (solo PC: su tablet e telefono vale il blocco qui sotto)
-   --gif-scale : 1 = uguale, 0.9 = più piccola, 1.1 = più grande
-   --gif-x     : + = più a destra, - = più a sinistra (2 = 2% della larghezza del webm)
-   --gif-y     : + = più in basso,  - = più in alto
    ========================================================================== */
 .unit_gif {
     /* PC */
@@ -2019,18 +2008,6 @@ body.modal-open {
 
 /* ==========================================================================
    TABLET E TELEFONO: ANIMAZIONI CENTRATE (.webm, .webp, .gif)
-   Ogni file è centrato a 50% 50% e ingrandito da 50% 50%, poi viene spostato
-   del punto in cui il personaggio si trova nella sua tela.
-
-   Da regolare per dispositivo:
-   --anim-size : grandezza della tela (il personaggio cresce con lei)
-   --anim-zoom : zoom del personaggio (1 = normale, 1.5 = +50%)
-   --anim-x    : + = più a destra, - = più a sinistra (in px)
-   --anim-y    : + = più in basso, - = più in alto (in px)
-
-   Da regolare per formato (% della tela, valgono per tablet e telefono):
-   --char-x    : + = più a destra, - = più a sinistra
-   --char-y    : + = più in basso, - = più in alto
    ========================================================================== */
 @media (max-width: 1024px) {
 
@@ -2042,7 +2019,6 @@ body.modal-open {
         --anim-y: 0px;
     }
 
-    /* .webm (Android, Chrome) e qualsiasi altro file */
     #container_default video,
     #container_default img,
     #container_idle video,
@@ -2063,12 +2039,10 @@ body.modal-open {
         object-fit: contain;
         object-position: 50% 50%;
         transform-origin: 50% 50% !important;
-        /* !important: deve vincere anche sullo stile che main.js scrive sulle .gif */
         transform:
             translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
     }
 
-    /* .webp (iPhone, iPad, Safari) */
     #container_default img[src*=".webp"],
     #container_idle img[src*=".webp"],
     #container_atk img[src*=".webp"] {
@@ -2077,7 +2051,6 @@ body.modal-open {
         --canvas-ratio: 751 / 756;
     }
 
-    /* .gif (iPhone e iPad se manca la .webp) */
     #container_default img[src*=".gif"],
     #container_idle img[src*=".gif"],
     #container_atk img[src*=".gif"] {
@@ -2090,11 +2063,53 @@ body.modal-open {
 
 @media (max-width: 600px) {
 
-    /* Telefono */
+    /* Telefono: Animazioni grandi, centrate e scalate correttamente */
     .unit_gif {
         --anim-size: 750px;
-        --anim-zoom: 2;
+        --anim-zoom: 2.2;
+        /* Aumentato lo zoom per renderle grandi nel riquadro */
         --anim-x: 0px;
         --anim-y: 0px;
+    }
+
+    #container_default video,
+    #container_default img,
+    #container_idle video,
+    #container_idle img,
+    #container_atk video,
+    #container_atk img {
+        --char-x: 0.6;
+        --char-y: -6.5;
+        --canvas-ratio: 2614 / 1535;
+        --canvas-size: var(--anim-size);
+
+        left: 50%;
+        top: 50%;
+        width: var(--canvas-size);
+        height: auto;
+        max-width: none;
+        aspect-ratio: var(--canvas-ratio);
+        object-fit: contain;
+        object-position: 50% 50%;
+        transform-origin: 50% 50% !important;
+        transform:
+            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
+    }
+
+    #container_default img[src*=".webp"],
+    #container_idle img[src*=".webp"],
+    #container_atk img[src*=".webp"] {
+        --char-x: 20.4;
+        --char-y: -10;
+        --canvas-ratio: 751 / 756;
+    }
+
+    #container_default img[src*=".gif"],
+    #container_idle img[src*=".gif"],
+    #container_atk img[src*=".gif"] {
+        --char-x: 1;
+        --char-y: -31;
+        --canvas-ratio: 1197 / 750;
+        --canvas-size: calc(var(--anim-size) * 0.8838);
     }
 }
