@@ -1288,10 +1288,10 @@ body.modal-open {
     #container_atk video,
     #container_idle video,
     .unit_gif img {
-        width: 340.43%;
-        height: 380.88%;
-        left: -449px;
-        top: -159.82%;
+        width: 200.43%;
+        height: 290.88%;
+        left: -179px;
+        top: -99.82%;
     }
 
     #video_default,

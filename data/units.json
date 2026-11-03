@@ -158642,9 +158642,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10016/10016_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10016/10016_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10016/10016_atk.png"
+      "default": "../video/six heros/Vargas/Flame Legend Vargas/Flame-Legend-Vargas-default.webm",
+      "idle": "../video/six heros/Vargas/Flame Legend Vargas/Flame-Legend-Vargas-idle.webm",
+      "atk": "../video/six heros/Vargas/Flame Legend Vargas/Flame-Legend-Vargas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -255531,9 +255531,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10017/10017_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10017/10017_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10017/10017_atk.png"
+      "default": "../video/six heros/Vargas/Ignis Halcyon Vargas/Ignis-Halcyon-Vargas-default.webm",
+      "idle": "../video/six heros/Vargas/Ignis Halcyon Vargas/Ignis-Halcyon-Vargas-idle.webm",
+      "atk": "../video/six heros/Vargas/Ignis Halcyon Vargas/Ignis-Halcyon-Vargas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -477316,9 +477316,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710014/710014_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710014/710014_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710014/710014_atk.png"
+      "default": "../video/EU/Halloween/jack/Jack Lanciere Errante/Jack-Lanciere-Errante-default.webm",
+      "idle": "../video/EU/Halloween/jack/Jack Lanciere Errante/Jack-Lanciere-Errante-idle.webm",
+      "atk": "../video/EU/Halloween/jack/Jack Lanciere Errante/Jack-Lanciere-Errante-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -477539,9 +477539,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710015/710015_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710015/710015_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710015/710015_atk.png"
+      "default": "../video/EU/Halloween/jack/Jack Cavaliere/Jack-Cavaliere-default.webm",
+      "idle": "../video/EU/Halloween/jack/Jack Cavaliere/Jack-Cavaliere-idle.webm",
+      "atk": "../video/EU/Halloween/jack/Jack Cavaliere/Jack-Cavaliere-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -510080,9 +510080,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710016/710016_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710016/710016_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710016/710016_atk.png"
+      "default": "../video/EU/Halloween/jack/Esercito di Jack/Esercito-di-Jack-default.webm",
+      "idle": "../video/EU/Halloween/jack/Esercito di Jack/Esercito-di-Jack-idle.webm",
+      "atk": "../video/EU/Halloween/jack/Esercito di Jack/Esercito-di-Jack-atk.webm"
     },
     "effects": {
       "atk": "",
