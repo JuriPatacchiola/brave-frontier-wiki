@@ -2072,3 +2072,42 @@ body.modal-open {
         --gif-y: 0;
     }
 }
+
+/* ==========================================================================
+   ALLINEAMENTO ANIMAZIONI SU TELEFONO (iPhone: .webp / .gif)
+   --mobile-anim-x: + = più a destra, - = più a sinistra
+   --mobile-anim-y: + = più in basso, - = più in alto
+   ========================================================================== */
+.unit_gif {
+    --mobile-anim-x: 0;
+    --mobile-anim-y: 0;
+}
+
+@media (max-width: 600px) {
+    .unit_gif {
+        --mobile-anim-x: 17;
+        /* valore stimato dagli screenshot */
+        --mobile-anim-y: 0;
+
+        /* le .gif usano queste variabili già lette da main.js */
+        --gif-x: var(--mobile-anim-x);
+        --gif-y: var(--mobile-anim-y);
+    }
+
+    /* Stessa posizione su tutti i telefoni, non solo a 375px */
+    #container_default img,
+    #container_default video,
+    #container_idle img,
+    #container_idle video,
+    #container_atk img,
+    #container_atk video {
+        left: calc(-50.215% + 9px);
+    }
+
+    /* Le .webp non passano da main.js: si spostano direttamente qui */
+    #container_default img[src*=".webp"],
+    #container_idle img[src*=".webp"],
+    #container_atk img[src*=".webp"] {
+        transform: translate(calc(var(--mobile-anim-x) * 1%), calc(var(--mobile-anim-y) * 1%));
+    }
+}
