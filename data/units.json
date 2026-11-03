@@ -477111,9 +477111,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710013/710013_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710013/710013_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710013/710013_atk.png"
+      "default": "../video/EU/Halloween/jack/Jack Errante/Jack-Errante-default.webm",
+      "idle": "../video/EU/Halloween/jack/Jack Errante/Jack-Errante-idle.webm",
+      "atk": "../video/EU/Halloween/jack/Jack Errante/Jack-Errante-atk.webm"
     },
     "effects": {
       "atk": "",

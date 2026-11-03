@@ -467,10 +467,10 @@ body.modal-open {
     transform: translateZ(0);
     will-change: transform, top, left, width, height;
     backface-visibility: hidden;
-    width: 200.43%;
-    height: 200.88%;
-    left: -47.15%;
-    top: -51.82%;
+    width: 460.43%;
+    height: 380.88%;
+    left: -180%;
+    top: -161.82%;
 }
 
 .shadow {
@@ -1139,10 +1139,10 @@ body.modal-open {
     #container_atk video,
     #container_idle video,
     .unit_gif img {
-        width: 260.43%;
-        height: 260.88%;
-        left: -68.15%;
-        top: -79.82%;
+        width: 330.43%;
+        height: 340.88%;
+        left: -420px;
+        top: -550px;
     }
 
     /* Adattamento cerchio per Tablet */
@@ -1288,10 +1288,10 @@ body.modal-open {
     #container_atk video,
     #container_idle video,
     .unit_gif img {
-        width: 170.43%;
-        height: 170.88%;
-        left: -31.15%;
-        top: -24.82%;
+        width: 340.43%;
+        height: 380.88%;
+        left: -449px;
+        top: -159.82%;
     }
 
     #video_default,
