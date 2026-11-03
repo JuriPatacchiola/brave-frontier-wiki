@@ -1508,11 +1508,59 @@ body.modal-open {
     .fullart-star {
         bottom: 18vh;
     }
+
+    /* Telefono: Animazioni grandi, centrate e scalate correttamente */
+    .unit_gif {
+        --anim-size: 650px;
+        --anim-zoom: 1.8;
+        --anim-x: 0px;
+        --anim-y: 0px;
+    }
+
+    #container_default video,
+    #container_default img,
+    #container_idle video,
+    #container_idle img,
+    #container_atk video,
+    #container_atk img {
+        --char-x: 0.6;
+        --char-y: -6.5;
+        --canvas-ratio: 2614 / 1535;
+        --canvas-size: var(--anim-size);
+
+        left: 50%;
+        top: 50%;
+        width: var(--canvas-size);
+        height: auto;
+        max-width: none;
+        aspect-ratio: var(--canvas-ratio);
+        object-fit: contain;
+        object-position: 50% 50%;
+        transform-origin: 50% 50% !important;
+        transform:
+            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
+    }
+
+    #container_default img[src*=".webp"],
+    #container_idle img[src*=".webp"],
+    #container_atk img[src*=".webp"] {
+        --char-x: 20.4;
+        --char-y: -10;
+        --canvas-ratio: 751 / 756;
+    }
+
+    #container_default img[src*=".gif"],
+    #container_idle img[src*=".gif"],
+    #container_atk img[src*=".gif"] {
+        --char-x: 1;
+        --char-y: -31;
+        --canvas-ratio: 1197 / 750;
+        --canvas-size: calc(var(--anim-size) * 0.8838);
+    }
 }
 
 /* ==========================================================================
    FRASI SUMMON / FUSION NELLA MODALE FULL ART
-   Click 1: frase evocazione | click 2: frase fusione | click 3: solo Full Art
    ========================================================================== */
 .fullart-quote-panel {
     position: absolute;
@@ -1547,7 +1595,6 @@ body.modal-open {
     z-index: 1;
     width: 76%;
     max-height: 62%;
-    /* frase lunga: scorre solo il testo dentro la cornice */
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -1588,12 +1635,10 @@ body.modal-open {
 
 /* ==========================================================================
    EFFETTO "FIGURA 3D" AL PASSAGGIO DEL MOUSE (solo PC)
-   L'icona si ribalta e sparisce, al suo posto il personaggio (full art) sale dentro la card
    ========================================================================== */
 .unit-card {
     position: relative;
     overflow: hidden;
-    /* il personaggio non esce mai dalla card */
     --card-glow: rgba(212, 175, 55, 0.45);
 }
 
@@ -1628,11 +1673,8 @@ body.modal-open {
 
 .unit-card .card-icon {
     perspective: 400px;
-    /* serve per l'inclinazione 3D della pedana */
 }
 
-/* Icona: all'entrata si ribalta all'indietro "nel pavimento" e sparisce,
-   all'uscita si rialza (aspettando che il personaggio sia sceso) */
 .unit-card .card-icon .card-thumb {
     transform-origin: 50% 100%;
     transition:
@@ -1652,7 +1694,6 @@ body.modal-open {
     color: #d4af37;
 }
 
-/* Riquadro della figura: dal bordo alto della card fino al nome (altezza calcolata dal JS) */
 .card-figure-box {
     position: absolute;
     top: 8px;
@@ -1663,7 +1704,6 @@ body.modal-open {
     pointer-events: none;
 }
 
-/* Il personaggio: sempre intero dentro il riquadro, con i piedi in basso sulla pedana */
 .card-figure {
     width: 100%;
     height: 100%;
@@ -1673,8 +1713,6 @@ body.modal-open {
     transform: translateY(14px) scale(0.3);
     transform-origin: 50% 100%;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.85));
-    /* solo ombra scura, niente alone colorato */
-    /* uscita: il personaggio scende e sparisce subito */
     transition:
         transform 0.25s cubic-bezier(.4, 0, 1, 1),
         opacity 0.2s ease;
@@ -1682,7 +1720,6 @@ body.modal-open {
     -webkit-user-drag: none;
 }
 
-/* entrata: il personaggio sale con un piccolo rimbalzo, dopo che l'icona è sparita */
 .unit-card.show-art .card-figure {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -1691,7 +1728,6 @@ body.modal-open {
         opacity 0.2s ease 0.2s;
 }
 
-/* Su telefono e touch non serve */
 @media (hover: none),
 (max-width: 600px) {
     .card-figure-box {
@@ -1710,7 +1746,6 @@ body.modal-open {
     }
 }
 
-/* Niente barra di scorrimento orizzontale nella griglia */
 .unit-grid {
     overflow-x: hidden;
 }
@@ -1718,12 +1753,6 @@ body.modal-open {
 /* ==========================================================================
    VIDEO EFFETTI (btm6) + BOTTONI ATTACK / BB
    ========================================================================== */
-
-/* Video dell'effetto: riempie SEMPRE tutto il riquadro visibile, su qualsiasi schermo
-   (PC, tablet, iPhone), senza lasciare bordi vuoti.
-   Per regolarlo cambia solo queste variabili:
-   --fx-zoom  : ingrandimento (1 = riempie giusto, 1.2 = 20% più vicino)
-   --fx-x / --fx-y : punto da tenere al centro (50% 50% = centro del video) */
 #container_effect {
     --fx-zoom: 1;
     --fx-x: 50%;
@@ -1742,12 +1771,8 @@ body.modal-open {
     transform: scale(var(--fx-zoom));
     transform-origin: var(--fx-x) var(--fx-y);
     backface-visibility: hidden;
-    /* Se la GIF è pixel art e ingrandita sembra sfocata, togli il commento alla riga sotto:
-       i pixel restano netti invece di essere sfumati */
-    /* image-rendering: pixelated; */
 }
 
-/* btm6 in alto a sinistra (btm5 è in alto a destra) */
 .btn_effects {
     position: absolute;
     top: 10px;
@@ -1780,9 +1805,6 @@ body.modal-open {
     filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
 }
 
-/* Bottoni Attack (verde) e BB (blu) affiancati, al posto di btm1/2/3.
-   Stanno appoggiati al bordo inferiore (non centrati sul bottone "change area"),
-   così coprono il meno possibile l'animazione */
 .effect_choice {
     display: flex;
     gap: 8px;
@@ -1799,7 +1821,6 @@ body.modal-open {
     height: 52px;
     line-height: 0;
     filter: brightness(0.55) saturate(0.7);
-    /* non selezionato: più spento */
     transition: filter 0.2s ease, transform 0.15s ease;
 }
 
@@ -1837,8 +1858,6 @@ body.modal-open {
 }
 
 @media (max-width: 600px) {
-
-    /* su telefono il riquadro è più basso: qui puoi dare uno zoom diverso, es. 1.1 */
     #container_effect {
         --fx-zoom: 1;
     }
@@ -1861,11 +1880,9 @@ body.modal-open {
     .effect_choice {
         gap: 5px;
         margin-bottom: -8px;
-        /* su telefono ancora più in basso, quasi sul bordo */
     }
 }
 
-/* Alone del bottone selezionato per SBB e UBB */
 .btn_effect_type[data-effect="sbb"].active {
     filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 200, 60, 0.9));
 }
@@ -1874,20 +1891,17 @@ body.modal-open {
     filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 70, 70, 0.9));
 }
 
-/* Con 4 bottoni (7★/Omni) su telefono stanno un po' più stretti */
 @media (max-width: 600px) {
     .effect_choice {
         gap: 4px;
     }
 }
 
-/* Oggetti evolutivi (pietre) nella ricetta: senza sfondo scuro, con un leggero alone */
 .evo-recipe-item {
     background: transparent;
     filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.45));
 }
 
-/* Barra di scorrimento sottile e dorata per le frasi lunghe della Full Art (Chrome, Edge, Safari) */
 .fullart-quote-text::-webkit-scrollbar {
     width: 4px;
 }
@@ -1948,7 +1962,6 @@ body.modal-open {
     white-space: nowrap;
 }
 
-/* banner piccolo, affiancato al nome dell'evento */
 .obtain-banner-cell {
     width: 260px;
 }
@@ -2000,116 +2013,7 @@ body.modal-open {
    ANIMAZIONI .GIF NELLA MODALE
    ========================================================================== */
 .unit_gif {
-    /* PC */
     --gif-scale: 1;
     --gif-x: 0;
     --gif-y: 0;
-}
-
-/* ==========================================================================
-   TABLET E TELEFONO: ANIMAZIONI CENTRATE (.webm, .webp, .gif)
-   ========================================================================== */
-@media (max-width: 1024px) {
-
-    /* Tablet */
-    .unit_gif {
-        --anim-size: 1150px;
-        --anim-zoom: 2;
-        --anim-x: 0px;
-        --anim-y: 0px;
-    }
-
-    #container_default video,
-    #container_default img,
-    #container_idle video,
-    #container_idle img,
-    #container_atk video,
-    #container_atk img {
-        --char-x: 0.6;
-        --char-y: -6.5;
-        --canvas-ratio: 2614 / 1535;
-        --canvas-size: var(--anim-size);
-
-        left: 50%;
-        top: 50%;
-        width: var(--canvas-size);
-        height: auto;
-        max-width: none;
-        aspect-ratio: var(--canvas-ratio);
-        object-fit: contain;
-        object-position: 50% 50%;
-        transform-origin: 50% 50% !important;
-        transform:
-            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
-    }
-
-    #container_default img[src*=".webp"],
-    #container_idle img[src*=".webp"],
-    #container_atk img[src*=".webp"] {
-        --char-x: 20.4;
-        --char-y: -10;
-        --canvas-ratio: 751 / 756;
-    }
-
-    #container_default img[src*=".gif"],
-    #container_idle img[src*=".gif"],
-    #container_atk img[src*=".gif"] {
-        --char-x: 1;
-        --char-y: -31;
-        --canvas-ratio: 1197 / 750;
-        --canvas-size: calc(var(--anim-size) * 0.8838);
-    }
-}
-
-@media (max-width: 600px) {
-
-    /* Telefono: Animazioni grandi, centrate e scalate correttamente */
-    .unit_gif {
-        --anim-size: 750px;
-        --anim-zoom: 2.2;
-        /* Aumentato lo zoom per renderle grandi nel riquadro */
-        --anim-x: 0px;
-        --anim-y: 0px;
-    }
-
-    #container_default video,
-    #container_default img,
-    #container_idle video,
-    #container_idle img,
-    #container_atk video,
-    #container_atk img {
-        --char-x: 0.6;
-        --char-y: -6.5;
-        --canvas-ratio: 2614 / 1535;
-        --canvas-size: var(--anim-size);
-
-        left: 50%;
-        top: 50%;
-        width: var(--canvas-size);
-        height: auto;
-        max-width: none;
-        aspect-ratio: var(--canvas-ratio);
-        object-fit: contain;
-        object-position: 50% 50%;
-        transform-origin: 50% 50% !important;
-        transform:
-            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
-    }
-
-    #container_default img[src*=".webp"],
-    #container_idle img[src*=".webp"],
-    #container_atk img[src*=".webp"] {
-        --char-x: 20.4;
-        --char-y: -10;
-        --canvas-ratio: 751 / 756;
-    }
-
-    #container_default img[src*=".gif"],
-    #container_idle img[src*=".gif"],
-    #container_atk img[src*=".gif"] {
-        --char-x: 1;
-        --char-y: -31;
-        --canvas-ratio: 1197 / 750;
-        --canvas-size: calc(var(--anim-size) * 0.8838);
-    }
 }
