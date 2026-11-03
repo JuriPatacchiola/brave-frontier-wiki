@@ -1132,19 +1132,6 @@ body.modal-open {
    ========================================================================== */
 @media (max-width: 1024px) {
 
-    #container_default img,
-    #container_default video,
-    #container_idle img,
-    #container_atk img,
-    #container_atk video,
-    #container_idle video,
-    .unit_gif img {
-        width: 330.43%;
-        height: 340.88%;
-        left: -420px;
-        top: -550px;
-    }
-
     /* Adattamento cerchio per Tablet */
     .fullart-evocation-circle {
         width: min(130vmin, 750px);
@@ -1275,32 +1262,6 @@ body.modal-open {
     .unit_box_top {
         height: 260px;
         flex: none;
-    }
-
-    .unit_gif img {
-        width: 140%;
-    }
-
-    #container_default img,
-    #container_default video,
-    #container_idle img,
-    #container_atk img,
-    #container_atk video,
-    #container_idle video,
-    .unit_gif img {
-        width: 200.43%;
-        height: 290.88%;
-        left: -179px;
-        top: -99.82%;
-    }
-
-    #video_default,
-    #video_idle,
-    #video_atk {
-        width: 102%;
-        height: 140%;
-        object-fit: contain;
-        transform: translateY(-14%) translateX(-1%);
     }
 
     .unit_stats_side {
@@ -2044,6 +2005,7 @@ body.modal-open {
    Le gif hanno una tela diversa dai .webm: main.js le sposta e le ingrandisce da solo
    per metterle nello stesso posto del .webm (e del .webp su iPhone/iPad/Mac).
    Se una gif è un po' più grande, più piccola o spostata, correggila solo qui:
+   (solo PC: su tablet e telefono vale il blocco qui sotto)
    --gif-scale : 1 = uguale, 0.9 = più piccola, 1.1 = più grande
    --gif-x     : + = più a destra, - = più a sinistra (2 = 2% della larghezza del webm)
    --gif-y     : + = più in basso,  - = più in alto
@@ -2055,59 +2017,84 @@ body.modal-open {
     --gif-y: 0;
 }
 
-@media (max-width: 1024px) {
-    .unit_gif {
-        /* tablet */
-        --gif-scale: 1;
-        --gif-x: 0;
-        --gif-y: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .unit_gif {
-        /* telefono */
-        --gif-scale: 1;
-        --gif-x: 0;
-        --gif-y: 0;
-    }
-}
-
 /* ==========================================================================
-   ALLINEAMENTO ANIMAZIONI SU TELEFONO (iPhone: .webp / .gif)
-   --mobile-anim-x: + = più a destra, - = più a sinistra
-   --mobile-anim-y: + = più in basso, - = più in alto
+   TABLET E TELEFONO: ANIMAZIONI CENTRATE (.webm, .webp, .gif)
+   Ogni file è centrato a 50% 50% e ingrandito da 50% 50%, poi viene spostato
+   del punto in cui il personaggio si trova nella sua tela.
+
+   Da regolare per dispositivo:
+   --anim-size : grandezza della tela (il personaggio cresce con lei)
+   --anim-zoom : zoom del personaggio (1 = normale, 1.5 = +50%)
+   --anim-x    : + = più a destra, - = più a sinistra (in px)
+   --anim-y    : + = più in basso, - = più in alto (in px)
+
+   Da regolare per formato (% della tela, valgono per tablet e telefono):
+   --char-x    : + = più a destra, - = più a sinistra
+   --char-y    : + = più in basso, - = più in alto
    ========================================================================== */
-.unit_gif {
-    --mobile-anim-x: 0;
-    --mobile-anim-y: 0;
-}
+@media (max-width: 1024px) {
 
-@media (max-width: 600px) {
+    /* Tablet */
     .unit_gif {
-        --mobile-anim-x: 17;
-        /* valore stimato dagli screenshot */
-        --mobile-anim-y: 0;
-
-        /* le .gif usano queste variabili già lette da main.js */
-        --gif-x: var(--mobile-anim-x);
-        --gif-y: var(--mobile-anim-y);
+        --anim-size: 1150px;
+        --anim-zoom: 2;
+        --anim-x: 0px;
+        --anim-y: 0px;
     }
 
-    /* Stessa posizione su tutti i telefoni, non solo a 375px */
-    #container_default img,
+    /* .webm (Android, Chrome) e qualsiasi altro file */
     #container_default video,
-    #container_idle img,
+    #container_default img,
     #container_idle video,
-    #container_atk img,
-    #container_atk video {
-        left: calc(-50.215% + 9px);
+    #container_idle img,
+    #container_atk video,
+    #container_atk img {
+        --char-x: 0.6;
+        --char-y: -6.5;
+        --canvas-ratio: 2614 / 1535;
+        --canvas-size: var(--anim-size);
+
+        left: 50%;
+        top: 50%;
+        width: var(--canvas-size);
+        height: auto;
+        max-width: none;
+        aspect-ratio: var(--canvas-ratio);
+        object-fit: contain;
+        object-position: 50% 50%;
+        transform-origin: 50% 50% !important;
+        /* !important: deve vincere anche sullo stile che main.js scrive sulle .gif */
+        transform:
+            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
     }
 
-    /* Le .webp non passano da main.js: si spostano direttamente qui */
+    /* .webp (iPhone, iPad, Safari) */
     #container_default img[src*=".webp"],
     #container_idle img[src*=".webp"],
     #container_atk img[src*=".webp"] {
-        transform: translate(calc(var(--mobile-anim-x) * 1%), calc(var(--mobile-anim-y) * 1%));
+        --char-x: 20.4;
+        --char-y: -10;
+        --canvas-ratio: 751 / 756;
+    }
+
+    /* .gif (iPhone e iPad se manca la .webp) */
+    #container_default img[src*=".gif"],
+    #container_idle img[src*=".gif"],
+    #container_atk img[src*=".gif"] {
+        --char-x: -21.5;
+        --char-y: -19.6;
+        --canvas-ratio: 1197 / 750;
+        --canvas-size: calc(var(--anim-size) * 0.8838);
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Telefono */
+    .unit_gif {
+        --anim-size: 750px;
+        --anim-zoom: 2.5;
+        --anim-x: 0px;
+        --anim-y: 0px;
     }
 }
