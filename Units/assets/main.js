@@ -1344,6 +1344,75 @@ function fitGifLikeWebm(img) {
     img.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${s.toFixed(4)})`;
 }
 
+/* ==========================================================================
+   CENTRATURA AUTOMATICA DEL PERSONAGGIO (tablet e telefono)
+   Ogni unità è disegnata in un punto diverso della tela: qui si legge il primo
+   fotogramma, si trova dove sono i pixel non trasparenti e si passa al CSS lo
+   spostamento per portarli al centro del riquadro (--char-x e --char-y).
+   ========================================================================== */
+const CENTER_SAMPLE_WIDTH = 240;   // risoluzione della lettura: basta poco
+const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
+const CENTER_TRIM = 0.02;          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
+
+function trimmedCenter(counts, total) {
+    const skip = total * CENTER_TRIM;
+    let seen = 0, first = 0, last = counts.length - 1;
+    for (let i = 0; i < counts.length; i++) {
+        seen += counts[i];
+        if (seen > skip) { first = i; break; }
+    }
+    seen = 0;
+    for (let i = counts.length - 1; i >= 0; i--) {
+        seen += counts[i];
+        if (seen > skip) { last = i; break; }
+    }
+    return (first + last + 1) / 2 / counts.length;
+}
+
+function centerOnCharacter(el) {
+    if (!el) return;
+    el.style.removeProperty('--char-x');
+    el.style.removeProperty('--char-y');
+    el.style.removeProperty('--canvas-ratio');
+
+    const w = el.naturalWidth || el.videoWidth;
+    const h = el.naturalHeight || el.videoHeight;
+    if (!w || !h) return;
+    el.style.setProperty('--canvas-ratio', `${w} / ${h}`);
+
+    try {
+        const canvas = document.createElement('canvas');
+        canvas.width = CENTER_SAMPLE_WIDTH;
+        canvas.height = Math.max(1, Math.round(CENTER_SAMPLE_WIDTH * h / w));
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        ctx.drawImage(el, 0, 0, canvas.width, canvas.height);
+        const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+        const cols = new Array(canvas.width).fill(0);
+        const rows = new Array(canvas.height).fill(0);
+        let total = 0;
+        for (let y = 0; y < canvas.height; y++) {
+            for (let x = 0; x < canvas.width; x++) {
+                if (pixels[(y * canvas.width + x) * 4 + 3] >= CENTER_MIN_ALPHA) {
+                    cols[x]++; rows[y]++; total++;
+                }
+            }
+        }
+        // tela vuota o senza trasparenza: resta centrata la tela intera
+        if (!total || total === canvas.width * canvas.height) return;
+
+        el.style.setProperty('--char-x', ((0.5 - trimmedCenter(cols, total)) * 100).toFixed(2));
+        el.style.setProperty('--char-y', ((0.5 - trimmedCenter(rows, total)) * 100).toFixed(2));
+    } catch (err) {
+        console.warn('Centratura automatica non riuscita:', err);
+    }
+}
+
+['video_default', 'video_idle', 'video_atk'].forEach(id => {
+    const video = document.getElementById(id);
+    if (video) video.addEventListener('loadeddata', () => centerOnCharacter(video));
+});
+
 const MOTION_IMG_IDS = ['img_default', 'img_idle', 'img_atk'];
 function fitVisibleGifs() {
     MOTION_IMG_IDS.forEach(id => fitGifLikeWebm(document.getElementById(id)));
@@ -1353,7 +1422,10 @@ const gifResizeObserver = ('ResizeObserver' in window) ? new ResizeObserver(entr
 MOTION_IMG_IDS.forEach(id => {
     const img = document.getElementById(id);
     if (!img) return;
-    img.addEventListener('load', () => fitGifLikeWebm(img));
+    img.addEventListener('load', () => {
+        fitGifLikeWebm(img);
+        centerOnCharacter(img);
+    });
     if (gifResizeObserver) gifResizeObserver.observe(img);
 });
 

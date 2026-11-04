@@ -1508,55 +1508,6 @@ body.modal-open {
     .fullart-star {
         bottom: 18vh;
     }
-
-    /* Telefono: Animazioni grandi, centrate e scalate correttamente */
-    .unit_gif {
-        --anim-size: 650px;
-        --anim-zoom: 1.8;
-        --anim-x: 0px;
-        --anim-y: 0px;
-    }
-
-    #container_default video,
-    #container_default img,
-    #container_idle video,
-    #container_idle img,
-    #container_atk video,
-    #container_atk img {
-        --char-x: 0.6;
-        --char-y: -6.5;
-        --canvas-ratio: 2614 / 1535;
-        --canvas-size: var(--anim-size);
-
-        left: 50%;
-        top: 50%;
-        width: var(--canvas-size);
-        height: auto;
-        max-width: none;
-        aspect-ratio: var(--canvas-ratio);
-        object-fit: contain;
-        object-position: 50% 50%;
-        transform-origin: 50% 50% !important;
-        transform:
-            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
-    }
-
-    #container_default img[src*=".webp"],
-    #container_idle img[src*=".webp"],
-    #container_atk img[src*=".webp"] {
-        --char-x: 20.4;
-        --char-y: -10;
-        --canvas-ratio: 751 / 756;
-    }
-
-    #container_default img[src*=".gif"],
-    #container_idle img[src*=".gif"],
-    #container_atk img[src*=".gif"] {
-        --char-x: 1;
-        --char-y: -31;
-        --canvas-ratio: 1197 / 750;
-        --canvas-size: calc(var(--anim-size) * 0.8838);
-    }
 }
 
 /* ==========================================================================
@@ -2016,4 +1967,67 @@ body.modal-open {
     --gif-scale: 1;
     --gif-x: 0;
     --gif-y: 0;
+}
+
+/* ==========================================================================
+   TABLET E TELEFONO: ANIMAZIONI CENTRATE (.gif, .webp, .webm)
+   main.js trova da solo dove si trova il personaggio in ogni file e lo porta
+   al centro del riquadro: qui si regola solo la grandezza.
+   --anim-size : grandezza della tela
+   --anim-zoom : zoom (1 = normale, 1.5 = +50%)
+   --anim-x    : + = più a destra, - = più a sinistra (in px)
+   --anim-y    : + = più in basso, - = più in alto (in px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+
+    /* Tablet */
+    .unit_gif {
+        --anim-size: 1000px;
+        --anim-zoom: 1.8;
+        --anim-x: 0px;
+        --anim-y: 0px;
+    }
+
+    #container_default video,
+    #container_default img,
+    #container_idle video,
+    #container_idle img,
+    #container_atk video,
+    #container_atk img {
+        /* --char-x, --char-y e --canvas-ratio vengono impostati da main.js */
+        --char-x: 0;
+        --char-y: 0;
+        --canvas-ratio: 2614 / 1535;
+        --canvas-size: var(--anim-size);
+
+        left: 50%;
+        top: 50%;
+        width: var(--canvas-size);
+        height: auto;
+        max-width: none;
+        aspect-ratio: var(--canvas-ratio);
+        object-fit: contain;
+        object-position: 50% 50%;
+        transform-origin: 50% 50% !important;
+        transform:
+            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--anim-zoom) * 1%), calc(var(--char-y) * var(--anim-zoom) * 1%)) scale(var(--anim-zoom)) !important;
+    }
+
+    /* Le .gif hanno una tela più piccola: così il personaggio resta grande come negli altri formati */
+    #container_default img[src*=".gif"],
+    #container_idle img[src*=".gif"],
+    #container_atk img[src*=".gif"] {
+        --canvas-size: calc(var(--anim-size) * 0.8838);
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Telefono */
+    .unit_gif {
+        --anim-size: 650px;
+        --anim-zoom: 1.8;
+        --anim-x: 0px;
+        --anim-y: 0px;
+    }
 }
