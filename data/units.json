@@ -158977,9 +158977,9 @@
       }
     },
     "animations": {
-      "default": "../video/Selena/Ice Legend Selena/Ice-Legend-Selena-default.webm",
-      "idle": "../video/Selena/Ice Legend Selena/Ice-Legend-Selena-idle.webm",
-      "atk": "../video/Selena/Ice Legend Selena/Ice-Legend-Selena-atk.webm"
+      "default": "../video/six heros/Selena/Ice Legend Selena/Ice-Legend-Selena-default.webm",
+      "idle": "../video/six heros/Selena/Ice Legend Selena/Ice-Legend-Selena-idle.webm",
+      "atk": "../video/six heros/Selena/Ice Legend Selena/Ice-Legend-Selena-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -255866,9 +255866,9 @@
       }
     },
     "animations": {
-      "default": "../video/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-default.webm",
-      "idle": "../video/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-idle.webm",
-      "atk": "../video/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-atk.webm"
+      "default": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-default.webm",
+      "idle": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-idle.webm",
+      "atk": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-atk.webm"
     },
     "effects": {
       "atk": "",

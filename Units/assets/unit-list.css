@@ -1987,8 +1987,8 @@ body.modal-open {
     --char-x: 0;
     --char-y: 0;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 47%;
+    top: 59%;
     width: auto;
     height: auto;
     max-width: none;
