@@ -1245,15 +1245,16 @@ function handleSwipeGesture() {
 }
 
 /* ==========================================================================
-   ANIMAZIONI SU IPHONE / IPAD / SAFARI -> .WEBP ANIMATA -> .GIF
+   ANIMAZIONI SU IPHONE / IPAD / SAFARI -> .WEBP ANIMATA
    Safari (e tutti i browser su iPhone/iPad, che usano lo stesso motore) non mostra
    la trasparenza dei video .webm: il personaggio comparirebbe su un riquadro NERO.
    I .mov funzionano solo se codificati in HEVC con canale alfa (si fanno solo su Mac),
    quindi su questi dispositivi si usa un'immagine animata con trasparenza:
-     1) la .webp con lo stesso nome  (es. Fencer-Vargas-idle.webp)  -> colori pieni e bordi morbidi
-     2) la .gif con lo stesso nome   (es. Fencer-Vargas-idle.gif)   -> se la .webp non c'è
-   Su PC e Android si usa il .webm (e, se manca, la .gif).
-   Nel JSON si scrive sempre e solo il .webm: .webp e .gif vanno nella stessa cartella.
+     la .webp con lo stesso nome (es. Fencer-Vargas-idle.webp), nella stessa cartella del .webm.
+   Su PC e Android si usa il .webm.
+   Le .gif con lo stesso nome NON vengono mai usate al posto del .webm o della .webp:
+   se il file manca, l'animazione resta vuota.
+   Nel JSON si scrive sempre e solo il .webm (le unità che nel JSON hanno una .gif la usano normalmente).
    ========================================================================== */
 const NO_WEBM_ALPHA = (() => {
     const ua = navigator.userAgent || '';
@@ -1281,8 +1282,8 @@ function getAnimationCandidates(src) {
     const base = MOV_RE.test(src) ? String(src).replace(MOV_RE, '.webm') : src;
     if (!WEBM_RE.test(base)) return [src];
     return NO_WEBM_ALPHA
-        ? [withExtension(base, '.webp'), withExtension(base, '.gif')]
-        : [base, withExtension(base, '.gif')];
+        ? [withExtension(base, '.webp')]   // iPhone, iPad, Safari: solo la .webp
+        : [base];                          // PC e Android: solo il .webm
 }
 
 function pickAnimationSrc(src) {
@@ -1524,7 +1525,12 @@ function showMotion(type) {
             // mostra il file numero "attempt" dell'elenco: video (webm/mp4) in <video>, immagini (webp/gif/png) in <img>
             const showCandidate = () => {
                 const src = candidates[attempt];
-                if (!src) return;
+                if (!src) {
+                    // file mancante: riquadro vuoto invece dell'icona dell'immagine rotta
+                    if (imgTag) { imgTag.style.display = 'none'; imgTag.removeAttribute('src'); }
+                    if (videoTag) { videoTag.pause(); videoTag.removeAttribute('src'); videoTag.style.display = 'none'; }
+                    return;
+                }
                 if (isVideoFile(src) && videoTag) {
                     if (imgTag) { imgTag.style.display = 'none'; imgTag.removeAttribute('src'); }
                     // i .webm hanno una dimensione regolabile dal CSS (--webm-scale)
