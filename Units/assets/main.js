@@ -1354,7 +1354,8 @@ const CENTER_SAMPLE_WIDTH = 240;   // risoluzione della lettura: basta poco
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
 const CENTER_TRIM = 0.02;          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
 
-function trimmedCenter(counts, total) {
+// prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
+function trimmedRange(counts, total) {
     const skip = total * CENTER_TRIM;
     let seen = 0, first = 0, last = counts.length - 1;
     for (let i = 0; i < counts.length; i++) {
@@ -1366,7 +1367,60 @@ function trimmedCenter(counts, total) {
         seen += counts[i];
         if (seen > skip) { last = i; break; }
     }
+    return { first, last };
+}
+
+function trimmedCenter(counts, total) {
+    const { first, last } = trimmedRange(counts, total);
     return (first + last + 1) / 2 / counts.length;
+}
+
+/* ==========================================================================
+   STESSA GRANDEZZA SU TUTTI I FORMATI (tablet e telefono)
+   Le .gif di tutte le unità sono disegnate alla stessa scala: sono il riferimento.
+   I .webm invece hanno tele diverse:
+     - tela 2127x1866: stessa scala delle .gif
+     - tela 2614x1535: personaggio circa 1,9 volte più grande
+   Le .webp vanno esportate alla stessa scala della .gif (senza ingrandirle).
+   Qui ogni file riceve --px-scale = --pixel-scale del CSS x la sua scala,
+   così un personaggio è grande uguale su iPhone (.webp), PC/Android (.webm) e con la .gif.
+   ========================================================================== */
+const PIXEL_FIT_MAX = 0.9;   // il personaggio non supera mai il 90% del riquadro
+const WEBM_PER_GIF = [
+    { width: 2127, scale: 1 },
+    { width: 2614, scale: GIF_IN_WEBM.width * 2614 / 1197 }   // circa 1,93
+];
+
+// quanto va ridotto o ingrandito questo file per avere la scala delle .gif (0 = regola di prima)
+function pixelFileScale(el, width) {
+    if (el.tagName === 'VIDEO') {
+        const family = WEBM_PER_GIF.find(f => Math.abs(width - f.width) <= 4);
+        return family ? 1 / family.scale : 0;
+    }
+    const src = (el.getAttribute('src') || '').split('?')[0].toLowerCase();
+    return /\.(gif|webp)$/.test(src) ? 1 : 0;
+}
+
+function applyPixelScale(el) {
+    if (!el) return;
+    const fileScale = parseFloat(el.dataset.fileScale);
+    const baseScale = readCssNumber(el, '--pixel-scale', 0);   // c'è solo su tablet e telefono
+    if (!fileScale || !baseScale) {
+        el.removeAttribute('data-pixel-fit');
+        el.style.removeProperty('--px-scale');
+        return;
+    }
+    let scale = baseScale * fileScale;
+    const box = el.parentElement;
+    const charW = parseFloat(el.dataset.charW);
+    const charH = parseFloat(el.dataset.charH);
+    if (box && box.clientWidth && box.clientHeight && charW && charH) {
+        scale = Math.min(scale,
+            PIXEL_FIT_MAX * box.clientWidth / charW,
+            PIXEL_FIT_MAX * box.clientHeight / charH);
+    }
+    el.style.setProperty('--px-scale', scale.toFixed(4));
+    el.setAttribute('data-pixel-fit', '');
 }
 
 function centerOnCharacter(el) {
@@ -1374,11 +1428,15 @@ function centerOnCharacter(el) {
     el.style.removeProperty('--char-x');
     el.style.removeProperty('--char-y');
     el.style.removeProperty('--canvas-ratio');
+    delete el.dataset.charW;
+    delete el.dataset.charH;
+    delete el.dataset.fileScale;
 
     const w = el.naturalWidth || el.videoWidth;
     const h = el.naturalHeight || el.videoHeight;
-    if (!w || !h) return;
+    if (!w || !h) { applyPixelScale(el); return; }
     el.style.setProperty('--canvas-ratio', `${w} / ${h}`);
+    el.dataset.fileScale = String(pixelFileScale(el, w));
 
     try {
         const canvas = document.createElement('canvas');
@@ -1399,13 +1457,19 @@ function centerOnCharacter(el) {
             }
         }
         // tela vuota o senza trasparenza: resta centrata la tela intera
-        if (!total || total === canvas.width * canvas.height) return;
-
-        el.style.setProperty('--char-x', ((0.5 - trimmedCenter(cols, total)) * 100).toFixed(2));
-        el.style.setProperty('--char-y', ((0.5 - trimmedCenter(rows, total)) * 100).toFixed(2));
+        if (total && total < canvas.width * canvas.height) {
+            el.style.setProperty('--char-x', ((0.5 - trimmedCenter(cols, total)) * 100).toFixed(2));
+            el.style.setProperty('--char-y', ((0.5 - trimmedCenter(rows, total)) * 100).toFixed(2));
+            // grandezza del personaggio nel file, per non farlo uscire dal riquadro
+            const cr = trimmedRange(cols, total);
+            const rr = trimmedRange(rows, total);
+            el.dataset.charW = ((cr.last - cr.first + 1) / canvas.width * w).toFixed(1);
+            el.dataset.charH = ((rr.last - rr.first + 1) / canvas.height * h).toFixed(1);
+        }
     } catch (err) {
         console.warn('Centratura automatica non riuscita:', err);
     }
+    applyPixelScale(el);
 }
 
 ['video_default', 'video_idle', 'video_atk'].forEach(id => {
@@ -1414,8 +1478,18 @@ function centerOnCharacter(el) {
 });
 
 const MOTION_IMG_IDS = ['img_default', 'img_idle', 'img_atk'];
+const MOTION_MEDIA_IDS = MOTION_IMG_IDS.concat(['video_default', 'video_idle', 'video_atk']);
 function fitVisibleGifs() {
     MOTION_IMG_IDS.forEach(id => fitGifLikeWebm(document.getElementById(id)));
+    MOTION_MEDIA_IDS.forEach(id => applyPixelScale(document.getElementById(id)));
+}
+// quando un'animazione compare (o il riquadro cambia misura) la grandezza viene ricalcolata
+const pixelResizeObserver = ('ResizeObserver' in window) ? new ResizeObserver(entries => entries.forEach(en => applyPixelScale(en.target))) : null;
+if (pixelResizeObserver) {
+    MOTION_MEDIA_IDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) pixelResizeObserver.observe(el);
+    });
 }
 window.addEventListener('resize', fitVisibleGifs);
 const gifResizeObserver = ('ResizeObserver' in window) ? new ResizeObserver(entries => entries.forEach(en => fitGifLikeWebm(en.target))) : null;
