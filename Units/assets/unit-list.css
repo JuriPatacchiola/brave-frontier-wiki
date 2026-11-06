@@ -2074,3 +2074,29 @@ body.modal-open {
         --anim-y: 0px;
     }
 }
+
+/* ==========================================================================
+   PROTEZIONE DI IMMAGINI E ANIMAZIONI
+   Niente "Salva immagine" con il dito premuto (iPhone/Android), niente trascinamento
+   sul desktop e niente selezione. Il menu del tasto destro è bloccato da main.js.
+   ========================================================================== */
+img,
+video {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* animazioni e icone delle card: solo da guardare, i clic passano a ciò che sta sotto */
+#container_default img,
+#container_default video,
+#container_idle img,
+#container_idle video,
+#container_atk img,
+#container_atk video,
+#container_effect img,
+#container_effect video,
+.card-icon img {
+    pointer-events: none;
+}

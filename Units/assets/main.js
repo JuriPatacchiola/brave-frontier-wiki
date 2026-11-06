@@ -1969,3 +1969,19 @@ window.addEventListener('resize', () => {
 });
 
 startApp();
+
+/* ==========================================================================
+   PROTEZIONE DI IMMAGINI E ANIMAZIONI
+   Blocca il menu del tasto destro ("Salva immagine/video con nome...") e il
+   trascinamento su immagini, video, riquadro dell'animazione, Full Art e card.
+   ========================================================================== */
+(function protectMedia() {
+    const PROTECTED = 'img, video, .unit_box_top, .fullart-media-box, .unit-card';
+    const isProtected = target => !!(target && target.closest && target.closest(PROTECTED));
+    document.addEventListener('contextmenu', e => { if (isProtected(e.target)) e.preventDefault(); });
+    document.addEventListener('dragstart', e => { if (isProtected(e.target)) e.preventDefault(); });
+    document.querySelectorAll('video').forEach(v => {
+        v.disablePictureInPicture = true;
+        v.setAttribute('controlslist', 'nodownload');
+    });
+})();
