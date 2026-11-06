@@ -1398,8 +1398,9 @@ const WEBM_PER_GIF = [
 // quanto va ridotto o ingrandito questo file per avere la scala delle .gif (0 = regola di prima)
 function pixelFileScale(el, width) {
     if (el.tagName === 'VIDEO') {
+        // i vecchi .webm con tela 2614x1535 sono ingranditi: si riducono; tutti gli altri sono 1:1
         const family = WEBM_PER_GIF.find(f => Math.abs(width - f.width) <= 4);
-        return family ? 1 / family.scale : 0;
+        return family ? 1 / family.scale : 1;
     }
     const src = (el.getAttribute('src') || '').split('?')[0].toLowerCase();
     return /\.(gif|webp)$/.test(src) ? 1 : 0;
@@ -1474,90 +1475,43 @@ function centerOnCharacter(el) {
         console.warn('Centratura automatica non riuscita:', err);
     }
 
-    // ATTACCO: si centra tutta l'animazione, non solo il primo fotogramma
-    // (la grandezza resta quella del personaggio fermo, uguale a default e idle)
-    const isAttack = /_atk$/.test(el.id || '');
-    if (isAttack && el.tagName === 'IMG' && /\.webp(\?.*)?$/i.test(el.getAttribute('src') || '')) {
-        // le .webp sono ritagliate attorno a tutto l'attacco: il centro della tela è il centro dell'attacco
-        el.style.setProperty('--char-x', '0');
-        el.style.setProperty('--char-y', '0');
-    }
+    useStandingAnchor(el, w, h);
     applyPixelScale(el);
-    if (isAttack && el.tagName === 'VIDEO') centerVideoOnWholeAnimation(el);
 }
 
-/* Per i video dell'attacco (.webm su PC e Android) si guardano alcuni fotogrammi
-   sparsi in tutta l'animazione e si centra lo spazio occupato da tutti insieme.
-   Durante la misura (meno di un secondo) il video resta nascosto. */
-const ATTACK_SAMPLES = 24;
+/* ==========================================================================
+   STESSA POSIZIONE IN DEFAULT, IDLE E ATK
+   Come nel gioco, il personaggio deve stare nello stesso punto in tutte e tre
+   le animazioni (l'attacco parte da lì e si muove da lì).
+   La posizione del personaggio fermo si misura sul "default" (o sull'"idle" se il
+   default manca) e si usa uguale per le altre animazioni della stessa unità.
+   Funziona quando i tre file di un'unità hanno la stessa tela (stesse dimensioni):
+   i .webm del gioco e le .webp ritagliate tutte insieme. Se le dimensioni sono
+   diverse, ogni animazione si centra sul suo primo fotogramma.
+   ========================================================================== */
+let standingAnchor = null;
 
-function seekVideo(video, time) {
-    return new Promise(resolve => {
-        const done = () => {
-            clearTimeout(timer);
-            video.removeEventListener('seeked', done);
-            resolve();
+function useStandingAnchor(el, w, h) {
+    const motion = (el.id || '').split('_').pop();            // default, idle o atk
+    const unitKey = currentUnitOpen ? JSON.stringify(currentUnitOpen.animations || {}) : '';
+    const sameUnit = standingAnchor && standingAnchor.unitKey === unitKey;
+    const isAnchor = motion === 'default' || (motion === 'idle' && !(sameUnit && standingAnchor.motion === 'default'));
+
+    if (isAnchor) {
+        standingAnchor = {
+            unitKey, motion, tag: el.tagName, w, h,
+            charX: el.style.getPropertyValue('--char-x'),
+            charY: el.style.getPropertyValue('--char-y'),
+            charW: el.dataset.charW,
+            charH: el.dataset.charH
         };
-        const timer = setTimeout(done, 800);
-        video.addEventListener('seeked', done);
-        video.currentTime = time;
-    });
-}
-
-async function centerVideoOnWholeAnimation(video) {
-    const src = video.getAttribute('src');
-    const w = video.videoWidth, h = video.videoHeight;
-    const duration = video.duration;
-    if (!src || !w || !h || !isFinite(duration) || duration <= 0) return;
-    // il server deve permettere di spostarsi nel video (GitHub Pages lo permette): altrimenti resta il primo fotogramma
-    if (!video.seekable || !video.seekable.length || video.seekable.end(0) < duration * 0.9) return;
-
-    const canvas = document.createElement('canvas');
-    canvas.width = CENTER_SAMPLE_WIDTH;
-    canvas.height = Math.max(1, Math.round(CENTER_SAMPLE_WIDTH * h / w));
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    const seen = new Uint8Array(canvas.width * canvas.height);   // 1 = occupato in almeno un fotogramma
-
-    video.style.visibility = 'hidden';
-    video.pause();
-    try {
-        for (let i = 0; i < ATTACK_SAMPLES; i++) {
-            if (video.getAttribute('src') !== src) return;   // nel frattempo è cambiata animazione
-            await seekVideo(video, duration * i / ATTACK_SAMPLES);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-            const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-            for (let p = 0; p < seen.length; p++) {
-                if (pixels[p * 4 + 3] >= CENTER_MIN_ALPHA) seen[p] = 1;
-            }
-        }
-        // rettangolo che contiene tutto l'attacco (come il ritaglio delle .webp)
-        let x0 = canvas.width, x1 = -1, y0 = canvas.height, y1 = -1;
-        for (let y = 0; y < canvas.height; y++) {
-            for (let x = 0; x < canvas.width; x++) {
-                if (seen[y * canvas.width + x]) {
-                    if (x < x0) x0 = x;
-                    if (x > x1) x1 = x;
-                    if (y < y0) y0 = y;
-                    if (y > y1) y1 = y;
-                }
-            }
-        }
-        if (x1 >= 0 && video.getAttribute('src') === src) {
-            video.style.setProperty('--char-x', ((0.5 - (x0 + x1 + 1) / 2 / canvas.width) * 100).toFixed(2));
-            video.style.setProperty('--char-y', ((0.5 - (y0 + y1 + 1) / 2 / canvas.height) * 100).toFixed(2));
-        }
-    } catch (err) {
-        console.warn("Centratura dell'attacco non riuscita:", err);
-    } finally {
-        if (video.getAttribute('src') === src) {
-            video.currentTime = 0;
-            video.style.visibility = '';
-            video.play().catch(() => { });
-        } else {
-            video.style.visibility = '';
-        }
+        return;
     }
+    if (!sameUnit || standingAnchor.tag !== el.tagName || standingAnchor.w !== w || standingAnchor.h !== h) return;
+    if (standingAnchor.charX) el.style.setProperty('--char-x', standingAnchor.charX);
+    if (standingAnchor.charY) el.style.setProperty('--char-y', standingAnchor.charY);
+    if (standingAnchor.charW) el.dataset.charW = standingAnchor.charW;
+    if (standingAnchor.charH) el.dataset.charH = standingAnchor.charH;
 }
 
 ['video_default', 'video_idle', 'video_atk'].forEach(id => {

@@ -1970,11 +1970,50 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   TABLET E TELEFONO: ANIMAZIONI CENTRATE (.gif, .webp, .webm)
+   ANIMAZIONI .WEBP E .WEBM: CENTRATE E GRANDI UGUALI SU TUTTI I DISPOSITIVI
+   main.js calcola per ogni file --px-scale partendo da --pixel-scale
+   (PC qui sotto, tablet e telefono più in basso)
+   ========================================================================== */
+.unit_gif {
+    /* PC */
+    --pixel-scale: 0.85;
+    --anim-x: 0px;
+    --anim-y: 0px;
+}
+
+#container_default [data-pixel-fit],
+#container_idle [data-pixel-fit],
+#container_atk [data-pixel-fit] {
+    --char-x: 0;
+    --char-y: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    height: auto;
+    max-width: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    will-change: auto;
+    backface-visibility: visible;
+    transform-origin: 50% 50% !important;
+    transform:
+        translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--px-scale) * 1%), calc(var(--char-y) * var(--px-scale) * 1%)) scale(var(--px-scale)) !important;
+}
+
+/* pixel netti, senza sfumature */
+#container_default img[data-pixel-fit],
+#container_idle img[data-pixel-fit],
+#container_atk img[data-pixel-fit] {
+    image-rendering: pixelated;
+}
+
+/* ==========================================================================
+   TABLET E TELEFONO: ANIMAZIONI CENTRATE (.webp, .webm)
    main.js trova da solo dove si trova il personaggio in ogni file e lo porta
    al centro del riquadro: qui si regola solo la grandezza.
-   --pixel-scale : grandezza dei personaggi in .gif, .webp e .webm
-                   (stessa grandezza su iPhone, PC e Android; 1 = come la .gif originale)
+   --pixel-scale : grandezza dei personaggi in .webp e .webm
+                   (stessa grandezza su iPhone, PC e Android; 1 = come il file originale)
    --anim-size / --anim-zoom : grandezza delle animazioni in altri formati (.png, .mp4)
    --anim-x    : + = più a destra, - = più a sinistra (in px)
    --anim-y    : + = più in basso, - = più in alto (in px)
@@ -2002,8 +2041,8 @@ body.modal-open {
         --canvas-ratio: 2614 / 1535;
         --canvas-size: var(--anim-size);
 
-        left: 46%;
-        top: 58%;
+        left: 50%;
+        top: 50%;
         width: var(--canvas-size);
         height: auto;
         max-width: none;
@@ -2022,26 +2061,6 @@ body.modal-open {
         --canvas-size: calc(var(--anim-size) * 0.8838);
     }
 
-    /* .gif, .webp e .webm: grandezza reale del file x --px-scale (calcolato da main.js
-       partendo da --pixel-scale), così ogni unità è grande uguale su tutti i dispositivi */
-    #container_default [data-pixel-fit],
-    #container_idle [data-pixel-fit],
-    #container_atk [data-pixel-fit] {
-        width: auto;
-        height: auto;
-        aspect-ratio: auto;
-        will-change: auto;
-        backface-visibility: visible;
-        transform:
-            translate(-50%, -50%) translate(var(--anim-x), var(--anim-y)) translate(calc(var(--char-x) * var(--px-scale) * 1%), calc(var(--char-y) * var(--px-scale) * 1%)) scale(var(--px-scale)) !important;
-    }
-
-    /* pixel netti, senza sfumature */
-    #container_default img[data-pixel-fit],
-    #container_idle img[data-pixel-fit],
-    #container_atk img[data-pixel-fit] {
-        image-rendering: pixelated;
-    }
 }
 
 @media (max-width: 600px) {
