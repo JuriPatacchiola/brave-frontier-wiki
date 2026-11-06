@@ -1252,9 +1252,10 @@ function handleSwipeGesture() {
    quindi su questi dispositivi si usa un'immagine animata con trasparenza:
      la .webp con lo stesso nome (es. Fencer-Vargas-idle.webp), nella stessa cartella del .webm.
    Su PC e Android si usa il .webm.
-   Le .gif con lo stesso nome NON vengono mai usate al posto del .webm o della .webp:
-   se il file manca, l'animazione resta vuota.
-   Nel JSON si scrive sempre e solo il .webm (le unità che nel JSON hanno una .gif la usano normalmente).
+   Le .gif NON vengono mai usate, su nessun dispositivo:
+     - se nel JSON c'è un .webm: iPhone/iPad/Safari usano la .webp, PC e Android il .webm
+     - se nel JSON c'è una .gif: tutti usano la .webp con lo stesso nome nella stessa cartella
+   Se il file manca, l'animazione resta vuota.
    ========================================================================== */
 const NO_WEBM_ALPHA = (() => {
     const ua = navigator.userAgent || '';
@@ -1279,6 +1280,8 @@ function toGifPath(src) {
 // (nel JSON va bene anche il .mov: viene trattato come il .webm con lo stesso nome)
 function getAnimationCandidates(src) {
     if (!src) return [];
+    // .gif nel JSON: si usa sempre la .webp con lo stesso nome, mai la .gif
+    if (/\.gif(\?.*)?$/i.test(src)) return [String(src).replace(/\.gif(\?.*)?$/i, '.webp')];
     const base = MOV_RE.test(src) ? String(src).replace(MOV_RE, '.webm') : src;
     if (!WEBM_RE.test(base)) return [src];
     return NO_WEBM_ALPHA
@@ -1470,7 +1473,91 @@ function centerOnCharacter(el) {
     } catch (err) {
         console.warn('Centratura automatica non riuscita:', err);
     }
+
+    // ATTACCO: si centra tutta l'animazione, non solo il primo fotogramma
+    // (la grandezza resta quella del personaggio fermo, uguale a default e idle)
+    const isAttack = /_atk$/.test(el.id || '');
+    if (isAttack && el.tagName === 'IMG' && /\.webp(\?.*)?$/i.test(el.getAttribute('src') || '')) {
+        // le .webp sono ritagliate attorno a tutto l'attacco: il centro della tela è il centro dell'attacco
+        el.style.setProperty('--char-x', '0');
+        el.style.setProperty('--char-y', '0');
+    }
     applyPixelScale(el);
+    if (isAttack && el.tagName === 'VIDEO') centerVideoOnWholeAnimation(el);
+}
+
+/* Per i video dell'attacco (.webm su PC e Android) si guardano alcuni fotogrammi
+   sparsi in tutta l'animazione e si centra lo spazio occupato da tutti insieme.
+   Durante la misura (meno di un secondo) il video resta nascosto. */
+const ATTACK_SAMPLES = 24;
+
+function seekVideo(video, time) {
+    return new Promise(resolve => {
+        const done = () => {
+            clearTimeout(timer);
+            video.removeEventListener('seeked', done);
+            resolve();
+        };
+        const timer = setTimeout(done, 800);
+        video.addEventListener('seeked', done);
+        video.currentTime = time;
+    });
+}
+
+async function centerVideoOnWholeAnimation(video) {
+    const src = video.getAttribute('src');
+    const w = video.videoWidth, h = video.videoHeight;
+    const duration = video.duration;
+    if (!src || !w || !h || !isFinite(duration) || duration <= 0) return;
+    // il server deve permettere di spostarsi nel video (GitHub Pages lo permette): altrimenti resta il primo fotogramma
+    if (!video.seekable || !video.seekable.length || video.seekable.end(0) < duration * 0.9) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = CENTER_SAMPLE_WIDTH;
+    canvas.height = Math.max(1, Math.round(CENTER_SAMPLE_WIDTH * h / w));
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    const seen = new Uint8Array(canvas.width * canvas.height);   // 1 = occupato in almeno un fotogramma
+
+    video.style.visibility = 'hidden';
+    video.pause();
+    try {
+        for (let i = 0; i < ATTACK_SAMPLES; i++) {
+            if (video.getAttribute('src') !== src) return;   // nel frattempo è cambiata animazione
+            await seekVideo(video, duration * i / ATTACK_SAMPLES);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+            for (let p = 0; p < seen.length; p++) {
+                if (pixels[p * 4 + 3] >= CENTER_MIN_ALPHA) seen[p] = 1;
+            }
+        }
+        // rettangolo che contiene tutto l'attacco (come il ritaglio delle .webp)
+        let x0 = canvas.width, x1 = -1, y0 = canvas.height, y1 = -1;
+        for (let y = 0; y < canvas.height; y++) {
+            for (let x = 0; x < canvas.width; x++) {
+                if (seen[y * canvas.width + x]) {
+                    if (x < x0) x0 = x;
+                    if (x > x1) x1 = x;
+                    if (y < y0) y0 = y;
+                    if (y > y1) y1 = y;
+                }
+            }
+        }
+        if (x1 >= 0 && video.getAttribute('src') === src) {
+            video.style.setProperty('--char-x', ((0.5 - (x0 + x1 + 1) / 2 / canvas.width) * 100).toFixed(2));
+            video.style.setProperty('--char-y', ((0.5 - (y0 + y1 + 1) / 2 / canvas.height) * 100).toFixed(2));
+        }
+    } catch (err) {
+        console.warn("Centratura dell'attacco non riuscita:", err);
+    } finally {
+        if (video.getAttribute('src') === src) {
+            video.currentTime = 0;
+            video.style.visibility = '';
+            video.play().catch(() => { });
+        } else {
+            video.style.visibility = '';
+        }
+    }
 }
 
 ['video_default', 'video_idle', 'video_atk'].forEach(id => {
