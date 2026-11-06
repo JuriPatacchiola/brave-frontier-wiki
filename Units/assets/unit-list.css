@@ -1983,7 +1983,7 @@ body.modal-open {
 
     /* Tablet */
     .unit_gif {
-        --pixel-scale: 1.33;
+        --pixel-scale: 0.85;
         --anim-size: 1000px;
         --anim-zoom: 1.8;
         --anim-x: 0px;
@@ -2002,8 +2002,8 @@ body.modal-open {
         --canvas-ratio: 2614 / 1535;
         --canvas-size: var(--anim-size);
 
-        left: 50%;
-        top: 50%;
+        left: 46%;
+        top: 58%;
         width: var(--canvas-size);
         height: auto;
         max-width: none;
@@ -2048,7 +2048,7 @@ body.modal-open {
 
     /* Telefono */
     .unit_gif {
-        --pixel-scale: 0.86;
+        --pixel-scale: 0.55;
         --anim-size: 650px;
         --anim-zoom: 1.8;
         --anim-x: 0px;
