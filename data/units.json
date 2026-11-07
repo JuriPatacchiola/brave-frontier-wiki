@@ -108668,9 +108668,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10052/10052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10052/10052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10052/10052_atk.png"
+      "default": "../video/Base enemy/Goblin/Hobgoblin/Hobgoblin-default.webm",
+      "idle": "../video/Base enemy/Goblin/Hobgoblin/Hobgoblin-idle.webm",
+      "atk": "../video/Base enemy/Goblin/Hobgoblin/Hobgoblin-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108854,9 +108854,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20052/20052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20052/20052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20052/20052_atk.png"
+      "default": "../video/Base enemy/Merman/Lizard Man/Lizard-Man-default.webm",
+      "idle": "../video/Base enemy/Merman/Lizard Man/Lizard-Man-idle.webm",
+      "atk": "../video/Base enemy/Merman/Lizard Man/Lizard-Man-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109040,9 +109040,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30052/30052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30052/30052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30052/30052_atk.png"
+      "default": "../video/Base enemy/Mandragora/Leshy/Leshy-default.webm",
+      "idle": "../video/Base enemy/Mandragora/Leshy/Leshy-idle.webm",
+      "atk": "../video/Base enemy/Mandragora/Leshy/Leshy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109226,9 +109226,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40052/40052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40052/40052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40052/40052_atk.png"
+      "default": "../video/Base enemy/Harpy/Ocypete/Ocypete-default.webm",
+      "idle": "../video/Base enemy/Harpy/Ocypete/Ocypete-idle.webm",
+      "atk": "../video/Base enemy/Harpy/Ocypete/Ocypete-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109412,9 +109412,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50052/50052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50052/50052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50052/50052_atk.png"
+      "default": "../video/Base enemy/Angel/Azrael/Azrael-default.webm",
+      "idle": "../video/Base enemy/Angel/Azrael/Azrael-idle.webm",
+      "atk": "../video/Base enemy/Angel/Azrael/Azrael-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109598,9 +109598,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60052/60052_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60052/60052_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60052/60052_atk.png"
+      "default": "../video/Base enemy/Skeleton/Skull Lord/Skull-Lord-default.webm",
+      "idle": "../video/Base enemy/Skeleton/Skull Lord/Skull-Lord-idle.webm",
+      "atk": "../video/Base enemy/Skeleton/Skull Lord/Skull-Lord-atk.webm"
     },
     "effects": {
       "atk": "",
