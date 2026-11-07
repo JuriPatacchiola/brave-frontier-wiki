@@ -386,3 +386,262 @@
         init();
     }
 })();
+
+/* ==========================================================================
+   CURSORI PERSONALIZZATI (tutto il sito)
+   - cursore : freccia normale (la lancia), su tutta la pagina
+   - manina  : su tutto ciò che si può cliccare (link, bottoni, card, icone...)
+               trovato da solo: ogni elemento che nel CSS ha "cursor: pointer"
+   - pointer : per una parte futura del sito: basta aggiungere class="cursore-pointer"
+               a un elemento (vale anche per tutto ciò che contiene)
+   Le immagini stanno nella cartella img/cursor/ del sito
+   (nome.png = 32x32, nome@2x.png = 64x64 e nome@3x.png = 96x96 per gli schermi ad alta risoluzione).
+   32x32 è la misura massima che Chrome mostra sempre. Le versioni nitide (@2x, @3x) invece
+   Chrome le sostituisce con il cursore normale se uscirebbero dalla finestra: per questo,
+   quando il mouse è vicino a un bordo (es. sopra la barra di scorrimento), si usa la versione
+   semplice da 32x32, che resta sempre visibile.
+   Per cambiare il nome di un file basta cambiarlo in CURSORS qui sotto.
+   Su telefoni e tablet senza mouse non serve e non viene caricato nulla.
+   ========================================================================== */
+(function () {
+    'use strict';
+    const script = document.currentScript;
+    if (!script || !window.matchMedia || window.matchMedia('(hover: none)').matches) return;
+
+    const BASE = new URL('img/cursor/', script.src).href;   // = ../img/cursor/ dalle pagine nelle sottocartelle
+    // file: nome dell'immagine (senza .png) | x, y: punto del clic dentro l'immagine 32x32
+    // riserva: cursore normale del computer se l'immagine non si trova
+    const CURSORS = {
+        cursore: { file: 'cursore', x: 0, y: 0, riserva: 'auto' },
+        manina: { file: 'manina', x: 1, y: 1, riserva: 'pointer' },
+        pointer: { file: 'pointer', x: 15, y: 27, riserva: 'pointer' }
+    };
+
+    const EDGE = 33;   // distanza dal bordo (in pixel) in cui si usa la versione semplice
+
+    // versione semplice (solo 32x32): Chrome la mostra anche quando esce dalla finestra
+    function edgeCursorCss(name, important) {
+        const { file, x, y, riserva: fallback } = CURSORS[name];
+        return `cursor: url("${BASE}${file}.png") ${x} ${y}, ${fallback}${important ? ' !important' : ''};`;
+    }
+
+    function cursorCss(name, important) {
+        const { file, x, y, riserva: fallback } = CURSORS[name];
+        const one = `url("${BASE}${file}.png")`;
+        const two = `url("${BASE}${file}@2x.png")`;
+        const three = `url("${BASE}${file}@3x.png")`;
+        const imp = important ? ' !important' : '';
+        return `cursor: ${one} ${x} ${y}, ${fallback}${imp}; ` +
+            `cursor: -webkit-image-set(${one} 1x, ${two} 2x, ${three} 3x) ${x} ${y}, ${fallback}${imp}; ` +
+            `cursor: image-set(${one} 1x, ${two} 2x, ${three} 3x) ${x} ${y}, ${fallback}${imp};`;
+    }
+
+    // tutte le regole del CSS del sito che mostrano la manina ("cursor: pointer")
+    function clickableSelectors() {
+        const found = new Set();
+        const walk = rules => {
+            for (const rule of rules) {
+                if (rule.selectorText && rule.style && rule.style.cursor === 'pointer') found.add(rule.selectorText);
+                if (rule.cssRules && rule.cssRules.length) walk(rule.cssRules);   // anche dentro @media
+            }
+        };
+        for (const sheet of document.styleSheets) {
+            if (sheet.ownerNode && sheet.ownerNode.id === 'cursori-sito') continue;
+            try { walk(sheet.cssRules); } catch (e) { /* fogli di altri siti (es. Google): non si possono leggere */ }
+        }
+        return [...found];
+    }
+
+    const style = document.createElement('style');
+    style.id = 'cursori-sito';
+    document.head.appendChild(style);
+
+    function install() {
+        const sheet = style.sheet;
+        while (sheet.cssRules.length) sheet.deleteRule(0);
+        const add = (selector, name, important) => {
+            try { sheet.insertRule(`${selector} { ${cursorCss(name, important)} }`, sheet.cssRules.length); } catch (e) { }
+            // stessa regola vicino ai bordi della finestra, con la versione semplice
+            const edgeSelector = selector === 'html' ? 'html.cs-edge' : `html.cs-edge :is(${selector})`;
+            try { sheet.insertRule(`${edgeSelector} { ${edgeCursorCss(name, important)} }`, sheet.cssRules.length); } catch (e) { }
+        };
+        add('html', 'cursore', false);
+        const clickable = ['a[href]', 'button:not(:disabled)', 'select', 'label[for]', 'summary', '[onclick]',
+            '[role="button"]', 'input[type="checkbox"]', 'input[type="radio"]', 'input[type="submit"]',
+            'input[type="button"]', '[style*="cursor: pointer"]', '[style*="cursor:pointer"]'];
+        clickable.concat(clickableSelectors()).forEach(sel => add(sel, 'manina', true));
+        add('.cursore-pointer, .cursore-pointer *', 'pointer', true);
+    }
+
+    // si rifà se il sito aggiunge altri stili dopo (es. il menu delle lingue)
+    let timer = null;
+    const refresh = () => { clearTimeout(timer); timer = setTimeout(install, 100); };
+    new MutationObserver(list => {
+        if (list.some(m => [...m.addedNodes].some(n => n.nodeName === 'STYLE' || n.nodeName === 'LINK'))) refresh();
+    }).observe(document.head, { childList: true });
+
+    install();
+    if (document.readyState !== 'complete') window.addEventListener('load', install);
+
+    // il mouse è vicino a un bordo della finestra?
+    let nearEdge = false;
+    document.addEventListener('mousemove', e => {
+        const edge = e.clientX < EDGE || e.clientY < EDGE ||
+            e.clientX > window.innerWidth - EDGE || e.clientY > window.innerHeight - EDGE;
+        if (edge !== nearEdge) {
+            nearEdge = edge;
+            document.documentElement.classList.toggle('cs-edge', edge);
+        }
+    }, { passive: true });
+})();
+
+/* ==========================================================================
+   BARRE DI SCORRIMENTO DEL SITO (solo computer con il mouse)
+   Sopra la barra del browser il cursore torna sempre quello normale e non si
+   può cambiare: per questo la barra del browser viene nascosta e al suo posto
+   ne compare una disegnata dal sito, uguale (dorata), che si trascina e si clicca.
+   La rotellina e il touchpad funzionano come prima.
+   Vale da sola per ogni parte del sito che scorre in verticale.
+   Colori e misure: in BAR qui sotto.
+   ========================================================================== */
+(function () {
+    'use strict';
+    if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    const BAR = {
+        width: 10,               // larghezza in pixel
+        minThumb: 30,            // altezza minima della parte dorata
+        track: '#1a1a1a',        // colore del binario
+        thumb: '#d4af37',        // colore della parte dorata
+        thumbHover: '#e8c55a',   // colore quando ci passi sopra
+        minArea: 150             // le zone che scorrono più basse di così tengono la barra del browser
+    };
+
+    const style = document.createElement('style');
+    style.id = 'barre-sito';
+    style.textContent = `
+        .cs-hide { scrollbar-width: none !important; }
+        .cs-hide::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+        .cs-track { position: fixed; width: ${BAR.width}px; background: ${BAR.track}; z-index: 999;
+                    box-sizing: border-box; display: none; user-select: none; -webkit-user-select: none; touch-action: none; }
+        .cs-thumb { position: absolute; left: 0; right: 0; top: 0; border-radius: ${BAR.width / 2}px;
+                    background: ${BAR.thumb}; cursor: pointer; transition: background .15s; }
+        .cs-thumb:hover, .cs-dragging .cs-thumb { background: ${BAR.thumbHover}; }
+        .cs-dragging, .cs-dragging * { user-select: none !important; -webkit-user-select: none !important; }
+    `;
+    document.head.appendChild(style);
+
+    const bars = new Map();   // zona che scorre -> { track, thumb, last }
+
+    function isRoot(el) { return el === document.scrollingElement; }
+
+    function metrics(el) {
+        if (isRoot(el)) {
+            return {
+                left: window.innerWidth - BAR.width, top: 0, height: window.innerHeight,
+                scrollTop: el.scrollTop, scrollHeight: el.scrollHeight, clientHeight: window.innerHeight
+            };
+        }
+        const r = el.getBoundingClientRect();
+        return {
+            left: r.left + el.clientLeft + el.clientWidth - BAR.width, top: r.top + el.clientTop,
+            height: el.clientHeight, scrollTop: el.scrollTop, scrollHeight: el.scrollHeight, clientHeight: el.clientHeight,
+            visible: r.width > 0 && r.height > 0
+        };
+    }
+
+    function attach(el) {
+        if (bars.has(el)) return;
+        const host = isRoot(el) ? document.body : (el.closest('.modal, .fullart-modal, [role="dialog"]') || document.body);
+        const track = document.createElement('div');
+        track.className = 'cs-track';
+        if (host !== document.body) track.style.zIndex = '2100';   // dentro le finestre (modali) sta sopra il contenuto
+        const thumb = document.createElement('div');
+        thumb.className = 'cs-thumb';
+        track.appendChild(thumb);
+        host.appendChild(track);
+        (isRoot(el) ? document.documentElement : el).classList.add('cs-hide');
+        const bar = { track, thumb, last: '' };
+        bars.set(el, bar);
+
+        // trascinare la parte dorata
+        thumb.addEventListener('pointerdown', e => {
+            if (e.button !== 0) return;
+            e.preventDefault(); e.stopPropagation();
+            const m = metrics(el);
+            const thumbH = thumb.offsetHeight;
+            const startY = e.clientY, startTop = el.scrollTop;
+            const ratio = (m.scrollHeight - m.clientHeight) / Math.max(1, m.height - thumbH);
+            thumb.setPointerCapture(e.pointerId);
+            document.documentElement.classList.add('cs-dragging');
+            const move = ev => { el.scrollTop = startTop + (ev.clientY - startY) * ratio; };
+            const up = () => {
+                thumb.removeEventListener('pointermove', move);
+                thumb.removeEventListener('pointerup', up);
+                thumb.removeEventListener('pointercancel', up);
+                document.documentElement.classList.remove('cs-dragging');
+            };
+            thumb.addEventListener('pointermove', move);
+            thumb.addEventListener('pointerup', up);
+            thumb.addEventListener('pointercancel', up);
+        });
+        // clic sul binario: una pagina su o giù, come la barra del browser
+        track.addEventListener('pointerdown', e => {
+            if (e.target !== track || e.button !== 0) return;
+            e.preventDefault();
+            const thumbRect = thumb.getBoundingClientRect();
+            const page = metrics(el).clientHeight * 0.9;
+            el.scrollBy({ top: e.clientY < thumbRect.top ? -page : page, behavior: 'smooth' });
+        });
+    }
+
+    function update() {
+        bars.forEach((bar, el) => {
+            if (!el.isConnected) { bar.track.remove(); bars.delete(el); return; }
+            const m = metrics(el);
+            const scrollable = m.scrollHeight - m.clientHeight > 1 && m.visible !== false && m.height >= BAR.minArea;
+            if (!scrollable) {
+                if (bar.last !== 'off') { bar.track.style.display = 'none'; bar.last = 'off'; }
+                return;
+            }
+            const thumbH = Math.max(BAR.minThumb, m.height * m.clientHeight / m.scrollHeight);
+            const thumbTop = (m.height - thumbH) * m.scrollTop / (m.scrollHeight - m.clientHeight);
+            const key = [m.left, m.top, m.height, thumbH, thumbTop].map(v => Math.round(v * 10)).join(',');
+            if (key === bar.last) return;
+            bar.last = key;
+            bar.track.style.display = 'block';
+            bar.track.style.left = m.left + 'px';
+            bar.track.style.top = m.top + 'px';
+            bar.track.style.height = m.height + 'px';
+            bar.thumb.style.height = thumbH + 'px';
+            bar.thumb.style.transform = `translateY(${thumbTop}px)`;
+        });
+        requestAnimationFrame(update);
+    }
+
+    // cerca le zone che scorrono in verticale (anche quelle che compaiono dopo)
+    function scan() {
+        const root = document.scrollingElement;
+        const rootStyle = getComputedStyle(document.documentElement).overflowY;
+        const bodyStyle = getComputedStyle(document.body).overflowY;
+        if (root && rootStyle !== 'hidden' && bodyStyle !== 'hidden') attach(root);
+        document.querySelectorAll('body *').forEach(el => {
+            if (el.classList.contains('cs-track') || el.classList.contains('cs-thumb')) return;
+            const oy = getComputedStyle(el).overflowY;
+            if ((oy === 'auto' || oy === 'scroll') && el.clientHeight >= BAR.minArea) attach(el);
+        });
+    }
+
+    let timer = null;
+    const rescan = () => { clearTimeout(timer); timer = setTimeout(scan, 400); };
+
+    function start() {
+        scan();
+        requestAnimationFrame(update);
+        new MutationObserver(rescan).observe(document.body, { childList: true, subtree: true });
+        window.addEventListener('resize', rescan);
+        window.addEventListener('load', rescan);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+    else start();
+})();
