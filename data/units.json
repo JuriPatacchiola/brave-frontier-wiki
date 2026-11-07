@@ -2544,8 +2544,8 @@
       "atk": "../video/six heros/Lance/Pikeman Lance/Pikeman-Lance-atk.webm"
     },
     "effects": {
-      "atk": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/Atk.webm",
-      "bb": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/BBAtk.webm"
+      "atk": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Lance/Pikeman Lance/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "30011",
@@ -3616,8 +3616,8 @@
       "atk": "../video/six heros/Eze/Warrior Eze/Warrior-Eze-atk.webm"
     },
     "effects": {
-      "atk": "../video/Effect Video/Six Hero/Eze/Warrior Eze/Atk.webm",
-      "bb": "../video/Effect Video/Six Hero/Eze/Warrior Eze/BBAtk.webm"
+      "atk": "../video/Effect Video/Six Hero/Eze/Warrior Eze/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Eze/Warrior Eze/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "40011",

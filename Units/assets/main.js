@@ -1623,7 +1623,9 @@ function showMotion(type) {
 
 /* ==========================================================================
    VIDEO EFFETTI (btm6): Attack / BB
-   Nel JSON: "effects": { "atk": "percorso/Atk.mp4", "bb": "percorso/BBAtk.mp4" }
+   Nel JSON: "effects": { "atk": "percorso/Atk.webm", "bb": "percorso/BBAtk.webm" }
+   Come per le animazioni: PC e Android usano il .webm, iPhone/iPad/Safari la .webp
+   con lo stesso nome nella stessa cartella (vanno messi tutti e due).
    ========================================================================== */
 const EFFECT_TYPES = ['atk', 'bb', 'sbb', 'ubb'];
 let effectMode = false;
@@ -1738,7 +1740,10 @@ function stopMotionVideos() {
 
 function selectEffect(type) {
     if (!currentUnitOpen) return;
-    const src = currentUnitOpen.effects && currentUnitOpen.effects[type];
+    const jsonSrc = currentUnitOpen.effects && currentUnitOpen.effects[type];
+    if (!jsonSrc) return;
+    // stessa regola delle animazioni: nel JSON il .webm, su iPhone/iPad/Safari la .webp con lo stesso nome
+    const src = pickAnimationSrc(jsonSrc);
     if (!src) return;
     currentEffect = type;
 
