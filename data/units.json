@@ -157569,9 +157569,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50025/50025_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50025/50025_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50025/50025_atk.png"
+      "default": "../video/Enemy boss basic/Luna/Radiant Goddess Luna/Radiant-Goddess-Luna-default.webm",
+      "idle": "../video/Enemy boss basic/Luna/Radiant Goddess Luna/Radiant-Goddess-Luna-idle.webm",
+      "atk": "../video/Enemy boss basic/Luna/Radiant Goddess Luna/Radiant-Goddess-Luna-atk.webm"
     },
     "effects": {
       "atk": "",
