@@ -214089,8 +214089,8 @@
     },
     "animations": {
       "default": "../video/Base enemy/Sparky/Kaiser Sparky/Kaiser-Sparky-default.webm",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40032/40032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40032/40032_atk.png"
+      "idle": "../video/Base enemy/Sparky/Kaiser Sparky/Kaiser-Sparky-idle.webm",
+      "atk": "../video/Base enemy/Sparky/Kaiser Sparky/Kaiser-Sparky-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -214274,9 +214274,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50032/50032_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50032/50032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50032/50032_atk.png"
+      "default": "../video/Base enemy/Glowy/Kaiser Glowy/Kaiser-Glowy-default.webm",
+      "idle": "../video/Base enemy/Glowy/Kaiser Glowy/Kaiser-Glowy-idle.webm",
+      "atk": "../video/Base enemy/Glowy/Kaiser Glowy/Kaiser-Glowy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -214460,9 +214460,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60032/60032_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60032/60032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60032/60032_atk.png"
+      "default": "../video/Base enemy/Gloomy/Kaiser Gloomy/Kaiser-Gloomy-default.webm",
+      "idle": "../video/Base enemy/Gloomy/Kaiser Gloomy/Kaiser-Gloomy-idle.webm",
+      "atk": "../video/Base enemy/Gloomy/Kaiser Gloomy/Kaiser-Gloomy-atk.webm"
     },
     "effects": {
       "atk": "",
