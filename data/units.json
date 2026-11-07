@@ -511,8 +511,8 @@
       "atk": "../video/six heros/Vargas/Burning Vargas/Burning-Vargas-atk.webm"
     },
     "effects": {
-      "atk": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/Atk.webm",
-      "bb": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/BBAtk.webm"
+      "atk": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/Atk.mp4",
+      "bb": "../video/Effect Video/Six Hero/Vargas/Burning Vargas/BBAtk.mp4"
     },
     "evolution": {
       "prevId": "10011",
