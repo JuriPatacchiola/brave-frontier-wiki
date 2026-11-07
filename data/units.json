@@ -156819,7 +156819,7 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_default.png",
+      "default": "../video/Enemy boss basic/Zephu/Tidal Dragoon Zephu/Tidal-Dragoon-Zephu-default.webm",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_atk.png"
     },
