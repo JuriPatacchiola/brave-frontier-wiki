@@ -157325,9 +157325,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40025/40025_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40025/40025_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40025/40025_atk.png"
+      "default": "../video/Enemy boss basic/Weiss/Gilded General Weiss/Gilded-General-Weiss-default.webm",
+      "idle": "../video/Enemy boss basic/Weiss/Gilded General Weiss/Gilded-General-Weiss-idle.webm",
+      "atk": "../video/Enemy boss basic/Weiss/Gilded General Weiss/Gilded-General-Weiss-atk.webm"
     },
     "effects": {
       "atk": "",
