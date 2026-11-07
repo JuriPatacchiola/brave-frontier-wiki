@@ -5541,9 +5541,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Atro/God Atro/God-Atro-Atro-default.webm",
-      "idle": "../video/six heros/Atro/God Atro/God-Atro-Atro-idle.webm",
-      "atk": "../video/six heros/Atro/God Atro/God-Atro-Atro-atk.webm"
+      "default": "../video/six heros/Atro/God Atro/God-Atro-default.webm",
+      "idle": "../video/six heros/Atro/God Atro/God-Atro-idle.webm",
+      "atk": "../video/six heros/Atro/God Atro/God-Atro-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -159955,9 +159955,9 @@
       }
     },
     "animations": {
-      "default": "../video/Atro/Light Legend Atro/Light-Legend-Atro-default.webm",
-      "idle": "../video/Atro/Light Legend Atro/Light-Legend-Atro-idle.webm",
-      "atk": "../video/Atro/Light Legend Atro/Light-Legend-Atro-atk.webm"
+      "default": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-default.webm",
+      "idle": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-idle.webm",
+      "atk": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-atk.webm"
     },
     "effects": {
       "atk": "",
