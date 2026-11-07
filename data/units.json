@@ -214088,7 +214088,7 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40032/40032_default.png",
+      "default": "../video/Base enemy/Sparky/Kaiser Sparky/Kaiser-Sparky-default.webm",
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40032/40032_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40032/40032_atk.png"
     },
