@@ -213716,9 +213716,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20032/20032_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20032/20032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20032/20032_atk.png"
+      "default": "../video/Base enemy/Squirty/Kaiser Squirty/Kaiser-Squirty-default.webm",
+      "idle": "../video/Base enemy/Squirty/Kaiser Squirty/Kaiser-Squirty-idle.webm",
+      "atk": "../video/Base enemy/Squirty/Kaiser Squirty/Kaiser-Squirty-atk.webm"
     },
     "effects": {
       "atk": "",
