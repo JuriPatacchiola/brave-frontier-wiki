@@ -156820,8 +156820,8 @@
     },
     "animations": {
       "default": "../video/Enemy boss basic/Zephu/Tidal Dragoon Zephu/Tidal-Dragoon-Zephu-default.webm",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20025/20025_atk.png"
+      "idle": "../video/Enemy boss basic/Zephu/Tidal Dragoon Zephu/Tidal-Dragoon-Zephu-idle.webm",
+      "atk": "../video/Enemy boss basic/Zephu/Tidal Dragoon Zephu/Tidal-Dragoon-Zephu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -157081,9 +157081,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30025/30025_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30025/30025_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30025/30025_atk.png"
+      "default": "../video/Enemy boss basic/Lario/Gaia Bow Lario/Gaia-Bow-Lario-default.webm",
+      "idle": "../video/Enemy boss basic/Lario/Gaia Bow Lario/Gaia-Bow-Lario-idle.webm",
+      "atk": "../video/Enemy boss basic/Lario/Gaia Bow Lario/Gaia-Bow-Lario-atk.webm"
     },
     "effects": {
       "atk": "",
