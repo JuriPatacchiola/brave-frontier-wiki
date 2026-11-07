@@ -148304,9 +148304,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10095/10095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10095/10095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10095/10095_atk.png"
+      "default": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-default.webm",
+      "idle": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-idle.webm",
+      "atk": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -148541,9 +148541,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20095/20095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20095/20095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20095/20095_atk.png"
+      "default": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-default.webm",
+      "idle": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-idle.webm",
+      "atk": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -148778,9 +148778,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30095/30095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30095/30095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30095/30095_atk.png"
+      "default": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-default.webm",
+      "idle": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-idle.webm",
+      "atk": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -149015,9 +149015,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40095/40095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40095/40095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40095/40095_atk.png"
+      "default": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-default.webm",
+      "idle": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-idle.webm",
+      "atk": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -149252,9 +149252,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50085/50085_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50085/50085_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50085/50085_atk.png"
+      "default": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-default.webm",
+      "idle": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-idle.webm",
+      "atk": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -149489,9 +149489,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60085/60085_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60085/60085_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60085/60085_atk.png"
+      "default": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-default.webm",
+      "idle": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-idle.webm",
+      "atk": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-atk.webm"
     },
     "effects": {
       "atk": "",
