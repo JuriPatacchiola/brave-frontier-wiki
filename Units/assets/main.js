@@ -1356,11 +1356,13 @@ function fitGifLikeWebm(img) {
    ========================================================================== */
 const CENTER_SAMPLE_WIDTH = 240;   // risoluzione della lettura: basta poco
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
-const CENTER_TRIM = 0.02;          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
+const CENTER_TRIM = 0.02;
+const GROUND_TRIM = 0.003;         // per il bordo basso si ignora pochissimo, così l'ombra resta dentro
+const GROUND_BAND = 0.12;          // la "parte bassa" usata per il centro orizzontale: 12% dell'altezza          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
 
 // prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
-function trimmedRange(counts, total) {
-    const skip = total * CENTER_TRIM;
+function trimmedRange(counts, total, trim = CENTER_TRIM) {
+    const skip = total * trim;
     let seen = 0, first = 0, last = counts.length - 1;
     for (let i = 0; i < counts.length; i++) {
         seen += counts[i];
@@ -1419,7 +1421,14 @@ function applyPixelScale(el) {
     const box = el.parentElement;
     const charW = parseFloat(el.dataset.charW);
     const charH = parseFloat(el.dataset.charH);
-    if (box && box.clientWidth && box.clientHeight && charW && charH) {
+    const charUp = parseFloat(el.dataset.charUp);       // altezza sopra il punto a terra
+    const charSide = parseFloat(el.dataset.charSide);   // larghezza dal punto a terra al lato più lontano
+    const ground = readCssNumber(el, '--ground-y', 67) / 100;
+    if (box && box.clientWidth && box.clientHeight && charUp && charSide) {
+        scale = Math.min(scale,
+            PIXEL_FIT_MAX * box.clientHeight * ground / charUp,
+            PIXEL_FIT_MAX * box.clientWidth / 2 / charSide);
+    } else if (box && box.clientWidth && box.clientHeight && charW && charH) {
         scale = Math.min(scale,
             PIXEL_FIT_MAX * box.clientWidth / charW,
             PIXEL_FIT_MAX * box.clientHeight / charH);
@@ -1435,6 +1444,8 @@ function centerOnCharacter(el) {
     el.style.removeProperty('--canvas-ratio');
     delete el.dataset.charW;
     delete el.dataset.charH;
+    delete el.dataset.charUp;
+    delete el.dataset.charSide;
     delete el.dataset.fileScale;
 
     const w = el.naturalWidth || el.videoWidth;
@@ -1463,13 +1474,28 @@ function centerOnCharacter(el) {
         }
         // tela vuota o senza trasparenza: resta centrata la tela intera
         if (total && total < canvas.width * canvas.height) {
-            el.style.setProperty('--char-x', ((0.5 - trimmedCenter(cols, total)) * 100).toFixed(2));
-            el.style.setProperty('--char-y', ((0.5 - trimmedCenter(rows, total)) * 100).toFixed(2));
-            // grandezza del personaggio nel file, per non farlo uscire dal riquadro
             const cr = trimmedRange(cols, total);
             const rr = trimmedRange(rows, total);
+            // PUNTO A TERRA: il bordo più basso del personaggio (piedi o ombra) e,
+            // in orizzontale, il centro della sua parte più bassa. È questo punto che
+            // il CSS mette sul "pavimento" del riquadro (--ground-y).
+            const bottom = trimmedRange(rows, total, GROUND_TRIM).last + 1;
+            const band = Math.max(2, Math.round((bottom - rr.first) * GROUND_BAND));
+            let sumX = 0, count = 0;
+            for (let y = Math.max(0, bottom - band); y < bottom; y++) {
+                for (let x = 0; x < canvas.width; x++) {
+                    if (pixels[(y * canvas.width + x) * 4 + 3] >= CENTER_MIN_ALPHA) { sumX += x + 0.5; count++; }
+                }
+            }
+            const groundX = count ? sumX / count / canvas.width : trimmedCenter(cols, total);
+            const groundY = bottom / canvas.height;
+            el.style.setProperty('--char-x', ((0.5 - groundX) * 100).toFixed(2));
+            el.style.setProperty('--char-y', ((0.5 - groundY) * 100).toFixed(2));
+            // grandezza del personaggio nel file, per non farlo uscire dal riquadro
             el.dataset.charW = ((cr.last - cr.first + 1) / canvas.width * w).toFixed(1);
             el.dataset.charH = ((rr.last - rr.first + 1) / canvas.height * h).toFixed(1);
+            el.dataset.charUp = Math.max(1, (groundY - rr.first / canvas.height) * h).toFixed(1);
+            el.dataset.charSide = Math.max(1, Math.max(groundX - cr.first / canvas.width, (cr.last + 1) / canvas.width - groundX) * w).toFixed(1);
         }
     } catch (err) {
         console.warn('Centratura automatica non riuscita:', err);
@@ -1503,6 +1529,8 @@ function useStandingAnchor(el, w, h) {
             charX: el.style.getPropertyValue('--char-x'),
             charY: el.style.getPropertyValue('--char-y'),
             charW: el.dataset.charW,
+            charUp: el.dataset.charUp,
+            charSide: el.dataset.charSide,
             charH: el.dataset.charH
         };
         return;
@@ -1512,6 +1540,8 @@ function useStandingAnchor(el, w, h) {
     if (standingAnchor.charY) el.style.setProperty('--char-y', standingAnchor.charY);
     if (standingAnchor.charW) el.dataset.charW = standingAnchor.charW;
     if (standingAnchor.charH) el.dataset.charH = standingAnchor.charH;
+    if (standingAnchor.charUp) el.dataset.charUp = standingAnchor.charUp;
+    if (standingAnchor.charSide) el.dataset.charSide = standingAnchor.charSide;
 }
 
 ['video_default', 'video_idle', 'video_atk'].forEach(id => {

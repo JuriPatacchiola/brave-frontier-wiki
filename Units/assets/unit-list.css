@@ -1975,6 +1975,10 @@ body.modal-open {
    (PC qui sotto, tablet e telefono più in basso)
    ========================================================================== */
 .unit_gif {
+    /* altezza del "pavimento": dove stanno i piedi (o l'ombra) di tutte le unità,
+       su PC, tablet e telefono (0% = in alto, 100% = in basso) */
+    --ground-y: 67%;
+
     /* PC */
     --pixel-scale: 0.85;
     --anim-x: 0px;
@@ -1987,8 +1991,10 @@ body.modal-open {
     --char-x: 0;
     --char-y: 0;
     position: absolute;
-    left: 47%;
-    top: 59%;
+    /* il punto in cui il personaggio tocca terra va al centro in orizzontale
+       e all'altezza --ground-y (vedi .unit_gif qui sopra) */
+    left: 50%;
+    top: var(--ground-y, 67%);
     width: auto;
     height: auto;
     max-width: none;
