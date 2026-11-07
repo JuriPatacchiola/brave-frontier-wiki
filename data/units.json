@@ -140680,9 +140680,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10105/10105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10105/10105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10105/10105_atk.png"
+      "default": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-default.webm",
+      "idle": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-idle.webm",
+      "atk": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -140915,9 +140915,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20105/20105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20105/20105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20105/20105_atk.png"
+      "default": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-default.webm",
+      "idle": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-idle.webm",
+      "atk": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -141150,9 +141150,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30105/30105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30105/30105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30105/30105_atk.png"
+      "default": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-default.webm",
+      "idle": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -141385,9 +141385,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40105/40105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40105/40105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40105/40105_atk.png"
+      "default": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-default.webm",
+      "idle": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-idle.webm",
+      "atk": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -141620,9 +141620,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50095/50095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50095/50095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50095/50095_atk.png"
+      "default": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-default.webm",
+      "idle": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-idle.webm",
+      "atk": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -141855,9 +141855,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60095/60095_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60095/60095_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60095/60095_atk.png"
+      "default": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-default.webm",
+      "idle": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-idle.webm",
+      "atk": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -246891,9 +246891,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60096/60096_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60096/60096_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60096/60096_atk.png"
+      "default": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-default.webm",
+      "idle": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-idle.webm",
+      "atk": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -314940,9 +314940,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60097/60097_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60097/60097_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60097/60097_atk.png"
+      "default": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-default.webm",
+      "idle": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-idle.webm",
+      "atk": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
