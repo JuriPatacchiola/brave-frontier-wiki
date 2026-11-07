@@ -139350,9 +139350,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10073/10073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10073/10073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10073/10073_atk.png"
+      "default": "../video/Base enemy/Orthos/Ragnaberus/Ragnaberus-default.webm",
+      "idle": "../video/Base enemy/Orthos/Ragnaberus/Ragnaberus-idle.webm",
+      "atk": "../video/Base enemy/Orthos/Ragnaberus/Ragnaberus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139542,9 +139542,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20073/20073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20073/20073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20073/20073_atk.png"
+      "default": "../video/Base enemy/Ramia/Lotan/Lotan-default.webm",
+      "idle": "../video/Base enemy/Ramia/Lotan/Lotan-idle.webm",
+      "atk": "../video/Base enemy/Ramia/Lotan/Lotan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139734,9 +139734,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30073/30073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30073/30073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30073/30073_atk.png"
+      "default": "../video/Base enemy/Fairy/Finkell/Finkell-default.webm",
+      "idle": "../video/Base enemy/Fairy/Finkell/Finkell-idle.webm",
+      "atk": "../video/Base enemy/Fairy/Finkell/Finkell-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139926,9 +139926,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40073/40073_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40073/40073_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40073/40073_atk.png"
+      "default": "../video/Base enemy/Minotaur/Gigas/Gigas-default.webm",
+      "idle": "../video/Base enemy/Minotaur/Gigas/Gigas-idle.webm",
+      "atk": "../video/Base enemy/Minotaur/Gigas/Gigas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -140118,9 +140118,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50063/50063_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50063/50063_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50063/50063_atk.png"
+      "default": "../video/Base enemy/Unicorn/Remuihl/Remuihl-default.webm",
+      "idle": "../video/Base enemy/Unicorn/Remuihl/Remuihl-idle.webm",
+      "atk": "../video/Base enemy/Unicorn/Remuihl/Remuihl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -140310,9 +140310,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60063/60063_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60063/60063_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60063/60063_atk.png"
+      "default": "../video/Base enemy/Medusa/Lulujann/Lulujann-default.webm",
+      "idle": "../video/Base enemy/Medusa/Lulujann/Lulujann-default.webm",
+      "atk": "../video/Base enemy/Medusa/Lulujann/Lulujann-default.webm"
     },
     "effects": {
       "atk": "",
