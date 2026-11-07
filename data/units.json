@@ -157813,9 +157813,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60025/60025_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60025/60025_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60025/60025_atk.png"
+      "default": "../video/Enemy boss basic/Mifune/Shadow Ronin Mifune/Shadow-Ronin-Mifune-default.webm",
+      "idle": "../video/Enemy boss basic/Mifune/Shadow Ronin Mifune/Shadow-Ronin-Mifune-idle.webm",
+      "atk": "../video/Enemy boss basic/Mifune/Shadow Ronin Mifune/Shadow-Ronin-Mifune-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -267967,9 +267967,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60027/60027_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60027/60027_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60027/60027_atk.png"
+      "default": "../video/Enemy boss basic/Mifune/Heavenless Bushi Mifune/Heavenless-Bushi-Mifune-default.webm",
+      "idle": "../video/Enemy boss basic/Mifune/Heavenless Bushi Mifune/Heavenless-Bushi-Mifune-idle.webm",
+      "atk": "../video/Enemy boss basic/Mifune/Heavenless Bushi Mifune/Heavenless-Bushi-Mifune-atk.webm"
     },
     "effects": {
       "atk": "",
