@@ -213530,9 +213530,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10032/10032_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10032/10032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10032/10032_atk.png"
+      "default": "../video/Base enemy/Burny/Kaiser Burny/Kaiser-Burny-default.webm",
+      "idle": "../video/Base enemy/Burny/Kaiser Burny/Kaiser-Burny-idle.webm",
+      "atk": "../video/Base enemy/Burny/Kaiser Burny/Kaiser-Burny-atk.webm"
     },
     "effects": {
       "atk": "",
