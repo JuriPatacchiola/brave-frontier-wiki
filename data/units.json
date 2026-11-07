@@ -213902,9 +213902,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30032/30032_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30032/30032_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30032/30032_atk.png"
+      "default": "../video/Base enemy/Mossy/Kaiser Mossy/Kaiser-Mossy-default.webm",
+      "idle": "../video/Base enemy/Mossy/Kaiser Mossy/Kaiser-Mossy-idle.webm",
+      "atk": "../video/Base enemy/Mossy/Kaiser Mossy/Kaiser-Mossy-atk.webm"
     },
     "effects": {
       "atk": "",
