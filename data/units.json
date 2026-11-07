@@ -159955,9 +159955,9 @@
       }
     },
     "animations": {
-      "default": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-default.webm",
-      "idle": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-idle.webm",
-      "atk": "../video/Six heros/Atro/Light Legend Atro/Light-Legend-Atro-atk.webm"
+      "default": "../video/six heros/Atro/Light Legend Atro/Light-Legend-Atro-default.webm",
+      "idle": "../video/six heros/Atro/Light Legend Atro/Light-Legend-Atro-idle.webm",
+      "atk": "../video/six heros/Atro/Light Legend Atro/Light-Legend-Atro-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -256192,9 +256192,9 @@
       }
     },
     "animations": {
-      "default": "../video/Six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-default.webm",
-      "idle": "../video/Six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-idle.webm",
-      "atk": "../video/Six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-atk.webm"
+      "default": "../video/six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-default.webm",
+      "idle": "../video/six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-idle.webm",
+      "atk": "../video/six heros/Lance/Terra Halcyon Lance/Terra-Halcyon-Lance-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -256844,9 +256844,9 @@
       }
     },
     "animations": {
-      "default": "../video/Six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-default.webm",
-      "idle": "../video/Six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-idle.webm",
-      "atk": "../video/Six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-atk.webm"
+      "default": "../video/six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-default.webm",
+      "idle": "../video/six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-idle.webm",
+      "atk": "../video/six heros/Atro/Lux Halcyon Atro/Lux-Halcyon-Atro-atk.webm"
     },
     "effects": {
       "atk": "",
