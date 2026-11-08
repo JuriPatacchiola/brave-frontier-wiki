@@ -727,7 +727,16 @@ function fitEvoPanel(panel) {
         const up = parseFloat(stage.dataset.up) || 0;
         const side = parseFloat(stage.dataset.side) || 0;
         const needW = 2 * side + EVO_STAGE_PAD;
-        const scale = evoPixelSafeScale(needW, room);
+        // unità ingrandite (UNIT_SPRITE_SCALE) che sul telefono non ci stanno: si rimpiccioliscono
+        // solo quel tanto che serve per starci (sono già ingrandite "a metà pixel", quindi niente
+        // gradini interi); le altre si rimpiccioliscono "a gradini interi" come sempre
+        const unitScale = parseFloat(img.dataset.unitScale) || 1;
+        let scale = 1;
+        if (needW > room) {
+            scale = unitScale > 1
+                ? Math.max(room / needW, 0.5 / unitScale)
+                : evoPixelSafeScale(needW, room);
+        }
         img.style.width = (parseFloat(img.dataset.fullW) * scale) + 'px';
         w = Math.max(w, Math.ceil(needW * scale));
         h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + up * scale + EVO_STAGE_PAD));
