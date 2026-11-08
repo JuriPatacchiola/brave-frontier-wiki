@@ -96049,9 +96049,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10155/10155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10155/10155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10155/10155_atk.png"
+      "default": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-default.webm",
+      "idle": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96273,9 +96273,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20155/20155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20155/20155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20155/20155_atk.png"
+      "default": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-default.webm",
+      "idle": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-idle.webm",
+      "atk": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96546,9 +96546,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30155/30155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30155/30155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30155/30155_atk.png"
+      "default": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-default.webm",
+      "idle": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-idle.webm",
+      "atk": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96770,9 +96770,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40155/40155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40155/40155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40155/40155_atk.png"
+      "default": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-default.webm",
+      "idle": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-idle.webm",
+      "atk": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96994,9 +96994,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50155/50155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50155/50155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50155/50155_atk.png"
+      "default": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-default.webm",
+      "idle": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-idle.webm",
+      "atk": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97218,9 +97218,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60165/60165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60165/60165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60165/60165_atk.png"
+      "default": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-default.webm",
+      "idle": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -178326,9 +178326,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20156/20156_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20156/20156_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20156/20156_atk.png"
+      "default": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-default.webm",
+      "idle": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-idle.webm",
+      "atk": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -286524,9 +286524,9 @@
       }
     },
     "animations": {
-      "default": "../video/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-default.webm",
-      "idle": "/video/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-idle.webm",
-      "atk": "/video/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-atk.webm"
+      "default": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-default.webm",
+      "idle": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-idle.webm",
+      "atk": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
