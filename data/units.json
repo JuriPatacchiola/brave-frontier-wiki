@@ -124953,9 +124953,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50134/50134_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50134/50134_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50134/50134_atk.png"
+      "default": "../video/Seal material and fusion material/Seal/Golden God/Golden-God-default.webm",
+      "idle": "../video/Seal material and fusion material/Seal/Golden God/Golden-God-idle.webm",
+      "atk": "../video/Seal material and fusion material/Seal/Golden God/Golden-God-atk.webm"
     },
     "effects": {
       "atk": "",
