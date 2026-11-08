@@ -465,6 +465,31 @@ const EVO_STAGE_FOOT = 30;
 const EVO_STAGE_PAD = 6;
 
 // tipo di base per la rarità: silver, gold, red, rainbow o omni (serve anche al CSS per il colore dell'alone)
+/* ==========================================================================
+   UNITÀ DA INGRANDIRE
+   Alcune animazioni del gioco hanno il personaggio disegnato più piccolo delle altre
+   forme della stessa unità. Qui si può ingrandire un'unità: numero dell'unità (realId)
+   e quante volte ingrandirla. Vale SOLO per le fasi evolutive (sulle basi):
+   l'animazione grande in alto resta sempre della sua misura.
+   Esempio: '20016': 1.25 = Ice Legend Selena un quarto più grande.
+   Per aggiungerne un'altra: copia una riga, cambia il numero e la grandezza.
+   ========================================================================== */
+const UNIT_SPRITE_SCALE = {
+    '20016': 1.25,   // Ice Legend Selena
+    '20017': 1.25,  // Algor Halcyon Selena
+    '30015': 1.20,
+    '30016': 1.20,
+    '40015': 1.20,
+    '40016': 1.20,
+    '40017': 1.20
+};
+
+function unitSpriteScale(unit) {
+    if (!unit) return 1;
+    const scale = parseFloat(UNIT_SPRITE_SCALE[String(unit.realId || unit.id)]);
+    return scale > 0 ? scale : 1;
+}
+
 function getEvoBaseKind(rarity) {
     const r = String(rarity || '').trim().toLowerCase();
     if (r === '1' || r === '2') return 'silver';
@@ -497,7 +522,7 @@ function evoUnitStageHtml(thumbSrc, realId, alt, currentUnit, fallbackRarity) {
     const rarity = (target && target.rarity) || fallbackRarity || '';
     const idleSrc = getEvoIdleSrc(target);
     const unitHtml = idleSrc
-        ? `<img src="${escapeAttr(idleSrc)}" data-thumb="${escapeAttr(thumbSrc)}" alt="${escapeAttr(alt)}" class="evo-stage-unit" draggable="false">`
+        ? `<img src="${escapeAttr(idleSrc)}" data-thumb="${escapeAttr(thumbSrc)}" data-unit-scale="${unitSpriteScale(target)}" alt="${escapeAttr(alt)}" class="evo-stage-unit" draggable="false">`
         : `<img src="${escapeAttr(thumbSrc)}" alt="${escapeAttr(alt)}" class="evo-stage-thumb" loading="lazy" draggable="false">`;
     const linkAttrs = (target && !isSelf)
         ? ` evo-unit-link" data-unit-id="${escapeAttr(target.realId)}" title="${escapeAttr(getActiveUnitName(target))}" role="button" tabindex="0"`
@@ -619,7 +644,9 @@ function placeEvoUnit(img) {
     const sy = m.standY !== undefined ? m.standY : 0.5;
     img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
     img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
-    Object.assign(img.dataset, { artPx: k, fileW: m.w, fileH: m.h, standX: sx, standY: sy, fullW: m.w / k });
+    // unità da ingrandire (elenco UNIT_SPRITE_SCALE): un pixel del file diventa più grande
+    const px = k / (parseFloat(img.dataset.unitScale) || 1);
+    Object.assign(img.dataset, { artPx: px, fileW: m.w, fileH: m.h, standX: sx, standY: sy, fullW: m.w / px });
     // bordi del primo fotogramma
     const box = m.fullLeft !== undefined
         ? { left: m.fullLeft, right: m.fullRight, top: m.fullTop }
