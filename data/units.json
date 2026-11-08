@@ -41862,9 +41862,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-default.webm",
-      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-idle.webm",
-      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal God-atk.webm"
+      "default": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal-God-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal-God-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Dark/Metal God/Metal-God-atk.webm"
     },
     "effects": {
       "atk": "",
