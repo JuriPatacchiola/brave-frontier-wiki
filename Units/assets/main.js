@@ -791,6 +791,10 @@ function renderEvolutionRecipes(unit) {
     initEvolutionLinks();
 
     container.innerHTML = '';
+    // la sezione "Evoluzione" si vede solo se l'unità ha davvero delle evoluzioni
+    const area = container.closest('.evolution-recipe-area');
+    const showArea = visible => { if (area) area.style.display = visible ? '' : 'none'; };
+    showArea(true);
     const evoKeys = Object.keys(unit).filter(key => key.startsWith('evolution'));
 
     evoKeys.sort((a, b) => {
@@ -800,10 +804,7 @@ function renderEvolutionRecipes(unit) {
     });
 
     if (evoKeys.length === 0) {
-        container.innerHTML = `
-            <div class="evo-recipe-empty">
-                <div class="evo-recipe-result notranslate">${t('evo.none')}</div>
-            </div>`;
+        showArea(false);
         return;
     }
 
@@ -902,10 +903,8 @@ function renderEvolutionRecipes(unit) {
             </div>`;
     });
 
-    container.innerHTML = htmlContent || `
-        <div class="evo-recipe-empty">
-            <div class="evo-recipe-result notranslate">${t('evo.none')}</div>
-        </div>`;
+    container.innerHTML = htmlContent;
+    if (!htmlContent) showArea(false);
 }
 
 async function startApp() {

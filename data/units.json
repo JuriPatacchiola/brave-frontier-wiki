@@ -53810,44 +53810,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-      "nextId": "10203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "recipe": {
-        "targetId": "10203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "10203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "nextId": "10204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10204.png",
-      "recipe": {
-        "targetId": "10204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire Ghost",
       "it": "Fantasma fuoco",
@@ -53988,44 +53951,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-      "nextId": "10203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "recipe": {
-        "targetId": "10203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "10203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "nextId": "10204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10204.png",
-      "recipe": {
-        "targetId": "10204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire King",
       "it": "Re del fuoco",
@@ -54166,44 +54092,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-      "nextId": "10203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "recipe": {
-        "targetId": "10203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "10203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10203.png",
-      "nextId": "10204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10204.png",
-      "recipe": {
-        "targetId": "10204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire God",
       "it": "Dio del fuoco",
@@ -54344,44 +54233,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-      "nextId": "20203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "recipe": {
-        "targetId": "20203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "20203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "nextId": "20204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20204.png",
-      "recipe": {
-        "targetId": "20204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water Ghost",
       "it": "Fantasma acqua",
@@ -54522,44 +54374,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-      "nextId": "20203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "recipe": {
-        "targetId": "20203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "20203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "nextId": "20204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20204.png",
-      "recipe": {
-        "targetId": "20204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water King",
       "it": "Re dell'acqua",
@@ -54700,44 +54515,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-      "nextId": "20203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "recipe": {
-        "targetId": "20203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "20203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20203.png",
-      "nextId": "20204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20204.png",
-      "recipe": {
-        "targetId": "20204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water God",
       "it": "Dio dell'acqua",
@@ -54878,44 +54656,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-      "nextId": "30203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "recipe": {
-        "targetId": "30203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "30203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "nextId": "30204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30204.png",
-      "recipe": {
-        "targetId": "30204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth Ghost",
       "it": "Fantasma terra",
@@ -55056,44 +54797,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-      "nextId": "30203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "recipe": {
-        "targetId": "30203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "30203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "nextId": "30204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30204.png",
-      "recipe": {
-        "targetId": "30204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth King",
       "it": "Re della terra",
@@ -55234,44 +54938,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-      "nextId": "30203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "recipe": {
-        "targetId": "30203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "30203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30203.png",
-      "nextId": "30204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30204.png",
-      "recipe": {
-        "targetId": "30204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth God",
       "it": "Dio della terra",
@@ -55412,44 +55079,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-      "nextId": "40203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "recipe": {
-        "targetId": "40203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "40203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "nextId": "40204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40204.png",
-      "recipe": {
-        "targetId": "40204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder Ghost",
       "it": "Fantasma tuono",
@@ -55590,44 +55220,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-      "nextId": "40203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "recipe": {
-        "targetId": "40203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "40203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "nextId": "40204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40204.png",
-      "recipe": {
-        "targetId": "40204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder King",
       "it": "Re del tuono",
@@ -55768,44 +55361,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-      "nextId": "40203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "recipe": {
-        "targetId": "40203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "40203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40203.png",
-      "nextId": "40204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40204.png",
-      "recipe": {
-        "targetId": "40204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder God",
       "it": "Dio del tuono",
@@ -55946,44 +55502,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-      "nextId": "50203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "recipe": {
-        "targetId": "50203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "50203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "nextId": "50204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50204.png",
-      "recipe": {
-        "targetId": "50204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light Ghost",
       "it": "Fantasma luce",
@@ -56124,44 +55643,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-      "nextId": "50203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "recipe": {
-        "targetId": "50203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "50203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "nextId": "50204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50204.png",
-      "recipe": {
-        "targetId": "50204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light King",
       "it": "Re della luce",
@@ -56302,44 +55784,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50202",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50202.png",
-      "nextId": "50203",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "recipe": {
-        "targetId": "50203",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_60132.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "50203",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50203.png",
-      "nextId": "50204",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50204.png",
-      "recipe": {
-        "targetId": "50204",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light God",
       "it": "Dio della luce",
