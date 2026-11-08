@@ -511,10 +511,10 @@ function evoUnitStageHtml(thumbSrc, realId, alt, currentUnit, fallbackRarity) {
 // Gli sprite del gioco sono disegnati "a pixel doppi": ogni pixel del disegno è un quadratino
 // 2x2 di pixel uguali nel file. Qui si controlla quanto è grande quel quadratino (1, 2, 3 o 4),
 // così l'unità si mostra con 1 pixel del disegno = 1 pixel dello schermo.
-function blocksAreUniform(px, w, h, k) {
+function blocksAreUniform(px, w, h, k, ox, oy) {
     let visible = 0, bad = 0;
-    for (let by = 0; by + k <= h; by += k) {
-        for (let bx = 0; bx + k <= w; bx += k) {
+    for (let by = oy; by + k <= h; by += k) {
+        for (let bx = ox; bx + k <= w; bx += k) {
             const i0 = (by * w + bx) * 4;
             let seen = false, diff = false;
             for (let y = 0; y < k && !diff; y++) {
@@ -527,7 +527,10 @@ function blocksAreUniform(px, w, h, k) {
             }
             if (!seen && !diff) continue;
             visible++;
-            if (diff) bad++;
+            if (diff) {
+                bad++;
+                if (bad > 50 && bad > visible * 0.03) return false;   // si vede già che non va: inutile continuare
+            }
         }
     }
     return visible > 0 && bad / visible < 0.03;
@@ -544,8 +547,14 @@ function detectArtPixelSize(img) {
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(img, 0, 0);
         const px = ctx.getImageData(0, 0, w, h).data;
+        // i quadratini possono partire dal primo pixel o qualche pixel più in là
+        // (dipende da come è stato ritagliato il file): si provano tutte le partenze
         for (const k of [4, 3, 2]) {
-            if (blocksAreUniform(px, w, h, k)) return k;
+            for (let oy = 0; oy < k; oy++) {
+                for (let ox = 0; ox < k; ox++) {
+                    if (blocksAreUniform(px, w, h, k, ox, oy)) return k;
+                }
+            }
         }
     } catch (err) {
         console.warn('Controllo dei pixel non riuscito:', err);
