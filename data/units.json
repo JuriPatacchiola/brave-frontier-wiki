@@ -484389,9 +484389,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720104/720104_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720104/720104_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720104/720104_atk.png"
+      "default": "../video/EU/Valentine/Sergio/Lovestruck Sergio/Lovestruck-Sergio-default.webm",
+      "idle": "../video/EU/Valentine/Sergio/Lovestruck Sergio/Lovestruck-Sergio-idle.webm",
+      "atk": "../video/EU/Valentine/Sergio/Lovestruck Sergio/Lovestruck-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -503561,7 +503561,7 @@
   {
     "id": 2396,
     "realId": "720105",
-    "name": "Don Juan Sergio ",
+    "name": "Don Juan Sergio",
     "image": "../img/Unit/img Europe/Squere Img/unit_ills_thum_720105.png",
     "element": "Element Water",
     "rarity": "6",
@@ -503699,9 +503699,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720105/720105_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720105/720105_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720105/720105_atk.png"
+      "default": "../video/EU/Valentine/Sergio/Don Juan Sergio/Don-Juan-Sergio-default.webm",
+      "idle": "../video/EU/Valentine/Sergio/Don Juan Sergio/Don-Juan-Sergio-idle.webm",
+      "atk": "../video/EU/Valentine/Sergio/Don Juan Sergio/Don-Juan-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -511643,7 +511643,7 @@
   {
     "id": 2433,
     "realId": "720107",
-    "name": "Saint of Love Sergio ",
+    "name": "Saint of Love Sergio",
     "image": "../img/Unit/img Europe/Squere Img/unit_ills_thum_720107.png",
     "element": "Element Water",
     "rarity": "Dream",
@@ -511817,9 +511817,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720107/720107_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720107/720107_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720107/720107_atk.png"
+      "default": "../video/EU/Valentine/Sergio/Saint of Love Sergio/Saint-of-Love-Sergio-default.webm",
+      "idle": "../video/EU/Valentine/Sergio/Saint of Love Sergio/Saint-of-Love-Sergio-idle.webm",
+      "atk": "../video/EU/Valentine/Sergio/Saint of Love Sergio/Saint-of-Love-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
