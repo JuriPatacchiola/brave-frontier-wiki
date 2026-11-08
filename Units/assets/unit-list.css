@@ -2218,6 +2218,16 @@ video {
     overflow: visible;
 }
 
+/* niente esce dai lati dei riquadri delle evoluzioni (le animazioni hanno bordi trasparenti larghi) */
+.evolution-step-block {
+    overflow: hidden;
+}
+
+/* la scheda si scorre solo dall'alto verso il basso, mai a destra e a sinistra */
+.unit_details_scroll_area {
+    overflow-x: hidden !important;
+}
+
 .evo-stage {
     position: relative;
     flex: 0 0 auto;
@@ -2362,12 +2372,17 @@ video {
 /* telefono: le due unità grandi in alto (prima -> dopo), materiali e costi sotto */
 @media (max-width: 600px) {
     .evo-stage {
-        width: min(var(--stage-w), 130px);
+        max-width: 100%;
+    }
+
+    .evolution-recipe-panel .evo-recipe-unit-wrap {
+        min-width: 0;
+        max-width: 100%;
     }
 
     .evolution-recipe-panel {
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         grid-template-areas:
             "prev arrow next"
             "req req req";

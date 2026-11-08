@@ -564,27 +564,70 @@ function placeEvoUnit(img) {
     const sy = m.standY !== undefined ? m.standY : 0.5;
     img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
     img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
-    img.style.width = (m.w / k) + 'px';
-    // spazio che serve a questa unità: sopra il puntino e ai lati
-    const up = (m.top !== undefined ? Math.max(0, sy - m.top) : 0.5) * m.h / k;
-    const side = (m.left !== undefined ? Math.max(sx - m.left, m.right - sx) : 0.5) * m.w / k;
-    stage.dataset.needW = String(Math.ceil(2 * side + EVO_STAGE_PAD));
-    stage.dataset.needH = String(Math.ceil(EVO_STAGE_FOOT + up + EVO_STAGE_PAD));
+    // grandezza a pixel netti e spazio che serve a questa unità: sopra il puntino e ai lati
+    img.dataset.fullW = String(m.w / k);
+    stage.dataset.up = String((m.top !== undefined ? Math.max(0, sy - m.top) : 0.5) * m.h / k);
+    stage.dataset.side = String((m.left !== undefined ? Math.max(sx - m.left, m.right - sx) : 0.5) * m.w / k);
     img.classList.add('is-placed');
     fitEvoPanel(stage.closest('.evolution-recipe-panel'));
+}
+
+// Spazio in larghezza per ogni unità. Solo sul telefono è poco (due unità affiancate):
+// su PC e tablet c'è posto per tutte.
+function evoStageRoom(panel) {
+    if (!window.matchMedia('(max-width: 600px)').matches) return Infinity;
+    const cs = getComputedStyle(panel);
+    const inner = panel.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+    const arrow = panel.querySelector('.evo-recipe-equals');
+    const gap = parseFloat(cs.columnGap) || 0;
+    const room = (inner - (arrow ? arrow.offsetWidth : 0) - 2 * gap) / 2;
+    return room > 40 ? room : Infinity;   // riquadro non ancora visibile: si rifà dopo
+}
+
+// Rimpicciolimento per le unità troppo larghe per il telefono, solo "a gradini interi":
+// ogni pixel del disegno resta 2 pixel pieni dello schermo (o 1), quindi non se ne perde nessuno.
+function evoPixelSafeScale(needW, room) {
+    if (needW <= room) return 1;
+    const dpr = window.devicePixelRatio || 1;
+    let scale = 1;
+    for (let n = Math.ceil(dpr) - 1; n >= 1; n--) {
+        const s = n / dpr;
+        if (s < 0.5) break;          // non più piccole della metà
+        scale = s;
+        if (needW * s <= room) break;
+    }
+    return scale;
 }
 
 // Le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande
 function fitEvoPanel(panel) {
     if (!panel) return;
+    const room = evoStageRoom(panel);
     let w = EVO_STAGE_MIN_W, h = EVO_STAGE_MIN_H;
     panel.querySelectorAll('.evo-stage').forEach(stage => {
-        w = Math.max(w, parseFloat(stage.dataset.needW) || 0);
-        h = Math.max(h, parseFloat(stage.dataset.needH) || 0);
+        const img = stage.querySelector('.evo-stage-unit.is-placed');
+        if (!img) return;
+        const up = parseFloat(stage.dataset.up) || 0;
+        const side = parseFloat(stage.dataset.side) || 0;
+        const needW = 2 * side + EVO_STAGE_PAD;
+        const scale = evoPixelSafeScale(needW, room);
+        img.style.width = (parseFloat(img.dataset.fullW) * scale) + 'px';
+        w = Math.max(w, Math.ceil(needW * scale));
+        h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + up * scale + EVO_STAGE_PAD));
     });
+    if (room !== Infinity) w = Math.min(w, Math.floor(room));
     panel.style.setProperty('--stage-w', w + 'px');
     panel.style.setProperty('--stage-h', h + 'px');
 }
+
+// quando si gira il telefono o cambia la finestra, le unità si risistemano
+let evoResizeTimer = null;
+window.addEventListener('resize', () => {
+    clearTimeout(evoResizeTimer);
+    evoResizeTimer = setTimeout(() => {
+        document.querySelectorAll('#evolutionContainer .evolution-recipe-panel').forEach(fitEvoPanel);
+    }, 150);
+});
 
 // Animazione che non esiste (ancora): al suo posto l'icona quadrata dell'unità
 function evoUnitFallback(img) {
@@ -1533,7 +1576,7 @@ function fitGifLikeWebm(img) {
    fotogramma, si trova dove sono i pixel non trasparenti e si passa al CSS lo
    spostamento per portarli al centro del riquadro (--char-x e --char-y).
    ========================================================================== */
-const CENTER_SAMPLE_WIDTH = 480;   // risoluzione massima della lettura (abbastanza per vedere l'ombra)
+const CENTER_SAMPLE_WIDTH = 800;   // risoluzione massima della lettura: le .webp si leggono intere, pixel per pixel
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
 const CENTER_TRIM = 0.02;
 const GROUND_TRIM = 0.003;         // per il bordo basso si ignora pochissimo, così l'ombra resta dentro
@@ -1542,12 +1585,15 @@ const GROUND_BAND = 0.12;          // la "parte bassa" usata per il centro orizz
 /* L'OMBRA sotto i piedi: pixel scuri e semitrasparenti nella metà bassa del personaggio.
    Se c'è, il punto a terra è il centro della sua parte bassa: così fiamme, spade o
    effetti che scendono più in basso dei piedi non spostano l'unità. */
+const SHADOW_RATIO = 3.3;   // le ombre del gioco sono ellissi circa 3,3 volte più larghe che alte
+
 function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
     const isShadow = i => {
         const a = pixels[i + 3];
         if (a < 25 || a > 235) return false;
         return Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) <= 60;
     };
+    const alphaAt = (x, y) => pixels[(y * cw + x) * 4 + 3];
     const start = top + Math.floor((bottom - top) * 0.5);
     const rows = new Array(ch).fill(0);
     for (let y = start; y < ch; y++) {
@@ -1563,22 +1609,44 @@ function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
         } else y++;
     }
     if (!best) return null;
-    let minX = cw, maxX = -1, sumX = 0, n = 0;
+    // bordi dell'ombra riga per riga. Un bordo è "libero" se accanto c'è il vuoto;
+    // se invece accanto c'è il personaggio o un effetto (ali, scie di luce), quel pezzo
+    // d'ombra è coperto e il vero bordo non si vede.
+    let minX = cw, maxX = -1, freeLeft = false, freeRight = false;
+    const mids = [];
     for (let y = best.s; y < best.e; y++) {
+        let l = -1, r = -1;
         for (let x = 0; x < cw; x++) {
-            if (isShadow((y * cw + x) * 4)) {
-                if (x < minX) minX = x;
-                if (x > maxX) maxX = x;
-                sumX += x + 0.5; n++;
-            }
+            if (isShadow((y * cw + x) * 4)) { if (l < 0) l = x; r = x; }
         }
+        if (l < 0) continue;
+        if (l < minX) minX = l;
+        if (r > maxX) maxX = r;
+        const lf = l < 2 || (alphaAt(l - 1, y) < 25 && alphaAt(l - 2, y) < 25);
+        const rf = r > cw - 3 || (alphaAt(r + 1, y) < 25 && alphaAt(r + 2, y) < 25);
+        if (lf) freeLeft = true;
+        if (rf) freeRight = true;
+        if (lf && rf) mids.push((l + r + 1) / 2);
     }
     const width = maxX - minX + 1, height = best.e - best.s;
     // deve sembrare un'ombra: abbastanza larga e più larga che alta
     if (best.tot < 12 || width < 6 || width < 0.12 * charWidth || height > 0.6 * width) return null;
+    let cx;
+    if (mids.length) {
+        // righe con tutti e due i bordi visibili: il centro è a metà (si prende il valore di mezzo)
+        mids.sort((a, b) => a - b);
+        const k = mids.length >> 1;
+        cx = mids.length % 2 ? mids[k] : (mids[k - 1] + mids[k]) / 2;
+    } else {
+        // un lato è sempre coperto: la larghezza vera si stima dall'altezza dell'ombra
+        const est = Math.max(width, SHADOW_RATIO * height);
+        if (freeLeft && !freeRight) cx = minX + est / 2;
+        else if (freeRight && !freeLeft) cx = maxX + 1 - est / 2;
+        else cx = (minX + maxX + 1) / 2;
+    }
     // y = bordo basso dell'ombra, cy = centro dell'ombra
-    return { x: sumX / n / cw, y: best.e / ch, cy: (best.s + best.e) / 2 / ch };
-}          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
+    return { x: cx / cw, y: best.e / ch, cy: (best.s + best.e) / 2 / ch };
+}
 
 // prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
 function trimmedRange(counts, total, trim = CENTER_TRIM) {
