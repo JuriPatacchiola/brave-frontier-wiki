@@ -77642,8 +77642,8 @@
     },
     "animations": {
       "default": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.webm"
+      "idle": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-idle.webm",
+      "atk": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-atk.webm"
     },
     "effects": {
       "atk": "",

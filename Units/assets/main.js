@@ -553,6 +553,52 @@ function detectArtPixelSize(img) {
     return 1;
 }
 
+// Un'animazione .webp si muove: ali, mantelli e armi possono uscire dalla sagoma del primo
+// fotogramma. Dentro il file ogni fotogramma dice in quale rettangolo cambia qualcosa:
+// unendo questi rettangoli si sa fin dove arriva l'animazione intera (si legge solo
+// l'intestazione del file, che il telefono ha già scaricato).
+const webpFramesCache = new Map();
+
+function parseWebpFrames(buffer) {
+    const b = new Uint8Array(buffer);
+    const tag = i => String.fromCharCode(b[i], b[i + 1], b[i + 2], b[i + 3]);
+    const u24 = i => b[i] | (b[i + 1] << 8) | (b[i + 2] << 16);
+    const u32 = i => (b[i] | (b[i + 1] << 8) | (b[i + 2] << 16) | (b[i + 3] << 24)) >>> 0;
+    if (b.length < 16 || tag(0) !== 'RIFF' || tag(8) !== 'WEBP') return null;
+    let i = 12, cw = 0, ch = 0;
+    const rects = [];
+    while (i + 8 <= b.length) {
+        const name = tag(i), size = u32(i + 4), d = i + 8;
+        if (name === 'VP8X' && size >= 10) {
+            cw = 1 + u24(d + 4);
+            ch = 1 + u24(d + 7);
+        } else if (name === 'ANMF' && size >= 16) {
+            rects.push({ x: 2 * u24(d), y: 2 * u24(d + 3), w: 1 + u24(d + 6), h: 1 + u24(d + 9) });
+        }
+        i = d + size + (size & 1);
+    }
+    return cw && ch ? { cw, ch, rects } : null;
+}
+
+function readWebpFrames(src) {
+    if (!webpFramesCache.has(src)) {
+        webpFramesCache.set(src, fetch(src)
+            .then(r => (r.ok ? r.arrayBuffer() : null))
+            .then(buf => (buf ? parseWebpFrames(buf) : null))
+            .catch(() => null));
+    }
+    return webpFramesCache.get(src);
+}
+
+// spazio che serve all'unità sopra il puntino e ai lati, dati i bordi (in frazioni del file)
+function setEvoNeeds(stage, img, box) {
+    const k = parseFloat(img.dataset.artPx) || 1;
+    const w = parseFloat(img.dataset.fileW), h = parseFloat(img.dataset.fileH);
+    const sx = parseFloat(img.dataset.standX), sy = parseFloat(img.dataset.standY);
+    stage.dataset.up = String(Math.max(0, sy - box.top) * h / k);
+    stage.dataset.side = String(Math.max(sx - box.left, box.right - sx, 0) * w / k);
+}
+
 // Mette l'animazione con i piedi al centro del vetro, a pixel netti (1 pixel del disegno = 1px).
 function placeEvoUnit(img) {
     const stage = img.closest('.evo-stage');
@@ -564,12 +610,36 @@ function placeEvoUnit(img) {
     const sy = m.standY !== undefined ? m.standY : 0.5;
     img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
     img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
-    // grandezza a pixel netti e spazio che serve a questa unità: sopra il puntino e ai lati
-    img.dataset.fullW = String(m.w / k);
-    stage.dataset.up = String((m.top !== undefined ? Math.max(0, sy - m.top) : 0.5) * m.h / k);
-    stage.dataset.side = String((m.left !== undefined ? Math.max(sx - m.left, m.right - sx) : 0.5) * m.w / k);
+    Object.assign(img.dataset, { artPx: k, fileW: m.w, fileH: m.h, standX: sx, standY: sy, fullW: m.w / k });
+    // bordi del primo fotogramma
+    const box = m.fullLeft !== undefined
+        ? { left: m.fullLeft, right: m.fullRight, top: m.fullTop }
+        : { left: 0, right: 1, top: 0 };
+    setEvoNeeds(stage, img, box);
     img.classList.add('is-placed');
-    fitEvoPanel(stage.closest('.evolution-recipe-panel'));
+    const panel = stage.closest('.evolution-recipe-panel');
+    fitEvoPanel(panel);
+
+    // poi i bordi di tutta l'animazione (tutti i fotogrammi)
+    readWebpFrames(img.src).then(info => {
+        if (!info || !img.isConnected) return;
+        const later = info.rects.slice(1);
+        if (!later.length) return;                       // immagine ferma: basta il primo fotogramma
+        const fullFrames = later.every(r => r.x === 0 && r.y === 0 && r.w >= info.cw && r.h >= info.ch);
+        if (fullFrames) {
+            // il file non dice dove cambia: si lascia un margine del 15%
+            const mw = (box.right - box.left) * 0.15, mh = (sy - box.top) * 0.15;
+            box.left -= mw; box.right += mw; box.top -= mh;
+        } else {
+            later.forEach(r => {
+                box.left = Math.min(box.left, r.x / info.cw);
+                box.right = Math.max(box.right, (r.x + r.w) / info.cw);
+                box.top = Math.min(box.top, r.y / info.ch);
+            });
+        }
+        setEvoNeeds(stage, img, box);
+        fitEvoPanel(panel);
+    });
 }
 
 // Spazio in larghezza per ogni unità. Solo sul telefono è poco (due unità affiancate):
@@ -1576,7 +1646,8 @@ function fitGifLikeWebm(img) {
    fotogramma, si trova dove sono i pixel non trasparenti e si passa al CSS lo
    spostamento per portarli al centro del riquadro (--char-x e --char-y).
    ========================================================================== */
-const CENTER_SAMPLE_WIDTH = 800;   // risoluzione massima della lettura: le .webp si leggono intere, pixel per pixel
+const CENTER_SAMPLE_WIDTH = 800;   // risoluzione massima della lettura per i video .webm
+const CENTER_SAMPLE_WIDTH_IMG = 2600;   // le .webp si leggono intere, pixel per pixel (anche quelle molto larghe)
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
 const CENTER_TRIM = 0.02;
 const GROUND_TRIM = 0.003;         // per il bordo basso si ignora pochissimo, così l'ombra resta dentro
@@ -1644,8 +1715,85 @@ function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
         else if (freeRight && !freeLeft) cx = maxX + 1 - est / 2;
         else cx = (minX + maxX + 1) / 2;
     }
-    // y = bordo basso dell'ombra, cy = centro dell'ombra
-    return { x: cx / cw, y: best.e / ch, cy: (best.s + best.e) / 2 / ch };
+    // y = bordo basso dell'ombra, cy = centro dell'ombra.
+    // Se si vede solo una striscia sottile in fondo (il resto è coperto, per esempio da cristalli
+    // o da un vestito lungo), il centro vero è più in alto: si stima dalla larghezza dell'ombra.
+    let cy = (best.s + best.e) / 2;
+    const expectedHeight = width / SHADOW_RATIO;
+    if (height < 10 && height < 0.6 * expectedHeight) cy = best.e - expectedHeight / 2;
+    return { x: cx / cw, y: best.e / ch, cy: cy / ch };
+}
+
+// Unità senza ombra ma con un alone luminoso sul terreno (es. Lux Halcyon Atro): la parte più bassa
+// è tutta semitrasparente e il punto più basso è il bordo dell'alone, non i piedi.
+// Il centro dell'alone si stima come per le ombre (ellisse 3,3 volte più larga che alta).
+// Restituisce null se in basso ci sono i piedi o il corpo (pixel pieni).
+function groundGlowCenter(pixels, cw, ch, top, lowest, bottom) {
+    // "lowest" = ultima riga con qualcosa (per vedere se in fondo c'è solo luce trasparente),
+    // "bottom" = bordo basso senza le punte isolate (per stimare il centro dell'alone)
+    const thin = Math.max(2, Math.round((lowest - top) * 0.06));
+    let vis = 0, soft = 0;
+    for (let y = Math.max(0, lowest - thin); y < lowest; y++) {
+        for (let x = 0; x < cw; x++) {
+            const a = pixels[(y * cw + x) * 4 + 3];
+            if (a >= CENTER_MIN_ALPHA) { vis++; if (a < 235) soft++; }
+        }
+    }
+    if (!vis || soft / vis < 0.8) return null;
+    const h = bottom - top;
+    const band = Math.max(2, Math.round(h * GROUND_BAND));
+    let maxW = 0;
+    for (let y = Math.max(0, bottom - band); y < bottom; y++) {
+        let l = -1, r = -1;
+        for (let x = 0; x < cw; x++) {
+            if (pixels[(y * cw + x) * 4 + 3] >= CENTER_MIN_ALPHA) { if (l < 0) l = x; r = x; }
+        }
+        if (l >= 0) maxW = Math.max(maxW, r - l + 1);
+    }
+    if (!maxW) return null;
+    return Math.max(top, bottom - maxW / SHADOW_RATIO / 2) / ch;
+}
+
+// Ombra "piena": su alcune unità l'ombra è disegnata sopra un alone di luce e nel file è diventata
+// una macchia scura NON trasparente sotto i piedi. Si cerca, nella parte bassa, la fascia di righe
+// con una lunga striscia orizzontale di pixel scuri (più lunga di stivali e contorni).
+function findDarkShadow(pixels, cw, ch, top, bottom, charWidth) {
+    const isDark = i => pixels[i + 3] >= 200 && Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) <= 100;
+    const minRun = Math.max(8, 0.1 * charWidth);
+    const start = Math.max(0, bottom - Math.floor((bottom - top) * 0.35));
+    const rows = [];
+    for (let y = start; y < bottom; y++) {
+        // la striscia scura più lunga della riga (si saltano buchi di 1-2 pixel)
+        let best = { n: 0, s: -1, e: -1 }, s = -1, last = -10;
+        for (let x = 0; x < cw; x++) {
+            if (!isDark((y * cw + x) * 4)) continue;
+            if (s < 0 || x - last > 3) {
+                if (s >= 0 && last - s + 1 > best.n) best = { n: last - s + 1, s, e: last };
+                s = x;
+            }
+            last = x;
+        }
+        if (s >= 0 && last - s + 1 > best.n) best = { n: last - s + 1, s, e: last };
+        rows.push({ y, ...best });
+    }
+    // la fascia di righe consecutive con le strisce lunghe
+    let pick = null, cur = [];
+    const close = () => {
+        if (cur.length >= 3) {
+            const tot = cur.reduce((t, r) => t + r.n, 0);
+            if (!pick || tot > pick.tot) pick = { tot, rows: cur };
+        }
+        cur = [];
+    };
+    rows.forEach(r => { if (r.n >= minRun) cur.push(r); else close(); });
+    close();
+    if (!pick) return null;
+    const mids = pick.rows.map(r => (r.s + r.e + 1) / 2).sort((a, b) => a - b);
+    const k = mids.length >> 1;
+    const cx = mids.length % 2 ? mids[k] : (mids[k - 1] + mids[k]) / 2;
+    const first = pick.rows[0].y, last = pick.rows[pick.rows.length - 1].y + 1;
+    // y = bordo basso della macchia, cy = suo centro (come per le ombre normali)
+    return { x: cx / cw, y: last / ch, cy: (first + last) / 2 / ch };
 }
 
 // prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
@@ -1735,7 +1883,7 @@ function measureCharacter(el) {
 
     try {
         const canvas = document.createElement('canvas');
-        canvas.width = Math.min(w, CENTER_SAMPLE_WIDTH);
+        canvas.width = Math.min(w, el.tagName === 'IMG' ? CENTER_SAMPLE_WIDTH_IMG : CENTER_SAMPLE_WIDTH);
         canvas.height = Math.max(1, Math.round(canvas.width * h / w));
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
         ctx.drawImage(el, 0, 0, canvas.width, canvas.height);
@@ -1770,12 +1918,26 @@ function measureCharacter(el) {
             let groundY = bottom / canvas.height;
             const shadow = findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1);
             if (shadow) { groundX = shadow.x; groundY = shadow.y; }
+            // senza ombra trasparente ma con un alone sul terreno: forse l'ombra è "fusa" con l'alone
+            // (macchia scura piena sotto i piedi, come Ice Legend Selena)
+            // (qui si usa il bordo basso vero, senza togliere le punte sottili dell'alone)
+            const lowest = trimmedRange(rows, total, 0).last + 1;
+            const glowY = shadow ? null : groundGlowCenter(pixels, canvas.width, canvas.height, rr.first, lowest, bottom);
+            const blob = glowY === null ? null : findDarkShadow(pixels, canvas.width, canvas.height, rr.first, lowest, cr.last - cr.first + 1);
+            if (blob) { groundX = blob.x; groundY = blob.y; }
             // per le basi delle evoluzioni: il centro dell'ombra (o i piedi, se l'ombra non c'è)
             m.standX = groundX;
-            m.standY = shadow ? shadow.cy : groundY;
+            m.standY = shadow ? shadow.cy : (blob ? blob.cy : (glowY !== null ? glowY : groundY));
             m.left = cr.first / canvas.width;
             m.right = (cr.last + 1) / canvas.width;
             m.top = rr.first / canvas.height;
+            // bordi completi (anche punte sottili, scintille): per non far uscire niente dai riquadri
+            const fullC = trimmedRange(cols, total, 0);
+            const fullR = trimmedRange(rows, total, 0);
+            m.fullLeft = fullC.first / canvas.width;
+            m.fullRight = (fullC.last + 1) / canvas.width;
+            m.fullTop = fullR.first / canvas.height;
+            m.fullBottom = (fullR.last + 1) / canvas.height;
             m.charX = ((0.5 - groundX) * 100).toFixed(2);
             m.charY = ((0.5 - groundY) * 100).toFixed(2);
             // grandezza del personaggio nel file, per non farlo uscire dal riquadro

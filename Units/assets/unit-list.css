@@ -2215,7 +2215,8 @@ video {
 .evolution-recipe-panel {
     --stage-w: 104px;
     --stage-h: 120px;
-    overflow: visible;
+    overflow: hidden;
+    /* le animazioni restano sempre dentro il riquadro grigio */
 }
 
 /* niente esce dai lati dei riquadri delle evoluzioni (le animazioni hanno bordi trasparenti larghi) */
@@ -2369,6 +2370,11 @@ video {
     }
 }
 
+/* materiali e costi: alti solo quanto serve e al centro, anche quando le unità sono alte */
+.evolution-recipe-panel .evo-recipe-requirements {
+    align-self: center;
+}
+
 /* telefono: le due unità grandi in alto (prima -> dopo), materiali e costi sotto */
 @media (max-width: 600px) {
     .evo-stage {
@@ -2391,7 +2397,7 @@ video {
         column-gap: 4px;
         row-gap: 10px;
         padding: 10px;
-        overflow: visible;
+        overflow: hidden;
         white-space: normal;
     }
 
