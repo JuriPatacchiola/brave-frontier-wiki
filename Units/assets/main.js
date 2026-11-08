@@ -461,6 +461,7 @@ const EVO_BASE_FILES = {
 // questi numeri sono anche nel CSS.
 const EVO_STAGE_MIN_W = 104;
 const EVO_STAGE_MIN_H = 120;
+const EVO_STAGE_MIN_H_PHONE = 84;
 const EVO_STAGE_FOOT = 30;
 const EVO_STAGE_PAD = 6;
 
@@ -689,16 +690,13 @@ function placeEvoUnit(img) {
     });
 }
 
-// Spazio in larghezza per ogni unità. Solo sul telefono è poco (due unità affiancate):
-// su PC e tablet c'è posto per tutte.
-function evoStageRoom(panel) {
+// Spazio in larghezza per le unità sul telefono, dove la ricetta è in colonna (un'unità per riga).
+// Su PC e tablet c'è posto per tutte: Infinity.
+function evoPhoneRoom(panel) {
     if (!window.matchMedia('(max-width: 600px)').matches) return Infinity;
     const cs = getComputedStyle(panel);
     const inner = panel.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
-    const arrow = panel.querySelector('.evo-recipe-equals');
-    const gap = parseFloat(cs.columnGap) || 0;
-    const room = (inner - (arrow ? arrow.offsetWidth : 0) - 2 * gap) / 2;
-    return room > 40 ? room : Infinity;   // riquadro non ancora visibile: si rifà dopo
+    return inner >= 120 ? inner : Infinity;   // riquadro non ancora visibile: si rifà dopo
 }
 
 // Rimpicciolimento per le unità troppo larghe per il telefono, solo "a gradini interi":
@@ -716,30 +714,37 @@ function evoPixelSafeScale(needW, room) {
     return scale;
 }
 
-// Le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande
+// Le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande.
+// Sul telefono la ricetta è in colonna (prima unità sopra, freccia, unità evoluta sotto),
+// così ogni unità ha tutta la larghezza dello schermo e resta grande come su PC.
 function fitEvoPanel(panel) {
     if (!panel) return;
-    const room = evoStageRoom(panel);
-    let w = EVO_STAGE_MIN_W, h = EVO_STAGE_MIN_H;
+    const items = [];
     panel.querySelectorAll('.evo-stage').forEach(stage => {
         const img = stage.querySelector('.evo-stage-unit.is-placed');
         if (!img) return;
-        const up = parseFloat(stage.dataset.up) || 0;
-        const side = parseFloat(stage.dataset.side) || 0;
-        const needW = 2 * side + EVO_STAGE_PAD;
-        // unità ingrandite (UNIT_SPRITE_SCALE) che sul telefono non ci stanno: si rimpiccioliscono
-        // solo quel tanto che serve per starci (sono già ingrandite "a metà pixel", quindi niente
-        // gradini interi); le altre si rimpiccioliscono "a gradini interi" come sempre
-        const unitScale = parseFloat(img.dataset.unitScale) || 1;
+        items.push({
+            img,
+            up: parseFloat(stage.dataset.up) || 0,
+            needW: 2 * (parseFloat(stage.dataset.side) || 0) + EVO_STAGE_PAD,
+            unitScale: parseFloat(img.dataset.unitScale) || 1
+        });
+    });
+    const room = evoPhoneRoom(panel);
+    // sul telefono (ricetta in colonna) il riquadro è alto solo quanto serve: niente spazi vuoti
+    let w = EVO_STAGE_MIN_W, h = room !== Infinity ? EVO_STAGE_MIN_H_PHONE : EVO_STAGE_MIN_H;
+    items.forEach(it => {
+        // se non ci sta nemmeno così: le unità ingrandite (UNIT_SPRITE_SCALE) si rimpiccioliscono
+        // solo quel tanto che serve, le altre "a gradini interi" per tenere i pixel netti
         let scale = 1;
-        if (needW > room) {
-            scale = unitScale > 1
-                ? Math.max(room / needW, 0.5 / unitScale)
-                : evoPixelSafeScale(needW, room);
+        if (it.needW > room) {
+            scale = it.unitScale > 1
+                ? Math.max(room / it.needW, 0.5 / it.unitScale)
+                : evoPixelSafeScale(it.needW, room);
         }
-        img.style.width = (parseFloat(img.dataset.fullW) * scale) + 'px';
-        w = Math.max(w, Math.ceil(needW * scale));
-        h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + up * scale + EVO_STAGE_PAD));
+        it.img.style.width = (parseFloat(it.img.dataset.fullW) * scale) + 'px';
+        w = Math.max(w, Math.ceil(it.needW * scale));
+        h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + it.up * scale + EVO_STAGE_PAD));
     });
     if (room !== Infinity) w = Math.min(w, Math.floor(room));
     panel.style.setProperty('--stage-w', w + 'px');
@@ -786,12 +791,26 @@ function initEvolutionLinks() {
         if (target) openModal(target);
     };
 
+    // telefono: il titolo di ogni fase apre e chiude la fase (su PC e tablet le fasi sono sempre aperte)
+    const toggleStep = (title) => {
+        if (!window.matchMedia('(max-width: 600px)').matches) return;
+        const block = title.closest('.evolution-step-block');
+        if (!block) return;
+        const open = block.classList.toggle('is-open');
+        title.setAttribute('aria-expanded', String(open));
+        if (open) fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
+    };
+
     container.addEventListener('click', (e) => {
+        const title = e.target.closest('.evo-step-title');
+        if (title) { toggleStep(title); return; }
         const el = e.target.closest('.evo-unit-link');
         if (el) openFromEl(el);
     });
     container.addEventListener('keydown', (e) => {
         if (e.key !== 'Enter' && e.key !== ' ') return;
+        const title = e.target.closest('.evo-step-title');
+        if (title) { e.preventDefault(); toggleStep(title); return; }
         const el = e.target.closest('.evo-unit-link');
         if (el) { e.preventDefault(); openFromEl(el); }
     });
@@ -875,6 +894,13 @@ function renderEvolutionRecipes(unit) {
 
     let htmlContent = '';
 
+    // sul telefono ogni fase è un bottone che si apre e si chiude: all'inizio è aperta solo
+    // la fase che porta all'unità aperta (o, per la prima forma, la sua prima evoluzione)
+    const sameId = (a, b) => a !== undefined && a !== null && String(a) === String(unit.realId || unit.id);
+    let openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.nextId || it.evoData.id));
+    if (openIndex < 0) openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.prevId));
+    if (openIndex < 0) openIndex = 0;
+
     uniqueEvolutions.forEach((item, index) => {
         const evolution = item.evoData;
         const recipe = evolution.recipe || {};
@@ -928,8 +954,11 @@ function renderEvolutionRecipes(unit) {
             : '';
 
         htmlContent += `
-            <div class="evolution-step-block">
-                <h4 class="notranslate" style="color: #d4af37; margin: 0 0 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">${levelTitle}</h4>
+            <div class="evolution-step-block${index === openIndex ? ' is-open' : ''}">
+                <h4 class="evo-step-title notranslate" role="button" tabindex="0" aria-expanded="${index === openIndex}">
+                    <span class="evo-step-name">${levelTitle}</span>
+                    <span class="evo-step-chevron" aria-hidden="true"></span>
+                </h4>
                 <div class="evolution-recipe-panel">
                     <div class="evo-recipe-unit-wrap evo-recipe-prev">
                         ${evoUnitStageHtml(currentImage, evolution.prevId, altName, unit, prevRarity)}

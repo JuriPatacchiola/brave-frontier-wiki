@@ -2474,12 +2474,83 @@ video {
     }
 }
 
+/* titolo di ogni fase evolutiva (su PC e tablet è solo un titolo, come prima) */
+.evo-step-title {
+    color: #d4af37;
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.evo-step-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.evo-step-chevron {
+    display: none;
+}
+
+/* telefono: ogni fase è un bottone. Chiusa si vede solo il titolo con la freccia in giù,
+   aperta si vedono l'unità, la freccia, i materiali e l'unità evoluta */
+@media (max-width: 600px) {
+    .evolution-step-block {
+        padding: 0;
+    }
+
+    .evo-step-title {
+        justify-content: space-between;
+        margin: 0;
+        padding: 12px 14px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        border-radius: 12px;
+    }
+
+    .evo-step-title:focus-visible {
+        outline: 2px solid rgba(212, 175, 55, 0.6);
+        outline-offset: -2px;
+    }
+
+    .evo-step-chevron {
+        display: block;
+        flex: 0 0 auto;
+        width: 9px;
+        height: 9px;
+        margin: 0 4px 4px 0;
+        border-right: 2px solid #d4af37;
+        border-bottom: 2px solid #d4af37;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease, margin 0.2s ease;
+    }
+
+    .evolution-step-block.is-open .evo-step-chevron {
+        transform: rotate(-135deg);
+        margin: 4px 4px 0 0;
+    }
+
+    .evolution-step-block:not(.is-open) .evolution-recipe-panel {
+        display: none;
+    }
+
+    .evolution-step-block.is-open .evolution-recipe-panel {
+        margin: 0 10px 12px;
+        width: auto;
+    }
+
+}
+
 /* materiali e costi: alti solo quanto serve e al centro, anche quando le unità sono alte */
 .evolution-recipe-panel .evo-recipe-requirements {
     align-self: center;
 }
 
-/* telefono: le due unità grandi in alto (prima -> dopo), materiali e costi sotto */
+/* telefono: ricetta in colonna (prima unità, freccia in giù, unità evoluta), materiali e costi sotto */
 @media (max-width: 600px) {
     .evo-stage {
         max-width: 100%;
@@ -2492,14 +2563,17 @@ video {
 
     .evolution-recipe-panel {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
-            "prev arrow next"
-            "req req req";
+            "prev"
+            "arrow"
+            "req"
+            "next";
+        /* unità, freccia, materiali e costi, unità evoluta */
         align-items: center;
         justify-items: center;
         column-gap: 4px;
-        row-gap: 10px;
+        row-gap: 4px;
         padding: 10px;
         overflow: hidden;
         white-space: normal;
@@ -2525,12 +2599,16 @@ video {
 
     .evolution-recipe-panel .evo-recipe-equals::before {
         content: "\279C";
+        display: inline-block;
+        transform: rotate(90deg);
+        /* freccia verso il basso */
         font-size: 1.6rem;
         line-height: 1;
     }
 
     .evolution-recipe-panel .evo-recipe-requirements {
         grid-area: req;
+        margin: 2px 0 8px;
         width: 100%;
         min-width: 0;
         max-width: none;
