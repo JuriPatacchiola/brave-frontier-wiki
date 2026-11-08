@@ -1655,7 +1655,7 @@ function fitGifLikeWebm(img) {
    fotogramma, si trova dove sono i pixel non trasparenti e si passa al CSS lo
    spostamento per portarli al centro del riquadro (--char-x e --char-y).
    ========================================================================== */
-const CENTER_SAMPLE_WIDTH = 800;   // risoluzione massima della lettura per i video .webm
+const CENTER_SAMPLE_WIDTH = 2700;   // i video .webm si leggono interi (rimpiccioliti, l'ombra si confonde e l'unità si sposta)
 const CENTER_SAMPLE_WIDTH_IMG = 2600;   // le .webp si leggono intere, pixel per pixel (anche quelle molto larghe)
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
 const CENTER_TRIM = 0.02;

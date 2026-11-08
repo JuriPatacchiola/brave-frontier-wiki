@@ -37781,54 +37781,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-      "nextId": "10131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "recipe": {
-        "targetId": "10131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "10131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "nextId": "10132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "recipe": {
-        "targetId": "10132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "10132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "nextId": "10133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10133.png",
-      "recipe": {
-        "targetId": "10133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire Nymph",
       "it": "Ninfa del fuoco",
@@ -37969,54 +37922,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-      "nextId": "20131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "recipe": {
-        "targetId": "20131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "20131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "nextId": "20132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "recipe": {
-        "targetId": "20132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "20132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "nextId": "20133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20133.png",
-      "recipe": {
-        "targetId": "20133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water Nymph",
       "it": "Ninfa dell'acqua",
@@ -38157,54 +38063,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-      "nextId": "30131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "recipe": {
-        "targetId": "30131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "30131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "nextId": "30132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "recipe": {
-        "targetId": "30132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "30132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "nextId": "30133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30133.png",
-      "recipe": {
-        "targetId": "30133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth Nymph",
       "it": "Ninfa della terra",
@@ -38345,54 +38204,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-      "nextId": "40131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "recipe": {
-        "targetId": "40131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "40131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "nextId": "40132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "recipe": {
-        "targetId": "40132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "40132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "nextId": "40133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40133.png",
-      "recipe": {
-        "targetId": "40133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder Nymph",
       "it": "Ninfa del tuono",
@@ -38533,54 +38345,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-      "nextId": "50121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "recipe": {
-        "targetId": "50121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "nextId": "50122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "recipe": {
-        "targetId": "50122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "nextId": "50123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50123.png",
-      "recipe": {
-        "targetId": "50123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light Nymph",
       "it": "Ninfa della luce",
@@ -38721,54 +38486,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-      "nextId": "60121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "recipe": {
-        "targetId": "60121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "nextId": "60122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "recipe": {
-        "targetId": "60122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "60122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "nextId": "60123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-      "recipe": {
-        "targetId": "60123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Dark Nymph",
       "it": "Ninfa di tenebre",
@@ -38909,54 +38627,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-      "nextId": "10131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "recipe": {
-        "targetId": "10131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "10131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "nextId": "10132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "recipe": {
-        "targetId": "10132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "10132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "nextId": "10133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10133.png",
-      "recipe": {
-        "targetId": "10133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire Spirit",
       "it": "Spirito del fuoco",
@@ -39097,54 +38768,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-      "nextId": "20131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "recipe": {
-        "targetId": "20131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "20131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "nextId": "20132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "recipe": {
-        "targetId": "20132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "20132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "nextId": "20133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20133.png",
-      "recipe": {
-        "targetId": "20133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water Spirit",
       "it": "Spirito d’acqua",
@@ -39285,54 +38909,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-      "nextId": "30131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "recipe": {
-        "targetId": "30131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "30131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "nextId": "30132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "recipe": {
-        "targetId": "30132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "30132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "nextId": "30133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30133.png",
-      "recipe": {
-        "targetId": "30133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth Spirit",
       "it": "Spirito di terra",
@@ -39473,54 +39050,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-      "nextId": "40131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "recipe": {
-        "targetId": "40131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "40131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "nextId": "40132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "recipe": {
-        "targetId": "40132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "40132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "nextId": "40133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40133.png",
-      "recipe": {
-        "targetId": "40133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder Spirit",
       "it": "Spirito del tuono",
@@ -39661,54 +39191,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-      "nextId": "50121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "recipe": {
-        "targetId": "50121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "nextId": "50122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "recipe": {
-        "targetId": "50122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "nextId": "50123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50123.png",
-      "recipe": {
-        "targetId": "50123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light Spirit",
       "it": "Spirito di luce",
@@ -39849,54 +39332,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-      "nextId": "60121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "recipe": {
-        "targetId": "60121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "nextId": "60122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "recipe": {
-        "targetId": "60122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "60122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "nextId": "60123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-      "recipe": {
-        "targetId": "60123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Dark Spirit",
       "it": "Spirito tenebre",
@@ -40037,54 +39473,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-      "nextId": "10131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "recipe": {
-        "targetId": "10131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "10131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "nextId": "10132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "recipe": {
-        "targetId": "10132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "10132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "nextId": "10133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10133.png",
-      "recipe": {
-        "targetId": "10133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire Idol",
       "it": "Idolo del fuoco",
@@ -40225,54 +39614,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-      "nextId": "20131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "recipe": {
-        "targetId": "20131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "20131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "nextId": "20132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "recipe": {
-        "targetId": "20132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "20132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "nextId": "20133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20133.png",
-      "recipe": {
-        "targetId": "20133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water Idol",
       "it": "Idolo dell’acqua",
@@ -40413,54 +39755,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-      "nextId": "30131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "recipe": {
-        "targetId": "30131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "30131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "nextId": "30132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "recipe": {
-        "targetId": "30132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "30132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "nextId": "30133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30133.png",
-      "recipe": {
-        "targetId": "30133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth Idol",
       "it": "Idolo della terra",
@@ -40601,54 +39896,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-      "nextId": "40131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "recipe": {
-        "targetId": "40131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "40131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "nextId": "40132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "recipe": {
-        "targetId": "40132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "40132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "nextId": "40133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40133.png",
-      "recipe": {
-        "targetId": "40133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder Idol",
       "it": "Idolo del tuono",
@@ -40789,54 +40037,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-      "nextId": "50121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "recipe": {
-        "targetId": "50121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "nextId": "50122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "recipe": {
-        "targetId": "50122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "nextId": "50123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50123.png",
-      "recipe": {
-        "targetId": "50123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light Idol",
       "it": "Idolo della luce",
@@ -40977,54 +40178,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-      "nextId": "60121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "recipe": {
-        "targetId": "60121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "nextId": "60122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "recipe": {
-        "targetId": "60122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "60122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "nextId": "60123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-      "recipe": {
-        "targetId": "60123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Dark Idol",
       "it": "Idolo di tenebre",
@@ -41165,54 +40319,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "10130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10130.png",
-      "nextId": "10131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "recipe": {
-        "targetId": "10131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "10131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10131.png",
-      "nextId": "10132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "recipe": {
-        "targetId": "10132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "10132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_10132.png",
-      "nextId": "10133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_10133.png",
-      "recipe": {
-        "targetId": "10133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Fire Totem",
       "it": "Totem del fuoco",
@@ -41353,54 +40460,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "20130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20130.png",
-      "nextId": "20131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "recipe": {
-        "targetId": "20131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "20131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20131.png",
-      "nextId": "20132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "recipe": {
-        "targetId": "20132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "20132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20132.png",
-      "nextId": "20133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20133.png",
-      "recipe": {
-        "targetId": "20133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Water Totem",
       "it": "Totem dell’acqua",
@@ -41541,54 +40601,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "30130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30130.png",
-      "nextId": "30131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "recipe": {
-        "targetId": "30131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "30131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30131.png",
-      "nextId": "30132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "recipe": {
-        "targetId": "30132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "30132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_30132.png",
-      "nextId": "30133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_30133.png",
-      "recipe": {
-        "targetId": "30133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Earth Totem",
       "it": "Totem della terra",
@@ -41729,54 +40742,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "40130",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40130.png",
-      "nextId": "40131",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "recipe": {
-        "targetId": "40131",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "40131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40131.png",
-      "nextId": "40132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "recipe": {
-        "targetId": "40132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "40132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_40132.png",
-      "nextId": "40133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_40133.png",
-      "recipe": {
-        "targetId": "40133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Thunder Totem",
       "it": "Totem del tuono",
@@ -41917,54 +40883,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50120.png",
-      "nextId": "50121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "recipe": {
-        "targetId": "50121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50121.png",
-      "nextId": "50122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "recipe": {
-        "targetId": "50122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50122.png",
-      "nextId": "50123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50123.png",
-      "recipe": {
-        "targetId": "50123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Light Totem",
       "it": "Totem della luce",
@@ -42105,54 +41024,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60120",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60120.png",
-      "nextId": "60121",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "recipe": {
-        "targetId": "60121",
-        "targetRarity": "2",
-        "zel": 0,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60121",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60121.png",
-      "nextId": "60122",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "recipe": {
-        "targetId": "60122",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "60122",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60122.png",
-      "nextId": "60123",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60123.png",
-      "recipe": {
-        "targetId": "60123",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Dark Totem",
       "it": "Totem di tenebre",
@@ -42293,54 +41165,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50131.png",
-      "nextId": "50132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "recipe": {
-        "targetId": "50132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "nextId": "50133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "recipe": {
-        "targetId": "50133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "nextId": "50134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50134.png",
-      "recipe": {
-        "targetId": "50134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Jewel Ghost",
       "it": "Gioiello fantasma",
@@ -42481,54 +41306,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50131.png",
-      "nextId": "50132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "recipe": {
-        "targetId": "50132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "nextId": "50133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "recipe": {
-        "targetId": "50133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "nextId": "50134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50134.png",
-      "recipe": {
-        "targetId": "50134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Jewel King",
       "it": "Gioiello reale",
@@ -42669,54 +41447,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50131.png",
-      "nextId": "50132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "recipe": {
-        "targetId": "50132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "nextId": "50133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "recipe": {
-        "targetId": "50133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "nextId": "50134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50134.png",
-      "recipe": {
-        "targetId": "50134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Jewel God",
       "it": "Gioiello divino",
@@ -42857,44 +41588,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60132.png",
-      "nextId": "60133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "recipe": {
-        "targetId": "60133",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "60133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "nextId": "60134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60134.png",
-      "recipe": {
-        "targetId": "60134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Metal Ghost",
       "it": "Fantasma metallo",
@@ -43035,44 +41729,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60132.png",
-      "nextId": "60133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "recipe": {
-        "targetId": "60133",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "60133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "nextId": "60134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60134.png",
-      "recipe": {
-        "targetId": "60134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Metal King",
       "it": "Re del metallo",
@@ -43213,44 +41870,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60132.png",
-      "nextId": "60133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "recipe": {
-        "targetId": "60133",
-        "targetRarity": "4",
-        "zel": 1000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [
-          "../img/Unit/Squere Img/unit_ills_thum_10202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_20202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_30202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_40202.png",
-          "../img/Unit/Squere Img/unit_ills_thum_50202.png"
-        ],
-        "items": []
-      }
-    },
-    "evolution2": {
-      "prevId": "60133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60133.png",
-      "nextId": "60134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60134.png",
-      "recipe": {
-        "targetId": "60134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Metal God",
       "it": "Dio del metallo",
@@ -43391,38 +42011,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60142",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60142.png",
-      "nextId": "60143",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "recipe": {
-        "targetId": "60143",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60143",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "nextId": "60144",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60144.png",
-      "recipe": {
-        "targetId": "60144",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Mimic",
       "it": "Ymytas",
@@ -43563,38 +42152,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60142",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60142.png",
-      "nextId": "60143",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "recipe": {
-        "targetId": "60143",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60143",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "nextId": "60144",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60144.png",
-      "recipe": {
-        "targetId": "60144",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Bat Mimic",
       "it": "Ymytas alato",
@@ -64996,38 +63554,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "60142",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60142.png",
-      "nextId": "60143",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "recipe": {
-        "targetId": "60143",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "60143",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60143.png",
-      "nextId": "60144",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60144.png",
-      "recipe": {
-        "targetId": "60144",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Dragon Mimic",
       "it": "Ymytas drago",
@@ -126434,54 +124961,7 @@
       "atk": "",
       "bb": ""
     },
-    "evolution": {
-      "prevId": "50131",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50131.png",
-      "nextId": "50132",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "recipe": {
-        "targetId": "50132",
-        "targetRarity": "3",
-        "zel": 2500,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution2": {
-      "prevId": "50132",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50132.png",
-      "nextId": "50133",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "recipe": {
-        "targetId": "50133",
-        "targetRarity": "4",
-        "zel": 100000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
-    "evolution3": {
-      "prevId": "50133",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_50133.png",
-      "nextId": "50134",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_50134.png",
-      "recipe": {
-        "targetId": "50134",
-        "targetRarity": "5",
-        "zel": 200000,
-        "karma": 0,
-        "zelImage": "../img/Money/Zell.png",
-        "karmaImage": "../img/Money/Karma.png",
-        "materials": [],
-        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
-      }
-    },
+    "evolution": {},
     "names": {
       "en": "Golden God",
       "it": "Dio dorato",
@@ -255866,9 +254346,9 @@
       }
     },
     "animations": {
-      "default": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-default.webm",
-      "idle": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-idle.webm",
-      "atk": "../video/six heros/Selena/Algor Halcyon Selena//Algor-Halcyon-Selena-atk.webm"
+      "default": "../video/six heros/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-default.webm",
+      "idle": "../video/six heros/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-idle.webm",
+      "atk": "../video/six heros/Selena/Algor Halcyon Selena/Algor-Halcyon-Selena-atk.webm"
     },
     "effects": {
       "atk": "",
