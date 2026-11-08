@@ -433,11 +433,184 @@ function evoUnitImgHtml(src, realId, alt, currentUnit) {
     return `<img src="${src}" alt="${alt}" class="evo-recipe-unit" loading="lazy">`;
 }
 
-// Click sulle immagini laterali della ricetta: apre la modale di quell'unità
+/* ==========================================================================
+   FASI EVOLUTIVE: UNITÀ IN PIEDI SULLA BASE DELLA SUA RARITÀ
+   Al posto dell'icona quadrata, ogni unità della ricetta sta sopra una base colorata:
+     1★ e 2★ = argento, 3★ = oro, 4★ = rossa, 5★ 6★ 7★ = arcobaleno, Omni e Dream = nera e oro.
+   Sopra la base si muove l'animazione "idle" dell'unità (se manca, il "default").
+   Qui si usa la .webp su tutti i dispositivi: è leggera (possono essere tante insieme)
+   e si vede uguale su iPhone, tablet e PC.
+   Se l'unità non ha ancora l'animazione, sulla base compare la sua icona quadrata.
+   I piedi (o l'ombra) del personaggio vanno al centro del vetro della base.
+   PIXEL NETTI: ogni pixel del disegno diventa esattamente 1 pixel dello schermo (o 2, 3
+   sui telefoni con schermo più fitto). L'unità non viene mai rimpicciolita più di così,
+   quindi non si perde nessun pixel, nemmeno facendo zoom: se un'unità è molto grande,
+   è il riquadro che diventa più grande.
+   ========================================================================== */
+const EVO_BASE_FOLDER = '../img/piatform/';
+const EVO_BASE_FILES = {
+    silver: 'weapon_table_1.png',    // 1★ e 2★
+    gold: 'weapon_table_2.png',      // 3★
+    red: 'weapon_table_0.png',       // 4★
+    rainbow: 'weapon_table_3.png',   // 5★, 6★ e 7★
+    omni: 'weapon_table_4.png'       // Omni e Dream
+};
+// riquadro dell'unità (in px): misura minima e margine attorno al personaggio.
+// La base si vede larga 97px (metà del file 194x104, come gli sprite). Il punto dove va
+// il centro dell'ombra (il puntino giallo, al centro del vetro) è 30px sopra il fondo:
+// questi numeri sono anche nel CSS.
+const EVO_STAGE_MIN_W = 104;
+const EVO_STAGE_MIN_H = 120;
+const EVO_STAGE_FOOT = 30;
+const EVO_STAGE_PAD = 6;
+
+// tipo di base per la rarità: silver, gold, red, rainbow o omni (serve anche al CSS per il colore dell'alone)
+function getEvoBaseKind(rarity) {
+    const r = String(rarity || '').trim().toLowerCase();
+    if (r === '1' || r === '2') return 'silver';
+    if (r === '3') return 'gold';
+    if (r === '4') return 'red';
+    if (r === 'omni' || r === 'dream') return 'omni';
+    return 'rainbow';
+}
+
+function getEvoBaseImage(rarity) {
+    return EVO_BASE_FOLDER + EVO_BASE_FILES[getEvoBaseKind(rarity)];
+}
+
+// .webp dell'idle dell'unità (o del default se l'idle manca); '' se non c'è nessuna animazione
+function getEvoIdleSrc(target) {
+    const anims = target && target.animations;
+    const src = anims ? (anims.idle || anims.default || '') : '';
+    if (!src) return '';
+    return String(src).replace(/\.(webm|mov|gif|webp)(\?.*)?$/i, '.webp');
+}
+
+function escapeAttr(value) {
+    return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+// Base + animazione di un'unità nella ricetta: se l'unità esiste ed è diversa da quella aperta, è cliccabile
+function evoUnitStageHtml(thumbSrc, realId, alt, currentUnit, fallbackRarity) {
+    const target = findUnitByRealId(realId);
+    const isSelf = target && currentUnit && String(target.realId) === String(currentUnit.realId);
+    const rarity = (target && target.rarity) || fallbackRarity || '';
+    const idleSrc = getEvoIdleSrc(target);
+    const unitHtml = idleSrc
+        ? `<img src="${escapeAttr(idleSrc)}" data-thumb="${escapeAttr(thumbSrc)}" alt="${escapeAttr(alt)}" class="evo-stage-unit" draggable="false">`
+        : `<img src="${escapeAttr(thumbSrc)}" alt="${escapeAttr(alt)}" class="evo-stage-thumb" loading="lazy" draggable="false">`;
+    const linkAttrs = (target && !isSelf)
+        ? ` evo-unit-link" data-unit-id="${escapeAttr(target.realId)}" title="${escapeAttr(getActiveUnitName(target))}" role="button" tabindex="0"`
+        : `"`;
+    return `<div class="evo-stage evo-base-${getEvoBaseKind(rarity)}${linkAttrs}>
+                <img src="${getEvoBaseImage(rarity)}" alt="" class="evo-stage-base" draggable="false">
+                ${unitHtml}
+            </div>`;
+}
+
+// Gli sprite del gioco sono disegnati "a pixel doppi": ogni pixel del disegno è un quadratino
+// 2x2 di pixel uguali nel file. Qui si controlla quanto è grande quel quadratino (1, 2, 3 o 4),
+// così l'unità si mostra con 1 pixel del disegno = 1 pixel dello schermo.
+function blocksAreUniform(px, w, h, k) {
+    let visible = 0, bad = 0;
+    for (let by = 0; by + k <= h; by += k) {
+        for (let bx = 0; bx + k <= w; bx += k) {
+            const i0 = (by * w + bx) * 4;
+            let seen = false, diff = false;
+            for (let y = 0; y < k && !diff; y++) {
+                for (let x = 0; x < k; x++) {
+                    const i = ((by + y) * w + bx + x) * 4;
+                    if (px[i + 3]) seen = true;
+                    if (Math.abs(px[i] - px[i0]) > 8 || Math.abs(px[i + 1] - px[i0 + 1]) > 8 ||
+                        Math.abs(px[i + 2] - px[i0 + 2]) > 8 || Math.abs(px[i + 3] - px[i0 + 3]) > 8) { diff = true; break; }
+                }
+            }
+            if (!seen && !diff) continue;
+            visible++;
+            if (diff) bad++;
+        }
+    }
+    return visible > 0 && bad / visible < 0.03;
+}
+
+function detectArtPixelSize(img) {
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h || w * h > 4000000) return 1;
+    try {
+        const canvas = document.createElement('canvas');
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(img, 0, 0);
+        const px = ctx.getImageData(0, 0, w, h).data;
+        for (const k of [4, 3, 2]) {
+            if (blocksAreUniform(px, w, h, k)) return k;
+        }
+    } catch (err) {
+        console.warn('Controllo dei pixel non riuscito:', err);
+    }
+    return 1;
+}
+
+// Mette l'animazione con i piedi al centro del vetro, a pixel netti (1 pixel del disegno = 1px).
+function placeEvoUnit(img) {
+    const stage = img.closest('.evo-stage');
+    const m = stage ? measureCharacter(img) : null;
+    if (!m) return;
+    const k = detectArtPixelSize(img);
+    // il centro dell'ombra va sul puntino; se il file non si è potuto leggere, resta centrato
+    const sx = m.standX !== undefined ? m.standX : 0.5;
+    const sy = m.standY !== undefined ? m.standY : 0.5;
+    img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
+    img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
+    img.style.width = (m.w / k) + 'px';
+    // spazio che serve a questa unità: sopra il puntino e ai lati
+    const up = (m.top !== undefined ? Math.max(0, sy - m.top) : 0.5) * m.h / k;
+    const side = (m.left !== undefined ? Math.max(sx - m.left, m.right - sx) : 0.5) * m.w / k;
+    stage.dataset.needW = String(Math.ceil(2 * side + EVO_STAGE_PAD));
+    stage.dataset.needH = String(Math.ceil(EVO_STAGE_FOOT + up + EVO_STAGE_PAD));
+    img.classList.add('is-placed');
+    fitEvoPanel(stage.closest('.evolution-recipe-panel'));
+}
+
+// Le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande
+function fitEvoPanel(panel) {
+    if (!panel) return;
+    let w = EVO_STAGE_MIN_W, h = EVO_STAGE_MIN_H;
+    panel.querySelectorAll('.evo-stage').forEach(stage => {
+        w = Math.max(w, parseFloat(stage.dataset.needW) || 0);
+        h = Math.max(h, parseFloat(stage.dataset.needH) || 0);
+    });
+    panel.style.setProperty('--stage-w', w + 'px');
+    panel.style.setProperty('--stage-h', h + 'px');
+}
+
+// Animazione che non esiste (ancora): al suo posto l'icona quadrata dell'unità
+function evoUnitFallback(img) {
+    img.classList.remove('evo-stage-unit', 'is-placed');
+    img.classList.add('evo-stage-thumb');
+    if (img.dataset.thumb) img.src = img.dataset.thumb;
+    else img.style.visibility = 'hidden';
+}
+
+// Click sulle unità laterali della ricetta: apre la modale di quell'unità
 function initEvolutionLinks() {
     const container = document.getElementById('evolutionContainer');
     if (!container || container.dataset.linksReady) return;
     container.dataset.linksReady = '1';
+
+    // le animazioni delle basi: quando arrivano si mettono al loro posto, se mancano si usa l'icona
+    container.addEventListener('load', (e) => {
+        const el = e.target;
+        if (el.classList && el.classList.contains('evo-stage-unit')) placeEvoUnit(el);
+    }, true);
+    container.addEventListener('error', (e) => {
+        const el = e.target;
+        if (!el.classList) return;
+        if (el.classList.contains('evo-stage-unit')) evoUnitFallback(el);
+        else if (el.classList.contains('evo-stage-thumb')) el.style.visibility = 'hidden';
+    }, true);
 
     const openFromEl = (el) => {
         const target = findUnitByRealId(el.dataset.unitId);
@@ -493,6 +666,7 @@ function getEvoItemImage(name) {
 function renderEvolutionRecipes(unit) {
     const container = document.getElementById('evolutionContainer');
     if (!container) return;
+    initEvolutionLinks();
 
     container.innerHTML = '';
     const evoKeys = Object.keys(unit).filter(key => key.startsWith('evolution'));
@@ -562,6 +736,11 @@ function renderEvolutionRecipes(unit) {
             }
         }
 
+        // rarità per il colore delle basi (se l'unità non è nell'elenco)
+        const nextRarity = directTargetRarity || targetUnitRarity;
+        const prevUnit = findUnitByRealId(evolution.prevId);
+        const prevRarity = prevUnit ? prevUnit.rarity : (!evolution.prevId ? unit.rarity : '');
+
         const levelTitle = t('evo.to', { r: rarityDisplay });
         const materials = Array.isArray(recipe.materials) ? recipe.materials : [];
         const items = Array.isArray(recipe.items) ? recipe.items.filter(Boolean) : [];
@@ -582,8 +761,8 @@ function renderEvolutionRecipes(unit) {
             <div class="evolution-step-block">
                 <h4 class="notranslate" style="color: #d4af37; margin: 0 0 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">${levelTitle}</h4>
                 <div class="evolution-recipe-panel">
-                    <div class="evo-recipe-unit-wrap">
-                        ${evoUnitImgHtml(currentImage, evolution.prevId, altName, unit)}
+                    <div class="evo-recipe-unit-wrap evo-recipe-prev">
+                        ${evoUnitStageHtml(currentImage, evolution.prevId, altName, unit, prevRarity)}
                     </div>
                     <div class="evo-recipe-plus">+</div>
                     <div class="evo-recipe-requirements">
@@ -594,8 +773,8 @@ function renderEvolutionRecipes(unit) {
                         </div>
                     </div>
                     <div class="evo-recipe-equals">=</div>
-                    <div class="evo-recipe-unit-wrap">
-                        ${evoUnitImgHtml(nextImage, targetId, t('evo.result'), unit)}
+                    <div class="evo-recipe-unit-wrap evo-recipe-next">
+                        ${evoUnitStageHtml(nextImage, targetId, t('evo.result'), unit, nextRarity)}
                     </div>
                 </div>
             </div>`;
@@ -1397,7 +1576,8 @@ function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
     const width = maxX - minX + 1, height = best.e - best.s;
     // deve sembrare un'ombra: abbastanza larga e più larga che alta
     if (best.tot < 12 || width < 6 || width < 0.12 * charWidth || height > 0.6 * width) return null;
-    return { x: sumX / n / cw, y: best.e / ch };
+    // y = bordo basso dell'ombra, cy = centro dell'ombra
+    return { x: sumX / n / cw, y: best.e / ch, cy: (best.s + best.e) / 2 / ch };
 }          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
 
 // prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
@@ -1477,22 +1657,13 @@ function applyPixelScale(el) {
     el.setAttribute('data-pixel-fit', '');
 }
 
-function centerOnCharacter(el) {
-    if (!el) return;
-    el.style.removeProperty('--char-x');
-    el.style.removeProperty('--char-y');
-    el.style.removeProperty('--canvas-ratio');
-    delete el.dataset.charW;
-    delete el.dataset.charH;
-    delete el.dataset.charUp;
-    delete el.dataset.charSide;
-    delete el.dataset.fileScale;
-
+// Misura il personaggio sul primo fotogramma del file: punto a terra (ombra o piedi) e grandezza.
+// Restituisce null se il file non è ancora pronto. Si usa per l'animazione grande e per le basi delle evoluzioni.
+function measureCharacter(el) {
     const w = el.naturalWidth || el.videoWidth;
     const h = el.naturalHeight || el.videoHeight;
-    if (!w || !h) { applyPixelScale(el); return; }
-    el.style.setProperty('--canvas-ratio', `${w} / ${h}`);
-    el.dataset.fileScale = String(pixelFileScale(el, w));
+    if (!w || !h) return null;
+    const m = { w, h };
 
     try {
         const canvas = document.createElement('canvas');
@@ -1531,16 +1702,49 @@ function centerOnCharacter(el) {
             let groundY = bottom / canvas.height;
             const shadow = findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1);
             if (shadow) { groundX = shadow.x; groundY = shadow.y; }
-            el.style.setProperty('--char-x', ((0.5 - groundX) * 100).toFixed(2));
-            el.style.setProperty('--char-y', ((0.5 - groundY) * 100).toFixed(2));
+            // per le basi delle evoluzioni: il centro dell'ombra (o i piedi, se l'ombra non c'è)
+            m.standX = groundX;
+            m.standY = shadow ? shadow.cy : groundY;
+            m.left = cr.first / canvas.width;
+            m.right = (cr.last + 1) / canvas.width;
+            m.top = rr.first / canvas.height;
+            m.charX = ((0.5 - groundX) * 100).toFixed(2);
+            m.charY = ((0.5 - groundY) * 100).toFixed(2);
             // grandezza del personaggio nel file, per non farlo uscire dal riquadro
-            el.dataset.charW = ((cr.last - cr.first + 1) / canvas.width * w).toFixed(1);
-            el.dataset.charH = ((rr.last - rr.first + 1) / canvas.height * h).toFixed(1);
-            el.dataset.charUp = Math.max(1, (groundY - rr.first / canvas.height) * h).toFixed(1);
-            el.dataset.charSide = Math.max(1, Math.max(groundX - cr.first / canvas.width, (cr.last + 1) / canvas.width - groundX) * w).toFixed(1);
+            m.charW = ((cr.last - cr.first + 1) / canvas.width * w).toFixed(1);
+            m.charH = ((rr.last - rr.first + 1) / canvas.height * h).toFixed(1);
+            m.charUp = Math.max(1, (groundY - rr.first / canvas.height) * h).toFixed(1);
+            m.charSide = Math.max(1, Math.max(groundX - cr.first / canvas.width, (cr.last + 1) / canvas.width - groundX) * w).toFixed(1);
         }
     } catch (err) {
         console.warn('Centratura automatica non riuscita:', err);
+    }
+    return m;
+}
+
+function centerOnCharacter(el) {
+    if (!el) return;
+    el.style.removeProperty('--char-x');
+    el.style.removeProperty('--char-y');
+    el.style.removeProperty('--canvas-ratio');
+    delete el.dataset.charW;
+    delete el.dataset.charH;
+    delete el.dataset.charUp;
+    delete el.dataset.charSide;
+    delete el.dataset.fileScale;
+
+    const m = measureCharacter(el);
+    if (!m) { applyPixelScale(el); return; }
+    const { w, h } = m;
+    el.style.setProperty('--canvas-ratio', `${w} / ${h}`);
+    el.dataset.fileScale = String(pixelFileScale(el, w));
+    if (m.charX !== undefined) {
+        el.style.setProperty('--char-x', m.charX);
+        el.style.setProperty('--char-y', m.charY);
+        el.dataset.charW = m.charW;
+        el.dataset.charH = m.charH;
+        el.dataset.charUp = m.charUp;
+        el.dataset.charSide = m.charSide;
     }
 
     useStandingAnchor(el, w, h);
