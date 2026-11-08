@@ -88440,9 +88440,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10144/10144_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10144/10144_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10144/10144_atk.png"
+      "default": "../video/Events/Heros For Different County/Galant/Smith Lord Galant/Smith-Lord-Galant-default.webm",
+      "idle": "../video/Events/Heros For Different County/Galant/Smith Lord Galant/Smith-Lord-Galant-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Galant/Smith Lord Galant/Smith-Lord-Galant-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -88689,9 +88689,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20144/20144_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20144/20144_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20144/20144_atk.png"
+      "default": "../video/Events/Heros For Different County/Stya/Mother Snow Stya/Mother-Snow-Stya-default.webm",
+      "idle": "../video/Events/Heros For Different County/Stya/Mother Snow Stya/Mother-Snow-Stya-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Stya/Mother Snow Stya/Mother-Snow-Stya-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -88938,9 +88938,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30144/30144_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30144/30144_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30144/30144_atk.png"
+      "default": "../video/Events/Heros For Different County/Nemia/Quake Fist Nemia/Quake-Fist-Nemia-default.webm",
+      "idle": "../video/Events/Heros For Different County/Nemia/Quake Fist Nemia/Quake-Fist-Nemia-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Nemia/Quake Fist Nemia/Quake-Fist-Nemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -89187,9 +89187,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40144/40144_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40144/40144_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40144/40144_atk.png"
+      "default": "../video/Events/Heros For Different County/Zeln/Thunder Punt Zeln/Thunder-Punt-Zeln-default.webm",
+      "idle": "../video/Events/Heros For Different County/Zeln/Thunder Punt Zeln/Thunder-Punt-Zeln-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Zeln/Thunder Punt Zeln/Thunder-Punt-Zeln-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -89436,9 +89436,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50144/50144_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50144/50144_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50144/50144_atk.png"
+      "default": "../video/Events/Heros For Different County/Alma/Brave Hero Alma/Brave-Hero-Alma-default.webm",
+      "idle": "../video/Events/Heros For Different County/Alma/Brave Hero Alma/Brave-Hero-Alma-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Alma/Brave Hero Alma/Brave-Hero-Alma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -89678,9 +89678,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60154/60154_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60154/60154_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60154/60154_atk.png"
+      "default": "../video/Events/Heros For Different County/Oboro/Red Shadow Oboro/Red-Shadow-Oboro-default.webm",
+      "idle": "../video/Events/Heros For Different County/Oboro/Red Shadow Oboro/Red-Shadow-Oboro-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Oboro/Red Shadow Oboro/Red-Shadow-Oboro-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -164112,9 +164112,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10145/10145_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10145/10145_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10145/10145_atk.png"
+      "default": "../video/Events/Heros For Different County/Galant/Imperial Smith Galant/Imperial-Smith-Galant-default.webm",
+      "idle": "../video/Events/Heros For Different County/Galant/Imperial Smith Galant/Imperial-Smith-Galant-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Galant/Imperial Smith Galant/Imperial-Smith-Galant-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -164380,9 +164380,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20145/20145_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20145/20145_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20145/20145_atk.png"
+      "default": "../video/Events/Heros For Different County/Stya/Arctic Rose Stya/Arctic-Rose-Stya-default.webm",
+      "idle": "../video/Events/Heros For Different County/Stya/Arctic Rose Stya/Arctic-Rose-Stya-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Stya/Arctic Rose Stya/Arctic-Rose-Stya-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -164648,9 +164648,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30145/30145_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30145/30145_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30145/30145_atk.png"
+      "default": "../video/Events/Heros For Different County/Nemia/Dahlia Fist Nemia/Dahlia-Fist-Nemia-default.webm",
+      "idle": "../video/Events/Heros For Different County/Nemia/Dahlia Fist Nemia/Dahlia-Fist-Nemia-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Nemia/Dahlia Fist Nemia/Dahlia-Fist-Nemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -164916,9 +164916,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40145/40145_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40145/40145_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40145/40145_atk.png"
+      "default": "../video/Events/Heros For Different County/Zeln/Storm Roundhouse Zeln/Storm-Roundhouse-Zeln-default.webm",
+      "idle": "../video/Events/Heros For Different County/Zeln/Storm Roundhouse Zeln/Storm-Roundhouse-Zeln-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Zeln/Storm Roundhouse Zeln/Storm-Roundhouse-Zeln-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -165184,9 +165184,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50145/50145_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50145/50145_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50145/50145_atk.png"
+      "default": "../video/Events/Heros For Different County/Alma/Courageous Heart Alma/Courageous-Heart-Alma-default.webm",
+      "idle": "../video/Events/Heros For Different County/Alma/Courageous Heart Alma/Courageous-Heart-Alma-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Alma/Courageous Heart Alma/Courageous-Heart-Alma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -165445,9 +165445,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60155/60155_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60155/60155_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60155/60155_atk.png"
+      "default": "../video/Events/Heros For Different County/Oboro/Shadow Chakra Oboro/Shadow-Chakra-Oboro-default.webm",
+      "idle": "../video/Events/Heros For Different County/Oboro/Shadow Chakra Oboro/Shadow-Chakra-Oboro-idle.webm",
+      "atk": "../video/Events/Heros For Different County/Oboro/Shadow Chakra Oboro/Shadow-Chakra-Oboro-atk.webm"
     },
     "effects": {
       "atk": "",
