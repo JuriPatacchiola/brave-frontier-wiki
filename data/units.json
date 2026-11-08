@@ -91973,9 +91973,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10125/10125_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10125/10125_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10125/10125_atk.png"
+      "default": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-default.webm",
+      "idle": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92266,9 +92266,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20125/20125_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20125/20125_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20125/20125_atk.png"
+      "default": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-default.webm",
+      "idle": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-idle.webm",
+      "atk": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92533,9 +92533,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30125/30125_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30125/30125_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30125/30125_atk.png"
+      "default": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-default.webm",
+      "idle": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-idle.webm",
+      "atk": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92777,9 +92777,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40125/40125_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40125/40125_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40125/40125_atk.png"
+      "default": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-default.webm",
+      "idle": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93021,9 +93021,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50115/50115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50115/50115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50115/50115_atk.png"
+      "default": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-default.webm",
+      "idle": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-idle.webm",
+      "atk": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93288,9 +93288,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60115/60115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60115/60115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60115/60115_atk.png"
+      "default": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-default.webm",
+      "idle": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-idle.webm",
+      "atk": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -180071,9 +180071,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10126/10126_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10126/10126_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10126/10126_atk.png"
+      "default": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-default.webm",
+      "idle": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -188583,9 +188583,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60116/60116_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60116/60116_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60116/60116_atk.png"
+      "default": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-default.webm",
+      "idle": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-idle.webm",
+      "atk": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -193706,9 +193706,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50116/50116_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50116/50116_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50116/50116_atk.png"
+      "default": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-default.webm",
+      "idle": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-idle.webm",
+      "atk": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -240975,9 +240975,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20126/20126_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20126/20126_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20126/20126_atk.png"
+      "default": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-default.webm",
+      "idle": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-idle.webm",
+      "atk": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -274813,9 +274813,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60117/60117_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60117/60117_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60117/60117_atk.png"
+      "default": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-default.webm",
+      "idle": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-idle.webm",
+      "atk": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -288269,9 +288269,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10127/10127_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10127/10127_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10127/10127_atk.png"
+      "default": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-default.webm",
+      "idle": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
