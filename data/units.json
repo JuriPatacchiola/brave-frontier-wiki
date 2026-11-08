@@ -193406,9 +193406,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30116/30116_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30116/30116_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30116/30116_atk.png"
+      "default": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-default.webm",
+      "idle": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-idle.webm",
+      "atk": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -240675,9 +240675,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10116/10116_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10116/10116_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10116/10116_atk.png"
+      "default": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-default.webm",
+      "idle": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-idle.webm",
+      "atk": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -254968,9 +254968,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50106/50106_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50106/50106_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50106/50106_atk.png"
+      "default": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-default.webm",
+      "idle": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-idle.webm",
+      "atk": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -330232,9 +330232,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40117/40117_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40117/40117_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40117/40117_atk.png"
+      "default": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-default.webm",
+      "idle": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-idle.webm",
+      "atk": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
