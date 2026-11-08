@@ -2319,8 +2319,10 @@ video {
 }
 
 .evo-stage.evo-base-omni .evo-stage-base {
-    --glow: 215, 165, 55;
+    --glow: 135, 175, 230;
 }
+
+/* base Omni/Dream blu acciaio */
 
 .evo-stage.evo-unit-link:hover .evo-stage-base,
 .evo-stage.evo-unit-link:focus-visible .evo-stage-base {
@@ -2367,6 +2369,108 @@ video {
     .evo-stage.evo-base-rainbow.evo-unit-link:focus-visible .evo-stage-base {
         animation: none;
         filter: drop-shadow(-2px 0 3px rgba(255, 120, 200, 0.6)) drop-shadow(2px 0 3px rgba(90, 210, 245, 0.6));
+    }
+}
+
+/* le altre basi: l'alone "respira" come quello arcobaleno, ma passa dal colore della base
+   a tonalità sempre più chiare dello stesso colore e poi torna indietro */
+.evo-stage.evo-base-silver.evo-unit-link:hover .evo-stage-base,
+.evo-stage.evo-base-silver.evo-unit-link:focus-visible .evo-stage-base {
+    animation: evo-glow-silver 2.4s ease-in-out infinite;
+}
+
+.evo-stage.evo-base-gold.evo-unit-link:hover .evo-stage-base,
+.evo-stage.evo-base-gold.evo-unit-link:focus-visible .evo-stage-base {
+    animation: evo-glow-gold 2.4s ease-in-out infinite;
+}
+
+.evo-stage.evo-base-red.evo-unit-link:hover .evo-stage-base,
+.evo-stage.evo-base-red.evo-unit-link:focus-visible .evo-stage-base {
+    animation: evo-glow-red 2.4s ease-in-out infinite;
+}
+
+.evo-stage.evo-base-omni.evo-unit-link:hover .evo-stage-base,
+.evo-stage.evo-base-omni.evo-unit-link:focus-visible .evo-stage-base {
+    animation: evo-glow-omni 2.4s ease-in-out infinite;
+}
+
+/* base argento */
+@keyframes evo-glow-silver {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 3px rgba(205, 212, 228, 0.7)) drop-shadow(0 0 7px rgba(205, 212, 228, 0.3));
+    }
+
+    25%,
+    75% {
+        filter: drop-shadow(0 0 3px rgba(230, 236, 248, 0.7)) drop-shadow(0 0 7px rgba(230, 236, 248, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 7px rgba(255, 255, 255, 0.3));
+    }
+}
+
+/* base oro */
+@keyframes evo-glow-gold {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 3px rgba(245, 195, 95, 0.7)) drop-shadow(0 0 7px rgba(245, 195, 95, 0.3));
+    }
+
+    25%,
+    75% {
+        filter: drop-shadow(0 0 3px rgba(255, 220, 145, 0.7)) drop-shadow(0 0 7px rgba(255, 220, 145, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 3px rgba(255, 242, 200, 0.7)) drop-shadow(0 0 7px rgba(255, 242, 200, 0.3));
+    }
+}
+
+/* base rossa */
+@keyframes evo-glow-red {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 3px rgba(230, 70, 65, 0.7)) drop-shadow(0 0 7px rgba(230, 70, 65, 0.3));
+    }
+
+    25%,
+    75% {
+        filter: drop-shadow(0 0 3px rgba(255, 120, 110, 0.7)) drop-shadow(0 0 7px rgba(255, 120, 110, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 3px rgba(255, 175, 165, 0.7)) drop-shadow(0 0 7px rgba(255, 175, 165, 0.3));
+    }
+}
+
+/* base Omni/Dream blu acciaio */
+@keyframes evo-glow-omni {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 3px rgba(135, 175, 230, 0.7)) drop-shadow(0 0 7px rgba(135, 175, 230, 0.3));
+    }
+
+    25%,
+    75% {
+        filter: drop-shadow(0 0 3px rgba(170, 205, 245, 0.7)) drop-shadow(0 0 7px rgba(170, 205, 245, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 3px rgba(215, 235, 255, 0.7)) drop-shadow(0 0 7px rgba(215, 235, 255, 0.3));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .evo-stage[class*="evo-base-"].evo-unit-link:hover .evo-stage-base,
+    .evo-stage[class*="evo-base-"].evo-unit-link:focus-visible .evo-stage-base {
+        animation: none;
     }
 }
 
