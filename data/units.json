@@ -480095,9 +480095,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730125/730125_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730125/730125_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730125/730125_atk.png"
+      "default": "../video/EU/Event gift/Douglas/Blissful-Arms-Douglas-default.webm",
+      "idle": "../video/EU/Event gift/Douglas/Blissful-Arms-Douglas-idle.webm",
+      "atk": "../video/EU/Event gift/Douglas/Blissful-Arms-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
