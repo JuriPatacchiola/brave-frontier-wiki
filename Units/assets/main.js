@@ -1354,11 +1354,51 @@ function fitGifLikeWebm(img) {
    fotogramma, si trova dove sono i pixel non trasparenti e si passa al CSS lo
    spostamento per portarli al centro del riquadro (--char-x e --char-y).
    ========================================================================== */
-const CENTER_SAMPLE_WIDTH = 240;   // risoluzione della lettura: basta poco
+const CENTER_SAMPLE_WIDTH = 480;   // risoluzione massima della lettura (abbastanza per vedere l'ombra)
 const CENTER_MIN_ALPHA = 40;       // sotto questo valore il pixel è considerato trasparente
 const CENTER_TRIM = 0.02;
 const GROUND_TRIM = 0.003;         // per il bordo basso si ignora pochissimo, così l'ombra resta dentro
-const GROUND_BAND = 0.12;          // la "parte bassa" usata per il centro orizzontale: 12% dell'altezza          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
+const GROUND_BAND = 0.12;          // la "parte bassa" usata per il centro orizzontale: 12% dell'altezza
+
+/* L'OMBRA sotto i piedi: pixel scuri e semitrasparenti nella metà bassa del personaggio.
+   Se c'è, il punto a terra è il centro della sua parte bassa: così fiamme, spade o
+   effetti che scendono più in basso dei piedi non spostano l'unità. */
+function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
+    const isShadow = i => {
+        const a = pixels[i + 3];
+        if (a < 25 || a > 235) return false;
+        return Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) <= 60;
+    };
+    const start = top + Math.floor((bottom - top) * 0.5);
+    const rows = new Array(ch).fill(0);
+    for (let y = start; y < ch; y++) {
+        for (let x = 0; x < cw; x++) if (isShadow((y * cw + x) * 4)) rows[y]++;
+    }
+    // la fascia di righe consecutive con più pixel d'ombra
+    let best = null;
+    for (let y = start; y < ch;) {
+        if (rows[y] > 0) {
+            const s = y; let tot = 0;
+            while (y < ch && rows[y] > 0) { tot += rows[y]; y++; }
+            if (!best || tot > best.tot) best = { s, e: y, tot };
+        } else y++;
+    }
+    if (!best) return null;
+    let minX = cw, maxX = -1, sumX = 0, n = 0;
+    for (let y = best.s; y < best.e; y++) {
+        for (let x = 0; x < cw; x++) {
+            if (isShadow((y * cw + x) * 4)) {
+                if (x < minX) minX = x;
+                if (x > maxX) maxX = x;
+                sumX += x + 0.5; n++;
+            }
+        }
+    }
+    const width = maxX - minX + 1, height = best.e - best.s;
+    // deve sembrare un'ombra: abbastanza larga e più larga che alta
+    if (best.tot < 12 || width < 6 || width < 0.12 * charWidth || height > 0.6 * width) return null;
+    return { x: sumX / n / cw, y: best.e / ch };
+}          // ignora il 2% dei pixel ai bordi (scintille, puntini isolati)
 
 // prima e ultima riga (o colonna) occupate dal personaggio, ignorando i puntini isolati ai bordi
 function trimmedRange(counts, total, trim = CENTER_TRIM) {
@@ -1456,8 +1496,8 @@ function centerOnCharacter(el) {
 
     try {
         const canvas = document.createElement('canvas');
-        canvas.width = CENTER_SAMPLE_WIDTH;
-        canvas.height = Math.max(1, Math.round(CENTER_SAMPLE_WIDTH * h / w));
+        canvas.width = Math.min(w, CENTER_SAMPLE_WIDTH);
+        canvas.height = Math.max(1, Math.round(canvas.width * h / w));
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
         ctx.drawImage(el, 0, 0, canvas.width, canvas.height);
         const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
@@ -1487,8 +1527,10 @@ function centerOnCharacter(el) {
                     if (pixels[(y * canvas.width + x) * 4 + 3] >= CENTER_MIN_ALPHA) { sumX += x + 0.5; count++; }
                 }
             }
-            const groundX = count ? sumX / count / canvas.width : trimmedCenter(cols, total);
-            const groundY = bottom / canvas.height;
+            let groundX = count ? sumX / count / canvas.width : trimmedCenter(cols, total);
+            let groundY = bottom / canvas.height;
+            const shadow = findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1);
+            if (shadow) { groundX = shadow.x; groundY = shadow.y; }
             el.style.setProperty('--char-x', ((0.5 - groundX) * 100).toFixed(2));
             el.style.setProperty('--char-y', ((0.5 - groundY) * 100).toFixed(2));
             // grandezza del personaggio nel file, per non farlo uscire dal riquadro
