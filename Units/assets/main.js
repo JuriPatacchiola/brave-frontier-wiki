@@ -1824,10 +1824,14 @@ const GROUND_BAND = 0.12;          // la "parte bassa" usata per il centro orizz
    effetti che scendono più in basso dei piedi non spostano l'unità. */
 const SHADOW_RATIO = 3.3;   // le ombre del gioco sono ellissi circa 3,3 volte più larghe che alte
 
-function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
+// relaxed = seconda prova, per le ombre "colorate": quando l'ombra è disegnata sopra un cerchio
+// magico o un effetto di luce prende un po' del suo colore (es. blu scuro su Leviathan Sage Elimo).
+// Allora conta quanto è scura (luminosità), non solo se è grigia/nera.
+function findShadowGround(pixels, cw, ch, top, bottom, charWidth, relaxed = false) {
     const isShadow = i => {
         const a = pixels[i + 3];
         if (a < 25 || a > 235) return false;
+        if (relaxed) return 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2] <= 70;
         return Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) <= 60;
     };
     const alphaAt = (x, y) => pixels[(y * cw + x) * 4 + 3];
@@ -1868,6 +1872,8 @@ function findShadowGround(pixels, cw, ch, top, bottom, charWidth) {
     const width = maxX - minX + 1, height = best.e - best.s;
     // deve sembrare un'ombra: abbastanza larga e più larga che alta
     if (best.tot < 12 || width < 6 || width < 0.12 * charWidth || height > 0.6 * width) return null;
+    // nella seconda prova l'ombra deve essere anche bassa (non una zona scura qualsiasi del disegno)
+    if (relaxed && height > 40) return null;
     let cx;
     if (mids.length) {
         // righe con tutti e due i bordi visibili: il centro è a metà (si prende il valore di mezzo)
@@ -2082,7 +2088,8 @@ function measureCharacter(el) {
             }
             let groundX = count ? sumX / count / canvas.width : trimmedCenter(cols, total);
             let groundY = bottom / canvas.height;
-            const shadow = findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1);
+            const shadow = findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1)
+                || findShadowGround(pixels, canvas.width, canvas.height, rr.first, bottom, cr.last - cr.first + 1, true);
             if (shadow) { groundX = shadow.x; groundY = shadow.y; }
             // senza ombra trasparente ma con un alone sul terreno: forse l'ombra è "fusa" con l'alone
             // (macchia scura piena sotto i piedi, come Ice Legend Selena)
