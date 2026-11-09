@@ -50379,8 +50379,8 @@
     },
     "animations": {
       "default": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-default.webm",
-      "atk": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-default.webm"
+      "idle": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
