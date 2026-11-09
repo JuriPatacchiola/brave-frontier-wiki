@@ -448,6 +448,8 @@ function evoUnitImgHtml(src, realId, alt, currentUnit) {
    è il riquadro che diventa più grande.
    ========================================================================== */
 const EVO_BASE_FOLDER = '../img/piatform/';
+// freccia animata delle fasi evolutive sul telefono (una .webp va bene su tutti i dispositivi)
+const EVO_ARROW_SRC = '../video/Evolution arrow/Arrow-evolution.webp';
 const EVO_BASE_FILES = {
     silver: 'weapon_table_1.png',    // 1★ e 2★
     gold: 'weapon_table_2.png',      // 3★
@@ -768,6 +770,66 @@ function evoUnitFallback(img) {
     else img.style.visibility = 'hidden';
 }
 
+/* Telefono: bottone "Vedi tutte le fasi / Una alla volta" accanto al titolo "Evoluzione".
+   Normalmente si apre una fase alla volta; con "Vedi tutte le fasi" si aprono tutte insieme
+   (e ognuna si può chiudere da sola). "Una alla volta" torna al funzionamento normale e
+   rimette com'era la fase aperta prima di "Vedi tutte le fasi" (o nessuna, se erano chiuse).
+   La scelta resta valida anche aprendo altre unità. */
+let evoShowAll = false;
+const EVO_TOGGLE_ICON = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">' +
+    '<path d="M2 2.5l4 3 4-3M2 6.5l4 3 4-3" fill="none" stroke="currentColor" stroke-width="1.6" ' +
+    'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// testo tradotto (dizionario in script.js), con l'italiano se manca la traduzione
+function tr(key, fallback) {
+    const text = t(key);
+    return text && text !== key ? text : fallback;
+}
+
+function setStepOpen(block, open) {
+    block.classList.toggle('is-open', open);
+    const title = block.querySelector('.evo-step-title');
+    if (title) title.setAttribute('aria-expanded', String(open));
+}
+
+function updateEvoToggleAll(container) {
+    const area = container.closest('.evolution-recipe-area');
+    if (!area) return;
+    let btn = area.querySelector('.evo-toggle-all');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'evo-toggle-all';
+        btn.innerHTML = EVO_TOGGLE_ICON + '<span class="evo-toggle-label"></span>';
+        area.insertBefore(btn, area.firstChild);
+        btn.addEventListener('click', () => {
+            const blocks = [...container.querySelectorAll('.evolution-step-block')];
+            if (!evoShowAll) {
+                // si ricorda quale fase era aperta (-1 = nessuna) per rimetterla dopo
+                container.dataset.singleOpen = String(blocks.findIndex(b => b.classList.contains('is-open')));
+                evoShowAll = true;
+                blocks.forEach(block => {
+                    setStepOpen(block, true);
+                    fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
+                });
+            } else {
+                evoShowAll = false;
+                const keep = parseInt(container.dataset.singleOpen, 10);
+                blocks.forEach((block, index) => setStepOpen(block, index === keep));
+                if (blocks[keep]) fitEvoPanel(blocks[keep].querySelector('.evolution-recipe-panel'));
+            }
+            updateEvoToggleAll(container);
+        });
+    }
+    btn.hidden = container.querySelectorAll('.evolution-step-block').length < 2;
+    btn.classList.toggle('is-all', evoShowAll);
+    btn.setAttribute('aria-pressed', String(evoShowAll));
+    const key = evoShowAll ? 'evo.closeAll' : 'evo.openAll';
+    const label = btn.querySelector('.evo-toggle-label');
+    label.setAttribute('data-i18n', key);
+    label.textContent = tr(key, evoShowAll ? 'Una alla volta' : 'Vedi tutte le fasi');
+}
+
 // Click sulle unità laterali della ricetta: apre la modale di quell'unità
 function initEvolutionLinks() {
     const container = document.getElementById('evolutionContainer');
@@ -784,6 +846,8 @@ function initEvolutionLinks() {
         if (!el.classList) return;
         if (el.classList.contains('evo-stage-unit')) evoUnitFallback(el);
         else if (el.classList.contains('evo-stage-thumb')) el.style.visibility = 'hidden';
+        // freccia animata non trovata: al suo posto torna la freccia dorata disegnata
+        else if (el.classList.contains('evo-arrow-img') && el.parentElement) el.parentElement.classList.add('arrow-missing');
     }, true);
 
     const openFromEl = (el) => {
@@ -791,14 +855,23 @@ function initEvolutionLinks() {
         if (target) openModal(target);
     };
 
-    // telefono: il titolo di ogni fase apre e chiude la fase (su PC e tablet le fasi sono sempre aperte)
+    // telefono: il titolo di ogni fase apre e chiude la fase (su PC e tablet le fasi sono sempre aperte).
+    // Di solito se ne apre una alla volta: aprendone una, quella aperta prima si chiude.
+    // Con "Apri tutte" invece ogni fase si apre e si chiude per conto suo.
     const toggleStep = (title) => {
         if (!window.matchMedia('(max-width: 600px)').matches) return;
         const block = title.closest('.evolution-step-block');
         if (!block) return;
-        const open = block.classList.toggle('is-open');
-        title.setAttribute('aria-expanded', String(open));
-        if (open) fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
+        const open = !block.classList.contains('is-open');
+        if (!evoShowAll) {
+            container.querySelectorAll('.evolution-step-block.is-open').forEach(other => setStepOpen(other, false));
+        }
+        setStepOpen(block, open);
+        if (open) {
+            fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
+            // chiudendo la fase di sopra il titolo potrebbe essere salito fuori dallo schermo
+            title.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
     };
 
     container.addEventListener('click', (e) => {
@@ -900,6 +973,8 @@ function renderEvolutionRecipes(unit) {
     let openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.nextId || it.evoData.id));
     if (openIndex < 0) openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.prevId));
     if (openIndex < 0) openIndex = 0;
+    // con "Vedi tutte le fasi" attivo, "Una alla volta" riaprirà questa fase
+    container.dataset.singleOpen = String(openIndex);
 
     uniqueEvolutions.forEach((item, index) => {
         const evolution = item.evoData;
@@ -954,9 +1029,14 @@ function renderEvolutionRecipes(unit) {
             : '';
 
         htmlContent += `
-            <div class="evolution-step-block${index === openIndex ? ' is-open' : ''}">
-                <h4 class="evo-step-title notranslate" role="button" tabindex="0" aria-expanded="${index === openIndex}">
+            <div class="evolution-step-block${(evoShowAll || index === openIndex) ? ' is-open' : ''}">
+                <h4 class="evo-step-title notranslate" role="button" tabindex="0" aria-expanded="${evoShowAll || index === openIndex}">
                     <span class="evo-step-name">${levelTitle}</span>
+                    <span class="evo-step-thumbs" aria-hidden="true">
+                        <img src="${escapeAttr(currentImage)}" alt="" loading="lazy" draggable="false">
+                        <span class="evo-step-thumb-arrow"></span>
+                        <img src="${escapeAttr(nextImage)}" alt="" loading="lazy" draggable="false">
+                    </span>
                     <span class="evo-step-chevron" aria-hidden="true"></span>
                 </h4>
                 <div class="evolution-recipe-panel">
@@ -971,7 +1051,8 @@ function renderEvolutionRecipes(unit) {
                             ${karmaHtml}
                         </div>
                     </div>
-                    <div class="evo-recipe-equals">=</div>
+                    <div class="evo-recipe-equals"><span class="evo-eq-sign">=</span><img class="evo-arrow-img" src="${EVO_ARROW_SRC}" alt="" draggable="false"></div>
+                    <div class="evo-recipe-arrow-small" aria-hidden="true"><img class="evo-arrow-img" src="${EVO_ARROW_SRC}" alt="" draggable="false"></div>
                     <div class="evo-recipe-unit-wrap evo-recipe-next">
                         ${evoUnitStageHtml(nextImage, targetId, t('evo.result'), unit, nextRarity)}
                     </div>
@@ -981,6 +1062,7 @@ function renderEvolutionRecipes(unit) {
 
     container.innerHTML = htmlContent;
     if (!htmlContent) showArea(false);
+    updateEvoToggleAll(container);
 }
 
 async function startApp() {

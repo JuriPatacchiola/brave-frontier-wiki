@@ -2490,7 +2490,11 @@ video {
     gap: 6px;
 }
 
-.evo-step-chevron {
+.evo-step-chevron,
+.evo-step-thumbs,
+.evo-toggle-all,
+.evo-recipe-arrow-small,
+.evo-arrow-img {
     display: none;
 }
 
@@ -2501,10 +2505,54 @@ video {
         padding: 0;
     }
 
+    /* bottone "Apri tutte / Chiudi tutte" in alto a destra, accanto al titolo "Evoluzione" */
+    .evolution-recipe-area {
+        position: relative;
+    }
+
+    .evo-toggle-all:not([hidden]) {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        padding: 6px 12px;
+        border: 1px solid rgba(212, 175, 55, 0.55);
+        border-radius: 999px;
+        background: #161616;
+        color: #d4af37;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .evo-toggle-all svg {
+        transition: transform 0.2s ease;
+    }
+
+    .evo-toggle-all.is-all {
+        background: rgba(212, 175, 55, 0.12);
+    }
+
+    .evo-toggle-all.is-all svg {
+        transform: rotate(180deg);
+    }
+
+    .evo-toggle-all:active {
+        transform: scale(0.96);
+    }
+
     .evo-step-title {
         justify-content: space-between;
+        gap: 10px;
         margin: 0;
-        padding: 12px 14px;
+        padding: 9px 12px 9px 14px;
         cursor: pointer;
         -webkit-user-select: none;
         user-select: none;
@@ -2515,6 +2563,37 @@ video {
     .evo-step-title:focus-visible {
         outline: 2px solid rgba(212, 175, 55, 0.6);
         outline-offset: -2px;
+    }
+
+    .evo-step-name {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    /* le icone delle due unità della fase (prima -> dopo), accanto al titolo */
+    .evo-step-thumbs {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .evo-step-thumbs img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        border-radius: 6px;
+        background: #101010;
+        pointer-events: none;
+    }
+
+    .evo-step-thumb-arrow {
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #d4af37;
+        border-right: 2px solid #d4af37;
+        transform: rotate(45deg);
+        margin-right: 2px;
     }
 
     .evo-step-chevron {
@@ -2568,8 +2647,9 @@ video {
             "prev"
             "arrow"
             "req"
+            "arrow2"
             "next";
-        /* unità, freccia, materiali e costi, unità evoluta */
+        /* unità, freccia, materiali e costi, freccia piccola, unità evoluta */
         align-items: center;
         justify-items: center;
         column-gap: 4px;
@@ -2597,7 +2677,58 @@ video {
         padding: 0;
     }
 
-    .evolution-recipe-panel .evo-recipe-equals::before {
+    /* freccia piccola tra materiali e unità evoluta */
+    .evolution-recipe-panel .evo-recipe-arrow-small {
+        display: flex;
+        grid-area: arrow2;
+        align-items: center;
+        justify-content: center;
+        color: #d4af37;
+        padding: 0;
+    }
+
+    /* frecce animate (Arrow-evolution.webp), girate verso il basso */
+    .evolution-recipe-panel .evo-arrow-img {
+        display: block;
+        transform: rotate(90deg);
+        pointer-events: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /* misure discrete, per non disturbare: freccia grande 28px, piccola 20px */
+    .evolution-recipe-panel .evo-recipe-equals .evo-arrow-img {
+        width: 28px;
+        height: 28px;
+        opacity: 0.85;
+    }
+
+    .evolution-recipe-panel .evo-recipe-arrow-small .evo-arrow-img {
+        width: 20px;
+        height: 20px;
+        opacity: 0.7;
+    }
+
+    .evolution-recipe-panel .evo-eq-sign {
+        display: none;
+    }
+
+    /* se la freccia animata manca, si vede la freccia dorata disegnata */
+    .evolution-recipe-panel .arrow-missing .evo-arrow-img {
+        display: none;
+    }
+
+    .evolution-recipe-panel .evo-recipe-arrow-small.arrow-missing::before {
+        content: "\279C";
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.85;
+    }
+
+    .evolution-recipe-panel .evo-recipe-equals.arrow-missing::before {
         content: "\279C";
         display: inline-block;
         transform: rotate(90deg);
@@ -2608,7 +2739,7 @@ video {
 
     .evolution-recipe-panel .evo-recipe-requirements {
         grid-area: req;
-        margin: 2px 0 8px;
+        margin: 2px 0 0;
         width: 100%;
         min-width: 0;
         max-width: none;

@@ -66,7 +66,9 @@
         'evo.none': ['Nessuna evoluzione successiva disponibile.', 'No further evolution available.', 'No hay más evoluciones disponibles.', 'Aucune évolution supplémentaire disponible.', '没有后续进化。', 'これ以上の進化はありません。'],
         'evo.noMaterials': ['Materiali non specificati', 'Materials not specified', 'Materiales no especificados', 'Matériaux non précisés', '未指定材料', '素材未設定'],
         'evo.result': ['Unità evoluta', 'Evolved unit', 'Unidad evolucionada', 'Unité évoluée', '进化后单位', '進化後ユニット'],
-        'evo.material': ['Materiale {n}', 'Material {n}', 'Material {n}', 'Matériau {n}', '材料 {n}', '素材 {n}']
+        'evo.material': ['Materiale {n}', 'Material {n}', 'Material {n}', 'Matériau {n}', '材料 {n}', '素材 {n}'],
+        'evo.openAll': ['Vedi tutte le fasi', 'See all stages', 'Ver todas las fases', 'Voir toutes les étapes', '查看全部阶段', 'すべての段階を見る'],
+        'evo.closeAll': ['Una alla volta', 'One at a time', 'Una a la vez', 'Une à la fois', '逐个查看', '1つずつ表示']
     };
 
     const isSupported = (code) => LANGUAGES.some(l => l.code === code);
