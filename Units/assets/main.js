@@ -466,47 +466,46 @@ const EVO_STAGE_MIN_H = 120;
 const EVO_STAGE_MIN_H_PHONE = 84;
 const EVO_STAGE_FOOT = 30;
 const EVO_STAGE_PAD = 6;
+// telefono: spazio minimo (in px) tra le due unità affiancate, così non si toccano mai
+const EVO_PHONE_GAP = 10;
 
 // tipo di base per la rarità: silver, gold, red, rainbow o omni (serve anche al CSS per il colore dell'alone)
 /* ==========================================================================
-   UNITÀ DA INGRANDIRE
-   Alcune animazioni del gioco hanno il personaggio disegnato più piccolo delle altre
-   forme della stessa unità. Qui si può ingrandire un'unità: numero dell'unità (realId)
-   e quante volte ingrandirla. Vale SOLO per le fasi evolutive (sulle basi):
-   l'animazione grande in alto resta sempre della sua misura.
-   Esempio: '20016': 1.25 = Ice Legend Selena un quarto più grande.
-   Per aggiungerne un'altra: copia una riga, cambia il numero e la grandezza.
+   GRANDEZZA DELLE UNITÀ NELLE FASI EVOLUTIVE (solo sulle basi:
+   l'animazione grande in alto resta sempre della sua misura)
+
+   PC E TABLET (AUTOMATICO): le forme da 6★ in su (6★, 7★, Omni, Dream) sono piene
+   di effetti e il personaggio in mezzo sembra piccolo. Per questo si ingrandiscono
+   da sole di EVO_HIGH_RARITY_SCALE. Le forme da 1★ a 5★ restano della loro misura (1).
+   Così una forma evoluta non è mai più piccola della prima fase dell'unità.
+   Per cambiare quanto si ingrandiscono tutte: cambia solo questo numero.
+
+   TELEFONO: le due unità sono affiancate e non c'è posto per ingrandirle, quindi
+   TUTTE hanno la stessa grandezza: EVO_PHONE_SCALE (1 = misura normale, come
+   Ice Legend Selena). Solo le unità troppo larghe per metà schermo si
+   rimpiccioliscono, quel tanto che serve per non uscire dal riquadro.
    ========================================================================== */
+const EVO_HIGH_RARITY_SCALE = 1.20;
+const EVO_PHONE_SCALE = 1;
+
+/* ECCEZIONI (solo PC e tablet): serve SOLO per le unità che vuoi di una misura diversa
+   da quella automatica. Numero dell'unità (realId) e grandezza: questa vince sempre.
+   Per aggiungerne una, scrivi una riga dentro le graffe, come questa:
+       '20016': 1.25,  // Ice Legend Selena un quarto più grande
+   Vuota = tutte le unità usano la grandezza automatica. */
 const UNIT_SPRITE_SCALE = {
-    '20016': 1.20,   // Ice Legend Selena
-    '20017': 1.20,  // Algor Halcyon Selena
-    '30015': 1.15,
-    '30016': 1.15,
-    '30017': 1.25,
-    '40015': 1.15,
-    '40016': 1.30,
-    '40017': 1.30,
-    '50015': 1.15,
-    '50016': 1.20,
-    '50017': 1.20,
-    '60013': 1.1,
-    '60014': 1.1,
-    '60015': 1.1,
-    '60016': 1.1,
-    '60017': 1.13,
-    '10025': 1.20,
-    '20025': 1.20,
-    '30025': 1.20,
-    '40025': 1.20,
-    '50025': 1.20,
-    '60025': 1.20,
-    '60027': 1.20,
 };
+
+function isHighRarity(rarity) {
+    const r = String(rarity || '').trim().toLowerCase();
+    return r === 'omni' || r === 'dream' || parseFloat(r) >= 6;
+}
 
 function unitSpriteScale(unit) {
     if (!unit) return 1;
     const scale = parseFloat(UNIT_SPRITE_SCALE[String(unit.realId || unit.id)]);
-    return scale > 0 ? scale : 1;
+    if (scale > 0) return scale;
+    return isHighRarity(unit.rarity) ? EVO_HIGH_RARITY_SCALE : 1;
 }
 
 function getEvoBaseKind(rarity) {
@@ -650,6 +649,9 @@ function setEvoNeeds(stage, img, box) {
     const sx = parseFloat(img.dataset.standX), sy = parseFloat(img.dataset.standY);
     stage.dataset.up = String(Math.max(0, sy - box.top) * h / k);
     stage.dataset.side = String(Math.max(sx - box.left, box.right - sx, 0) * w / k);
+    // quanto arriva a sinistra e a destra del puntino (per il telefono)
+    stage.dataset.left = String(Math.max(0, sx - box.left) * w / k);
+    stage.dataset.right = String(Math.max(0, box.right - sx) * w / k);
 }
 
 // Mette l'animazione con i piedi al centro del vetro, a pixel netti (1 pixel del disegno = 1px).
@@ -663,7 +665,7 @@ function placeEvoUnit(img) {
     const sy = m.standY !== undefined ? m.standY : 0.5;
     img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
     img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
-    // unità da ingrandire (elenco UNIT_SPRITE_SCALE): un pixel del file diventa più grande
+    // unità da ingrandire (automatiche o elenco UNIT_SPRITE_SCALE): un pixel del file diventa più grande
     const px = k / (parseFloat(img.dataset.unitScale) || 1);
     Object.assign(img.dataset, { artPx: px, fileW: m.w, fileH: m.h, standX: sx, standY: sy, fullW: m.w / px });
     // bordi del primo fotogramma
@@ -697,64 +699,154 @@ function placeEvoUnit(img) {
     });
 }
 
-// Spazio in larghezza per le unità sul telefono, dove la ricetta è in colonna (un'unità per riga).
-// Su PC e tablet c'è posto per tutte: Infinity.
-function evoPhoneRoom(panel) {
-    if (!window.matchMedia('(max-width: 600px)').matches) return Infinity;
+function isEvoPhone() {
+    return window.matchMedia('(max-width: 600px)').matches;
+}
+
+// PC e tablet: spazio in larghezza per ognuna delle due unità della ricetta.
+// In riga ci sono anche il +, i materiali e il segno =: alle unità va metà di quello che resta.
+function evoStageRoom(panel) {
     const cs = getComputedStyle(panel);
     const inner = panel.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
-    return inner >= 120 ? inner : Infinity;   // riquadro non ancora visibile: si rifà dopo
+    if (inner < 120) return Infinity;   // riquadro non ancora visibile: si rifà dopo
+    const gap = parseFloat(cs.columnGap) || 0;
+    let others = 0, shown = 0;
+    Array.from(panel.children).forEach(child => {
+        const s = getComputedStyle(child);
+        if (s.display === 'none') return;
+        shown++;
+        if (child.classList.contains('evo-recipe-unit-wrap')) return;
+        // il riquadro dei materiali si stringe fino alla sua larghezza minima
+        others += child.classList.contains('evo-recipe-requirements')
+            ? (parseFloat(s.minWidth) || child.getBoundingClientRect().width)
+            : child.getBoundingClientRect().width;
+    });
+    return Math.max(EVO_STAGE_MIN_W, Math.floor((inner - others - gap * Math.max(0, shown - 1)) / 2));
 }
 
-// Rimpicciolimento per le unità troppo larghe per il telefono, solo "a gradini interi":
-// ogni pixel del disegno resta 2 pixel pieni dello schermo (o 1), quindi non se ne perde nessuno.
-function evoPixelSafeScale(needW, room) {
-    if (needW <= room) return 1;
-    const dpr = window.devicePixelRatio || 1;
-    let scale = 1;
-    for (let n = Math.ceil(dpr) - 1; n >= 1; n--) {
-        const s = n / dpr;
-        if (s < 0.5) break;          // non più piccole della metà
-        scale = s;
-        if (needW * s <= room) break;
-    }
-    return scale;
-}
-
-// Le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande.
-// Sul telefono la ricetta è in colonna (prima unità sopra, freccia, unità evoluta sotto),
-// così ogni unità ha tutta la larghezza dello schermo e resta grande come su PC.
-function fitEvoPanel(panel) {
-    if (!panel) return;
+function evoPanelItems(panel) {
     const items = [];
     panel.querySelectorAll('.evo-stage').forEach(stage => {
         const img = stage.querySelector('.evo-stage-unit.is-placed');
-        if (!img) return;
+        const unitScale = img ? (parseFloat(img.dataset.unitScale) || 1) : 1;
         items.push({
+            stage,
             img,
             up: parseFloat(stage.dataset.up) || 0,
+            left: parseFloat(stage.dataset.left) || 0,
+            right: parseFloat(stage.dataset.right) || 0,
             needW: 2 * (parseFloat(stage.dataset.side) || 0) + EVO_STAGE_PAD,
-            unitScale: parseFloat(img.dataset.unitScale) || 1
+            unitScale,
+            minScale: 0.5 / unitScale          // mai più piccola di metà della sua misura
         });
     });
-    const room = evoPhoneRoom(panel);
-    // sul telefono (ricetta in colonna) il riquadro è alto solo quanto serve: niente spazi vuoti
-    let w = EVO_STAGE_MIN_W, h = room !== Infinity ? EVO_STAGE_MIN_H_PHONE : EVO_STAGE_MIN_H;
+    return items;
+}
+
+// PC e tablet: le due unità di una ricetta hanno riquadri uguali, grandi quanto serve alla più grande.
+// Se un'unità non ci sta, si rimpicciolisce solo quel tanto che serve.
+function fitEvoPanel(panel) {
+    if (!panel) return;
+    if (isEvoPhone()) { fitEvoPanelPhone(panel); return; }
+    const items = evoPanelItems(panel);
+    const room = evoStageRoom(panel);
+    let w = EVO_STAGE_MIN_W, h = EVO_STAGE_MIN_H;
     items.forEach(it => {
-        // se non ci sta nemmeno così: le unità ingrandite (UNIT_SPRITE_SCALE) si rimpiccioliscono
-        // solo quel tanto che serve, le altre "a gradini interi" per tenere i pixel netti
-        let scale = 1;
-        if (it.needW > room) {
-            scale = it.unitScale > 1
-                ? Math.max(room / it.needW, 0.5 / it.unitScale)
-                : evoPixelSafeScale(it.needW, room);
-        }
+        // niente misure "da telefono": riquadri uguali e unità al centro
+        it.stage.style.removeProperty('--stage-w');
+        it.stage.style.removeProperty('--dot-x');
+        if (!it.img) return;
+        const scale = it.needW > room ? Math.max(room / it.needW, it.minScale) : 1;
         it.img.style.width = (parseFloat(it.img.dataset.fullW) * scale) + 'px';
         w = Math.max(w, Math.ceil(it.needW * scale));
         h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + it.up * scale + EVO_STAGE_PAD));
     });
     if (room !== Infinity) w = Math.min(w, Math.floor(room));
     panel.style.setProperty('--stage-w', w + 'px');
+    panel.style.setProperty('--stage-h', h + 'px');
+}
+
+/* Telefono: le due unità sono affiancate, tutte alla stessa grandezza (EVO_PHONE_SCALE),
+   con la freccia SEMPRE al centro: ogni unità ha la sua metà del riquadro.
+   - La base di ogni unità sta al centro della sua metà; si sposta solo se serve
+     (per esempio una falce lunga verso il bordo).
+   - Verso l'esterno l'unità resta sempre dentro il riquadro grigio.
+   - Verso il centro le punte (falci, ali, effetti) possono passare DIETRO la freccia,
+     che sta sopra le unità, ma tra le due unità restano sempre almeno EVO_PHONE_GAP px.
+   Solo se nemmeno così ci stanno, le unità si rimpiccioliscono un poco, il meno possibile. */
+function fitEvoPanelPhone(panel) {
+    const cs = getComputedStyle(panel);
+    const inner = panel.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+    const arrow = panel.querySelector('.evo-recipe-equals');
+    // larghezza della colonna della freccia (freccia + spazi ai lati)
+    const middle = (arrow ? arrow.getBoundingClientRect().width : 0) + 2 * (parseFloat(cs.columnGap) || 0);
+    const items = evoPanelItems(panel);
+    const prev = items.find(it => it.stage.closest('.evo-recipe-prev'));
+    const next = items.find(it => it.stage.closest('.evo-recipe-next'));
+    if (!prev || !next) return;
+    const pair = [prev, next];
+    pair.forEach(it => { it.scale = it.img ? EVO_PHONE_SCALE / it.unitScale : 1; });
+    const halfW = (inner - middle) / 2;           // larghezza di ogni metà
+    const baseHalf = EVO_STAGE_MIN_W / 2, pad = EVO_STAGE_PAD / 2, thumbHalf = 28;
+    const leftOf = (it, s) => (it.img ? it.left * s : thumbHalf);
+    const rightOf = (it, s) => (it.img ? it.right * s : thumbHalf);
+
+    // Posizione dei due puntini (p a sinistra, q a destra, misurati dal bordo sinistro)
+    // con le grandezze sp e sn. Restituisce null se così non ci stanno.
+    const place = (sp, sn) => {
+        const W = inner, leftEnd = halfW, rightStart = halfW + middle;
+        // limiti: unità dentro il riquadro, base dentro la sua metà
+        const pMin = Math.max(baseHalf, leftOf(prev, sp) + pad), pMax = leftEnd - baseHalf;
+        const qMin = rightStart + baseHalf, qMax = Math.min(W - baseHalf, W - rightOf(next, sn) - pad);
+        if (pMin > pMax || qMin > qMax) return null;
+        // di solito al centro della propria metà
+        let p = Math.min(pMax, Math.max(pMin, leftEnd / 2));
+        let q = Math.min(qMax, Math.max(qMin, (rightStart + W) / 2));
+        // spazio tra le due unità: se è poco, si allontanano verso i bordi (prima un po' tutte e due)
+        let lack = EVO_PHONE_GAP - ((q - leftOf(next, sn)) - (p + rightOf(prev, sp)));
+        if (lack > 0) {
+            const mp = p - pMin, mq = qMax - q;
+            let dp = Math.min(mp, lack / 2), dq = Math.min(mq, lack / 2);
+            lack -= dp + dq;
+            if (lack > 0) { const more = Math.min(mp - dp, lack); dp += more; lack -= more; }
+            if (lack > 0) { const more = Math.min(mq - dq, lack); dq += more; lack -= more; }
+            if (lack > 0.01) return null;
+            p -= dp; q += dq;
+        }
+        return { p, q: q - rightStart };
+    };
+
+    // riquadro non ancora visibile: per ora misure normali, si rifà quando si vede
+    if (inner < 120) {
+        pair.forEach(it => {
+            it.stage.style.removeProperty('--stage-w');
+            it.stage.style.removeProperty('--dot-x');
+            if (it.img) it.img.style.width = (parseFloat(it.img.dataset.fullW) * it.scale) + 'px';
+        });
+        return;
+    }
+    let spot = place(prev.scale, next.scale);
+    if (!spot) {
+        // non ci stanno: si rimpiccioliscono tutte e due della stessa percentuale, il meno possibile
+        const base = pair.map(it => it.scale);
+        const at = (it, j, t) => (it.img ? Math.max(it.minScale, base[j] * t) : 1);
+        let lo = 0, hi = 1;
+        for (let i = 0; i < 24; i++) {
+            const t = (lo + hi) / 2;
+            if (place(at(prev, 0, t), at(next, 1, t))) lo = t; else hi = t;
+        }
+        pair.forEach((it, j) => { it.scale = at(it, j, lo); });
+        spot = place(prev.scale, next.scale) || { p: halfW / 2, q: halfW / 2 };
+    }
+
+    let h = EVO_STAGE_MIN_H_PHONE;
+    pair.forEach(it => {
+        it.stage.style.setProperty('--stage-w', halfW.toFixed(2) + 'px');
+        it.stage.style.setProperty('--dot-x', (it === prev ? spot.p : spot.q).toFixed(1) + 'px');
+        if (!it.img) return;
+        it.img.style.width = (parseFloat(it.img.dataset.fullW) * it.scale) + 'px';
+        h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + it.up * it.scale + EVO_STAGE_PAD));
+    });
     panel.style.setProperty('--stage-h', h + 'px');
 }
 
@@ -773,66 +865,6 @@ function evoUnitFallback(img) {
     img.classList.add('evo-stage-thumb');
     if (img.dataset.thumb) img.src = img.dataset.thumb;
     else img.style.visibility = 'hidden';
-}
-
-/* Telefono: bottone "Vedi tutte le fasi / Una alla volta" accanto al titolo "Evoluzione".
-   Normalmente si apre una fase alla volta; con "Vedi tutte le fasi" si aprono tutte insieme
-   (e ognuna si può chiudere da sola). "Una alla volta" torna al funzionamento normale e
-   rimette com'era la fase aperta prima di "Vedi tutte le fasi" (o nessuna, se erano chiuse).
-   La scelta resta valida anche aprendo altre unità. */
-let evoShowAll = false;
-const EVO_TOGGLE_ICON = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">' +
-    '<path d="M2 2.5l4 3 4-3M2 6.5l4 3 4-3" fill="none" stroke="currentColor" stroke-width="1.6" ' +
-    'stroke-linecap="round" stroke-linejoin="round"/></svg>';
-
-// testo tradotto (dizionario in script.js), con l'italiano se manca la traduzione
-function tr(key, fallback) {
-    const text = t(key);
-    return text && text !== key ? text : fallback;
-}
-
-function setStepOpen(block, open) {
-    block.classList.toggle('is-open', open);
-    const title = block.querySelector('.evo-step-title');
-    if (title) title.setAttribute('aria-expanded', String(open));
-}
-
-function updateEvoToggleAll(container) {
-    const area = container.closest('.evolution-recipe-area');
-    if (!area) return;
-    let btn = area.querySelector('.evo-toggle-all');
-    if (!btn) {
-        btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'evo-toggle-all';
-        btn.innerHTML = EVO_TOGGLE_ICON + '<span class="evo-toggle-label"></span>';
-        area.insertBefore(btn, area.firstChild);
-        btn.addEventListener('click', () => {
-            const blocks = [...container.querySelectorAll('.evolution-step-block')];
-            if (!evoShowAll) {
-                // si ricorda quale fase era aperta (-1 = nessuna) per rimetterla dopo
-                container.dataset.singleOpen = String(blocks.findIndex(b => b.classList.contains('is-open')));
-                evoShowAll = true;
-                blocks.forEach(block => {
-                    setStepOpen(block, true);
-                    fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
-                });
-            } else {
-                evoShowAll = false;
-                const keep = parseInt(container.dataset.singleOpen, 10);
-                blocks.forEach((block, index) => setStepOpen(block, index === keep));
-                if (blocks[keep]) fitEvoPanel(blocks[keep].querySelector('.evolution-recipe-panel'));
-            }
-            updateEvoToggleAll(container);
-        });
-    }
-    btn.hidden = container.querySelectorAll('.evolution-step-block').length < 2;
-    btn.classList.toggle('is-all', evoShowAll);
-    btn.setAttribute('aria-pressed', String(evoShowAll));
-    const key = evoShowAll ? 'evo.closeAll' : 'evo.openAll';
-    const label = btn.querySelector('.evo-toggle-label');
-    label.setAttribute('data-i18n', key);
-    label.textContent = tr(key, evoShowAll ? 'Una alla volta' : 'Vedi tutte le fasi');
 }
 
 // Click sulle unità laterali della ricetta: apre la modale di quell'unità
@@ -860,35 +892,12 @@ function initEvolutionLinks() {
         if (target) openModal(target);
     };
 
-    // telefono: il titolo di ogni fase apre e chiude la fase (su PC e tablet le fasi sono sempre aperte).
-    // Di solito se ne apre una alla volta: aprendone una, quella aperta prima si chiude.
-    // Con "Apri tutte" invece ogni fase si apre e si chiude per conto suo.
-    const toggleStep = (title) => {
-        if (!window.matchMedia('(max-width: 600px)').matches) return;
-        const block = title.closest('.evolution-step-block');
-        if (!block) return;
-        const open = !block.classList.contains('is-open');
-        if (!evoShowAll) {
-            container.querySelectorAll('.evolution-step-block.is-open').forEach(other => setStepOpen(other, false));
-        }
-        setStepOpen(block, open);
-        if (open) {
-            fitEvoPanel(block.querySelector('.evolution-recipe-panel'));
-            // chiudendo la fase di sopra il titolo potrebbe essere salito fuori dallo schermo
-            title.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        }
-    };
-
     container.addEventListener('click', (e) => {
-        const title = e.target.closest('.evo-step-title');
-        if (title) { toggleStep(title); return; }
         const el = e.target.closest('.evo-unit-link');
         if (el) openFromEl(el);
     });
     container.addEventListener('keydown', (e) => {
         if (e.key !== 'Enter' && e.key !== ' ') return;
-        const title = e.target.closest('.evo-step-title');
-        if (title) { e.preventDefault(); toggleStep(title); return; }
         const el = e.target.closest('.evo-unit-link');
         if (el) { e.preventDefault(); openFromEl(el); }
     });
@@ -972,15 +981,6 @@ function renderEvolutionRecipes(unit) {
 
     let htmlContent = '';
 
-    // sul telefono ogni fase è un bottone che si apre e si chiude: all'inizio è aperta solo
-    // la fase che porta all'unità aperta (o, per la prima forma, la sua prima evoluzione)
-    const sameId = (a, b) => a !== undefined && a !== null && String(a) === String(unit.realId || unit.id);
-    let openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.nextId || it.evoData.id));
-    if (openIndex < 0) openIndex = uniqueEvolutions.findIndex(it => sameId(it.evoData.prevId));
-    if (openIndex < 0) openIndex = 0;
-    // con "Vedi tutte le fasi" attivo, "Una alla volta" riaprirà questa fase
-    container.dataset.singleOpen = String(openIndex);
-
     uniqueEvolutions.forEach((item, index) => {
         const evolution = item.evoData;
         const recipe = evolution.recipe || {};
@@ -1034,16 +1034,8 @@ function renderEvolutionRecipes(unit) {
             : '';
 
         htmlContent += `
-            <div class="evolution-step-block${(evoShowAll || index === openIndex) ? ' is-open' : ''}">
-                <h4 class="evo-step-title notranslate" role="button" tabindex="0" aria-expanded="${evoShowAll || index === openIndex}">
-                    <span class="evo-step-name">${levelTitle}</span>
-                    <span class="evo-step-thumbs" aria-hidden="true">
-                        <img src="${escapeAttr(currentImage)}" alt="" loading="lazy" draggable="false">
-                        <span class="evo-step-thumb-arrow"></span>
-                        <img src="${escapeAttr(nextImage)}" alt="" loading="lazy" draggable="false">
-                    </span>
-                    <span class="evo-step-chevron" aria-hidden="true"></span>
-                </h4>
+            <div class="evolution-step-block">
+                <h4 class="evo-step-title notranslate">${levelTitle}</h4>
                 <div class="evolution-recipe-panel">
                     <div class="evo-recipe-unit-wrap evo-recipe-prev">
                         ${evoUnitStageHtml(currentImage, evolution.prevId, altName, unit, prevRarity)}
@@ -1057,7 +1049,6 @@ function renderEvolutionRecipes(unit) {
                         </div>
                     </div>
                     <div class="evo-recipe-equals"><span class="evo-eq-sign">=</span><img class="evo-arrow-img" src="${EVO_ARROW_SRC}" alt="" draggable="false"></div>
-                    <div class="evo-recipe-arrow-small" aria-hidden="true"><img class="evo-arrow-img" src="${EVO_ARROW_SRC}" alt="" draggable="false"></div>
                     <div class="evo-recipe-unit-wrap evo-recipe-next">
                         ${evoUnitStageHtml(nextImage, targetId, t('evo.result'), unit, nextRarity)}
                     </div>
@@ -1067,7 +1058,6 @@ function renderEvolutionRecipes(unit) {
 
     container.innerHTML = htmlContent;
     if (!htmlContent) showArea(false);
-    updateEvoToggleAll(container);
 }
 
 async function startApp() {
