@@ -1671,7 +1671,8 @@ async function toggleFullArt() {
     const unitId = currentUnitOpen.realId || currentUnitOpen.id;
     if (unitId === undefined || unitId === null || unitId === '') return;
 
-    currentFullArtImages = await getValidFullArts(unitId);
+    const [images] = await Promise.all([getValidFullArts(unitId), loadFullArtCenters()]);
+    currentFullArtImages = images;
     currentFullArtIndex = 0;
 
     if (currentFullArtImages.length === 0) return;
@@ -1693,25 +1694,142 @@ async function toggleFullArt() {
 
 /* ==========================================================================
    FULL ART: tutte le illustrazioni della stessa grandezza, al centro del cerchio
-   evocativo: il disegno è centrato a destra e a sinistra sul centro del cerchio
-   (anche quelli molto larghi) e la sua parte più bassa (i piedi) sta sul centro.
+   evocativo: il PERSONAGGIO (non la spada, la falce o le ali che vanno lontano da
+   un lato) è centrato sul centro del cerchio, così le gambe stanno intorno al
+   centro; la parte più bassa del disegno (i piedi) sta sul centro.
    L'altezza è quella che c'è tra il centro del cerchio e il bordo in alto
    (meno FULLART_TOP_MARGIN); le illustrazioni molto larghe si rimpiccioliscono
    quel tanto che serve per non uscire dallo schermo.
+
+   Per TUTTE le Full Art già presenti (normali ed Europa) il punto giusto è già
+   calcolato e controllato una per una nel file data/fullart-centers.json:
+   nome -> [sinistra, alto, destra, basso, centro del personaggio, piedi],
+   tutti da 0 a 1 rispetto alla grandezza del file.
+   Per le Full Art nuove, che non sono nel file, il sito lo calcola da solo.
    ========================================================================== */
 const FULLART_TOP_MARGIN = 24;     // spazio libero sopra l'illustrazione (px)
 const FULLART_MAX_UPSCALE = 2;     // un'immagine piccola si ingrandisce al massimo 2 volte
 const fullArtMeasureCache = new Map();
+const FULLART_CENTERS_URL = '../data/fullart-centers.json';
+let fullArtCenters = null;          // dati di data/fullart-centers.json (quando arrivano)
+let fullArtCentersPromise = null;
 
-// bordi del disegno (senza la parte trasparente), in pixel del file
+// si scarica una volta sola, la prima volta che si apre una Full Art
+function loadFullArtCenters() {
+    if (!fullArtCentersPromise) {
+        fullArtCentersPromise = fetch(FULLART_CENTERS_URL)
+            .then(r => (r.ok ? r.json() : {}))
+            .catch(() => ({}))
+            .then(data => { fullArtCenters = data || {}; return fullArtCenters; });
+    }
+    return fullArtCentersPromise;
+}
+
+// nome della Full Art nel file dei centri: "40014" oppure "eu/710145" per quelle Europa
+function fullArtCenterKey(src) {
+    let path = String(src || '');
+    try { path = decodeURIComponent(path); } catch (err) { /* nome già leggibile */ }
+    const m = path.match(/unit_ills_full_([^/?#]+?)\.png/i);
+    if (!m) return '';
+    return (/img Europe\//i.test(path) ? 'eu/' : '') + m[1];
+}
+
+/* SISTEMAZIONI A MANO: se un'illustrazione non viene centrata bene, qui si scrive dove
+   deve andare il centro del cerchio, da 0 (bordo sinistro del file) a 1 (bordo destro).
+   Il nome è quello del file senza "unit_ills_full_" e ".png" (per quelle Europa
+   si mette davanti "eu/"). Vince sul file dei centri. Esempio:
+       '40014': 0.62,
+       'eu/710145': 0.48,
+   Vuota = si usano il file dei centri e il calcolo automatico. */
+const FULLART_CENTER_FIX = {
+};
+
+// Dove sta il personaggio in orizzontale (in pixel della copia piccola px, larga cw):
+// 1) il viso: la zona color pelle più grande, compatta, nella parte alta e non ai bordi;
+// 2) senza viso (armature, draghi, mostri): le gambe, cioè le strisce verticali lunghe
+//    che arrivano fino in fondo al disegno;
+// 3) altrimenti il centro del disegno.
+// l, r, t, b = bordi del disegno (b = prima riga sotto il disegno).
+function fullArtAnchorX(px, cw, ch, l, r, t, b) {
+    const n = cw * ch;
+    const W = r - l, H = b - t;
+    const skin = new Uint8Array(n);
+    let filled = 0;
+    for (let i = 0; i < n; i++) {
+        const R = px[i * 4], G = px[i * 4 + 1], B = px[i * 4 + 2], A = px[i * 4 + 3];
+        if (A > 32) filled++;
+        if (A > 200 && R >= 180 && G >= 130 && G <= 238 && B >= 100 && B <= 220 &&
+            R - G >= 8 && R - G <= 75 && G - B >= 8 && G - B <= 70) skin[i] = 1;
+    }
+    const seen = new Uint8Array(n), stack = new Int32Array(n);
+    const minArea = Math.max(6, filled * 0.004);
+    let best = null;
+    for (let i = 0; i < n; i++) {
+        if (!skin[i] || seen[i]) continue;
+        let sp = 0, area = 0, sumY = 0, x0 = cw, x1 = -1, y0 = ch, y1 = -1;
+        stack[sp++] = i;
+        seen[i] = 1;
+        while (sp) {
+            const j = stack[--sp], x = j % cw, y = (j - x) / cw;
+            area++;
+            sumY += y;
+            if (x < x0) x0 = x;
+            if (x > x1) x1 = x;
+            if (y < y0) y0 = y;
+            if (y > y1) y1 = y;
+            if (x > 0 && skin[j - 1] && !seen[j - 1]) { seen[j - 1] = 1; stack[sp++] = j - 1; }
+            if (x < cw - 1 && skin[j + 1] && !seen[j + 1]) { seen[j + 1] = 1; stack[sp++] = j + 1; }
+            if (y > 0 && skin[j - cw] && !seen[j - cw]) { seen[j - cw] = 1; stack[sp++] = j - cw; }
+            if (y < ch - 1 && skin[j + cw] && !seen[j + cw]) { seen[j + cw] = 1; stack[sp++] = j + cw; }
+        }
+        const bw = x1 - x0 + 1, bh = y1 - y0 + 1, cx = (x0 + x1 + 1) / 2;
+        if (area < minArea) continue;                          // troppo piccola
+        if (area / (bw * bh) < 0.35) continue;                 // pezzi sparsi (piume, effetti)
+        if (bw > 0.3 * W || bh > 0.35 * H) continue;           // troppo grande per un viso
+        if (sumY / area >= t + H * 0.75) continue;             // troppo in basso
+        if (Math.abs(cx - (l + r) / 2) > 0.25 * W) continue;   // troppo di lato
+        if (!best || area > best.area) best = { area, cx };
+    }
+    if (best) return best.cx;
+
+    // gambe: pixel nella fascia in basso che fanno parte di strisce verticali lunghe
+    const run = Math.max(3, Math.round(H * 0.5)), band = Math.max(3, Math.round(H * 0.1));
+    let sum = 0, count = 0;
+    for (let x = l; x < r; x++) {
+        let y = 0;
+        while (y < ch) {
+            if (px[(y * cw + x) * 4 + 3] > 32) {
+                const s0 = y;
+                while (y < ch && px[(y * cw + x) * 4 + 3] > 32) y++;
+                if (y - s0 >= run) {
+                    const lo = Math.max(s0, b - band), hi = Math.min(y, b);
+                    if (hi > lo) { sum += (x + 0.5) * (hi - lo); count += hi - lo; }
+                }
+            } else {
+                y++;
+            }
+        }
+    }
+    return count ? sum / count : (l + r) / 2;
+}
+
+// bordi del disegno (senza la parte trasparente) e dove sta il personaggio, in pixel del file
 function measureFullArt(img) {
     const key = img.currentSrc || img.src;
     if (fullArtMeasureCache.has(key)) return fullArtMeasureCache.get(key);
     const w = img.naturalWidth, h = img.naturalHeight;
     if (!w || !h) return null;
-    let m = { left: 0, right: w, top: 0, bottom: h };
-    try {
-        const k = Math.min(1, 400 / Math.max(w, h));      // basta una copia piccola
+    let m = { left: 0, right: w, top: 0, bottom: h, anchorX: w / 2 };
+    // Full Art già controllata: i suoi numeri sono nel file dei centri
+    const saved = fullArtCenters && fullArtCenters[fullArtCenterKey(key)];
+    if (Array.isArray(saved) && saved.length >= 6) {
+        m = {
+            left: saved[0] * w, top: saved[1] * h, right: saved[2] * w,
+            bottom: saved[5] * h,                 // i piedi (sotto possono esserci effetti)
+            anchorX: saved[4] * w
+        };
+    } else try {
+        const k = Math.min(1, 200 / Math.max(w, h));      // basta una copia piccola
         const cw = Math.max(1, Math.round(w * k)), ch = Math.max(1, Math.round(h * k));
         const canvas = document.createElement('canvas');
         canvas.width = cw;
@@ -1730,10 +1848,18 @@ function measureFullArt(img) {
                 }
             }
         }
-        if (r >= 0) m = { left: l / k, right: (r + 1) / k, top: t / k, bottom: (b + 1) / k };
+        if (r >= 0) {
+            m = {
+                left: l / k, right: (r + 1) / k, top: t / k, bottom: (b + 1) / k,
+                anchorX: fullArtAnchorX(px, cw, ch, l, r + 1, t, b + 1) / k
+            };
+        }
     } catch (err) {
         console.warn('Misura della Full Art non riuscita:', err);
     }
+    // sistemazione a mano (FULLART_CENTER_FIX), se c'è
+    const fix = parseFloat(FULLART_CENTER_FIX[fullArtCenterKey(key)]);
+    if (fix >= 0 && fix <= 1) m.anchorX = fix * w;
     fullArtMeasureCache.set(key, m);
     return m;
 }
@@ -1747,7 +1873,7 @@ function placeFullArt() {
     if (!boxRect.width || !boxRect.height) return;            // modale non ancora visibile
     const m = measureFullArt(img);
     if (!m) return;
-    // il punto dove va il disegno: il centro del cerchio (se il cerchio manca, poco sotto metà schermo)
+    // il punto dove va il personaggio: il centro del cerchio (se il cerchio manca, poco sotto metà schermo)
     let dotX = boxRect.width / 2, dotY = boxRect.height * 0.62;
     const cr = (circle && circle.style.display !== 'none') ? circle.getBoundingClientRect() : null;
     if (cr && cr.width && cr.height) {
@@ -1760,11 +1886,11 @@ function placeFullArt() {
     // così quelle strette e quelle larghe vengono più simili)
     const maxH = Math.min(dotY - FULLART_TOP_MARGIN, (boxRect.width - 2 * side) * 0.85);
     const limits = [maxH / (m.bottom - m.top), FULLART_MAX_UPSCALE];
-    // ...ma senza uscire dai lati dello schermo (il disegno è centrato sul centro del cerchio)
-    const centerX = (m.left + m.right) / 2;
-    limits.push((Math.min(dotX, boxRect.width - dotX) - side) / ((m.right - m.left) / 2));
-    const s = Math.max(0.05, Math.min(...limits));
-    img.style.setProperty('--fa-left', (dotX - centerX * s).toFixed(1) + 'px');
+    // ...ma senza uscire dai lati dello schermo (il personaggio resta sul centro del cerchio)
+    if (m.anchorX > m.left) limits.push((dotX - side) / (m.anchorX - m.left));
+    if (m.right > m.anchorX) limits.push((boxRect.width - side - dotX) / (m.right - m.anchorX));
+    const s = Math.max(0.001, Math.min(...limits));   // alcune Full Art Europa sono enormi (12000px)
+    img.style.setProperty('--fa-left', (dotX - m.anchorX * s).toFixed(1) + 'px');
     img.style.setProperty('--fa-top', (dotY - m.bottom * s).toFixed(1) + 'px');
     img.style.setProperty('--fa-width', (img.naturalWidth * s).toFixed(1) + 'px');
     img.classList.add('is-fitted');
