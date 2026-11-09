@@ -97442,9 +97442,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10165/10165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10165/10165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10165/10165_atk.png"
+      "default": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-default.webm",
+      "idle": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-idle.webm",
+      "atk": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97666,9 +97666,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20165/20165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20165/20165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20165/20165_atk.png"
+      "default": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-default.webm",
+      "idle": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-idle.webm",
+      "atk": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97890,9 +97890,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30165/30165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30165/30165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30165/30165_atk.png"
+      "default": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-default.webm",
+      "idle": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-idle.webm",
+      "atk": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98163,9 +98163,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40165/40165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40165/40165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40165/40165_atk.png"
+      "default": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-default.webm",
+      "idle": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-idle.webm",
+      "atk": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -185888,9 +185888,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30166/30166_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30166/30166_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30166/30166_atk.png"
+      "default": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-default.webm",
+      "idle": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-idle.webm",
+      "atk": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -186198,9 +186198,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40166/40166_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40166/40166_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40166/40166_atk.png"
+      "default": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-default.webm",
+      "idle": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-idle.webm",
+      "atk": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -331747,9 +331747,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30167/30167_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30167/30167_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30167/30167_atk.png"
+      "default": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-default.webm",
+      "idle": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-idle.webm",
+      "atk": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -332057,9 +332057,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40167/40167_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40167/40167_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40167/40167_atk.png"
+      "default": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-default.webm",
+      "idle": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-idle.webm",
+      "atk": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
