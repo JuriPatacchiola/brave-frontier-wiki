@@ -1016,15 +1016,25 @@ body.modal-open {
     pointer-events: none;
     --star-a: #ffffff;
     --star-b: #d0e1ff;
+    /* colore delle onde di luce e del bagliore del cerchio */
+    --ring: rgba(255, 255, 255, 0.9);
+    --ring-glow: rgba(208, 225, 255, 0.8);
+    --glow-soft: rgba(208, 225, 255, 0.35);
+    /* misure e posizione del cerchio (tablet e telefono le cambiano più sotto) */
+    --circle-w: min(130vmin, 950px);
+    --circle-h: min(110vmin, 900px);
+    --circle-bottom: -16vh;
+    /* il cerchio disegnato è grande quanto il lato più corto del riquadro dell'immagine */
+    --circle-d: min(var(--circle-w), var(--circle-h));
 }
 
 /* Cerchio 3D Grande: centrato orizzontalmente e posizionato alla base dei piedi dell'Unità */
 .fullart-evocation-circle {
     position: absolute;
     left: 50%;
-    bottom: -16vh;
-    width: min(130vmin, 950px);
-    height: min(110vmin, 900px);
+    bottom: var(--circle-bottom);
+    width: var(--circle-w);
+    height: var(--circle-h);
     object-fit: contain;
     transform: translateX(-50%) rotateX(72deg) rotate(0deg);
     transform-origin: center center;
@@ -1043,43 +1053,182 @@ body.modal-open {
     }
 }
 
+/* Luce che "respira" sul cerchio: si illumina e si spegne piano (come nel gioco) */
+.fullart-circle-glow,
+.fullart-ripple {
+    position: absolute;
+    left: 50%;
+    /* stesso centro del cerchio */
+    bottom: calc(var(--circle-bottom) + (var(--circle-h) - var(--circle-d)) / 2);
+    width: var(--circle-d);
+    height: var(--circle-d);
+    border-radius: 50%;
+    transform: translateX(-50%) rotateX(72deg);
+    transform-origin: center center;
+}
+
+.fullart-circle-glow {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 38%, var(--glow-soft) 56%, transparent 71%);
+    /* anche il bordo del cerchio si illumina */
+    box-shadow: 0 0 28px 6px var(--ring-glow), inset 0 0 22px 4px var(--ring-glow);
+    mix-blend-mode: screen;
+    opacity: 0.1;
+    animation: fullArtCirclePulse 3s ease-in-out infinite;
+}
+
+@keyframes fullArtCirclePulse {
+
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+
+    40% {
+        opacity: 0.75;
+    }
+}
+
+/* Onde di luce: anelli che partono dal bordo del cerchio, si allargano e svaniscono */
+.fullart-ripple {
+    box-sizing: border-box;
+    border: 5px solid var(--ring);
+    box-shadow: 0 0 12px var(--ring-glow), 0 0 30px var(--ring-glow), inset 0 0 20px var(--ring-glow);
+    opacity: 0;
+    animation: fullArtRipple 3s ease-out infinite;
+}
+
+@keyframes fullArtRipple {
+    0% {
+        transform: translateX(-50%) rotateX(72deg) scale(0.95);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) rotateX(72deg) scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* se l'immagine del cerchio manca, niente luce e niente onde */
+.fullart-evocation-fx.no-circle .fullart-circle-glow,
+.fullart-evocation-fx.no-circle .fullart-ripple {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fullart-ripple {
+        display: none;
+    }
+
+    .fullart-circle-glow {
+        animation: none;
+        opacity: 0.35;
+    }
+}
+
+/* Zona delle particelle: intorno al cerchio evocativo e sopra di esso (dove sta l'unità).
+   Segue da sola la misura del cerchio su PC, tablet e telefono. */
 .fullart-stars {
     position: absolute;
-    inset: 0;
-    overflow: hidden;
+    left: 50%;
+    width: calc(var(--circle-d) * 1.3);
+    height: calc(var(--circle-d) * 0.8);
+    /* il centro del cerchio è a --circle-bottom + metà altezza; la zona parte un po' sotto il bordo davanti */
+    bottom: calc(var(--circle-bottom) + var(--circle-h) / 2 - var(--circle-d) * 0.22);
+    transform: translateX(-50%);
 }
 
-/* Particelle (stelle) in salita partendo dalla base del cerchio */
-.fullart-star {
+/* Particelle come nel gioco: palline di luce sfocate (bokeh) che nascono intorno al
+   cerchio, salgono veloci e svaniscono. Il colore (--c) lo sceglie main.js
+   in base alla rarità (FULLART_PARTICLE_COLORS) */
+.fullart-bokeh {
     position: absolute;
-    bottom: 5vh;
     left: var(--x);
+    top: var(--y);
     width: var(--size);
     height: var(--size);
+    margin: calc(var(--size) / -2) 0 0 calc(var(--size) / -2);
     border-radius: 50%;
-    background: var(--star-a);
-    box-shadow: 0 0 6px var(--star-a), 0 0 12px var(--star-b);
+    background: radial-gradient(circle, #ffffff 0%, var(--c) 28%, var(--c) 42%, transparent 72%);
+    box-shadow: 0 0 calc(var(--size) * 0.8) var(--c);
     opacity: 0;
-    animation: fullArtStarRise var(--duration) ease-in-out var(--delay) infinite;
+    animation: fullArtBokeh var(--duration) ease-in-out var(--delay) infinite;
 }
 
-@keyframes fullArtStarRise {
+@keyframes fullArtBokeh {
     0% {
         opacity: 0;
-        transform: translateY(0) scale(0.3);
+        transform: translate(0, 0) scale(0.6);
     }
 
-    20% {
-        opacity: 0.95;
-    }
-
-    80% {
-        opacity: 0.8;
+    20%,
+    70% {
+        opacity: var(--alpha);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(-400px) scale(1.25);
+        transform: translate(var(--dx), var(--dy)) scale(1);
+    }
+}
+
+/* Omni e Dream: in più stelline a quattro punte che brillano */
+.fullart-sparkle {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle, #ffffff 0 8%, rgba(200, 230, 255, 0.7) 16%, transparent 34%);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    animation: fullArtSparkle var(--duration) ease-in-out var(--delay) infinite;
+}
+
+.fullart-sparkle::before,
+.fullart-sparkle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+    border-radius: 1px;
+    background: linear-gradient(90deg, transparent, #ffffff 50%, transparent);
+    box-shadow: 0 0 4px rgba(190, 225, 255, 0.9);
+}
+
+.fullart-sparkle::after {
+    transform: rotate(90deg);
+}
+
+@keyframes fullArtSparkle {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(45deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fullart-bokeh {
+        animation: none;
+        opacity: calc(var(--alpha) * 0.6);
+    }
+
+    .fullart-sparkle {
+        display: none;
     }
 }
 
@@ -1093,38 +1242,36 @@ body.modal-open {
 .fullart-evocation-fx.rarity-gold {
     --star-a: #ffd700;
     --star-b: #ffaa00;
+    --ring: rgba(255, 228, 120, 0.9);
+    --ring-glow: rgba(255, 190, 40, 0.8);
+    --glow-soft: rgba(255, 200, 60, 0.35);
 }
 
 /* Rarità 4★: Rosso */
 .fullart-evocation-fx.rarity-red {
     --star-a: #ff3b3b;
     --star-b: #ff7676;
+    --ring: rgba(255, 150, 140, 0.9);
+    --ring-glow: rgba(255, 60, 60, 0.8);
+    --glow-soft: rgba(255, 80, 80, 0.35);
 }
 
-/* Rarità 5★ fino a Omni: Arcobaleno Multicolore */
+/* Rarità 5★ fino a 7★: Arcobaleno Multicolore */
 .fullart-evocation-fx.rarity-rainbow {
     --star-a: #ffffff;
     --star-b: #ff8cf4;
+    --ring: rgba(255, 255, 255, 0.9);
+    --ring-glow: rgba(255, 140, 244, 0.7);
+    --glow-soft: rgba(200, 170, 255, 0.35);
 }
 
-.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n) {
-    background: #ff4d4d;
-    box-shadow: 0 0 7px #ff4d4d, 0 0 12px #ff8888;
-}
-
-.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 1) {
-    background: #4da6ff;
-    box-shadow: 0 0 7px #4da6ff, 0 0 12px #88c4ff;
-}
-
-.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 2) {
-    background: #ffd700;
-    box-shadow: 0 0 7px #ffd700, 0 0 12px #ffe86b;
-}
-
-.fullart-evocation-fx.rarity-rainbow .fullart-star:nth-child(4n + 3) {
-    background: #bf7fff;
-    box-shadow: 0 0 7px #bf7fff, 0 0 12px #dfbfff;
+/* Omni e Dream: cerchio evocativo proprio, luce bianca e azzurra */
+.fullart-evocation-fx.rarity-omni {
+    --star-a: #ffffff;
+    --star-b: #9fd0ff;
+    --ring: rgba(255, 255, 255, 0.95);
+    --ring-glow: rgba(140, 200, 255, 0.85);
+    --glow-soft: rgba(160, 205, 255, 0.4);
 }
 
 /* ==========================================================================
@@ -1133,14 +1280,10 @@ body.modal-open {
 @media (max-width: 1024px) {
 
     /* Adattamento cerchio per Tablet */
-    .fullart-evocation-circle {
-        width: min(130vmin, 750px);
-        height: min(110vmin, 700px);
-        bottom: -14vh
-    }
-
-    .fullart-star {
-        bottom: 5vh;
+    .fullart-evocation-fx {
+        --circle-w: min(130vmin, 750px);
+        --circle-h: min(110vmin, 700px);
+        --circle-bottom: -14vh;
     }
 
     .fullart-nav-btn {
@@ -1499,14 +1642,10 @@ body.modal-open {
 
 
     /* Adattamento cerchio per Smartphone */
-    .fullart-evocation-circle {
-        width: min(80vmin, 550px);
-        height: min(120vmin, 500px);
-        bottom: 10vh;
-    }
-
-    .fullart-star {
-        bottom: 18vh;
+    .fullart-evocation-fx {
+        --circle-w: min(80vmin, 550px);
+        --circle-h: min(120vmin, 500px);
+        --circle-bottom: 10vh;
     }
 }
 
@@ -1570,6 +1709,24 @@ body.modal-open {
 
 #fullArtModalImage {
     cursor: pointer;
+}
+
+/* Illustrazione messa al suo posto da main.js (placeFullArt): tutte della stessa altezza,
+   con i piedi al centro del cerchio evocativo */
+#fullArtModalImage.is-fitted {
+    position: absolute;
+    left: var(--fa-left);
+    top: var(--fa-top);
+    width: var(--fa-width);
+    height: auto;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0;
+}
+
+/* mentre si carica un'altra illustrazione non si vede (così non salta) */
+#fullArtModalImage.is-loading {
+    visibility: hidden;
 }
 
 @media (max-width: 600px) {

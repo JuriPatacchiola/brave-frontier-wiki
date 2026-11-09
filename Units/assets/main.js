@@ -365,6 +365,16 @@ const arenaBackgrounds = [
     '../img/Arena Battle/dungeon_battle_8510002.jpg'
 ];
 
+/* Colori delle particelle della Full Art per ogni rarità (palline di luce sfocate).
+   Per cambiarli basta cambiare i colori qui. */
+const FULLART_PARTICLE_COLORS = {
+    white: ['#ffffff', '#e6efff', '#c9dcff', '#f4f8ff'],                     // 1★ e 2★
+    gold: ['#ffd700', '#ffe680', '#ffbf2e', '#fff3c4'],                      // 3★
+    red: ['#ff3b3b', '#ff6a5a', '#ff9a8a', '#ffd0c8'],                       // 4★
+    rainbow: ['#ff4d4d', '#ffd700', '#7dff6b', '#4da6ff', '#ff7de9', '#bf7fff', '#ffffff', '#5fffe0'], // 5★-7★
+    omni: ['#ff4d4d', '#ffd700', '#7dff6b', '#4da6ff', '#ff7de9', '#bf7fff', '#ffffff', '#9fd0ff']     // Omni e Dream
+};
+
 function getEvocationCircle(rarity) {
     const r = String(rarity || '').trim();
     if (r === '1' || r === '2') {
@@ -373,6 +383,8 @@ function getEvocationCircle(rarity) {
         return '../img/Evocation%20Circle/Rare_circle.png';
     } else if (r === '4') {
         return '../img/Evocation%20Circle/Super_rare_circle.png';
+    } else if (r.toLowerCase() === 'omni' || r.toLowerCase() === 'dream') {
+        return '../img/Evocation%20Circle/Omni_circle.png';
     } else {
         return '../img/Evocation%20Circle/Mega_rare_circle.png';
     }
@@ -1539,26 +1551,72 @@ function setupFullArtEvocationFx(unit) {
         className = 'rarity-gold';
     } else if (rarity === '4') {
         className = 'rarity-red';
+    } else if (rarity === 'omni' || rarity === 'dream') {
+        className = 'rarity-omni';
     } else {
         className = 'rarity-rainbow';
     }
 
-    fx.classList.remove('rarity-white', 'rarity-gold', 'rarity-red', 'rarity-rainbow');
+    fx.classList.remove('rarity-white', 'rarity-gold', 'rarity-red', 'rarity-rainbow', 'rarity-omni');
     fx.classList.add(className);
 
     circle.src = getEvocationCircle(unit.rarity);
-    circle.onerror = function () { circle.style.display = 'none'; };
-    circle.onload = function () { circle.style.display = 'block'; };
+    circle.onerror = function () { circle.style.display = 'none'; fx.classList.add('no-circle'); placeFullArt(); };
+    circle.onload = function () { circle.style.display = 'block'; fx.classList.remove('no-circle'); placeFullArt(); };
 
+    // luce che "respira" sul cerchio e onde di luce che si allargano (come nel gioco):
+    // si creano una volta sola, il colore lo decide il CSS in base alla rarità
+    if (!fx.querySelector('.fullart-circle-glow')) {
+        const glow = document.createElement('span');
+        glow.className = 'fullart-circle-glow';
+        circle.after(glow);
+        let last = glow;
+        for (let i = 0; i < 3; i++) {
+            const ring = document.createElement('span');
+            ring.className = 'fullart-ripple';
+            ring.style.animationDelay = `${i}s`;   // un'onda ogni secondo
+            last.after(ring);
+            last = ring;
+        }
+    }
+
+    // particelle: palline di luce sfocate dei colori della rarità, intorno al cerchio, che salgono veloci;
+    // le Omni/Dream hanno anche stelline che brillano. Il ritardo negativo fa partire
+    // ogni particella "a metà": così ci sono già tutte appena si apre la Full Art.
+    const phone = window.matchMedia('(max-width: 600px)').matches;
+    const colors = FULLART_PARTICLE_COLORS[className.replace('rarity-', '')] || FULLART_PARTICLE_COLORS.white;
+    const rand = (min, max) => min + Math.random() * (max - min);
     stars.replaceChildren();
-    for (let i = 0; i < 36; i++) {
-        const star = document.createElement('span');
-        star.className = 'fullart-star';
-        star.style.setProperty('--x', `${Math.random() * 80 + 10}%`);
-        star.style.setProperty('--size', `${Math.random() * 3 + 1.5}px`);
-        star.style.setProperty('--duration', `${Math.random() * 2.5 + 2}s`);
-        star.style.setProperty('--delay', `${Math.random() * 3}s`);
-        stars.appendChild(star);
+    for (let i = 0; i < (phone ? 36 : 60); i++) {
+        const dot = document.createElement('span');
+        dot.className = 'fullart-bokeh';
+        const big = Math.random() < 0.25;          // alcune più grandi e più sfocate
+        const size = (big ? rand(16, 32) : rand(6, 14)) * (phone ? 0.75 : 1);
+        const duration = rand(1, 2.2);
+        dot.style.setProperty('--x', `${rand(0, 100)}%`);
+        // più fitte vicino al cerchio (in basso nella zona), meno in alto
+        dot.style.setProperty('--y', `${(100 - Math.pow(Math.random(), 1.6) * 100).toFixed(1)}%`);
+        dot.style.setProperty('--size', `${size.toFixed(1)}px`);
+        dot.style.setProperty('--c', colors[Math.floor(Math.random() * colors.length)]);
+        dot.style.setProperty('--alpha', (big ? rand(0.4, 0.7) : rand(0.75, 1)).toFixed(2));
+        dot.style.setProperty('--dx', `${rand(-20, 20).toFixed(0)}px`);
+        dot.style.setProperty('--dy', `${(rand(-140, -40) * (phone ? 0.7 : 1)).toFixed(0)}px`);
+        dot.style.setProperty('--duration', `${duration.toFixed(2)}s`);
+        dot.style.setProperty('--delay', `${(-Math.random() * duration).toFixed(2)}s`);
+        stars.appendChild(dot);
+    }
+    if (className === 'rarity-omni') {
+        for (let i = 0; i < (phone ? 12 : 18); i++) {
+            const star = document.createElement('span');
+            star.className = 'fullart-sparkle';
+            const duration = rand(0.7, 1.5);
+            star.style.setProperty('--x', `${rand(0, 100)}%`);
+            star.style.setProperty('--y', `${rand(0, 100)}%`);
+            star.style.setProperty('--size', `${(rand(12, 26) * (phone ? 0.8 : 1)).toFixed(1)}px`);
+            star.style.setProperty('--duration', `${duration.toFixed(2)}s`);
+            star.style.setProperty('--delay', `${(-Math.random() * duration * 2).toFixed(2)}s`);
+            stars.appendChild(star);
+        }
     }
 }
 
@@ -1627,9 +1685,95 @@ async function toggleFullArt() {
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     isFullArtOpen = true;
+    // ora che la modale si vede, l'illustrazione si mette sul cerchio
+    requestAnimationFrame(placeFullArt);
 
     if (button) button.classList.add('active');
 }
+
+/* ==========================================================================
+   FULL ART: tutte le illustrazioni della stessa grandezza, al centro del cerchio
+   evocativo: il disegno è centrato a destra e a sinistra sul centro del cerchio
+   (anche quelli molto larghi) e la sua parte più bassa (i piedi) sta sul centro.
+   L'altezza è quella che c'è tra il centro del cerchio e il bordo in alto
+   (meno FULLART_TOP_MARGIN); le illustrazioni molto larghe si rimpiccioliscono
+   quel tanto che serve per non uscire dallo schermo.
+   ========================================================================== */
+const FULLART_TOP_MARGIN = 24;     // spazio libero sopra l'illustrazione (px)
+const FULLART_MAX_UPSCALE = 2;     // un'immagine piccola si ingrandisce al massimo 2 volte
+const fullArtMeasureCache = new Map();
+
+// bordi del disegno (senza la parte trasparente), in pixel del file
+function measureFullArt(img) {
+    const key = img.currentSrc || img.src;
+    if (fullArtMeasureCache.has(key)) return fullArtMeasureCache.get(key);
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h) return null;
+    let m = { left: 0, right: w, top: 0, bottom: h };
+    try {
+        const k = Math.min(1, 400 / Math.max(w, h));      // basta una copia piccola
+        const cw = Math.max(1, Math.round(w * k)), ch = Math.max(1, Math.round(h * k));
+        const canvas = document.createElement('canvas');
+        canvas.width = cw;
+        canvas.height = ch;
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        ctx.drawImage(img, 0, 0, cw, ch);
+        const px = ctx.getImageData(0, 0, cw, ch).data;
+        let l = cw, r = -1, t = ch, b = -1;
+        for (let y = 0; y < ch; y++) {
+            for (let x = 0; x < cw; x++) {
+                if (px[(y * cw + x) * 4 + 3] > 32) {
+                    if (x < l) l = x;
+                    if (x > r) r = x;
+                    if (y < t) t = y;
+                    b = y;
+                }
+            }
+        }
+        if (r >= 0) m = { left: l / k, right: (r + 1) / k, top: t / k, bottom: (b + 1) / k };
+    } catch (err) {
+        console.warn('Misura della Full Art non riuscita:', err);
+    }
+    fullArtMeasureCache.set(key, m);
+    return m;
+}
+
+function placeFullArt() {
+    const img = document.getElementById('fullArtModalImage');
+    const circle = document.getElementById('fullArtEvocationCircle');
+    const box = img && img.parentElement;
+    if (!img || !box || !img.naturalWidth || !img.complete) return;
+    const boxRect = box.getBoundingClientRect();
+    if (!boxRect.width || !boxRect.height) return;            // modale non ancora visibile
+    const m = measureFullArt(img);
+    if (!m) return;
+    // il punto dove va il disegno: il centro del cerchio (se il cerchio manca, poco sotto metà schermo)
+    let dotX = boxRect.width / 2, dotY = boxRect.height * 0.62;
+    const cr = (circle && circle.style.display !== 'none') ? circle.getBoundingClientRect() : null;
+    if (cr && cr.width && cr.height) {
+        dotX = cr.left + cr.width / 2 - boxRect.left;
+        dotY = cr.top + cr.height / 2 - boxRect.top;
+    }
+    const side = window.innerWidth > 1024 ? 80 : 8;           // su PC ai lati ci sono le frecce
+    // stessa altezza per tutte...
+    // (sugli schermi stretti, telefono e tablet in verticale, non più alta di quanto è largo lo spazio,
+    // così quelle strette e quelle larghe vengono più simili)
+    const maxH = Math.min(dotY - FULLART_TOP_MARGIN, (boxRect.width - 2 * side) * 0.85);
+    const limits = [maxH / (m.bottom - m.top), FULLART_MAX_UPSCALE];
+    // ...ma senza uscire dai lati dello schermo (il disegno è centrato sul centro del cerchio)
+    const centerX = (m.left + m.right) / 2;
+    limits.push((Math.min(dotX, boxRect.width - dotX) - side) / ((m.right - m.left) / 2));
+    const s = Math.max(0.05, Math.min(...limits));
+    img.style.setProperty('--fa-left', (dotX - centerX * s).toFixed(1) + 'px');
+    img.style.setProperty('--fa-top', (dotY - m.bottom * s).toFixed(1) + 'px');
+    img.style.setProperty('--fa-width', (img.naturalWidth * s).toFixed(1) + 'px');
+    img.classList.add('is-fitted');
+    img.classList.remove('is-loading');
+}
+
+window.addEventListener('resize', () => {
+    if (isFullArtOpen) placeFullArt();
+});
 
 function updateFullArtDisplay() {
     const image = document.getElementById('fullArtModalImage');
@@ -1640,7 +1784,11 @@ function updateFullArtDisplay() {
     if (!image) return;
 
     image.onerror = null;
+    // nascosta finché non è messa al suo posto (niente salti)
+    image.classList.add('is-loading');
+    image.onload = placeFullArt;
     image.src = currentFullArtImages[currentFullArtIndex];
+    if (image.complete) requestAnimationFrame(placeFullArt);
 
     const total = currentFullArtImages.length;
     if (total > 1) {
