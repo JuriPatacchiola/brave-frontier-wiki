@@ -53661,9 +53661,9 @@
       }
     },
     "animations": {
-      "default": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum Nekky-default.webm",
-      "idle": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum Nekky-idle.webm",
-      "atk": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum Nekky-atk.webm"
+      "default": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum-Nekky-default.webm",
+      "idle": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum-Nekky-idle.webm",
+      "atk": "../video/Events/strange knight/Nekky/Platinum Nekky/Platinum-Nekky-atk.webm"
     },
     "effects": {
       "atk": "",
