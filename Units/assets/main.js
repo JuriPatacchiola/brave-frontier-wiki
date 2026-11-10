@@ -1153,6 +1153,27 @@ function fitFigureBox(card) {
     card.style.setProperty('--figure-box-h', `${Math.max(60, title.offsetTop - 10)}px`);
 }
 
+// La figura della card inquadra il disegno vero, senza i bordi trasparenti del file.
+// Alcune Full Art (soprattutto quelle Europa) hanno tantissimo spazio vuoto intorno:
+// con l'immagine intera il personaggio verrebbe piccolissimo. Così sono tutte grandi uguali.
+function fitCardFigure(img) {
+    const box = img.parentElement;
+    if (!box || !img.naturalWidth) return;
+    const bw = box.clientWidth, bh = box.clientHeight;
+    if (!bw || !bh) return;
+    const m = measureFullArt(img);
+    if (!m) return;
+    const bottom = m.fullBottom || m.bottom;
+    const s = Math.min(bw / Math.max(1, m.right - m.left), bh / Math.max(1, bottom - m.top));
+    const cx = (m.left + m.right) / 2;
+    img.style.setProperty('--fig-left', (bw / 2 - cx * s).toFixed(1) + 'px');
+    img.style.setProperty('--fig-top', (bh - bottom * s).toFixed(1) + 'px');
+    img.style.setProperty('--fig-width', (img.naturalWidth * s).toFixed(1) + 'px');
+    // il rimbalzo parte dal fondo del disegno, non dal fondo del file
+    img.style.setProperty('--fig-origin', `${(cx * s).toFixed(1)}px ${(bottom * s).toFixed(1)}px`);
+    img.classList.add('is-fitted');
+}
+
 function attachCardArt(card, u) {
     const img = card.querySelector('.card-figure');
     if (!img) return;
@@ -1163,6 +1184,7 @@ function attachCardArt(card, u) {
     const show = () => {
         if (!hovering) return;
         fitFigureBox(card);
+        fitCardFigure(img);
         card.classList.add('show-art');
     };
 
@@ -1174,7 +1196,8 @@ function attachCardArt(card, u) {
         timer = setTimeout(async () => {
             if (!hovering) return;
             if (img.dataset.loaded === '1') { show(); return; }
-            const arts = await getValidFullArts(realId);
+            // i bordi delle Full Art sono nel file dei centri (si scarica una volta sola)
+            const [arts] = await Promise.all([getValidFullArts(realId), loadFullArtCenters()]);
             const src = arts && arts[0];
             if (!src) return;
             img.onload = () => { img.dataset.loaded = '1'; show(); };

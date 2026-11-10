@@ -1833,6 +1833,19 @@ body.modal-open {
     -webkit-user-drag: none;
 }
 
+/* figura inquadrata da main.js (fitCardFigure): solo il disegno, senza i bordi vuoti del file */
+.card-figure.is-fitted {
+    position: absolute;
+    left: var(--fig-left);
+    top: var(--fig-top);
+    width: var(--fig-width);
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: fill;
+    transform-origin: var(--fig-origin, 50% 100%);
+}
+
 .unit-card.show-art .card-figure {
     opacity: 1;
     transform: translateY(0) scale(1);
