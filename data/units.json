@@ -59134,9 +59134,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake Lord Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake Lord Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake Lord Aisha-atk.webm"
+      "default": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-default.webm",
+      "idle": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-idle.webm",
+      "atk": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98577,9 +98577,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-atk.webm"
+      "default": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-default.webm",
+      "idle": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-idle.webm",
+      "atk": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",

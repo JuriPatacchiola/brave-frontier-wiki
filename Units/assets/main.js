@@ -667,11 +667,61 @@ function setEvoNeeds(stage, img, box) {
 }
 
 // Mette l'animazione con i piedi al centro del vetro, a pixel netti (1 pixel del disegno = 1px).
-function placeEvoUnit(img) {
+/* Animazioni prese da un altro sito (quasi tutte da library.bravefrontier.jp, quelle che
+   non sono ancora nel tuo GitHub): il browser non lascia "leggere" i loro pixel, quindi
+   non si trovano ombra, piedi e grandezza dei pixel. Si prova a riaprirle chiedendo il
+   permesso a quel sito (CORS): se lo dà, si misurano come tutte le altre. Altrimenti
+   l'unità si mette con i piedi dove stanno di solito (EVO_GUESS_X / EVO_GUESS_Y,
+   misurati su 423 animazioni) e non può far diventare la riga più alta del normale. */
+const EVO_GUESS_X = 0.6;
+const EVO_GUESS_Y = 0.88;
+
+function evoCanReadPixels(el) {
+    try {
+        const c = document.createElement('canvas');
+        c.width = c.height = 1;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(el, 0, 0, 1, 1);
+        ctx.getImageData(0, 0, 1, 1);
+        return true;
+    } catch (err) {
+        return false;
+    }
+}
+
+function placeEvoGuess(img, stage) {
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h) return;
+    const sx = EVO_GUESS_X, sy = EVO_GUESS_Y;
+    img.style.setProperty('--char-x', ((0.5 - sx) * 100).toFixed(2));
+    img.style.setProperty('--char-y', ((0.5 - sy) * 100).toFixed(2));
+    const px = 1 / (parseFloat(img.dataset.unitScale) || 1);
+    Object.assign(img.dataset, { artPx: px, fileW: w, fileH: h, standX: sx, standY: sy, fullW: w / px, guess: '1' });
+    setEvoNeeds(stage, img, { left: 0, right: 1, top: 0 });
+    img.classList.add('is-placed');
+    fitEvoPanel(stage.closest('.evolution-recipe-panel'));
+}
+
+function placeEvoUnit(img, source = img) {
     const stage = img.closest('.evo-stage');
-    const m = stage ? measureCharacter(img) : null;
+    if (!stage) return;
+    if (source === img && img.naturalWidth && !evoCanReadPixels(img)) {
+        if (!img.dataset.probe) {
+            img.dataset.probe = '1';
+            const probe = new Image();
+            probe.crossOrigin = 'anonymous';
+            probe.onload = () => {
+                if (img.isConnected && evoCanReadPixels(probe)) placeEvoUnit(img, probe);
+            };
+            probe.src = img.currentSrc || img.src;
+        }
+        placeEvoGuess(img, stage);
+        return;
+    }
+    const m = measureCharacter(source);
     if (!m) return;
-    const k = detectArtPixelSize(img);
+    delete img.dataset.guess;
+    const k = detectArtPixelSize(source);
     // il centro dell'ombra va sul puntino; se il file non si è potuto leggere, resta centrato
     const sx = m.standX !== undefined ? m.standX : 0.5;
     const sy = m.standY !== undefined ? m.standY : 0.5;
@@ -741,15 +791,20 @@ function evoPanelItems(panel) {
     panel.querySelectorAll('.evo-stage').forEach(stage => {
         const img = stage.querySelector('.evo-stage-unit.is-placed');
         const unitScale = img ? (parseFloat(img.dataset.unitScale) || 1) : 1;
+        const up = parseFloat(stage.dataset.up) || 0;
+        // unità che non si è potuta misurare: non deve far diventare la riga più alta del normale
+        const guess = !!img && img.dataset.guess === '1';
+        const upRoom = EVO_STAGE_MIN_H - EVO_STAGE_FOOT - EVO_STAGE_PAD;
         items.push({
             stage,
             img,
-            up: parseFloat(stage.dataset.up) || 0,
+            up,
             left: parseFloat(stage.dataset.left) || 0,
             right: parseFloat(stage.dataset.right) || 0,
             needW: 2 * (parseFloat(stage.dataset.side) || 0) + EVO_STAGE_PAD,
             unitScale,
-            minScale: 0.5 / unitScale          // mai più piccola di metà della sua misura
+            minScale: guess ? 0 : 0.5 / unitScale,   // mai più piccola di metà della sua misura
+            maxScale: guess && up > upRoom ? upRoom / up : Infinity
         });
     });
     return items;
@@ -768,7 +823,7 @@ function fitEvoPanel(panel) {
         it.stage.style.removeProperty('--stage-w');
         it.stage.style.removeProperty('--dot-x');
         if (!it.img) return;
-        const scale = it.needW > room ? Math.max(room / it.needW, it.minScale) : 1;
+        const scale = Math.min(it.needW > room ? Math.max(room / it.needW, it.minScale) : 1, it.maxScale);
         it.img.style.width = (parseFloat(it.img.dataset.fullW) * scale) + 'px';
         w = Math.max(w, Math.ceil(it.needW * scale));
         h = Math.max(h, Math.ceil(EVO_STAGE_FOOT + it.up * scale + EVO_STAGE_PAD));
@@ -797,7 +852,7 @@ function fitEvoPanelPhone(panel) {
     const next = items.find(it => it.stage.closest('.evo-recipe-next'));
     if (!prev || !next) return;
     const pair = [prev, next];
-    pair.forEach(it => { it.scale = it.img ? EVO_PHONE_SCALE / it.unitScale : 1; });
+    pair.forEach(it => { it.scale = it.img ? Math.min(EVO_PHONE_SCALE / it.unitScale, it.maxScale) : 1; });
     const halfW = (inner - middle) / 2;           // larghezza di ogni metà
     const baseHalf = EVO_STAGE_MIN_W / 2, pad = EVO_STAGE_PAD / 2, thumbHalf = 28;
     const leftOf = (it, s) => (it.img ? it.left * s : thumbHalf);
