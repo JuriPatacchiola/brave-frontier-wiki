@@ -156304,9 +156304,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10235/10235_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10235/10235_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10235/10235_atk.png"
+      "default": "../video/Four Knigt/Seria/Flare Goddess Seria/Flare-Goddess-Seria-default.webm",
+      "idle": "../video/Four Knigt/Seria/Flare Goddess Seria/Flare-Goddess-Seria-idle.webm",
+      "atk": "../video/Four Knigt/Seria/Flare Goddess Seria/Flare-Goddess-Seria-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -238072,9 +238072,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10236/10236_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10236/10236_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10236/10236_atk.png"
+      "default": "../video/Four Knigt/Seria/Solar Fervor Seria/Solar-Fervor-Seria-default.webm",
+      "idle": "../video/Four Knigt/Seria/Solar Fervor Seria/Solar-Fervor-Seria-idle.webm",
+      "atk": "../video/Four Knigt/Seria/Solar Fervor Seria/Solar-Fervor-Seria-atk.webm"
     },
     "effects": {
       "atk": "",
