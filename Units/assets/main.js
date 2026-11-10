@@ -1606,15 +1606,19 @@ function setupFullArtEvocationFx(unit) {
         stars.appendChild(dot);
     }
     if (className === 'rarity-omni') {
+        // stelline: partono dalla parte bassa (intorno al cerchio), salgono girando
+        // e si rimpiccioliscono fino a sparire
         for (let i = 0; i < (phone ? 12 : 18); i++) {
             const star = document.createElement('span');
             star.className = 'fullart-sparkle';
-            const duration = rand(0.7, 1.5);
-            star.style.setProperty('--x', `${rand(0, 100)}%`);
-            star.style.setProperty('--y', `${rand(0, 100)}%`);
-            star.style.setProperty('--size', `${(rand(12, 26) * (phone ? 0.8 : 1)).toFixed(1)}px`);
+            const duration = rand(1.6, 2.8);
+            star.style.setProperty('--x', `${rand(3, 97)}%`);
+            star.style.setProperty('--y', `${rand(60, 100)}%`);
+            star.style.setProperty('--size', `${(rand(14, 28) * (phone ? 0.8 : 1)).toFixed(1)}px`);
+            star.style.setProperty('--rise', `${(rand(140, 300) * (phone ? 0.7 : 1)).toFixed(0)}px`);
+            star.style.setProperty('--spin', `${((Math.random() < 0.5 ? -1 : 1) * rand(240, 480)).toFixed(0)}deg`);
             star.style.setProperty('--duration', `${duration.toFixed(2)}s`);
-            star.style.setProperty('--delay', `${(-Math.random() * duration * 2).toFixed(2)}s`);
+            star.style.setProperty('--delay', `${(-Math.random() * duration).toFixed(2)}s`);
             stars.appendChild(star);
         }
     }
@@ -1693,22 +1697,30 @@ async function toggleFullArt() {
 }
 
 /* ==========================================================================
-   FULL ART: tutte le illustrazioni della stessa grandezza, al centro del cerchio
-   evocativo: il PERSONAGGIO (non la spada, la falce o le ali che vanno lontano da
-   un lato) è centrato sul centro del cerchio, così le gambe stanno intorno al
-   centro; la parte più bassa del disegno (i piedi) sta sul centro.
-   L'altezza è quella che c'è tra il centro del cerchio e il bordo in alto
-   (meno FULLART_TOP_MARGIN); le illustrazioni molto larghe si rimpiccioliscono
-   quel tanto che serve per non uscire dallo schermo.
+   FULL ART: tutti i PERSONAGGI della stessa grandezza, con i piedi sul centro del
+   cerchio evocativo (il puntino).
+   - In orizzontale conta il personaggio, non la spada, la falce o le ali che vanno
+     lontano da un lato: le gambe stanno intorno al centro.
+   - La grandezza la decide l'altezza del personaggio (dalla cima della testa ai piedi),
+     non quella di tutto il disegno: fantasmi, catene, fiamme ed effetti sopra o sotto
+     non lo fanno più diventare piccolo.
+   - Il personaggio è alto FULLART_CHAR_SIZE dello spazio tra il puntino e il bordo in
+     alto (meno FULLART_TOP_MARGIN); su telefono e tablet in verticale, dove lo schermo
+     è stretto, FULLART_CHAR_SIZE_NARROW.
+   - Il disegno non viene mai tagliato: se uno con effetti enormi non ci sta,
+     si rimpicciolisce quel tanto che serve (FULLART_EFFECT_OVERFLOW = 1).
 
-   Per TUTTE le Full Art già presenti (normali ed Europa) il punto giusto è già
-   calcolato e controllato una per una nel file data/fullart-centers.json:
-   nome -> [sinistra, alto, destra, basso, centro del personaggio, piedi],
+   Per TUTTE le Full Art già presenti (normali ed Europa) i punti giusti sono già
+   segnati e controllati una per una nel file data/fullart-centers.json:
+   nome -> [sinistra, alto, destra, basso, centro del personaggio, piedi, cima della testa],
    tutti da 0 a 1 rispetto alla grandezza del file.
    Per le Full Art nuove, che non sono nel file, il sito lo calcola da solo.
    ========================================================================== */
 const FULLART_TOP_MARGIN = 24;     // spazio libero sopra l'illustrazione (px)
 const FULLART_MAX_UPSCALE = 2;     // un'immagine piccola si ingrandisce al massimo 2 volte
+const FULLART_CHAR_SIZE = 0.6;         // altezza del personaggio su PC: 0.6 = 60% dello spazio sopra il puntino
+const FULLART_CHAR_SIZE_NARROW = 0.5;  // la stessa cosa su telefono e tablet in verticale
+const FULLART_EFFECT_OVERFLOW = 1;     // quanto il disegno può uscire dallo schermo (1 = mai, niente tagli)
 const fullArtMeasureCache = new Map();
 const FULLART_CENTERS_URL = '../data/fullart-centers.json';
 let fullArtCenters = null;          // dati di data/fullart-centers.json (quando arrivano)
@@ -1819,14 +1831,16 @@ function measureFullArt(img) {
     if (fullArtMeasureCache.has(key)) return fullArtMeasureCache.get(key);
     const w = img.naturalWidth, h = img.naturalHeight;
     if (!w || !h) return null;
-    let m = { left: 0, right: w, top: 0, bottom: h, anchorX: w / 2 };
+    let m = { left: 0, right: w, top: 0, bottom: h, anchorX: w / 2, head: 0 };
     // Full Art già controllata: i suoi numeri sono nel file dei centri
     const saved = fullArtCenters && fullArtCenters[fullArtCenterKey(key)];
     if (Array.isArray(saved) && saved.length >= 6) {
         m = {
             left: saved[0] * w, top: saved[1] * h, right: saved[2] * w,
             bottom: saved[5] * h,                 // i piedi (sotto possono esserci effetti)
-            anchorX: saved[4] * w
+            fullBottom: saved[3] * h,             // il bordo basso vero del disegno
+            anchorX: saved[4] * w,
+            head: (saved.length >= 7 ? saved[6] : saved[1]) * h   // cima della testa
         };
     } else try {
         const k = Math.min(1, 200 / Math.max(w, h));      // basta una copia piccola
@@ -1851,7 +1865,9 @@ function measureFullArt(img) {
         if (r >= 0) {
             m = {
                 left: l / k, right: (r + 1) / k, top: t / k, bottom: (b + 1) / k,
-                anchorX: fullArtAnchorX(px, cw, ch, l, r + 1, t, b + 1) / k
+                anchorX: fullArtAnchorX(px, cw, ch, l, r + 1, t, b + 1) / k,
+                head: t / k,
+                fullBottom: (b + 1) / k
             };
         }
     } catch (err) {
@@ -1881,15 +1897,24 @@ function placeFullArt() {
         dotY = cr.top + cr.height / 2 - boxRect.top;
     }
     const side = window.innerWidth > 1024 ? 80 : 8;           // su PC ai lati ci sono le frecce
-    // stessa altezza per tutte...
-    // (sugli schermi stretti, telefono e tablet in verticale, non più alta di quanto è largo lo spazio,
-    // così quelle strette e quelle larghe vengono più simili)
-    const maxH = Math.min(dotY - FULLART_TOP_MARGIN, (boxRect.width - 2 * side) * 0.85);
-    const limits = [maxH / (m.bottom - m.top), FULLART_MAX_UPSCALE];
-    // ...ma senza uscire dai lati dello schermo (il personaggio resta sul centro del cerchio)
-    if (m.anchorX > m.left) limits.push((dotX - side) / (m.anchorX - m.left));
-    if (m.right > m.anchorX) limits.push((boxRect.width - side - dotX) / (m.right - m.anchorX));
-    const s = Math.max(0.001, Math.min(...limits));   // alcune Full Art Europa sono enormi (12000px)
+    // spazio per il personaggio (sugli schermi stretti, telefono e tablet in verticale,
+    // non più alto di quanto è largo lo spazio)
+    const narrowRoom = (boxRect.width - 2 * side) * 0.85;
+    const narrow = narrowRoom < dotY - FULLART_TOP_MARGIN;    // telefono, tablet in verticale
+    const room = Math.min(dotY - FULLART_TOP_MARGIN, narrowRoom);
+    // 1) grandezza uguale per tutti: il personaggio (testa -> piedi) è alto FULLART_CHAR_SIZE dello spazio
+    const charH = Math.max(1, m.bottom - m.head);
+    const sameSize = (narrow ? FULLART_CHAR_SIZE_NARROW : FULLART_CHAR_SIZE) * room / charH;
+    // 2) grandezza con cui tutto il disegno (anche gli effetti) sta nello schermo:
+    //    sopra, ai lati e anche sotto il puntino
+    const fit = [(dotY - FULLART_TOP_MARGIN) / Math.max(1, m.bottom - m.top)];
+    if (m.anchorX > m.left) fit.push((dotX - side) / (m.anchorX - m.left));
+    if (m.right > m.anchorX) fit.push((boxRect.width - side - dotX) / (m.right - m.anchorX));
+    if (m.fullBottom > m.bottom) fit.push((boxRect.height - dotY - 4) / (m.fullBottom - m.bottom));
+    const fitAll = Math.min(...fit);
+    // si usa la grandezza uguale per tutti; gli effetti possono uscire dallo schermo,
+    // ma non troppo (FULLART_EFFECT_OVERFLOW)
+    const s = Math.max(0.001, Math.min(sameSize, fitAll * FULLART_EFFECT_OVERFLOW, FULLART_MAX_UPSCALE));
     img.style.setProperty('--fa-left', (dotX - m.anchorX * s).toFixed(1) + 'px');
     img.style.setProperty('--fa-top', (dotY - m.bottom * s).toFixed(1) + 'px');
     img.style.setProperty('--fa-width', (img.naturalWidth * s).toFixed(1) + 'px');

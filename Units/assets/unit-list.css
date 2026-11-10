@@ -1176,7 +1176,9 @@ body.modal-open {
     }
 }
 
-/* Omni e Dream: in più stelline a quattro punte che brillano */
+/* Omni e Dream: in più stelline a quattro punte che partono dal basso, salgono
+   girando su se stesse e diventano sempre più piccole fino a sparire.
+   --rise = quanto salgono, --spin = quanto girano (li sceglie main.js) */
 .fullart-sparkle {
     position: absolute;
     left: var(--x);
@@ -1186,7 +1188,7 @@ body.modal-open {
     background: radial-gradient(circle, #ffffff 0 8%, rgba(200, 230, 255, 0.7) 16%, transparent 34%);
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
-    animation: fullArtSparkle var(--duration) ease-in-out var(--delay) infinite;
+    animation: fullArtSparkle var(--duration) linear var(--delay) infinite;
 }
 
 .fullart-sparkle::before,
@@ -1208,16 +1210,19 @@ body.modal-open {
 }
 
 @keyframes fullArtSparkle {
-
-    0%,
-    100% {
+    0% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        transform: translate(-50%, -50%) translateY(0) rotate(0deg) scale(0.6);
     }
 
-    50% {
+    10% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1) rotate(45deg);
+        transform: translate(-50%, -50%) translateY(calc(var(--rise) * -0.1)) rotate(calc(var(--spin) * 0.1)) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(calc(var(--rise) * -1)) rotate(var(--spin)) scale(0);
     }
 }
 
