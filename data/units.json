@@ -55918,7 +55918,7 @@
     },
     "animations": {
       "default": "../video/Base enemy/Orc/Orc/Orc-default.webm",
-      "idle": "../video/Base enemy/Orc/Orc/Orc-ide.webm",
+      "idle": "../video/Base enemy/Orc/Orc/Orc-idle.webm",
       "atk": "../video/Base enemy/Orc/Orc/Orc-atk.webm"
     },
     "effects": {
