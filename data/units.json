@@ -99275,9 +99275,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40215/40215_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40215/40215_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40215/40215_atk.png"
+      "default": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-default.webm",
+      "idle": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-idle.webm",
+      "atk": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99499,9 +99499,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50165/50165_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50165/50165_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50165/50165_atk.png"
+      "default": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-default.webm",
+      "idle": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99772,9 +99772,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60175/60175_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60175/60175_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60175/60175_atk.png"
+      "default": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-default.webm",
+      "idle": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -173153,9 +173153,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50166/50166_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50166/50166_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50166/50166_atk.png"
+      "default": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-default.webm",
+      "idle": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -173463,9 +173463,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60176/60176_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60176/60176_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60176/60176_atk.png"
+      "default": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-default.webm",
+      "idle": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -325769,9 +325769,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50167/50167_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50167/50167_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50167/50167_atk.png"
+      "default": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-default.webm",
+      "idle": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-idle.webm",
+      "atk": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -326079,9 +326079,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60177/60177_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60177/60177_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60177/60177_atk.png"
+      "default": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-default.webm",
+      "idle": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
