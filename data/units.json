@@ -98577,9 +98577,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10215/10215_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10215/10215_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10215/10215_atk.png"
+      "default": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-default.webm",
+      "idle": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-idle.webm",
+      "atk": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake Angel Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98801,9 +98801,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20215/20215_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20215/20215_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20215/20215_atk.png"
+      "default": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-default.webm",
+      "idle": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-idle.webm",
+      "atk": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99051,9 +99051,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30215/30215_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30215/30215_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30215/30215_atk.png"
+      "default": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-default.webm",
+      "idle": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-idle.webm",
+      "atk": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -335597,9 +335597,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20217/20217_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20217/20217_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20217/20217_atk.png"
+      "default": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-default.webm",
+      "idle": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-idle.webm",
+      "atk": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-atk.webm"
     },
     "effects": {
       "atk": "",
