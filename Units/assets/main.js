@@ -1199,6 +1199,24 @@ function setupObserver() {
    ========================================================================== */
 const FIGURE_DELAY_MS = 120;
 const canHover = window.matchMedia ? window.matchMedia('(hover: hover) and (pointer: fine)') : null;
+/* Nomi delle immagini con la maiuscola sbagliata: su GitHub "Unit_ills_thum_10323.png"
+   e "unit_ills_thum_10323.png" sono due file diversi. Se un'immagine non si trova,
+   il sito riprova (una sola volta) con la prima lettera del nome cambiata
+   (u -> U oppure U -> u). Così funzionano tutte, comunque sia scritto il nome. */
+window.addEventListener('error', (e) => {
+    const el = e.target;
+    if (!el || el.tagName !== 'IMG') return;
+    const src = el.getAttribute('src') || '';
+    if (!src || el.dataset.caseRetry === src) return;   // anche il secondo tentativo è fallito
+    const m = src.match(/^(.*\/)([a-zA-Z])([^/]*)$/);
+    if (!m) return;
+    const first = m[2] === m[2].toLowerCase() ? m[2].toUpperCase() : m[2].toLowerCase();
+    const retry = m[1] + first + m[3];
+    el.dataset.caseRetry = retry;
+    e.stopPropagation();   // gli altri controlli "immagine mancante" aspettano il secondo tentativo
+    el.src = retry;
+}, true);
+
 const failedFullArts = new Set();   // full art inesistenti: non le riproviamo
 
 // Spazio per la figura: dal bordo alto della card fino al nome
