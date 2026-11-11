@@ -83056,9 +83056,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10323/10323_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10323/10323_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10323/10323_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Aisha/Aisha/Aisha-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Aisha/Aisha/Aisha-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Aisha/Aisha/Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
