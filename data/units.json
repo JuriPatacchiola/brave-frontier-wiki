@@ -84833,9 +84833,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10273/10273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10273/10273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10273/10273_atk.png"
+      "default": "../video/Summon/4 star start/Homusubi/Homusubi/Homusubi-default.webm",
+      "idle": "../video/Summon/4 star start/Homusubi/Homusubi/Homusubi-idle.webm",
+      "atk": "../video/Summon/4 star start/Homusubi/Homusubi/Homusubi-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -85017,9 +85017,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10274/10274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10274/10274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10274/10274_atk.png"
+      "default": "../video/Summon/4 star start/Homusubi/Kagutsuchi/Kagutsuchi-default.webm",
+      "idle": "../video/Summon/4 star start/Homusubi/Kagutsuchi/Kagutsuchi-idle.webm",
+      "atk": "../video/Summon/4 star start/Homusubi/Kagutsuchi/Kagutsuchi-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -85201,9 +85201,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20273/20273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20273/20273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20273/20273_atk.png"
+      "default": "../video/Summon/4 star start/Copra/Ice Keep Copra/Ice-Keep-Copra-default.webm",
+      "idle": "../video/Summon/4 star start/Copra/Ice Keep Copra/Ice-Keep-Copra-idle.webm",
+      "atk": "../video/Summon/4 star start/Copra/Ice Keep Copra/Ice-Keep-Copra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -85408,9 +85408,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20274/20274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20274/20274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20274/20274_atk.png"
+      "default": "../video/Summon/4 star start/Copra/Ice Tower Tesla/Ice-Tower-Tesla-default.webm",
+      "idle": "../video/Summon/4 star start/Copra/Ice Tower Tesla/Ice-Tower-Tesla-idle.webm",
+      "atk": "../video/Summon/4 star start/Copra/Ice Tower Tesla/Ice-Tower-Tesla-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -85615,9 +85615,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30273/30273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30273/30273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30273/30273_atk.png"
+      "default": "../video/Summon/4 star start/Golem/Golem/Golem-default.webm",
+      "idle": "../video/Summon/4 star start/Golem/Golem/Golem-idle.webm",
+      "atk": "../video/Summon/4 star start/Golem/Golem/Golem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -85822,9 +85822,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30274/30274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30274/30274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30274/30274_atk.png"
+      "default": "../video/Summon/4 star start/Golem/Great Golem/Great-Golem-default.webm",
+      "idle": "../video/Summon/4 star start/Golem/Great Golem/Great-Golem-idle.webm",
+      "atk": "../video/Summon/4 star start/Golem/Great Golem/Great-Golem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86029,9 +86029,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40273/40273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40273/40273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40273/40273_atk.png"
+      "default": "../video/Summon/4 star start/Kushra/Sky Angel Kushra/Sky-Angel-Kushra-default.webm",
+      "idle": "../video/Summon/4 star start/Kushra/Sky Angel Kushra/Sky-Angel-Kushra-idle.webm",
+      "atk": "../video/Summon/4 star start/Kushra/Sky Angel Kushra/Sky-Angel-Kushra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86236,9 +86236,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40274/40274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40274/40274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40274/40274_atk.png"
+      "default": "../video/Summon/4 star start/Kushra/Rebel Angel Elsel/Rebel-Angel-Elsel-default.webm",
+      "idle": "../video/Summon/4 star start/Kushra/Rebel Angel Elsel/Rebel-Angel-Elsel-idle.webm",
+      "atk": "../video/Summon/4 star start/Kushra/Rebel Angel Elsel/Rebel-Angel-Elsel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86443,9 +86443,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50303/50303_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50303/50303_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50303/50303_atk.png"
+      "default": "../video/Summon/4 star start/Lebra/White Lebra/White-Lebra-default.webm",
+      "idle": "../video/Summon/4 star start/Lebra/White Lebra/White-Lebra-idle.webm",
+      "atk": "../video/Summon/4 star start/Lebra/White Lebra/White-Lebra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86627,9 +86627,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50304/50304_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50304/50304_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50304/50304_atk.png"
+      "default": "../video/Summon/4 star start/Lebra/Lubradine/Lubradine-default.webm",
+      "idle": "../video/Summon/4 star start/Lebra/Lubradine/Lubradine-idle.webm",
+      "atk": "../video/Summon/4 star start/Lebra/Lubradine/Lubradine-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86811,9 +86811,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60273/60273_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60273/60273_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60273/60273_atk.png"
+      "default": "../video/Summon/4 star start/Lira/Half Blood Lira/Half-Blood-Lira-default.webm",
+      "idle": "../video/Summon/4 star start/Lira/Half Blood Lira/Half-Blood-Lira-idle.webm",
+      "atk": "../video/Summon/4 star start/Lira/Half Blood Lira/Half-Blood-Lira-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -86995,9 +86995,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60274/60274_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60274/60274_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60274/60274_atk.png"
+      "default": "../video/Summon/4 star start/Lira/Magistra Lira/Magistra-Lira-default.webm",
+      "idle": "../video/Summon/4 star start/Lira/Magistra Lira/Magistra-Lira-idle.webm",
+      "atk": "../video/Summon/4 star start/Lira/Magistra Lira/Magistra-Lira-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -100046,9 +100046,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10275/10275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10275/10275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10275/10275_atk.png"
+      "default": "../video/Summon/4 star start/Homusubi/Bordebegia/Bordebegia-default.webm",
+      "idle": "../video/Summon/4 star start/Homusubi/Bordebegia/Bordebegia-idle.webm",
+      "atk": "../video/Summon/4 star start/Homusubi/Bordebegia/Bordebegia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -100249,9 +100249,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20275/20275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20275/20275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20275/20275_atk.png"
+      "default": "../video/Summon/4 star start/Copra/Ice Fortress Oulu/Ice-Fortress-Oulu-default.webm",
+      "idle": "../video/Summon/4 star start/Copra/Ice Fortress Oulu/Ice-Fortress-Oulu-idle.webm",
+      "atk": "../video/Summon/4 star start/Copra/Ice Fortress Oulu/Ice-Fortress-Oulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -100475,9 +100475,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30275/30275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30275/30275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30275/30275_atk.png"
+      "default": "../video/Summon/4 star start/Golem/Gravion/Gravion-default.webm",
+      "idle": "../video/Summon/4 star start/Golem/Gravion/Gravion-idle.webm",
+      "atk": "../video/Summon/4 star start/Golem/Gravion/Gravion-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -100701,9 +100701,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40275/40275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40275/40275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40275/40275_atk.png"
+      "default": "../video/Summon/4 star start/Kushra/Havoc Angel Ronel/Havoc-Angel-Ronel-default.webm",
+      "idle": "../video/Summon/4 star start/Kushra/Havoc Angel Ronel/Havoc-Angel-Ronel-idle.webm",
+      "atk": "../video/Summon/4 star start/Kushra/Havoc Angel Ronel/Havoc-Angel-Ronel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -100927,9 +100927,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50305/50305_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50305/50305_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50305/50305_atk.png"
+      "default": "../video/Summon/4 star start/Lebra/Leorone/Leorone-default.webm",
+      "idle": "../video/Summon/4 star start/Lebra/Leorone/Leorone-idle.webm",
+      "atk": "../video/Summon/4 star start/Lebra/Leorone/Leorone-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -101130,9 +101130,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60275/60275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60275/60275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60275/60275_atk.png"
+      "default": "../video/Summon/4 star start/Lira/God Eater Lira/God-Eater-Lira-default.webm",
+      "idle": "../video/Summon/4 star start/Lira/God Eater Lira/God-Eater-Lira-idle.webm",
+      "atk": "../video/Summon/4 star start/Lira/God Eater Lira/God-Eater-Lira-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -178637,9 +178637,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40276/40276_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40276/40276_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40276/40276_atk.png"
+      "default": "../video/Summon/4 star start/Kushra/Valkyrie Archangel Griel/Valkyrie-Archangel-Griel-default.webm",
+      "idle": "../video/Summon/4 star start/Kushra/Valkyrie Archangel Griel/Valkyrie-Archangel-Griel-idle.webm",
+      "atk": "../video/Summon/4 star start/Kushra/Valkyrie Archangel Griel/Valkyrie-Archangel-Griel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -191069,9 +191069,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20276/20276_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20276/20276_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20276/20276_atk.png"
+      "default": "../video/Summon/4 star start/Copra/Ice Bastion Zeldeus/Ice-Bastion-Zeldeus-default.webm",
+      "idle": "../video/Summon/4 star start/Copra/Ice Bastion Zeldeus/Ice-Bastion-Zeldeus-idle.webm",
+      "atk": "../video/Summon/4 star start/Copra/Ice Bastion Zeldeus/Ice-Bastion-Zeldeus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -228720,9 +228720,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30276/30276_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30276/30276_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30276/30276_atk.png"
+      "default": "../video/Summon/4 star start/Golem/Colossal Vars/Colossal-Vars-default.webm",
+      "idle": "../video/Summon/4 star start/Golem/Colossal Vars/Colossal-Vars-idle.webm",
+      "atk": "../video/Summon/4 star start/Golem/Colossal Vars/Colossal-Vars-atk.webm"
     },
     "effects": {
       "atk": "",
