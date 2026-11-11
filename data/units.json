@@ -114269,9 +114269,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-default.webm",
-      "idle": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-idle.webm",
-      "atk": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-atk.webm"
+      "default": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky-Mage-Rashil-default.webm",
+      "idle": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky-Mage-Rashil-idle.webm",
+      "atk": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky-Mage-Rashil-atk.webm"
     },
     "effects": {
       "atk": "",
