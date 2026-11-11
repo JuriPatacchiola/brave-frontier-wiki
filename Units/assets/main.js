@@ -2246,6 +2246,8 @@ function findShadowGround(pixels, cw, ch, top, bottom, charWidth, relaxed = fals
     if (best.tot < 12 || width < 6 || width < 0.12 * charWidth || height > 0.6 * width) return null;
     // nella seconda prova l'ombra deve essere anche bassa (non una zona scura qualsiasi del disegno)
     if (relaxed && height > 40) return null;
+    // e deve stare in fondo al disegno (non una parte scura del corpo, come ali o capelli)
+    if (relaxed && best.e < bottom - 0.12 * (bottom - top)) return null;
     let cx;
     if (mids.length) {
         // righe con tutti e due i bordi visibili: il centro è a metà (si prende il valore di mezzo)
@@ -2295,7 +2297,22 @@ function groundGlowCenter(pixels, cw, ch, top, lowest, bottom) {
         if (l >= 0) maxW = Math.max(maxW, r - l + 1);
     }
     if (!maxW) return null;
-    return Math.max(top, bottom - maxW / SHADOW_RATIO / 2) / ch;
+    // quante righe in fondo sono solo luce trasparente: se sono poche rispetto a un alone
+    // tondo, è una striscia piatta di luce sul terreno (es. Sorrow Sibyl Eliza): i piedi
+    // stanno al centro della striscia
+    let softH = 0;
+    for (let y = lowest - 1; y >= top; y--) {
+        let v = 0, sf = 0;
+        for (let x = 0; x < cw; x++) {
+            const a = pixels[(y * cw + x) * 4 + 3];
+            if (a >= CENTER_MIN_ALPHA) { v++; if (a < 235) sf++; }
+        }
+        if (!v || sf / v < 0.8) break;
+        softH++;
+    }
+    const expected = maxW / SHADOW_RATIO;
+    if (softH < 0.35 * expected) return (lowest - softH / 2) / ch;
+    return Math.max(top, bottom - expected / 2) / ch;
 }
 
 // Ombra "piena": su alcune unità l'ombra è disegnata sopra un alone di luce e nel file è diventata
