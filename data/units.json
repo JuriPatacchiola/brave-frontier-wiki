@@ -151745,9 +151745,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60613/60613_atk.png"
+      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_default.png",
+      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_idle.png",
+      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50594/50594_atk.png"
     },
     "effects": {
       "atk": "",
@@ -152068,9 +152068,9 @@
   },
   {
     "id": 757,
-    "realId": "60614",
+    "realId": "20494",
     "name": "Noah",
-    "image": "../img/Unit/Squere Img/unit_ills_thum_60614.png",
+    "image": "../img/Unit/Squere Img/unit_ills_thum_20494.png",
     "element": "Element Water",
     "rarity": "5",
     "textData": {
@@ -152198,10 +152198,10 @@
       "bb": ""
     },
     "evolution": {
-      "prevId": "60613",
-      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_60613.png",
-      "nextId": "60614",
-      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_60614.png",
+      "prevId": "20494",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20494.png",
+      "nextId": "20495",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20495.png",
       "recipe": {
         "targetId": "60614",
         "targetRarity": "5",
@@ -152359,12 +152359,13 @@
       "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20495/20495_idle.png",
       "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20495/20495_atk.png"
     },
+    
     "effects": {
       "atk": "",
       "bb": "",
       "sbb": ""
     },
-    "evolution": {},
+   
     "names": {
       "en": "Skilled Lance Noah",
       "it": "Noah lancia esperta",
@@ -152372,6 +152373,22 @@
       "fr": "",
       "zh-CN": "",
       "ja": ""
+    },
+     "evolution": {
+      "prevId": "20494",
+      "prevImage": "../img/Unit/Squere Img/unit_ills_thum_20494.png",
+      "nextId": "20495",
+      "nextImage": "../img/Unit/Squere Img/unit_ills_thum_20495.png",
+      "recipe": {
+        "targetId": "60614",
+        "targetRarity": "5",
+        "zel": 200000,
+        "karma": 0,
+        "zelImage": "../img/Money/Zell.png",
+        "karmaImage": "../img/Money/Karma.png",
+        "materials": [],
+        "note": "Costi stimati dalla tabella di riferimento fornita; verifica i valori per ogni unità."
+      }
     }
   },
   {
