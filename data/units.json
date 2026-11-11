@@ -80432,9 +80432,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40233/40233_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40233/40233_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40233/40233_atk.png"
+      "default": "../video/Four Knigt/Paris/Paladin Paris/Paladin-Paris-default.webm",
+      "idle": "../video/Four Knigt/Paris/Paladin Paris/Paladin-Paris-idle.webm",
+      "atk": "../video/Four Knigt/Paris/Paladin Paris/Paladin-Paris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -80640,9 +80640,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40234/40234_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40234/40234_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40234/40234_atk.png"
+      "default": "../video/Four Knigt/Paris/Royal Guard Paris/Royal-Guard-Paris-default.webm",
+      "idle": "../video/Four Knigt/Paris/Royal Guard Paris/Royal-Guard-Paris-idle.webm",
+      "atk": "../video/Four Knigt/Paris/Royal Guard Paris/Royal-Guard-Paris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -166380,9 +166380,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40235/40235_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40235/40235_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40235/40235_atk.png"
+      "default": "../video/Four Knigt/Paris/Storm Goddess Paris/Storm-Goddess-Paris-default.webm",
+      "idle": "../video/Four Knigt/Paris/Storm Goddess Paris/Storm-Goddess-Paris-idle.webm",
+      "atk": "../video/Four Knigt/Paris/Storm Goddess Paris/Storm-Goddess-Paris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -225750,9 +225750,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40236/40236_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40236/40236_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40236/40236_atk.png"
+      "default": "../video/Four Knigt/Paris/Radiating Grandeur Paris/Radiating-Grandeur-Paris-default.webm",
+      "idle": "../video/Four Knigt/Paris/Radiating Grandeur Paris/Radiating-Grandeur-Paris-idle.webm",
+      "atk": "../video/Four Knigt/Paris/Radiating Grandeur Paris/Radiating-Grandeur-Paris-atk.webm"
     },
     "effects": {
       "atk": "",
