@@ -64747,8 +64747,8 @@
     },
     "animations": {
       "default": "../video/God Boss/Zebra/Disciple Zebra/Disciple-Zebra-default.webm",
-      "idle": "../video/God Boss/Zebra/Disciple Zebra/Disciple-Zebra-default.webm",
-      "atk": "../video/God Boss/Zebra/Disciple Zebra/Disciple-Zebra-default.webm"
+      "idle": "../video/God Boss/Zebra/Disciple Zebra/Disciple-Zebra-idle.webm",
+      "atk": "../video/God Boss/Zebra/Disciple Zebra/Disciple-Zebra-atk.webm"
     },
     "effects": {
       "atk": "",
