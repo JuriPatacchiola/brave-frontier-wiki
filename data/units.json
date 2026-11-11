@@ -77803,8 +77803,8 @@
     },
     "animations": {
       "default": "../video/Trail/Grahdens/Grahdens/Grahdens-default.webm",
-      "idle": "../video/Trail/Grahdens/Grahdens/Grahdens-default.webm",
-      "atk": "../video/Trail/Grahdens/Grahdens/Grahdens-default.webm"
+      "idle": "../video/Trail/Grahdens/Grahdens/Grahdens-idle.webm",
+      "atk": "../video/Trail/Grahdens/Grahdens/Grahdens-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -163747,9 +163747,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60325/60325_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60325/60325_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60325/60325_atk.png"
+      "default": "../video/Trail/Grahdens/Twilight God Grahdens/Twilight-God-Grahdens-default.webm",
+      "idle": "../video/Trail/Grahdens/Twilight God Grahdens/Twilight-God-Grahdens-idle.webm",
+      "atk": "../video/Trail/Grahdens/Twilight God Grahdens/Twilight-God-Grahdens-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -243759,9 +243759,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60326/60326_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60326/60326_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60326/60326_atk.png"
+      "default": "../video/Trail/Grahdens/Effulgent Dusk Grahdens/Effulgent-Dusk-Grahdens-default.webm",
+      "idle": "../video/Trail/Grahdens/Effulgent Dusk Grahdens/Effulgent-Dusk-Grahdens-idle.webm",
+      "atk": "../video/Trail/Grahdens/Effulgent Dusk Grahdens/Effulgent-Dusk-Grahdens-atk.webm"
     },
     "effects": {
       "atk": "",
