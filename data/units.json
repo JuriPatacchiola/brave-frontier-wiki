@@ -83204,9 +83204,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10324/10324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10324/10324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10324/10324_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Aisha/Aisha (5)/Aisha-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Aisha/Aisha (5)/Aisha-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Aisha/Aisha (5)/Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -83352,9 +83352,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20313/20313_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20313/20313_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20313/20313_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Sif/Sif/Sif-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Sif/Sif/Sif-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Sif/Sif/Sif-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -83500,9 +83500,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20314/20314_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20314/20314_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20314/20314_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Sif/Sif (5)/Sif-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Sif/Sif (5)/Sif-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Sif/Sif (5)/Sif-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -83648,9 +83648,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30303/30303_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30303/30303_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30303/30303_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Claudia/Claudia/Claudia-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Claudia/Claudia/Claudia-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Claudia/Claudia/Claudia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -83796,9 +83796,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30304/30304_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30304/30304_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30304/30304_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Claudia/Claudia (5)/Claudia-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Claudia/Claudia (5)/Claudia-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Claudia/Claudia (5)/Claudia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -83944,9 +83944,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40303/40303_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40303/40303_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40303/40303_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Gray/Gray/Gray-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Gray/Gray/Gray-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Gray/Gray/Gray-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -84092,9 +84092,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40304/40304_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40304/40304_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40304/40304_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Gray/Gray (5)/Gray-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Gray/Gray (5)/Gray-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Gray/Gray (5)/Gray-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -84240,9 +84240,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50333/50333_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50333/50333_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50333/50333_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Albert/Albert/Albert-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Albert/Albert/Albert-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Albert/Albert/Albert-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -84388,9 +84388,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50334/50334_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50334/50334_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50334/50334_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Albert/Albert (5)/Albert-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Albert/Albert (5)/Albert-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Albert/Albert (5)/Albert-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -84536,9 +84536,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60303/60303_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60303/60303_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60303/60303_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Jamil/Jamil/Jamil-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Jamil/Jamil/Jamil-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Jamil/Jamil/Jamil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -84684,9 +84684,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60304/60304_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60304/60304_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60304/60304_atk.png"
+      "default": "../video/Collabs/Emperor SaGa/Jamil/Jamil (5)/Jamil-default.webm",
+      "idle": "../video/Collabs/Emperor SaGa/Jamil/Jamil (5)/Jamil-idle.webm",
+      "atk": "../video/Collabs/Emperor SaGa/Jamil/Jamil (5)/Jamil-atk.webm"
     },
     "effects": {
       "atk": "",
