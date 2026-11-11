@@ -23722,9 +23722,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Firedrake/Firedrake-atk.webm"
+      "default": "../video/Summon/3 star start/Firedrake/Firedrake/Firedrake-default.webm",
+      "idle": "../video/Summon/3 star start/Firedrake/Firedrake/Firedrake-idle.webm",
+      "atk": "../video/Summon/3 star start/Firedrake/Firedrake/Firedrake-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -23940,9 +23940,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Dragon Graven/Dragon-Graven-atk.webm"
+      "default": "../video/Summon/3 star start/Firedrake/Dragon Graven/Dragon-Graven-default.webm",
+      "idle": "../video/Summon/3 star start/Firedrake/Dragon Graven/Dragon-Graven-idle.webm",
+      "atk": "../video/Summon/3 star start/Firedrake/Dragon Graven/Dragon-Graven-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -24158,9 +24158,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Undine/Undine-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Undine/Undine-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Undine/Undine-atk.webm"
+      "default": "../video/Summon/3 star start/Undine/Undine/Undine-default.webm",
+      "idle": "../video/Summon/3 star start/Undine/Undine/Undine-idle.webm",
+      "atk": "../video/Summon/3 star start/Undine/Undine/Undine-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -24376,9 +24376,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Siren/Siren-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Siren/Siren-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Siren/Siren-atk.webm"
+      "default": "../video/Summon/3 star start/Undine/Siren/Siren-default.webm",
+      "idle": "../video/Summon/3 star start/Undine/Siren/Siren-idle.webm",
+      "atk": "../video/Summon/3 star start/Undine/Siren/Siren-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -24594,9 +24594,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/Dryad/Dryad-atk.webm"
+      "default": "../video/Summon/3 star start/Dryad/Dryad/Dryad-default.webm",
+      "idle": "../video/Summon/3 star start/Dryad/Dryad/Dryad-idle.webm",
+      "atk": "../video/Summon/3 star start/Dryad/Dryad/Dryad-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -24812,9 +24812,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/High Elf/High-Elf-atk.webm"
+      "default": "../video/Summon/3 star start/Dryad/High Elf/High-Elf-default.webm",
+      "idle": "../video/Summon/3 star start/Dryad/High Elf/High-Elf-idle.webm",
+      "atk": "../video/Summon/3 star start/Dryad/High Elf/High-Elf-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -25030,9 +25030,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Thunderbird/Thunderbird-atk.webm"
+      "default": "../video/Summon/3 star start/Thunderbird/Thunderbird/Thunderbird-default.webm",
+      "idle": "../video/Summon/3 star start/Thunderbird/Thunderbird/Thunderbird-idle.webm",
+      "atk": "../video/Summon/3 star start/Thunderbird/Thunderbird/Thunderbird-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -25248,9 +25248,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-atk.webm"
+      "default": "../video/Summon/3 star start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-default.webm",
+      "idle": "../video/Summon/3 star start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-idle.webm",
+      "atk": "../video/Summon/3 star start/Thunderbird/Great Falcon Ziz/Great-Falcon-Ziz-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -25466,9 +25466,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Valkyrie/Valkyrie-atk.webm"
+      "default": "../video/Summon/3 star start/Valkyrie/Valkyrie/Valkyrie-default.webm",
+      "idle": "../video/Summon/3 star start/Valkyrie/Valkyrie/Valkyrie-idle.webm",
+      "atk": "../video/Summon/3 star start/Valkyrie/Valkyrie/Valkyrie-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -25684,9 +25684,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-atk.webm"
+      "default": "../video/Summon/3 star start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-default.webm",
+      "idle": "../video/Summon/3 star start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-idle.webm",
+      "atk": "../video/Summon/3 star start/Valkyrie/Sky Hero Athena/Sky-Hero-Athena-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -25902,9 +25902,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Vampire/Vampire-atk.webm"
+      "default": "../video/Summon/3 star start/Vampire/Vampire/Vampire-default.webm",
+      "idle": "../video/Summon/3 star start/Vampire/Vampire/Vampire-idle.webm",
+      "atk": "../video/Summon/3 star start/Vampire/Vampire/Vampire-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -26120,9 +26120,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Lich/Lich-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Lich/Lich-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Lich/Lich-atk.webm"
+      "default": "../video/Summon/3 star start/Vampire/Lich/Lich-default.webm",
+      "idle": "../video/Summon/3 star start/Vampire/Lich/Lich-idle.webm",
+      "atk": "../video/Summon/3 star start/Vampire/Lich/Lich-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -26338,9 +26338,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Knight Agni/Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 star start/Agni/Knight Agni/Knight-Agni-default.webm",
+      "idle": "../video/Summon/3 star start/Agni/Knight Agni/Knight-Agni-idle.webm",
+      "atk": "../video/Summon/3 star start/Agni/Knight Agni/Knight-Agni-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -26554,9 +26554,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Fire Knight Agni/Fire-Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 star start/Agni/Fire Knight Agni/Fire-Knight-Agni-default.webm",
+      "idle": "../video/Summon/3 star start/Agni/Fire Knight Agni/Fire-Knight-Agni-idle.webm",
+      "atk": "../video/Summon/3 star start/Agni/Fire Knight Agni/Fire-Knight-Agni-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -26770,9 +26770,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Knight Sergio/Knight-Sergio-atk.webm"
+      "default": "../video/Summon/3 star start/Sergio/Knight Sergio/Knight-Sergio-default.webm",
+      "idle": "../video/Summon/3 star start/Sergio/Knight Sergio/Knight-Sergio-idle.webm",
+      "atk": "../video/Summon/3 star start/Sergio/Knight Sergio/Knight-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -26986,9 +26986,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-atk.webm"
+      "default": "../video/Summon/3 star start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-default.webm",
+      "idle": "../video/Summon/3 star start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-idle.webm",
+      "atk": "../video/Summon/3 star start/Sergio/Ice Ruler Sergio/Ice-Ruler-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -27202,9 +27202,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Princess Lidith/Princess-Lidith-atk.webm"
+      "default": "../video/Summon/3 star start/Lidith/Princess Lidith/Princess-Lidith-default.webm",
+      "idle": "../video/Summon/3 star start/Lidith/Princess Lidith/Princess-Lidith-idle.webm",
+      "atk": "../video/Summon/3 star start/Lidith/Princess Lidith/Princess-Lidith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -27418,9 +27418,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Queen Lidith/Queen-Lidith-atk.webm"
+      "default": "../video/Summon/3 star start/Lidith/Queen Lidith/Queen-Lidith-default.webm",
+      "idle": "../video/Summon/3 star start/Lidith/Queen Lidith/Queen-Lidith-idle.webm",
+      "atk": "../video/Summon/3 star start/Lidith/Queen Lidith/Queen-Lidith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -27634,9 +27634,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky Knight Falma/Sky-Knight-Falma-atk.webm"
+      "default": "../video/Summon/3 star start/Falma/Sky Knight Falma/Sky-Knight-Falma-default.webm",
+      "idle": "../video/Summon/3 star start/Falma/Sky Knight Falma/Sky-Knight-Falma-idle.webm",
+      "atk": "../video/Summon/3 star start/Falma/Sky Knight Falma/Sky-Knight-Falma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -27850,9 +27850,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky King Falma/Sky-King-Falma-atk.webm"
+      "default": "../video/Summon/3 star start/Falma/Sky King Falma/Sky-King-Falma-default.webm",
+      "idle": "../video/Summon/3 star start/Falma/Sky King Falma/Sky-King-Falma-idle.webm",
+      "atk": "../video/Summon/3 star start/Falma/Sky King Falma/Sky-King-Falma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -28066,9 +28066,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Cowboy Heidt/Cowboy-Heidt-atk.webm"
+      "default": "../video/Summon/3 star start/Heidt/Cowboy Heidt/Cowboy-Heidt-default.webm",
+      "idle": "../video/Summon/3 star start/Heidt/Cowboy Heidt/Cowboy-Heidt-idle.webm",
+      "atk": "../video/Summon/3 star start/Heidt/Cowboy Heidt/Cowboy-Heidt-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -28282,9 +28282,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-atk.webm"
+      "default": "../video/Summon/3 star start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-default.webm",
+      "idle": "../video/Summon/3 star start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-idle.webm",
+      "atk": "../video/Summon/3 star start/Heidt/Holy Shot Heidt/Holy-Shot-Heidt-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -28498,9 +28498,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Shida/Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Shida/Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Shida/Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Shida/Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Shida/Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Shida/Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -28763,9 +28763,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Garroter Shida/Garroter-Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Garroter Shida/Garroter-Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Garroter Shida/Garroter-Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Garroter Shida/Garroter-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -29028,9 +29028,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Phoenix/Phoenix-atk.webm"
+      "default": "../video/Summon/3 star start/Phoenix/Phoenix/Phoenix-default.webm",
+      "idle": "../video/Summon/3 star start/Phoenix/Phoenix/Phoenix-idle.webm",
+      "atk": "../video/Summon/3 star start/Phoenix/Phoenix/Phoenix-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -29272,9 +29272,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Lava Phoenix/Lava-Phoenix-atk.webm"
+      "default": "../video/Summon/3 star start/Phoenix/Lava Phoenix/Lava-Phoenix-default.webm",
+      "idle": "../video/Summon/3 star start/Phoenix/Lava Phoenix/Lava-Phoenix-idle.webm",
+      "atk": "../video/Summon/3 star start/Phoenix/Lava Phoenix/Lava-Phoenix-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -29516,9 +29516,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/God Phoenix/God-Phoenix-atk.webm"
+      "default": "../video/Summon/3 star start/Phoenix/God Phoenix/God-Phoenix-default.webm",
+      "idle": "../video/Summon/3 star start/Phoenix/God Phoenix/God-Phoenix-idle.webm",
+      "atk": "../video/Summon/3 star start/Phoenix/God Phoenix/God-Phoenix-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -29760,9 +29760,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Leviathan/Leviathan-atk.webm"
+      "default": "../video/Summon/3 star start/Leviathan/Leviathan/Leviathan-default.webm",
+      "idle": "../video/Summon/3 star start/Leviathan/Leviathan/Leviathan-idle.webm",
+      "atk": "../video/Summon/3 star start/Leviathan/Leviathan/Leviathan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -29981,9 +29981,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Loch Ness/Loch-Ness-atk.webm"
+      "default": "../video/Summon/3 star start/Leviathan/Loch Ness/Loch-Ness-default.webm",
+      "idle": "../video/Summon/3 star start/Leviathan/Loch Ness/Loch-Ness-idle.webm",
+      "atk": "../video/Summon/3 star start/Leviathan/Loch Ness/Loch-Ness-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -30202,9 +30202,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Malnaplis/Malnaplis-atk.webm"
+      "default": "../video/Summon/3 star start/Leviathan/Malnaplis/Malnaplis-default.webm",
+      "idle": "../video/Summon/3 star start/Leviathan/Malnaplis/Malnaplis-idle.webm",
+      "atk": "../video/Summon/3 star start/Leviathan/Malnaplis/Malnaplis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -30423,9 +30423,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/Great Tree Alneu/Great-Tree-Alneu-atk.webm"
+      "default": "../video/Summon/3 star start/Alneu/Great Tree Alneu/Great-Tree-Alneu-default.webm",
+      "idle": "../video/Summon/3 star start/Alneu/Great Tree Alneu/Great-Tree-Alneu-idle.webm",
+      "atk": "../video/Summon/3 star start/Alneu/Great Tree Alneu/Great-Tree-Alneu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -30667,9 +30667,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/World Tree Altro/World-Tree-Altro-atk.webm"
+      "default": "../video/Summon/3 star start/Alneu/World Tree Altro/World-Tree-Altro-default.webm",
+      "idle": "../video/Summon/3 star start/Alneu/World Tree Altro/World-Tree-Altro-idle.webm",
+      "atk": "../video/Summon/3 star start/Alneu/World Tree Altro/World-Tree-Altro-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -30911,9 +30911,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/God Tree Eltri/God-Tree-Eltri-atk.webm"
+      "default": "../video/Summon/3 star start/Alneu/God Tree Eltri/God-Tree-Eltri-default.webm",
+      "idle": "../video/Summon/3 star start/Alneu/God Tree Eltri/God-Tree-Eltri-idle.webm",
+      "atk": "../video/Summon/3 star start/Alneu/God Tree Eltri/God-Tree-Eltri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -31155,9 +31155,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Behemoth/Behemoth-atk.webm"
+      "default": "../video/Summon/3 star start/Behemoth/Behemoth/Behemoth-default.webm",
+      "idle": "../video/Summon/3 star start/Behemoth/Behemoth/Behemoth-idle.webm",
+      "atk": "../video/Summon/3 star start/Behemoth/Behemoth/Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -31402,9 +31402,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/King Behemoth/King-Behemoth-atk.webm"
+      "default": "../video/Summon/3 star start/Behemoth/King Behemoth/King-Behemoth-default.webm",
+      "idle": "../video/Summon/3 star start/Behemoth/King Behemoth/King-Behemoth-idle.webm",
+      "atk": "../video/Summon/3 star start/Behemoth/King Behemoth/King-Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -31649,9 +31649,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Alpha Behemoth/Alpha-Behemoth-atk.webm"
+      "default": "../video/Summon/3 star start/Behemoth/Alpha Behemoth/Alpha-Behemoth-default.webm",
+      "idle": "../video/Summon/3 star start/Behemoth/Alpha Behemoth/Alpha-Behemoth-idle.webm",
+      "atk": "../video/Summon/3 star start/Behemoth/Alpha Behemoth/Alpha-Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -31896,9 +31896,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Wyvern/Wyvern-atk.webm"
+      "default": "../video/Summon/3 star start/Wyvern/Wyvern/Wyvern-default.webm",
+      "idle": "../video/Summon/3 star start/Wyvern/Wyvern/Wyvern-idle.webm",
+      "atk": "../video/Summon/3 star start/Wyvern/Wyvern/Wyvern-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -32140,9 +32140,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Bahamut/Bahamut-atk.webm"
+      "default": "../video/Summon/3 star start/Wyvern/Bahamut/Bahamut-default.webm",
+      "idle": "../video/Summon/3 star start/Wyvern/Bahamut/Bahamut-idle.webm",
+      "atk": "../video/Summon/3 star start/Wyvern/Bahamut/Bahamut-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -32384,9 +32384,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Rameldria/Rameldria-atk.webm"
+      "default": "../video/Summon/3 star start/Wyvern/Rameldria/Rameldria-default.webm",
+      "idle": "../video/Summon/3 star start/Wyvern/Rameldria/Rameldria-idle.webm",
+      "atk": "../video/Summon/3 star start/Wyvern/Rameldria/Rameldria-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -32628,9 +32628,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Memetes/Memetes-atk.webm"
+      "default": "../video/Summon/3 star start/Memetes/Memetes/Memetes-default.webm",
+      "idle": "../video/Summon/3 star start/Memetes/Memetes/Memetes-idle.webm",
+      "atk": "../video/Summon/3 star start/Memetes/Memetes/Memetes-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -32849,9 +32849,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Hell King Hades/Hell-King-Hades-atk.webm"
+      "default": "../video/Summon/3 star start/Memetes/Hell King Hades/Hell-King-Hades-default.webm",
+      "idle": "../video/Summon/3 star start/Memetes/Hell King Hades/Hell-King-Hades-idle.webm",
+      "atk": "../video/Summon/3 star start/Memetes/Hell King Hades/Hell-King-Hades-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -33070,9 +33070,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Death God Lodaga/Death-God-Lodaga-atk.webm"
+      "default": "../video/Summon/3 star start/Memetes/Death God Lodaga/Death-God-Lodaga-default.webm",
+      "idle": "../video/Summon/3 star start/Memetes/Death God Lodaga/Death-God-Lodaga-idle.webm",
+      "atk": "../video/Summon/3 star start/Memetes/Death God Lodaga/Death-God-Lodaga-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -33291,9 +33291,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Lava/Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Lava/Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Lava/Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Lava/Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Lava/Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Lava/Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -33565,9 +33565,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Fire Knight Lava/Fire-Knight-Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Fire Knight Lava/Fire-Knight-Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Fire Knight Lava/Fire-Knight-Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Fire Knight Lava/Fire-Knight-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -33839,9 +33839,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Fire God Lava/Fire-God-Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Fire God Lava/Fire-God-Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Fire God Lava/Fire-God-Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Fire God Lava/Fire-God-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -34113,9 +34113,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Captain Mega/Captain-Mega-atk.webm"
+      "default": "../video/Summon/3 star start/Mega/Captain Mega/Captain-Mega-default.webm",
+      "idle": "../video/Summon/3 star start/Mega/Captain Mega/Captain-Mega-idle.webm",
+      "atk": "../video/Summon/3 star start/Mega/Captain Mega/Captain-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -34361,9 +34361,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/War Captain Mega/War-Captain-Mega-atk.webm"
+      "default": "../video/Summon/3 star start/Mega/War Captain Mega/War-Captain-Mega-default.webm",
+      "idle": "../video/Summon/3 star start/Mega/War Captain Mega/War-Captain-Mega-idle.webm",
+      "atk": "../video/Summon/3 star start/Mega/War Captain Mega/War-Captain-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -34609,9 +34609,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Commander Mega/Commander-Mega-atk.webm"
+      "default": "../video/Summon/3 star start/Mega/Commander Mega/Commander-Mega-default.webm",
+      "idle": "../video/Summon/3 star start/Mega/Commander Mega/Commander-Mega-idle.webm",
+      "atk": "../video/Summon/3 star start/Mega/Commander Mega/Commander-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -34857,9 +34857,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gunner Douglas/Gunner-Douglas-atk.webm"
+      "default": "../video/Summon/3 star start/Douglas/Gunner Douglas/Gunner-Douglas-default.webm",
+      "idle": "../video/Summon/3 star start/Douglas/Gunner Douglas/Gunner-Douglas-idle.webm",
+      "atk": "../video/Summon/3 star start/Douglas/Gunner Douglas/Gunner-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -35082,9 +35082,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gun King Douglas/Gun-King-Douglas-atk.webm"
+      "default": "../video/Summon/3 star start/Douglas/Gun King Douglas/Gun-King-Douglas-default.webm",
+      "idle": "../video/Summon/3 star start/Douglas/Gun King Douglas/Gun-King-Douglas-idle.webm",
+      "atk": "../video/Summon/3 star start/Douglas/Gun King Douglas/Gun-King-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -35307,9 +35307,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Gun God Douglas/Gun-God-Douglas-atk.webm"
+      "default": "../video/Summon/3 star start/Douglas/Gun God Douglas/Gun-God-Douglas-default.webm",
+      "idle": "../video/Summon/3 star start/Douglas/Gun God Douglas/Gun-God-Douglas-idle.webm",
+      "atk": "../video/Summon/3 star start/Douglas/Gun God Douglas/Gun-God-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -35532,9 +35532,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Emilia/Emilia-atk.webm"
+      "default": "../video/Summon/3 star start/Emilia/Emilia/Emilia-default.webm",
+      "idle": "../video/Summon/3 star start/Emilia/Emilia/Emilia-idle.webm",
+      "atk": "../video/Summon/3 star start/Emilia/Emilia/Emilia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -35757,9 +35757,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Princess Emilia/Princess-Emilia-atk.webm"
+      "default": "../video/Summon/3 star start/Emilia/Princess Emilia/Princess-Emilia-default.webm",
+      "idle": "../video/Summon/3 star start/Emilia/Princess Emilia/Princess-Emilia-idle.webm",
+      "atk": "../video/Summon/3 star start/Emilia/Princess Emilia/Princess-Emilia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -35982,9 +35982,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Goddess Emilia/Goddess-Emilia-atk.webm"
+      "default": "../video/Summon/3 star start/Emilia/Goddess Emilia/Goddess-Emilia-default.webm",
+      "idle": "../video/Summon/3 star start/Emilia/Goddess Emilia/Goddess-Emilia-idle.webm",
+      "atk": "../video/Summon/3 star start/Emilia/Goddess Emilia/Goddess-Emilia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -36207,9 +36207,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Knight Will/Knight-Will-atk.webm"
+      "default": "../video/Summon/3 star start/Will/Knight Will/Knight-Will-default.webm",
+      "idle": "../video/Summon/3 star start/Will/Knight Will/Knight-Will-idle.webm",
+      "atk": "../video/Summon/3 star start/Will/Knight Will/Knight-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -36455,9 +36455,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Holy Knight Will/Holy-Knight-Will-atk.webm"
+      "default": "../video/Summon/3 star start/Will/Holy Knight Will/Holy-Knight-Will-default.webm",
+      "idle": "../video/Summon/3 star start/Will/Holy Knight Will/Holy-Knight-Will-idle.webm",
+      "atk": "../video/Summon/3 star start/Will/Holy Knight Will/Holy-Knight-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -36703,9 +36703,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/God Knight Will/God-Knight-Will-atk.webm"
+      "default": "../video/Summon/3 star start/Will/God Knight Will/God-Knight-Will-default.webm",
+      "idle": "../video/Summon/3 star start/Will/God Knight Will/God-Knight-Will-idle.webm",
+      "atk": "../video/Summon/3 star start/Will/God Knight Will/God-Knight-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -36951,9 +36951,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Alice/Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Alice/Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Alice/Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Alice/Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Alice/Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Alice/Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -37225,9 +37225,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Scythe Alice/Scythe-Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Scythe Alice/Scythe-Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Scythe Alice/Scythe-Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Scythe Alice/Scythe-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -37499,9 +37499,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Scythe God Alice/Scythe-God-Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Scythe God Alice/Scythe-God-Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Scythe God Alice/Scythe-God-Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Scythe God Alice/Scythe-God-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -46746,9 +46746,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Lancia/Lancia-atk.webm"
+      "default": "../video/Summon/3 star start/Lancia/Lancia/Lancia-default.webm",
+      "idle": "../video/Summon/3 star start/Lancia/Lancia/Lancia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lancia/Lancia/Lancia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -46951,9 +46951,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-atk.webm"
+      "default": "../video/Summon/3 star start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-default.webm",
+      "idle": "../video/Summon/3 star start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lancia/Hot Chef Lancia/Hot-Chef-Lancia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -47156,9 +47156,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Head Chef Lancia/Head-Chef-Lancia-atk.webm"
+      "default": "../video/Summon/3 star start/Lancia/Head Chef Lancia/Head-Chef-Lancia-default.webm",
+      "idle": "../video/Summon/3 star start/Lancia/Head Chef Lancia/Head-Chef-Lancia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lancia/Head Chef Lancia/Head-Chef-Lancia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -47361,9 +47361,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Elimo/Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Elimo/Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Elimo/Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Elimo/Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -47615,9 +47615,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Royal Elimo/Royal-Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Royal Elimo/Royal-Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Royal Elimo/Royal-Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Royal Elimo/Royal-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -47869,9 +47869,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Genius Elimo/Genius-Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Genius Elimo/Genius-Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Genius Elimo/Genius-Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Genius Elimo/Genius-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -48123,9 +48123,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-default.webm",
-      "idle": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leore/Pixy Leore/Pixy-Leore-atk.webm"
+      "default": "../video/Summon/3 star start/Leore/Pixy Leore/Pixy-Leore-default.webm",
+      "idle": "../video/Summon/3 star start/Leore/Pixy Leore/Pixy-Leore-idle.webm",
+      "atk": "../video/Summon/3 star start/Leore/Pixy Leore/Pixy-Leore-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -48328,9 +48328,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-default.webm",
-      "idle": "../video/Summon/3 srar start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-atk.webm"
+      "default": "../video/Summon/3 star start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-default.webm",
+      "idle": "../video/Summon/3 star start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-idle.webm",
+      "atk": "../video/Summon/3 star start/Leore/Pixy Royal Leore/Pixy-Royal-Leore-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -48533,9 +48533,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leore/Pixy King Leore/Pixy-King-Leore-default.webm",
-      "idle": "../video/Summon/3 srar start/Leore/Pixy King Leore/Pixy-King-Leore-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leore/Pixy King Leore/Pixy-King-Leore-atk.webm"
+      "default": "../video/Summon/3 star start/Leore/Pixy King Leore/Pixy-King-Leore-default.webm",
+      "idle": "../video/Summon/3 star start/Leore/Pixy King Leore/Pixy-King-Leore-idle.webm",
+      "atk": "../video/Summon/3 star start/Leore/Pixy King Leore/Pixy-King-Leore-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -48738,9 +48738,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-default.webm",
-      "idle": "../video/Summon/3 srar start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-atk.webm"
+      "default": "../video/Summon/3 star start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-default.webm",
+      "idle": "../video/Summon/3 star start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-idle.webm",
+      "atk": "../video/Summon/3 star start/Elulu/Tinkerer Elulu/Tinkerer-Elulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -48943,9 +48943,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elulu/Inventor Elulu/Inventor-Elulu-default.webm",
-      "idle": "../video/Summon/3 srar start/Elulu/Inventor Elulu/Inventor-Elulu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elulu/Inventor Elulu/Inventor-Elulu-atk.webm"
+      "default": "../video/Summon/3 star start/Elulu/Inventor Elulu/Inventor-Elulu-default.webm",
+      "idle": "../video/Summon/3 star start/Elulu/Inventor Elulu/Inventor-Elulu-idle.webm",
+      "atk": "../video/Summon/3 star start/Elulu/Inventor Elulu/Inventor-Elulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -49148,9 +49148,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-default.webm",
-      "idle": "../video/Summon/3 srar start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-atk.webm"
+      "default": "../video/Summon/3 star start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-default.webm",
+      "idle": "../video/Summon/3 star start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-idle.webm",
+      "atk": "../video/Summon/3 star start/Elulu/Bolt Mallet Elulu/Bolt-Mallet-Elulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -49353,9 +49353,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aem/Knight Aem/Knight-Aem-default.webm",
-      "idle": "../video/Summon/3 srar start/Aem/Knight Aem/Knight-Aem-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aem/Knight Aem/Knight-Aem-atk.webm"
+      "default": "../video/Summon/3 star start/Aem/Knight Aem/Knight-Aem-default.webm",
+      "idle": "../video/Summon/3 star start/Aem/Knight Aem/Knight-Aem-idle.webm",
+      "atk": "../video/Summon/3 star start/Aem/Knight Aem/Knight-Aem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -49558,9 +49558,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aem/Champion Aem/Champion-Aem-default.webm",
-      "idle": "../video/Summon/3 srar start/Aem/Champion Aem/Champion-Aem-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aem/Champion Aem/Champion-Aem-atk.webm"
+      "default": "../video/Summon/3 star start/Aem/Champion Aem/Champion-Aem-default.webm",
+      "idle": "../video/Summon/3 star start/Aem/Champion Aem/Champion-Aem-idle.webm",
+      "atk": "../video/Summon/3 star start/Aem/Champion Aem/Champion-Aem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -49763,9 +49763,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aem/Holy Master Aem/Holy-Master-Aem-default.webm",
-      "idle": "../video/Summon/3 srar start/Aem/Holy Master Aem/Holy-Master-Aem-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aem/Holy Master Aem/Holy-Master-Aem-atk.webm"
+      "default": "../video/Summon/3 star start/Aem/Holy Master Aem/Holy-Master-Aem-default.webm",
+      "idle": "../video/Summon/3 star start/Aem/Holy Master Aem/Holy-Master-Aem-idle.webm",
+      "atk": "../video/Summon/3 star start/Aem/Holy Master Aem/Holy-Master-Aem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -49968,9 +49968,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lemia/Lemia/Lemia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lemia/Lemia/Lemia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lemia/Lemia/Lemia-atk.webm"
+      "default": "../video/Summon/3 star start/Lemia/Lemia/Lemia-default.webm",
+      "idle": "../video/Summon/3 star start/Lemia/Lemia/Lemia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lemia/Lemia/Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -50173,9 +50173,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lemia/Necromancer Lemia/Necromancer-Lemia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lemia/Necromancer Lemia/Necromancer-Lemia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lemia/Necromancer Lemia/Necromancer-Lemia-atk.webm"
+      "default": "../video/Summon/3 star start/Lemia/Necromancer Lemia/Necromancer-Lemia-default.webm",
+      "idle": "../video/Summon/3 star start/Lemia/Necromancer Lemia/Necromancer-Lemia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lemia/Necromancer Lemia/Necromancer-Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -50378,9 +50378,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-atk.webm"
+      "default": "../video/Summon/3 star start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-default.webm",
+      "idle": "../video/Summon/3 star start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lemia/Soul Keeper Lemia/Soul-Keeper-Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -50583,9 +50583,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lorand/Lorand/Lorand-default.webm",
-      "idle": "../video/Summon/3 srar start/Lorand/Lorand/Lorand-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lorand/Lorand/Lorand-atk.webm"
+      "default": "../video/Summon/3 star start/Lorand/Lorand/Lorand-default.webm",
+      "idle": "../video/Summon/3 star start/Lorand/Lorand/Lorand-idle.webm",
+      "atk": "../video/Summon/3 star start/Lorand/Lorand/Lorand-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -50788,9 +50788,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lorand/Professor Lorand/Professor-Lorand-default.webm",
-      "idle": "../video/Summon/3 srar start/Lorand/Professor Lorand/Professor-Lorand-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lorand/Professor Lorand/Professor-Lorand-atk.webm"
+      "default": "../video/Summon/3 star start/Lorand/Professor Lorand/Professor-Lorand-default.webm",
+      "idle": "../video/Summon/3 star start/Lorand/Professor Lorand/Professor-Lorand-idle.webm",
+      "atk": "../video/Summon/3 star start/Lorand/Professor Lorand/Professor-Lorand-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -50993,9 +50993,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lorand/Master Lorand/Master-Lorand-default.webm",
-      "idle": "../video/Summon/3 srar start/Lorand/Master Lorand/Master-Lorand-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lorand/Master Lorand/Master-Lorand-atk.webm"
+      "default": "../video/Summon/3 star start/Lorand/Master Lorand/Master-Lorand-default.webm",
+      "idle": "../video/Summon/3 star start/Lorand/Master Lorand/Master-Lorand-idle.webm",
+      "atk": "../video/Summon/3 star start/Lorand/Master Lorand/Master-Lorand-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -51198,9 +51198,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dean/Dean/Dean-default.webm",
-      "idle": "../video/Summon/3 srar start/Dean/Dean/Dean-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dean/Dean/Dean-atk.webm"
+      "default": "../video/Summon/3 star start/Dean/Dean/Dean-default.webm",
+      "idle": "../video/Summon/3 star start/Dean/Dean/Dean-idle.webm",
+      "atk": "../video/Summon/3 star start/Dean/Dean/Dean-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -51403,9 +51403,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dean/Ice Mage Dean/Ice-Mage-Dean-default.webm",
-      "idle": "../video/Summon/3 srar start/Dean/Ice Mage Dean/Ice-Mage-Dean-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dean/Ice Mage Dean/Ice-Mage-Dean-atk.webm"
+      "default": "../video/Summon/3 star start/Dean/Ice Mage Dean/Ice-Mage-Dean-default.webm",
+      "idle": "../video/Summon/3 star start/Dean/Ice Mage Dean/Ice-Mage-Dean-idle.webm",
+      "atk": "../video/Summon/3 star start/Dean/Ice Mage Dean/Ice-Mage-Dean-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -51608,9 +51608,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-default.webm",
-      "idle": "../video/Summon/3 srar start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-atk.webm"
+      "default": "../video/Summon/3 star start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-default.webm",
+      "idle": "../video/Summon/3 star start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-idle.webm",
+      "atk": "../video/Summon/3 star start/Dean/Ice Wizard Dean/Ice-Wizard-Dean-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -51813,9 +51813,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Edea/Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Edea/Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Edea/Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Edea/Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Edea/Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Edea/Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -52067,9 +52067,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Earth Knight Edea/Earth-Knight-Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Earth Knight Edea/Earth-Knight-Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Earth Knight Edea/Earth-Knight-Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Earth Knight Edea/Earth-Knight-Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Earth Knight Edea/Earth-Knight-Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Earth Knight Edea/Earth-Knight-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -52321,9 +52321,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Mother Earth Edea/Mother-Earth-Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Mother Earth Edea/Mother-Earth-Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Mother Earth Edea/Mother-Earth-Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Mother Earth Edea/Mother-Earth-Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Mother Earth Edea/Mother-Earth-Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Mother Earth Edea/Mother-Earth-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -52575,9 +52575,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Loch/Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Loch/Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Loch/Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Loch/Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Loch/Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Loch/Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -52829,9 +52829,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Shock Bow Loch/Shock-Bow-Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Shock Bow Loch/Shock-Bow-Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Shock Bow Loch/Shock-Bow-Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Shock Bow Loch/Shock-Bow-Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Shock Bow Loch/Shock-Bow-Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Shock Bow Loch/Shock-Bow-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -53083,9 +53083,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Zeus Bow Loch/Zeus-Bow-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -58929,9 +58929,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-atk.webm"
+      "default": "../video/Summon/3 star start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-default.webm",
+      "idle": "../video/Summon/3 star start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-idle.webm",
+      "atk": "../video/Summon/3 star start/Aisha/Drake Chief Aisha/Drake-Chief-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -59134,9 +59134,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-atk.webm"
+      "default": "../video/Summon/3 star start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-default.webm",
+      "idle": "../video/Summon/3 star start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-idle.webm",
+      "atk": "../video/Summon/3 star start/Aisha/Drake Lord Aisha/Drake-Lord-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -59339,9 +59339,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-atk.webm"
+      "default": "../video/Summon/3 star start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-default.webm",
+      "idle": "../video/Summon/3 star start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-idle.webm",
+      "atk": "../video/Summon/3 star start/Aisha/Drake Queen Aisha/Drake-Queen-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -59544,9 +59544,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-default.webm",
-      "idle": "../video/Summon/3 srar start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-atk.webm"
+      "default": "../video/Summon/3 star start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-default.webm",
+      "idle": "../video/Summon/3 star start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-idle.webm",
+      "atk": "../video/Summon/3 star start/Rickel/Twin Gem Rickel/Twin-Gem-Rickel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -59775,9 +59775,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-default.webm",
-      "idle": "../video/Summon/3 srar start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-atk.webm"
+      "default": "../video/Summon/3 star start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-default.webm",
+      "idle": "../video/Summon/3 star start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-idle.webm",
+      "atk": "../video/Summon/3 star start/Rickel/Twin Flash Rickel/Twin-Flash-Rickel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -60006,9 +60006,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-default.webm",
-      "idle": "../video/Summon/3 srar start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-atk.webm"
+      "default": "../video/Summon/3 star start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-default.webm",
+      "idle": "../video/Summon/3 star start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-idle.webm",
+      "atk": "../video/Summon/3 star start/Rickel/Twin Shot Rickel/Twin-Shot-Rickel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -60237,9 +60237,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-default.webm",
-      "idle": "../video/Summon/3 srar start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-idle.webm",
-      "atk": "../video/Summon/3 srar start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-atk.webm"
+      "default": "../video/Summon/3 star start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-default.webm",
+      "idle": "../video/Summon/3 star start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-idle.webm",
+      "atk": "../video/Summon/3 star start/Il & Mina/Twins Il & Mina/Twins-Il-&-Mina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -60442,9 +60442,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-default.webm",
-      "idle": "../video/Summon/3 srar start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-idle.webm",
-      "atk": "../video/Summon/3 srar start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-atk.webm"
+      "default": "../video/Summon/3 star start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-default.webm",
+      "idle": "../video/Summon/3 star start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-idle.webm",
+      "atk": "../video/Summon/3 star start/Il & Mina/Earthly Il & Mina/Earthly-Il-&-Mina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -60647,9 +60647,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-default.webm",
-      "idle": "../video/Summon/3 srar start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-idle.webm",
-      "atk": "../video/Summon/3 srar start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-atk.webm"
+      "default": "../video/Summon/3 star start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-default.webm",
+      "idle": "../video/Summon/3 star start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-idle.webm",
+      "atk": "../video/Summon/3 star start/Il & Mina/Gemini Il & Mina/Gemini-Il-&-Mina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -60852,9 +60852,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-default.webm",
-      "idle": "../video/Summon/3 srar start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-idle.webm",
-      "atk": "../video/Summon/3 srar start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-atk.webm"
+      "default": "../video/Summon/3 star start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-default.webm",
+      "idle": "../video/Summon/3 star start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-idle.webm",
+      "atk": "../video/Summon/3 star start/Amy/Bolt Pike Amy/Bolt-Pike-Amy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -61057,9 +61057,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-default.webm",
-      "idle": "../video/Summon/3 srar start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-idle.webm",
-      "atk": "../video/Summon/3 srar start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-atk.webm"
+      "default": "../video/Summon/3 star start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-default.webm",
+      "idle": "../video/Summon/3 star start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-idle.webm",
+      "atk": "../video/Summon/3 star start/Amy/Bolt Knight Amy/Bolt-Knight-Amy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -61262,9 +61262,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-default.webm",
-      "idle": "../video/Summon/3 srar start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-idle.webm",
-      "atk": "../video/Summon/3 srar start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-atk.webm"
+      "default": "../video/Summon/3 star start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-default.webm",
+      "idle": "../video/Summon/3 star start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-idle.webm",
+      "atk": "../video/Summon/3 star start/Amy/Bolt Goddess Amy/Bolt-Goddess-Amy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -61467,9 +61467,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Eight Blade Sefia/Eight-Blade-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -61721,9 +61721,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Blade Storm Sefia/Blade-Storm-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -61975,9 +61975,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Blade Queen Sefia/Blade-Queen-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -62229,9 +62229,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Kikuri/Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Kikuri/Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Kikuri/Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Kikuri/Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Kikuri/Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Kikuri/Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -62483,9 +62483,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Goth Kikuri/Goth-Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Goth Kikuri/Goth-Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Goth Kikuri/Goth-Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Goth Kikuri/Goth-Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Goth Kikuri/Goth-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Goth Kikuri/Goth-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -62737,9 +62737,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Goth Idol Kikuri/Goth-Idol-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -66862,9 +66862,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Magma Knight Agni/Magma-Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Magma Knight Agni/Magma-Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Magma Knight Agni/Magma-Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 star start/Agni/Magma Knight Agni/Magma-Knight-Agni-default.webm",
+      "idle": "../video/Summon/3 star start/Agni/Magma Knight Agni/Magma-Knight-Agni-idle.webm",
+      "atk": "../video/Summon/3 star start/Agni/Magma Knight Agni/Magma-Knight-Agni-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -67078,9 +67078,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-atk.webm"
+      "default": "../video/Summon/3 star start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-default.webm",
+      "idle": "../video/Summon/3 star start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-idle.webm",
+      "atk": "../video/Summon/3 star start/Sergio/Ice Knight Sergio/Ice-Knight-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -67294,9 +67294,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Empress Lidith/Empress-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Empress Lidith/Empress-Lidith-default.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Empress Lidith/Empress-Lidith-default.webm"
+      "default": "../video/Summon/3 star start/Lidith/Empress Lidith/Empress-Lidith-default.webm",
+      "idle": "../video/Summon/3 star start/Lidith/Empress Lidith/Empress-Lidith-default.webm",
+      "atk": "../video/Summon/3 star start/Lidith/Empress Lidith/Empress-Lidith-default.webm"
     },
     "effects": {
       "atk": "",
@@ -67510,9 +67510,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky Legend Falma/Sky-Legend-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky Legend Falma/Sky-Legend-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky Legend Falma/Sky-Legend-Falma-atk.webm"
+      "default": "../video/Summon/3 star start/Falma/Sky Legend Falma/Sky-Legend-Falma-default.webm",
+      "idle": "../video/Summon/3 star start/Falma/Sky Legend Falma/Sky-Legend-Falma-idle.webm",
+      "atk": "../video/Summon/3 star start/Falma/Sky Legend Falma/Sky-Legend-Falma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -67726,9 +67726,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Pistol God Heidt/Pistol-God-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Pistol God Heidt/Pistol-God-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Pistol God Heidt/Pistol-God-Heidt-atk.webm"
+      "default": "../video/Summon/3 star start/Heidt/Pistol God Heidt/Pistol-God-Heidt-default.webm",
+      "idle": "../video/Summon/3 star start/Heidt/Pistol God Heidt/Pistol-God-Heidt-idle.webm",
+      "atk": "../video/Summon/3 star start/Heidt/Pistol God Heidt/Pistol-God-Heidt-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -67942,9 +67942,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Executioner Shida/Executioner-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Executioner Shida/Executioner-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Executioner Shida/Executioner-Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Executioner Shida/Executioner-Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Executioner Shida/Executioner-Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Executioner Shida/Executioner-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -71403,9 +71403,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-default.webm",
-      "idle": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-idle.webm",
-      "atk": "../video/Summon/4 srar start/Michele/Red Axe Michele/Red-Axe-Michele-atk.webm"
+      "default": "../video/Summon/4 star start/Michele/Red Axe Michele/Red-Axe-Michele-default.webm",
+      "idle": "../video/Summon/4 star start/Michele/Red Axe Michele/Red-Axe-Michele-idle.webm",
+      "atk": "../video/Summon/4 star start/Michele/Red Axe Michele/Red-Axe-Michele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -71636,9 +71636,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-default.webm",
-      "idle": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-idle.webm",
-      "atk": "../video/Summon/4 srar start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-atk.webm"
+      "default": "../video/Summon/4 star start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-default.webm",
+      "idle": "../video/Summon/4 star start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-idle.webm",
+      "atk": "../video/Summon/4 star start/Michele/Lotus Axe Michele/Lotus-Axe-Michele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -71869,9 +71869,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-default.webm",
-      "idle": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-idle.webm",
-      "atk": "../video/Summon/4 srar start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-atk.webm"
+      "default": "../video/Summon/4 star start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-default.webm",
+      "idle": "../video/Summon/4 star start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-idle.webm",
+      "atk": "../video/Summon/4 star start/Tiara/Polar Angel Tiara/Polar-Angel-Tiara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72053,9 +72053,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-default.webm",
-      "idle": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-idle.webm",
-      "atk": "../video/Summon/4 srar start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-atk.webm"
+      "default": "../video/Summon/4 star start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-default.webm",
+      "idle": "../video/Summon/4 star start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-idle.webm",
+      "atk": "../video/Summon/4 star start/Tiara/Ice Apostle Tiara/Ice-Apostle-Tiara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72237,9 +72237,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-default.webm",
-      "idle": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-idle.webm",
-      "atk": "../video/Summon/4 srar start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-atk.webm"
+      "default": "../video/Summon/4 star start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-default.webm",
+      "idle": "../video/Summon/4 star start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelban/Scar Blade Zelban/Scar-Blade-Zelban-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72421,9 +72421,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-default.webm",
-      "idle": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-idle.webm",
-      "atk": "../video/Summon/4 srar start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-atk.webm"
+      "default": "../video/Summon/4 star start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-default.webm",
+      "idle": "../video/Summon/4 star start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelban/Blade Hero Zelban/Blade-Hero-Zelban-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72605,9 +72605,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-default.webm",
-      "idle": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-idle.webm",
-      "atk": "../video/Summon/4 srar start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-atk.webm"
+      "default": "../video/Summon/4 star start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-default.webm",
+      "idle": "../video/Summon/4 star start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-idle.webm",
+      "atk": "../video/Summon/4 star start/Lodin/Drakeborn Lodin/Drakeborn-Lodin-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72789,9 +72789,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-default.webm",
-      "idle": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-idle.webm",
-      "atk": "../video/Summon/4 srar start/Lodin/Drake God Lodin/Drake-God-Lodin-atk.webm"
+      "default": "../video/Summon/4 star start/Lodin/Drake God Lodin/Drake-God-Lodin-default.webm",
+      "idle": "../video/Summon/4 star start/Lodin/Drake God Lodin/Drake-God-Lodin-idle.webm",
+      "atk": "../video/Summon/4 star start/Lodin/Drake God Lodin/Drake-God-Lodin-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -72973,9 +72973,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-default.webm",
-      "idle": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-idle.webm",
-      "atk": "../video/Summon/4 srar start/Melchio/Legionary Melchio/Legionary-Melchio-atk.webm"
+      "default": "../video/Summon/4 star start/Melchio/Legionary Melchio/Legionary-Melchio-default.webm",
+      "idle": "../video/Summon/4 star start/Melchio/Legionary Melchio/Legionary-Melchio-idle.webm",
+      "atk": "../video/Summon/4 star start/Melchio/Legionary Melchio/Legionary-Melchio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -73180,9 +73180,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-default.webm",
-      "idle": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-idle.webm",
-      "atk": "../video/Summon/4 srar start/Melchio/Centurion Melchio/Centurion-Melchio-atk.webm"
+      "default": "../video/Summon/4 star start/Melchio/Centurion Melchio/Centurion-Melchio-default.webm",
+      "idle": "../video/Summon/4 star start/Melchio/Centurion Melchio/Centurion-Melchio-idle.webm",
+      "atk": "../video/Summon/4 star start/Melchio/Centurion Melchio/Centurion-Melchio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -73387,9 +73387,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-default.webm",
-      "idle": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-idle.webm",
-      "atk": "../video/Summon/4 srar start/Duel-GX/Duel-GX/Duel-GX-atk.webm"
+      "default": "../video/Summon/4 star start/Duel-GX/Duel-GX/Duel-GX-default.webm",
+      "idle": "../video/Summon/4 star start/Duel-GX/Duel-GX/Duel-GX-idle.webm",
+      "atk": "../video/Summon/4 star start/Duel-GX/Duel-GX/Duel-GX-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -73597,9 +73597,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
-      "idle": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
-      "atk": "../video/Summon/4 srar start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm"
+      "default": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
+      "idle": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
+      "atk": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm"
     },
     "effects": {
       "atk": "",
@@ -74959,9 +74959,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Dalimaone/Dalimaone-atk.webm"
+      "default": "../video/Summon/3 star start/Firedrake/Dalimaone/Dalimaone-default.webm",
+      "idle": "../video/Summon/3 star start/Firedrake/Dalimaone/Dalimaone-idle.webm",
+      "atk": "../video/Summon/3 star start/Firedrake/Dalimaone/Dalimaone-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -75177,9 +75177,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Meltia/Meltia-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Meltia/Meltia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Meltia/Meltia-atk.webm"
+      "default": "../video/Summon/3 star start/Undine/Meltia/Meltia-default.webm",
+      "idle": "../video/Summon/3 star start/Undine/Meltia/Meltia-idle.webm",
+      "atk": "../video/Summon/3 star start/Undine/Meltia/Meltia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -75395,9 +75395,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/Lemenara/Lemenara-atk.webm"
+      "default": "../video/Summon/3 star start/Dryad/Lemenara/Lemenara-default.webm",
+      "idle": "../video/Summon/3 star start/Dryad/Lemenara/Lemenara-idle.webm",
+      "atk": "../video/Summon/3 star start/Dryad/Lemenara/Lemenara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -75613,9 +75613,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Zazabis/Zazabis-atk.webm"
+      "default": "../video/Summon/3 star start/Thunderbird/Zazabis/Zazabis-default.webm",
+      "idle": "../video/Summon/3 star start/Thunderbird/Zazabis/Zazabis-idle.webm",
+      "atk": "../video/Summon/3 star start/Thunderbird/Zazabis/Zazabis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -75831,9 +75831,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Legendary Jona/Legendary-Jona-atk.webm"
+      "default": "../video/Summon/3 star start/Valkyrie/Legendary Jona/Legendary-Jona-default.webm",
+      "idle": "../video/Summon/3 star start/Valkyrie/Legendary Jona/Legendary-Jona-idle.webm",
+      "atk": "../video/Summon/3 star start/Valkyrie/Legendary Jona/Legendary-Jona-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -76049,9 +76049,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Legion/Legion-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Legion/Legion-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Legion/Legion-atk.webm"
+      "default": "../video/Summon/3 star start/Vampire/Legion/Legion-default.webm",
+      "idle": "../video/Summon/3 star start/Vampire/Legion/Legion-idle.webm",
+      "atk": "../video/Summon/3 star start/Vampire/Legion/Legion-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -76285,9 +76285,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Phoenix Reborn/Phoenix-Reborn-atk.webm"
+      "default": "../video/Summon/3 star start/Phoenix/Phoenix Reborn/Phoenix-Reborn-default.webm",
+      "idle": "../video/Summon/3 star start/Phoenix/Phoenix Reborn/Phoenix-Reborn-idle.webm",
+      "atk": "../video/Summon/3 star start/Phoenix/Phoenix Reborn/Phoenix-Reborn-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -76548,9 +76548,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-default.webm",
-      "idle": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leviathan/Felneus/Felneus-atk.webm"
+      "default": "../video/Summon/3 star start/Leviathan/Felneus/Felneus-default.webm",
+      "idle": "../video/Summon/3 star start/Leviathan/Felneus/Felneus-idle.webm",
+      "atk": "../video/Summon/3 star start/Leviathan/Felneus/Felneus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -76788,9 +76788,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-atk.webm"
+      "default": "../video/Summon/3 star start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-default.webm",
+      "idle": "../video/Summon/3 star start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-idle.webm",
+      "atk": "../video/Summon/3 star start/Alneu/Alpha Tree Altri/Alpha-Tree-Altri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -77051,9 +77051,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Omega Behemoth/Omega-Behemoth-atk.webm"
+      "default": "../video/Summon/3 star start/Behemoth/Omega Behemoth/Omega-Behemoth-default.webm",
+      "idle": "../video/Summon/3 star start/Behemoth/Omega Behemoth/Omega-Behemoth-idle.webm",
+      "atk": "../video/Summon/3 star start/Behemoth/Omega Behemoth/Omega-Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -77317,9 +77317,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Duelmex/Duelmex-atk.webm"
+      "default": "../video/Summon/3 star start/Wyvern/Duelmex/Duelmex-default.webm",
+      "idle": "../video/Summon/3 star start/Wyvern/Duelmex/Duelmex-idle.webm",
+      "atk": "../video/Summon/3 star start/Wyvern/Duelmex/Duelmex-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -77580,9 +77580,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-default.webm",
-      "idle": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-idle.webm",
-      "atk": "../video/Summon/3 srar start/Memetes/Hellborn Dilias/Hellborn-Dilias-atk.webm"
+      "default": "../video/Summon/3 star start/Memetes/Hellborn Dilias/Hellborn-Dilias-default.webm",
+      "idle": "../video/Summon/3 star start/Memetes/Hellborn Dilias/Hellborn-Dilias-idle.webm",
+      "atk": "../video/Summon/3 star start/Memetes/Hellborn Dilias/Hellborn-Dilias-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -77988,9 +77988,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-default.webm",
-      "idle": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-idle.webm",
-      "atk": "../video/Summon/4 srar start/Vishra/War Demon Vishra/War-Demon-Vishra-atk.webm"
+      "default": "../video/Summon/4 star start/Vishra/War Demon Vishra/War-Demon-Vishra-default.webm",
+      "idle": "../video/Summon/4 star start/Vishra/War Demon Vishra/War-Demon-Vishra-idle.webm",
+      "atk": "../video/Summon/4 star start/Vishra/War Demon Vishra/War-Demon-Vishra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -78195,9 +78195,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm",
-      "idle": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm",
-      "atk": "../video/Summon/4 srar start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm"
+      "default": "../video/Summon/4 star start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm",
+      "idle": "../video/Summon/4 star start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm",
+      "atk": "../video/Summon/4 star start/Vishra/Rakshasa Vishra/Rakshasa-Vishra-default.webm"
     },
     "effects": {
       "atk": "",
@@ -78402,9 +78402,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-default.webm",
-      "idle": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-idle.webm",
-      "atk": "../video/Summon/4 srar start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-atk.webm"
+      "default": "../video/Summon/4 star start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-default.webm",
+      "idle": "../video/Summon/4 star start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-idle.webm",
+      "atk": "../video/Summon/4 star start/Reeze/Hail Bot Reeze/Hail-Bot-Reeze-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -78609,9 +78609,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-default.webm",
-      "idle": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-idle.webm",
-      "atk": "../video/Summon/4 srar start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-atk.webm"
+      "default": "../video/Summon/4 star start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-default.webm",
+      "idle": "../video/Summon/4 star start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-idle.webm",
+      "atk": "../video/Summon/4 star start/Reeze/Hail Mech Reeze/Hail-Mech-Reeze-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -78816,9 +78816,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-default.webm",
-      "idle": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-idle.webm",
-      "atk": "../video/Summon/4 srar start/Dilma/Pugilist Dilma/Pugilist-Dilma-atk.webm"
+      "default": "../video/Summon/4 star start/Dilma/Pugilist Dilma/Pugilist-Dilma-default.webm",
+      "idle": "../video/Summon/4 star start/Dilma/Pugilist Dilma/Pugilist-Dilma-idle.webm",
+      "atk": "../video/Summon/4 star start/Dilma/Pugilist Dilma/Pugilist-Dilma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -79000,9 +79000,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-default.webm",
-      "idle": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-idle.webm",
-      "atk": "../video/Summon/4 srar start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-atk.webm"
+      "default": "../video/Summon/4 star start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-default.webm",
+      "idle": "../video/Summon/4 star start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-idle.webm",
+      "atk": "../video/Summon/4 star start/Dilma/Champ Fist Dilma/Champ-Fist-Dilma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -79184,9 +79184,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-default.webm",
-      "idle": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-idle.webm",
-      "atk": "../video/Summon/4 srar start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-atk.webm"
+      "default": "../video/Summon/4 star start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-default.webm",
+      "idle": "../video/Summon/4 star start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-idle.webm",
+      "atk": "../video/Summon/4 star start/Rashil/Shock Mage Rashil/Shock-Mage-Rashil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -79368,9 +79368,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-default.webm",
-      "idle": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-idle.webm",
-      "atk": "../video/Summon/4 srar start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-atk.webm"
+      "default": "../video/Summon/4 star start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-default.webm",
+      "idle": "../video/Summon/4 star start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-idle.webm",
+      "atk": "../video/Summon/4 star start/Rashil/Bolt Magus Rashil/Bolt-Magus-Rashil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -89945,9 +89945,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Sacred Flame Lava/Sacred-Flame-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -90238,9 +90238,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Sea King Mega/Sea-King-Mega-atk.webm"
+      "default": "../video/Summon/3 star start/Mega/Sea King Mega/Sea-King-Mega-default.webm",
+      "idle": "../video/Summon/3 star start/Mega/Sea King Mega/Sea-King-Mega-idle.webm",
+      "atk": "../video/Summon/3 star start/Mega/Sea King Mega/Sea-King-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -90505,9 +90505,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-default.webm",
-      "idle": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-atk.webm"
+      "default": "../video/Summon/3 star start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-default.webm",
+      "idle": "../video/Summon/3 star start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-idle.webm",
+      "atk": "../video/Summon/3 star start/Douglas/Holy Arms Douglas/Holy-Arms-Douglas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -90749,9 +90749,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-default.webm",
-      "idle": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-atk.webm"
+      "default": "../video/Summon/3 star start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-default.webm",
+      "idle": "../video/Summon/3 star start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-idle.webm",
+      "atk": "../video/Summon/3 star start/Emilia/Holy Shock Emilia/Holy-Shock-Emilia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -90993,9 +90993,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Holy Guard Will/Holy-Guard-Will-atk.webm"
+      "default": "../video/Summon/3 star start/Will/Holy Guard Will/Holy-Guard-Will-default.webm",
+      "idle": "../video/Summon/3 star start/Will/Holy Guard Will/Holy-Guard-Will-idle.webm",
+      "atk": "../video/Summon/3 star start/Will/Holy Guard Will/Holy-Guard-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -91260,9 +91260,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Hell Keep Alice/Hell-Keep-Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Hell Keep Alice/Hell-Keep-Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Hell Keep Alice/Hell-Keep-Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Hell Keep Alice/Hell-Keep-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96049,9 +96049,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-atk.webm"
+      "default": "../video/Summon/3 star start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-default.webm",
+      "idle": "../video/Summon/3 star start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lancia/Ace Chef Lancia/Ace-Chef-Lancia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96273,9 +96273,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Wise Mage Elimo/Wise-Mage-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96546,9 +96546,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-default.webm",
-      "idle": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-idle.webm",
-      "atk": "../video/Summon/3 srar start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-atk.webm"
+      "default": "../video/Summon/3 star start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-default.webm",
+      "idle": "../video/Summon/3 star start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-idle.webm",
+      "atk": "../video/Summon/3 star start/Leore/Pixy Lord Leore/Pixy-Lord-Leore-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96770,9 +96770,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-default.webm",
-      "idle": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-atk.webm"
+      "default": "../video/Summon/3 star start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-default.webm",
+      "idle": "../video/Summon/3 star start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-idle.webm",
+      "atk": "../video/Summon/3 star start/Elulu/Tesla Club Elulu/Tesla-Club-Elulu-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -96994,9 +96994,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-default.webm",
-      "idle": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-atk.webm"
+      "default": "../video/Summon/3 star start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-default.webm",
+      "idle": "../video/Summon/3 star start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-idle.webm",
+      "atk": "../video/Summon/3 star start/Aem/Ultra Blade Aem/Ultra-Blade-Aem-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97218,9 +97218,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-default.webm",
-      "idle": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-atk.webm"
+      "default": "../video/Summon/3 star start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-default.webm",
+      "idle": "../video/Summon/3 star start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-idle.webm",
+      "atk": "../video/Summon/3 star start/Lemia/Soul Vortex Lemia/Soul-Vortex-Lemia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97442,9 +97442,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-default.webm",
-      "idle": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-atk.webm"
+      "default": "../video/Summon/3 star start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-default.webm",
+      "idle": "../video/Summon/3 star start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-idle.webm",
+      "atk": "../video/Summon/3 star start/Lorand/Taskmaster Lorand/Taskmaster-Lorand-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97666,9 +97666,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-default.webm",
-      "idle": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dean/Ice Master Dean/Ice-Master-Dean-atk.webm"
+      "default": "../video/Summon/3 star start/Dean/Ice Master Dean/Ice-Master-Dean-default.webm",
+      "idle": "../video/Summon/3 star start/Dean/Ice Master Dean/Ice-Master-Dean-idle.webm",
+      "atk": "../video/Summon/3 star start/Dean/Ice Master Dean/Ice-Master-Dean-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -97890,9 +97890,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Gaia Armor Edea/Gaia-Armor-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98163,9 +98163,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Heaven's Bow Loch/Heaven's-Bow-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98577,9 +98577,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-default.webm",
-      "idle": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-idle.webm",
-      "atk": "../video/Summon/3 srar start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-atk.webm"
+      "default": "../video/Summon/3 star start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-default.webm",
+      "idle": "../video/Summon/3 star start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-idle.webm",
+      "atk": "../video/Summon/3 star start/Aisha/Drake Angel Aisha/Drake-Angel-Aisha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98801,9 +98801,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-default.webm",
-      "idle": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-atk.webm"
+      "default": "../video/Summon/3 star start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-default.webm",
+      "idle": "../video/Summon/3 star start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-idle.webm",
+      "atk": "../video/Summon/3 star start/Rickel/Twin Arms Rickel/Twin-Arms-Rickel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99051,9 +99051,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-default.webm",
-      "idle": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-idle.webm",
-      "atk": "../video/Summon/3 srar start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-atk.webm"
+      "default": "../video/Summon/3 star start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-default.webm",
+      "idle": "../video/Summon/3 star start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-idle.webm",
+      "atk": "../video/Summon/3 star start/Il & Mina/Gaians Il & Mina/Gaians-Il-&-Mina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99275,9 +99275,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-default.webm",
-      "idle": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-idle.webm",
-      "atk": "../video/Summon/3 srar start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-atk.webm"
+      "default": "../video/Summon/3 star start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-default.webm",
+      "idle": "../video/Summon/3 star start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-idle.webm",
+      "atk": "../video/Summon/3 star start/Amy/Heaven's Bolt Amy/Heaven's-Bolt-Amy-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99499,9 +99499,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Holy Blades Sefia/Holy-Blades-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -99772,9 +99772,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Death Idol Kikuri/Death-Idol-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -107774,9 +107774,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10255/10255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10255/10255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10255/10255_atk.png"
+      "default": "../video/Summon/4 star start/Michele/Goddess Axe Michele/Goddess-Axe-Michele-default.webm",
+      "idle": "../video/Summon/4 star start/Michele/Goddess Axe Michele/Goddess-Axe-Michele-idle.webm",
+      "atk": "../video/Summon/4 star start/Michele/Goddess Axe Michele/Goddess-Axe-Michele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108026,9 +108026,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20255/20255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20255/20255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20255/20255_atk.png"
+      "default": "../video/Summon/4 star start/Tiara/Final Apostle Tiara/Final-Apostle-Tiara-default.webm",
+      "idle": "../video/Summon/4 star start/Tiara/Final Apostle Tiara/Final-Apostle-Tiara-idle.webm",
+      "atk": "../video/Summon/4 star start/Tiara/Final Apostle Tiara/Final-Apostle-Tiara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108229,9 +108229,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30255/30255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30255/30255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30255/30255_atk.png"
+      "default": "../video/Summon/4 star start/Zelban/Blade Emperor Zelban/Blade-Emperor-Zelban-default.webm",
+      "idle": "../video/Summon/4 star start/Zelban/Blade Emperor Zelban/Blade-Emperor-Zelban-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelban/Blade Emperor Zelban/Blade-Emperor-Zelban-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108432,9 +108432,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40255/40255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40255/40255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40255/40255_atk.png"
+      "default": "../video/Summon/4 star start/Lodin/Empyreal Drake Lodin/Empyreal-Drake-Lodin-default.webm",
+      "idle": "../video/Summon/4 star start/Lodin/Empyreal Drake Lodin/Empyreal-Drake-Lodin-idle.webm",
+      "atk": "../video/Summon/4 star start/Lodin/Empyreal Drake Lodin/Empyreal-Drake-Lodin-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108635,9 +108635,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50275/50275_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50275/50275_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50275/50275_atk.png"
+      "default": "../video/Summon/4 star start/Melchio/Legatus Melchio/Legatus-Melchio-default.webm",
+      "idle": "../video/Summon/4 star start/Melchio/Legatus Melchio/Legatus-Melchio-idle.webm",
+      "atk": "../video/Summon/4 star start/Melchio/Legatus Melchio/Legatus-Melchio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -108861,9 +108861,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60255/60255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60255/60255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60255/60255_atk.png"
+      "default": "../video/Summon/4 star start/Duel-GX/Duel-SGX/Duel-SGX-default.webm",
+      "idle": "../video/Summon/4 star start/Duel-GX/Duel-SGX/Duel-SGX-idle.webm",
+      "atk": "../video/Summon/4 star start/Duel-GX/Duel-SGX/Duel-SGX-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -138605,9 +138605,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-default.webm",
-      "idle": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-idle.webm",
-      "atk": "../video/Summon/3 srar start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-atk.webm"
+      "default": "../video/Summon/3 star start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-default.webm",
+      "idle": "../video/Summon/3 star start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-idle.webm",
+      "atk": "../video/Summon/3 star start/Agni/Blazing Knight Agni/Blazing-Knight-Agni-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -138840,9 +138840,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-default.webm",
-      "idle": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-atk.webm"
+      "default": "../video/Summon/3 star start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-default.webm",
+      "idle": "../video/Summon/3 star start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-idle.webm",
+      "atk": "../video/Summon/3 star start/Sergio/Ice Angel Sergio/Ice-Angel-Sergio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139075,9 +139075,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-default.webm",
-      "idle": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lidith/Goddess Lidith/Goddess-Lidith-atk.webm"
+      "default": "../video/Summon/3 star start/Lidith/Goddess Lidith/Goddess-Lidith-default.webm",
+      "idle": "../video/Summon/3 star start/Lidith/Goddess Lidith/Goddess-Lidith-idle.webm",
+      "atk": "../video/Summon/3 star start/Lidith/Goddess Lidith/Goddess-Lidith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139310,9 +139310,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-default.webm",
-      "idle": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-idle.webm",
-      "atk": "../video/Summon/3 srar start/Falma/Sky God Falma/Sky-God-Falma-atk.webm"
+      "default": "../video/Summon/3 star start/Falma/Sky God Falma/Sky-God-Falma-default.webm",
+      "idle": "../video/Summon/3 star start/Falma/Sky God Falma/Sky-God-Falma-idle.webm",
+      "atk": "../video/Summon/3 star start/Falma/Sky God Falma/Sky-God-Falma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139545,9 +139545,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-default.webm",
-      "idle": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-idle.webm",
-      "atk": "../video/Summon/3 srar start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-atk.webm"
+      "default": "../video/Summon/3 star start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-default.webm",
+      "idle": "../video/Summon/3 star start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-idle.webm",
+      "atk": "../video/Summon/3 star start/Heidt/Sacred Gunner Heidt/Sacred-Gunner-Heidt-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -139780,9 +139780,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Death God Shida/Death-God-Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Death God Shida/Death-God-Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Death God Shida/Death-God-Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Death God Shida/Death-God-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -146229,9 +146229,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-default.webm",
-      "idle": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-idle.webm",
-      "atk": "../video/Summon/3 srar start/Firedrake/Dragon God Granados/Dragon-God-Granados-atk.webm"
+      "default": "../video/Summon/3 star start/Firedrake/Dragon God Granados/Dragon-God-Granados-default.webm",
+      "idle": "../video/Summon/3 star start/Firedrake/Dragon God Granados/Dragon-God-Granados-idle.webm",
+      "atk": "../video/Summon/3 star start/Firedrake/Dragon God Granados/Dragon-God-Granados-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -146466,9 +146466,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-default.webm",
-      "idle": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-atk.webm"
+      "default": "../video/Summon/3 star start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-default.webm",
+      "idle": "../video/Summon/3 star start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-idle.webm",
+      "atk": "../video/Summon/3 star start/Undine/Aqua Goddess Abel/Aqua-Goddess-Abel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -146703,9 +146703,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-default.webm",
-      "idle": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-idle.webm",
-      "atk": "../video/Summon/3 srar start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-atk.webm"
+      "default": "../video/Summon/3 star start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-default.webm",
+      "idle": "../video/Summon/3 star start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-idle.webm",
+      "atk": "../video/Summon/3 star start/Dryad/Elf Queen Arbonella/Elf-Queen-Arbonella-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -146940,9 +146940,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-default.webm",
-      "idle": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-idle.webm",
-      "atk": "../video/Summon/3 srar start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-atk.webm"
+      "default": "../video/Summon/3 star start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-default.webm",
+      "idle": "../video/Summon/3 star start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-idle.webm",
+      "atk": "../video/Summon/3 star start/Thunderbird/Bolt Phoenix Ardas/Bolt-Phoenix-Ardas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -147177,9 +147177,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-default.webm",
-      "idle": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-idle.webm",
-      "atk": "../video/Summon/3 srar start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-atk.webm"
+      "default": "../video/Summon/3 star start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-default.webm",
+      "idle": "../video/Summon/3 star start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-idle.webm",
+      "atk": "../video/Summon/3 star start/Valkyrie/Sky Goddess Raquel/Sky-Goddess-Raquel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -147414,9 +147414,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-default.webm",
-      "idle": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-atk.webm"
+      "default": "../video/Summon/3 star start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-default.webm",
+      "idle": "../video/Summon/3 star start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-idle.webm",
+      "atk": "../video/Summon/3 star start/Vampire/Dark Lord Zaboeth/Dark-Lord-Zaboeth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -173153,9 +173153,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Angelic Blades Sefia/Angelic-Blades-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -173463,9 +173463,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Demonic Idol Kikuri/Demonic-Idol-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -177996,9 +177996,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Phoenix Wings Lava/Phoenix-Wings-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -178326,9 +178326,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Leviathan Sage Elimo/Leviathan-Sage-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -185888,9 +185888,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Flora Aegis Edea/Flora-Aegis-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -186198,9 +186198,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Celestial Archer Loch/Celestial-Archer-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -186508,9 +186508,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Inferno Princess Alice/Inferno-Princess-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -191331,9 +191331,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-default.webm",
-      "idle": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-atk.webm"
+      "default": "../video/Summon/3 star start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-default.webm",
+      "idle": "../video/Summon/3 star start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-idle.webm",
+      "atk": "../video/Summon/3 star start/Alneu/Gaia Tree Vertri/Gaia-Tree-Vertri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -191631,9 +191631,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-default.webm",
-      "idle": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-idle.webm",
-      "atk": "../video/Summon/3 srar start/Will/Angelic Paladin Will/Angelic-Paladin-Will-atk.webm"
+      "default": "../video/Summon/3 star start/Will/Angelic Paladin Will/Angelic-Paladin-Will-default.webm",
+      "idle": "../video/Summon/3 star start/Will/Angelic Paladin Will/Angelic-Paladin-Will-idle.webm",
+      "atk": "../video/Summon/3 star start/Will/Angelic Paladin Will/Angelic-Paladin-Will-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -196948,9 +196948,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10256/10256_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10256/10256_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10256/10256_atk.png"
+      "default": "../video/Summon/4 star start/Michele/Wildfire Lotus Michele/Wildfire-Lotus-Michele-default.webm",
+      "idle": "../video/Summon/4 star start/Michele/Wildfire Lotus Michele/Wildfire-Lotus-Michele-idle.webm",
+      "atk": "../video/Summon/4 star start/Michele/Wildfire Lotus Michele/Wildfire-Lotus-Michele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -197500,9 +197500,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50276/50276_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50276/50276_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50276/50276_atk.png"
+      "default": "../video/Summon/4 star start/Melchio/Invictus Xeno Melchio/Invictus-Xeno-Melchio-default.webm",
+      "idle": "../video/Summon/4 star start/Melchio/Invictus Xeno Melchio/Invictus-Xeno-Melchio-idle.webm",
+      "atk": "../video/Summon/4 star start/Melchio/Invictus Xeno Melchio/Invictus-Xeno-Melchio-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -238600,9 +238600,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-default.webm",
-      "idle": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-idle.webm",
-      "atk": "../video/Summon/3 srar start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-atk.webm"
+      "default": "../video/Summon/3 star start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-default.webm",
+      "idle": "../video/Summon/3 star start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-idle.webm",
+      "atk": "../video/Summon/3 star start/Phoenix/Immortal Phoenix Levarza/Immortal-Phoenix-Levarza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -238900,9 +238900,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-default.webm",
-      "idle": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-idle.webm",
-      "atk": "../video/Summon/3 srar start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-atk.webm"
+      "default": "../video/Summon/3 star start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-default.webm",
+      "idle": "../video/Summon/3 star start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-idle.webm",
+      "atk": "../video/Summon/3 star start/Mega/Ocean Conqueror Mega/Ocean-Conqueror-Mega-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -244816,9 +244816,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Omega Demise Shida/Omega-Demise-Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Omega Demise Shida/Omega-Demise-Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Omega Demise Shida/Omega-Demise-Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Omega Demise Shida/Omega-Demise-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -252893,9 +252893,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-default.webm",
-      "idle": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-idle.webm",
-      "atk": "../video/Summon/3 srar start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-atk.webm"
+      "default": "../video/Summon/3 star start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-default.webm",
+      "idle": "../video/Summon/3 star start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-idle.webm",
+      "atk": "../video/Summon/3 star start/Wyvern/Supreme Dragon Elderex/Supreme-Dragon-Elderex-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -272738,9 +272738,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-default.webm",
-      "idle": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-idle.webm",
-      "atk": "../video/Summon/3 srar start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-atk.webm"
+      "default": "../video/Summon/3 star start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-default.webm",
+      "idle": "../video/Summon/3 star start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-idle.webm",
+      "atk": "../video/Summon/3 star start/Alice/Lovely Princess Alice/Lovely-Princess-Alice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -286194,9 +286194,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-default.webm",
-      "idle": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-idle.webm",
-      "atk": "../video/Summon/3 srar start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-atk.webm"
+      "default": "../video/Summon/3 star start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-default.webm",
+      "idle": "../video/Summon/3 star start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-idle.webm",
+      "atk": "../video/Summon/3 star start/Lava/Ignis Vestae Lava/Ignis-Vestae-Lava-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -286524,9 +286524,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-default.webm",
-      "idle": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-idle.webm",
-      "atk": "../video/Summon/3 srar start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-atk.webm"
+      "default": "../video/Summon/3 star start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-default.webm",
+      "idle": "../video/Summon/3 star start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-idle.webm",
+      "atk": "../video/Summon/3 star start/Elimo/Salacia Persei Elimo/Salacia-Persei-Elimo-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -312865,9 +312865,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-default.webm",
-      "idle": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-idle.webm",
-      "atk": "../video/Summon/3 srar start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-atk.webm"
+      "default": "../video/Summon/3 star start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-default.webm",
+      "idle": "../video/Summon/3 star start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-idle.webm",
+      "atk": "../video/Summon/3 star start/Shida/Deadly Illusion Shida/Deadly-Illusion-Shida-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -318207,9 +318207,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10257/10257_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10257/10257_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10257/10257_atk.png"
+      "default": "../video/Summon/4 star start/Michele/Vesta Padma Michele/Vesta-Padma-Michele-default.webm",
+      "idle": "../video/Summon/4 star start/Michele/Vesta Padma Michele/Vesta-Padma-Michele-idle.webm",
+      "atk": "../video/Summon/4 star start/Michele/Vesta Padma Michele/Vesta-Padma-Michele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -318496,9 +318496,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60257/60257_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60257/60257_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60257/60257_atk.png"
+      "default": "../video/Summon/4 star start/Duel-GX/DUEL-FGXVM/DUEL-FGXVM-default.webm",
+      "idle": "../video/Summon/4 star start/Duel-GX/DUEL-FGXVM/DUEL-FGXVM-idle.webm",
+      "atk": "../video/Summon/4 star start/Duel-GX/DUEL-FGXVM/DUEL-FGXVM-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -325769,9 +325769,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-default.webm",
-      "idle": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-idle.webm",
-      "atk": "../video/Summon/3 srar start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-atk.webm"
+      "default": "../video/Summon/3 star start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-default.webm",
+      "idle": "../video/Summon/3 star start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-idle.webm",
+      "atk": "../video/Summon/3 star start/Sefia/Hallowed Dance Sefia/Hallowed-Dance-Sefia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -326079,9 +326079,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-default.webm",
-      "idle": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-idle.webm",
-      "atk": "../video/Summon/3 srar start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-atk.webm"
+      "default": "../video/Summon/3 star start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-default.webm",
+      "idle": "../video/Summon/3 star start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-idle.webm",
+      "atk": "../video/Summon/3 star start/Kikuri/Nefarious Dance Kikuri/Nefarious-Dance-Kikuri-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -328157,9 +328157,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-default.webm",
-      "idle": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-idle.webm",
-      "atk": "../video/Summon/3 srar start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-atk.webm"
+      "default": "../video/Summon/3 star start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-default.webm",
+      "idle": "../video/Summon/3 star start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-idle.webm",
+      "atk": "../video/Summon/3 star start/Behemoth/Ultimate Behemoth/Ultimate-Behemoth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -331747,9 +331747,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-default.webm",
-      "idle": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-idle.webm",
-      "atk": "../video/Summon/3 srar start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-atk.webm"
+      "default": "../video/Summon/3 star start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-default.webm",
+      "idle": "../video/Summon/3 star start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-idle.webm",
+      "atk": "../video/Summon/3 star start/Edea/Graceful Ruler Edea/Graceful-Ruler-Edea-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -332057,9 +332057,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-default.webm",
-      "idle": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-idle.webm",
-      "atk": "../video/Summon/3 srar start/Loch/Divine Storm Loch/Divine-Storm-Loch-atk.webm"
+      "default": "../video/Summon/3 star start/Loch/Divine Storm Loch/Divine-Storm-Loch-default.webm",
+      "idle": "../video/Summon/3 star start/Loch/Divine Storm Loch/Divine-Storm-Loch-idle.webm",
+      "atk": "../video/Summon/3 star start/Loch/Divine Storm Loch/Divine-Storm-Loch-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -335597,9 +335597,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-default.webm",
-      "idle": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-idle.webm",
-      "atk": "../video/Summon/3 srar start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-atk.webm"
+      "default": "../video/Summon/3 star start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-default.webm",
+      "idle": "../video/Summon/3 star start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-idle.webm",
+      "atk": "../video/Summon/3 star start/Rickel/Divine Revolvers Millie/Divine-Revolvers-Millie-atk.webm"
     },
     "effects": {
       "atk": "",
