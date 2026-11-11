@@ -79552,9 +79552,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50313/50313_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50313/50313_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50313/50313_atk.png"
+      "default": "../video/Summon/4 star start/Lilith/Cyborg Lilith/Cyborg-Lilith-default.webm",
+      "idle": "../video/Summon/4 star start/Lilith/Cyborg Lilith/Cyborg-Lilith-idle.webm",
+      "atk": "../video/Summon/4 star start/Lilith/Cyborg Lilith/Cyborg-Lilith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -79785,9 +79785,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50314/50314_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50314/50314_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50314/50314_atk.png"
+      "default": "../video/Summon/4 star start/Lilith/Cyborg Lilith II/Cyborg-Lilith-II-default.webm",
+      "idle": "../video/Summon/4 star start/Lilith/Cyborg Lilith II/Cyborg-Lilith-II-idle.webm",
+      "atk": "../video/Summon/4 star start/Lilith/Cyborg Lilith II/Cyborg-Lilith-II-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -80018,9 +80018,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60283/60283_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60283/60283_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60283/60283_atk.png"
+      "default": "../video/Summon/4 star start/Logan/Dark Swords Logan/Dark-Swords-Logan-default.webm",
+      "idle": "../video/Summon/4 star start/Logan/Dark Swords Logan/Dark-Swords-Logan-idle.webm",
+      "atk": "../video/Summon/4 star start/Logan/Dark Swords Logan/Dark-Swords-Logan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -80225,9 +80225,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60284/60284_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60284/60284_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60284/60284_atk.png"
+      "default": "../video/Summon/4 star start/Logan/Evil Blades Logan/Evil-Blades-Logan-default.webm",
+      "idle": "../video/Summon/4 star start/Logan/Evil Blades Logan/Evil-Blades-Logan-idle.webm",
+      "atk": "../video/Summon/4 star start/Logan/Evil Blades Logan/Evil-Blades-Logan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113614,9 +113614,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10285/10285_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10285/10285_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10285/10285_atk.png"
+      "default": "../video/Summon/4 star start/Vishra/Rakshasa Lord Vishra/Rakshasa-Lord-Vishra-default.webm",
+      "idle": "../video/Summon/4 star start/Vishra/Rakshasa Lord Vishra/Rakshasa-Lord-Vishra-idle.webm",
+      "atk": "../video/Summon/4 star start/Vishra/Rakshasa Lord Vishra/Rakshasa-Lord-Vishra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113840,9 +113840,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20285/20285_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20285/20285_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20285/20285_atk.png"
+      "default": "../video/Summon/4 star start/Reeze/Hail Gigantron Reeze/Hail-Gigantron-Reeze-default.webm",
+      "idle": "../video/Summon/4 star start/Reeze/Hail Gigantron Reeze/Hail-Gigantron-Reeze-idle.webm",
+      "atk": "../video/Summon/4 star start/Reeze/Hail Gigantron Reeze/Hail-Gigantron-Reeze-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -114066,9 +114066,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30285/30285_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30285/30285_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30285/30285_atk.png"
+      "default": "../video/Summon/4 star start/Dilma/Noble Fist Dilma/Noble-Fist-Dilma-default.webm",
+      "idle": "../video/Summon/4 star start/Dilma/Noble Fist Dilma/Noble-Fist-Dilma-idle.webm",
+      "atk": "../video/Summon/4 star start/Dilma/Noble Fist Dilma/Noble-Fist-Dilma-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -114269,9 +114269,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40285/40285_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40285/40285_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40285/40285_atk.png"
+      "default": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-default.webm",
+      "idle": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-idle.webm",
+      "atk": "../video/Summon/4 star start/Rashil/Sky Mage Rashil/Sky Mage Rashil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -114472,9 +114472,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50315/50315_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50315/50315_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50315/50315_atk.png"
+      "default": "../video/Summon/4 star start/Lilith/Terminator Lilith/Terminator-Lilith-default.webm",
+      "idle": "../video/Summon/4 star start/Lilith/Terminator Lilith/Terminator-Lilith-idle.webm",
+      "atk": "../video/Summon/4 star start/Lilith/Terminator Lilith/Terminator-Lilith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -114724,9 +114724,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60285/60285_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60285/60285_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60285/60285_atk.png"
+      "default": "../video/Summon/4 star start/Logan/Inferno Swords Logan/Inferno-Swords-Logan-default.webm",
+      "idle": "../video/Summon/4 star start/Logan/Inferno Swords Logan/Inferno-Swords-Logan-idle.webm",
+      "atk": "../video/Summon/4 star start/Logan/Inferno Swords Logan/Inferno-Swords-Logan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -212625,9 +212625,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20286/20286_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20286/20286_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20286/20286_atk.png"
+      "default": "../video/Summon/4 star start/Reeze/Hailstorm Armor Reeze/Hailstorm-Armor-Reeze-default.webm",
+      "idle": "../video/Summon/4 star start/Reeze/Hailstorm Armor Reeze/Hailstorm-Armor-Reeze-idle.webm",
+      "atk": "../video/Summon/4 star start/Reeze/Hailstorm Armor Reeze/Hailstorm-Armor-Reeze-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -220594,9 +220594,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10286/10286_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10286/10286_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10286/10286_atk.png"
+      "default": "../video/Summon/4 star start/Vishra/Unleashed Ravana Vishra/Unleashed-Ravana-Vishra-default.webm",
+      "idle": "../video/Summon/4 star start/Vishra/Unleashed Ravana Vishra/Unleashed-Ravana-Vishra-idle.webm",
+      "atk": "../video/Summon/4 star start/Vishra/Unleashed Ravana Vishra/Unleashed-Ravana-Vishra-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -221383,9 +221383,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60286/60286_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60286/60286_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60286/60286_atk.png"
+      "default": "../video/Summon/4 star start/Logan/Vicious Twin-Edge Logan/Vicious-Twin-Edge-Logan-default.webm",
+      "idle": "../video/Summon/4 star start/Logan/Vicious Twin-Edge Logan/Vicious-Twin-Edge-Logan-idle.webm",
+      "atk": "../video/Summon/4 star start/Logan/Vicious Twin-Edge Logan/Vicious-Twin-Edge-Logan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -233732,9 +233732,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50316/50316_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50316/50316_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50316/50316_atk.png"
+      "default": "../video/Summon/4 star start/Lilith/Executioner Lilith XTF/Executioner-Lilith-XTF-default.webm",
+      "idle": "../video/Summon/4 star start/Lilith/Executioner Lilith XTF/Executioner-Lilith-XTF-idle.webm",
+      "atk": "../video/Summon/4 star start/Lilith/Executioner Lilith XTF/Executioner-Lilith-XTF-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -312576,9 +312576,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50317/50317_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50317/50317_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50317/50317_atk.png"
+      "default": "../video/Summon/4 star start/Lilith/Mechanic Goddess Lilith/Mechanic-Goddess-Lilith-default.webm",
+      "idle": "../video/Summon/4 star start/Lilith/Mechanic Goddess Lilith/Mechanic-Goddess-Lilith-idle.webm",
+      "atk": "../video/Summon/4 star start/Lilith/Mechanic Goddess Lilith/Mechanic-Goddess-Lilith-atk.webm"
     },
     "effects": {
       "atk": "",
