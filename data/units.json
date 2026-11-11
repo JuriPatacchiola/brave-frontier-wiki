@@ -145335,9 +145335,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20235/20235_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20235/20235_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20235/20235_atk.png"
+      "default": "../video/Four Knigt/Karl/Blizzard God Karl/Blizzard-God-Karl-default.webm",
+      "idle": "../video/Four Knigt/Karl/Blizzard God Karl/Blizzard-God-Karl-idle.webm",
+      "atk": "../video/Four Knigt/Karl/Blizzard God Karl/Blizzard-God-Karl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -173737,9 +173737,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30235/30235_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30235/30235_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30235/30235_atk.png"
+      "default": "../video/Four Knigt/Lugina/Quake God Lugina/Quake-God-Lugina-default.webm",
+      "idle": "../video/Four Knigt/Lugina/Quake God Lugina/Quake-God-Lugina-idle.webm",
+      "atk": "../video/Four Knigt/Lugina/Quake God Lugina/Quake-God-Lugina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -225486,9 +225486,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30236/30236_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30236/30236_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30236/30236_atk.png"
+      "default": "../video/Four Knigt/Lugina/Seismic Fury Lugina/Seismic-Fury-Lugina-default.webm",
+      "idle": "../video/Four Knigt/Lugina/Seismic Fury Lugina/Seismic-Fury-Lugina-idle.webm",
+      "atk": "../video/Four Knigt/Lugina/Seismic Fury Lugina/Seismic-Fury-Lugina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -238336,9 +238336,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20236/20236_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20236/20236_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20236/20236_atk.png"
+      "default": "../video/Four Knigt/Karl/Boreal Courage Karl/Boreal-Courage-Karl-default.webm",
+      "idle": "../video/Four Knigt/Karl/Boreal Courage Karl/Boreal-Courage-Karl-idle.webm",
+      "atk": "../video/Four Knigt/Karl/Boreal Courage Karl/Boreal-Courage-Karl-atk.webm"
     },
     "effects": {
       "atk": "",
