@@ -80848,9 +80848,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10243/10243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10243/10243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10243/10243_atk.png"
+      "default": "../video/Events/Sister Sibyl/Freya/Freya/Freya-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Freya/Freya/Freya-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Freya/Freya/Freya-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81032,9 +81032,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10244/10244_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10244/10244_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10244/10244_atk.png"
+      "default": "../video/Events/Sister Sibyl/Freya/Blaze Sibyl Freya/Blaze-Sibyl-Freya-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Freya/Blaze Sibyl Freya/Blaze-Sibyl-Freya-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Freya/Blaze Sibyl Freya/Blaze-Sibyl-Freya-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81216,9 +81216,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20243/20243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20243/20243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20243/20243_atk.png"
+      "default": "../video/Events/Sister Sibyl/Eliza/Eliza/Eliza-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Eliza/Eliza/Eliza-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Eliza/Eliza/Eliza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81400,9 +81400,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20244/20244_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20244/20244_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20244/20244_atk.png"
+      "default": "../video/Events/Sister Sibyl/Eliza/Snow Sibyl Eliza/Snow-Sibyl-Eliza-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Eliza/Snow Sibyl Eliza/Snow-Sibyl-Eliza-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Eliza/Snow Sibyl Eliza/Snow-Sibyl-Eliza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81584,9 +81584,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30243/30243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30243/30243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30243/30243_atk.png"
+      "default": "../video/Events/Sister Sibyl/Paula/Paula/Paula-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Paula/Paula/Paula-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Paula/Paula/Paula-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81768,9 +81768,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30244/30244_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30244/30244_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30244/30244_atk.png"
+      "default": "../video/Events/Sister Sibyl/Paula/Rose Sibyl Paula/Rose-Sibyl-Paula-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Paula/Rose Sibyl Paula/Rose-Sibyl-Paula-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Paula/Rose Sibyl Paula/Rose-Sibyl-Paula-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -81952,9 +81952,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40243/40243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40243/40243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40243/40243_atk.png"
+      "default": "../video/Events/Sister Sibyl/Zele/Zele/Zele-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Zele/Zele/Zele-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Zele/Zele/Zele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -82136,9 +82136,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40244/40244_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40244/40244_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40244/40244_atk.png"
+      "default": "../video/Events/Sister Sibyl/Zele/Bolt Sibyl Zele/Bolt-Sibyl-Zele-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Zele/Bolt Sibyl Zele/Bolt-Sibyl-Zele-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Zele/Bolt Sibyl Zele/Bolt-Sibyl-Zele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -82320,9 +82320,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50263/50263_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50263/50263_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50263/50263_atk.png"
+      "default": "../video/Events/Sister Sibyl/Sola/Sola/Sola-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Sola/Sola/Sola-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Sola/Sola/Sola-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -82504,9 +82504,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50264/50264_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50264/50264_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50264/50264_atk.png"
+      "default": "../video/Events/Sister Sibyl/Sola/Ray Sibyl Sola/Ray-Sibyl-Sola-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Sola/Ray Sibyl Sola/Ray-Sibyl-Sola-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Sola/Ray Sibyl Sola/Ray-Sibyl-Sola-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -82688,9 +82688,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60243/60243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60243/60243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60243/60243_atk.png"
+      "default": "../video/Events/Sister Sibyl/Madia/Madia/Madia-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Madia/Madia/Madia-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Madia/Madia/Madia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -82872,9 +82872,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60244/60244_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60244/60244_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60244/60244_atk.png"
+      "default": "../video/Events/Sister Sibyl/Madia/Night Sibyl Madia/Night-Sibyl-Madia-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Madia/Night Sibyl Madia/Night-Sibyl-Madia-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Madia/Night Sibyl Madia/Night-Sibyl-Madia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -170681,9 +170681,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10245/10245_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10245/10245_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10245/10245_atk.png"
+      "default": "../video/Events/Sister Sibyl/Freya/Passion Sibyl Freya/Passion-Sibyl-Freya-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Freya/Passion Sibyl Freya/Passion-Sibyl-Freya-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Freya/Passion Sibyl Freya/Passion-Sibyl-Freya-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -170884,9 +170884,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20245/20245_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20245/20245_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20245/20245_atk.png"
+      "default": "../video/Events/Sister Sibyl/Eliza/Sorrow Sibyl Eliza/Sorrow-Sibyl-Eliza-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Eliza/Sorrow Sibyl Eliza/Sorrow-Sibyl-Eliza-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Eliza/Sorrow Sibyl Eliza/Sorrow-Sibyl-Eliza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -171087,9 +171087,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30245/30245_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30245/30245_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30245/30245_atk.png"
+      "default": "../video/Events/Sister Sibyl/Paula/Beauty Sibyl Paula/Beauty-Sibyl-Paula-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Paula/Beauty Sibyl Paula/Beauty-Sibyl-Paula-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Paula/Beauty Sibyl Paula/Beauty-Sibyl-Paula-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -171290,9 +171290,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40245/40245_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40245/40245_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40245/40245_atk.png"
+      "default": "../video/Events/Sister Sibyl/Zele/Echo Sibyl Zele/Echo-Sibyl-Zele-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Zele/Echo Sibyl Zele/Echo-Sibyl-Zele-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Zele/Echo Sibyl Zele/Echo-Sibyl-Zele-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -171493,9 +171493,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50265/50265_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50265/50265_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50265/50265_atk.png"
+      "default": "../video/Events/Sister Sibyl/Sola/Radiance Sibyl Sola/Radiance-Sibyl-Sola-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Sola/Radiance Sibyl Sola/Radiance-Sibyl-Sola-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Sola/Radiance Sibyl Sola/Radiance-Sibyl-Sola-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -171696,9 +171696,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60245/60245_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60245/60245_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60245/60245_atk.png"
+      "default": "../video/Events/Sister Sibyl/Madia/Eclipse Sibyl Madia/Eclipse-Sibyl-Madia-default.webm",
+      "idle": "../video/Events/Sister Sibyl/Madia/Eclipse Sibyl Madia/Eclipse-Sibyl-Madia-idle.webm",
+      "atk": "../video/Events/Sister Sibyl/Madia/Eclipse Sibyl Madia/Eclipse-Sibyl-Madia-atk.webm"
     },
     "effects": {
       "atk": "",
