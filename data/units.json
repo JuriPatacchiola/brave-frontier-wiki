@@ -73598,8 +73598,8 @@
     },
     "animations": {
       "default": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
-      "idle": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm",
-      "atk": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-default.webm"
+      "idle": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-idle.webm",
+      "atk": "../video/Summon/4 star start/Duel-GX/Duel-GX II/Duel-GX-II-atk.webm"
     },
     "effects": {
       "atk": "",
