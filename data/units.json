@@ -87179,9 +87179,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50253/50253_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50253/50253_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50253/50253_atk.png"
+      "default": "../video/Hunter/Tilith/Tilith/Tilith-default.webm",
+      "idle": "../video/Hunter/Tilith/Tilith/Tilith-idle.webm",
+      "atk": "../video/Hunter/Tilith/Tilith/Tilith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -87387,9 +87387,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50254/50254_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50254/50254_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50254/50254_atk.png"
+      "default": "../video/Hunter/Tilith/Goddess Tilith/Goddess-Tilith-default.webm",
+      "idle": "../video/Hunter/Tilith/Goddess Tilith/Goddess-Tilith-idle.webm",
+      "atk": "../video/Hunter/Tilith/Goddess Tilith/Goddess-Tilith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -252385,9 +252385,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50255/50255_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50255/50255_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50255/50255_atk.png"
+      "default": "../video/Hunter/Tilith/Sacred Goddess Tilith/Sacred-Goddess-Tilith-default.webm",
+      "idle": "../video/Hunter/Tilith/Sacred Goddess Tilith/Sacred-Goddess-Tilith-idle.webm",
+      "atk": "../video/Hunter/Tilith/Sacred Goddess Tilith/Sacred-Goddess-Tilith-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -260777,9 +260777,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50256/50256_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50256/50256_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50256/50256_atk.png"
+      "default": "../video/Hunter/Tilith/Rainbow Goddess Tilith/Rainbow-Goddess-Tilith-default.webm",
+      "idle": "../video/Hunter/Tilith/Rainbow Goddess Tilith/Rainbow-Goddess-Tilith-idle.webm",
+      "atk": "../video/Hunter/Tilith/Rainbow Goddess Tilith/Rainbow-Goddess-Tilith-atk.webm"
     },
     "effects": {
       "atk": "",
