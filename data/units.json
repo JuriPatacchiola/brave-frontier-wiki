@@ -87595,9 +87595,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10344/10344_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10344/10344_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10344/10344_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Fire/Fire Crystal/Fire-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Fire/Fire Crystal/Fire-Crystal-idle.webmg",
+      "atk": "../video/Seal material and fusion material/Fusion/Fire/Fire Crystal/Fire-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -87736,9 +87736,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20334/20334_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20334/20334_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20334/20334_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Water/Water Crystal/Water-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Water/Water Crystal/Water-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Water/Water Crystal/Water-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -87877,9 +87877,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30324/30324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30324/30324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30324/30324_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Earth/Earth Crystal/Earth-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Earth/Earth Crystal/Earth-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Earth/Earth Crystal/Earth-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -88018,9 +88018,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40324/40324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40324/40324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40324/40324_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -88159,9 +88159,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50364/50364_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50364/50364_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50364/50364_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Light/Light Crystal/Light-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Light/Light Crystal/Light-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Light/Light Crystal/Light-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -88300,9 +88300,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60334/60334_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60334/60334_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60334/60334_atk.png"
+      "default": "../video/Seal material and fusion material/Fusion/Dark/Dark Crystal/Dark-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Dark/Dark Crystal/Dark-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Dark/Dark Crystal/Dark-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
