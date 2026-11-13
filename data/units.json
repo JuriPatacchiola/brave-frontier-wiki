@@ -88018,9 +88018,9 @@
       }
     },
     "animations": {
-      "default": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-default.webm",
-      "idle": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-idle.webm",
-      "atk": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Earth-Crystal-atk.webm"
+      "default": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Thunder-Crystal-default.webm",
+      "idle": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Thunder-Crystal-idle.webm",
+      "atk": "../video/Seal material and fusion material/Fusion/Thunder/Thunder Crystal/Thunder-Crystal-atk.webm"
     },
     "effects": {
       "atk": "",
