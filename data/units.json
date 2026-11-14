@@ -105490,9 +105490,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50404/50404_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50404/50404_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50404/50404_atk.png"
+      "default": "../video/Summon/4 star start/Alyut/Holy Warrior Alyut/Holy-Warrior-Alyut-default.webm",
+      "idle": "../video/Summon/4 star start/Alyut/Holy Warrior Alyut/Holy-Warrior-Alyut-idle.webm",
+      "atk": "../video/Summon/4 star start/Alyut/Holy Warrior Alyut/Holy-Warrior-Alyut-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -105715,9 +105715,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50405/50405_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50405/50405_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50405/50405_atk.png"
+      "default": "../video/Summon/4 star start/Alyut/Divine Light Alyut/Divine-Light-Alyut-default.webm",
+      "idle": "../video/Summon/4 star start/Alyut/Divine Light Alyut/Divine-Light-Alyut-idle.webm",
+      "atk": "../video/Summon/4 star start/Alyut/Divine Light Alyut/Divine-Light-Alyut-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -105923,9 +105923,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60353/60353_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60353/60353_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60353/60353_atk.png"
+      "default": "../video/Summon/4 star start/Zephyr/Dark Blade Zephyr/Dark-Blade-Zephyr-default.webm",
+      "idle": "../video/Summon/4 star start/Zephyr/Dark Blade Zephyr/Dark-Blade-Zephyr-idle.webm",
+      "atk": "../video/Summon/4 star start/Zephyr/Dark Blade Zephyr/Dark-Blade-Zephyr-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -106156,9 +106156,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60354/60354_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60354/60354_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60354/60354_atk.png"
+      "default": "../video/Summon/4 star start/Zephyr/Dark Warrior Zephyr/Dark-Warrior-Zephyr-default.webm",
+      "idle": "../video/Summon/4 star start/Zephyr/Dark Warrior Zephyr/Dark-Warrior-Zephyr-idle.webm",
+      "atk": "../video/Summon/4 star start/Zephyr/Dark Warrior Zephyr/Dark-Warrior-Zephyr-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -106407,9 +106407,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60355/60355_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60355/60355_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60355/60355_atk.png"
+      "default": "../video/Summon/4 star start/Zephyr/Dark Warlord Zephyr/Dark-Warlord-Zephyr-default.webm",
+      "idle": "../video/Summon/4 star start/Zephyr/Dark Warlord Zephyr/Dark-Warlord-Zephyr-idle.webm",
+      "atk": "../video/Summon/4 star start/Zephyr/Dark Warlord Zephyr/Dark-Warlord-Zephyr-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -204507,9 +204507,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50406/50406_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50406/50406_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50406/50406_atk.png"
+      "default": "../video/Summon/4 star start/Alyut/Glorious Crusader Alyut/Glorious-Crusader-Alyut-default.webm",
+      "idle": "../video/Summon/4 star start/Alyut/Glorious Crusader Alyut/Glorious-Crusader-Alyut-idle.webm",
+      "atk": "../video/Summon/4 star start/Alyut/Glorious Crusader Alyut/Glorious-Crusader-Alyut-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -239485,9 +239485,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60356/60356_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60356/60356_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60356/60356_atk.png"
+      "default": "../video/Summon/4 star start/Zephyr/Phantom Victor Zephyr/Phantom-Victor-Zephyr-default.webm",
+      "idle": "../video/Summon/4 star start/Zephyr/Phantom Victor Zephyr/Phantom-Victor-Zephyr-idle.webm",
+      "atk": "../video/Summon/4 star start/Zephyr/Phantom Victor Zephyr/Phantom-Victor-Zephyr-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -334442,9 +334442,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60357/60357_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60357/60357_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60357/60357_atk.png"
+      "default": "../video/Summon/4 star start/Zephyr/Sacred Teachings Zephyr/Sacred-Teachings-Zephyr-default.webm",
+      "idle": "../video/Summon/4 star start/Zephyr/Sacred Teachings Zephyr/Sacred-Teachings-Zephyr-idle.webm",
+      "atk": "../video/Summon/4 star start/Zephyr/Sacred Teachings Zephyr/Sacred-Teachings-Zephyr-atk.webm"
     },
     "effects": {
       "atk": "",
