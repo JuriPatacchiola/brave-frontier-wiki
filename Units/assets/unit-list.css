@@ -2802,3 +2802,363 @@ video {
         height: 16px;
     }
 }
+
+/* ==========================================================================
+   DATI DI BATTAGLIA (combo, BC, DC) nella modale dell'unità
+   ========================================================================== */
+.battle-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.battle-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.battle-table th,
+.battle-table td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #222;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.battle-table thead th {
+    color: #d4af37;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+}
+
+.battle-table tbody th {
+    text-align: left;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.battle-table td {
+    color: #eee;
+    font-variant-numeric: tabular-nums;
+}
+
+.battle-table td.battle-max {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.battle-table tbody tr:last-child th,
+.battle-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.battle-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.battle-chip {
+    background: #111;
+    border: 1px solid #333;
+    border-left: 3px solid #d4af37;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+.battle-chip b {
+    color: #eee;
+    margin-left: 4px;
+}
+
+.battle-legend {
+    margin: 12px 0 0;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .battle-table {
+        font-size: 0.8rem;
+    }
+
+    .battle-table th,
+    .battle-table td {
+        padding: 6px 5px;
+    }
+
+    .battle-table thead th {
+        font-size: 0.68rem;
+        letter-spacing: 0;
+    }
+}
+
+/* ==========================================================================
+   IMP, ABILITÀ SP e OMNI+ nella modale dell'unità
+   ========================================================================== */
+.sp-group h4 {
+    color: #d4af37;
+    margin: 18px 0 10px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Imp: sotto le statistiche, accanto all'unità */
+.imp-block {
+    margin-top: 14px;
+}
+
+.imp-block h4 {
+    color: #d4af37;
+    margin: 0 0 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.imp-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.imp-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    min-width: 0;
+    padding: 6px 2px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #eee;
+    font: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.imp-item:hover,
+.imp-item:focus-visible {
+    border-color: #d4af37;
+    transform: translateY(-2px);
+}
+
+.imp-item img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.imp-count {
+    font-weight: bold;
+    color: #ffd700;
+    font-size: 0.95rem;
+}
+
+.imp-stat {
+    font-size: 0.68rem;
+    color: #bbb;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.sp-total {
+    margin: 0 0 4px;
+    color: #bbb;
+}
+
+.sp-total b {
+    color: #ffd700;
+}
+
+.sp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.sp-item:last-child {
+    border-bottom: none;
+}
+
+.sp-cost {
+    flex: 0 0 auto;
+    min-width: 52px;
+    padding: 2px 6px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    color: #ffd700;
+    font-size: 0.78rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sp-desc {
+    flex: 1 1 auto;
+    color: #eee;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.sp-req {
+    display: block;
+    margin-top: 3px;
+    color: #888;
+    font-size: 0.78rem;
+}
+
+.op-intro {
+    color: #bbb;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0 0 14px;
+}
+
+.op-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.op-card {
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-top: 3px solid #d4af37;
+    border-radius: 6px;
+    padding: 12px;
+    min-width: 0;
+}
+
+.op-head {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.op-gains {
+    margin: 0 0 10px;
+    color: #eee;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.op-label {
+    display: block;
+    color: #d4af37;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.op-gains .op-label {
+    display: inline;
+}
+
+.op-way + .op-way {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #222;
+}
+
+.op-mats {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.op-mat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #111;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    padding: 4px 8px 4px 4px;
+    color: #eee;
+    font: inherit;
+    font-size: 0.82rem;
+    text-align: left;
+    min-width: 0;
+}
+
+button.op-mat {
+    cursor: pointer;
+}
+
+button.op-mat:hover {
+    border-color: #d4af37;
+}
+
+.op-icon {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.op-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* se l'icona del frammento manca, resta un quadratino del colore dell'elemento */
+.op-fire .op-icon { background: #5a1a10; }
+.op-water .op-icon { background: #10305a; }
+.op-earth .op-icon { background: #1d4a17; }
+.op-thunder .op-icon { background: #5a4a10; }
+.op-light .op-icon { background: #5a5640; }
+.op-dark .op-icon { background: #34184a; }
+
+.op-mat-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.op-mat b {
+    color: #ffd700;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .op-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sp-desc {
+        font-size: 0.85rem;
+    }
+}

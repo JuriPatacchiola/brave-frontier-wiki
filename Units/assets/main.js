@@ -1130,9 +1130,10 @@ function renderEvolutionRecipes(unit) {
 async function startApp() {
     try {
         const res = await fetch('../data/units.json?t=' + new Date().getTime());
-        const rawData = await res.json();
+        const [rawData, battle] = await Promise.all([res.json(), loadBattleData()]);
 
         allUnits = rawData.map(u => {
+            addBattleData(u, battle);
             if (u.name) u.name = u.name.replace(/,/g, '');
             return u;
         });
@@ -1411,6 +1412,10 @@ function openModal(u, options = {}) {
     document.getElementById('unitLore').innerText = localizedTexts.lore || t('unit.loreMissing');
 
     renderSkills(u);
+    renderBattleData(u);
+    renderImps(u);
+    renderSpSkills(u);
+    renderOmniPlus(u);
     renderHowToObtain(u);
 
     renderEvolutionRecipes(u);
@@ -1497,6 +1502,451 @@ function renderSkills(u) {
             descEl.classList.toggle('notranslate', !!hasOwnTranslation || !desc);
         }
     });
+}
+
+/* ==========================================================================
+   DATI DI BATTAGLIA: combo, Cristalli di Battaglia (BC) e statistiche
+   Stanno in data/unit-battle.json (presi dai dati del gioco), una riga per unità:
+     "10011": { "stats": { "base": {"hp":1030,...}, "lord": {...}, ... },
+                "atk": { "hits": 3, "dc": 2 },              attacco normale
+                "bb":  { "cost": 15, "hits": 5, "dc": 1 },   (anche "sbb" e "ubb")
+                "cost": 2, "imp": { "hp": 400, "atk": 160, "def": 80, "rec": 80 } }
+   hits = combo (colpi), dc = Drop Check (BC che può far cadere ogni colpo),
+   cost = BC che servono per lanciare la BB. BC massimi = combo x DC.
+   Le statistiche scritte a mano in units.json vincono sempre: quelle del file
+   servono solo per le unità che in units.json le hanno vuote.
+   ========================================================================== */
+const BATTLE_DATA_URL = '../data/unit-battle.json';
+const STAT_TYPES = ['base', 'lord', 'anima', 'breaker', 'guardian', 'oracle'];
+
+const BATTLE_TEXTS = {
+    title: { it: 'Dati di battaglia', en: 'Battle data', es: 'Datos de combate', fr: 'Données de combat', 'zh-CN': '战斗数据', ja: 'バトルデータ' },
+    normal: { it: 'Attacco normale', en: 'Normal attack', es: 'Ataque normal', fr: 'Attaque normale', 'zh-CN': '普通攻击', ja: '通常攻撃' },
+    cost: { it: 'Costo CB', en: 'BC cost', es: 'Coste BC', fr: 'Coût BC', 'zh-CN': 'BC消耗', ja: '消費BC' },
+    hits: { it: 'Combo', en: 'Hits', es: 'Combos', fr: 'Combos', 'zh-CN': '连击数', ja: 'ヒット数' },
+    dc: { it: 'DC', en: 'DC', es: 'DC', fr: 'DC', 'zh-CN': 'DC', ja: 'DC' },
+    maxBc: { it: 'CB max', en: 'Max BC', es: 'BC máx.', fr: 'BC max', 'zh-CN': '最多BC', ja: '最大BC' },
+    unitCost: { it: 'Costo unità', en: 'Unit cost', es: 'Coste de unidad', fr: "Coût d'unité", 'zh-CN': '单位消耗', ja: 'ユニットコスト' },
+    imps: { it: 'Imp massimi', en: 'Max Imps', es: 'Imps máximos', fr: 'Imps max', 'zh-CN': '最大Imp', ja: 'インプ上限' },
+    legend: {
+        it: 'CB = Cristalli di Battaglia (riempiono la barra della BB). Combo = colpi dell’attacco. DC = CB che può far cadere ogni colpo. CB max = Combo × DC.',
+        en: 'BC = Battle Crystals (they fill the BB gauge). Hits = number of hits. DC = drop checks, BC each hit can drop. Max BC = Hits × DC.',
+        es: 'BC = Cristales de Batalla (llenan la barra de BB). Combos = golpes del ataque. DC = BC que puede soltar cada golpe. BC máx. = Combos × DC.',
+        fr: 'BC = Cristaux de Combat (ils remplissent la jauge de BB). Combos = coups de l’attaque. DC = BC que chaque coup peut faire tomber. BC max = Combos × DC.',
+        'zh-CN': 'BC = 战斗水晶（填充BB槽）。连击数 = 攻击次数。DC = 每次攻击可掉落的BC数。最多BC = 连击数 × DC。',
+        ja: 'BC = バトルクリスタル（BBゲージを溜める）。ヒット数 = 攻撃回数。DC = 1ヒットで落とせるBCの数。最大BC = ヒット数 × DC。'
+    }
+};
+
+// si scarica insieme a units.json; se manca il sito funziona lo stesso (senza questi dati)
+async function loadBattleData() {
+    try {
+        const res = await fetch(BATTLE_DATA_URL);
+        if (!res.ok) return {};
+        return await res.json();
+    } catch (err) {
+        console.warn('Dati di battaglia non caricati:', err);
+        return {};
+    }
+}
+
+function statIsEmpty(v) {
+    return v === undefined || v === null || String(v).trim() === '' || String(v).trim() === '---';
+}
+
+// 1030 -> "1,030" (stesso formato di units.json)
+function formatStat(n) {
+    return (typeof n === 'number') ? n.toLocaleString('en-US') : String(n);
+}
+
+function addBattleData(u, battle) {
+    const data = battle && battle[String(u.realId)];
+    if (!data) return;
+    u.battle = data;
+    // skill vuote in units.json: si usano quelle dei dati del gioco (in inglese)
+    if (data.fill) {
+        u.skills = u.skills || {};
+        Object.keys(data.fill).forEach(type => {
+            const f = data.fill[type];
+            const cur = u.skills[type];
+            if (cur && hasSkillContent(cur)) return;
+            u.skills[type] = { name: { en: f.name || '' }, desc: { en: f.desc || '' } };
+        });
+    }
+    if (!data.stats) return;
+    u.stats = u.stats || {};
+    STAT_TYPES.forEach(type => {
+        const from = data.stats[type];
+        if (!from) return;
+        const to = u.stats[type] = u.stats[type] || {};
+        ['hp', 'atk', 'def', 'rec'].forEach(k => {
+            if (statIsEmpty(to[k]) && from[k] !== undefined && from[k] !== null) to[k] = formatStat(from[k]);
+        });
+    });
+}
+
+function battleText(key) {
+    return getLocalizedText(BATTLE_TEXTS[key]);
+}
+
+// crea la sezione la prima volta (subito dopo le skill)
+function ensureBattleArea() {
+    let area = document.getElementById('battleArea');
+    if (area) return area;
+    const skills = document.querySelector('.skills_container');
+    if (!skills) return null;
+    area = document.createElement('div');
+    area.id = 'battleArea';
+    area.className = 'info_section battle_area';
+    skills.parentNode.insertBefore(area, skills.nextSibling);
+    initUnitLinks(area);
+    return area;
+}
+
+function renderBattleData(u) {
+    const area = ensureBattleArea();
+    if (!area) return;
+    const b = u && u.battle;
+    if (!b) { area.style.display = 'none'; area.innerHTML = ''; return; }
+
+    const num = v => (v === undefined || v === null || v === '') ? '—' : escapeHtml(formatStat(v));
+    const maxBc = r => (r && r.hits && r.dc) ? r.hits * r.dc : null;
+    const row = (label, r, cost) => `<tr>
+            <th scope="row" class="notranslate">${label}</th>
+            <td>${cost}</td>
+            <td>${num(r.hits)}</td>
+            <td>${num(r.dc)}</td>
+            <td class="battle-max">${num(maxBc(r))}</td>
+        </tr>`;
+
+    // stesse skill che si vedono nel riquadro delle skill (in base alla rarità)
+    const allowed = getSkillTypesForRarity(u.rarity)
+        .concat(['sbb', 'ubb'].filter(t => hasSkillContent(u.skills && u.skills[t])));
+    let rows = '';
+    if (b.atk) rows += row(escapeHtml(battleText('normal')), b.atk, '—');
+    ['bb', 'sbb', 'ubb'].forEach(t => {
+        if (b[t] && allowed.includes(t)) rows += row(t.toUpperCase(), b[t], num(b[t].cost));
+    });
+
+    const chips = [];
+    if (b.cost) chips.push(`<span class="battle-chip"><span>${escapeHtml(battleText('unitCost'))}</span> <b>${num(b.cost)}</b></span>`);
+
+    area.innerHTML = `<h3>${escapeHtml(battleText('title'))}</h3>
+        <div class="battle-table-wrap">
+            <table class="battle-table">
+                <thead><tr>
+                    <th></th>
+                    <th>${escapeHtml(battleText('cost'))}</th>
+                    <th>${escapeHtml(battleText('hits'))}</th>
+                    <th class="notranslate">${escapeHtml(battleText('dc'))}</th>
+                    <th>${escapeHtml(battleText('maxBc'))}</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>
+        ${chips.length ? `<div class="battle-chips">${chips.join('')}</div>` : ''}
+        <p class="battle-legend">${escapeHtml(battleText('legend'))}</p>`;
+    area.classList.add('notranslate');   // testi già tradotti: Google Translate non li tocca
+    area.style.display = '';
+}
+
+/* --------------------------------------------------------------------------
+   IMP: quanti ne servono per arrivare al massimo (sotto le statistiche)
+   Ogni Imp, fuso nell'unità, aumenta per sempre le statistiche:
+     Molin (40432) PS +50 · Pakpak (10452) ATT +20 · Ganju (20442) DIF +20
+     Fwahl (30432) REC +20 · Arton (50612) PS +150, ATT +60, DIF +60, REC +60
+   Per Arton il numero è quello che serve per arrivare al massimo in TUTTE le statistiche.
+   -------------------------------------------------------------------------- */
+const IMP_UNITS = [
+    { id: '40432', boost: { hp: 50 } },                              // Vigor Imp Molin
+    { id: '10452', boost: { atk: 20 } },                             // Power Imp Pakpak
+    { id: '20442', boost: { def: 20 } },                             // Guard Imp Ganju
+    { id: '30432', boost: { rec: 20 } },                             // Healing Imp Fwahl
+    { id: '50612', boost: { hp: 150, atk: 60, def: 60, rec: 60 } }   // Almighty Imp Arton
+];
+const IMP_THUMB = id => `../img/Unit/Squere Img/unit_ills_thum_${id}.png`;
+const STAT_LABELS = {
+    hp: { it: 'PS', en: 'HP', es: 'PV', fr: 'PV', 'zh-CN': 'HP', ja: 'HP' },
+    atk: { it: 'ATT', en: 'ATK', es: 'ATQ', fr: 'ATQ', 'zh-CN': '攻击', ja: '攻撃' },
+    def: { it: 'DIF', en: 'DEF', es: 'DEF', fr: 'DÉF', 'zh-CN': '防御', ja: '防御' },
+    rec: { it: 'REC', en: 'REC', es: 'REC', fr: 'REC', 'zh-CN': '回复', ja: '回復' }
+};
+const IMP_TEXTS = {
+    title: { it: 'Imp per il massimo', en: 'Imps to max out', es: 'Imps para el máximo', fr: 'Imps pour le maximum', 'zh-CN': '加满所需Imp', ja: '上限までのインプ' },
+    almighty: { it: 'tutte', en: 'all', es: 'todas', fr: 'toutes', 'zh-CN': '全部', ja: '全て' }
+};
+
+function statLabel(k) { return getLocalizedText(STAT_LABELS[k]) || k.toUpperCase(); }
+
+function renderImps(u) {
+    const grid = document.querySelector('.unit_stats_side .stats_grid');
+    if (!grid) return;
+    let area = document.getElementById('impArea');
+    if (!area) {
+        area = document.createElement('div');
+        area.id = 'impArea';
+        area.className = 'imp-block';
+        grid.parentNode.insertBefore(area, grid.nextSibling);
+        initUnitLinks(area);
+    }
+    const imp = u && u.battle && u.battle.imp;
+    if (!imp || !['hp', 'atk', 'def', 'rec'].some(k => imp[k] > 0)) { area.style.display = 'none'; area.innerHTML = ''; return; }
+
+    const items = IMP_UNITS.map(x => {
+        const stats = Object.keys(x.boost).filter(k => imp[k] > 0);
+        if (!stats.length) return '';
+        // quanti ne servono: per Arton il più alto tra tutte le statistiche
+        const count = Math.max(...stats.map(k => Math.ceil(imp[k] / x.boost[k])));
+        const unit = findUnitByRealId(x.id);
+        const name = unit ? getActiveUnitName(unit) : '';
+        const label = stats.length > 1
+            ? escapeHtml(getLocalizedText(IMP_TEXTS.almighty))
+            : `${escapeHtml(statLabel(stats[0]))} +${escapeHtml(formatStat(imp[stats[0]]))}`;
+        return `<button type="button" class="imp-item" data-open-unit="${x.id}" title="${escapeHtml(name)}" aria-label="${escapeHtml(name)}">
+                <img src="${escapeHtml(IMP_THUMB(x.id))}" alt="" loading="lazy" draggable="false">
+                <span class="imp-count">×${count}</span>
+                <span class="imp-stat">${label}</span>
+            </button>`;
+    }).join('');
+
+    area.innerHTML = `<h4>${escapeHtml(getLocalizedText(IMP_TEXTS.title))}</h4>
+        <div class="imp-row">${items}</div>`;
+    area.classList.add('notranslate');
+    area.style.display = '';
+}
+
+// clic su un Imp (o sulla copia dell'unità negli Omni+): si apre quella unità
+function initUnitLinks(area) {
+    if (!area || area.dataset.linksReady) return;
+    area.dataset.linksReady = '1';
+    area.addEventListener('click', (e) => {
+        const el = e.target.closest('[data-open-unit]');
+        if (!el) return;
+        const target = findUnitByRealId(el.dataset.openUnit);
+        if (target && target !== currentUnitOpen) openModal(target);
+    });
+}
+
+/* ==========================================================================
+   ABILITÀ SP (solo Omni): data/unit-sp.json, una lista per unità:
+     "860018": [ ["param", 10, "testo in inglese", -1], ... ]
+   = [categoria, costo in SP, descrizione, posizione dell'abilità richiesta (-1 = nessuna)]
+   Le traduzioni stanno in data/sp-text/<lingua>.json  { "testo inglese": "traduzione" }
+   (se una lingua non ha ancora il suo file, resta l'inglese e Google Translate lo traduce)
+   ========================================================================== */
+const SP_DATA_URL = '../data/unit-sp.json';
+const SP_TEXT_URL = lang => `../data/sp-text/${lang}.json`;
+const SP_CATEGORY_ORDER = ['param', 'attack', 'spark', 'critical', 'reduction', 'bbgauge', 'heal', 'ailres', 'ailinf', 'drop', 'special'];
+const SP_CATEGORIES = {
+    param: { it: 'Potenziamento parametri', en: 'Parameter Boost', es: 'Mejora de parámetros', fr: 'Bonus de paramètres', 'zh-CN': '能力提升', ja: 'ステアップ系' },
+    attack: { it: 'Potenziamento attacco', en: 'Attack Boost', es: 'Mejora de ataque', fr: "Bonus d'attaque", 'zh-CN': '攻击强化', ja: '攻撃強化系' },
+    spark: { it: 'Scintilla', en: 'Spark', es: 'Chispa', fr: 'Étincelle', 'zh-CN': '火花', ja: 'スパーク系' },
+    critical: { it: 'Colpo critico', en: 'Critical Hit', es: 'Golpe crítico', fr: 'Coup critique', 'zh-CN': '暴击', ja: 'クリティカル系' },
+    reduction: { it: 'Riduzione danni', en: 'Damage Reduction', es: 'Reducción de daño', fr: 'Réduction des dégâts', 'zh-CN': '伤害减轻', ja: 'ダメージ軽減系' },
+    bbgauge: { it: 'Barra BB', en: 'BB Gauge', es: 'Barra de BB', fr: 'Jauge de BB', 'zh-CN': 'BB槽', ja: 'ＢＢゲージ系' },
+    heal: { it: 'Recupero PS', en: 'HP Recovery', es: 'Recuperación de PV', fr: 'Récupération de PV', 'zh-CN': 'HP回复', ja: 'ＨＰ回復系' },
+    ailres: { it: 'Resistenza alle anomalie', en: 'Ailment Resistance', es: 'Resistencia a estados', fr: 'Résistance aux altérations', 'zh-CN': '异常抗性', ja: '異常耐性系' },
+    ailinf: { it: 'Infliggere anomalie', en: 'Ailment Infliction', es: 'Infligir estados', fr: 'Infliger des altérations', 'zh-CN': '附加异常状态', ja: '状態異常付与系' },
+    drop: { it: 'Ricompense', en: 'Drops', es: 'Botín', fr: 'Butin', 'zh-CN': '掉落', ja: 'ドロップ系' },
+    special: { it: 'Speciale', en: 'Special', es: 'Especial', fr: 'Spécial', 'zh-CN': '特殊', ja: '特殊' }
+};
+const SP_TEXTS = {
+    title: { it: 'Abilità SP', en: 'SP Enhancements', es: 'Mejoras SP', fr: 'Améliorations SP', 'zh-CN': 'SP强化', ja: 'SP強化' },
+    total: { it: 'SP per sbloccarle tutte', en: 'SP to unlock all', es: 'SP para desbloquear todas', fr: 'SP pour tout débloquer', 'zh-CN': '全部解锁所需SP', ja: '全解放に必要なSP' },
+    requires: { it: 'Richiede', en: 'Requires', es: 'Requiere', fr: 'Nécessite', 'zh-CN': '需要', ja: '必要' }
+};
+let spDataPromise = null;
+const spTextCache = {};
+
+function loadSpData() {
+    if (!spDataPromise) {
+        spDataPromise = fetch(SP_DATA_URL).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+    }
+    return spDataPromise;
+}
+
+function loadSpText(lang) {
+    if (lang === 'en') return Promise.resolve({});
+    if (!spTextCache[lang]) {
+        spTextCache[lang] = fetch(SP_TEXT_URL(lang)).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+    }
+    return spTextCache[lang];
+}
+
+function isOmniUnit(u) {
+    const r = String(u && u.rarity || '').trim().toLowerCase();
+    return r === 'omni' || r === 'dream';
+}
+
+// crea una sezione vuota subito dopo un'altra
+function ensureSectionAfter(id, afterEl, className) {
+    let area = document.getElementById(id);
+    if (area) return area;
+    if (!afterEl || !afterEl.parentNode) return null;
+    area = document.createElement('div');
+    area.id = id;
+    area.className = className;
+    area.style.display = 'none';
+    afterEl.parentNode.insertBefore(area, afterEl.nextSibling);
+    return area;
+}
+
+// testo SP: "<br>" del file diventa un vero a capo, il resto è testo semplice
+function spTextHtml(text) {
+    return String(text || '').split(/<br\s*\/?>/i).map(escapeHtml).join('<br>');
+}
+
+async function renderSpSkills(u) {
+    const after = document.getElementById('battleArea') || document.querySelector('.skills_container');
+    const area = ensureSectionAfter('spArea', after, 'info_section sp_area');
+    if (!area) return;
+    if (!isOmniUnit(u)) { area.style.display = 'none'; area.innerHTML = ''; return; }
+
+    const lang = getCurrentLang();
+    const [all, tr] = await Promise.all([loadSpData(), loadSpText(lang)]);
+    if (currentUnitOpen !== u) return;   // nel frattempo è stata aperta un'altra unità
+    const rows = all[String(u.realId)];
+    if (!rows || !rows.length) { area.style.display = 'none'; area.innerHTML = ''; return; }
+
+    const text = en => tr[en] || en;
+    const translated = en => !!tr[en] || lang === 'en';
+    const total = rows.reduce((sum, r) => sum + (Number(r[1]) || 0), 0);
+
+    const groups = SP_CATEGORY_ORDER.map(cat => {
+        const items = rows.filter(r => r[0] === cat);
+        if (!items.length) return '';
+        const list = items.map(r => {
+            const dep = r[3] >= 0 && rows[r[3]] ? rows[r[3]][2] : '';
+            const req = dep
+                ? `<small class="sp-req"><span class="notranslate">${escapeHtml(getLocalizedText(SP_TEXTS.requires))}:</span> <span${translated(dep) ? ' class="notranslate"' : ''}>${spTextHtml(text(dep))}</span></small>`
+                : '';
+            return `<li class="sp-item">
+                    <span class="sp-cost notranslate">${escapeHtml(String(r[1]))} SP</span>
+                    <span class="sp-desc"><span${translated(r[2]) ? ' class="notranslate"' : ''}>${spTextHtml(text(r[2]))}</span>${req}</span>
+                </li>`;
+        }).join('');
+        return `<div class="sp-group">
+                <h4 class="notranslate">${escapeHtml(getLocalizedText(SP_CATEGORIES[cat]))}</h4>
+                <ul class="sp-list">${list}</ul>
+            </div>`;
+    }).join('');
+
+    area.innerHTML = `<h3 class="notranslate">${escapeHtml(getLocalizedText(SP_TEXTS.title))}</h3>
+        <p class="sp-total notranslate">${escapeHtml(getLocalizedText(SP_TEXTS.total))}: <b>${total} SP</b></p>
+        ${groups}`;
+    area.style.display = '';
+}
+
+/* ==========================================================================
+   OMNI+ (le 3 evoluzioni extra delle unità Omni: Omni+1, Omni+2, Omni+3)
+   Non cambiano la rarità: aumentano statistiche e limite SP.
+   Due modi per farle:
+     - con i materiali: Frammenti dell'elemento + Elementum Tome + Zel + Karma
+     - con un doppione: 1 copia della stessa unità + Geminus Tome
+   Le unità con costo 45 ne chiedono meno (seconda tabella).
+   Le icone dei materiali vanno in img/Material Evolve/ con questi nomi:
+     item_thum_800901.png ... item_thum_800906.png (Frammenti: Ignis, Algor, Terra, Fulgur, Lux, Umbra)
+     item_thum_800907.png (Elementum Tome)   item_thum_800908.png (Geminus Tome)
+   Se un'icona manca, si vede lo stesso il nome del materiale.
+   ========================================================================== */
+const OMNI_PLUS_LEVELS = [
+    { sp: 5, hp: 150, atk: 60, def: 60, rec: 60 },
+    { sp: 5, hp: 300, atk: 120, def: 120, rec: 120 },
+    { sp: 10, hp: 450, atk: 180, def: 180, rec: 180 }
+];
+const OMNI_PLUS_COST = {
+    normal: [   // unità con costo maggiore di 45
+        { shards: 100, tomes: 10, zel: 4000000, karma: 1500000, geminus: 5 },
+        { shards: 200, tomes: 20, zel: 5000000, karma: 2500000, geminus: 10 },
+        { shards: 500, tomes: 50, zel: 7000000, karma: 3500000, geminus: 25 }
+    ],
+    cost45: [   // unità con costo 45
+        { shards: 50, tomes: 5, zel: 4000000, karma: 1500000, geminus: 0 },
+        { shards: 100, tomes: 10, zel: 5000000, karma: 2500000, geminus: 0 },
+        { shards: 250, tomes: 25, zel: 7000000, karma: 3500000, geminus: 5 }
+    ]
+};
+const OMNI_SHARDS = {
+    fire: { id: '800901', name: 'Ignis Shard' },
+    water: { id: '800902', name: 'Algor Shard' },
+    earth: { id: '800903', name: 'Terra Shard' },
+    thunder: { id: '800904', name: 'Fulgur Shard' },
+    light: { id: '800905', name: 'Lux Shard' },
+    dark: { id: '800906', name: 'Umbra Shard' }
+};
+const OMNI_TOMES = { elementum: { id: '800907', name: 'Elementum Tome' }, geminus: { id: '800908', name: 'Geminus Tome' } };
+const OMNI_PLUS_TEXTS = {
+    title: { it: 'Evoluzioni Omni+', en: 'Omni+ Boost', es: 'Mejora Omni+', fr: 'Bonus Omni+', 'zh-CN': 'Omni+强化', ja: 'オムニ＋強化' },
+    intro: {
+        it: 'Le unità Omni hanno 3 evoluzioni extra. Non cambiano la rarità: aumentano statistiche e limite SP. Ogni livello si può fare con i materiali oppure con un doppione.',
+        en: 'Omni units have 3 extra evolutions. They do not change the rarity: they raise stats and the SP limit. Each level can be done with materials or with a duplicate.',
+        es: 'Las unidades Omni tienen 3 evoluciones extra. No cambian la rareza: aumentan las estadísticas y el límite de SP. Cada nivel se puede hacer con materiales o con un duplicado.',
+        fr: "Les unités Omni ont 3 évolutions supplémentaires. Elles ne changent pas la rareté : elles augmentent les stats et la limite de SP. Chaque niveau se fait avec des matériaux ou avec un doublon.",
+        'zh-CN': 'Omni单位有3次额外进化。不会改变稀有度，但会提升能力值和SP上限。每一级都可以使用素材或重复单位完成。',
+        ja: 'オムニユニットには3段階の追加進化があります。レアリティは変わらず、ステータスとSP上限が上がります。各段階は素材または同じユニットで行えます。'
+    },
+    gains: { it: 'Aumenti', en: 'Gains', es: 'Mejoras', fr: 'Gains', 'zh-CN': '提升', ja: '上昇値' },
+    spLimit: { it: 'Limite SP', en: 'SP limit', es: 'Límite SP', fr: 'Limite SP', 'zh-CN': 'SP上限', ja: 'SP上限' },
+    withMats: { it: 'Con i materiali', en: 'With materials', es: 'Con materiales', fr: 'Avec des matériaux', 'zh-CN': '使用素材', ja: '素材で強化' },
+    withDupe: { it: 'Con un doppione', en: 'With a duplicate', es: 'Con un duplicado', fr: 'Avec un doublon', 'zh-CN': '使用重复单位', ja: '同ユニットで強化' },
+    copy: { it: 'copia della stessa unità', en: 'copy of the same unit', es: 'copia de la misma unidad', fr: 'copie de la même unité', 'zh-CN': '相同单位', ja: '同じユニット' }
+};
+
+function unitElementKey(u) {
+    return String(u && u.element || '').replace(/^Element\s+/i, '').trim().toLowerCase();
+}
+
+function omniMatHtml(img, name, count, extraClass = '') {
+    return `<span class="op-mat ${extraClass}">
+            <span class="op-icon">${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy" draggable="false" onerror="this.remove()">` : ''}</span>
+            <span class="op-mat-name notranslate">${escapeHtml(name)}</span>
+            <b class="notranslate">×${escapeHtml(formatStat(count))}</b>
+        </span>`;
+}
+
+function renderOmniPlus(u) {
+    const after = document.getElementById('spArea') || document.getElementById('battleArea') || document.querySelector('.skills_container');
+    const area = ensureSectionAfter('omniPlusArea', after, 'info_section omni_plus_area');
+    if (!area) return;
+    // Omni+ esiste solo per le unità di rarità Omni
+    if (String(u && u.rarity || '').trim().toLowerCase() !== 'omni') { area.style.display = 'none'; area.innerHTML = ''; return; }
+
+    const T = k => escapeHtml(getLocalizedText(OMNI_PLUS_TEXTS[k]));
+    const costTable = (u.battle && Number(u.battle.cost) === 45) ? OMNI_PLUS_COST.cost45 : OMNI_PLUS_COST.normal;
+    const elemKey = unitElementKey(u);
+    const shard = OMNI_SHARDS[elemKey] || null;
+    const itemImg = id => `${EVO_ITEM_FOLDER}item_thum_${id}.png`;
+    const unitThumb = u.image || IMP_THUMB(u.realId);
+
+    const cards = OMNI_PLUS_LEVELS.map((lv, i) => {
+        const c = costTable[i];
+        const gains = `<span>${T('spLimit')} +${lv.sp}</span>` +
+            ['hp', 'atk', 'def', 'rec'].map(k => ` · <span>${escapeHtml(statLabel(k))} +${escapeHtml(formatStat(lv[k]))}</span>`).join('');
+        const mats = [
+            shard ? omniMatHtml(itemImg(shard.id), shard.name, c.shards, `op-shard op-${elemKey}`) : '',
+            omniMatHtml(itemImg(OMNI_TOMES.elementum.id), OMNI_TOMES.elementum.name, c.tomes, 'op-tome'),
+            omniMatHtml('../img/Money/Zell.png', 'Zel', c.zel, 'op-money'),
+            omniMatHtml('../img/Money/Karma.png', 'Karma', c.karma, 'op-money')
+        ].join('');
+        const dupe = `<button type="button" class="op-mat op-unit" data-open-unit="${escapeHtml(String(u.realId))}">
+                <span class="op-icon"><img src="${escapeHtml(unitThumb)}" alt="" loading="lazy" draggable="false" onerror="this.remove()"></span>
+                <span class="op-mat-name">${T('copy')}</span>
+                <b>×1</b>
+            </button>` + (c.geminus ? omniMatHtml(itemImg(OMNI_TOMES.geminus.id), OMNI_TOMES.geminus.name, c.geminus, 'op-tome') : '');
+        return `<div class="op-card">
+                <div class="op-head">Omni+${i + 1}</div>
+                <p class="op-gains"><span class="op-label">${T('gains')}:</span> ${gains}</p>
+                <div class="op-way"><span class="op-label">${T('withMats')}</span><div class="op-mats">${mats}</div></div>
+                <div class="op-way"><span class="op-label">${T('withDupe')}</span><div class="op-mats">${dupe}</div></div>
+            </div>`;
+    }).join('');
+
+    area.innerHTML = `<h3>${T('title')}</h3>
+        <p class="op-intro">${T('intro')}</p>
+        <div class="op-cards">${cards}</div>`;
+    area.classList.add('notranslate');
+    initUnitLinks(area);
+    area.style.display = '';
 }
 
 /* ==========================================================================
