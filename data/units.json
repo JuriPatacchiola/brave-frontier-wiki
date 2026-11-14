@@ -92830,9 +92830,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-default.webm",
-      "idle": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-idle.webm",
-      "atk": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-atk.webm"
+      "default": "../video/Summon/4 star start/Rina/Gold Warrior Rina/Gold-Warrior-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Rina/Gold Warrior Rina/Gold-Warrior-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Rina/Gold Warrior Rina/Gold-Warrior-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93037,9 +93037,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-default.webm",
-      "idle": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-idle.webm",
-      "atk": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-atk.webm"
+      "default": "../video/Summon/4 star start/Rina/Gold Knight Rina/Gold-Knight-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Rina/Gold Knight Rina/Gold-Knight-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Rina/Gold Knight Rina/Gold-Knight-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -102037,9 +102037,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-default.webm",
-      "idle": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-idle.webm",
-      "atk": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-atk.webm"
+      "default": "../video/Summon/4 star start/Rina/Gold Queen Rina/Gold-Queen-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Rina/Gold Queen Rina/Gold-Queen-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Rina/Gold Queen Rina/Gold-Queen-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -229000,9 +229000,9 @@
       }
     },
     "animations": {
-      "default": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-default.webm",
-      "idle": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-idle.webm",
-      "atk": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-atk.webm"
+      "default": "../video/Summon/4 star start/Rina/Gilded Dogma Rina/Gilded-Dogma-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Rina/Gilded Dogma Rina/Gilded-Dogma-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Rina/Gilded Dogma Rina/Gilded-Dogma-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
