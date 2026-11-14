@@ -91536,9 +91536,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10333/10333_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10333/10333_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10333/10333_atk.png"
+      "default": "../video/Summon/4 star start/Farlon/Red Slash Farlon/Red-Slash-Farlon-default.webm",
+      "idle": "../video/Summon/4 star start/Farlon/Red Slash Farlon/Red-Slash-Farlon-idle.webm",
+      "atk": "../video/Summon/4 star start/Farlon/Red Slash Farlon/Red-Slash-Farlon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -91743,9 +91743,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10334/10334_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10334/10334_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10334/10334_atk.png"
+      "default": "../video/Summon/4 star start/Farlon/Red Blade Farlon/Red-Blade-Farlon-default.webm",
+      "idle": "../video/Summon/4 star start/Farlon/Red Blade Farlon/Red-Blade-Farlon-idle.webm",
+      "atk": "../video/Summon/4 star start/Farlon/Red Blade Farlon/Red-Blade-Farlon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -91950,9 +91950,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20323/20323_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20323/20323_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20323/20323_atk.png"
+      "default": "../video/Summon/4 star start/Signas/Snow Cub Signas/Snow-Cub-Signas-default.webm",
+      "idle": "../video/Summon/4 star start/Signas/Snow Cub Signas/Snow-Cub-Signas-idle.webm",
+      "atk": "../video/Summon/4 star start/Signas/Snow Cub Signas/Snow-Cub-Signas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92183,9 +92183,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20324/20324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20324/20324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20324/20324_atk.png"
+      "default": "../video/Summon/4 star start/Signas/Snow Lion Signas/Snow-Lion-Signas-default.webm",
+      "idle": "../video/Summon/4 star start/Signas/Snow Lion Signas/Snow-Lion-Signas-idle.webm",
+      "atk": "../video/Summon/4 star start/Signas/Snow Lion Signas/Snow-Lion-Signas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92416,9 +92416,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30313/30313_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30313/30313_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30313/30313_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Havoc Girl Luly/Havoc-Girl-Luly-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Havoc Girl Luly/Havoc-Girl-Luly-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Havoc Girl Luly/Havoc-Girl-Luly-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92623,9 +92623,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30314/30314_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30314/30314_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30314/30314_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Havoc Queen Luly/Havoc-Queen-Luly-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Havoc Queen Luly/Havoc-Queen-Luly-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Havoc Queen Luly/Havoc-Queen-Luly-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -92830,9 +92830,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40313/40313_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40313/40313_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40313/40313_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Gold Warrior Rina/Gold-Warrior-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93037,9 +93037,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40314/40314_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40314/40314_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40314/40314_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Gold Knight Rina/Gold-Knight-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93244,9 +93244,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50383/50383_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50383/50383_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50383/50383_atk.png"
+      "default": "../video/Summon/4 star start/Sodis/Horseman Sodis/Horseman-Sodis-default.webm",
+      "idle": "../video/Summon/4 star start/Sodis/Horseman Sodis/Horseman-Sodis-idle.webm",
+      "atk": "../video/Summon/4 star start/Sodis/Horseman Sodis/Horseman-Sodis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93451,9 +93451,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50384/50384_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50384/50384_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50384/50384_atk.png"
+      "default": "../video/Summon/4 star start/Sodis/Cavalryman Sodis/Cavalryman-Sodis-default.webm",
+      "idle": "../video/Summon/4 star start/Sodis/Cavalryman Sodis/Cavalryman-Sodis-idle.webm",
+      "atk": "../video/Summon/4 star start/Sodis/Cavalryman Sodis/Cavalryman-Sodis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93658,9 +93658,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60313/60313_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60313/60313_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60313/60313_atk.png"
+      "default": "../video/Summon/4 star start/Lunaris/Dark Charm Lunaris/Dark-Charm-Lunaris-default.webm",
+      "idle": "../video/Summon/4 star start/Lunaris/Dark Charm Lunaris/Dark-Charm-Lunaris-idle.webm",
+      "atk": "../video/Summon/4 star start/Lunaris/Dark Charm Lunaris/Dark-Charm-Lunaris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -93891,9 +93891,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60314/60314_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60314/60314_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60314/60314_atk.png"
+      "default": "../video/Summon/4 star start/Lunaris/Dark Curse Lunaris/Dark-Curse-Lunaris-default.webm",
+      "idle": "../video/Summon/4 star start/Lunaris/Dark Curse Lunaris/Dark-Curse-Lunaris-idle.webm",
+      "atk": "../video/Summon/4 star start/Lunaris/Dark Curse Lunaris/Dark-Curse-Lunaris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -101333,9 +101333,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10335/10335_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10335/10335_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10335/10335_atk.png"
+      "default": "../video/Summon/4 star start/Farlon/Red Swordsman Farlon/Red-Swordsman-Farlon-default.webm",
+      "idle": "../video/Summon/4 star start/Farlon/Red Swordsman Farlon/Red-Swordsman-Farlon-idle.webm",
+      "atk": "../video/Summon/4 star start/Farlon/Red Swordsman Farlon/Red-Swordsman-Farlon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -101559,9 +101559,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20325/20325_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20325/20325_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20325/20325_atk.png"
+      "default": "../video/Summon/4 star start/Signas/Snow Queen Signas/Snow-Queen-Signas-default.webm",
+      "idle": "../video/Summon/4 star start/Signas/Snow Queen Signas/Snow-Queen-Signas-idle.webm",
+      "atk": "../video/Summon/4 star start/Signas/Snow Queen Signas/Snow-Queen-Signas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -101811,9 +101811,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30315/30315_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30315/30315_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30315/30315_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Havoc God Luly/Havoc-God-Luly-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Havoc God Luly/Havoc-God-Luly-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Havoc God Luly/Havoc-God-Luly-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -102037,9 +102037,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40315/40315_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40315/40315_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40315/40315_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Gold Queen Rina/Gold-Queen-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -102263,9 +102263,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50385/50385_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50385/50385_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50385/50385_atk.png"
+      "default": "../video/Summon/4 star start/Sodis/Guardian Chief Sodis/Guardian-Chief-Sodis-default.webm",
+      "idle": "../video/Summon/4 star start/Sodis/Guardian Chief Sodis/Guardian-Chief-Sodis-idle.webm",
+      "atk": "../video/Summon/4 star start/Sodis/Guardian Chief Sodis/Guardian-Chief-Sodis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -102489,9 +102489,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60315/60315_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60315/60315_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60315/60315_atk.png"
+      "default": "../video/Summon/4 star start/Lunaris/Black Lotus Lunaris/Black-Lotus-Lunaris-default.webm",
+      "idle": "../video/Summon/4 star start/Lunaris/Black Lotus Lunaris/Black-Lotus-Lunaris-idle.webm",
+      "atk": "../video/Summon/4 star start/Lunaris/Black Lotus Lunaris/Black-Lotus-Lunaris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -203955,9 +203955,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10336/10336_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10336/10336_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10336/10336_atk.png"
+      "default": "../video/Summon/4 star start/Farlon/Crimson Phoenix Farlon/Crimson-Phoenix-Farlon-default.webm",
+      "idle": "../video/Summon/4 star start/Farlon/Crimson Phoenix Farlon/Crimson-Phoenix-Farlon-idle.webm",
+      "atk": "../video/Summon/4 star start/Farlon/Crimson Phoenix Farlon/Crimson-Phoenix-Farlon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -204218,9 +204218,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20326/20326_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20326/20326_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20326/20326_atk.png"
+      "default": "../video/Summon/4 star start/Signas/Blizzard Fang Signas/Blizzard-Fang-Signas-default.webm",
+      "idle": "../video/Summon/4 star start/Signas/Blizzard Fang Signas/Blizzard-Fang-Signas-idle.webm",
+      "atk": "../video/Summon/4 star start/Signas/Blizzard Fang Signas/Blizzard-Fang-Signas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -204770,9 +204770,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60316/60316_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60316/60316_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60316/60316_atk.png"
+      "default": "../video/Summon/4 star start/Lunaris/Midnight Allure Lunaris/Midnight-Allure-Lunaris-default.webm",
+      "idle": "../video/Summon/4 star start/Lunaris/Midnight Allure Lunaris/Midnight-Allure-Lunaris-idle.webm",
+      "atk": "../video/Summon/4 star start/Lunaris/Midnight Allure Lunaris/Midnight-Allure-Lunaris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -220875,9 +220875,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30316/30316_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30316/30316_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30316/30316_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Mayhem Empress Luly/Mayhem-Empress-Luly-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Mayhem Empress Luly/Mayhem-Empress-Luly-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Mayhem Empress Luly/Mayhem-Empress-Luly-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -229000,9 +229000,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40316/40316_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40316/40316_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40316/40316_atk.png"
+      "default": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-default.webm",
+      "idle": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-idle.webm",
+      "atk": "../video/Summon/4 star start/Luly/Gilded Dogma Rina/Gilded-Dogma-Rina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -239222,9 +239222,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50386/50386_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50386/50386_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50386/50386_atk.png"
+      "default": "../video/Summon/4 star start/Sodis/Paladin Crusader Sodis/Paladin-Crusader-Sodis-default.webm",
+      "idle": "../video/Summon/4 star start/Sodis/Paladin Crusader Sodis/Paladin-Crusader-Sodis-idle.webm",
+      "atk": "../video/Summon/4 star start/Sodis/Paladin Crusader Sodis/Paladin-Crusader-Sodis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -334153,9 +334153,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20327/20327_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20327/20327_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20327/20327_atk.png"
+      "default": "../video/Summon/4 star start/Signas/Alpha Leader Signas/Alpha-Leader-Signas-default.webm",
+      "idle": "../video/Summon/4 star start/Signas/Alpha Leader Signas/Alpha-Leader-Signas-idle.webm",
+      "atk": "../video/Summon/4 star start/Signas/Alpha Leader Signas/Alpha-Leader-Signas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -335902,9 +335902,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60317/60317_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60317/60317_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60317/60317_atk.png"
+      "default": "../video/Summon/4 star start/Lunaris/Bewitching Wings Lunaris/Bewitching-Wings-Lunaris-default.webm",
+      "idle": "../video/Summon/4 star start/Lunaris/Bewitching Wings Lunaris/Bewitching-Wings-Lunaris-idle.webm",
+      "atk": "../video/Summon/4 star start/Lunaris/Bewitching Wings Lunaris/Bewitching-Wings-Lunaris-atk.webm"
     },
     "effects": {
       "atk": "",
