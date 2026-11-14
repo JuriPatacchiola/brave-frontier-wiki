@@ -95874,8 +95874,8 @@
     },
     "animations": {
       "default": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm",
-      "idle": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm",
-      "atk": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm"
+      "idle": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-idle.webm",
+      "atk": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -98419,9 +98419,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60224/60224_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60224/60224_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60224/60224_atk.png"
+      "default": "../video/Evolve Material/Mimic/Metal Mimic/Metal-Mimic-default.webm",
+      "idle": "../video/Evolve Material/Mimic/Metal Mimic/Metal-Mimic-default.webm",
+      "atk": "../video/Evolve Material/Mimic/Metal Mimic/Metal-Mimic-default.webm"
     },
     "effects": {
       "atk": "",
