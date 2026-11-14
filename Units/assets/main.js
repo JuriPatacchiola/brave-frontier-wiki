@@ -1917,6 +1917,17 @@ const OMNI_SHARDS = {
     light: { id: '800905', name: 'Lux Shard' },
     dark: { id: '800906', name: 'Umbra Shard' }
 };
+/* UNITÀ CHE SI OTTENGONO UNA SOLA VOLTA IN TUTTO IL GIOCO
+   Per queste non si può fare l'Omni+ con un doppione: resta solo il modo con i materiali.
+   Basta scrivere qui il loro ID (tra apici e separati da virgole), per esempio:
+       const OMNI_ONE_COPY_UNITS = ['10017', '60027'];
+   In alternativa, in units.json si può mettere nell'unità:  "oneCopy": true  */
+const OMNI_ONE_COPY_UNITS = [];
+
+function isOneCopyUnit(u) {
+    return !!(u && (u.oneCopy === true || OMNI_ONE_COPY_UNITS.includes(String(u.realId))));
+}
+
 const OMNI_TOMES = { elementum: { id: '800907', name: 'Elementum Tome' }, geminus: { id: '800908', name: 'Geminus Tome' } };
 const OMNI_PLUS_TEXTS = {
     title: { it: 'Evoluzioni Omni+', en: 'Omni+ Boost', es: 'Mejora Omni+', fr: 'Bonus Omni+', 'zh-CN': 'Omni+强化', ja: 'オムニ＋強化' },
@@ -1932,6 +1943,14 @@ const OMNI_PLUS_TEXTS = {
     spLimit: { it: 'Limite SP', en: 'SP limit', es: 'Límite SP', fr: 'Limite SP', 'zh-CN': 'SP上限', ja: 'SP上限' },
     withMats: { it: 'Con i materiali', en: 'With materials', es: 'Con materiales', fr: 'Avec des matériaux', 'zh-CN': '使用素材', ja: '素材で強化' },
     withDupe: { it: 'Con un doppione', en: 'With a duplicate', es: 'Con un duplicado', fr: 'Avec un doublon', 'zh-CN': '使用重复单位', ja: '同ユニットで強化' },
+    oneCopy: {
+        it: 'Non disponibile: questa unità si ottiene una sola volta in tutto il gioco, quindi si può fare solo con i materiali.',
+        en: 'Not available: this unit can only be obtained once in the whole game, so only the materials option can be used.',
+        es: 'No disponible: esta unidad solo se puede obtener una vez en todo el juego, así que solo se puede usar la opción con materiales.',
+        fr: "Indisponible : cette unité ne s'obtient qu'une seule fois dans tout le jeu, donc seule l'option avec matériaux est possible.",
+        'zh-CN': '不可用：此单位在整个游戏中只能获得一次，因此只能使用素材强化。',
+        ja: '利用不可：このユニットはゲーム中で1体しか入手できないため、素材での強化のみ可能です。'
+    },
     copy: { it: 'copia della stessa unità', en: 'copy of the same unit', es: 'copia de la misma unidad', fr: 'copie de la même unité', 'zh-CN': '相同单位', ja: '同じユニット' }
 };
 
@@ -1960,6 +1979,7 @@ function renderOmniPlus(u) {
     const shard = OMNI_SHARDS[elemKey] || null;
     const itemImg = id => `${EVO_ITEM_FOLDER}item_thum_${id}.png`;
     const unitThumb = u.image || IMP_THUMB(u.realId);
+    const oneCopy = isOneCopyUnit(u);
 
     const cards = OMNI_PLUS_LEVELS.map((lv, i) => {
         const c = costTable[i];
@@ -1971,7 +1991,7 @@ function renderOmniPlus(u) {
             omniMatHtml('../img/Money/Zell.png', 'Zel', c.zel, 'op-money'),
             omniMatHtml('../img/Money/Karma.png', 'Karma', c.karma, 'op-money')
         ].join('');
-        const dupe = `<button type="button" class="op-mat op-unit" data-open-unit="${escapeHtml(String(u.realId))}">
+        const dupe = oneCopy ? `<p class="op-unavailable">${T('oneCopy')}</p>` : `<button type="button" class="op-mat op-unit" data-open-unit="${escapeHtml(String(u.realId))}">
                 <span class="op-icon"><img src="${escapeHtml(unitThumb)}" alt="" loading="lazy" draggable="false" onerror="this.remove()"></span>
                 <span class="op-mat-name">${T('copy')}</span>
                 <b>×1</b>
@@ -1980,7 +2000,7 @@ function renderOmniPlus(u) {
                 <div class="op-head">Omni+${i + 1}</div>
                 <p class="op-gains"><span class="op-label">${T('gains')}:</span> ${gains}</p>
                 <div class="op-way"><span class="op-label">${T('withMats')}</span><div class="op-mats">${mats}</div></div>
-                <div class="op-way"><span class="op-label">${T('withDupe')}</span><div class="op-mats">${dupe}</div></div>
+                <div class="op-way${oneCopy ? ' is-unavailable' : ''}"><span class="op-label">${T('withDupe')}</span><div class="op-mats">${dupe}</div></div>
             </div>`;
     }).join('');
 
@@ -1994,26 +2014,87 @@ function renderOmniPlus(u) {
 
 /* ==========================================================================
    COME OTTENERLA (in fondo alla modale, dopo le evoluzioni)
-   Tabella: Tipo | Evento | Banner. Nel JSON:
-   "howToObtain": [
-     { "type": "Vortex",
-       "event": { "en": "...", "it": "...", ... },   (oppure una stringa semplice)
-       "banner": "../img/Bunner Vortex/sp_quest_banner_801006.png" }
-   ]
-   Se l'unità non ha "howToObtain" la sezione resta nascosta
+   Tabella: Tipo | Dove | Banner.
+   1) Se l'unità ha "howToObtain" in units.json si usa quello (scritto a mano):
+      "howToObtain": [
+        { "type": "Vortex",
+          "event": { "en": "...", "it": "...", ... },   (oppure una stringa semplice)
+          "banner": "../img/Bunner Vortex/sp_quest_banner_801006.png" }
+      ]
+   2) Altrimenti si usa data/unit-obtain.json, preso dalla wiki globale (inglese)
+      e dalla wiki italiana di Fandom:
+      "10011": { "en": [["starter", "Starter Unit"], ["honor", "Honor Summon"], ...],
+                 "it": [["event", "Eroe di Agni"], ...] }
+      In italiano si usa la lista della wiki italiana (se c'è), nelle altre lingue quella globale.
+   3) Se non c'è niente ma l'unità è l'evoluzione di un'altra, si scrive
+      "Evoluzione di ..." (cliccando si apre l'unità di prima).
+   La colonna Banner compare solo se almeno una riga ha un'immagine.
    ========================================================================== */
+const OBTAIN_DATA_URL = '../data/unit-obtain.json';
 const OBTAIN_TEXTS = {
     title: { it: 'Come ottenerla', en: 'How to obtain', es: 'Cómo obtenerla', fr: "Comment l'obtenir", 'zh-CN': '获取方式', ja: '入手方法' },
     type: { it: 'Tipo', en: 'Type', es: 'Tipo', fr: 'Type', 'zh-CN': '类型', ja: '種類' },
-    event: { it: 'Evento', en: 'Event', es: 'Evento', fr: 'Événement', 'zh-CN': '活动', ja: 'イベント' },
-    banner: { it: 'Banner', en: 'Banner', es: 'Banner', fr: 'Bannière', 'zh-CN': '横幅', ja: 'バナー' }
+    event: { it: 'Dove', en: 'Where', es: 'Dónde', fr: 'Où', 'zh-CN': '地点', ja: '入手場所' },
+    banner: { it: 'Banner', en: 'Banner', es: 'Banner', fr: 'Bannière', 'zh-CN': '横幅', ja: 'バナー' },
+    evolveOf: { it: 'Evoluzione di', en: 'Evolution of', es: 'Evolución de', fr: 'Évolution de', 'zh-CN': '进化自', ja: '進化元' }
 };
+const OBTAIN_TYPES = {
+    summon: { it: 'Evocazione rara', en: 'Rare Summon', es: 'Invocación rara', fr: 'Invocation rare', 'zh-CN': '稀有召唤', ja: 'レア召喚' },
+    honor: { it: 'Evocazione Onore', en: 'Honor Summon', es: 'Invocación de honor', fr: "Invocation d'honneur", 'zh-CN': '荣誉召唤', ja: 'フレンドガチャ' },
+    story: { it: 'Missione', en: 'Quest', es: 'Misión', fr: 'Quête', 'zh-CN': '任务', ja: 'クエスト' },
+    event: { it: 'Evento', en: 'Event', es: 'Evento', fr: 'Événement', 'zh-CN': '活动', ja: 'イベント' },
+    gq: { it: 'Grand Quest', en: 'Grand Quest', es: 'Grand Quest', fr: 'Grand Quest', 'zh-CN': '大型任务', ja: 'グランドクエスト' },
+    trial: { it: 'Prova', en: 'Trial', es: 'Prueba', fr: 'Épreuve', 'zh-CN': '试炼', ja: '試練' },
+    raid: { it: 'Raid', en: 'Raid', es: 'Raid', fr: 'Raid', 'zh-CN': '突袭', ja: 'レイド' },
+    arena: { it: 'Sfide e Arena', en: 'Challenges & Arena', es: 'Desafíos y Arena', fr: 'Défis et Arène', 'zh-CN': '挑战与竞技场', ja: 'チャレンジ・アリーナ' },
+    reward: { it: 'Ricompensa', en: 'Reward', es: 'Recompensa', fr: 'Récompense', 'zh-CN': '奖励', ja: '報酬' },
+    starter: { it: 'Unità iniziale', en: 'Starter unit', es: 'Unidad inicial', fr: 'Unité de départ', 'zh-CN': '初始单位', ja: '初期ユニット' },
+    evolve: { it: 'Evoluzione', en: 'Evolution', es: 'Evolución', fr: 'Évolution', 'zh-CN': '进化', ja: '進化' }
+};
+// le frasi più comuni della wiki globale, tradotte (le altre restano come sulla wiki)
+const OBTAIN_PHRASES = {
+    'Rare Summon': { it: 'Evocazione rara', es: 'Invocación rara', fr: 'Invocation rare', 'zh-CN': '稀有召唤', ja: 'レアガチャ' },
+    'Super Rare Summon (Event Only)': { it: 'Evocazione super rara (solo durante eventi)', es: 'Invocación súper rara (solo en eventos)', fr: 'Invocation super rare (événements uniquement)', 'zh-CN': '超稀有召唤（仅限活动）', ja: 'スーパーレアガチャ（イベント限定）' },
+    'Divine Summon': { it: 'Evocazione divina', es: 'Invocación divina', fr: 'Invocation divine', 'zh-CN': '神圣召唤', ja: 'ディバインガチャ' },
+    'Honor Summon': { it: 'Evocazione Onore', es: 'Invocación de honor', fr: "Invocation d'honneur", 'zh-CN': '荣誉召唤', ja: 'フレンドガチャ' },
+    'Super Honor Summon': { it: 'Evocazione Super Onore', es: 'Invocación de súper honor', fr: "Invocation super honneur", 'zh-CN': '超级荣誉召唤', ja: 'スーパーフレンドガチャ' },
+    'Summer Omni+ Summon (Limited Time)': { it: 'Evocazione Omni+ estiva (a tempo limitato)', es: 'Invocación Omni+ de verano (tiempo limitado)', fr: "Invocation Omni+ d'été (durée limitée)", 'zh-CN': '夏季Omni+召唤（限时）', ja: 'サマーOmni+ガチャ（期間限定）' },
+    'Starter Unit': { it: 'Unità iniziale', es: 'Unidad inicial', fr: 'Unité de départ', 'zh-CN': '初始单位', ja: '初期ユニット' },
+    'Vortex Arena Summon': { it: 'Evocazione Arena Vortice', es: 'Invocación Arena Vórtice', fr: 'Invocation Arène Vortex', 'zh-CN': '漩涡竞技场召唤', ja: 'ヴォルテックスアリーナガチャ' },
+    'Daily Spin': { it: 'Ruota giornaliera', es: 'Giro diario', fr: 'Roue quotidienne', 'zh-CN': '每日转盘', ja: 'デイリースピン' },
+    'Colosseum': { it: 'Colosseo', es: 'Coliseo', fr: 'Colisée', 'zh-CN': '斗技场', ja: 'コロシアム' },
+    'Various events in Event Bazaar': { it: 'Vari eventi nell’Event Bazaar', es: 'Varios eventos en el Event Bazaar', fr: "Divers événements de l'Event Bazaar", 'zh-CN': '活动集市中的各种活动', ja: 'イベントバザーの各種イベント' }
+};
+let obtainDataPromise = null;
+
+function loadObtainData() {
+    if (!obtainDataPromise) {
+        obtainDataPromise = fetch(OBTAIN_DATA_URL).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+    }
+    return obtainDataPromise;
+}
 
 function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function renderHowToObtain(u) {
+// l'unità da cui si evolve questa (cercando tra le evoluzioni di tutte le unità)
+function findPreEvolution(u) {
+    const id = String(u.realId);
+    for (const other of allUnits) {
+        for (const key of Object.keys(other)) {
+            if (!key.startsWith('evolution')) continue;
+            const evo = other[key];
+            if (evo && String(evo.nextId) === id && evo.prevId && String(evo.prevId) !== id) {
+                const prev = findUnitByRealId(evo.prevId);
+                if (prev) return prev;
+            }
+        }
+    }
+    return null;
+}
+
+async function renderHowToObtain(u) {
     const area = document.getElementById('obtainArea');
     const body = document.getElementById('obtainBody');
     if (!area || !body) return;
@@ -2025,27 +2106,88 @@ function renderHowToObtain(u) {
     setText('obtainHeadEvent', 'event');
     setText('obtainHeadBanner', 'banner');
 
-    const rows = Array.isArray(u && u.howToObtain) ? u.howToObtain.filter(Boolean) : [];
+    const lang = getCurrentLang();
+    let rows = [];      // { type, event, banner, translated, unitId }
+
+    const manual = Array.isArray(u && u.howToObtain) ? u.howToObtain.filter(Boolean) : [];
+    if (manual.length) {
+        rows = manual.map(r => ({
+            type: getLocalizedText(r.type) || '—',
+            event: getLocalizedText(r.event) || '—',
+            banner: String(r.banner || '').trim(),
+            translated: true
+        }));
+    } else {
+        area.style.display = 'none';
+        const data = await loadObtainData();
+        if (currentUnitOpen !== u) return;   // nel frattempo è stata aperta un'altra unità
+        const rec = data[String(u.realId)] || {};
+        const list = (lang === 'it' && rec.it) ? rec.it : (rec.en || rec.it || []);
+        const listLang = (list === rec.it) ? 'it' : 'en';
+        rows = list.map(([type, text]) => {
+            const phrase = listLang === 'en' && OBTAIN_PHRASES[text];
+            const tr = phrase && phrase[lang];
+            return {
+                type: getLocalizedText(OBTAIN_TYPES[type]) || type,
+                event: tr || text,
+                banner: '',
+                translated: !!tr || listLang === lang
+            };
+        });
+        if (!rows.length) {
+            const prev = findPreEvolution(u);
+            if (prev) {
+                rows.push({
+                    type: getLocalizedText(OBTAIN_TYPES.evolve),
+                    event: `${getLocalizedText(OBTAIN_TEXTS.evolveOf)} ${getActiveUnitName(prev)}`,
+                    banner: '',
+                    translated: true,
+                    unitId: prev.realId,
+                    thumb: prev.image
+                });
+            }
+        }
+    }
+
     if (rows.length === 0) {
         area.style.display = 'none';
         body.innerHTML = '';
         return;
     }
 
+    const hasBanner = rows.some(r => r.banner);
+    area.classList.toggle('no-banner', !hasBanner);
     body.innerHTML = rows.map(r => {
-        const type = escapeHtml(getLocalizedText(r.type) || '—');
-        const event = escapeHtml(getLocalizedText(r.event) || '—');
-        const banner = String(r.banner || '').trim();
-        const bannerHtml = banner
-            ? `<img class="obtain-banner" src="${escapeHtml(banner)}" alt="${event}" loading="lazy" onerror="this.replaceWith(document.createTextNode('—'))">`
+        const type = escapeHtml(r.type);
+        const eventText = escapeHtml(r.event);
+        const eventHtml = r.unitId
+            ? `<span class="obtain-unit-link evo-unit-link" data-unit-id="${escapeHtml(String(r.unitId))}" role="button" tabindex="0">${r.thumb ? `<img src="${escapeHtml(r.thumb)}" alt="" loading="lazy" draggable="false">` : ''}<span>${eventText}</span></span>`
+            : eventText;
+        const bannerHtml = r.banner
+            ? `<img class="obtain-banner" src="${escapeHtml(r.banner)}" alt="${eventText}" loading="lazy" onerror="this.replaceWith(document.createTextNode('—'))">`
             : '—';
         return `<tr>
             <td class="obtain-type notranslate">${type}</td>
-            <td class="obtain-event notranslate">${event}</td>
-            <td class="obtain-banner-cell">${bannerHtml}</td>
+            <td class="obtain-event${r.translated ? ' notranslate' : ''}">${eventHtml}</td>
+            ${hasBanner ? `<td class="obtain-banner-cell">${bannerHtml}</td>` : ''}
         </tr>`;
     }).join('');
+
+    initObtainLinks(area);
     area.style.display = '';
+}
+
+// "Evoluzione di ...": clic (o Invio) apre l'unità di prima
+function initObtainLinks(area) {
+    if (area.dataset.linksReady) return;
+    area.dataset.linksReady = '1';
+    const open = (el) => { const t = findUnitByRealId(el.dataset.unitId); if (t) openModal(t); };
+    area.addEventListener('click', (e) => { const el = e.target.closest('.obtain-unit-link'); if (el) open(el); });
+    area.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const el = e.target.closest('.obtain-unit-link');
+        if (el) { e.preventDefault(); open(el); }
+    });
 }
 
 function changeArenaBackground() {
