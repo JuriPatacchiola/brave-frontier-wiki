@@ -94124,9 +94124,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10181/10181_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10181/10181_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10181/10181_atk.png"
+      "default": "../video/Base enemy/Talos/Hermit Talos/Hermit-Talos-default.webm",
+      "idle": "../video/Base enemy/Talos/Hermit Talos/Hermit-Talos-idle.webm",
+      "atk": "../video/Base enemy/Talos/Hermit Talos/Hermit-Talos-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -94283,9 +94283,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10182/10182_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10182/10182_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10182/10182_atk.png"
+      "default": "../video/Base enemy/Talos/Mountaineer Talos/Mountaineer-Talos-default.webm",
+      "idle": "../video/Base enemy/Talos/Mountaineer Talos/Mountaineer-Talos-idle.webm",
+      "atk": "../video/Base enemy/Talos/Mountaineer Talos/Mountaineer-Talos-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -94442,9 +94442,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20181/20181_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20181/20181_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20181/20181_atk.png"
+      "default": "../video/Base enemy/Elize/Black Rose Elize/Black-Rose-Elize-default.webm",
+      "idle": "../video/Base enemy/Elize/Black Rose Elize/Black-Rose-Elize-idle.webm",
+      "atk": "../video/Base enemy/Elize/Black Rose Elize/Black-Rose-Elize-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -94601,9 +94601,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20182/20182_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20182/20182_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20182/20182_atk.png"
+      "default": "../video/Base enemy/Elize/Frozen Rose Elize/Frozen-Rose-Elize-default.webm",
+      "idle": "../video/Base enemy/Elize/Frozen Rose Elize/Frozen-Rose-Elize-idle.webm",
+      "atk": "../video/Base enemy/Elize/Frozen Rose Elize/Frozen-Rose-Elize-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -94760,9 +94760,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30181/30181_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30181/30181_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30181/30181_atk.png"
+      "default": "../video/Base enemy/Elton/Poet Elton/Poet-Elton-default.webm",
+      "idle": "../video/Base enemy/Elton/Poet Elton/Poet-Elton-idle.webm",
+      "atk": "../video/Base enemy/Elton/Poet Elton/Poet-Elton-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -94919,9 +94919,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30182/30182_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30182/30182_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30182/30182_atk.png"
+      "default": "../video/Base enemy/Elton/Bard Elton/Bard-Elton-default.webm",
+      "idle": "../video/Base enemy/Elton/Bard Elton/Bard-Elton-idle.webm",
+      "atk": "../video/Base enemy/Elton/Bard Elton/Bard-Elton-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95078,9 +95078,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40181/40181_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40181/40181_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40181/40181_atk.png"
+      "default": "../video/Base enemy/Parmi/Wild Cat Parmi/Wild-Cat-Parmi-default.webm",
+      "idle": "../video/Base enemy/Parmi/Wild Cat Parmi/Wild-Cat-Parmi-idle.webm",
+      "atk": "../video/Base enemy/Parmi/Wild Cat Parmi/Wild-Cat-Parmi-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95237,9 +95237,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40182/40182_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40182/40182_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40182/40182_atk.png"
+      "default": "../video/Base enemy/Parmi/Thunder Cat Parmi/Thunder-Cat-Parmi-default.webm",
+      "idle": "../video/Base enemy/Parmi/Thunder Cat Parmi/Thunder-Cat-Parmi-idle.webm",
+      "atk": "../video/Base enemy/Parmi/Thunder Cat Parmi/Thunder-Cat-Parmi-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95396,9 +95396,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50181/50181_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50181/50181_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50181/50181_atk.png"
+      "default": "../video/Base enemy/Amul/Shrine Girl Amul/Shrine-Girl-Amul-default.webm",
+      "idle": "../video/Base enemy/Amul/Shrine Girl Amul/Shrine-Girl-Amul-idle.webm",
+      "atk": "../video/Base enemy/Amul/Shrine Girl Amul/Shrine-Girl-Amul-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95555,9 +95555,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50182/50182_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50182/50182_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50182/50182_atk.png"
+      "default": "../video/Base enemy/Amul/Holy Maiden Amul/Holy-Maiden-Amul-default.webm",
+      "idle": "../video/Base enemy/Amul/Holy Maiden Amul/Holy-Maiden-Amul-idle.webm",
+      "atk": "../video/Base enemy/Amul/Holy Maiden Amul/Holy-Maiden-Amul-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95714,9 +95714,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60191/60191_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60191/60191_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60191/60191_atk.png"
+      "default": "../video/Base enemy/Zeul/Gambler Zeul/Gambler-Zeul-default.webm",
+      "idle": "../video/Base enemy/Zeul/Gambler Zeul/Gambler-Zeul-idle.webm",
+      "atk": "../video/Base enemy/Zeul/Gambler Zeul/Gambler-Zeul-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -95873,9 +95873,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60192/60192_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60192/60192_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60192/60192_atk.png"
+      "default": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm",
+      "idle": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm",
+      "atk": "../video/Base enemy/Zeul/High Roller Zeul/High-Roller-Zeul-default.webm"
     },
     "effects": {
       "atk": "",
