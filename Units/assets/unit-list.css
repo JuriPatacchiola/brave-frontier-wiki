@@ -1408,7 +1408,7 @@ body.modal-open {
     }
 
     .unit_box_top {
-        height: 260px;
+        height: 210px;   /* altezza dell'animazione su telefono (prima 260px) */
         flex: none;
     }
 
@@ -2248,8 +2248,8 @@ body.modal-open {
 
     /* Telefono */
     .unit_gif {
-        --pixel-scale: 0.55;
-        --anim-size: 650px;
+        --pixel-scale: 0.5;   /* riquadro più basso (210px): personaggi solo un po' più piccoli */
+        --anim-size: 590px;
         --anim-zoom: 1.8;
         --anim-x: 0px;
         --anim-y: 0px;
@@ -2915,12 +2915,73 @@ video {
     margin-top: 14px;
 }
 
-.imp-block h4 {
+/* tendina: il pulsante con il titolo apre e chiude, il pannello si allarga in modo morbido */
+.imp-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    background: #111;
+    border: 1px solid #333;
+    border-left: 3px solid #d4af37;
+    border-radius: 4px;
     color: #d4af37;
-    margin: 0 0 8px;
+    font: inherit;
     font-size: 0.75rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.imp-toggle:hover,
+.imp-toggle:focus-visible {
+    background: #161616;
+    border-color: #d4af37;
+}
+
+.imp-chevron {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform 0.35s ease;
+}
+
+.imp-block.open .imp-chevron {
+    transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.imp-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    transition: grid-template-rows 0.35s ease, opacity 0.3s ease, visibility 0s linear 0.35s;
+}
+
+.imp-block.open .imp-panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transition: grid-template-rows 0.35s ease, opacity 0.3s ease, visibility 0s;
+}
+
+.imp-panel-inner {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.imp-panel-inner .imp-row {
+    padding-top: 8px;
+}
+
+.imp-block.no-anim .imp-panel,
+.imp-block.no-anim .imp-chevron {
+    transition: none;
 }
 
 .imp-row {
@@ -3160,5 +3221,40 @@ button.op-mat:hover {
 @media (max-width: 768px) {
     .sp-desc {
         font-size: 0.85rem;
+    }
+}
+
+/* Imp più piccoli su telefono */
+@media (max-width: 768px) {
+    .imp-block {
+        margin-top: 10px;
+    }
+
+    .imp-toggle {
+        padding: 7px 10px;
+        font-size: 0.66rem;
+    }
+
+    .imp-row {
+        gap: 4px;
+    }
+
+    .imp-item {
+        padding: 3px 1px;
+        gap: 0;
+        border-radius: 4px;
+    }
+
+    .imp-item img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .imp-count {
+        font-size: 0.72rem;
+    }
+
+    .imp-stat {
+        font-size: 0.52rem;
     }
 }

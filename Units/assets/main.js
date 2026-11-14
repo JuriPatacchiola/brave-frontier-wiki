@@ -1673,6 +1673,7 @@ const STAT_LABELS = {
 };
 const IMP_TEXTS = {
     title: { it: 'Imp per il massimo', en: 'Imps to max out', es: 'Imps para el máximo', fr: 'Imps pour le maximum', 'zh-CN': '加满所需Imp', ja: '上限までのインプ' },
+    show: { it: 'Mostra gli Imp', en: 'Show Imps', es: 'Mostrar Imps', fr: 'Afficher les Imps', 'zh-CN': '显示Imp', ja: 'インプを表示' },
     almighty: { it: 'tutte', en: 'all', es: 'todas', fr: 'toutes', 'zh-CN': '全部', ja: '全て' }
 };
 
@@ -1688,7 +1689,9 @@ function renderImps(u) {
         area.className = 'imp-block';
         grid.parentNode.insertBefore(area, grid.nextSibling);
         initUnitLinks(area);
+        initImpToggle(area);
     }
+    setImpOpen(area, false, true);   // ogni unità si apre con la tendina chiusa
     const imp = u && u.battle && u.battle.imp;
     if (!imp || !['hp', 'atk', 'def', 'rec'].some(k => imp[k] > 0)) { area.style.display = 'none'; area.innerHTML = ''; return; }
 
@@ -1709,10 +1712,50 @@ function renderImps(u) {
             </button>`;
     }).join('');
 
-    area.innerHTML = `<h4>${escapeHtml(getLocalizedText(IMP_TEXTS.title))}</h4>
-        <div class="imp-row">${items}</div>`;
+    area.innerHTML = `<button type="button" class="imp-toggle" aria-expanded="false" title="${escapeHtml(getLocalizedText(IMP_TEXTS.show))}">
+            <span class="imp-title">${escapeHtml(getLocalizedText(IMP_TEXTS.title))}</span>
+            <span class="imp-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="imp-panel"><div class="imp-panel-inner"><div class="imp-row">${items}</div></div></div>`;
     area.classList.add('notranslate');
     area.style.display = '';
+}
+
+/* Tendina degli Imp: si apre e si chiude con un clic, in modo morbido.
+   Quando si scorre la scheda verso il basso (o verso l'alto) si richiude da sola. */
+const IMP_SCROLL_CLOSE = 24;   // pixel di scorrimento dopo i quali la tendina si chiude
+let impScrollStart = null;     // posizione di scorrimento quando è stata aperta
+
+function scrollPosOf(target) {
+    if (!target || target === document || target === document.documentElement || target === document.body) {
+        return { el: document, top: window.scrollY || document.documentElement.scrollTop || 0 };
+    }
+    return { el: target, top: target.scrollTop || 0 };
+}
+
+function setImpOpen(area, open, instant = false) {
+    if (!area) return;
+    if (instant) area.classList.add('no-anim');
+    area.classList.toggle('open', open);
+    const btn = area.querySelector('.imp-toggle');
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    impScrollStart = open ? new Map() : null;
+    if (instant) requestAnimationFrame(() => requestAnimationFrame(() => area.classList.remove('no-anim')));
+}
+
+function initImpToggle(area) {
+    area.addEventListener('click', (e) => {
+        if (!e.target.closest('.imp-toggle')) return;
+        setImpOpen(area, !area.classList.contains('open'));
+    });
+    // qualsiasi scorrimento (pagina o scheda) richiude la tendina
+    document.addEventListener('scroll', (e) => {
+        if (!impScrollStart || !area.classList.contains('open')) return;
+        const pos = scrollPosOf(e.target);
+        if (area.contains(pos.el)) return;
+        if (!impScrollStart.has(pos.el)) { impScrollStart.set(pos.el, pos.top); return; }
+        if (Math.abs(pos.top - impScrollStart.get(pos.el)) > IMP_SCROLL_CLOSE) setImpOpen(area, false);
+    }, { capture: true, passive: true });
 }
 
 // clic su un Imp (o sulla copia dell'unità negli Omni+): si apre quella unità
