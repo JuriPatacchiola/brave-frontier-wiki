@@ -102723,9 +102723,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10363/10363_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10363/10363_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10363/10363_atk.png"
+      "default": "../video/Summon/4 star start/Ramna/Fire Step Ramna/Fire-Step-Ramna-default.webm",
+      "idle": "../video/Summon/4 star start/Ramna/Fire Step Ramna/Fire-Step-Ramna-idle.webm",
+      "atk": "../video/Summon/4 star start/Ramna/Fire Step Ramna/Fire-Step-Ramna-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -102930,9 +102930,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10364/10364_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10364/10364_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10364/10364_atk.png"
+      "default": "../video/Summon/4 star start/Ramna/Fire Dance Ramna/Fire-Dance-Ramna-default.webm",
+      "idle": "../video/Summon/4 star start/Ramna/Fire Dance Ramna/Fire-Dance-Ramna-idle.webm",
+      "atk": "../video/Summon/4 star start/Ramna/Fire Dance Ramna/Fire-Dance-Ramna-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -103155,9 +103155,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10365/10365_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10365/10365_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10365/10365_atk.png"
+      "default": "../video/Summon/4 star start/Ramna/Fire Samba Ramna/Fire-Samba-Ramna-default.webm",
+      "idle": "../video/Summon/4 star start/Ramna/Fire Samba Ramna/Fire-Samba-Ramna-idle.webm",
+      "atk": "../video/Summon/4 star start/Ramna/Fire Samba Ramna/Fire-Samba-Ramna-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -103363,9 +103363,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20353/20353_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20353/20353_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20353/20353_atk.png"
+      "default": "../video/Summon/4 star start/Raydn/Spear Fist Raydn/Spear-Fist-Raydn-default.webm",
+      "idle": "../video/Summon/4 star start/Raydn/Spear Fist Raydn/Spear-Fist-Raydn-idle.webm",
+      "atk": "../video/Summon/4 star start/Raydn/Spear Fist Raydn/Spear-Fist-Raydn-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -103570,9 +103570,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20354/20354_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20354/20354_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20354/20354_atk.png"
+      "default": "../video/Summon/4 star start/Raydn/Spear Arms Raydn/Spear-Arms-Raydn-default.webm",
+      "idle": "../video/Summon/4 star start/Raydn/Spear Arms Raydn/Spear-Arms-Raydn-idle.webm",
+      "atk": "../video/Summon/4 star start/Raydn/Spear Arms Raydn/Spear-Arms-Raydn-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -103795,9 +103795,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20355/20355_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20355/20355_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20355/20355_atk.png"
+      "default": "../video/Summon/4 star start/Raydn/Spear King Raydn/Spear-King-Raydn-default.webm",
+      "idle": "../video/Summon/4 star start/Raydn/Spear King Raydn/Spear-King-Raydn-idle.webm",
+      "atk": "../video/Summon/4 star start/Raydn/Spear King Raydn/Spear-King-Raydn-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -104003,9 +104003,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30343/30343_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30343/30343_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30343/30343_atk.png"
+      "default": "../video/Summon/4 star start/Ophelia/Battle Girl Ophelia/Battle-Girl-Ophelia-default.webm",
+      "idle": "../video/Summon/4 star start/Ophelia/Battle Girl Ophelia/Battle-Girl-Ophelia-idle.webm",
+      "atk": "../video/Summon/4 star start/Ophelia/Battle Girl Ophelia/Battle-Girl-Ophelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -104210,9 +104210,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30344/30344_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30344/30344_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30344/30344_atk.png"
+      "default": "../video/Summon/4 star start/Ophelia/War Girl Ophelia/War-Girl-Ophelia-default.webm",
+      "idle": "../video/Summon/4 star start/Ophelia/War Girl Ophelia/War-Girl-Ophelia-idle.webm",
+      "atk": "../video/Summon/4 star start/Ophelia/War Girl Ophelia/War-Girl-Ophelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -104435,9 +104435,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30345/30345_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30345/30345_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30345/30345_atk.png"
+      "default": "../video/Summon/4 star start/Ophelia/War Queen Ophelia/War-Queen-Ophelia-default.webm",
+      "idle": "../video/Summon/4 star start/Ophelia/War Queen Ophelia/War-Queen-Ophelia-idle.webm",
+      "atk": "../video/Summon/4 star start/Ophelia/War Queen Ophelia/War-Queen-Ophelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -104643,9 +104643,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40343/40343_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40343/40343_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40343/40343_atk.png"
+      "default": "../video/Summon/4 star start/Grybe/Mech Arms Grybe/Mech-Arms-Grybe-default.webm",
+      "idle": "../video/Summon/4 star start/Grybe/Mech Arms Grybe/Mech-Arms-Grybe-idle.webm",
+      "atk": "../video/Summon/4 star start/Grybe/Mech Arms Grybe/Mech-Arms-Grybe-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -104850,9 +104850,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40344/40344_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40344/40344_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40344/40344_atk.png"
+      "default": "../video/Summon/4 star start/Grybe/Mech Cannon Grybe/Mech-Cannon-Grybe-default.webm",
+      "idle": "../video/Summon/4 star start/Grybe/Mech Cannon Grybe/Mech-Cannon-Grybe-idle.webm",
+      "atk": "../video/Summon/4 star start/Grybe/Mech Cannon Grybe/Mech-Cannon-Grybe-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -105075,9 +105075,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40345/40345_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40345/40345_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40345/40345_atk.png"
+      "default": "../video/Summon/4 star start/Grybe/Mech God Grybe/Mech-God-Grybe-default.webm",
+      "idle": "../video/Summon/4 star start/Grybe/Mech God Grybe/Mech-God-Grybe-idle.webm",
+      "atk": "../video/Summon/4 star start/Grybe/Mech God Grybe/Mech-God-Grybe-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -105283,9 +105283,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50403/50403_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50403/50403_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50403/50403_atk.png"
+      "default": "../video/Summon/4 star start/Alyut/Light Blade Alyut/Light-Blade-Alyut-default.webm",
+      "idle": "../video/Summon/4 star start/Alyut/Light Blade Alyut/Light-Blade-Alyut-idle.webm",
+      "atk": "../video/Summon/4 star start/Alyut/Light Blade Alyut/Light-Blade-Alyut-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -221138,9 +221138,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40346/40346_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40346/40346_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40346/40346_atk.png"
+      "default": "../video/Summon/4 star start/Grybe/Optimum Mecha Grybe/Optimum-Mecha-Grybe-default.webm",
+      "idle": "../video/Summon/4 star start/Grybe/Optimum Mecha Grybe/Optimum-Mecha-Grybe-idle.webm",
+      "atk": "../video/Summon/4 star start/Grybe/Optimum Mecha Grybe/Optimum-Mecha-Grybe-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -228474,9 +228474,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20356/20356_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20356/20356_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20356/20356_atk.png"
+      "default": "../video/Summon/4 star start/Raydn/Icicle Lance Raydn/Icicle-Lance-Raydn-default.webm",
+      "idle": "../video/Summon/4 star start/Raydn/Icicle Lance Raydn/Icicle-Lance-Raydn-idle.webm",
+      "atk": "../video/Summon/4 star start/Raydn/Icicle Lance Raydn/Icicle-Lance-Raydn-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -233224,9 +233224,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10366/10366_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10366/10366_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10366/10366_atk.png"
+      "default": "../video/Summon/4 star start/Ramna/Siva Afi Ramna/Siva-Afi-Ramna-default.webm",
+      "idle": "../video/Summon/4 star start/Ramna/Siva Afi Ramna/Siva-Afi-Ramna-idle.webm",
+      "atk": "../video/Summon/4 star start/Ramna/Siva Afi Ramna/Siva-Afi-Ramna-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -233487,9 +233487,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30346/30346_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30346/30346_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30346/30346_atk.png"
+      "default": "../video/Summon/4 star start/Ophelia/Cyclonic Heroine Ophelia/Cyclonic-Heroine-Ophelia-default.webm",
+      "idle": "../video/Summon/4 star start/Ophelia/Cyclonic Heroine Ophelia/Cyclonic-Heroine-Ophelia-idle.webm",
+      "atk": "../video/Summon/4 star start/Ophelia/Cyclonic Heroine Ophelia/Cyclonic-Heroine-Ophelia-atk.webm"
     },
     "effects": {
       "atk": "",
