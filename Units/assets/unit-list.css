@@ -3309,3 +3309,48 @@ button.op-mat:hover {
     font-size: 0.75rem;
     color: #777;
 }
+
+/* Imp su PC e tablet: più piccoli, così la tendina aperta entra tutta nel riquadro
+   delle statistiche senza essere tagliata (se proprio non entra, il riquadro scorre) */
+@media (min-width: 601px) {
+    .unit_stats_side {
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+    .imp-block {
+        margin-top: 10px;
+    }
+
+    .imp-toggle {
+        padding: 6px 10px;
+        font-size: 0.68rem;
+    }
+
+    .imp-panel-inner .imp-row {
+        padding-top: 6px;
+    }
+
+    .imp-row {
+        gap: 5px;
+    }
+
+    .imp-item {
+        padding: 3px 1px 4px;
+        gap: 0;
+        border-radius: 4px;
+    }
+
+    .imp-item img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .imp-count {
+        font-size: 0.74rem;
+    }
+
+    .imp-stat {
+        font-size: 0.56rem;
+    }
+}

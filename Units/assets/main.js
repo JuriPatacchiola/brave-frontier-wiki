@@ -1133,6 +1133,7 @@ async function startApp() {
         const [rawData, battle] = await Promise.all([res.json(), loadBattleData()]);
 
         allUnits = rawData.map(u => {
+            fixUnitData(u);
             addBattleData(u, battle);
             if (u.name) u.name = u.name.replace(/,/g, '');
             return u;
@@ -1204,18 +1205,51 @@ const canHover = window.matchMedia ? window.matchMedia('(hover: hover) and (poin
    e "unit_ills_thum_10323.png" sono due file diversi. Se un'immagine non si trova,
    il sito riprova (una sola volta) con la prima lettera del nome cambiata
    (u -> U oppure U -> u). Così funzionano tutte, comunque sia scritto il nome. */
+// tentativi alternativi per un'immagine che non si trova:
+//  1) prima lettera del nome maiuscola/minuscola
+//  2) cartella "img Europe" <-> cartella normale (alcune unità europee hanno i file nell'altra)
+//  3) entrambe le cose insieme
+function imageAlternatives(src) {
+    const flipCase = s => {
+        const m = s.match(/^(.*\/)([a-zA-Z])([^/]*)$/);
+        if (!m) return null;
+        const f = m[2] === m[2].toLowerCase() ? m[2].toUpperCase() : m[2].toLowerCase();
+        return m[1] + f + m[3];
+    };
+    const swapFolder = s => {
+        const rules = [
+            [/img(?:%20| )Europe\/Squere(?:%20| )Img\//i, 'Squere Img/'],
+            [/img(?:%20| )Europe\/Full(?:%20| )Art\//i, 'Full Art/'],
+            [/\/Unit\/Squere(?:%20| )Img\//i, '/Unit/img Europe/Squere Img/'],
+            [/\/Unit\/Full(?:%20| )Art\//i, '/Unit/img Europe/Full Art/']
+        ];
+        for (const [rx, to] of rules) if (rx.test(s)) return s.replace(rx, to);
+        return null;
+    };
+    const out = [];
+    const c = flipCase(src); if (c) out.push(c);
+    const f = swapFolder(src);
+    if (f) { out.push(f); const fc = flipCase(f); if (fc) out.push(fc); }
+    return out;
+}
+
 window.addEventListener('error', (e) => {
     const el = e.target;
     if (!el || el.tagName !== 'IMG') return;
     const src = el.getAttribute('src') || '';
-    if (!src || el.dataset.caseRetry === src) return;   // anche il secondo tentativo è fallito
-    const m = src.match(/^(.*\/)([a-zA-Z])([^/]*)$/);
-    if (!m) return;
-    const first = m[2] === m[2].toLowerCase() ? m[2].toUpperCase() : m[2].toLowerCase();
-    const retry = m[1] + first + m[3];
-    el.dataset.caseRetry = retry;
-    e.stopPropagation();   // gli altri controlli "immagine mancante" aspettano il secondo tentativo
-    el.src = retry;
+    if (!src) return;
+    // primo errore per questo indirizzo: si preparano i tentativi
+    if (!el.dataset.retryList || !JSON.parse(el.dataset.retryAll || '[]').includes(src)) {
+        const alts = imageAlternatives(src);
+        el.dataset.retryAll = JSON.stringify([src, ...alts]);
+        el.dataset.retryList = JSON.stringify(alts);
+    }
+    const list = JSON.parse(el.dataset.retryList);
+    const next = list.shift();
+    el.dataset.retryList = JSON.stringify(list);
+    if (!next) return;                       // finiti i tentativi: l'errore passa avanti
+    e.stopPropagation();   // gli altri controlli "immagine mancante" aspettano l'ultimo tentativo
+    el.src = next;
 }, true);
 
 const failedFullArts = new Set();   // full art inesistenti: non le riproviamo
@@ -1559,7 +1593,68 @@ function formatStat(n) {
     return (typeof n === 'number') ? n.toLocaleString('en-US') : String(n);
 }
 
+/* CORREZIONI AUTOMATICHE DEI DATI
+   1) Evoluzioni sbagliate in units.json: questi passaggi non esistono nel gioco
+      (l'unità di arrivo non è l'evoluzione di quella di partenza), quindi non si mostrano.
+      Formato: 'ID di partenza>ID di arrivo'
+   2) Icona sbagliata: se "image" punta all'icona di un'altra unità, si usa quella giusta. */
+const EVOLUTION_WRONG_STEPS = [
+    '720255>720257',   // Tiara Apostolo della festa -> Natasha Pugile Rapido (Natasha non ha fasi)
+    '730285>730287',   // Dilma Pugno della festa -> Frigg Dea Preveggente (Frigg non ha fasi)
+    '750315>750317'    // Lilith -> Odin Dio della Creazione
+];
+
+function fixUnitData(u) {
+    Object.keys(u).forEach(key => {
+        if (!key.startsWith('evolution')) return;
+        const evo = u[key];
+        if (evo && EVOLUTION_WRONG_STEPS.includes(`${evo.prevId}>${evo.nextId}`)) u[key] = null;
+    });
+    // restano solo i passaggi collegati a questa unità (la sua linea evolutiva)
+    const keys = Object.keys(u).filter(k => k.startsWith('evolution') && u[k] && u[k].prevId);
+    const linked = new Set([String(u.realId)]);
+    let grew = true;
+    while (grew) {
+        grew = false;
+        keys.forEach(k => {
+            const a = String(u[k].prevId), z = String(u[k].nextId);
+            if ((linked.has(a) || linked.has(z)) && !(linked.has(a) && linked.has(z))) { linked.add(a); linked.add(z); grew = true; }
+        });
+    }
+    keys.forEach(k => { if (!linked.has(String(u[k].prevId))) u[k] = null; });
+    const img = String(u.image || '');
+    const m = img.match(/^(.*thum_)(\d+)(\.\w+)$/i);
+    if (m && m[2] !== String(u.realId) && /^\d+$/.test(String(u.realId))) {
+        u.image = m[1] + u.realId + m[3];
+    }
+}
+
+// icona quadrata di un'unità (le unità Europa stanno in un'altra cartella)
+function unitThumbPath(id) {
+    const s = String(id);
+    return s.startsWith('7')
+        ? `../img/Unit/img Europe/Squere Img/unit_ills_thum_${s}.png`
+        : `../img/Unit/Squere Img/unit_ills_thum_${s}.png`;
+}
+
+// materiali evolutivi vuoti in units.json: si prendono dai dati del gioco ("evo" in unit-battle.json)
+function addEvolutionMaterials(u, battle) {
+    Object.keys(u).forEach(key => {
+        if (!key.startsWith('evolution')) return;
+        const evo = u[key];
+        const r = evo && evo.recipe;
+        if (!r || (Array.isArray(r.materials) && r.materials.length) || (Array.isArray(r.items) && r.items.length)) return;
+        const prev = battle && battle[String(evo.prevId)];
+        const src = prev && prev.evo;
+        if (!src || String(src.to) !== String(evo.nextId)) return;
+        r.materials = (src.units || []).map(unitThumbPath);
+        r.items = (src.items || []).slice();
+        if (!r.zel && src.zel) r.zel = src.zel;
+    });
+}
+
 function addBattleData(u, battle) {
+    addEvolutionMaterials(u, battle);
     const data = battle && battle[String(u.realId)];
     if (!data) return;
     u.battle = data;
@@ -2024,10 +2119,11 @@ function renderOmniPlus(u) {
    2) Altrimenti si usa data/unit-obtain.json, preso dalla wiki globale (inglese)
       e dalla wiki italiana di Fandom:
       "10011": { "en": [["starter", "Starter Unit"], ["honor", "Honor Summon"], ...],
-                 "it": [["event", "Eroe di Agni"], ...] }
-      In italiano si usa la lista della wiki italiana (se c'è), nelle altre lingue quella globale.
-   3) Se non c'è niente ma l'unità è l'evoluzione di un'altra, si scrive
-      "Evoluzione di ..." (cliccando si apre l'unità di prima).
+                 "it": [["event", "Eroe di Agni"], ...],      (wiki italiana + righe generiche tradotte)
+                 "itx": [...] }                                 (lista globale tradotta, se manca "it")
+      In italiano si usa "it" (o "itx"), nelle altre lingue la lista globale.
+   3) Se non c'è niente la sezione resta nascosta (le evoluzioni non ripetono
+      come si ottiene l'unità di prima).
    La colonna Banner compare solo se almeno una riga ha un'immagine.
    ========================================================================== */
 const OBTAIN_DATA_URL = '../data/unit-obtain.json';
@@ -2078,22 +2174,6 @@ function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-// l'unità da cui si evolve questa (cercando tra le evoluzioni di tutte le unità)
-function findPreEvolution(u) {
-    const id = String(u.realId);
-    for (const other of allUnits) {
-        for (const key of Object.keys(other)) {
-            if (!key.startsWith('evolution')) continue;
-            const evo = other[key];
-            if (evo && String(evo.nextId) === id && evo.prevId && String(evo.prevId) !== id) {
-                const prev = findUnitByRealId(evo.prevId);
-                if (prev) return prev;
-            }
-        }
-    }
-    return null;
-}
-
 async function renderHowToObtain(u) {
     const area = document.getElementById('obtainArea');
     const body = document.getElementById('obtainBody');
@@ -2122,31 +2202,26 @@ async function renderHowToObtain(u) {
         const data = await loadObtainData();
         if (currentUnitOpen !== u) return;   // nel frattempo è stata aperta un'altra unità
         const rec = data[String(u.realId)] || {};
-        const list = (lang === 'it' && rec.it) ? rec.it : (rec.en || rec.it || []);
-        const listLang = (list === rec.it) ? 'it' : 'en';
-        rows = list.map(([type, text]) => {
+        // italiano: lista della wiki italiana (completata con le righe generiche della globale),
+        // oppure la lista globale già tradotta ("itx"); nelle altre lingue la lista globale
+        const enList = rec.en || [];
+        let list = enList, listLang = 'en';
+        if (lang === 'it' && rec.it) { list = rec.it; listLang = 'it'; }
+        else if (lang === 'it' && rec.itx) { list = rec.itx; listLang = 'itx'; }
+        else if (!enList.length && rec.it) { list = rec.it; listLang = 'it'; }
+        rows = list.map(([type, text], idx) => {
             const phrase = listLang === 'en' && OBTAIN_PHRASES[text];
             const tr = phrase && phrase[lang];
+            const translated = listLang === 'itx'
+                ? !(enList[idx] && enList[idx][1] === text)    // riga rimasta in inglese: la traduce Google
+                : (!!tr || listLang === lang);
             return {
                 type: getLocalizedText(OBTAIN_TYPES[type]) || type,
                 event: tr || text,
                 banner: '',
-                translated: !!tr || listLang === lang
+                translated
             };
         });
-        if (!rows.length) {
-            const prev = findPreEvolution(u);
-            if (prev) {
-                rows.push({
-                    type: getLocalizedText(OBTAIN_TYPES.evolve),
-                    event: `${getLocalizedText(OBTAIN_TEXTS.evolveOf)} ${getActiveUnitName(prev)}`,
-                    banner: '',
-                    translated: true,
-                    unitId: prev.realId,
-                    thumb: prev.image
-                });
-            }
-        }
     }
 
     if (rows.length === 0) {
@@ -2449,9 +2524,15 @@ async function toggleFullArt() {
    ========================================================================== */
 const FULLART_TOP_MARGIN = 24;     // spazio libero sopra l'illustrazione (px)
 const FULLART_MAX_UPSCALE = 2;     // un'immagine piccola si ingrandisce al massimo 2 volte
-const FULLART_CHAR_SIZE = 0.6;         // altezza del personaggio su PC: 0.6 = 60% dello spazio sopra il puntino
-const FULLART_CHAR_SIZE_NARROW = 0.5;  // la stessa cosa su telefono e tablet in verticale
+const FULLART_CHAR_SIZE = 0.7;         // altezza del personaggio su PC: 0.7 = 70% dello spazio sopra il puntino
+const FULLART_CHAR_SIZE_NARROW = 0.58; // la stessa cosa su telefono e tablet in verticale
 const FULLART_EFFECT_OVERFLOW = 1;     // quanto il disegno può uscire dallo schermo (1 = mai, niente tagli)
+/* Quello che sta SOTTO i piedi (acqua, fuoco, onde) non deve uscire dal cerchio colorato:
+   arriva al massimo a FULLART_BELOW_CIRCLE di metà altezza del cerchio.
+   Se è troppo lungo, prima il personaggio si alza un po' sopra il puntino (fluttua, al massimo
+   FULLART_MAX_LIFT di metà altezza del cerchio), e solo se non basta diventa più piccolo. */
+const FULLART_BELOW_CIRCLE = 0.7;
+const FULLART_MAX_LIFT = 0.5;
 const fullArtMeasureCache = new Map();
 const FULLART_CENTERS_URL = '../data/fullart-centers.json';
 let fullArtCenters = null;          // dati di data/fullart-centers.json (quando arrivano)
@@ -2641,13 +2722,28 @@ function placeFullArt() {
     const fit = [(dotY - FULLART_TOP_MARGIN) / Math.max(1, m.bottom - m.top)];
     if (m.anchorX > m.left) fit.push((dotX - side) / (m.anchorX - m.left));
     if (m.right > m.anchorX) fit.push((boxRect.width - side - dotX) / (m.right - m.anchorX));
-    if (m.fullBottom > m.bottom) fit.push((boxRect.height - dotY - 4) / (m.fullBottom - m.bottom));
     const fitAll = Math.min(...fit);
     // si usa la grandezza uguale per tutti; gli effetti possono uscire dallo schermo,
     // ma non troppo (FULLART_EFFECT_OVERFLOW)
-    const s = Math.max(0.001, Math.min(sameSize, fitAll * FULLART_EFFECT_OVERFLOW, FULLART_MAX_UPSCALE));
+    let s = Math.max(0.001, Math.min(sameSize, fitAll * FULLART_EFFECT_OVERFLOW, FULLART_MAX_UPSCALE));
+    // 3) sotto i piedi: dentro il cerchio (e dentro lo schermo)
+    let lift = 0;                                             // quanto il personaggio sta sopra il puntino (px)
+    const under = (m.fullBottom || m.bottom) - m.bottom;      // pezzo di disegno sotto i piedi (px del file)
+    if (under > 0) {
+        const screenBelow = boxRect.height - dotY - 4;
+        const hasCircle = cr && cr.height;
+        const below = hasCircle ? Math.min(screenBelow, cr.height / 2 * FULLART_BELOW_CIRCLE) : screenBelow;
+        const maxLift = hasCircle ? cr.height / 2 * FULLART_MAX_LIFT : 0;
+        const topRoom = dotY - FULLART_TOP_MARGIN;
+        // se anche alzandolo del massimo non ci sta, si rimpicciolisce
+        s = Math.min(s, (below + maxLift) / under);
+        // alzandolo, deve comunque restare tutto sotto il bordo in alto
+        if (s * under > below) s = Math.min(s, (topRoom + below) / Math.max(1, m.fullBottom - m.top));
+        s = Math.max(0.001, s);
+        lift = Math.min(maxLift, Math.max(0, s * under - below));
+    }
     img.style.setProperty('--fa-left', (dotX - m.anchorX * s).toFixed(1) + 'px');
-    img.style.setProperty('--fa-top', (dotY - m.bottom * s).toFixed(1) + 'px');
+    img.style.setProperty('--fa-top', (dotY - lift - m.bottom * s).toFixed(1) + 'px');
     img.style.setProperty('--fa-width', (img.naturalWidth * s).toFixed(1) + 'px');
     img.classList.add('is-fitted');
     img.classList.remove('is-loading');
@@ -3087,6 +3183,22 @@ function applyPixelScale(el) {
     el.setAttribute('data-pixel-fit', '');
 }
 
+/* OMBRA SISTEMATA A MANO: per le unità dove il sito sbaglia a trovare l'ombra
+   (per esempio un'aura scura scambiata per l'ombra), qui si scrive dove sta davvero.
+   Nome = nome del file senza "-default", "-idle", "-atk" (vale per tutte e tre).
+   x = centro dell'ombra da sinistra, y = bordo basso dell'ombra, cy = centro dell'ombra
+   (da 0 a 1 rispetto alla grandezza del file). */
+const ANIM_GROUND_FIX = {
+    'Phantom-Victor-Zephyr': { x: 0.5855, y: 0.762, cy: 0.742 }   // Zefiro fantasma vincente
+};
+
+function animGroundFix(el) {
+    let src = String(el.currentSrc || el.src || '');
+    try { src = decodeURIComponent(src); } catch (err) { /* nome già leggibile */ }
+    const name = src.split(/[?#]/)[0].split('/').pop().replace(/-(default|idle|atk)\.\w+$/i, '');
+    return ANIM_GROUND_FIX[name] || null;
+}
+
 // Misura il personaggio sul primo fotogramma del file: punto a terra (ombra o piedi) e grandezza.
 // Restituisce null se il file non è ancora pronto. Si usa per l'animazione grande e per le basi delle evoluzioni.
 function measureCharacter(el) {
@@ -3140,9 +3252,12 @@ function measureCharacter(el) {
             const glowY = shadow ? null : groundGlowCenter(pixels, canvas.width, canvas.height, rr.first, lowest, bottom);
             const blob = glowY === null ? null : findDarkShadow(pixels, canvas.width, canvas.height, rr.first, lowest, cr.last - cr.first + 1);
             if (blob) { groundX = blob.x; groundY = blob.y; }
+            // ombra sistemata a mano (ANIM_GROUND_FIX), se c'è
+            const fix = animGroundFix(el);
+            if (fix) { groundX = fix.x; groundY = fix.y; }
             // per le basi delle evoluzioni: il centro dell'ombra (o i piedi, se l'ombra non c'è)
             m.standX = groundX;
-            m.standY = shadow ? shadow.cy : (blob ? blob.cy : (glowY !== null ? glowY : groundY));
+            m.standY = fix ? fix.cy : (shadow ? shadow.cy : (blob ? blob.cy : (glowY !== null ? glowY : groundY)));
             m.left = cr.first / canvas.width;
             m.right = (cr.last + 1) / canvas.width;
             m.top = rr.first / canvas.height;
