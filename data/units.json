@@ -112568,9 +112568,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60483/60483_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60483/60483_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60483/60483_atk.png"
+      "default": "../video/God Boss/Mare/Disciple Mare/Disciple-Mare-default.webm",
+      "idle": "../video/God Boss/Mare/Disciple Mare/Disciple-Mare-idle.webm",
+      "atk": "../video/God Boss/Mare/Disciple Mare/Disciple-Mare-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -112730,9 +112730,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60484/60484_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60484/60484_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60484/60484_atk.png"
+      "default": "../video/God Boss/Mare/Blazing Mare/Blazing-Mare-default.webm",
+      "idle": "../video/God Boss/Mare/Blazing Mare/Blazing-Mare-idle.webm",
+      "atk": "../video/God Boss/Mare/Blazing Mare/Blazing-Mare-atk.webm"
     },
     "effects": {
       "atk": "",
