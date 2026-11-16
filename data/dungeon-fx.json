@@ -184,7 +184,7 @@
 "80177":["BattleDungeon80177AddBack","BattleDungeon80177Back","BattleDungeon80177Front"],
 "80180":["BattleDungeon80180AddLight","BattleDungeon80180ObjMagma"],
 "80181":["BattleDungeon80181AddHamon","BattleDungeon80181ObjBaseGeyser"],
-"80182":["BattleDungeon80182","BattleDungeon80182AddBack","BattleDungeon80182Back"],
+"80182":["BattleDungeon80182"],
 "80183":["BattleDungeon80183AddBack","BattleDungeon80183Back"],
 "80184":["BattleDungeon80184AddSunlight","BattleDungeon80184ObjBase"],
 "80185":["BattleDungeon80185AddLight","BattleDungeon80185ObjBase"],

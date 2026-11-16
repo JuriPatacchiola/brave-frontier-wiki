@@ -2332,8 +2332,19 @@ function loadDungeonFxList() {
 
 /* Legge un file .sam esattamente come il lettore del gioco (SuperAnimCore).
    Ogni fotogramma diventa una lista di pezzi:
-   [numero del pezzo, immagine, a, b, c, d, x, y, trasparenza]  (x e y in ventesimi di pixel) */
+   [numero del pezzo, immagine, a, b, c, d, x, y, trasparenza]  (x e y in ventesimi di pixel)
+   Quasi tutti i file hanno la grandezza della scena scritta in numeri corti (2 byte);
+   alcuni (es. 8300104) in numeri lunghi (4 byte): si prova il primo modo e, se il file
+   non torna alla perfezione, il secondo. */
 function parseDungeonSam(buffer) {
+    try {
+        const anim = readDungeonSam(buffer, false);
+        if (anim.complete) return anim;
+    } catch (err) { /* si prova l'altro modo */ }
+    return readDungeonSam(buffer, true);
+}
+
+function readDungeonSam(buffer, longHeader) {
     const v = new DataView(buffer);
     const u8 = new Uint8Array(buffer);
     let p = 0;
@@ -2346,7 +2357,7 @@ function parseDungeonSam(buffer) {
     if (String.fromCharCode(u8[0], u8[1], u8[2], u8[3]) !== 'MAS.') throw new Error('file .sam non valido');
     p = 8;                                        // "MAS." + versione
     const fps = byte() || DUNGEON_FX_FPS;
-    p += 8;                                       // x, y, larghezza, altezza della scena (640x640)
+    p += longHeader ? 16 : 8;                     // x, y, larghezza, altezza della scena (640x640)
 
     // immagini dei pezzi: nome, grandezza e posizione di base
     const nImg = ushort();
@@ -2414,13 +2425,15 @@ function parseDungeonSam(buffer) {
         frames.push(list);
     }
     const loopFrame = Math.min(labels.loop !== undefined ? labels.loop : 0, Math.max(0, frames.length - 1));
-    return { fps, images, frames, loopFrame };
+    return { fps, images, frames, loopFrame, complete: p === u8.length && frames.length === nFrames };
 }
 
-/* Come si disegna un pezzo, guardando l'immagine:
-   'skip'   = tutta nera (maschera o banda nera del gioco)
-   'add'    = si somma allo sfondo (il nero sparisce)
-   'normal' = normale, con la sua trasparenza */
+/* Come si disegna un pezzo, guardando l'immagine (controllato su tutti i 348 dungeon):
+   'skip'   = rettangolo tutto nero (maschere e bande nere del gioco): non si disegna
+   'add'    = luce che si somma allo sfondo: il nero sparisce e resta la parte colorata.
+              Solo nelle cartelle con "Add" nel nome, e solo per i pezzi che sono luci:
+              trasparenti e leggeri, oppure scuri con dentro la luce (lens flare, raggi...)
+   'normal' = tutto il resto (scenari, cristalli, nuvole, nebbia...), con la sua trasparenza */
 function dungeonPieceBlend(pic, folderIsAdd) {
     try {
         const w = Math.max(1, Math.min(64, pic.naturalWidth)), h = Math.max(1, Math.min(64, pic.naturalHeight));
@@ -2431,21 +2444,24 @@ function dungeonPieceBlend(pic, folderIsAdd) {
         ctx.drawImage(pic, 0, 0, w, h);
         const px = ctx.getImageData(0, 0, w, h).data;
         const total = w * h;
-        let visible = 0, bright = 0, opaque = 0, darkOpaque = 0;
+        let visible = 0, bright = 0, opaque = 0, alphaSum = 0, darkAlpha = 0, lumAlpha = 0;
         for (let i = 0; i < px.length; i += 4) {
             const a = px[i + 3];
             if (a < 8) continue;
             visible++;
             const m = Math.max(px[i], px[i + 1], px[i + 2]);
             if (m > 12) bright++;
-            if (a > 250) {
-                opaque++;
-                if (m < 30) darkOpaque++;
-            }
+            if (a > 250) opaque++;
+            alphaSum += a;
+            if (m < 40) darkAlpha += a;
+            lumAlpha += a * (0.3 * px[i] + 0.59 * px[i + 1] + 0.11 * px[i + 2]);
         }
-        if (visible > 0 && bright === 0) return 'skip';                          // tutto nero
-        if (opaque / total > 0.9 && darkOpaque / total > 0.2) return 'add';      // luce su sfondo nero
-        if (folderIsAdd && opaque / total < 0.12) return 'add';                  // luce leggera
+        if (visible > 0 && bright === 0 && opaque / total > 0.9) return 'skip';   // rettangolo nero
+        if (!folderIsAdd) return 'normal';
+        if (opaque / total < 0.12) return 'add';                                  // luce leggera
+        const darkPart = alphaSum ? darkAlpha / alphaSum : 0;                     // quanto è scuro
+        const lum = alphaSum ? lumAlpha / alphaSum : 0;                           // luminosità media
+        if (darkPart > 0.6 || lum < 30) return 'add';                             // luce su fondo scuro
         return 'normal';
     } catch (err) {
         return 'normal';
