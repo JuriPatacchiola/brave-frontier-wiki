@@ -114933,9 +114933,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10443/10443_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10443/10443_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10443/10443_atk.png"
+      "default": "../video/Summon/4 star start/Luther/Luther/Luther-default.webm",
+      "idle": "../video/Summon/4 star start/Luther/Luther/Luther-idle.webm",
+      "atk": "../video/Summon/4 star start/Luther/Luther/Luther-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -115117,9 +115117,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10444/10444_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10444/10444_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10444/10444_atk.png"
+      "default": "../video/Summon/4 star start/Luther/Defiant Luther/Defiant-Luther-default.webm",
+      "idle": "../video/Summon/4 star start/Luther/Defiant Luther/Defiant-Luther-idle.webm",
+      "atk": "../video/Summon/4 star start/Luther/Defiant Luther/Defiant-Luther-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -115319,9 +115319,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10445/10445_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10445/10445_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10445/10445_atk.png"
+      "default": "../video/Summon/4 star start/Luther/Defiant God Luther/Defiant-God-Luther-default.webm",
+      "idle": "../video/Summon/4 star start/Luther/Defiant God Luther/Defiant-God-Luther-idle.webm",
+      "atk": "../video/Summon/4 star start/Luther/Defiant God Luther/Defiant-God-Luther-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -115504,9 +115504,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20433/20433_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20433/20433_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20433/20433_atk.png"
+      "default": "../video/Summon/4 star start/Phee/Phee/Phee-default.webm",
+      "idle": "../video/Summon/4 star start/Phee/Phee/Phee-idle.webm",
+      "atk": "../video/Summon/4 star start/Phee/Phee/Phee-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -115688,9 +115688,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20434/20434_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20434/20434_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20434/20434_atk.png"
+      "default": "../video/Summon/4 star start/Phee/Tyrant Phee/Tyrant-Phee-default.webm",
+      "idle": "../video/Summon/4 star start/Phee/Tyrant Phee/Tyrant-Phee-idle.webm",
+      "atk": "../video/Summon/4 star start/Phee/Tyrant Phee/Tyrant-Phee-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -115890,9 +115890,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20435/20435_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20435/20435_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20435/20435_atk.png"
+      "default": "../video/Summon/4 star start/Phee/Tyrant Goddess Phee/Tyrant-Goddess-Phee-default.webm",
+      "idle": "../video/Summon/4 star start/Phee/Tyrant Goddess Phee/Tyrant-Goddess-Phee-idle.webm",
+      "atk": "../video/Summon/4 star start/Phee/Tyrant Goddess Phee/Tyrant-Goddess-Phee-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -116075,9 +116075,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30423/30423_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30423/30423_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30423/30423_atk.png"
+      "default": "../video/Summon/4 star start/Nalmika/Nalmika/Nalmika-default.webm",
+      "idle": "../video/Summon/4 star start/Nalmika/Nalmika/Nalmika-idle.webm",
+      "atk": "../video/Summon/4 star start/Nalmika/Nalmika/Nalmika-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -116259,9 +116259,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30424/30424_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30424/30424_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30424/30424_atk.png"
+      "default": "../video/Summon/4 star start/Nalmika/Ivy Nalmika/Ivy-Nalmika-default.webm",
+      "idle": "../video/Summon/4 star start/Nalmika/Ivy Nalmika/Ivy-Nalmika-idle.webm",
+      "atk": "../video/Summon/4 star start/Nalmika/Ivy Nalmika/Ivy-Nalmika-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -116461,9 +116461,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30425/30425_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30425/30425_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30425/30425_atk.png"
+      "default": "../video/Summon/4 star start/Nalmika/Ivy Goddess Nalmika/Ivy-Goddess-Nalmika-default.webm",
+      "idle": "../video/Summon/4 star start/Nalmika/Ivy Goddess Nalmika/Ivy-Goddess-Nalmika-idle.webm",
+      "atk": "../video/Summon/4 star start/Nalmika/Ivy Goddess Nalmika/Ivy-Goddess-Nalmika-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -116646,9 +116646,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40423/40423_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40423/40423_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40423/40423_atk.png"
+      "default": "../video/Summon/4 star start/Uda/Uda/Uda-default.webm",
+      "idle": "../video/Summon/4 star start/Uda/Uda/Uda-idle.webm",
+      "atk": "../video/Summon/4 star start/Uda/Uda/Uda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -116830,9 +116830,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40424/40424_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40424/40424_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40424/40424_atk.png"
+      "default": "../video/Summon/4 star start/Uda/Crusher Uda/Crusher-Uda-default.webm",
+      "idle": "../video/Summon/4 star start/Uda/Crusher Uda/Crusher-Uda-idle.webm",
+      "atk": "../video/Summon/4 star start/Uda/Crusher Uda/Crusher-Uda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -117032,9 +117032,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40425/40425_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40425/40425_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40425/40425_atk.png"
+      "default": "../video/Summon/4 star start/Uda/Crusher God Uda/Crusher-God-Uda-default.webm",
+      "idle": "../video/Summon/4 star start/Uda/Crusher God Uda/Crusher-God-Uda-idle.webm",
+      "atk": "../video/Summon/4 star start/Uda/Crusher God Uda/Crusher-God-Uda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -117217,9 +117217,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50473/50473_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50473/50473_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50473/50473_atk.png"
+      "default": "../video/Summon/4 star start/Zellha/Zellha/Zellha-default.webm",
+      "idle": "../video/Summon/4 star start/Zellha/Zellha/Zellha-idle.webm",
+      "atk": "../video/Summon/4 star start/Zellha/Zellha/Zellha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -117427,9 +117427,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50474/50474_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50474/50474_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50474/50474_atk.png"
+      "default": "../video/Summon/4 star start/Zellha/Ruin Zellha/Ruin-Zellha-default.webm",
+      "idle": "../video/Summon/4 star start/Zellha/Ruin Zellha/Ruin-Zellha-idle.webm",
+      "atk": "../video/Summon/4 star start/Zellha/Ruin Zellha/Ruin-Zellha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -117655,9 +117655,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50475/50475_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50475/50475_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50475/50475_atk.png"
+      "default": "../video/Summon/4 star start/Zellha/Ruin Goddess Zellha/Ruin-Goddess-Zellha-default.webm",
+      "idle": "../video/Summon/4 star start/Zellha/Ruin Goddess Zellha/Ruin-Goddess-Zellha-idle.webm",
+      "atk": "../video/Summon/4 star start/Zellha/Ruin Goddess Zellha/Ruin-Goddess-Zellha-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -117866,9 +117866,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60473/60473_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60473/60473_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60473/60473_atk.png"
+      "default": "../video/Summon/4 star start/Kajah/Kajah/Kajah-default.webm",
+      "idle": "../video/Summon/4 star start/Kajah/Kajah/Kajah-idle.webm",
+      "atk": "../video/Summon/4 star start/Kajah/Kajah/Kajah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -118073,9 +118073,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60474/60474_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60474/60474_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60474/60474_atk.png"
+      "default": "../video/Summon/4 star start/Kajah/Evil Kajah/Evil-Kajah-default.webm",
+      "idle": "../video/Summon/4 star start/Kajah/Evil Kajah/Evil-Kajah-idle.webm",
+      "atk": "../video/Summon/4 star start/Kajah/Evil Kajah/Evil-Kajah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -118298,9 +118298,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60475/60475_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60475/60475_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60475/60475_atk.png"
+      "default": "../video/Summon/4 star start/Kajah/Evil God Kajah/Evil-God-Kajah-default.webm",
+      "idle": "../video/Summon/4 star start/Kajah/Evil God Kajah/Evil-God-Kajah-idle.webm",
+      "atk": "../video/Summon/4 star start/Kajah/Evil God Kajah/Evil-God-Kajah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -253211,9 +253211,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60476/60476_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60476/60476_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60476/60476_atk.png"
+      "default": "../video/Summon/4 star start/Kajah/Shadow Retribution Kajah/Shadow-Retribution-Kajah-default.webm",
+      "idle": "../video/Summon/4 star start/Kajah/Shadow Retribution Kajah/Shadow-Retribution-Kajah-idle.webm",
+      "atk": "../video/Summon/4 star start/Kajah/Shadow Retribution Kajah/Shadow-Retribution-Kajah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -282808,9 +282808,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50477/50477_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50477/50477_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50477/50477_atk.png"
+      "default": "../video/Summon/4 star start/Zellha/Torturous Grief Zellha/Torturous-Grief-Zellha-default.webm",
+      "idle": "../video/Summon/4 star start/Zellha/Torturous Grief Zellha/Torturous-Grief-Zellha-idle.webm",
+      "atk": "../video/Summon/4 star start/Zellha/Torturous Grief Zellha/Torturous-Grief-Zellha-atk.webm"
     },
     "effects": {
       "atk": "",
