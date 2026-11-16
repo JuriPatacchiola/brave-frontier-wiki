@@ -321,7 +321,81 @@
     /* ---------------------------------------------------------------------
        5. GOOGLE TRANSLATE (caricato in automatico, non serve metterlo nelle pagine)
        --------------------------------------------------------------------- */
+    /* GOOGLE TRANSLATE SENZA ERRORI NELLA CONSOLE
+       Google Translate mette nella pagina (e nei suoi riquadri nascosti) delle immagini
+       "vuote" da 1 pixel prese da www.google.com/images/cleardot.gif. Google a volte
+       risponde con un errore (499) e la console si riempie di righe rosse, anche se il
+       sito funziona. Qui l'indirizzo viene sostituito con la stessa immagine vuota già
+       pronta dentro il sito: il browser non chiede niente a Google e l'errore sparisce.
+       Funziona in qualunque modo Google crei l'immagine (src, setAttribute, innerHTML,
+       document.write) e anche dentro i riquadri (iframe) che Google crea. */
+    const GOOGLE_CLEARDOT = 'https://www.google.com/images/cleardot.gif';
+    const EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+    // sostituisce l'indirizzo dell'immagine di Google con quella vuota già pronta
+    function noCleardot(value) {
+        if (value === null || value === undefined) return value;
+        const text = typeof value === 'string' ? value : String(value);
+        return text.indexOf(GOOGLE_CLEARDOT) >= 0 ? text.split(GOOGLE_CLEARDOT).join(EMPTY_GIF) : value;
+    }
+
+    // si applica alla pagina e a ogni riquadro (iframe) che crea Google
+    function blockGoogleCleardot(win) {
+        try {
+            if (!win || win.__bfNoCleardot) return;
+            win.__bfNoCleardot = true;
+            const wrapSetter = (proto, name) => {
+                const d = proto && Object.getOwnPropertyDescriptor(proto, name);
+                if (!d || !d.set || !d.configurable) return;
+                Object.defineProperty(proto, name, {
+                    configurable: true, enumerable: d.enumerable, get: d.get,
+                    set(v) { d.set.call(this, noCleardot(v)); }
+                });
+            };
+            const wrapGetter = (proto, name, toWindow) => {
+                const d = proto && Object.getOwnPropertyDescriptor(proto, name);
+                if (!d || !d.get || !d.configurable) return;
+                Object.defineProperty(proto, name, {
+                    configurable: true, enumerable: d.enumerable,
+                    get() {
+                        const result = d.get.call(this);
+                        try { if (result) blockGoogleCleardot(toWindow(result)); } catch (err) { /* riquadro di un altro sito */ }
+                        return result;
+                    }
+                });
+            };
+            const imgProto = win.HTMLImageElement && win.HTMLImageElement.prototype;
+            const elProto = win.Element && win.Element.prototype;
+            const docProto = win.Document && win.Document.prototype;
+            const frameProto = win.HTMLIFrameElement && win.HTMLIFrameElement.prototype;
+            wrapSetter(imgProto, 'src');
+            wrapSetter(elProto, 'innerHTML');
+            wrapSetter(elProto, 'outerHTML');
+            if (elProto) {
+                const setAttribute = elProto.setAttribute;
+                elProto.setAttribute = function (name, value) {
+                    return setAttribute.call(this, name, String(name).toLowerCase() === 'src' ? noCleardot(value) : value);
+                };
+                const insertAdjacentHTML = elProto.insertAdjacentHTML;
+                if (insertAdjacentHTML) {
+                    elProto.insertAdjacentHTML = function (position, html) {
+                        return insertAdjacentHTML.call(this, position, noCleardot(html));
+                    };
+                }
+            }
+            if (docProto) {
+                ['write', 'writeln'].forEach(name => {
+                    const original = docProto[name];
+                    if (original) docProto[name] = function () { return original.apply(this, Array.from(arguments, noCleardot)); };
+                });
+            }
+            wrapGetter(frameProto, 'contentDocument', doc => doc.defaultView);
+            wrapGetter(frameProto, 'contentWindow', w => w);
+        } catch (err) { /* browser molto vecchio: si lascia tutto com'è */ }
+    }
+
     function loadGoogleTranslate() {
+        blockGoogleCleardot(window);   // prima che arrivi il codice di Google
         if (!document.getElementById('google_translate_element')) {
             const el = document.createElement('div');
             el.id = 'google_translate_element';

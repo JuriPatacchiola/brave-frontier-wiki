@@ -211,8 +211,6 @@ const arenaBackgrounds = [
     '../img/Arena Battle/dungeon_battle_80195.jpg',
     '../img/Arena Battle/dungeon_battle_80801.jpg',
     '../img/Arena Battle/dungeon_battle_80802.jpg',
-    '../img/Arena Battle/dungeon_battle_89001.jpg',
-    '../img/Arena Battle/dungeon_battle_89002.jpg',
     '../img/Arena Battle/dungeon_battle_81000.jpg',
     '../img/Arena Battle/dungeon_battle_81001.jpg',
     '../img/Arena Battle/dungeon_battle_81002.jpg',
@@ -354,7 +352,7 @@ const arenaBackgrounds = [
     '../img/Arena Battle/dungeon_battle_8300115.jpg',
     '../img/Arena Battle/dungeon_battle_8300116.jpg',
     '../img/Arena Battle/dungeon_battle_8300117.jpg',
-    '../img/Arena Battle/dungeon_battle_8301200.jpg',
+    '../img/Arena Battle/dungeon_battle_8301200.png',
     '../img/Arena Battle/dungeon_battle_8310060.jpg',
     '../img/Arena Battle/dungeon_battle_8320060.jpg',
     '../img/Arena Battle/dungeon_battle_8330060.jpg',
@@ -362,7 +360,23 @@ const arenaBackgrounds = [
     '../img/Arena Battle/dungeon_battle_8350060.jpg',
     '../img/Arena Battle/dungeon_battle_8360060.jpg',
     '../img/Arena Battle/dungeon_battle_8510001.jpg',
-    '../img/Arena Battle/dungeon_battle_8510002.jpg'
+    '../img/Arena Battle/dungeon_battle_8510002.jpg',
+    // sfondi che erano nella cartella ma non nella lista (hanno anche le animazioni)
+    '../img/Arena Battle/dungeon_battle_103041.jpg',
+    '../img/Arena Battle/dungeon_battle_10600.jpg',
+    '../img/Arena Battle/dungeon_battle_10700.jpg',
+    '../img/Arena Battle/dungeon_battle_10800.jpg',
+    '../img/Arena Battle/dungeon_battle_20100.jpg',
+    '../img/Arena Battle/dungeon_battle_30200.jpg',
+    '../img/Arena Battle/dungeon_battle_50700.jpg',
+    '../img/Arena Battle/dungeon_battle_70700.jpg',
+    '../img/Arena Battle/dungeon_battle_80085.jpg',
+    '../img/Arena Battle/dungeon_battle_80086.jpg',
+    '../img/Arena Battle/dungeon_battle_80137.jpg',
+    '../img/Arena Battle/dungeon_battle_80164.jpg',
+    '../img/Arena Battle/dungeon_battle_80165.jpg',
+    '../img/Arena Battle/dungeon_battle_80901.jpg',
+    '../img/Arena Battle/dungeon_battle_80902.jpg'
 ];
 
 /* Colori delle particelle della Full Art per ogni rarità (palline di luce sfocate).
@@ -461,7 +475,7 @@ function evoUnitImgHtml(src, realId, alt, currentUnit) {
    ========================================================================== */
 const EVO_BASE_FOLDER = '../img/piatform/';
 // freccia animata delle fasi evolutive sul telefono (una .webp va bene su tutti i dispositivi)
-const EVO_ARROW_SRC = '../video/Evolution arrow/Arrow-evolution.webp';
+const EVO_ARROW_SRC = '../video/Evolution arrow/Arrow-evolution-right.webp';   // freccia del gioco (ArrowLeft) specchiata
 const EVO_BASE_FILES = {
     silver: 'weapon_table_1.png',    // 1★ e 2★
     gold: 'weapon_table_2.png',      // 3★
@@ -594,6 +608,7 @@ function blocksAreUniform(px, w, h, k, ox, oy) {
 function detectArtPixelSize(img) {
     const w = img.naturalWidth, h = img.naturalHeight;
     if (!w || !h || w * h > 4000000) return 1;
+    if (!evoCanReadPixels(img)) return 1;      // file di un altro sito: i pixel non si possono leggere
     try {
         const canvas = document.createElement('canvas');
         canvas.width = w;
@@ -669,10 +684,11 @@ function setEvoNeeds(stage, img, box) {
 // Mette l'animazione con i piedi al centro del vetro, a pixel netti (1 pixel del disegno = 1px).
 /* Animazioni prese da un altro sito (quasi tutte da library.bravefrontier.jp, quelle che
    non sono ancora nel tuo GitHub): il browser non lascia "leggere" i loro pixel, quindi
-   non si trovano ombra, piedi e grandezza dei pixel. Si prova a riaprirle chiedendo il
-   permesso a quel sito (CORS): se lo dà, si misurano come tutte le altre. Altrimenti
+   non si trovano ombra, piedi e grandezza dei pixel. Quel sito non dà il permesso (CORS),
+   quindi non si chiede nemmeno (chiederlo riempiva la console di errori rossi):
    l'unità si mette con i piedi dove stanno di solito (EVO_GUESS_X / EVO_GUESS_Y,
-   misurati su 423 animazioni) e non può far diventare la riga più alta del normale. */
+   misurati su 423 animazioni) e non può far diventare la riga più alta del normale.
+   Quando l'animazione sarà nel tuo GitHub, si misurerà da sola come tutte le altre. */
 const EVO_GUESS_X = 0.6;
 const EVO_GUESS_Y = 0.88;
 
@@ -706,15 +722,6 @@ function placeEvoUnit(img, source = img) {
     const stage = img.closest('.evo-stage');
     if (!stage) return;
     if (source === img && img.naturalWidth && !evoCanReadPixels(img)) {
-        if (!img.dataset.probe) {
-            img.dataset.probe = '1';
-            const probe = new Image();
-            probe.crossOrigin = 'anonymous';
-            probe.onload = () => {
-                if (img.isConnected && evoCanReadPixels(probe)) placeEvoUnit(img, probe);
-            };
-            probe.src = img.currentSrc || img.src;
-        }
         placeEvoGuess(img, stage);
         return;
     }
@@ -1421,6 +1428,7 @@ function openModal(u, options = {}) {
     const unitBoxTop = document.querySelector('.unit_box_top');
     if (unitBoxTop) {
         unitBoxTop.style.backgroundImage = `url('${arenaBackgrounds[randomIndex]}')`;
+        startDungeonFx(arenaBackgrounds[randomIndex]);   // le animazioni di quello sfondo
     }
 
     const currentLang = getCurrentLang();
@@ -2270,7 +2278,355 @@ function changeArenaBackground() {
     const unitBoxTop = document.querySelector('.unit_box_top');
     if (unitBoxTop) {
         unitBoxTop.style.backgroundImage = `url('${arenaBackgrounds[randomIndex]}')`;
+        startDungeonFx(arenaBackgrounds[randomIndex]);   // le animazioni di quello sfondo
     }
+}
+
+/* ==========================================================================
+   ANIMAZIONI DEI DUNGEON (le "micro animazioni" del gioco sopra gli sfondi)
+   Ogni sfondo img/Arena Battle/dungeon_battle_<ID>.jpg può avere delle animazioni
+   nella cartella video/battle dungeon/BattleDungeon<ID>...:
+   nuvole, nebbia, luci, pioggia, farfalle, foglie, acqua, interi pezzi di scena...
+   Sono i file originali del gioco: un file .sam (formato "SuperAnim", lo stesso che
+   usa il gioco) e le immagini .png dei pezzi. Il sito li legge e li disegna da solo
+   (niente video, niente .webp), seguendo le stesse regole del lettore originale:
+   - ogni fotogramma dice quali pezzi togliere, quali aggiungere e dove spostarli;
+   - quando un pezzo si sposta senza una nuova grandezza/rotazione, torna dritto e
+     alla sua grandezza normale (come nel gioco);
+   - tra un fotogramma e l'altro il movimento è morbido (posizione, grandezza e
+     trasparenza a metà strada), come nel gioco;
+   - la parte "loop" si ripete all'infinito.
+   - Le cartelle di ogni sfondo sono elencate in data/dungeon-fx.json:
+       "list": { "ID sfondo": [cartelle] }, "sam": { cartella: nome del .sam se è diverso }
+   - Nel nome della cartella: "Front" = davanti all'unità, altrimenti dietro.
+   - Come si disegna ogni pezzo lo decide il pezzo stesso:
+       tutto nero (maschere e bande nere del gioco) -> non si disegna;
+       immagine piena con lo sfondo nero (luci) -> si somma: il nero sparisce;
+       luci leggere nelle cartelle "Add" -> si sommano;
+       tutto il resto (scenari, cristalli, fuoco, nuvole...) -> normale, con la sua trasparenza.
+   - La scena del gioco è 640x640 e lo sfondo 640x440 sta al centro (100 pixel più
+     in basso): le animazioni seguono lo sfondo, stesso ritaglio e stessa grandezza.
+   ========================================================================== */
+const DUNGEON_FX_LIST_URL = '../data/dungeon-fx.json';
+const DUNGEON_FX_FOLDER = '../video/battle dungeon/';
+const DUNGEON_STAGE_W = 640;     // grandezza dello sfondo nel gioco
+const DUNGEON_STAGE_H = 440;
+const DUNGEON_STAGE_TOP = 100;   // lo sfondo comincia 100 pixel sotto il bordo della scena (640x640)
+const DUNGEON_FX_FPS = 24;       // se il file non lo dice
+const DUNGEON_TWIPS = 20;        // nei file .sam le misure sono in ventesimi di pixel
+
+let dungeonFxList = null;
+let dungeonFxListPromise = null;
+const dungeonSamCache = new Map();     // cartella -> Promise(animazione pronta)
+let dungeonFxRun = null;               // animazione in corso
+
+function loadDungeonFxList() {
+    if (!dungeonFxListPromise) {
+        dungeonFxListPromise = fetch(DUNGEON_FX_LIST_URL)
+            .then(r => (r.ok ? r.json() : {}))
+            .catch(() => ({}))
+            .then(data => { dungeonFxList = data || {}; return dungeonFxList; });
+    }
+    return dungeonFxListPromise;
+}
+
+/* Legge un file .sam esattamente come il lettore del gioco (SuperAnimCore).
+   Ogni fotogramma diventa una lista di pezzi:
+   [numero del pezzo, immagine, a, b, c, d, x, y, trasparenza]  (x e y in ventesimi di pixel) */
+function parseDungeonSam(buffer) {
+    const v = new DataView(buffer);
+    const u8 = new Uint8Array(buffer);
+    let p = 0;
+    const byte = () => u8[p++];
+    const short = () => { const n = v.getInt16(p, true); p += 2; return n; };
+    const ushort = () => { const n = v.getUint16(p, true); p += 2; return n; };
+    const long = () => { const n = v.getInt32(p, true); p += 4; return n; };
+    const text = () => { const n = ushort(); let s = ''; for (let i = 0; i < n; i++) s += String.fromCharCode(u8[p + i]); p += n; return s; };
+
+    if (String.fromCharCode(u8[0], u8[1], u8[2], u8[3]) !== 'MAS.') throw new Error('file .sam non valido');
+    p = 8;                                        // "MAS." + versione
+    const fps = byte() || DUNGEON_FX_FPS;
+    p += 8;                                       // x, y, larghezza, altezza della scena (640x640)
+
+    // immagini dei pezzi: nome, grandezza e posizione di base
+    const nImg = ushort();
+    const images = [];
+    for (let i = 0; i < nImg; i++) {
+        const name = text();
+        const w = short(), h = short();
+        const l0 = long(), l1 = long(), l2 = long(), l3 = long();
+        const tx = short(), ty = short();
+        // sul foglio (y verso il basso): a = l0, c = l1, b = l2, d = l3
+        images.push({ name, w, h, a: l0 / 65536, b: l2 / 65536, c: l1 / 65536, d: l3 / 65536, tx, ty });
+    }
+
+    const nFrames = ushort();
+    const objects = new Map();                    // pezzi sulla scena in questo momento
+    const frames = [];
+    const labels = {};
+    for (let f = 0; f < nFrames && p < u8.length; f++) {
+        const flags = byte();
+        if (flags & 0x01) {                        // pezzi tolti
+            const n = byte();
+            for (let i = 0; i < n; i++) objects.delete(ushort());
+        }
+        if (flags & 0x02) {                        // pezzi aggiunti
+            const n = byte();
+            for (let i = 0; i < n; i++) {
+                const id = ushort() & 0x07FF;
+                const img = byte();
+                const o = objects.get(id) || { a: 1, b: 0, c: 0, d: 1, x: 0, y: 0 };
+                o.img = img;
+                o.alpha = 1;
+                objects.set(id, o);
+            }
+        }
+        if (flags & 0x04) {                        // pezzi spostati
+            const n = byte();
+            for (let i = 0; i < n; i++) {
+                const head = ushort();
+                const id = head & 0x03FF;
+                const o = objects.get(id) || { img: 0, alpha: 1 };
+                // come nel gioco: senza grandezza o rotazione nuova il pezzo torna dritto
+                o.a = 1; o.b = 0; o.c = 0; o.d = 1;
+                if (head & 0x1000) {               // grandezza, rotazione e inclinazione
+                    const l0 = long(), l1 = long(), l2 = long(), l3 = long();
+                    o.a = l0 / 65536; o.c = l1 / 65536; o.b = l2 / 65536; o.d = l3 / 65536;
+                } else if (head & 0x4000) {        // solo rotazione (millesimi di radiante)
+                    const r = short() / 1000;
+                    o.a = Math.cos(r); o.c = -Math.sin(r); o.b = Math.sin(r); o.d = Math.cos(r);
+                }
+                if (head & 0x0800) { o.x = long(); o.y = long(); }
+                else { o.x = short(); o.y = short(); }
+                if (head & 0x2000) {               // colore e trasparenza
+                    p += 3;
+                    o.alpha = byte() / 255;
+                }
+                objects.set(id, o);
+            }
+        }
+        if (flags & 0x08) labels[text()] = f;      // nome del punto ("start", "loop")
+        const list = [];
+        [...objects.keys()].sort((x, y) => x - y).forEach(id => {
+            const o = objects.get(id);
+            if (images[o.img]) list.push([id, o.img, o.a, o.b, o.c, o.d, o.x, o.y, o.alpha]);
+        });
+        frames.push(list);
+    }
+    const loopFrame = Math.min(labels.loop !== undefined ? labels.loop : 0, Math.max(0, frames.length - 1));
+    return { fps, images, frames, loopFrame };
+}
+
+/* Come si disegna un pezzo, guardando l'immagine:
+   'skip'   = tutta nera (maschera o banda nera del gioco)
+   'add'    = si somma allo sfondo (il nero sparisce)
+   'normal' = normale, con la sua trasparenza */
+function dungeonPieceBlend(pic, folderIsAdd) {
+    try {
+        const w = Math.max(1, Math.min(64, pic.naturalWidth)), h = Math.max(1, Math.min(64, pic.naturalHeight));
+        const c = document.createElement('canvas');
+        c.width = w;
+        c.height = h;
+        const ctx = c.getContext('2d', { willReadFrequently: true });
+        ctx.drawImage(pic, 0, 0, w, h);
+        const px = ctx.getImageData(0, 0, w, h).data;
+        const total = w * h;
+        let visible = 0, bright = 0, opaque = 0, darkOpaque = 0;
+        for (let i = 0; i < px.length; i += 4) {
+            const a = px[i + 3];
+            if (a < 8) continue;
+            visible++;
+            const m = Math.max(px[i], px[i + 1], px[i + 2]);
+            if (m > 12) bright++;
+            if (a > 250) {
+                opaque++;
+                if (m < 30) darkOpaque++;
+            }
+        }
+        if (visible > 0 && bright === 0) return 'skip';                          // tutto nero
+        if (opaque / total > 0.9 && darkOpaque / total > 0.2) return 'add';      // luce su sfondo nero
+        if (folderIsAdd && opaque / total < 0.12) return 'add';                  // luce leggera
+        return 'normal';
+    } catch (err) {
+        return 'normal';
+    }
+}
+
+function loadDungeonAnim(folder, samName) {
+    if (!dungeonSamCache.has(folder)) {
+        const base = DUNGEON_FX_FOLDER + folder + '/';
+        const folderIsAdd = /add/i.test(folder);
+        const promise = fetch(base + (samName || folder + '.sam'))
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+            .then(buffer => {
+                const anim = parseDungeonSam(buffer);
+                return Promise.all(anim.images.map(im => new Promise(resolve => {
+                    const img = new Image();
+                    img.decoding = 'async';
+                    img.onload = () => resolve(img);
+                    img.onerror = () => resolve(null);
+                    img.src = base + im.name;
+                }))).then(pics => {
+                    anim.pics = pics;
+                    anim.blend = pics.map(pic => (pic ? dungeonPieceBlend(pic, folderIsAdd) : 'skip'));
+                    return anim;
+                });
+            })
+            .catch(() => null);
+        dungeonSamCache.set(folder, promise);
+        // si tengono in memoria solo le ultime 40 animazioni usate
+        while (dungeonSamCache.size > 40) dungeonSamCache.delete(dungeonSamCache.keys().next().value);
+    }
+    return dungeonSamCache.get(folder);
+}
+
+/* I quattro fogli dove si disegna:
+   dietro l'unità (normale e luci) e davanti all'unità (normale e luci).
+   I fogli delle luci si SOMMANO allo sfondo (come nel gioco): il nero non aggiunge
+   niente, quindi sparisce e resta solo la parte colorata. */
+const DUNGEON_FX_LAYERS = ['back', 'back-add', 'front', 'front-add'];
+
+function dungeonFxCanvases(box) {
+    const gif = box.querySelector(':scope > .unit_gif');
+    const out = {};
+    DUNGEON_FX_LAYERS.forEach(name => {
+        let c = box.querySelector(`:scope > .dungeon-fx-${name}`);
+        if (!c) {
+            c = document.createElement('canvas');
+            c.className = `dungeon-fx dungeon-fx-${name}`;
+            if (name.startsWith('back')) {
+                // dietro l'unità: prima dell'animazione dell'unità
+                box.insertBefore(c, gif || box.firstChild);
+            } else {
+                // davanti all'unità: subito dopo
+                const after = box.querySelector(':scope > .dungeon-fx-front') || gif;
+                box.insertBefore(c, after ? after.nextSibling : null);
+            }
+        }
+        out[name] = c;
+    });
+    return out;
+}
+
+function stopDungeonFx() {
+    if (dungeonFxRun) {
+        cancelAnimationFrame(dungeonFxRun.raf);
+        dungeonFxRun.stopped = true;
+        dungeonFxRun = null;
+    }
+    document.querySelectorAll('.dungeon-fx').forEach(c => {
+        const ctx = c.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, c.width, c.height);
+        c.classList.remove('is-on');
+    });
+}
+
+// ID dello sfondo dal nome del file: ".../dungeon_battle_10100.jpg" -> "10100"
+function dungeonIdFromBackground(src) {
+    let s = String(src || '');
+    try { s = decodeURIComponent(s); } catch (err) { /* già leggibile */ }
+    const m = s.match(/dungeon_battle_([^/.'")]+)\.\w+/i);
+    return m ? m[1] : '';
+}
+
+// fotogramma da mostrare al tempo t (secondi): numero intero + quanto manca al prossimo
+function dungeonFramePos(anim, t) {
+    const n = anim.frames.length;
+    let pos = Math.max(0, t * anim.fps);
+    if (pos >= n) {
+        const loopLen = Math.max(1, n - anim.loopFrame);
+        pos = anim.loopFrame + (pos - n) % loopLen;
+    }
+    const f = Math.min(n - 1, Math.floor(pos));
+    return { f, frac: f >= n - 1 ? 0 : pos - f };
+}
+
+async function startDungeonFx(backgroundSrc) {
+    stopDungeonFx();
+    const box = document.querySelector('.unit_box_top');
+    if (!box) return;
+    const id = dungeonIdFromBackground(backgroundSrc);
+    const data = await loadDungeonFxList();
+    const list = ((data.list || data)[id]) || [];
+    const samNames = data.sam || {};
+    if (!list.length) return;
+    const run = { stopped: false, raf: 0 };
+    dungeonFxRun = run;
+    const anims = (await Promise.all(list.map(folder => loadDungeonAnim(folder, samNames[folder]).then(anim => (anim ? { folder, anim } : null)))))
+        .filter(Boolean);
+    if (run.stopped || !anims.length) return;
+    const canvases = dungeonFxCanvases(box);
+    const used = new Set();
+    anims.forEach(({ folder, anim }) => {
+        const side = /front/i.test(folder) ? 'front' : 'back';
+        anim.blend.forEach(b => { if (b !== 'skip') used.add(side + (b === 'add' ? '-add' : '')); });
+    });
+    DUNGEON_FX_LAYERS.forEach(name => canvases[name].classList.toggle('is-on', used.has(name)));
+    const start = performance.now();
+
+    const draw = now => {
+        if (run.stopped) return;
+        if (!box.isConnected || !box.offsetWidth) { run.raf = requestAnimationFrame(draw); return; }
+        const dpr = Math.min(2, window.devicePixelRatio || 1);
+        const W = box.clientWidth, H = box.clientHeight;
+        // stesso ritaglio dello sfondo (background-size: cover, al centro)
+        const s = Math.max(W / DUNGEON_STAGE_W, H / DUNGEON_STAGE_H);
+        const ox = (W - DUNGEON_STAGE_W * s) / 2, oy = (H - DUNGEON_STAGE_H * s) / 2 - DUNGEON_STAGE_TOP * s;
+        const k = s * dpr / DUNGEON_TWIPS;
+        const t = Math.max(0, now - start) / 1000;
+        const ctxs = {};
+        const cw = Math.round(W * dpr), ch = Math.round(H * dpr);
+        DUNGEON_FX_LAYERS.forEach(name => {
+            const c = canvases[name];
+            if (!used.has(name)) return;
+            if (c.width !== cw || c.height !== ch) { c.width = cw; c.height = ch; }
+            const ctx = c.getContext('2d');
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.globalAlpha = 1;
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.clearRect(0, 0, cw, ch);
+            ctxs[name] = ctx;
+        });
+        anims.forEach(({ folder, anim }) => {
+            if (!anim.frames.length) return;
+            const side = /front/i.test(folder) ? 'front' : 'back';
+            const { f, frac } = dungeonFramePos(anim, t);
+            const cur = anim.frames[f];
+            // pezzi del fotogramma dopo, per il movimento morbido
+            let next = null;
+            if (frac > 0) {
+                next = new Map();
+                anim.frames[f + 1].forEach(o => next.set(o[0], o));
+            }
+            cur.forEach(o => {
+                const im = o[1];
+                const blend = anim.blend[im];
+                if (blend === 'skip') return;
+                const pic = anim.pics[im];
+                if (!pic) return;
+                let [, , a, b, c, d, x, y, alpha] = o;
+                const n2 = next && next.get(o[0]);
+                if (n2 && n2[1] === im) {
+                    const q = frac, r = 1 - frac;
+                    a = a * r + n2[2] * q; b = b * r + n2[3] * q; c = c * r + n2[4] * q; d = d * r + n2[5] * q;
+                    x = x * r + n2[6] * q; y = y * r + n2[7] * q; alpha = alpha * r + n2[8] * q;
+                }
+                if (alpha <= 0.004) return;
+                const ctx = ctxs[side + (blend === 'add' ? '-add' : '')];
+                if (!ctx) return;
+                const info = anim.images[im];
+                ctx.globalCompositeOperation = blend === 'add' ? 'lighter' : 'source-over';
+                ctx.globalAlpha = Math.min(1, alpha);
+                ctx.setTransform(k, 0, 0, k, ox * dpr, oy * dpr);
+                ctx.transform(a, b, c, d, x, y);
+                ctx.transform(info.a, info.b, info.c, info.d, info.tx, info.ty);
+                ctx.drawImage(pic, 0, 0);
+            });
+        });
+        run.raf = requestAnimationFrame(draw);
+    };
+    run.raf = requestAnimationFrame(draw);
 }
 
 async function getValidFullArts(unitId) {
@@ -3206,6 +3562,9 @@ function measureCharacter(el) {
     const h = el.naturalHeight || el.videoHeight;
     if (!w || !h) return null;
     const m = { w, h };
+    // file di un altro sito (library.bravefrontier.jp): i pixel non si possono leggere,
+    // si lascia il personaggio centrato senza scrivere errori nella console
+    if (!evoCanReadPixels(el)) return m;
 
     try {
         const canvas = document.createElement('canvas');
@@ -3676,6 +4035,7 @@ function closeModal(options = {}) {
     const modalEl = document.getElementById('unitModal');
     if (modalEl) modalEl.style.display = 'none';
     document.body.classList.remove('modal-open');
+    stopDungeonFx();
 
     isFullArtOpen = false;
     exitEffectMode(false);
