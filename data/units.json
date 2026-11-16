@@ -109073,9 +109073,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10373/10373_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10373/10373_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10373/10373_atk.png"
+      "default": "../video/Summon/4 star start/Dia/Dark Arts Dia/Dark-Arts-Dia-default.webm",
+      "idle": "../video/Summon/4 star start/Dia/Dark Arts Dia/Dark-Arts-Dia-idle.webm",
+      "atk": "../video/Summon/4 star start/Dia/Dark Arts Dia/Dark-Arts-Dia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109257,9 +109257,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10374/10374_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10374/10374_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10374/10374_atk.png"
+      "default": "../video/Summon/4 star start/Dia/Dark Princess Dia/Dark-Princess-Dia-default.webm",
+      "idle": "../video/Summon/4 star start/Dia/Dark Princess Dia/Dark-Princess-Dia-idle.webm",
+      "atk": "../video/Summon/4 star start/Dia/Dark Princess Dia/Dark-Princess-Dia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109459,9 +109459,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10375/10375_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10375/10375_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10375/10375_atk.png"
+      "default": "../video/Summon/4 star start/Dia/Inferno Princess Dia/Inferno-Princess-Dia-default.webm",
+      "idle": "../video/Summon/4 star start/Dia/Inferno Princess Dia/Inferno-Princess-Dia-idle.webm",
+      "atk": "../video/Summon/4 star start/Dia/Inferno Princess Dia/Inferno-Princess-Dia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109644,9 +109644,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20363/20363_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20363/20363_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20363/20363_atk.png"
+      "default": "../video/Summon/4 star start/Lucina/Azure Blade Lucina/Azure-Blade-Lucina-default.webm",
+      "idle": "../video/Summon/4 star start/Lucina/Azure Blade Lucina/Azure-Blade-Lucina-idle.webm",
+      "atk": "../video/Summon/4 star start/Lucina/Azure Blade Lucina/Azure-Blade-Lucina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -109851,9 +109851,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20364/20364_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20364/20364_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20364/20364_atk.png"
+      "default": "../video/Summon/4 star start/Lucina/Azure Warrior Lucina/Azure-Warrior-Lucina-default.webm",
+      "idle": "../video/Summon/4 star start/Lucina/Azure Warrior Lucina/Azure-Warrior-Lucina-idle.webm",
+      "atk": "../video/Summon/4 star start/Lucina/Azure Warrior Lucina/Azure-Warrior-Lucina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -110076,9 +110076,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20365/20365_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20365/20365_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20365/20365_atk.png"
+      "default": "../video/Summon/4 star start/Lucina/Azure Goddess Lucina/Azure-Goddess-Lucina-default.webm",
+      "idle": "../video/Summon/4 star start/Lucina/Azure Goddess Lucina/Azure-Goddess-Lucina-idle.webm",
+      "atk": "../video/Summon/4 star start/Lucina/Azure Goddess Lucina/Azure-Goddess-Lucina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -110284,9 +110284,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30353/30353_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30353/30353_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30353/30353_atk.png"
+      "default": "../video/Summon/4 star start/Darvan/Iron Shield Darvan/Iron-Shield-Darvan-default.webm",
+      "idle": "../video/Summon/4 star start/Darvan/Iron Shield Darvan/Iron-Shield-Darvan-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvan/Iron Shield Darvan/Iron-Shield-Darvan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -110468,9 +110468,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30354/30354_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30354/30354_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30354/30354_atk.png"
+      "default": "../video/Summon/4 star start/Darvan/Steel Shield Darvan/Steel-Shield-Darvan-default.webm",
+      "idle": "../video/Summon/4 star start/Darvan/Steel Shield Darvan/Steel-Shield-Darvan-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvan/Steel Shield Darvan/Steel-Shield-Darvan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -110670,9 +110670,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30355/30355_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30355/30355_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30355/30355_atk.png"
+      "default": "../video/Summon/4 star start/Darvan/Impenetrable Darvan/Impenetrable-Darvan-default.webm",
+      "idle": "../video/Summon/4 star start/Darvan/Impenetrable Darvan/Impenetrable-Darvan-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvan/Impenetrable Darvan/Impenetrable-Darvan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -110855,9 +110855,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40353/40353_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40353/40353_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40353/40353_atk.png"
+      "default": "../video/Summon/4 star start/Bran/Sage Bran/Sage-Bran-default.webm",
+      "idle": "../video/Summon/4 star start/Bran/Sage Bran/Sage-Bran-idle.webm",
+      "atk": "../video/Summon/4 star start/Bran/Sage Bran/Sage-Bran-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -111039,9 +111039,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40354/40354_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40354/40354_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40354/40354_atk.png"
+      "default": "../video/Summon/4 star start/Bran/Lightning Sage Bran/Lightning-Sage-Bran-default.webm",
+      "idle": "../video/Summon/4 star start/Bran/Lightning Sage Bran/Lightning-Sage-Bran-idle.webm",
+      "atk": "../video/Summon/4 star start/Bran/Lightning Sage Bran/Lightning-Sage-Bran-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -111241,9 +111241,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40355/40355_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40355/40355_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40355/40355_atk.png"
+      "default": "../video/Summon/4 star start/Bran/Blaze Guru Bran/Blaze-Guru-Bran-default.webm",
+      "idle": "../video/Summon/4 star start/Bran/Blaze Guru Bran/Blaze-Guru-Bran-idle.webm",
+      "atk": "../video/Summon/4 star start/Bran/Blaze Guru Bran/Blaze-Guru-Bran-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -111426,9 +111426,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50413/50413_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50413/50413_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50413/50413_atk.png"
+      "default": "../video/Summon/4 star start/Themis/Prodigy Themis/Prodigy-Themis-default.webm",
+      "idle": "../video/Summon/4 star start/Themis/Prodigy Themis/Prodigy-Themis-idle.webm",
+      "atk": "../video/Summon/4 star start/Themis/Prodigy Themis/Prodigy-Themis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -244019,9 +244019,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20366/20366_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20366/20366_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20366/20366_atk.png"
+      "default": "../video/Summon/4 star start/Lucina/Aqua Pura Lucina/Aqua-Pura-Lucina-default.webm",
+      "idle": "../video/Summon/4 star start/Lucina/Aqua Pura Lucina/Aqua-Pura-Lucina-idle.webm",
+      "atk": "../video/Summon/4 star start/Lucina/Aqua Pura Lucina/Aqua-Pura-Lucina-atk.webm"
     },
     "effects": {
       "atk": "",
