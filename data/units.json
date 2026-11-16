@@ -111609,10 +111609,10 @@
         }
       }
     },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50414/50414_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50414/50414_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50414/50414_atk.png"
+     "animations": {
+      "default": "../video/Summon/4 star start/Themis/Unflinching Themis/Unflinching-Themis-default.webm",
+      "idle": "../video/Summon/4 star start/Themis/Unflinching Themis/Unflinching-Themis-idle.webm",
+      "atk": "../video/Summon/4 star start/Themis/Unflinching Themis/Unflinching-Themis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -111812,9 +111812,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50415/50415_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50415/50415_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50415/50415_atk.png"
+      "default": "../video/Summon/4 star start/Themis/Worldly Themis/Worldly-Themis-default.webm",
+      "idle": "../video/Summon/4 star start/Themis/Worldly Themis/Worldly-Themis-idle.webm",
+      "atk": "../video/Summon/4 star start/Themis/Worldly Themis/Worldly-Themis-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -111997,9 +111997,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60363/60363_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60363/60363_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60363/60363_atk.png"
+      "default": "../video/Summon/4 star start/Eric/Magic Riffs Eric/Magic-Riffs-Eric-default.webm",
+      "idle": "../video/Summon/4 star start/Eric/Magic Riffs Eric/Magic-Riffs-Eric-idle.webm",
+      "atk": "../video/Summon/4 star start/Eric/Magic Riffs Eric/Magic-Riffs-Eric-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -112181,9 +112181,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60364/60364_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60364/60364_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60364/60364_atk.png"
+      "default": "../video/Summon/4 star start/Eric/Dark Tunes Eric/Dark-Tunes-Eric-default.webm",
+      "idle": "../video/Summon/4 star start/Eric/Dark Tunes Eric/Dark-Tunes-Eric-idle.webm",
+      "atk": "../video/Summon/4 star start/Eric/Dark Tunes Eric/Dark-Tunes-Eric-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -112383,9 +112383,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60365/60365_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60365/60365_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60365/60365_atk.png"
+      "default": "../video/Summon/4 star start/Eric/Arcane Solo Eric/Arcane-Solo-Eric-default.webm",
+      "idle": "../video/Summon/4 star start/Eric/Arcane Solo Eric/Arcane-Solo-Eric-idle.webm",
+      "atk": "../video/Summon/4 star start/Eric/Arcane Solo Eric/Arcane-Solo-Eric-atk.webm"
     },
     "effects": {
       "atk": "",
