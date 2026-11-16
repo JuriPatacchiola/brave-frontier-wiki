@@ -112891,10 +112891,10 @@
         }
       }
     },
-    "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20302/20302_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20302/20302_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20302/20302_atk.png"
+     "animations": {
+      "default": "../video/Seal material and fusion material/Sphere Up/Sphere Frog/Sphere-Frog-default.webm",
+      "idle": "../video/Seal material and fusion material/Sphere Up/Sphere Frog/Sphere-Frog-idle.webm",
+      "atk": "../video/Seal material and fusion material/Sphere Up/Sphere Frog/Sphere-Frog-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113033,9 +113033,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10452/10452_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10452/10452_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10452/10452_atk.png"
+      "default": "../video/Seal material and fusion material/Statistic Up/Power Imp Pakpak/Power-Imp-Pakpak-default.webm",
+      "idle": "../video/Seal material and fusion material/Statistic Up/Power Imp Pakpak/Power-Imp-Pakpak-idle.webm",
+      "atk": "../video/Seal material and fusion material/Statistic Up/Power Imp Pakpak/Power-Imp-Pakpak-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113174,9 +113174,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20442/20442_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20442/20442_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20442/20442_atk.png"
+      "default": "../video/Seal material and fusion material/Statistic Up/Guard Imp Ganju/Guard-Imp-Ganju-default.webm",
+      "idle": "../video/Seal material and fusion material/Statistic Up/Guard Imp Ganju/Guard-Imp-Ganju-idle.webm",
+      "atk": "../video/Seal material and fusion material/Statistic Up/Guard Imp Ganju/Guard-Imp-Ganju-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113315,9 +113315,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30432/30432_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30432/30432_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30432/30432_atk.png"
+      "default": "../video/Seal material and fusion material/Statistic Up/Healing Imp Fwahl/Healing-Imp-Fwahl-default.webm",
+      "idle": "../video/Seal material and fusion material/Statistic Up/Healing Imp Fwahl/Healing-Imp-Fwahl-idle.webm",
+      "atk": "../video/Seal material and fusion material/Statistic Up/Healing Imp Fwahl/Healing-Imp-Fwahl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -113456,9 +113456,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40432/40432_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40432/40432_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40432/40432_atk.png"
+      "default": "../video/Seal material and fusion material/Statistic Up/Vigor Imp Molin/Vigor-Imp-Molin-default.webm",
+      "idle": "../video/Seal material and fusion material/Statistic Up/Vigor Imp Molin/Vigor-Imp-Molin-idle.webm",
+      "atk": "../video/Seal material and fusion material/Statistic Up/Vigor Imp Molin/Vigor-Imp-Molin-atk.webm"
     },
     "effects": {
       "atk": "",
