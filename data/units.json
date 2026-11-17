@@ -125828,9 +125828,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/GS-220/GS-220/GS-220-default.webm",
-      "idle": "../video/Base enemy/GS-220/GS-220/GS-220-idle.webm",
-      "atk": "../video/Base enemy/GS-220/GS-220/GS-220-atk.webm"
+      "default": "../video/Base enemy/GS/GS-220/GS-220-default.webm",
+      "idle": "../video/Base enemy/GS/GS-220/GS-220-idle.webm",
+      "atk": "../video/Base enemy/GS/GS-220/GS-220-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125989,9 +125989,9 @@
       }
     },
     "animations": {
-      "default": "../video/Base enemy/GS-220/GS-1000/GS-1000-default.webm",
-      "idle": "../video/Base enemy/GS-220/GS-1000/GS-1000-idle.webm",
-      "atk": "../video/Base enemy/GS-220/GS-1000/GS-1000-atk.webm"
+      "default": "../video/Base enemy/GS/GS-1000/GS-1000-default.webm",
+      "idle": "../video/Base enemy/GS/GS-1000/GS-1000-idle.webm",
+      "atk": "../video/Base enemy/GS/GS-1000/GS-1000-atk.webm"
     },
     "effects": {
       "atk": "",
