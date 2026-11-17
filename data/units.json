@@ -119317,8 +119317,8 @@
     },
     "animations": {
       "default": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-default.webm",
-      "idle": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-atk.webm",
-      "atk": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-idle.webm"
+      "idle": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-idle.webm",
+      "atk": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -120468,9 +120468,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50525/50525_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50525/50525_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50525/50525_atk.png"
+      "default": "../video/Trail/Maxwell/Creator Maxwell/Creator-Maxwell-default.webm",
+      "idle": "../video/Trail/Maxwell/Creator Maxwell/Creator-Maxwell-idle.webm",
+      "atk": "../video/Trail/Maxwell/Creator Maxwell/Creator-Maxwell-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -120610,9 +120610,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10463/10463_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10463/10463_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10463/10463_atk.png"
+      "default": "../video/Summon/4 star start/Darvanshel/Bodyguard Darvanshel/Bodyguard-Darvanshel-default.webm",
+      "idle": "../video/Summon/4 star start/Darvanshel/Bodyguard Darvanshel/Bodyguard-Darvanshel-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvanshel/Bodyguard Darvanshel/Bodyguard-Darvanshel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -120817,9 +120817,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10464/10464_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10464/10464_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10464/10464_atk.png"
+      "default": "../video/Summon/4 star start/Darvanshel/Protector Darvanshel/Protector-Darvanshel-default.webm",
+      "idle": "../video/Summon/4 star start/Darvanshel/Protector Darvanshel/Protector-Darvanshel-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvanshel/Protector Darvanshel/Protector-Darvanshel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -121042,9 +121042,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10465/10465_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10465/10465_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10465/10465_atk.png"
+      "default": "../video/Summon/4 star start/Darvanshel/Guardian Darvanshel/Guardian-Darvanshel-default.webm",
+      "idle": "../video/Summon/4 star start/Darvanshel/Guardian Darvanshel/Guardian-Darvanshel-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvanshel/Guardian Darvanshel/Guardian-Darvanshel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -121250,9 +121250,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20453/20453_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20453/20453_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20453/20453_atk.png"
+      "default": "../video/Summon/4 star start/Mariudeth/Dark Axe Mariudeth/Dark-Axe-Mariudeth-default.webm",
+      "idle": "../video/Summon/4 star start/Mariudeth/Dark Axe Mariudeth/Dark-Axe-Mariudeth-idle.webm",
+      "atk": "../video/Summon/4 star start/Mariudeth/Dark Axe Mariudeth/Dark-Axe-Mariudeth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -121434,9 +121434,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20454/20454_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20454/20454_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20454/20454_atk.png"
+      "default": "../video/Summon/4 star start/Mariudeth/Axe King Mariudeth/Axe-King-Mariudeth-default.webm",
+      "idle": "../video/Summon/4 star start/Mariudeth/Axe King Mariudeth/Axe-King-Mariudeth-idle.webm",
+      "atk": "../video/Summon/4 star start/Mariudeth/Axe King Mariudeth/Axe-King-Mariudeth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -121636,9 +121636,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20455/20455_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20455/20455_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20455/20455_atk.png"
+      "default": "../video/Summon/4 star start/Mariudeth/Axe God Mariudeth/Axe-God-Mariudeth-default.webm",
+      "idle": "../video/Summon/4 star start/Mariudeth/Axe God Mariudeth/Axe-God-Mariudeth-idle.webm",
+      "atk": "../video/Summon/4 star start/Mariudeth/Axe God Mariudeth/Axe-God-Mariudeth-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -121821,9 +121821,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30443/30443_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30443/30443_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30443/30443_atk.png"
+      "default": "../video/Summon/4 star start/Zelnite/Great Thief Zelnite/Great-Thief-Zelnite-default.webm",
+      "idle": "../video/Summon/4 star start/Zelnite/Great Thief Zelnite/Great-Thief-Zelnite-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelnite/Great Thief Zelnite/Great-Thief-Zelnite-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -122054,9 +122054,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30444/30444_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30444/30444_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30444/30444_atk.png"
+      "default": "../video/Summon/4 star start/Zelnite/Noble Thief Zelnite/Noble-Thief-Zelnite-default.webm",
+      "idle": "../video/Summon/4 star start/Zelnite/Noble Thief Zelnite/Noble-Thief-Zelnite-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelnite/Noble Thief Zelnite/Noble-Thief-Zelnite-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -122305,9 +122305,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30445/30445_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30445/30445_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30445/30445_atk.png"
+      "default": "../video/Summon/4 star start/Zelnite/Thief God Zelnite/Thief-God-Zelnite-default.webm",
+      "idle": "../video/Summon/4 star start/Zelnite/Thief God Zelnite/Thief-God-Zelnite-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelnite/Thief God Zelnite/Thief-God-Zelnite-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -122539,9 +122539,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40443/40443_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40443/40443_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40443/40443_atk.png"
+      "default": "../video/Summon/4 star start/Ahvel/Thunder Beast Ahvel/Thunder-Beast-Ahvel-default.webm",
+      "idle": "../video/Summon/4 star start/Ahvel/Thunder Beast Ahvel/Thunder-Beast-Ahvel-idle.webm",
+      "atk": "../video/Summon/4 star start/Ahvel/Thunder Beast Ahvel/Thunder-Beast-Ahvel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -122746,9 +122746,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40444/40444_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40444/40444_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40444/40444_atk.png"
+      "default": "../video/Summon/4 star start/Ahvel/Thunder God Esna/Thunder-God-Esna-default.webm",
+      "idle": "../video/Summon/4 star start/Ahvel/Thunder God Esna/Thunder-God-Esna-idle.webm",
+      "atk": "../video/Summon/4 star start/Ahvel/Thunder God Esna/Thunder-God-Esna-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -122971,9 +122971,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40445/40445_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40445/40445_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40445/40445_atk.png"
+      "default": "../video/Summon/4 star start/Ahvel/Beast God Exvehl/Beast-God-Exvehl-default.webm",
+      "idle": "../video/Summon/4 star start/Ahvel/Beast God Exvehl/Beast-God-Exvehl-idle.webm",
+      "atk": "../video/Summon/4 star start/Ahvel/Beast God Exvehl/Beast-God-Exvehl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -123179,9 +123179,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50483/50483_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50483/50483_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50483/50483_atk.png"
+      "default": "../video/Summon/4 star start/Azael/Dark Angel Azael/Dark-Angel-Azael-default.webm",
+      "idle": "../video/Summon/4 star start/Azael/Dark Angel Azael/Dark-Angel-Azael-idle.webm",
+      "atk": "../video/Summon/4 star start/Azael/Dark Angel Azael/Dark-Angel-Azael-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -123363,9 +123363,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50484/50484_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50484/50484_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50484/50484_atk.png"
+      "default": "../video/Summon/4 star start/Azael/Wisdom Angel Azael/Wisdom-Angel-Azael-default.webm",
+      "idle": "../video/Summon/4 star start/Azael/Wisdom Angel Azael/Wisdom-Angel-Azael-idle.webm",
+      "atk": "../video/Summon/4 star start/Azael/Wisdom Angel Azael/Wisdom-Angel-Azael-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -123565,9 +123565,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50485/50485_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50485/50485_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50485/50485_atk.png"
+      "default": "../video/Summon/4 star start/Azael/Seraph Azael/Seraph-Azael-default.webm",
+      "idle": "../video/Summon/4 star start/Azael/Seraph Azael/Seraph-Azael-idle.webm",
+      "atk": "../video/Summon/4 star start/Azael/Seraph Azael/Seraph-Azael-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -123750,9 +123750,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60493/60493_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60493/60493_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60493/60493_atk.png"
+      "default": "../video/Summon/4 star start/Matah/Dictator Lilly Matah/Dictator-Lilly-Matah-default.webm",
+      "idle": "../video/Summon/4 star start/Matah/Dictator Lilly Matah/Dictator-Lilly-Matah-idle.webm",
+      "atk": "../video/Summon/4 star start/Matah/Dictator Lilly Matah/Dictator-Lilly-Matah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -123960,9 +123960,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60494/60494_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60494/60494_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60494/60494_atk.png"
+      "default": "../video/Summon/4 star start/Matah/Empress Lilly Matah/Empress-Lilly-Matah-default.webm",
+      "idle": "../video/Summon/4 star start/Matah/Empress Lilly Matah/Empress-Lilly-Matah-idle.webm",
+      "atk": "../video/Summon/4 star start/Matah/Empress Lilly Matah/Empress-Lilly-Matah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -124188,9 +124188,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60495/60495_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60495/60495_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60495/60495_atk.png"
+      "default": "../video/Summon/4 star start/Matah/Tyrant Lilly Matah/Tyrant-Lilly-Matah-default.webm",
+      "idle": "../video/Summon/4 star start/Matah/Tyrant Lilly Matah/Tyrant-Lilly-Matah-idle.webm",
+      "atk": "../video/Summon/4 star start/Matah/Tyrant Lilly Matah/Tyrant-Lilly-Matah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -197255,9 +197255,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40446/40446_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40446/40446_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40446/40446_atk.png"
+      "default": "../video/Summon/4 star start/Ahvel/Immortal Beast Sargavel/Immortal-Beast-Sargavel-default.webm",
+      "idle": "../video/Summon/4 star start/Ahvel/Immortal Beast Sargavel/Immortal-Beast-Sargavel-idle.webm",
+      "atk": "../video/Summon/4 star start/Ahvel/Immortal Beast Sargavel/Immortal-Beast-Sargavel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -244282,9 +244282,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30446/30446_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30446/30446_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30446/30446_atk.png"
+      "default": "../video/Summon/4 star start/Zelnite/Legendary Thief Zelnite/Legendary-Thief-Zelnite-default.webm",
+      "idle": "../video/Summon/4 star start/Zelnite/Legendary Thief Zelnite/Legendary-Thief-Zelnite-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelnite/Legendary Thief Zelnite/Legendary-Thief-Zelnite-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -252648,9 +252648,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10466/10466_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10466/10466_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10466/10466_atk.png"
+      "default": "../video/Summon/4 star start/Darvanshel/Flare Paladin Darvanshel/Flare-Paladin-Darvanshel-default.webm",
+      "idle": "../video/Summon/4 star start/Darvanshel/Flare Paladin Darvanshel/Flare-Paladin-Darvanshel-idle.webm",
+      "atk": "../video/Summon/4 star start/Darvanshel/Flare Paladin Darvanshel/Flare-Paladin-Darvanshel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -279601,9 +279601,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30447/30447_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30447/30447_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30447/30447_atk.png"
+      "default": "../video/Summon/4 star start/Zelnite/Chivalrous Thief Zelnite/Chivalrous-Thief-Zelnite-default.webm",
+      "idle": "../video/Summon/4 star start/Zelnite/Chivalrous Thief Zelnite/Chivalrous-Thief-Zelnite-idle.webm",
+      "atk": "../video/Summon/4 star start/Zelnite/Chivalrous Thief Zelnite/Chivalrous-Thief-Zelnite-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -321522,9 +321522,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60497/60497_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60497/60497_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60497/60497_atk.png"
+      "default": "../video/Summon/4 star start/Matah/Necromancer Lilly Matah/Necromancer-Lilly-Matah-default.webm",
+      "idle": "../video/Summon/4 star start/Matah/Necromancer Lilly Matah/Necromancer-Lilly-Matah-idle.webm",
+      "atk": "../video/Summon/4 star start/Matah/Necromancer Lilly Matah/Necromancer-Lilly-Matah-atk.webm"
     },
     "effects": {
       "atk": "",
