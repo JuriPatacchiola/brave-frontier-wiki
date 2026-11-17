@@ -118506,9 +118506,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10222/10222_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10222/10222_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10222/10222_atk.png"
+      "default": "../video/Base enemy/Goltovah/Goltovah/Goltovah-default.webm",
+      "idle": "../video/Base enemy/Goltovah/Goltovah/Goltovah-idle.webm",
+      "atk": "../video/Base enemy/Goltovah/Goltovah/Goltovah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -118668,9 +118668,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10223/10223_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10223/10223_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10223/10223_atk.png"
+      "default": "../video/Base enemy/Goltovah/Flame King Goltovah/Flame-King-Goltovah-default.webm",
+      "idle": "../video/Base enemy/Goltovah/Flame King Goltovah/Flame-King-Goltovah-idle.webm",
+      "atk": "../video/Base enemy/Goltovah/Flame King Goltovah/Flame-King-Goltovah-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -118830,9 +118830,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20222/20222_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20222/20222_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20222/20222_atk.png"
+      "default": "../video/Base enemy/Jaegar/Jaegar/Jaegar-default.webm",
+      "idle": "../video/Base enemy/Jaegar/Jaegar/Jaegar-idle.webm",
+      "atk": "../video/Base enemy/Jaegar/Jaegar/Jaegar-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -118992,9 +118992,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20223/20223_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20223/20223_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20223/20223_atk.png"
+      "default": "../video/Base enemy/Jaegar/Ice King Jaegar/Ice-King-Jaegar-default.webm",
+      "idle": "../video/Base enemy/Jaegar/Ice King Jaegar/Ice-King-Jaegar-idle.webm",
+      "atk": "../video/Base enemy/Jaegar/Ice King Jaegar/Ice-King-Jaegar-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -119154,9 +119154,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30222/30222_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30222/30222_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30222/30222_atk.png"
+      "default": "../video/Base enemy/Ristrall/Ristrall/Ristrall-default.webm",
+      "idle": "../video/Base enemy/Ristrall/Ristrall/Ristrall-idle.webm",
+      "atk": "../video/Base enemy/Ristrall/Ristrall/Ristrall-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -119316,9 +119316,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30223/30223_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30223/30223_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30223/30223_atk.png"
+      "default": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-default.webm",
+      "idle": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-atk.webm",
+      "atk": "../video/Base enemy/Ristrall/Phantom Ristrall/Phantom-Ristrall-idle.webm"
     },
     "effects": {
       "atk": "",
@@ -119478,9 +119478,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40222/40222_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40222/40222_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40222/40222_atk.png"
+      "default": "../video/Base enemy/Raiden/Raiden/Raiden-default.webm",
+      "idle": "../video/Base enemy/Raiden/Raiden/Raiden-idle.webm",
+      "atk": "../video/Base enemy/Raiden/Raiden/Raiden-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -119640,9 +119640,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40223/40223_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40223/40223_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40223/40223_atk.png"
+      "default": "../video/Base enemy/Raiden/Slicing Bolt Raiden/Slicing-Bolt-Raiden-default.webm",
+      "idle": "../video/Base enemy/Raiden/Slicing Bolt Raiden/Slicing-Bolt-Raiden-idle.webm",
+      "atk": "../video/Base enemy/Raiden/Slicing Bolt Raiden/Slicing-Bolt-Raiden-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -119802,9 +119802,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50242/50242_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50242/50242_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50242/50242_atk.png"
+      "default": "../video/Base enemy/Mila/Mila/Mila-default.webm",
+      "idle": "../video/Base enemy/Mila/Mila/Mila-idle.webm",
+      "atk": "../video/Base enemy/Mila/Mila/Mila-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -119964,9 +119964,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50243/50243_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50243/50243_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50243/50243_atk.png"
+      "default": "../video/Base enemy/Mila/Twinkling Flash Mila/Twinkling-Flash-Mila-default.webm",
+      "idle": "../video/Base enemy/Mila/Twinkling Flash Mila/Twinkling-Flash-Mila-idle.webm",
+      "atk": "../video/Base enemy/Mila/Twinkling Flash Mila/Twinkling-Flash-Mila-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -120126,9 +120126,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60212/60212_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60212/60212_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60212/60212_atk.png"
+      "default": "../video/Base enemy/Bahvel/Bahvel/Bahvel-default.webm",
+      "idle": "../video/Base enemy/Bahvel/Bahvel/Bahvel-idle.webm",
+      "atk": "../video/Base enemy/Bahvel/Bahvel/Bahvel-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -120288,9 +120288,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60213/60213_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60213/60213_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60213/60213_atk.png"
+      "default": "../video/Base enemy/Bahvel/Black Emperor Bahvel/Black-Emperor-Bahvel-default.webm",
+      "idle": "../video/Base enemy/Bahvel/Black Emperor Bahvel/Black-Emperor-Bahvel-idle.webm",
+      "atk": "../video/Base enemy/Bahvel/Black Emperor Bahvel/Black-Emperor-Bahvel-atk.webm"
     },
     "effects": {
       "atk": "",
