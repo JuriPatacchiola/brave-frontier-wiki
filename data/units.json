@@ -124540,9 +124540,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10261/10261_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10261/10261_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10261/10261_atk.png"
+      "default": "../video/Base enemy/Bozdell/Bozdell/Bozdell-default.webm",
+      "idle": "../video/Base enemy/Bozdell/Bozdell/Bozdell-idle.webm",
+      "atk": "../video/Base enemy/Bozdell/Bozdell/Bozdell-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -124701,9 +124701,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10262/10262_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10262/10262_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10262/10262_atk.png"
+      "default": "../video/Base enemy/Bozdell/King Bozdell/King-Bozdell-default.webm",
+      "idle": "../video/Base enemy/Bozdell/King Bozdell/King-Bozdell-idle.webm",
+      "atk": "../video/Base enemy/Bozdell/King Bozdell/King-Bozdell-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -124862,9 +124862,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20261/20261_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20261/20261_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20261/20261_atk.png"
+      "default": "../video/Base enemy/Deenan/Calamity Fish Deenan/Calamity-Fish-Deenan-default.webm",
+      "idle": "../video/Base enemy/Deenan/Calamity Fish Deenan/Calamity-Fish-Deenan-idle.webm",
+      "atk": "../video/Base enemy/Deenan/Calamity Fish Deenan/Calamity-Fish-Deenan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125023,9 +125023,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20262/20262_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20262/20262_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20262/20262_atk.png"
+      "default": "../video/Base enemy/Deenan/Ghoul Fish Pilaf/Ghoul-Fish-Pilaf-default.webm",
+      "idle": "../video/Base enemy/Deenan/Ghoul Fish Pilaf/Ghoul-Fish-Pilaf-idle.webm",
+      "atk": "../video/Base enemy/Deenan/Ghoul Fish Pilaf/Ghoul-Fish-Pilaf-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125184,9 +125184,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30261/30261_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30261/30261_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30261/30261_atk.png"
+      "default": "../video/Base enemy/Tinpall/Grove Fairy Tinpall/Grove-Fairy-Tinpall-default.webm",
+      "idle": "../video/Base enemy/Tinpall/Grove Fairy Tinpall/Grove-Fairy-Tinpall-idle.webm",
+      "atk": "../video/Base enemy/Tinpall/Grove Fairy Tinpall/Grove-Fairy-Tinpall-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125345,9 +125345,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30262/30262_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30262/30262_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30262/30262_atk.png"
+      "default": "../video/Base enemy/Tinpall/Woodland Fairy Finia/Woodland-Fairy-Finia-default.webm",
+      "idle": "../video/Base enemy/Tinpall/Woodland Fairy Finia/Woodland-Fairy-Finia-idle.webm",
+      "atk": "../video/Base enemy/Tinpall/Woodland Fairy Finia/Woodland-Fairy-Finia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125506,9 +125506,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40261/40261_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40261/40261_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40261/40261_atk.png"
+      "default": "../video/Base enemy/Cockatrice/Cockatrice/Cockatrice-default.webm",
+      "idle": "../video/Base enemy/Cockatrice/Cockatrice/Cockatrice-idle.webm",
+      "atk": "../video/Base enemy/Cockatrice/Cockatrice/Cockatrice-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125667,9 +125667,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40262/40262_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40262/40262_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40262/40262_atk.png"
+      "default": "../video/Base enemy/Cockatrice/Catoblepas/Catoblepas-default.webm",
+      "idle": "../video/Base enemy/Cockatrice/Catoblepas/Catoblepas-idle.webm",
+      "atk": "../video/Base enemy/Cockatrice/Catoblepas/Catoblepas-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125828,9 +125828,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50291/50291_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50291/50291_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50291/50291_atk.png"
+      "default": "../video/Base enemy/GS-220/GS-220/GS-220-default.webm",
+      "idle": "../video/Base enemy/GS-220/GS-220/GS-220-idle.webm",
+      "atk": "../video/Base enemy/GS-220/GS-220/GS-220-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -125989,9 +125989,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50292/50292_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50292/50292_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50292/50292_atk.png"
+      "default": "../video/Base enemy/GS-220/GS-1000/GS-1000-default.webm",
+      "idle": "../video/Base enemy/GS-220/GS-1000/GS-1000-idle.webm",
+      "atk": "../video/Base enemy/GS-220/GS-1000/GS-1000-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -126150,9 +126150,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60261/60261_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60261/60261_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60261/60261_atk.png"
+      "default": "../video/Base enemy/Spider/Dark Spider/Dark-Spider-default.webm",
+      "idle": "../video/Base enemy/Spider/Dark Spider/Dark-Spider-idle.webm",
+      "atk": "../video/Base enemy/Spider/Dark Spider/Dark-Spider-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -126311,9 +126311,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60262/60262_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60262/60262_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60262/60262_atk.png"
+      "default": "../video/Base enemy/Spider/Arachna/Arachna-default.webm",
+      "idle": "../video/Base enemy/Spider/Arachna/Arachna-idle.webm",
+      "atk": "../video/Base enemy/Spider/Arachna/Arachna-atk.webm"
     },
     "effects": {
       "atk": "",
