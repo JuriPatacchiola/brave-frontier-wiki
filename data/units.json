@@ -126472,9 +126472,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50563/50563_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50563/50563_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50563/50563_atk.png"
+      "default": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl/Deemo-and-the-Girl-default.webm",
+      "idle": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl/Deemo-and-the-Girl-idle.webm",
+      "atk": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl/Deemo-and-the-Girl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -126644,9 +126644,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50564/50564_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50564/50564_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50564/50564_atk.png"
+      "default": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (5)/Deemo-and-the-Girl-default.webm",
+      "idle": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (5)/Deemo-and-the-Girl-idle.webm",
+      "atk": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (5)/Deemo-and-the-Girl-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -227916,9 +227916,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50565/50565_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50565/50565_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50565/50565_atk.png"
+      "default": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (6)/Deemo-and-the-Girl-default.webm",
+      "idle": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (6)/Deemo-and-the-Girl-idle.webm",
+      "atk": "../video/Collabs/Deemo/Deemo and the Girl/Deemo and the Girl (6)/Deemo-and-the-Girl-atk.webm"
     },
     "effects": {
       "atk": "",
