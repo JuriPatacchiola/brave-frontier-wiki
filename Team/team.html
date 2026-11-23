@@ -32,43 +32,114 @@
         </div>
     </header>
 
-    <main class="team-content">
-        <h2 id="teamTitle" class="team-title notranslate">Squadra</h2>
-        <p id="teamIntro" class="team-intro"></p>
+    <main class="team-content" id="teamContent">
+        <div class="team-layout">
 
-        <!-- Barra dei comandi -->
-        <div class="team-toolbar">
-            <label class="team-switch">
-                <input type="checkbox" id="impToggle">
-                <span class="team-switch-track" aria-hidden="true"></span>
-                <span id="impLabel" class="notranslate">Imp al massimo</span>
-            </label>
-            <button type="button" id="bgBtn" class="team-btn notranslate">Cambia sfondo</button>
-            <button type="button" id="linkBtn" class="team-btn is-gold notranslate">Copia link della squadra</button>
-            <button type="button" id="clearBtn" class="team-btn notranslate">Svuota</button>
+            <!-- SCHERMATA DI BATTAGLIA (come nel gioco): sta tutta nello schermo, senza scorrere -->
+            <div class="bf-wrap">
+                <div id="bfScreen" class="bf-screen">
+                    <!-- campo: sfondo del dungeon, nemici a sinistra, squadra a destra -->
+                    <div id="teamScene" class="team-scene">
+                        <canvas class="scene-fx scene-fx-back"></canvas>
+                        <canvas class="scene-fx scene-fx-back-add"></canvas>
+                        <div id="sceneUnits" class="scene-units"></div>
+                        <canvas class="scene-fx scene-fx-front"></canvas>
+                        <canvas class="scene-fx scene-fx-front-add"></canvas>
+                        <div id="sceneSlots" class="scene-slots"></div>
+                        <!-- frecce sul nemico scelto come bersaglio -->
+                        <div id="targetMark" class="target-mark" hidden><span class="tm-l spr"></span><span class="tm-r spr"></span></div>
+                        <!-- colpi e danni totali della combo -->
+                        <div id="comboBox" class="combo-box notranslate" hidden>
+                            <div class="cb-hits"><b>0</b> HITS</div>
+                            <div class="cb-dmg">0</div>
+                            <div class="cb-spark" hidden>SPARK <b>0</b></div>
+                        </div>
+                        <!-- nome della BB quando parte -->
+                        <div id="bbBanner" class="bb-banner" hidden><span class="bb-text notranslate"></span></div>
+                        <!-- numeri dei danni -->
+                        <div id="sceneFx" class="scene-hits"></div>
+                    </div>
+
+                    <!-- striscia con il drago: turno, nemico scelto e la sua vita -->
+                    <div class="bf-banner spr">
+                        <span class="bf-turn notranslate">TURN: <b id="turnNum">1</b></span>
+                        <span id="targetElem" class="bf-elem spr"></span>
+                        <span id="targetName" class="bf-name notranslate"></span>
+                        <button type="button" id="autoBtn" class="bf-auto notranslate">AUTO</button>
+                        <span class="bf-hp"><span id="targetHpFill" class="bf-hpfill spr"></span></span>
+                        <span id="targetHpText" class="bf-hptext notranslate">HP: 100%</span>
+                    </div>
+
+                    <!-- i 6 riquadri delle unità: clic = attacco -->
+                    <div id="teamCards" class="bf-cards"></div>
+
+                    <!-- barra OVERDRIVE -->
+                    <div class="bf-od">
+                        <span class="bf-odframe spr"><span id="odFill" class="bf-odfill spr"></span></span>
+                        <span class="bf-odlabel spr"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A DESTRA (su telefono sotto): comandi, squadra, statistiche, consigli e guida -->
+            <div class="team-side">
+                <h2 id="teamTitle" class="team-title notranslate">Squadra</h2>
+                <p id="teamIntro" class="team-intro"></p>
+                <p id="battleHint" class="battle-hint"></p>
+
+                <!-- Barra dei comandi -->
+                <div class="team-toolbar">
+                    <label class="team-switch">
+                        <input type="checkbox" id="impToggle">
+                        <span class="team-switch-track" aria-hidden="true"></span>
+                        <span id="impLabel" class="notranslate">Imp al massimo</span>
+                    </label>
+                    <button type="button" id="bgBtn" class="team-btn notranslate">Cambia sfondo</button>
+                    <button type="button" id="linkBtn" class="team-btn is-gold notranslate">Copia link della squadra</button>
+                    <button type="button" id="clearBtn" class="team-btn notranslate">Svuota</button>
+                </div>
+
+                <!-- Nemici -->
+                <section class="team-panel">
+                    <h2 id="enemyTitle" class="notranslate">Nemici</h2>
+                    <div class="enemy-bar">
+                        <label class="enemy-field">
+                            <span id="enemyCountLabel" class="notranslate">Quanti</span>
+                            <select id="enemyCount" class="notranslate">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </label>
+                        <button type="button" id="enemyRandom" class="team-btn notranslate">Nemici a caso</button>
+                        <button type="button" id="attackAllBtn" class="team-btn is-gold notranslate">Attaccano tutti</button>
+                    </div>
+                    <label class="enemy-field is-wide">
+                        <span id="enemyLabel" class="notranslate">Nemico scelto</span>
+                        <select id="enemySelect" class="notranslate"></select>
+                    </label>
+                </section>
+
+                <!-- La squadra: tipo, leader, amico, cambia, togli -->
+                <section class="team-panel">
+                    <h2 id="teamListTitle" class="notranslate">La tua squadra</h2>
+                    <div id="teamEditor" class="team-editor"></div>
+                    <p id="dmgNote" class="battle-note"></p>
+                </section>
+
+                <!-- Statistiche di tutta la squadra -->
+                <section id="teamTotals" class="team-panel"></section>
+
+                <!-- Consigli automatici sulla squadra scelta -->
+                <section id="teamAdvice" class="team-panel"></section>
+
+                <!-- Guida fissa -->
+                <section id="teamGuide" class="team-panel team-guide"></section>
+            </div>
         </div>
-
-        <!-- Scena di battaglia: sfondo del dungeon, animazioni del dungeon e le 6 unità in formazione -->
-        <div id="teamScene" class="team-scene">
-            <canvas class="scene-fx scene-fx-back"></canvas>
-            <canvas class="scene-fx scene-fx-back-add"></canvas>
-            <div id="sceneUnits" class="scene-units"></div>
-            <canvas class="scene-fx scene-fx-front"></canvas>
-            <canvas class="scene-fx scene-fx-front-add"></canvas>
-            <div id="sceneSlots" class="scene-slots"></div>
-        </div>
-
-        <!-- I 6 riquadri delle unità (come in battaglia nel gioco) -->
-        <div id="teamCards" class="team-cards"></div>
-
-        <!-- Statistiche di tutta la squadra -->
-        <section id="teamTotals" class="team-panel"></section>
-
-        <!-- Consigli automatici sulla squadra scelta -->
-        <section id="teamAdvice" class="team-panel"></section>
-
-        <!-- Guida fissa -->
-        <section id="teamGuide" class="team-panel team-guide"></section>
     </main>
 
     <!-- Finestra per scegliere un'unità -->

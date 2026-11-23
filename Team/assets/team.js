@@ -946,6 +946,51 @@ function dungeonFramePos(anim, t) {
 function isVideoFile(src) {
     return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(String(src || ''));
 }
+const ANIM_MOVE_TELEPORT = new Set(('10181,10182,10302,10503,10504,10505,11096,11097,20365,20366,20644,20645,20646,20886,20887,21106,21107,'
+    + '30424,30425,30624,30625,30626,30627,30822,30823,31066,31067,40233,40234,40235,40236,40313,40314,40315,40316,40423,40424,40425,'
+    + '40473,40474,40475,40856,40857,50011,50012,50013,50014,50015,50112,50113,50114,50115,50116,50263,50264,50265,50333,50334,50413,'
+    + '50414,50415,50525,50864,50865,50866,51106,51107,51147,51256,51257,51317,51336,51337,60084,60085,60095,60096,60097,60142,60143,'
+    + '60144,60151,60152,60153,60154,60155,60175,60176,60177,60191,60192,60224,60273,60274,60275,60293,60294,60295,60533,60534,60535,'
+    + '60536,60643,60644,60645,60914,60915,60916,61006,61007,61036,61086,61087,61125,61126,61196,61197,61207,61286,61287,720167,750122,'
+    + '750166,750167,810108,810277,810278,810408,810418,810437,810438,810517,810518,810718,810798,820357,820358,820567,820568,820577,'
+    + '820578,820668,820687,820688,820747,820748,820798,820898,820938,820948,830044,830045,830047,830048,830325,830326,830327,830328,'
+    + '830408,830504,830505,830688,840325,840326,840327,840437,840438,850154,850155,850156,850157,850158,850328,850417,850418,850437,'
+    + '850438,850568,850928,860034,860108,860148,860255,860256,860258,860356,860357,860417,860418,860437,860438,860517,860518,860547,'
+    + '860548,860577,860578,861008').split(','));
+const ANIM_MOVE_STAY = new Set(('10040,10041,10042,10081,10082,10083,10092,10093,10094,10095,10130,10131,10132,10133,10191,10222,10223,'
+    + '10312,10313,10323,10324,10373,10374,10375,10452,10522,10563,10564,10612,10613,10704,10705,10855,10884,10885,10886,20040,20041,'
+    + '20042,20081,20082,20083,20092,20093,20094,20095,20112,20113,20114,20115,20130,20131,20132,20133,20152,20153,20154,20155,20156,'
+    + '20157,20162,20163,20164,20165,20191,20212,20213,20214,20215,20217,20253,20254,20255,20273,20274,20275,20276,20302,20433,20434,'
+    + '20435,20442,20694,20695,20696,20704,20705,20706,20754,20755,20756,20804,20805,20806,21036,21037,21086,21087,30021,30022,30023,'
+    + '30024,30025,30040,30041,30042,30050,30051,30052,30071,30072,30073,30081,30082,30083,30092,30093,30094,30095,30112,30113,30114,'
+    + '30115,30116,30122,30123,30124,30125,30130,30131,30132,30133,30181,30182,30191,30293,30294,30295,30303,30304,30313,30314,30315,'
+    + '30316,30393,30394,30432,30494,30495,30533,30534,30535,30674,30675,30676,30764,30765,30786,30907,30916,30917,30946,30947,30986,'
+    + '30987,30996,30997,40021,40022,40023,40024,40025,40061,40062,40063,40081,40082,40083,40092,40093,40094,40095,40130,40131,40132,'
+    + '40133,40162,40163,40164,40165,40166,40167,40191,40262,40283,40284,40285,40293,40294,40295,40343,40344,40345,40346,40353,40354,'
+    + '40355,40432,40513,40514,40515,40714,40715,40716,40802,40803,40866,40867,41036,41037,50040,50041,50042,50071,50072,50073,50092,'
+    + '50093,50094,50095,50102,50103,50104,50105,50106,50120,50121,50122,50123,50191,50242,50243,50253,50254,50255,50256,50344,50354,'
+    + '50463,50464,50465,50612,50623,50624,50643,50644,50645,50672,50673,50682,50683,50786,50844,50845,50955,51075,51076,51112,51113,'
+    + '51227,51367,60040,60041,60042,60061,60062,60063,60071,60072,60073,60092,60093,60094,60120,60121,60122,60123,60162,60163,60164,'
+    + '60165,60201,60243,60244,60245,60425,60435,60445,60584,60585,60613,60614,60692,60693,60894,60895,60896,60974,60975,60976,61026,'
+    + '61027,61107,710164,710165,710166,710176,710234,710237,720012,720153,720154,720155,720157,720217,720226,720227,720237,720244,'
+    + '720247,720254,720255,730113,730114,730115,730125,730146,730186,730227,730257,730264,730302,740133,740134,740135,740176,740226,'
+    + '740227,740284,740285,750003,750012,750136,750137,750153,750154,750155,750156,750186,760006,760153,760154,760164,760165,760166,'
+    + '760247,760264,810003,810004,810005,810006,810034,810124,810125,810204,810205,810206,810265,810266,810337,810338,810427,810428,'
+    + '810557,810558,810617,810618,810657,810658,810687,810688,810708,810900,820003,820004,820005,820006,820034,820044,820045,820047,'
+    + '820048,820124,820125,820147,820148,820204,820205,820206,820287,820288,820437,820438,820507,820508,820547,820548,820657,820658,'
+    + '820717,820718,820757,820758,820867,820868,820900,820958,830034,830124,830125,830134,830135,830146,830147,830148,830277,830278,'
+    + '830297,830298,830377,830378,830437,830438,830525,830526,830527,830528,830557,830558,830587,830588,830597,830598,830628,830697,'
+    + '830698,830757,830758,830798,830818,830827,830828,830838,830867,830868,830888,830900,830978,830998,840003,840004,840005,840006,'
+    + '840034,840044,840045,840047,840048,840114,840115,840116,840117,840118,840148,840155,840156,840204,840205,840206,840287,840288,'
+    + '840357,840358,840367,840368,840567,840568,840587,840627,840628,840657,840658,840688,840708,840748,840757,840758,840767,840768,'
+    + '840788,840848,840868,840878,840888,840900,840998,850003,850004,850005,850006,850013,850014,850015,850017,850018,850034,850047,'
+    + '850048,850134,850135,850146,850147,850148,850165,850166,850167,850196,850197,850198,850205,850206,850287,850288,850297,850298,'
+    + '850315,850316,850317,850318,850357,850358,850397,850398,850547,850548,850557,850558,850627,850628,850637,850638,850647,850648,'
+    + '850657,850658,850688,850808,850900,850958,850988,851018,860104,860105,860107,860127,860128,860156,860158,860165,860166,860167,'
+    + '860377,860378,860568,860687,860688,860728,860757,860758,860787,860788,860798,860808,860867,860868,860900,860958,87102601,'
+    + '87102602,87102603,87202601,87202602,87202603,87302601,87302602,87302603,87402601,87402602,87402603,87502601,87502602,87502603,'
+    + '87602601,87602602,87602603').split(','));
+
 /* ==========================================================================
    PAGINA SQUADRA
    ========================================================================== */
@@ -992,8 +1037,8 @@ const ROLES = [
 const TT = {
     title: { it: 'Squadra', en: 'Team', es: 'Equipo', fr: 'Équipe', 'zh-CN': '队伍', ja: 'パーティ' },
     intro: {
-        it: 'Scegli 6 unità come nel gioco (5 tue + 1 amico), il loro tipo e se hanno gli imp al massimo: vedi come stanno in battaglia, le statistiche e i consigli per migliorare la squadra.',
-        en: 'Pick 6 units like in the game (5 of yours + 1 friend), their type and whether they have max imps: see how they look in battle, their stats and tips to improve the team.'
+        it: 'Scegli 6 unità come nel gioco (5 tue + 1 amico), il loro tipo e se hanno gli imp al massimo: vedi come stanno in battaglia, falle attaccare un nemico cliccando sui loro riquadri e leggi i consigli per migliorare la squadra.',
+        en: 'Pick 6 units like in the game (5 of yours + 1 friend), their type and whether they have max imps: see how they look in battle, make them attack an enemy by clicking their cards and read the tips to improve the team.'
     },
     imp: { it: 'Imp al massimo', en: 'Max imps', es: 'Imps al máximo', fr: 'Imps au max', 'zh-CN': 'Imp全满', ja: 'インプ最大' },
     changeBg: { it: 'Cambia sfondo', en: 'Change area', es: 'Cambiar fondo', fr: 'Changer de décor', 'zh-CN': '更换背景', ja: '背景を変更' },
@@ -1016,7 +1061,18 @@ const TT = {
     allRar: { it: 'Tutte le rarità', en: 'All rarities', es: 'Todas las rarezas', fr: 'Toutes les raretés', 'zh-CN': '全部稀有度', ja: '全レアリティ' },
     more: { it: 'Mostra altre unità ({n} di {t})', en: 'Show more units ({n} of {t})', es: 'Mostrar más unidades ({n} de {t})', fr: "Afficher plus d'unités ({n} sur {t})", 'zh-CN': '显示更多单位（{n}/{t}）', ja: 'もっと見る（{n} / {t}）' },
     loading: { it: 'Carico le unità...', en: 'Loading units...', es: 'Cargando unidades...', fr: 'Chargement des unités...', 'zh-CN': '正在加载单位...', ja: 'ユニットを読み込み中...' },
-    empty: { it: 'La squadra è vuota: premi "+ Aggiungi unità" in uno dei 6 posti.', en: 'The team is empty: press "+ Add unit" in one of the 6 slots.' }
+    empty: { it: 'La squadra è vuota: premi "+ Aggiungi unità" in uno dei 6 posti.', en: 'The team is empty: press "+ Add unit" in one of the 6 slots.' },
+    enemies: { it: 'Nemici', en: 'Enemies', es: 'Enemigos', fr: 'Ennemis', 'zh-CN': '敌人', ja: '敵' },
+    enemyCount: { it: 'Quanti', en: 'How many', es: 'Cuántos', fr: 'Combien', 'zh-CN': '数量', ja: '数' },
+    randomEnemies: { it: 'Nemici a caso', en: 'Random enemies', es: 'Enemigos al azar', fr: 'Ennemis au hasard', 'zh-CN': '随机敌人', ja: 'ランダムな敵' },
+    targetEnemy: { it: 'Nemico scelto (clicca un nemico nel campo per sceglierlo)', en: 'Selected enemy (click an enemy on the field to pick it)' },
+    teamList: { it: 'La tua squadra', en: 'Your team', es: 'Tu equipo', fr: 'Ton équipe', 'zh-CN': '你的队伍', ja: 'あなたのパーティ' },
+    auto: { it: 'Attacco automatico a ogni turno', en: 'Automatic attack every turn' },
+    attackAll: { it: 'Attaccano tutti', en: 'All attack', es: 'Atacan todos', fr: 'Tous attaquent', 'zh-CN': '全员攻击', ja: '全員で攻撃' },
+    attackHint: { it: "Clic = attacco. Con la barra BB piena: trascina verso l'alto per la BB", en: 'Click = attack. With a full BB gauge: drag up for the BB' },
+    battleHint: { it: "Clicca su un riquadro: l'unità va verso il nemico scelto (quello con le frecce; clicca un nemico per cambiarlo) e attacca. Ogni unità attacca una volta per turno; quando tutte hanno attaccato comincia il turno dopo. I colpi riempiono la barra BB: quando è piena il riquadro si illumina e trascinandolo verso l'alto l'unità fa la BB. Se aspetti, la barra si riempie una seconda volta (dorata) per la SBB. Più unità che colpiscono insieme fanno Spark. AUTO: attaccano da sole e usano anche le BB.", en: 'Click a card: the unit goes to the selected enemy (the one with the arrows; click an enemy to change it) and attacks. Each unit attacks once per turn; when all have attacked the next turn begins. Hits fill the BB gauge: when it is full the card lights up and dragging it up makes the unit use its BB. If you wait, the gauge fills a second time (gold) for the SBB. Several units hitting together make Sparks. AUTO: they attack by themselves and also use their BBs.' },
+    dmgNote: { it: 'Danni indicativi, senza buff e senza abilità leader: ATK − DEF del nemico ÷ 3, ×1,5 se il nemico è debole all\'elemento, ×0,75 se lo resiste, ×1,5 con lo Spark.', en: "Indicative damage, without buffs or leader skills: ATK − enemy DEF ÷ 3, ×1.5 if the enemy is weak to the element, ×0.75 if it resists it, ×1.5 with a Spark." },
+    type: { it: 'Tipo', en: 'Type', es: 'Tipo', fr: 'Type', 'zh-CN': '类型', ja: 'タイプ' }
 };
 
 /* CONSIGLI AUTOMATICI: {..} sono parti che il codice riempie */
@@ -1105,7 +1161,8 @@ const team = {
     leader: -1,
     friend: -1,
     imp: false,
-    bg: ''
+    bg: '',
+    enemies: []
 };
 let pickSlot = -1;
 let sceneRun = null;   // animazioni del dungeon dello sfondo
@@ -1209,6 +1266,7 @@ function teamToUrl() {
     if (team.imp) parts.push('imp=1');
     const bgId = dungeonIdFromBackground(team.bg);
     if (bgId) parts.push('bg=' + encodeURIComponent(bgId));
+    if (team.enemies.length) parts.push('e=' + team.enemies.map(encodeURIComponent).join(','));
     return location.pathname + (parts.length ? '?' + parts.join('&') : '');
 }
 
@@ -1226,6 +1284,7 @@ function teamFromUrl() {
     team.imp = p.get('imp') === '1';
     const bg = p.get('bg');
     team.bg = (bg && arenaBackgrounds.find(src => dungeonIdFromBackground(src) === bg)) || '';
+    team.enemies = (p.get('e') || '').split(',').filter(Boolean).slice(0, 6);
 }
 
 function saveUrl() {
@@ -1346,147 +1405,759 @@ function stopSceneFx() {
 }
 
 /* le unità sullo sfondo: animazione idle, appoggiate al loro posto della formazione */
-const sceneUnits = [];   // per ogni posto: { id, el, m, scale }
+/* ---------- schermata di battaglia: unità, nemici, turni ---------- */
+/* Come nel gioco: clicchi un riquadro e l'unità va verso il nemico scelto, attacca e torna al suo posto.
+   Con la barra BB piena il riquadro si illumina: trascinandolo verso l'alto l'unità fa la BB
+   (o la SBB, se la barra si è riempita anche la seconda volta).
+   Ogni unità attacca una volta per turno (poi il riquadro diventa grigio); quando tutte hanno
+   attaccato comincia il turno dopo. AUTO = attaccano da sole a ogni turno.
+   I danni sono INDICATIVI (senza buff e senza abilità leader):
+     danno = ATK - DEF del nemico / 3, diviso tra i colpi (combo) dell'attacco
+     x1,5 se il nemico è debole all'elemento, x0,75 se lo resiste, x1,5 se fa Spark */
+const SCREEN_W = 640;                     // schermata del gioco: 640 pixel di larghezza...
+const SCREEN_H = 839;                     // ...e 839 di altezza (campo 440 + drago + 6 riquadri + overdrive)
+// posti dei nemici (a sinistra, come la squadra ma allo specchio); con un solo nemico sta al centro
+const ENEMY_SLOTS = [
+    { x: 0.30, y: 0.70 }, { x: 0.37, y: 0.55 }, { x: 0.34, y: 0.86 },
+    { x: 0.12, y: 0.72 }, { x: 0.18, y: 0.56 }, { x: 0.15, y: 0.87 }
+];
+const ENEMY_SINGLE = { x: 0.27, y: 0.74 };
+const ENEMY_SCALE = 1;                    // grandezza dei nemici rispetto alle unità
+const ATTACK_GAP = 0.17;                  // chi si muove si ferma così a destra del nemico (frazione della larghezza)
+const ATTACK_SPREAD = 0.6;                // ...e un po' più su o più giù a seconda della sua fila (0 = tutti nello stesso punto)
+const ATTACK_COL = 0.06;                  // la colonna di destra si ferma un po' più indietro
+const MOVE_GO = 320;                      // millisecondi per andare verso il nemico
+const MOVE_BACK = 300;                    // millisecondi per tornare al proprio posto
+const TELEPORT_FADE = 130;                // millisecondi per sparire / ricomparire (teletrasporto)
+const HIT_START = 0.35;                   // i colpi arrivano tra il 35%...
+const HIT_END = 0.85;                     // ...e l'85% dell'animazione d'attacco
+const UNKNOWN_ATK_TIME = 1.5;             // secondi, se il file non dice quanto dura
+const SPARK_WINDOW = 0.06;                // secondi: colpi di unità diverse così vicini fanno Spark
+const DMG = { weak: 1.5, resist: 0.75, spark: 1.5, bb: 2.5, sbb: 4, variance: 0.08 };
+const BC_RATE = 0.35;                     // CB presi in media a ogni colpo (x DC del colpo)
+const OD_PER_HIT = 0.4;                   // % della barra OVERDRIVE per ogni colpo
+const ENEMY_HP_MULT = 10;                 // HP del nemico = HP (Lord) dell'unità x questo numero
+const ENEMY_MIN_HP = 10000;
+const WAVE_RESPAWN = 1500;                // millisecondi prima che tornino i nemici sconfitti
+const TURN_PAUSE = 600;                   // millisecondi tra un turno e l'altro
+const ENEMY_FOLDERS = /\/video\/(Base enemy|Enemy boss basic|God Boss)\//i;
+const BATTLE_IMG = id => `../img/Unit/Battle Img/unit_ills_battle_${id}.png`;
 
+function unitMoveType(u) {
+    const id = String(u && u.realId);
+    if (ANIM_MOVE_STAY.has(id)) return 3;
+    if (ANIM_MOVE_TELEPORT.has(id)) return 2;
+    return 1;
+}
+
+const actors = [];      // per ogni posto: { id, u, wrap, idle, atk, busy, gauge }
+let enemies = [];       // { id, u, wrap, idle, hp, maxHp, def, el, dead, spot }
+let targetIdx = 0;
+let enemyList = [];
+let recentHits = [];    // per lo Spark: { slot, t }
+let restartCount = 0;
+let turn = 1;
+let od = 0;
+let autoOn = false;
+const acted = new Set();
+const combo = { hits: 0, dmg: 0, sparks: 0, timer: 0 };
+
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+// sposta / fa sparire un elemento in modo fluido; alla fine lo lascia dove è arrivato
+function animateTo(el, from, to, ms, easing) {
+    if (!el.animate) { Object.assign(el.style, to); return Promise.resolve(); }
+    const anim = el.animate([from, to], { duration: ms, easing: easing || 'ease-in-out', fill: 'forwards' });
+    return anim.finished.catch(() => { }).then(() => { Object.assign(el.style, to); anim.cancel(); });
+}
+
+/* durata di una .webp animata: somma dei tempi dei fotogrammi (blocchi ANMF del file) */
+const webpDurCache = new Map();
+function webpDuration(src) {
+    const clean = String(src || '').split('#')[0];
+    if (!/\.webp(\?|$)/i.test(clean)) return Promise.resolve(0);
+    if (!webpDurCache.has(clean)) {
+        webpDurCache.set(clean, fetch(clean).then(r => (r.ok ? r.arrayBuffer() : null)).then(buf => {
+            if (!buf || buf.byteLength < 20) return 0;
+            const v = new DataView(buf);
+            let p = 12, total = 0;
+            while (p + 8 <= v.byteLength) {
+                const id = String.fromCharCode(v.getUint8(p), v.getUint8(p + 1), v.getUint8(p + 2), v.getUint8(p + 3));
+                const size = v.getUint32(p + 4, true);
+                if (id === 'ANMF' && p + 23 <= v.byteLength) {
+                    total += v.getUint8(p + 20) | (v.getUint8(p + 21) << 8) | (v.getUint8(p + 22) << 16);
+                }
+                p += 8 + size + (size & 1);
+            }
+            return total / 1000;
+        }).catch(() => 0));
+    }
+    return webpDurCache.get(clean);
+}
+
+function atkSrc(u) {
+    const a = u.animations || {};
+    return pickAnimationSrc(a.atk || '');
+}
+
+/* un'animazione (video o immagine) dentro il campo: si misura da sola quando è pronta */
+function createMedia(src, opts) {
+    const media = { src, el: null, m: null, scale: 1, video: false, dur: 0, failed: false, icon: false };
+    let el;
+    if (src && isVideoFile(src)) {
+        el = document.createElement('video');
+        el.muted = true;
+        el.playsInline = true;
+        el.setAttribute('playsinline', '');
+        el.setAttribute('webkit-playsinline', '');
+        el.preload = 'auto';
+        el.loop = !!opts.loop;
+        el.autoplay = !!opts.loop;
+        media.video = true;
+    } else {
+        el = document.createElement('img');
+        el.alt = '';
+        el.decoding = 'async';
+    }
+    el.className = 'scene-media ' + (opts.cls || '');
+    el.draggable = false;
+    media.el = el;
+    media.ready = new Promise(resolve => {
+        const ok = () => {
+            measureMedia(media);
+            if (media.video && opts.loop) el.play().catch(() => { });
+            resolve(media);
+        };
+        el.addEventListener(media.video ? 'loadeddata' : 'load', ok, { once: true });
+        el.addEventListener('error', () => {
+            if (opts.fallback) {
+                // animazione che non c'è: al suo posto l'icona dell'unità
+                const img = document.createElement('img');
+                img.className = 'scene-media is-icon ' + (opts.cls || '');
+                img.alt = '';
+                img.addEventListener('load', () => { media.icon = true; measureMedia(media); resolve(media); }, { once: true });
+                img.addEventListener('error', () => { media.failed = true; resolve(media); }, { once: true });
+                img.src = opts.fallback;
+                el.replaceWith(img);
+                media.el = img;
+                media.video = false;
+            } else {
+                media.failed = true;
+                resolve(media);
+            }
+        }, { once: true });
+    });
+    if (src) el.src = src;
+    else setTimeout(() => el.dispatchEvent(new Event('error')), 0);
+    return media;
+}
+
+function measureMedia(media) {
+    const el = media.el;
+    if (media.icon || el.classList.contains('is-icon')) {
+        media.icon = true;
+        media.m = { w: el.naturalWidth || 100, h: el.naturalHeight || 100, gx: 0.5, gy: 1, up: el.naturalHeight || 100, side: (el.naturalWidth || 100) / 2 };
+        media.scale = 1;
+        return;
+    }
+    const m = measureCharacter(el);
+    if (!m) return;
+    const outside = !evoCanReadPixels(el);
+    const found = m.charX !== undefined;
+    el.classList.toggle('is-outside', outside);
+    media.m = {
+        w: m.w, h: m.h,
+        gx: found ? 0.5 - parseFloat(m.charX) / 100 : (outside ? OUTSIDE_GROUND_X : 0.5),
+        gy: found ? 0.5 - parseFloat(m.charY) / 100 : (outside ? OUTSIDE_GROUND_Y : 0.9),
+        up: found ? parseFloat(m.charUp) || m.h * 0.4 : m.h * 0.25,
+        side: found ? parseFloat(m.charSide) || m.w * 0.15 : m.w * 0.08
+    };
+    media.scale = pixelFileScale(el, m.w) || 1;
+}
+
+function createActor(u, mirror) {
+    const wrap = document.createElement('div');
+    wrap.className = 'scene-actor' + (mirror ? ' is-enemy' : '');
+    const idle = createMedia(idleSrc(u), { loop: true, cls: 'media-idle', fallback: u.image || '' });
+    wrap.appendChild(idle.el);
+    const actor = { id: u.id, u, wrap, idle, atk: null, atkPromise: null, busy: false, gauge: 0, mirror: !!mirror };
+    idle.ready.then(() => {
+        layoutScene();
+        if (!mirror) ensureAtk(actor);
+    });
+    return actor;
+}
+
+// l'animazione d'attacco si prepara dopo quella ferma (così il primo clic è già pronto)
+function ensureAtk(a) {
+    if (a.atkPromise) return a.atkPromise;
+    const src = atkSrc(a.u);
+    if (!src || a.idle.failed || a.idle.icon) {
+        a.atkPromise = Promise.resolve(null);
+        return a.atkPromise;
+    }
+    const media = createMedia(src, { loop: false, cls: 'media-atk' });
+    a.atk = media;
+    a.wrap.appendChild(media.el);
+    a.atkPromise = media.ready.then(async m => {
+        if (m.failed || !m.m) return null;
+        // stessa tela dell'animazione ferma: stesso punto a terra (come nella scheda dell'unità)
+        const im = a.idle.m;
+        if (im && im.w === m.m.w && im.h === m.m.h) { m.m.gx = im.gx; m.m.gy = im.gy; m.scale = a.idle.scale; }
+        m.dur = m.video ? (isFinite(m.el.duration) ? m.el.duration : 0) : await webpDuration(src);
+        layoutScene();
+        return m;
+    });
+    return a.atkPromise;
+}
+
+function removeActor(a) {
+    if (!a) return;
+    a.removed = true;
+    a.wrap.remove();
+}
+
+/* le 6 unità della squadra */
 function renderSceneUnits() {
     const layer = $('sceneUnits');
     for (let i = 0; i < 6; i++) {
         const slot = team.slots[i];
-        const cur = sceneUnits[i];
+        const cur = actors[i];
         if (cur && (!slot || cur.id !== slot.id)) {
-            cur.el.remove();
-            sceneUnits[i] = null;
+            removeActor(cur);
+            actors[i] = null;
+            acted.delete(i);
         }
-        if (!slot || sceneUnits[i]) continue;
+        if (!slot || actors[i]) continue;
         const u = unitById.get(slot.id);
         if (!u) continue;
-        const src = idleSrc(u);
-        const entry = { id: slot.id, el: null, m: null, scale: 1 };
-        let el;
-        if (src && isVideoFile(src)) {
-            el = document.createElement('video');
-            el.muted = true;
-            el.loop = true;
-            el.playsInline = true;
-            el.setAttribute('playsinline', '');
-            el.setAttribute('webkit-playsinline', '');
-            el.autoplay = true;
-            el.addEventListener('loadeddata', () => { measureSceneUnit(entry); el.play().catch(() => { }); });
-        } else {
-            el = document.createElement('img');
-            el.alt = '';
-            el.decoding = 'async';
-            el.addEventListener('load', () => measureSceneUnit(entry));
-        }
-        el.className = 'scene-unit';
-        el.draggable = false;
-        el.addEventListener('error', () => {
-            // animazione che non c'è: al suo posto l'icona dell'unità
-            if (el.dataset.fallback) return;
-            const img = document.createElement('img');
-            img.className = 'scene-unit is-icon';
-            img.dataset.fallback = '1';
-            img.alt = '';
-            img.addEventListener('load', () => measureSceneUnit(entry));
-            img.src = u.image || '';
-            el.replaceWith(img);
-            entry.el = img;
-        });
-        entry.el = el;
-        layer.appendChild(el);
-        sceneUnits[i] = entry;
-        if (src) el.src = src;
-        else el.dispatchEvent(new Event('error'));
+        actors[i] = createActor(u, false);
+        layer.appendChild(actors[i].wrap);
     }
     layoutScene();
+    checkTurnEnd();
 }
 
-function measureSceneUnit(entry) {
-    const el = entry.el;
-    if (!el) return;
-    if (el.classList.contains('is-icon')) {
-        entry.m = { w: el.naturalWidth || 100, h: el.naturalHeight || 100, gx: 0.5, gy: 1 };
-        entry.scale = 1;
-    } else {
-        const m = measureCharacter(el);
-        if (!m) return;
-        const outside = !evoCanReadPixels(el);
-        const found = m.charX !== undefined;
-        el.classList.toggle('is-outside', outside);
-        entry.m = {
-            w: m.w, h: m.h,
-            gx: found ? 0.5 - parseFloat(m.charX) / 100 : (outside ? OUTSIDE_GROUND_X : 0.5),
-            gy: found ? 0.5 - parseFloat(m.charY) / 100 : (outside ? OUTSIDE_GROUND_Y : 0.9)
-        };
-        entry.scale = pixelFileScale(el, m.w) || 1;
-    }
-    layoutScene();
+function sizeMedia(media, k0, mirror) {
+    if (!media || !media.el) return;
+    const el = media.el;
+    if (!media.m) { el.style.visibility = 'hidden'; return; }
+    const scene = $('teamScene');
+    const k = media.icon ? (scene.clientHeight * 0.16) / media.m.h : k0 * media.scale;
+    const w = media.m.w * k, h = media.m.h * k;
+    el.style.width = `${w.toFixed(1)}px`;
+    el.style.height = `${h.toFixed(1)}px`;
+    el.style.left = `${(-(mirror ? 1 - media.m.gx : media.m.gx) * w).toFixed(1)}px`;
+    el.style.top = `${(-media.m.gy * h).toFixed(1)}px`;
+    el.style.transform = mirror ? 'scaleX(-1)' : '';
+    el.style.visibility = '';
+}
+
+function actorScale(a) {
+    const H = $('teamScene').clientHeight;
+    return TEAM_UNIT_SCALE * (H / DUNGEON_STAGE_H) * (a.mirror ? ENEMY_SCALE : 1);
+}
+
+function placeActor(a, spot) {
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    a.wrap.style.left = `${(spot.x * W).toFixed(1)}px`;
+    a.wrap.style.top = `${(spot.y * H).toFixed(1)}px`;
+    a.wrap.style.zIndex = String(a.busy ? 300 : 10 + Math.round(spot.y * 100));
+    const k = actorScale(a);
+    sizeMedia(a.idle, k, a.mirror);
+    sizeMedia(a.atk, k, a.mirror);
 }
 
 function layoutScene() {
     const scene = $('teamScene');
     const W = scene.clientWidth, H = scene.clientHeight;
     if (!W || !H) return;
-    const stage = H / DUNGEON_STAGE_H;   // pixel dello schermo per ogni pixel dello sfondo del gioco
-    sceneUnits.forEach((entry, i) => {
-        if (!entry || !entry.el) return;
-        const el = entry.el;
-        const slot = TEAM_SLOTS[i];
-        el.style.zIndex = String(10 + Math.round(slot.y * 100));
-        if (!entry.m) { el.style.visibility = 'hidden'; return; }
-        const icon = el.classList.contains('is-icon');
-        const k = icon ? (H * 0.16) / entry.m.h : TEAM_UNIT_SCALE * stage * entry.scale;
-        const w = entry.m.w * k, h = entry.m.h * k;
-        el.style.width = `${w.toFixed(1)}px`;
-        el.style.height = `${h.toFixed(1)}px`;
-        el.style.left = `${(slot.x * W - entry.m.gx * w).toFixed(1)}px`;
-        el.style.top = `${(slot.y * H - entry.m.gy * h).toFixed(1)}px`;
-        el.style.visibility = '';
-    });
-    // numeri dei posti vuoti
+    actors.forEach((a, i) => { if (a) placeActor(a, TEAM_SLOTS[i]); });
+    enemies.forEach(e => placeActor(e, e.spot));
+    scene.style.setProperty('--scene-h', `${H}px`);
     scene.querySelectorAll('.scene-slot').forEach((b, i) => {
         const slot = TEAM_SLOTS[i];
         b.style.left = `${(slot.x * 100).toFixed(1)}%`;
         b.style.top = `${(slot.y * 100).toFixed(1)}%`;
         b.hidden = !!team.slots[i];
     });
+    placeTargetMark();
 }
 
-/* ---------- riquadri delle unità (come nel gioco) ---------- */
+/* la schermata di battaglia si adatta allo spazio: deve stare tutta senza scorrere */
+function sizeScreen() {
+    const screen = $('bfScreen');
+    const content = $('teamContent');
+    const wrap = screen.parentElement;
+    if (!content.clientHeight) return;
+    const wide = window.matchMedia('(min-width: 1000px)').matches;
+    const cs = getComputedStyle(content);
+    const padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    const availH = content.clientHeight - padY;
+    const availW = wide ? Math.min(wrap.parentElement.clientWidth * 0.58, 760) : wrap.clientWidth;
+    let g = Math.min(availW / SCREEN_W, availH / SCREEN_H);
+    if (!wide) g = Math.max(g, Math.min(availW / SCREEN_W, 0.45));   // su telefono non troppo piccola
+    g = Math.max(0.3, g);
+    screen.style.setProperty('--g', `${g.toFixed(4)}px`);
+    screen.style.width = `${Math.floor(SCREEN_W * g)}px`;
+    screen.style.height = `${Math.floor(SCREEN_H * g)}px`;
+    $('teamCards').style.setProperty('--u', `${g.toFixed(4)}px`);
+    layoutScene();
+}
+
+/* ---------- i nemici ---------- */
+function buildEnemyList() {
+    const order = el => { const i = ELEMENTS.indexOf(el); return i < 0 ? 9 : i; };
+    enemyList = units.filter(u => ENEMY_FOLDERS.test((u.animations || {}).idle || ''))
+        .sort((a, b) => order(elementKey(a)) - order(elementKey(b)) || unitName(a).localeCompare(unitName(b)));
+}
+
+function renderEnemySelect() {
+    const sel = $('enemySelect');
+    sel.innerHTML = ELEMENTS.map(el => {
+        const list = enemyList.filter(u => elementKey(u) === el);
+        if (!list.length) return '';
+        return `<optgroup label="${esc(siteT('element.' + el, el))}">${list.map(u => `<option value="${esc(u.id)}">${esc(unitName(u))}</option>`).join('')}</optgroup>`;
+    }).join('');
+    const t = enemies[targetIdx];
+    if (t) sel.value = t.id;
+}
+
+function randomEnemyId(not) {
+    const list = enemyList.filter(u => u.id !== not);
+    const u = list[Math.floor(Math.random() * list.length)];
+    return u ? u.id : '';
+}
+
+function enemySpot(i, n) {
+    return n === 1 ? ENEMY_SINGLE : ENEMY_SLOTS[i];
+}
+
+function makeEnemy(id, i, n) {
+    const u = unitById.get(String(id));
+    if (!u) return null;
+    const st = baseStats(u, 'lord').hp ? baseStats(u, 'lord') : baseStats(u, 'base');
+    const e = createActor(u, true);
+    e.el = elementKey(u);
+    e.maxHp = Math.max(ENEMY_MIN_HP, st.hp * ENEMY_HP_MULT);
+    e.hp = e.maxHp;
+    e.def = st.def;
+    e.dead = false;
+    e.spot = enemySpot(i, n);
+    $('sceneUnits').appendChild(e.wrap);
+    return e;
+}
+
+// mette in campo i nemici (elenco di ID); quelli che mancano si scelgono a caso
+function setEnemies(ids) {
+    enemies.forEach(removeActor);
+    enemies = [];
+    const list = (ids || []).filter(id => unitById.has(String(id))).slice(0, 6);
+    if (!list.length && enemyList.length) list.push(randomEnemyId());
+    list.forEach((id, i) => {
+        const e = makeEnemy(id, i, list.length);
+        if (e) enemies.push(e);
+    });
+    targetIdx = 0;
+    team.enemies = enemies.map(e => e.id);
+    $('enemyCount').value = String(Math.max(1, enemies.length));
+    if (enemies[0]) $('enemySelect').value = enemies[0].id;
+    updateTargetInfo();
+    layoutScene();
+    saveUrl();
+}
+
+function setTarget(i) {
+    if (!enemies[i] || enemies[i].dead) return;
+    targetIdx = i;
+    $('enemySelect').value = enemies[i].id;
+    updateTargetInfo();
+    placeTargetMark();
+}
+
+function currentTarget() {
+    let e = enemies[targetIdx];
+    if (e && !e.dead) return e;
+    const i = enemies.findIndex(x => !x.dead);
+    if (i < 0) return null;
+    targetIdx = i;
+    updateTargetInfo();
+    placeTargetMark();
+    return enemies[i];
+}
+
+// striscia con il drago: elemento, nome e vita del nemico scelto
+function updateTargetInfo() {
+    const e = enemies[targetIdx];
+    const elem = $('targetElem');
+    if (!e) {
+        $('targetName').textContent = '';
+        elem.style.visibility = 'hidden';
+        $('targetHpFill').style.setProperty('--p', 0);
+        $('targetHpText').textContent = '';
+        return;
+    }
+    elem.style.visibility = '';
+    elem.style.setProperty('--i', Math.max(0, ELEMENTS.indexOf(e.el)));
+    $('targetName').textContent = unitName(e.u);
+    const p = Math.max(0, e.hp / e.maxHp);
+    $('targetHpFill').style.setProperty('--p', p.toFixed(4));
+    $('targetHpText').textContent = `HP: ${e.hp > 0 ? Math.max(1, Math.ceil(p * 100)) : 0}%`;
+}
+
+function placeTargetMark() {
+    const mark = $('targetMark');
+    const e = enemies[targetIdx];
+    if (!e || e.dead || !e.idle.m) { mark.hidden = true; return; }
+    const H = $('teamScene').clientHeight, W = $('teamScene').clientWidth;
+    const k = actorScale(e) * e.idle.scale;
+    const up = e.idle.icon ? H * 0.16 : e.idle.m.up * k;
+    const side = Math.max(H * 0.05, (e.idle.icon ? H * 0.08 : e.idle.m.side * k) * 0.7);
+    mark.hidden = false;
+    mark.style.left = `${(e.spot.x * W).toFixed(1)}px`;
+    mark.style.top = `${(e.spot.y * H - up * 0.5).toFixed(1)}px`;
+    mark.style.setProperty('--side', `${side.toFixed(1)}px`);
+}
+
+function enemyHitFlash(e) {
+    const w = e.wrap;
+    w.classList.remove('is-hit');
+    void w.offsetWidth;
+    w.classList.add('is-hit');
+}
+
+function defeatEnemy(e) {
+    if (e.dead) return;
+    e.dead = true;
+    e.wrap.classList.add('is-dead');
+    if (enemies[targetIdx] === e) currentTarget();
+    placeTargetMark();
+    if (enemies.every(x => x.dead)) {
+        // tutti sconfitti: dopo un attimo tornano (nuova ondata)
+        const wave = enemies;
+        setTimeout(() => {
+            if (enemies !== wave) return;
+            wave.forEach(x => { x.hp = x.maxHp; x.dead = false; x.wrap.classList.remove('is-dead'); });
+            targetIdx = 0;
+            updateTargetInfo();
+            placeTargetMark();
+        }, WAVE_RESPAWN);
+    }
+}
+
+/* ---------- danni, Spark, combo e overdrive ---------- */
+function elementMultiplier(atkEl, defEl) {
+    if ((ELEMENT_STRONG[atkEl] || []).includes(defEl)) return { m: DMG.weak, tag: 'weak' };
+    if ((ELEMENT_STRONG[defEl] || []).includes(atkEl)) return { m: DMG.resist, tag: 'resist' };
+    return { m: 1, tag: '' };
+}
+
+function showDamage(e, value, tag, spark) {
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const up = e.idle.m ? (e.idle.icon ? H * 0.16 : e.idle.m.up * actorScale(e) * e.idle.scale) : H * 0.15;
+    const d = document.createElement('div');
+    d.className = 'dmg notranslate' + (tag ? ' is-' + tag : '') + (spark ? ' is-spark' : '');
+    d.innerHTML = (spark ? '<small>SPARK!</small>' : '') + String(value);
+    d.style.left = `${(e.spot.x * W + (Math.random() - 0.5) * W * 0.08).toFixed(1)}px`;
+    d.style.top = `${(e.spot.y * H - up * (0.3 + Math.random() * 0.5)).toFixed(1)}px`;
+    $('sceneFx').appendChild(d);
+    d.addEventListener('animationend', () => d.remove(), { once: true });
+    setTimeout(() => d.remove(), 2000);
+}
+
+function addCombo(dmg, spark) {
+    combo.hits += 1;
+    combo.dmg += dmg;
+    if (spark) combo.sparks += 1;
+    const box = $('comboBox');
+    box.hidden = false;
+    box.querySelector('.cb-hits b').textContent = String(combo.hits);
+    box.querySelector('.cb-dmg').textContent = String(combo.dmg);
+    const sp = box.querySelector('.cb-spark');
+    sp.hidden = !combo.sparks;
+    sp.querySelector('b').textContent = String(combo.sparks);
+    box.classList.remove('is-bump');
+    void box.offsetWidth;
+    box.classList.add('is-bump');
+    clearTimeout(combo.timer);
+    combo.timer = setTimeout(() => {
+        box.hidden = true;
+        combo.hits = combo.dmg = combo.sparks = 0;
+    }, 1800);
+}
+
+function updateOd() {
+    $('odFill').style.setProperty('--p', (od / 100).toFixed(3));
+}
+
+function landHit(i, a, kind, hits) {
+    if (actors[i] !== a) return;
+    const e = currentTarget();
+    if (!e) return;
+    const slot = team.slots[i];
+    const st = unitStats(a.u, slot ? slot.type : DEFAULT_TYPE);
+    const el = elementMultiplier(elementKey(a.u), e.el);
+    const mod = kind === 'atk' ? 1 : DMG[kind] || 1;
+    let dmg = Math.max(1, st.atk - e.def / 3) * mod * el.m / hits;
+    dmg *= 1 + (Math.random() * 2 - 1) * DMG.variance;
+    const now = performance.now() / 1000;
+    recentHits = recentHits.filter(h => now - h.t < 1);
+    const spark = recentHits.some(h => h.slot !== i && now - h.t <= SPARK_WINDOW);
+    recentHits.push({ slot: i, t: now });
+    if (spark) dmg *= DMG.spark;
+    dmg = Math.max(1, Math.round(dmg));
+    e.hp = Math.max(0, e.hp - dmg);
+    showDamage(e, dmg, el.tag, spark);
+    addCombo(dmg, spark);
+    enemyHitFlash(e);
+    od = Math.min(100, od + OD_PER_HIT);
+    updateOd();
+    if (kind === 'atk') {
+        const b = battle[a.u.id] || {};
+        if (gaugeMax(a)) {
+            a.gauge = Math.min(gaugeMax(a), a.gauge + num(b.atk && b.atk.dc) * BC_RATE);
+            updateCardGauge(i);
+        }
+    }
+    if (enemies[targetIdx] === e) updateTargetInfo();
+    if (e.hp <= 0) defeatEnemy(e);
+}
+
+/* ---------- barra BB (si riempie con i CB dei colpi, in due giri per la SBB) ---------- */
+function burstCosts(u) {
+    const b = battle[u.id] || {};
+    return { bb: num(b.bb && b.bb.cost), sbb: num(b.sbb && b.sbb.cost) };
+}
+
+function gaugeMax(a) {
+    const c = burstCosts(a.u);
+    return c.bb ? c.bb + c.sbb : 0;
+}
+
+function readyKind(a) {
+    const c = burstCosts(a.u);
+    if (!c.bb) return '';
+    if (c.sbb && a.gauge >= c.bb + c.sbb) return 'sbb';
+    if (a.gauge >= c.bb) return 'bb';
+    return '';
+}
+
+/* ---------- l'attacco ---------- */
+function showBanner(text) {
+    const box = $('bbBanner');
+    box.querySelector('.bb-text').textContent = text;
+    box.hidden = false;
+    box.classList.remove('is-on');
+    void box.offsetWidth;
+    box.classList.add('is-on');
+    clearTimeout(showBanner.timer);
+    showBanner.timer = setTimeout(() => { box.hidden = true; box.classList.remove('is-on'); }, 1700);
+}
+
+async function playMedia(media) {
+    const el = media.el;
+    if (media.video) {
+        try { el.currentTime = 0; } catch (err) { /* niente */ }
+        try { await el.play(); } catch (err) { /* niente */ }
+        const d = isFinite(el.duration) && el.duration > 0 ? el.duration : media.dur;
+        return d || UNKNOWN_ATK_TIME;
+    }
+    // immagine animata: cambiando l'indirizzo (solo dopo il #) ricomincia dal primo fotogramma
+    el.src = `${String(media.src).split('#')[0]}#a${++restartCount}`;
+    return media.dur || UNKNOWN_ATK_TIME;
+}
+
+async function attack(i, burst) {
+    const a = actors[i];
+    if (!a || a.busy || acted.has(i)) return;
+    if (burst && !readyKind(a)) return;          // BB non ancora pronta
+    const target = currentTarget();
+    if (!target) return;
+    const u = a.u;
+    const b = battle[u.id] || {};
+    const kind = burst ? readyKind(a) : 'atk';
+    const info = b[kind] || {};
+    const hits = Math.max(1, num(info.hits) || 1);
+    a.busy = true;
+    acted.add(i);
+    a.wrap.classList.add('is-busy');
+    setCardState(i);
+    if (kind !== 'atk') {
+        a.gauge = 0;
+        updateCardGauge(i);
+        showBanner(skillName(u, kind) || (kind === 'sbb' ? 'SUPER BRAVE BURST' : 'BRAVE BURST'));
+    }
+    const atk = await Promise.race([ensureAtk(a), wait(4000).then(() => null)]);
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const home = TEAM_SLOTS[i];
+    const move = unitMoveType(u);
+    const spot = { x: target.spot.x + ATTACK_GAP + (i % 2) * ATTACK_COL, y: target.spot.y + (home.y - target.spot.y) * ATTACK_SPREAD };
+    const away = `translate(${((spot.x - home.x) * W).toFixed(1)}px, ${((spot.y - home.y) * H).toFixed(1)}px)`;
+    const still = 'translate(0px, 0px)';
+    layoutScene();
+    if (move === 1) await animateTo(a.wrap, { transform: still }, { transform: away }, MOVE_GO, 'ease-out');
+    else if (move === 2) {
+        await animateTo(a.wrap, { opacity: 1 }, { opacity: 0 }, TELEPORT_FADE);
+        a.wrap.style.transform = away;
+        await animateTo(a.wrap, { opacity: 0 }, { opacity: 1 }, TELEPORT_FADE);
+    }
+    let dur = UNKNOWN_ATK_TIME;
+    if (atk && !a.removed) {
+        a.wrap.classList.add('is-attacking');
+        dur = await playMedia(atk);
+    }
+    for (let k = 0; k < hits; k++) {
+        const f = hits === 1 ? (HIT_START + HIT_END) / 2 : HIT_START + (HIT_END - HIT_START) * k / (hits - 1);
+        setTimeout(() => landHit(i, a, kind, hits), f * dur * 1000);
+    }
+    await wait(dur * 1000);
+    a.wrap.classList.remove('is-attacking');
+    if (atk && atk.video) atk.el.pause();
+    if (move === 1) await animateTo(a.wrap, { transform: away }, { transform: still }, MOVE_BACK, 'ease-in-out');
+    else if (move === 2) {
+        await animateTo(a.wrap, { opacity: 1 }, { opacity: 0 }, TELEPORT_FADE);
+        a.wrap.style.transform = still;
+        await animateTo(a.wrap, { opacity: 0 }, { opacity: 1 }, TELEPORT_FADE);
+    }
+    a.busy = false;
+    a.wrap.classList.remove('is-busy');
+    layoutScene();
+    setCardState(i);
+    checkTurnEnd();
+}
+
+// tutti all'attacco (con AUTO usano anche la BB quando è pronta, come nel gioco)
+function attackAll(useBurst) {
+    let n = 0;
+    actors.forEach((a, i) => {
+        if (a && !a.busy && !acted.has(i)) setTimeout(() => attack(i, useBurst === true && !!readyKind(a)), (n++) * 140);
+    });
+}
+
+// quando tutte le unità hanno attaccato comincia un nuovo turno
+function checkTurnEnd() {
+    const present = actors.map((a, i) => (a ? i : -1)).filter(i => i >= 0);
+    if (!present.length || present.some(i => !acted.has(i) || actors[i].busy)) return;
+    clearTimeout(checkTurnEnd.timer);
+    checkTurnEnd.timer = setTimeout(() => {
+        if (actors.some(a => a && a.busy)) return;
+        acted.clear();
+        turn += 1;
+        $('turnNum').textContent = String(turn);
+        team.slots.forEach((s, i) => setCardState(i));
+        if (autoOn) setTimeout(() => attackAll(true), 300);
+    }, TURN_PAUSE);
+}
+
+function setAuto(on) {
+    autoOn = on;
+    $('autoBtn').classList.toggle('is-on', on);
+    if (on) attackAll(true);
+}
+
+/* ---------- riquadri delle unità: come in battaglia nel gioco ---------- */
 function renderCards() {
     const grid = $('teamCards');
     grid.innerHTML = team.slots.map((slot, i) => {
+        const pos = `style="--c:${i % 2};--r:${Math.floor(i / 2)}"`;
         if (!slot) {
-            return `<div class="tcard is-empty" data-slot="${i}"><button type="button" class="tcard-add notranslate" data-act="pick">${esc(tx(TT.add))}</button></div>`;
+            return `<button type="button" class="bcard is-empty" data-slot="${i}" data-act="pick" ${pos}>
+                <span class="bc-base spr"></span><span class="bc-frame spr"></span>
+                <span class="bc-add notranslate">${esc(tx(TT.add))}</span></button>`;
         }
         const u = unitById.get(slot.id);
-        if (!u) return `<div class="tcard is-empty" data-slot="${i}"></div>`;
+        if (!u) return `<span class="bcard is-empty" data-slot="${i}" ${pos}></span>`;
         const st = unitStats(u, slot.type);
-        const el = elementKey(u);
-        const lvl = burstLevel(u);
-        const burst = { bb: 'BRAVE BURST', sbb: 'SUPER BRAVE BURST', ubb: 'ULTIMATE BRAVE BURST' }[lvl];
-        const badge = i === team.leader ? '<span class="tbadge is-l">L</span>' : (i === team.friend ? '<span class="tbadge is-f">F</span>' : '');
-        const types = availableTypes(u).map(t => `<button type="button" class="ttype${t === slot.type ? ' active' : ''} notranslate" data-act="type" data-type="${t}">${TYPE_LABELS[t]}</button>`).join('');
-        return `<div class="tcard" data-slot="${i}" data-el="${esc(el)}">
-            <button type="button" class="tcard-thumb" data-act="pick" title="${esc(tx(TT.change))}">
-                <img src="${esc(u.image || '')}" alt="" loading="lazy" draggable="false">
-                ${badge}
-            </button>
-            <div class="tcard-body">
-                <div class="tcard-name notranslate">${esc(unitName(u))}</div>
-                <div class="tcard-hp"><span>HP</span><b class="notranslate">${fmt(st.hp)}</b></div>
-                <div class="tbar is-hp"></div>
-                <div class="tcard-bb notranslate is-${lvl}">${burst}</div>
-                <div class="tbar is-${lvl}"></div>
-                <div class="tcard-stats notranslate"><span>ATK <b>${fmt(st.atk)}</b></span><span>DEF <b>${fmt(st.def)}</b></span><span>REC <b>${fmt(st.rec)}</b></span></div>
-                <div class="ttypes">${types}</div>
-                <div class="tactions">
-                    <button type="button" class="tbtn${i === team.leader ? ' active' : ''}" data-act="leader" title="${esc(tx(TT.leader))}">L</button>
-                    <button type="button" class="tbtn${i === team.friend ? ' active' : ''}" data-act="friend" title="${esc(tx(TT.friend))}">F</button>
-                    <button type="button" class="tbtn notranslate" data-act="pick" title="${esc(tx(TT.change))}" aria-label="${esc(tx(TT.change))}">&#8644;</button>
-                    <button type="button" class="tbtn notranslate" data-act="remove" title="${esc(tx(TT.remove))}" aria-label="${esc(tx(TT.remove))}">&#10005;</button>
-                </div>
-            </div>
+        const el = Math.max(0, ELEMENTS.indexOf(elementKey(u)));
+        const lf = i === team.leader ? 'is-l' : (i === team.friend ? 'is-f' : '');
+        return `<button type="button" class="bcard" data-slot="${i}" data-act="attack" ${pos} title="${esc(tx(TT.attackHint))}">
+                <span class="bc-base spr"></span>
+                <span class="bc-clip"><img class="bc-face" src="${esc(BATTLE_IMG(u.id))}" data-thumb="${esc(u.image || '')}" alt="" draggable="false"></span>
+                <span class="bc-glow"></span>
+                <span class="bc-frame spr"></span>
+                <span class="bc-elem spr" style="--i:${el}"></span>
+                ${lf ? `<span class="bc-lf ${lf}"></span>` : ''}
+                <span class="bc-info">
+                    <span class="bc-namebg spr"></span>
+                    <span class="bc-name notranslate">${esc(unitName(u))}</span>
+                    <span class="bc-hpnum notranslate">${st.hp}/${st.hp}</span>
+                    <span class="bc-hp spr"><span class="bc-empty spr"></span><span class="bc-fill-wrap" style="--p:1"><span class="bc-fill spr is-hp"></span></span></span>
+                    <span class="bc-bblabel spr"></span>
+                    <span class="bc-bb spr"><span class="bc-empty spr"></span><span class="bc-fill-wrap is-bb" style="--p:0"><span class="bc-fill spr is-bb"></span></span><span class="bc-fill-wrap is-sbb" style="--p:0"><span class="bc-fill spr is-sbb"></span></span></span>
+                </span>
+            </button>`;
+    }).join('');
+    // immagine di battaglia che manca: si usa l'icona quadrata
+    grid.querySelectorAll('.bc-face').forEach(img => {
+        img.addEventListener('error', () => {
+            if (img.dataset.thumb && !img.classList.contains('is-thumb')) {
+                img.classList.add('is-thumb');
+                img.src = img.dataset.thumb;
+            }
+        }, { once: true });
+    });
+    team.slots.forEach((s, i) => { if (s) { updateCardGauge(i); setCardState(i); } });
+}
+
+function cardOf(i) {
+    return document.querySelector(`#teamCards .bcard[data-slot="${i}"]`);
+}
+
+// barra BB: primo giro blu (BB), secondo giro dorato (SBB); scritta chiara finché non è pronta
+function updateCardGauge(i) {
+    const a = actors[i];
+    const card = cardOf(i);
+    if (!a || !card || card.classList.contains('is-empty')) return;
+    const c = burstCosts(a.u);
+    const ready = readyKind(a);
+    const p1 = c.bb ? Math.min(1, a.gauge / c.bb) : 0;
+    const p2 = c.sbb ? Math.min(1, Math.max(0, a.gauge - c.bb) / c.sbb) : 0;
+    card.querySelector('.bc-fill-wrap.is-bb').style.setProperty('--p', p1.toFixed(3));
+    card.querySelector('.bc-fill-wrap.is-sbb').style.setProperty('--p', p2.toFixed(3));
+    card.classList.toggle('is-ready', !!ready);
+    const label = card.querySelector('.bc-bblabel');
+    label.classList.toggle('lv-sbb', ready === 'sbb');
+    label.classList.toggle('lv-bb', ready !== 'sbb');
+    label.classList.toggle('is-full', !!ready);
+}
+
+// riquadro: normale, premuto (mentre attacca) o grigio (ha già attaccato in questo turno)
+function setCardState(i) {
+    const a = actors[i];
+    const card = cardOf(i);
+    if (!card) return;
+    card.classList.toggle('is-busy', !!(a && a.busy));
+    card.classList.toggle('is-done', !!(a && !a.busy && acted.has(i)));
+}
+
+/* ---------- elenco della squadra (a destra): tipo, leader, amico, cambia, togli ---------- */
+function renderEditor() {
+    const box = $('teamEditor');
+    box.innerHTML = team.slots.map((slot, i) => {
+        const u = slot && unitById.get(slot.id);
+        if (!u) {
+            return `<div class="te-row is-empty" data-slot="${i}"><span class="te-num">${i + 1}</span>
+                <button type="button" class="te-add notranslate" data-act="pick">${esc(tx(TT.add))}</button></div>`;
+        }
+        const st = unitStats(u, slot.type);
+        const types = availableTypes(u).map(t => `<option value="${t}"${t === slot.type ? ' selected' : ''}>${TYPE_LABELS[t]}</option>`).join('');
+        return `<div class="te-row" data-slot="${i}">
+            <span class="te-num">${i + 1}</span>
+            <img class="te-thumb" src="${esc(u.image || '')}" alt="" loading="lazy" draggable="false">
+            <span class="te-main">
+                <span class="te-name notranslate">${esc(unitName(u))}</span>
+                <span class="te-stats notranslate"><span>HP <b>${fmt(st.hp)}</b></span><span>ATK <b>${fmt(st.atk)}</b></span><span>DEF <b>${fmt(st.def)}</b></span><span>REC <b>${fmt(st.rec)}</b></span></span>
+            </span>
+            <span class="te-tools">
+                <select class="te-type notranslate" data-act="type" aria-label="${esc(tx(TT.type))}">${types}</select>
+                <button type="button" class="tbtn${i === team.leader ? ' active' : ''}" data-act="leader" title="${esc(tx(TT.leader))}">L</button>
+                <button type="button" class="tbtn${i === team.friend ? ' active' : ''}" data-act="friend" title="${esc(tx(TT.friend))}">F</button>
+                <button type="button" class="tbtn notranslate" data-act="pick" title="${esc(tx(TT.change))}" aria-label="${esc(tx(TT.change))}">&#8644;</button>
+                <button type="button" class="tbtn notranslate" data-act="remove" title="${esc(tx(TT.remove))}" aria-label="${esc(tx(TT.remove))}">&#10005;</button>
+            </span>
         </div>`;
     }).join('');
 }
@@ -1600,12 +2271,25 @@ function renderTexts() {
     $('pickTitle').textContent = tx(TT.pickTitle);
     $('pickSearch').placeholder = tx(TT.search);
     $('pickRarity').options[0].textContent = tx(TT.allRar);
+    $('enemyTitle').textContent = tx(TT.enemies);
+    $('enemyCountLabel').textContent = tx(TT.enemyCount);
+    $('enemyRandom').textContent = tx(TT.randomEnemies);
+    $('enemyLabel').textContent = tx(TT.targetEnemy);
+    $('enemyLabel').className = txClass(TT.targetEnemy);
+    $('teamListTitle').textContent = tx(TT.teamList);
+    $('autoBtn').title = tx(TT.auto);
+    $('attackAllBtn').textContent = tx(TT.attackAll);
+    $('battleHint').textContent = tx(TT.battleHint);
+    $('battleHint').className = 'battle-hint ' + txClass(TT.battleHint);
+    $('dmgNote').textContent = tx(TT.dmgNote);
+    $('dmgNote').className = 'battle-note ' + txClass(TT.dmgNote);
     renderGuide();
 }
 
 function renderAll() {
     renderSceneUnits();
     renderCards();
+    renderEditor();
     renderTotals();
     renderAdvice();
     saveUrl();
@@ -1688,16 +2372,46 @@ async function start() {
     teamFromUrl();
     $('impToggle').checked = team.imp;
     setBackground(team.bg);
+    buildEnemyList();
+    renderEnemySelect();
+    sizeScreen();
+    setEnemies(team.enemies);
     renderTexts();
     renderAll();
+    sizeScreen();
 }
 
 function initEvents() {
+    // riquadri della battaglia: clic = attacco (sul posto vuoto: scegli un'unità)
+    // riquadri: clic = attacco; trascinare verso l'alto = BB (come nel gioco)
+    let swipe = null;
+    $('teamCards').addEventListener('pointerdown', e => {
+        const card = e.target.closest('.bcard[data-act="attack"]');
+        swipe = card ? { i: +card.dataset.slot, y: e.clientY, used: false } : null;
+    });
+    window.addEventListener('pointerup', e => {
+        if (!swipe || swipe.used) return;
+        const h = $('teamCards').querySelector('.bcard').offsetHeight || 60;
+        if (swipe.y - e.clientY > h * 0.3) {
+            swipe.used = true;
+            attack(swipe.i, true);
+        }
+    });
     $('teamCards').addEventListener('click', e => {
-        const btn = e.target.closest('[data-act]');
         const card = e.target.closest('[data-slot]');
-        if (!btn || !card) return;
+        if (!card) return;
+        if (swipe && swipe.used) { swipe = null; return; }
+        swipe = null;
         const i = +card.dataset.slot;
+        if (card.dataset.act === 'attack') attack(i, false);
+        else if (card.dataset.act === 'pick') openPicker(i);
+    });
+    // elenco della squadra: cambia, togli, leader, amico
+    $('teamEditor').addEventListener('click', e => {
+        const btn = e.target.closest('[data-act]');
+        const row = e.target.closest('[data-slot]');
+        if (!btn || !row || btn.dataset.act === 'type') return;
+        const i = +row.dataset.slot;
         const act = btn.dataset.act;
         if (act === 'pick') { openPicker(i); return; }
         if (act === 'remove') {
@@ -1710,15 +2424,52 @@ function initEvents() {
         } else if (act === 'friend') {
             team.friend = team.friend === i ? -1 : i;
             if (team.leader === i) team.leader = -1;
-        } else if (act === 'type') {
-            team.slots[i].type = btn.dataset.type;
         }
         renderAll();
     });
+    $('teamEditor').addEventListener('change', e => {
+        const sel = e.target.closest('select[data-act="type"]');
+        const row = e.target.closest('[data-slot]');
+        if (!sel || !row || !team.slots[+row.dataset.slot]) return;
+        team.slots[+row.dataset.slot].type = sel.value;
+        renderAll();
+    });
+    // campo: numeri dei posti vuoti; clic a sinistra = scegli il nemico più vicino
     $('teamScene').addEventListener('click', e => {
         const b = e.target.closest('.scene-slot');
-        if (b) openPicker(+b.dataset.slot);
+        if (b) { openPicker(+b.dataset.slot); return; }
+        const r = $('teamScene').getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        let best = -1, dist = 0.2;
+        enemies.forEach((en, i) => {
+            if (en.dead) return;
+            const d = Math.hypot(x - en.spot.x, (y - (en.spot.y - 0.08)) * 0.7);
+            if (d < dist) { dist = d; best = i; }
+        });
+        if (best >= 0) setTarget(best);
     });
+    // nemici
+    $('enemySelect').addEventListener('change', e => {
+        const ids = enemies.map(x => x.id);
+        const keep = targetIdx;
+        ids[keep] = e.target.value;
+        setEnemies(ids);
+        setTarget(Math.min(keep, enemies.length - 1));
+    });
+    $('enemyCount').addEventListener('change', e => {
+        const n = +e.target.value;
+        const ids = enemies.map(x => x.id).slice(0, n);
+        while (ids.length < n) ids.push(randomEnemyId());
+        setEnemies(ids);
+    });
+    $('enemyRandom').addEventListener('click', () => {
+        const n = Math.max(1, enemies.length);
+        const ids = [];
+        for (let k = 0; k < n; k++) ids.push(randomEnemyId());
+        setEnemies(ids);
+    });
+    $('autoBtn').addEventListener('click', () => setAuto(!autoOn));
+    $('attackAllBtn').addEventListener('click', () => attackAll(false));
     $('impToggle').addEventListener('change', e => { team.imp = e.target.checked; renderAll(); });
     $('bgBtn').addEventListener('click', () => setBackground(''));
     $('clearBtn').addEventListener('click', () => {
@@ -1742,6 +2493,7 @@ function initEvents() {
         btn.classList.add('is-done');
         setTimeout(() => { btn.textContent = tx(TT.copyLink); btn.classList.remove('is-done'); }, 1800);
     });
+    // finestra di scelta delle unità
     $('pickSearch').addEventListener('input', () => renderPicker());
     $('pickRarity').addEventListener('change', () => renderPicker());
     $('pickElements').addEventListener('click', e => {
@@ -1763,19 +2515,23 @@ function initEvents() {
     $('pickClose').addEventListener('click', closePicker);
     $('picker').addEventListener('click', e => { if (e.target === $('picker')) closePicker(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && pickSlot >= 0) closePicker(); });
-    window.addEventListener('resize', layoutScene);
-    if ('ResizeObserver' in window) new ResizeObserver(layoutScene).observe($('teamScene'));
+    // la schermata si adatta alla finestra
+    window.addEventListener('resize', sizeScreen);
+    if ('ResizeObserver' in window) new ResizeObserver(sizeScreen).observe($('teamContent'));
     window.addEventListener('sitelanguagechange', () => {
         renderTexts();
         renderCards();
+        renderEditor();
         renderTotals();
         renderAdvice();
+        renderEnemySelect();
+        updateTargetInfo();
         if (pickSlot >= 0) renderPicker(true);
         $('pickElements').querySelectorAll('[data-el]').forEach(b => { b.textContent = siteT('element.' + b.dataset.el, b.dataset.el); });
     });
     // bottoni degli elementi nella scelta delle unità
     $('pickElements').innerHTML = ELEMENTS.map(e => `<button type="button" class="pel notranslate" data-el="${e}" style="--el:${ELEMENT_COLORS[e]}">${esc(siteT('element.' + e, e))}</button>`).join('');
-    // posti vuoti sulla scena: si clicca per aggiungere un'unità
+    // posti vuoti sul campo: si clicca per aggiungere un'unità
     $('sceneSlots').innerHTML = TEAM_SLOTS.map((s, i) => `<button type="button" class="scene-slot" data-slot="${i}" aria-label="${i + 1}">${i + 1}</button>`).join('');
 }
 
