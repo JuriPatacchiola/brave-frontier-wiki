@@ -126816,9 +126816,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10293/10293_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10293/10293_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10293/10293_atk.png"
+      "default": "../video/Events/six knight/Reed/Sword Emperor Reed/Sword-Emperor-Reed-default.webm",
+      "idle": "../video/Events/six knight/Reed/Sword Emperor Reed/Sword-Emperor-Reed-idle.webm",
+      "atk": "../video/Events/six knight/Reed/Sword Emperor Reed/Sword-Emperor-Reed-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -127000,9 +127000,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10294/10294_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10294/10294_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10294/10294_atk.png"
+      "default": "../video/Events/six knight/Reed/Sword God Reed/Sword-God-Reed-default.webm",
+      "idle": "../video/Events/six knight/Reed/Sword God Reed/Sword-God-Reed-idle.webm",
+      "atk": "../video/Events/six knight/Reed/Sword God Reed/Sword-God-Reed-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -127184,9 +127184,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20293/20293_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20293/20293_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20293/20293_atk.png"
+      "default": "../video/Events/six knight/Rhein/Talon King Rhein/Talon-King-Rhein-default.webm",
+      "idle": "../video/Events/six knight/Rhein/Talon King Rhein/Talon-King-Rhein-idle.webm",
+      "atk": "../video/Events/six knight/Rhein/Talon King Rhein/Talon-King-Rhein-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -127368,9 +127368,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20294/20294_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20294/20294_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20294/20294_atk.png"
+      "default": "../video/Events/six knight/Rhein/Talon God Rhein/Talon-God-Rhein-default.webm",
+      "idle": "../video/Events/six knight/Rhein/Talon God Rhein/Talon-God-Rhein-idle.webm",
+      "atk": "../video/Events/six knight/Rhein/Talon God Rhein/Talon-God-Rhein-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -171917,9 +171917,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10295/10295_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10295/10295_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10295/10295_atk.png"
+      "default": "../video/Events/six knight/Reed/Scorching Sword Reed/Scorching-Sword-Reed-default.webm",
+      "idle": "../video/Events/six knight/Reed/Scorching Sword Reed/Scorching-Sword-Reed-idle.webm",
+      "atk": "../video/Events/six knight/Reed/Scorching Sword Reed/Scorching-Sword-Reed-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -172120,9 +172120,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20295/20295_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20295/20295_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20295/20295_atk.png"
+      "default": "../video/Events/six knight/Rhein/Mystical Talon Rhein/Mystical-Talon-Rhein-default.webm",
+      "idle": "../video/Events/six knight/Rhein/Mystical Talon Rhein/Mystical-Talon-Rhein-idle.webm",
+      "atk": "../video/Events/six knight/Rhein/Mystical Talon Rhein/Mystical-Talon-Rhein-atk.webm"
     },
     "effects": {
       "atk": "",

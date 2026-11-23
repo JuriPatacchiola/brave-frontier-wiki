@@ -3400,3 +3400,182 @@ button.op-mat:hover {
         font-size: 0.56rem;
     }
 }
+
+/* ==========================================================================
+   GUARDA L'ANIMAZIONE IN GRANDE (solo PC)
+   Nella scheda resta il riquadro di sempre. Sotto le statistiche ci sono i
+   bottoni "Media", "Grande" e "Schermo intero": aprono una finestra con
+   l'animazione e lo sfondo del dungeon INTERO e nitido: la finestra ha la
+   stessa forma dello sfondo (640x440), così lo sfondo la riempie tutta senza
+   tagli, senza zoom e senza essere allungato.
+   L'animazione dell'unità sta sempre tutta dentro la finestra: main.js misura
+   fin dove arrivano gli attacchi e mette l'unità nel punto e alla grandezza giusti.
+   main.js sposta il riquadro dell'animazione (con tutti i suoi bottoni) nella
+   finestra e lo rimette al suo posto quando la chiudi.
+   Le grandezze si cambiano in main.js (ANIM_VIEW_SIZES).
+   ========================================================================== */
+.anim-size-picker {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .anim-size-picker {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+        padding: 8px 12px;
+        background: #111;
+        border: 1px solid #333;
+        border-left: 3px solid #d4af37;
+        border-radius: 4px;
+    }
+}
+
+.anim-size-title {
+    flex: 1 0 100%;   /* il titolo sopra, i tre bottoni sotto sulla stessa riga */
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.anim-size-btn {
+    padding: 5px 12px;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.anim-size-picker .anim-size-btn {
+    flex: 1 1 0;
+}
+
+.anim-size-btn:hover,
+.anim-size-btn:focus-visible {
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+.anim-size-btn.active {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #000;
+}
+
+/* la finestra: sfondo nero; i bottoni delle grandezze restano sempre in alto al
+   centro e la croce sempre in alto a destra, qualunque grandezza scegli */
+.anim-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.94);
+}
+
+.anim-viewer.is-open {
+    display: flex;
+}
+
+.anim-viewer-bar {
+    position: relative;
+    z-index: 5;   /* sempre sopra l'animazione */
+    flex: none;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* i tre bottoni al centro */
+    min-height: 36px;
+    padding: 0 56px;           /* spazio per la croce */
+}
+
+.anim-viewer-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* la croce: tutta a destra */
+.anim-viewer-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 4px;
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 45px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.anim-viewer-close:hover,
+.anim-viewer-close:focus-visible {
+    color: #fff;
+}
+
+/* lo sfondo: al centro dello spazio sotto i bottoni */
+.anim-viewer-stage {
+    position: relative;
+    flex: none;
+    margin: auto;
+    display: flex;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* nella scheda, al posto del riquadro mentre è nella finestra (niente salti) */
+.unit_box_top-home {
+    flex: 1.5;
+}
+
+/* il riquadro dell'animazione dentro la finestra: solo lo sfondo, pulito e nitido */
+.unit_box_top.is-viewer {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+/* niente bordi scuri sopra lo sfondo */
+.unit_box_top.is-viewer .shadow {
+    display: none;
+}
+
+/* l'animazione dell'unità occupa esattamente la finestra.
+   main.js calcola --viewer-scale (grandezza dei personaggi) e --viewer-anim-x
+   (spostamento a destra o a sinistra) perché l'animazione stia tutta dentro */
+.unit_box_top.is-viewer .unit_gif {
+    --pixel-scale: var(--viewer-scale, 0.85);
+    --anim-x: var(--viewer-anim-x, 0px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+/* mentre il sito misura l'animazione (di solito meno di un secondo) l'unità resta nascosta */
+.unit_box_top.is-viewer.is-fitting .unit_gif {
+    opacity: 0;
+}

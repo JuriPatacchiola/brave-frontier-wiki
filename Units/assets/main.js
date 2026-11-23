@@ -2283,6 +2283,455 @@ function changeArenaBackground() {
 }
 
 /* ==========================================================================
+   GUARDA L'ANIMAZIONE IN GRANDE (solo PC)
+   Nella scheda resta il riquadro di sempre. Sotto le statistiche ci sono i
+   bottoni "Media", "Grande" e "Schermo intero": aprono una finestra con
+   l'animazione e lo sfondo del dungeon intero. La finestra ha sempre la forma
+   dello sfondo (640x440): lo sfondo la riempie tutta, nitido, senza tagli,
+   senza zoom e senza essere allungato.
+   L'animazione dell'unità sta SEMPRE tutta dentro la finestra: quando la apri,
+   il sito guarda tutti i fotogrammi di default, idle e atk (fino a dove arrivano
+   gli attacchi) e poi mette l'unità nel punto giusto e alla grandezza giusta.
+   Se un attacco va molto a sinistra, l'unità parte un po' più a destra (come nel
+   gioco); se non basta, l'unità diventa un po' più piccola.
+   Il riquadro dell'animazione, con i suoi bottoni e le animazioni del dungeon,
+   viene spostato nella finestra e poi rimesso al suo posto: così funziona tutto
+   come nella scheda (cambio animazione, cambio sfondo, Full Art, effetti).
+   Grandezze: quante volte lo sfondo originale (1 = 640x440), 0 = la più grande
+   che entra. "Schermo intero" mette il browser a tutto schermo (come i video):
+   con Esc si torna a "Grande", con un altro Esc si chiude.
+   Se lo schermo è più piccolo, la finestra si riduce (sempre con la stessa forma).
+   ========================================================================== */
+const ANIM_VIEW_SIZES = {
+    medium: 1,      // grande esattamente come l'immagine originale (640x440)
+    large: 0,       // la più grande che entra nella finestra del browser
+    full: 0         // tutto lo schermo (il browser va a schermo intero)
+};
+const ANIM_VIEW_PIXEL_SCALE = 0.85;   // grandezza dei personaggi nella scheda su PC (come --pixel-scale)
+const ANIM_FIT_FPS = 15;              // fotogrammi al secondo controllati per vedere dove arriva l'animazione
+const ANIM_FIT_ALPHA = 24;            // pixel più trasparenti di così non contano (quasi invisibili)
+const ANIM_FIT_MARGIN = 0.02;         // spazio libero tra l'animazione e il bordo della finestra (2%)
+const ANIM_FIT_TIMEOUT = 15000;       // dopo 15 secondi senza misure l'unità si mostra comunque
+const ANIM_VIEW_TEXTS = {
+    title: { it: 'Guarda in grande', en: 'Bigger view', es: 'Ver en grande', fr: 'Voir en grand', 'zh-CN': '放大查看', ja: '大きく表示' },
+    medium: { it: 'Media', en: 'Medium', es: 'Mediana', fr: 'Moyenne', 'zh-CN': '中', ja: '中' },
+    large: { it: 'Grande', en: 'Large', es: 'Grande', fr: 'Grande', 'zh-CN': '大', ja: '大' },
+    full: { it: 'Schermo intero', en: 'Full screen', es: 'Pantalla completa', fr: 'Plein écran', 'zh-CN': '全屏', ja: '全画面' },
+    close: { it: 'Chiudi', en: 'Close', es: 'Cerrar', fr: 'Fermer', 'zh-CN': '关闭', ja: '閉じる' }
+};
+let animViewSize = '';     // grandezza aperta ('' = finestra chiusa)
+let animViewHome = null;   // segnaposto nella scheda: lì torna il riquadro quando chiudi
+let animViewGround = 67;   // il "pavimento" (--ground-y, in %)
+let animViewFit = null;    // misure dell'unità aperta: { key, ext, ready }
+const animExtentCache = new Map();   // misure già fatte, per file
+const ANIM_VIEW_VARS = ['--viewer-scale', '--viewer-anim-x'];
+
+// crea i bottoni sotto le statistiche e la finestra (una volta sola)
+function ensureAnimViewerUI() {
+    const side = document.querySelector('.unit_stats_side');
+    if (side && !document.getElementById('animSizePicker')) {
+        const picker = document.createElement('div');
+        picker.id = 'animSizePicker';
+        picker.className = 'anim-size-picker';
+        side.appendChild(picker);
+    }
+    if (!document.getElementById('animViewer')) {
+        const viewer = document.createElement('div');
+        viewer.id = 'animViewer';
+        viewer.className = 'anim-viewer';
+        viewer.setAttribute('role', 'dialog');
+        viewer.setAttribute('aria-modal', 'true');
+        viewer.innerHTML = '<div class="anim-viewer-bar"><div class="anim-viewer-sizes"></div>'
+            + '<button type="button" class="anim-viewer-close">&times;</button></div>'
+            + '<div class="anim-viewer-stage"></div>';
+        document.body.appendChild(viewer);
+        viewer.querySelector('.anim-viewer-close').onclick = closeAnimViewer;
+        // un click sul nero intorno chiude la finestra
+        viewer.addEventListener('click', e => { if (e.target === viewer) closeAnimViewer(); });
+    }
+    updateAnimViewerTexts();
+}
+
+function animSizeButtonsHtml() {
+    return Object.keys(ANIM_VIEW_SIZES).map(size =>
+        `<button type="button" class="anim-size-btn notranslate" data-anim-size="${size}">${escapeHtml(getLocalizedText(ANIM_VIEW_TEXTS[size]))}</button>`
+    ).join('');
+}
+
+// testi nella lingua scelta
+function updateAnimViewerTexts() {
+    const picker = document.getElementById('animSizePicker');
+    if (picker) {
+        picker.innerHTML = `<span class="anim-size-title notranslate">${escapeHtml(getLocalizedText(ANIM_VIEW_TEXTS.title))}</span>${animSizeButtonsHtml()}`;
+    }
+    const viewer = document.getElementById('animViewer');
+    if (viewer) {
+        viewer.querySelector('.anim-viewer-sizes').innerHTML = animSizeButtonsHtml();
+        const close = viewer.querySelector('.anim-viewer-close');
+        close.setAttribute('aria-label', getLocalizedText(ANIM_VIEW_TEXTS.close));
+        close.title = getLocalizedText(ANIM_VIEW_TEXTS.close);
+    }
+    markAnimSizeButtons();
+}
+
+// il bottone della grandezza aperta resta acceso (dentro la finestra)
+function markAnimSizeButtons() {
+    document.querySelectorAll('.anim-viewer-sizes [data-anim-size]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.animSize === animViewSize);
+    });
+}
+
+// sposta il riquadro senza fermare i video che stavano andando
+function moveAnimBox(box, parent, before) {
+    const playing = [...box.querySelectorAll('video')].filter(v => !v.paused);
+    parent.insertBefore(box, before || null);
+    playing.forEach(v => {
+        const p = v.play();
+        if (p && p.catch) p.catch(() => { /* il browser non vuole: resta ferma */ });
+    });
+}
+
+function openAnimViewer(size) {
+    if (!Object.prototype.hasOwnProperty.call(ANIM_VIEW_SIZES, size)) return;
+    ensureAnimViewerUI();
+    const viewer = document.getElementById('animViewer');
+    const box = document.querySelector('.unit_box_top');
+    if (!viewer || !box) return;
+    if (!animViewHome) {
+        animViewGround = readCssNumber(box.querySelector('.unit_gif') || box, '--ground-y', 67);
+        animViewHome = document.createElement('div');
+        animViewHome.className = 'unit_box_top-home';
+        box.parentNode.insertBefore(animViewHome, box);
+        moveAnimBox(box, viewer.querySelector('.anim-viewer-stage'));
+        box.classList.add('is-viewer');
+        viewer.classList.add('is-open');
+        document.body.classList.add('anim-viewer-open');
+    }
+    animViewSize = size;
+    markAnimSizeButtons();
+    if (size === 'full') enterAnimFullscreen(viewer);
+    else exitAnimFullscreen();
+    fitAnimViewer();
+    sizeAnimViewer();
+}
+
+// schermo intero del browser (se il browser non lo permette, la finestra resta grande)
+function animFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+}
+
+function enterAnimFullscreen(el) {
+    if (animFullscreenElement() === el) return;
+    const request = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!request) return;
+    try {
+        const p = request.call(el);
+        if (p && p.catch) p.catch(() => { /* non permesso: resta grande nella finestra */ });
+    } catch (err) { /* non permesso: resta grande nella finestra */ }
+}
+
+function exitAnimFullscreen() {
+    if (!animFullscreenElement()) return;
+    const exit = document.exitFullscreen || document.webkitExitFullscreen;
+    if (!exit) return;
+    try {
+        const p = exit.call(document);
+        if (p && p.catch) p.catch(() => { });
+    } catch (err) { /* già uscito */ }
+}
+
+function closeAnimViewer() {
+    if (!animViewHome) return;
+    exitAnimFullscreen();
+    const viewer = document.getElementById('animViewer');
+    const box = document.querySelector('.unit_box_top');
+    if (box && animViewHome.parentNode) {
+        moveAnimBox(box, animViewHome.parentNode, animViewHome);
+        box.classList.remove('is-viewer', 'is-fitting');
+        ANIM_VIEW_VARS.forEach(name => box.style.removeProperty(name));
+    }
+    animViewHome.remove();
+    animViewHome = null;
+    animViewSize = '';
+    if (viewer) viewer.classList.remove('is-open');
+    document.body.classList.remove('anim-viewer-open');
+    markAnimSizeButtons();
+    requestAnimationFrame(fitVisibleGifs);
+}
+
+// grandezza della finestra per la scelta fatta e per lo schermo
+function sizeAnimViewer() {
+    if (!animViewSize) return;
+    const viewer = document.getElementById('animViewer');
+    const box = document.querySelector('.unit_box_top');
+    if (!viewer || !box) return;
+    const stage = viewer.querySelector('.anim-viewer-stage');
+    const bar = viewer.querySelector('.anim-viewer-bar');
+    const cs = getComputedStyle(viewer);
+    const padX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    const padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    const gap = parseFloat(cs.rowGap) || 0;
+    const border = stage.offsetWidth - stage.clientWidth || 4;
+    const maxW = window.innerWidth - padX - border;
+    const maxH = window.innerHeight - padY - bar.offsetHeight - gap - border;
+    // stessa forma dello sfondo: il più grande possibile, ma non più della grandezza scelta
+    let zoom = Math.min(maxW / DUNGEON_STAGE_W, maxH / DUNGEON_STAGE_H);
+    const want = ANIM_VIEW_SIZES[animViewSize];
+    if (want) zoom = Math.min(zoom, want);
+    const w = Math.max(320, Math.floor(DUNGEON_STAGE_W * zoom));
+    const h = Math.round(w * DUNGEON_STAGE_H / DUNGEON_STAGE_W);
+    stage.style.width = (w + border) + 'px';
+    stage.style.height = (h + border) + 'px';
+    placeAnimInViewer(box, w, h);
+    requestAnimationFrame(fitVisibleGifs);
+}
+
+// grandezza e posizione dell'unità: tutta l'animazione dentro la finestra
+function placeAnimInViewer(box, w, h) {
+    // grandezza normale: i personaggi crescono come lo sfondo (nella scheda lo sfondo è alto circa 430px)
+    let scale = ANIM_VIEW_PIXEL_SCALE * h / 430;
+    let x = 0;
+    const ext = animViewFit && animViewFit.ext;
+    if (ext) {
+        const mx = w * ANIM_FIT_MARGIN, my = h * ANIM_FIT_MARGIN;
+        const ground = h * animViewGround / 100;
+        // se l'animazione non entra, l'unità diventa più piccola
+        scale = Math.min(scale,
+            (w - 2 * mx) / Math.max(1, ext.left + ext.right),
+            (ground - my) / Math.max(1, ext.up),
+            (h - ground - my) / Math.max(1, ext.down));
+        // in orizzontale: al centro, oppure spostata quanto basta perché niente esca dai lati
+        const minX = mx + scale * ext.left;
+        const maxX = w - mx - scale * ext.right;
+        x = Math.min(Math.max(w / 2, minX), maxX) - w / 2;
+    }
+    box.style.setProperty('--viewer-scale', scale.toFixed(4));
+    box.style.setProperty('--viewer-anim-x', x.toFixed(1) + 'px');
+}
+
+// misura l'unità aperta (una volta sola per unità)
+function startAnimFit() {
+    const unit = currentUnitOpen;
+    if (!unit) return null;
+    const key = JSON.stringify(unit.animations || {});
+    if (!animViewFit || animViewFit.key !== key) {
+        const fit = { key, ext: null, ready: false };
+        animViewFit = fit;
+        Promise.race([
+            measureUnitAnimations(unit),
+            new Promise(resolve => setTimeout(() => resolve(null), ANIM_FIT_TIMEOUT))
+        ]).catch(() => null).then(ext => {
+            fit.ext = ext;
+            fit.ready = true;
+            if (animViewFit !== fit) return;
+            const box = document.querySelector('.unit_box_top');
+            if (box) box.classList.remove('is-fitting');
+            sizeAnimViewer();
+        });
+    }
+    return animViewFit;
+}
+
+// nella finestra: finché le misure non sono pronte l'unità resta nascosta
+function fitAnimViewer() {
+    const box = document.querySelector('.unit_box_top');
+    const fit = startAnimFit();
+    if (box) box.classList.toggle('is-fitting', !!fit && !fit.ready);
+}
+
+// fin dove arrivano default, idle e atk, misurato dal "punto a terra" dell'unità
+// (in pixel come nella scheda con --pixel-scale 1): { left, right, up, down }
+async function measureUnitAnimations(unit) {
+    const files = ['default', 'idle', 'atk'].map(t => pickAnimationSrc(unit.animations?.[t] || ''));
+    const list = await Promise.all(files.map(measureAnimFile));
+    // come nella scheda: il punto a terra è quello del default (o dell'idle), se la tela è uguale
+    const anchor = list.find(m => m && m.ground);
+    let ext = null;
+    list.forEach(m => {
+        if (!m || !m.fileScale) return;
+        const g = (anchor && anchor.w === m.w && anchor.h === m.h) ? anchor.ground : m.ground;
+        if (!g) return;
+        const k = m.fileScale;
+        const e = {
+            left: (g.x - m.left) * m.w * k,
+            right: (m.right - g.x) * m.w * k,
+            up: (g.y - m.top) * m.h * k,
+            down: (m.bottom - g.y) * m.h * k
+        };
+        ext = ext ? {
+            left: Math.max(ext.left, e.left),
+            right: Math.max(ext.right, e.right),
+            up: Math.max(ext.up, e.up),
+            down: Math.max(ext.down, e.down)
+        } : e;
+    });
+    return ext;
+}
+
+function measureAnimFile(src) {
+    if (!src) return Promise.resolve(null);
+    if (!animExtentCache.has(src)) {
+        animExtentCache.set(src, (isVideoFile(src) ? measureAnimVideo(src) : measureAnimImage(src)).catch(() => null));
+    }
+    return animExtentCache.get(src);
+}
+
+// guarda tutti i fotogrammi e ricorda il rettangolo dove c'è qualcosa di visibile
+function animFrameScanner(w, h) {
+    const cw = Math.max(1, Math.min(w, 240));
+    const ch = Math.max(1, Math.round(cw * h / w));
+    const canvas = document.createElement('canvas');
+    canvas.width = cw;
+    canvas.height = ch;
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    let minX = cw, maxX = -1, minY = ch, maxY = -1;
+    return {
+        add(frame) {
+            ctx.clearRect(0, 0, cw, ch);
+            ctx.drawImage(frame, 0, 0, cw, ch);
+            const d = ctx.getImageData(0, 0, cw, ch).data;
+            for (let y = 0; y < ch; y++) {
+                const row = y * cw * 4;
+                for (let x = 0; x < cw; x++) {
+                    if (d[row + x * 4 + 3] < ANIM_FIT_ALPHA) continue;
+                    if (x < minX) minX = x;
+                    if (x > maxX) maxX = x;
+                    if (y < minY) minY = y;
+                    if (y > maxY) maxY = y;
+                }
+            }
+        },
+        result() {
+            if (maxX < 0) return null;
+            return { left: minX / cw, right: (maxX + 1) / cw, top: minY / ch, bottom: (maxY + 1) / ch };
+        }
+    };
+}
+
+// punto a terra del primo fotogramma (lo stesso calcolo della scheda)
+function animGroundOf(el) {
+    const m = measureCharacter(el);
+    if (!m || m.charX === undefined) return null;
+    return { x: 0.5 - parseFloat(m.charX) / 100, y: 0.5 - parseFloat(m.charY) / 100 };
+}
+
+function seekVideo(v, t) {
+    return new Promise(resolve => {
+        const done = () => { clearTimeout(timer); v.removeEventListener('seeked', done); resolve(); };
+        const timer = setTimeout(done, 2000);
+        v.addEventListener('seeked', done);
+        v.currentTime = t;
+    });
+}
+
+// .webm (PC e Android): si salta da un fotogramma all'altro
+function measureAnimVideo(src) {
+    return new Promise(resolve => {
+        const v = document.createElement('video');
+        v.muted = true;
+        v.playsInline = true;
+        v.preload = 'auto';
+        let finished = false;
+        const finish = result => {
+            if (finished) return;
+            finished = true;
+            clearTimeout(timer);
+            v.removeAttribute('src');
+            v.load();
+            resolve(result);
+        };
+        const timer = setTimeout(() => finish(null), ANIM_FIT_TIMEOUT);
+        v.onerror = () => finish(null);
+        v.onloadeddata = async () => {
+            v.onloadeddata = null;
+            try {
+                const w = v.videoWidth, h = v.videoHeight;
+                if (!w || !h) { finish(null); return; }
+                const ground = animGroundOf(v);
+                const fileScale = pixelFileScale(v, w);
+                // alcuni .webm non dicono quanto durano: si va alla fine per saperlo
+                if (!Number.isFinite(v.duration)) await seekVideo(v, 1e5);
+                const duration = Number.isFinite(v.duration) ? v.duration : 0;
+                const scan = animFrameScanner(w, h);
+                const steps = Math.min(600, Math.ceil(duration * ANIM_FIT_FPS));
+                for (let i = 0; i <= steps; i++) {
+                    await seekVideo(v, Math.min(Math.max(0, duration - 0.01), i / ANIM_FIT_FPS));
+                    scan.add(v);
+                }
+                const box = scan.result();
+                finish(box ? { w, h, ground, fileScale, ...box } : null);
+            } catch (err) {
+                finish(null);
+            }
+        };
+        v.src = src;
+    });
+}
+
+// .webp e .gif animate: si leggono tutti i fotogrammi (dove il browser lo permette)
+async function measureAnimImage(src) {
+    if (!('ImageDecoder' in window)) return null;
+    const img = new Image();
+    img.src = src;
+    await img.decode();
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if (!w || !h) return null;
+    const ground = animGroundOf(img);
+    const fileScale = pixelFileScale(img, w);
+    const resp = await fetch(src);
+    if (!resp.ok) return null;
+    const type = (resp.headers.get('content-type') || '').split(';')[0].trim()
+        || (GIF_RE.test(src) ? 'image/gif' : 'image/webp');
+    const decoder = new ImageDecoder({ data: await resp.arrayBuffer(), type });
+    await decoder.tracks.ready;
+    const count = decoder.tracks.selectedTrack ? decoder.tracks.selectedTrack.frameCount : 1;
+    const scan = animFrameScanner(w, h);
+    for (let i = 0; i < count; i++) {
+        const { image } = await decoder.decode({ frameIndex: i });
+        scan.add(image);
+        image.close();
+    }
+    decoder.close();
+    const box = scan.result();
+    return box ? { w, h, ground, fileScale, ...box } : null;
+}
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest && e.target.closest('[data-anim-size]');
+    if (btn) openAnimViewer(btn.dataset.animSize);
+});
+
+// appena il mouse arriva sui bottoni si comincia già a misurare: la finestra si apre prima pronta
+document.addEventListener('pointerover', e => {
+    if (e.target.closest && e.target.closest('#animSizePicker')) startAnimFit();
+});
+
+// Esc chiude la finestra (se è aperta la Full Art, Esc chiude prima quella)
+window.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || !animViewSize) return;
+    if (document.getElementById('fullArtModal')?.classList.contains('is-open')) return;
+    e.stopImmediatePropagation();
+    closeAnimViewer();
+}, true);
+
+window.addEventListener('resize', sizeAnimViewer);
+window.addEventListener('sitelanguagechange', updateAnimViewerTexts);
+
+// uscito dallo schermo intero (Esc o tasto del browser): la finestra resta aperta, "Grande"
+['fullscreenchange', 'webkitfullscreenchange'].forEach(name => document.addEventListener(name, () => {
+    if (!animFullscreenElement() && animViewSize === 'full') {
+        animViewSize = 'large';
+        markAnimSizeButtons();
+    }
+    sizeAnimViewer();
+}));
+
+// la Full Art si apre sopra la scheda: prima si esce dallo schermo intero, se no non si vedrebbe
+document.addEventListener('click', e => {
+    if (animFullscreenElement() && e.target.closest && e.target.closest('#btn_btm5_container')) exitAnimFullscreen();
+}, true);
+
+/* ==========================================================================
    ANIMAZIONI DEI DUNGEON (le "micro animazioni" del gioco sopra gli sfondi)
    Ogni sfondo img/Arena Battle/dungeon_battle_<ID>.jpg può avere delle animazioni
    nella cartella video/battle dungeon/BattleDungeon<ID>...:
@@ -4047,6 +4496,7 @@ function closeModal(options = {}) {
     // Se chiamata dall'onclick della X arriva un evento, non un oggetto opzioni
     const pushHistory = !(options && options.pushHistory === false);
     closeFullArtModal();
+    closeAnimViewer();   // se è aperta la finestra "Guarda in grande", il riquadro torna nella scheda
 
     const modalEl = document.getElementById('unitModal');
     if (modalEl) modalEl.style.display = 'none';
@@ -4097,6 +4547,9 @@ function initListeners() {
 
     // btm6: entra/esce dalla modalità effetti (crea i pulsanti se l'HTML non li ha)
     ensureEffectsUI();
+
+    // "Guarda in grande": bottoni sotto le statistiche e finestra (solo PC)
+    ensureAnimViewerUI();
     const btm6Btn = document.getElementById('btn_btm6_container');
     if (btm6Btn) {
         btm6Btn.onclick = toggleEffects;
