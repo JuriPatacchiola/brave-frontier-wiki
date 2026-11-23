@@ -46,8 +46,8 @@
                         <canvas class="scene-fx scene-fx-front"></canvas>
                         <canvas class="scene-fx scene-fx-front-add"></canvas>
                         <div id="sceneSlots" class="scene-slots"></div>
-                        <!-- frecce sul nemico scelto come bersaglio -->
-                        <div id="targetMark" class="target-mark" hidden><span class="tm-l spr"></span><span class="tm-r spr"></span></div>
+                        <!-- mirino sul nemico scelto come bersaglio (gira su se stesso) -->
+                        <div id="targetMark" class="target-mark" hidden><img src="../img/Battle img/battle_target_mark.png" alt="" draggable="false"></div>
                         <!-- colpi e danni totali della combo -->
                         <div id="comboBox" class="combo-box notranslate" hidden>
                             <div class="cb-hits"><b>0</b> HITS</div>
@@ -65,7 +65,7 @@
                         <span class="bf-turn notranslate">TURN: <b id="turnNum">1</b></span>
                         <span id="targetElem" class="bf-elem spr"></span>
                         <span id="targetName" class="bf-name notranslate"></span>
-                        <button type="button" id="autoBtn" class="bf-auto notranslate">AUTO</button>
+                        <button type="button" id="autoBtn" class="bf-auto" aria-label="AUTO" aria-pressed="false"></button>
                         <span class="bf-hp"><span id="targetHpFill" class="bf-hpfill spr"></span></span>
                         <span id="targetHpText" class="bf-hptext notranslate">HP: 100%</span>
                     </div>

@@ -1065,12 +1065,12 @@ const TT = {
     enemies: { it: 'Nemici', en: 'Enemies', es: 'Enemigos', fr: 'Ennemis', 'zh-CN': '敌人', ja: '敵' },
     enemyCount: { it: 'Quanti', en: 'How many', es: 'Cuántos', fr: 'Combien', 'zh-CN': '数量', ja: '数' },
     randomEnemies: { it: 'Nemici a caso', en: 'Random enemies', es: 'Enemigos al azar', fr: 'Ennemis au hasard', 'zh-CN': '随机敌人', ja: 'ランダムな敵' },
-    targetEnemy: { it: 'Nemico scelto (clicca un nemico nel campo per sceglierlo)', en: 'Selected enemy (click an enemy on the field to pick it)' },
+    targetEnemy: { it: 'Cambia il nemico mostrato nella striscia con il drago', en: 'Change the enemy shown in the dragon banner' },
     teamList: { it: 'La tua squadra', en: 'Your team', es: 'Tu equipo', fr: 'Ton équipe', 'zh-CN': '你的队伍', ja: 'あなたのパーティ' },
     auto: { it: 'Attacco automatico a ogni turno', en: 'Automatic attack every turn' },
     attackAll: { it: 'Attaccano tutti', en: 'All attack', es: 'Atacan todos', fr: 'Tous attaquent', 'zh-CN': '全员攻击', ja: '全員で攻撃' },
     attackHint: { it: "Clic = attacco. Con la barra BB piena: trascina verso l'alto per la BB", en: 'Click = attack. With a full BB gauge: drag up for the BB' },
-    battleHint: { it: "Clicca su un riquadro: l'unità va verso il nemico scelto (quello con le frecce; clicca un nemico per cambiarlo) e attacca. Ogni unità attacca una volta per turno; quando tutte hanno attaccato comincia il turno dopo. I colpi riempiono la barra BB: quando è piena il riquadro si illumina e trascinandolo verso l'alto l'unità fa la BB. Se aspetti, la barra si riempie una seconda volta (dorata) per la SBB. Più unità che colpiscono insieme fanno Spark. AUTO: attaccano da sole e usano anche le BB.", en: 'Click a card: the unit goes to the selected enemy (the one with the arrows; click an enemy to change it) and attacks. Each unit attacks once per turn; when all have attacked the next turn begins. Hits fill the BB gauge: when it is full the card lights up and dragging it up makes the unit use its BB. If you wait, the gauge fills a second time (gold) for the SBB. Several units hitting together make Sparks. AUTO: they attack by themselves and also use their BBs.' },
+    battleHint: { it: "Clicca su un riquadro: l'unità va verso un nemico a caso e lo attacca. Se clicchi un nemico compare il mirino e tutti attaccano quello; clicca di nuovo sullo stesso nemico (o in un punto vuoto del campo) per togliere il mirino. Ogni unità attacca una volta per turno; quando tutte hanno attaccato comincia il turno dopo. I colpi riempiono la barra BB: quando è piena il riquadro si illumina e trascinandolo verso l'alto l'unità fa la BB. Se aspetti, la barra si riempie una seconda volta (dorata) per la SBB. Dal nemico colpito escono i cristalli di battaglia (riempiono la barra BB di chi ha colpito) e a volte quelli di cura. Più unità che colpiscono insieme fanno Spark. AUTO: attaccano da sole e usano anche le BB.", en: 'Click a card: the unit goes to a random enemy and attacks it. Click an enemy to show the target mark and everyone attacks that one; click the same enemy again (or an empty spot on the field) to remove the mark. Each unit attacks once per turn; when all have attacked the next turn begins. Hits fill the BB gauge: when it is full the card lights up and dragging it up makes the unit use its BB. If you wait, the gauge fills a second time (gold) for the SBB. The hit enemy drops battle crystals (they fill the BB gauge of the attacker) and sometimes heart crystals. Several units hitting together make Sparks. AUTO: they attack by themselves and also use their BBs.' },
     dmgNote: { it: 'Danni indicativi, senza buff e senza abilità leader: ATK − DEF del nemico ÷ 3, ×1,5 se il nemico è debole all\'elemento, ×0,75 se lo resiste, ×1,5 con lo Spark.', en: "Indicative damage, without buffs or leader skills: ATK − enemy DEF ÷ 3, ×1.5 if the enemy is weak to the element, ×0.75 if it resists it, ×1.5 with a Spark." },
     type: { it: 'Tipo', en: 'Type', es: 'Tipo', fr: 'Type', 'zh-CN': '类型', ja: 'タイプ' }
 };
@@ -1434,11 +1434,23 @@ const HIT_END = 0.85;                     // ...e l'85% dell'animazione d'attacc
 const UNKNOWN_ATK_TIME = 1.5;             // secondi, se il file non dice quanto dura
 const SPARK_WINDOW = 0.06;                // secondi: colpi di unità diverse così vicini fanno Spark
 const DMG = { weak: 1.5, resist: 0.75, spark: 1.5, bb: 2.5, sbb: 4, variance: 0.08 };
-const BC_RATE = 0.35;                     // CB presi in media a ogni colpo (x DC del colpo)
+const BC_DROP_CHANCE = 0.35;              // ogni DC del colpo ha questa probabilità di far cadere un cristallo di battaglia (1 CB)
+const HC_DROP_CHANCE = 0.12;              // probabilità che un colpo faccia cadere anche un cristallo di cura
+const CRYSTAL_SIZE = 22;                  // grandezza dei cristalli (pixel del gioco)
+const CRYSTAL_TIME = 1400;                // millisecondi: escono dal nemico, cadono, poi volano all'unità
+const BATTLE_IMG_DIR = '../img/Battle img/';
 const OD_PER_HIT = 0.4;                   // % della barra OVERDRIVE per ogni colpo
 const ENEMY_HP_MULT = 10;                 // HP del nemico = HP (Lord) dell'unità x questo numero
 const ENEMY_MIN_HP = 10000;
 const WAVE_RESPAWN = 1500;                // millisecondi prima che tornino i nemici sconfitti
+const ENEMY_ATK_MULT = 1.5;               // forza dei nemici quando attaccano la squadra (ATK x questo numero)
+const ENEMY_TURN_GAP = 450;               // millisecondi tra l'attacco di un nemico e il successivo
+const HC_HEAL = 0.6;                      // cristallo di cura: cura REC dell'unità x questo numero
+// cure delle BB (indicative): REC di chi cura x questo numero, a seconda della parola nella descrizione
+const HEAL_WORDS = [[/massive|huge|enormous/i, 4], [/great|powerful|considerab/i, 3], [/large|big/i, 2.5], [/slight/i, 1.2]];
+const HEAL_BASE = 2;                      // "recovers HP" senza altre parole
+const REGEN_PER_TURN = 0.8;               // "gradually recovers HP": cura REC x questo a ogni turno
+const TEAM_REVIVE = 1800;                 // millisecondi prima che la squadra sconfitta torni in piedi
 const TURN_PAUSE = 600;                   // millisecondi tra un turno e l'altro
 const ENEMY_FOLDERS = /\/video\/(Base enemy|Enemy boss basic|God Boss)\//i;
 const BATTLE_IMG = id => `../img/Unit/Battle Img/unit_ills_battle_${id}.png`;
@@ -1452,7 +1464,8 @@ function unitMoveType(u) {
 
 const actors = [];      // per ogni posto: { id, u, wrap, idle, atk, busy, gauge }
 let enemies = [];       // { id, u, wrap, idle, hp, maxHp, def, el, dead, spot }
-let targetIdx = 0;
+let targetIdx = -1;     // nemico scelto con il mirino (-1 = nessuno: ognuno attacca un nemico a caso)
+let infoIdx = 0;        // nemico mostrato nella striscia con il drago
 let enemyList = [];
 let recentHits = [];    // per lo Spark: { slot, t }
 let restartCount = 0;
@@ -1460,6 +1473,7 @@ let turn = 1;
 let od = 0;
 let autoOn = false;
 const acted = new Set();
+let phase = 'player';   // 'player' = tocca alla squadra, 'enemy' = attaccano i nemici
 const combo = { hits: 0, dmg: 0, sparks: 0, timer: 0 };
 
 const wait = ms => new Promise(r => setTimeout(r, ms));
@@ -1580,10 +1594,10 @@ function createActor(u, mirror) {
     wrap.className = 'scene-actor' + (mirror ? ' is-enemy' : '');
     const idle = createMedia(idleSrc(u), { loop: true, cls: 'media-idle', fallback: u.image || '' });
     wrap.appendChild(idle.el);
-    const actor = { id: u.id, u, wrap, idle, atk: null, atkPromise: null, busy: false, gauge: 0, mirror: !!mirror };
+    const actor = { id: u.id, u, wrap, idle, atk: null, atkPromise: null, busy: false, gauge: 0, mirror: !!mirror, hp: 0, maxHp: 0, dead: false, regen: null };
     idle.ready.then(() => {
         layoutScene();
-        if (!mirror) ensureAtk(actor);
+        ensureAtk(actor);
     });
     return actor;
 }
@@ -1720,7 +1734,7 @@ function renderEnemySelect() {
         if (!list.length) return '';
         return `<optgroup label="${esc(siteT('element.' + el, el))}">${list.map(u => `<option value="${esc(u.id)}">${esc(unitName(u))}</option>`).join('')}</optgroup>`;
     }).join('');
-    const t = enemies[targetIdx];
+    const t = enemies[infoIdx];
     if (t) sel.value = t.id;
 }
 
@@ -1759,7 +1773,8 @@ function setEnemies(ids) {
         const e = makeEnemy(id, i, list.length);
         if (e) enemies.push(e);
     });
-    targetIdx = 0;
+    targetIdx = -1;
+    infoIdx = 0;
     team.enemies = enemies.map(e => e.id);
     $('enemyCount').value = String(Math.max(1, enemies.length));
     if (enemies[0]) $('enemySelect').value = enemies[0].id;
@@ -1768,28 +1783,35 @@ function setEnemies(ids) {
     saveUrl();
 }
 
+// clic su un nemico: diventa il bersaglio (compare il mirino); clic di nuovo sullo stesso: si toglie
 function setTarget(i) {
-    if (!enemies[i] || enemies[i].dead) return;
-    targetIdx = i;
+    if (i < 0 || !enemies[i] || enemies[i].dead || i === targetIdx) {
+        targetIdx = -1;
+    } else {
+        targetIdx = i;
+        showEnemyInfo(i);
+    }
+    placeTargetMark();
+}
+
+function showEnemyInfo(i) {
+    if (!enemies[i]) return;
+    infoIdx = i;
     $('enemySelect').value = enemies[i].id;
     updateTargetInfo();
-    placeTargetMark();
 }
 
-function currentTarget() {
-    let e = enemies[targetIdx];
-    if (e && !e.dead) return e;
-    const i = enemies.findIndex(x => !x.dead);
-    if (i < 0) return null;
-    targetIdx = i;
-    updateTargetInfo();
-    placeTargetMark();
-    return enemies[i];
+// chi attacca: il nemico col mirino, oppure (senza mirino) uno a caso tra quelli vivi
+function pickTarget(anyEnemy) {
+    const t = enemies[targetIdx];
+    if (!anyEnemy && t && !t.dead) return t;
+    const alive = enemies.filter(x => !x.dead);
+    return alive.length ? alive[Math.floor(Math.random() * alive.length)] : null;
 }
 
-// striscia con il drago: elemento, nome e vita del nemico scelto
+// striscia con il drago: elemento, nome e vita del nemico scelto (o dell'ultimo colpito)
 function updateTargetInfo() {
-    const e = enemies[targetIdx];
+    const e = enemies[infoIdx];
     const elem = $('targetElem');
     if (!e) {
         $('targetName').textContent = '';
@@ -1806,18 +1828,23 @@ function updateTargetInfo() {
     $('targetHpText').textContent = `HP: ${e.hp > 0 ? Math.max(1, Math.ceil(p * 100)) : 0}%`;
 }
 
+// centro del corpo di un nemico (dove escono i numeri e i cristalli)
+function enemyBody(e) {
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const up = e.idle.m ? (e.idle.icon ? H * 0.16 : e.idle.m.up * actorScale(e) * e.idle.scale) : H * 0.15;
+    return { x: e.spot.x * W, y: e.spot.y * H - up * 0.5, up };
+}
+
+// mirino sul nemico scelto (gira su se stesso)
 function placeTargetMark() {
     const mark = $('targetMark');
     const e = enemies[targetIdx];
-    if (!e || e.dead || !e.idle.m) { mark.hidden = true; return; }
-    const H = $('teamScene').clientHeight, W = $('teamScene').clientWidth;
-    const k = actorScale(e) * e.idle.scale;
-    const up = e.idle.icon ? H * 0.16 : e.idle.m.up * k;
-    const side = Math.max(H * 0.05, (e.idle.icon ? H * 0.08 : e.idle.m.side * k) * 0.7);
+    if (targetIdx < 0 || !e || e.dead || !e.idle.m) { mark.hidden = true; return; }
+    const b = enemyBody(e);
     mark.hidden = false;
-    mark.style.left = `${(e.spot.x * W).toFixed(1)}px`;
-    mark.style.top = `${(e.spot.y * H - up * 0.5).toFixed(1)}px`;
-    mark.style.setProperty('--side', `${side.toFixed(1)}px`);
+    mark.style.left = `${b.x.toFixed(1)}px`;
+    mark.style.top = `${b.y.toFixed(1)}px`;
 }
 
 function enemyHitFlash(e) {
@@ -1831,7 +1858,7 @@ function defeatEnemy(e) {
     if (e.dead) return;
     e.dead = true;
     e.wrap.classList.add('is-dead');
-    if (enemies[targetIdx] === e) currentTarget();
+    if (enemies[targetIdx] === e) targetIdx = -1;   // bersaglio sconfitto: il mirino sparisce
     placeTargetMark();
     if (enemies.every(x => x.dead)) {
         // tutti sconfitti: dopo un attimo tornano (nuova ondata)
@@ -1839,7 +1866,8 @@ function defeatEnemy(e) {
         setTimeout(() => {
             if (enemies !== wave) return;
             wave.forEach(x => { x.hp = x.maxHp; x.dead = false; x.wrap.classList.remove('is-dead'); });
-            targetIdx = 0;
+            targetIdx = -1;
+            infoIdx = 0;
             updateTargetInfo();
             placeTargetMark();
         }, WAVE_RESPAWN);
@@ -1854,17 +1882,214 @@ function elementMultiplier(atkEl, defEl) {
 }
 
 function showDamage(e, value, tag, spark) {
-    const scene = $('teamScene');
-    const W = scene.clientWidth, H = scene.clientHeight;
-    const up = e.idle.m ? (e.idle.icon ? H * 0.16 : e.idle.m.up * actorScale(e) * e.idle.scale) : H * 0.15;
+    const W = $('teamScene').clientWidth;
+    const b = enemyBody(e);
     const d = document.createElement('div');
     d.className = 'dmg notranslate' + (tag ? ' is-' + tag : '') + (spark ? ' is-spark' : '');
     d.innerHTML = (spark ? '<small>SPARK!</small>' : '') + String(value);
     d.style.left = `${(e.spot.x * W + (Math.random() - 0.5) * W * 0.08).toFixed(1)}px`;
-    d.style.top = `${(e.spot.y * H - up * (0.3 + Math.random() * 0.5)).toFixed(1)}px`;
+    d.style.top = `${(b.y + b.up * 0.5 - b.up * (0.3 + Math.random() * 0.5)).toFixed(1)}px`;
     $('sceneFx').appendChild(d);
     d.addEventListener('animationend', () => d.remove(), { once: true });
     setTimeout(() => d.remove(), 2000);
+}
+
+// centro del corpo di un'unità della squadra
+function unitBody(i) {
+    const a = actors[i];
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const spot = TEAM_SLOTS[i];
+    const up = a && a.idle.m ? (a.idle.icon ? H * 0.16 : a.idle.m.up * actorScale(a) * a.idle.scale) : H * 0.15;
+    return { x: spot.x * W, y: spot.y * H - up * 0.5, up };
+}
+
+// numero che sale sopra un'unità della squadra (danno preso o cura)
+function floatOnUnit(i, text, cls) {
+    const b = unitBody(i);
+    const W = $('teamScene').clientWidth;
+    const d = document.createElement('div');
+    d.className = 'dmg notranslate ' + cls;
+    d.textContent = text;
+    d.style.left = `${(b.x + (Math.random() - 0.5) * W * 0.05).toFixed(1)}px`;
+    d.style.top = `${(b.y - b.up * (0.1 + Math.random() * 0.3)).toFixed(1)}px`;
+    $('sceneFx').appendChild(d);
+    d.addEventListener('animationend', () => d.remove(), { once: true });
+    setTimeout(() => d.remove(), 2000);
+}
+
+// vita delle unità: segue le statistiche (tipo, imp) e tiene la percentuale se cambiano
+function syncTeamHp() {
+    actors.forEach((a, i) => {
+        if (!a) return;
+        const slot = team.slots[i];
+        const max = unitStats(a.u, slot ? slot.type : DEFAULT_TYPE).hp || 1;
+        a.hp = a.maxHp ? Math.round(a.hp / a.maxHp * max) : max;
+        a.maxHp = max;
+    });
+}
+
+function healUnit(i, amount) {
+    const a = actors[i];
+    if (!a || a.dead || amount <= 0) return;
+    const healed = Math.min(Math.round(amount), a.maxHp - a.hp);
+    a.hp += healed;
+    healFlash(i);
+    updateCardHp(i);
+    if (healed > 0) floatOnUnit(i, '+' + healed, 'is-heal');
+}
+
+function hurtUnit(i, dmg) {
+    const a = actors[i];
+    if (!a || a.dead) return;
+    a.hp = Math.max(0, a.hp - dmg);
+    floatOnUnit(i, String(dmg), 'is-taken');
+    a.wrap.classList.remove('is-hit');
+    void a.wrap.offsetWidth;
+    a.wrap.classList.add('is-hit');
+    const card = cardOf(i);
+    if (card) { card.classList.remove('is-hurt'); void card.offsetWidth; card.classList.add('is-hurt'); }
+    updateCardHp(i);
+    if (a.hp <= 0) {
+        a.dead = true;
+        a.gauge = 0;
+        a.regen = null;
+        a.wrap.classList.add('is-dead');
+        updateCardGauge(i);
+        setCardState(i);
+        if (actors.every(x => !x || x.dead)) setTimeout(reviveTeam, TEAM_REVIVE);
+    }
+}
+
+// tutta la squadra sconfitta: dopo un attimo torna in piedi con la vita piena
+function reviveTeam() {
+    actors.forEach((a, i) => {
+        if (!a) return;
+        a.dead = false;
+        a.hp = a.maxHp;
+        a.wrap.classList.remove('is-dead');
+        updateCardHp(i);
+        setCardState(i);
+    });
+    if (autoOn && phase === 'player') setTimeout(() => attackAll(true), 300);
+}
+
+/* cure delle BB / SBB / UBB, lette dalla descrizione:
+   "(greatly) recovers HP for all allies" = cura subito tutti
+   "gradually recovers HP ... for 3 turns" = cura a ogni turno per 3 turni */
+function healInfo(u, kind) {
+    const desc = skillDesc(u, kind).en || '';
+    const parts = desc.split(/\s*(?:&|,| and )\s*/i);
+    let instant = 0, regen = 0, turns = 0;
+    parts.forEach(p => {
+        if (!/heal|recover|restore|hp recovery/i.test(p) || /\bbb\b|gauge/i.test(p)) return;
+        let m = HEAL_BASE;
+        HEAL_WORDS.some(([rx, v]) => (rx.test(p) ? ((m = v), true) : false));
+        if (/gradual|regen|over \d+ turns|each turn/i.test(p)) {
+            regen = Math.max(regen, REGEN_PER_TURN * m / HEAL_BASE);
+            const t = desc.match(/(\d+) turns/i);
+            turns = t ? +t[1] : 3;
+            return;
+        }
+        instant = Math.max(instant, m);
+    });
+    if (!/hp|heal/i.test(desc)) { instant = 0; regen = 0; }
+    return { instant, regen, turns };
+}
+
+function applyBurstHeal(i, a, kind) {
+    const h = healInfo(a.u, kind);
+    if (!h.instant && !h.regen) return;
+    const slot = team.slots[i];
+    const rec = unitStats(a.u, slot ? slot.type : DEFAULT_TYPE).rec;
+    actors.forEach((x, j) => {
+        if (!x || x.dead) return;
+        if (h.instant) healUnit(j, rec * h.instant * (0.95 + Math.random() * 0.1));
+        if (h.regen) x.regen = { amount: rec * h.regen, turns: h.turns };
+    });
+}
+
+// a ogni nuovo turno: le cure graduali
+function applyRegen() {
+    actors.forEach((a, i) => {
+        if (!a || a.dead || !a.regen) return;
+        healUnit(i, a.regen.amount * (0.95 + Math.random() * 0.1));
+        a.regen.turns -= 1;
+        if (a.regen.turns <= 0) a.regen = null;
+    });
+}
+
+/* ---------- turno dei nemici: ognuno attacca un'unità della squadra ---------- */
+function pickUnit() {
+    const alive = actors.map((a, i) => (a && !a.dead ? i : -1)).filter(i => i >= 0);
+    return alive.length ? alive[Math.floor(Math.random() * alive.length)] : -1;
+}
+
+async function enemyAttack(e) {
+    if (e.dead || e.busy) return;
+    let ti = pickUnit();
+    if (ti < 0) return;
+    e.busy = true;
+    const atk = await Promise.race([ensureAtk(e), wait(3000).then(() => null)]);
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const unit = TEAM_SLOTS[ti];
+    const move = unitMoveType(e.u);
+    const spot = { x: unit.x - ATTACK_GAP, y: unit.y + (e.spot.y - unit.y) * ATTACK_SPREAD };
+    const away = `translate(${((spot.x - e.spot.x) * W).toFixed(1)}px, ${((spot.y - e.spot.y) * H).toFixed(1)}px)`;
+    const still = 'translate(0px, 0px)';
+    e.wrap.classList.add('is-busy');
+    layoutScene();
+    if (move === 1) await animateTo(e.wrap, { transform: still }, { transform: away }, MOVE_GO, 'ease-out');
+    else if (move === 2) {
+        await animateTo(e.wrap, { opacity: 1 }, { opacity: 0 }, TELEPORT_FADE);
+        e.wrap.style.transform = away;
+        await animateTo(e.wrap, { opacity: 0 }, { opacity: 1 }, TELEPORT_FADE);
+    }
+    let dur = UNKNOWN_ATK_TIME;
+    if (atk && !e.removed) {
+        e.wrap.classList.add('is-attacking');
+        dur = await playMedia(atk);
+    }
+    const info = burstInfo(e.u, 'atk');
+    const st = baseStats(e.u, 'lord').hp ? baseStats(e.u, 'lord') : baseStats(e.u, 'base');
+    for (let k = 0; k < info.hits; k++) {
+        const f = info.hits === 1 ? (HIT_START + HIT_END) / 2 : HIT_START + (HIT_END - HIT_START) * k / (info.hits - 1);
+        setTimeout(() => {
+            if (e.dead) return;
+            if (!actors[ti] || actors[ti].dead) ti = pickUnit();
+            const a = actors[ti];
+            if (!a) return;
+            const slot = team.slots[ti];
+            const def = unitStats(a.u, slot ? slot.type : DEFAULT_TYPE).def;
+            const el = elementMultiplier(e.el, elementKey(a.u));
+            let dmg = Math.max(1, st.atk * ENEMY_ATK_MULT - def / 3) * el.m / info.hits;
+            dmg = Math.max(1, Math.round(dmg * (1 + (Math.random() * 2 - 1) * DMG.variance)));
+            hurtUnit(ti, dmg);
+        }, f * dur * 1000);
+    }
+    await wait(dur * 1000);
+    e.wrap.classList.remove('is-attacking');
+    if (atk && atk.video) atk.el.pause();
+    if (move === 1) await animateTo(e.wrap, { transform: away }, { transform: still }, MOVE_BACK, 'ease-in-out');
+    else if (move === 2) {
+        await animateTo(e.wrap, { opacity: 1 }, { opacity: 0 }, TELEPORT_FADE);
+        e.wrap.style.transform = still;
+        await animateTo(e.wrap, { opacity: 0 }, { opacity: 1 }, TELEPORT_FADE);
+    }
+    e.busy = false;
+    e.wrap.classList.remove('is-busy');
+    layoutScene();
+}
+
+async function enemyTurn() {
+    phase = 'enemy';
+    $('bfScreen').classList.add('is-enemy-turn');
+    const list = enemies.filter(e => !e.dead);
+    const runs = list.map((e, k) => wait(k * ENEMY_TURN_GAP).then(() => enemyAttack(e)));
+    await Promise.all(runs);
+    phase = 'player';
+    $('bfScreen').classList.remove('is-enemy-turn');
 }
 
 function addCombo(dmg, spark) {
@@ -1888,24 +2113,100 @@ function addCombo(dmg, spark) {
     }, 1800);
 }
 
+/* ---------- cristalli: escono dal nemico colpito, cadono a terra e volano all'unità ----------
+   cristallo di battaglia = 1 CB per la barra BB di chi ha colpito; cristallo di cura = cura un'unità */
+function spawnCrystal(kind, e, toSlot, onArrive) {
+    const scene = $('teamScene');
+    const W = scene.clientWidth, H = scene.clientHeight;
+    const size = CRYSTAL_SIZE * H / 440;
+    const from = enemyBody(e);
+    const land = { x: from.x + (Math.random() - 0.5) * W * 0.22, y: e.spot.y * H + (Math.random() * 0.07 - 0.02) * H };
+    const peakY = Math.min(from.y, land.y) - (0.06 + Math.random() * 0.08) * H;
+    const home = TEAM_SLOTS[toSlot] || { x: 0.7, y: 0.7 };
+    const to = { x: home.x * W, y: home.y * H - 0.07 * H };
+    const t = (x, y, sc) => `translate(${(x - size / 2).toFixed(1)}px, ${(y - size / 2).toFixed(1)}px) scale(${sc || 1})`;
+    const img = document.createElement('img');
+    img.className = 'crystal';
+    img.alt = '';
+    img.draggable = false;
+    img.src = BATTLE_IMG_DIR + (kind === 'hc' ? 'battle_heart_icon.png' : 'battle_crystal_icon.png');
+    img.style.width = img.style.height = `${size.toFixed(1)}px`;
+    $('sceneFx').appendChild(img);
+    const midX = (from.x + land.x) / 2;
+    const frames = [
+        { transform: t(from.x, from.y, 0.4), opacity: 0, offset: 0 },
+        { transform: t(midX, peakY, 1), opacity: 1, offset: 0.16 },
+        { transform: t(land.x, land.y, 1), opacity: 1, offset: 0.34, easing: 'ease-out' },
+        { transform: t(land.x, land.y - 0.025 * H, 1), opacity: 1, offset: 0.42, easing: 'ease-in' },
+        { transform: t(land.x, land.y, 1), opacity: 1, offset: 0.5 },
+        { transform: t(land.x, land.y, 1), opacity: 1, offset: 0.68, easing: 'ease-in' },
+        { transform: t(to.x, to.y, 0.5), opacity: 0.25, offset: 1 }
+    ];
+    const done = () => { img.remove(); if (onArrive) onArrive(); };
+    if (!img.animate) { setTimeout(done, CRYSTAL_TIME); return; }
+    const anim = img.animate(frames, { duration: CRYSTAL_TIME * (0.9 + Math.random() * 0.25), fill: 'forwards' });
+    anim.finished.then(done, done);
+}
+
+function dropCrystals(e, i, a, dc) {
+    for (let k = 0; k < dc; k++) {
+        if (Math.random() >= BC_DROP_CHANCE) continue;
+        spawnCrystal('bc', e, i, () => {
+            if (actors[i] !== a || a.dead || !gaugeMax(a)) return;
+            a.gauge = Math.min(gaugeMax(a), a.gauge + 1);
+            updateCardGauge(i);
+        });
+    }
+    if (Math.random() < HC_DROP_CHANCE) {
+        const list = actors.map((x, j) => (x && !x.dead ? j : -1)).filter(j => j >= 0);
+        const j = list[Math.floor(Math.random() * list.length)];
+        if (j !== undefined) spawnCrystal('hc', e, j, () => {
+            const x = actors[j];
+            if (!x) return;
+            const slot = team.slots[j];
+            healUnit(j, unitStats(x.u, slot ? slot.type : DEFAULT_TYPE).rec * HC_HEAL);
+        });
+    }
+}
+
+// cristallo di cura arrivato: la vita dell'unità brilla un attimo
+function healFlash(i) {
+    const card = cardOf(i);
+    if (!card) return;
+    card.classList.remove('is-healed');
+    void card.offsetWidth;
+    card.classList.add('is-healed');
+}
+
 function updateOd() {
     $('odFill').style.setProperty('--p', (od / 100).toFixed(3));
 }
 
-function landHit(i, a, kind, hits) {
-    if (actors[i] !== a) return;
-    const e = currentTarget();
-    if (!e) return;
+/* BB / SBB / UBB: quanti colpi e su chi, letti dalla descrizione (in inglese) della skill
+   "15 combo ... attack on all enemies" = 15 colpi su TUTTI i nemici
+   "... on single enemy" = un nemico solo, "... on 3 random enemies" = nemici a caso,
+   nessun attacco (solo aumenti o cure) = nessun danno */
+function burstInfo(u, kind) {
+    const b = (battle[u.id] || {})[kind] || {};
+    if (kind === 'atk') return { hits: Math.max(1, num(b.hits) || 1), dc: Math.max(1, num(b.dc) || 1), mode: 'single' };
+    const desc = skillDesc(u, kind).en || '';
+    const m = desc.match(/(\d+)\s*combo/i);
+    const hits = Math.max(1, (m ? +m[1] : num(b.hits)) || 1);
+    let mode = 'single';
+    if (/\ball (foes|enemies)\b/i.test(desc)) mode = 'all';
+    else if (/random (foes|enemies|targets)|\d+ random/i.test(desc)) mode = 'random';
+    else if (/single (foe|enemy|target)/i.test(desc)) mode = 'single';
+    else if (desc && !/attack|combo|damage/i.test(desc)) mode = 'none';
+    return { hits, dc: Math.max(1, num(b.dc) || 1), mode };
+}
+
+function hitEnemy(e, i, a, kind, hits, dc, spark) {
     const slot = team.slots[i];
     const st = unitStats(a.u, slot ? slot.type : DEFAULT_TYPE);
     const el = elementMultiplier(elementKey(a.u), e.el);
     const mod = kind === 'atk' ? 1 : DMG[kind] || 1;
     let dmg = Math.max(1, st.atk - e.def / 3) * mod * el.m / hits;
     dmg *= 1 + (Math.random() * 2 - 1) * DMG.variance;
-    const now = performance.now() / 1000;
-    recentHits = recentHits.filter(h => now - h.t < 1);
-    const spark = recentHits.some(h => h.slot !== i && now - h.t <= SPARK_WINDOW);
-    recentHits.push({ slot: i, t: now });
     if (spark) dmg *= DMG.spark;
     dmg = Math.max(1, Math.round(dmg));
     e.hp = Math.max(0, e.hp - dmg);
@@ -1914,15 +2215,26 @@ function landHit(i, a, kind, hits) {
     enemyHitFlash(e);
     od = Math.min(100, od + OD_PER_HIT);
     updateOd();
-    if (kind === 'atk') {
-        const b = battle[a.u.id] || {};
-        if (gaugeMax(a)) {
-            a.gauge = Math.min(gaugeMax(a), a.gauge + num(b.atk && b.atk.dc) * BC_RATE);
-            updateCardGauge(i);
-        }
-    }
-    if (enemies[targetIdx] === e) updateTargetInfo();
+    dropCrystals(e, i, a, dc);
+    showEnemyInfo(enemies.indexOf(e));
     if (e.hp <= 0) defeatEnemy(e);
+}
+
+function landHit(i, a, kind, info) {
+    if (actors[i] !== a || info.mode === 'none') return;
+    let targets;
+    if (info.mode === 'all') targets = enemies.filter(x => !x.dead);
+    else if (info.mode === 'random') { const t = pickTarget(true); targets = t ? [t] : []; }
+    else {
+        if (!a.target || a.target.dead || !enemies.includes(a.target)) a.target = pickTarget();
+        targets = a.target ? [a.target] : [];
+    }
+    if (!targets.length) return;
+    const now = performance.now() / 1000;
+    recentHits = recentHits.filter(h => now - h.t < 1);
+    const spark = recentHits.some(h => h.slot !== i && now - h.t <= SPARK_WINDOW);
+    recentHits.push({ slot: i, t: now });
+    targets.forEach(e => hitEnemy(e, i, a, kind, info.hits, info.dc, spark));
 }
 
 /* ---------- barra BB (si riempie con i CB dei colpi, in due giri per la SBB) ---------- */
@@ -1971,15 +2283,16 @@ async function playMedia(media) {
 
 async function attack(i, burst) {
     const a = actors[i];
-    if (!a || a.busy || acted.has(i)) return;
+    if (!a || a.busy || a.dead || acted.has(i) || phase !== 'player') return;
     if (burst && !readyKind(a)) return;          // BB non ancora pronta
-    const target = currentTarget();
+    const target = pickTarget();
     if (!target) return;
+    a.target = target;
     const u = a.u;
     const b = battle[u.id] || {};
     const kind = burst ? readyKind(a) : 'atk';
-    const info = b[kind] || {};
-    const hits = Math.max(1, num(info.hits) || 1);
+    const info = burstInfo(u, kind);
+    const hits = info.hits;
     a.busy = true;
     acted.add(i);
     a.wrap.classList.add('is-busy');
@@ -1993,7 +2306,7 @@ async function attack(i, burst) {
     const scene = $('teamScene');
     const W = scene.clientWidth, H = scene.clientHeight;
     const home = TEAM_SLOTS[i];
-    const move = unitMoveType(u);
+    const move = info.mode === 'none' ? 3 : unitMoveType(u);
     const spot = { x: target.spot.x + ATTACK_GAP + (i % 2) * ATTACK_COL, y: target.spot.y + (home.y - target.spot.y) * ATTACK_SPREAD };
     const away = `translate(${((spot.x - home.x) * W).toFixed(1)}px, ${((spot.y - home.y) * H).toFixed(1)}px)`;
     const still = 'translate(0px, 0px)';
@@ -2009,9 +2322,11 @@ async function attack(i, burst) {
         a.wrap.classList.add('is-attacking');
         dur = await playMedia(atk);
     }
+    // BB che curano: a metà dell'animazione la squadra recupera HP (numeri verdi)
+    if (kind !== 'atk') setTimeout(() => { if (actors[i] === a) applyBurstHeal(i, a, kind); }, dur * 500);
     for (let k = 0; k < hits; k++) {
         const f = hits === 1 ? (HIT_START + HIT_END) / 2 : HIT_START + (HIT_END - HIT_START) * k / (hits - 1);
-        setTimeout(() => landHit(i, a, kind, hits), f * dur * 1000);
+        setTimeout(() => landHit(i, a, kind, info), f * dur * 1000);
     }
     await wait(dur * 1000);
     a.wrap.classList.remove('is-attacking');
@@ -2031,22 +2346,28 @@ async function attack(i, burst) {
 
 // tutti all'attacco (con AUTO usano anche la BB quando è pronta, come nel gioco)
 function attackAll(useBurst) {
+    if (phase !== 'player') return;
     let n = 0;
     actors.forEach((a, i) => {
-        if (a && !a.busy && !acted.has(i)) setTimeout(() => attack(i, useBurst === true && !!readyKind(a)), (n++) * 140);
+        if (a && !a.dead && !a.busy && !acted.has(i)) setTimeout(() => attack(i, useBurst === true && !!readyKind(a)), (n++) * 140);
     });
 }
 
 // quando tutte le unità hanno attaccato comincia un nuovo turno
+// quando tutte le unità (vive) hanno attaccato tocca ai nemici, poi comincia un nuovo turno
 function checkTurnEnd() {
-    const present = actors.map((a, i) => (a ? i : -1)).filter(i => i >= 0);
+    if (phase !== 'player') return;
+    const present = actors.map((a, i) => (a && !a.dead ? i : -1)).filter(i => i >= 0);
     if (!present.length || present.some(i => !acted.has(i) || actors[i].busy)) return;
     clearTimeout(checkTurnEnd.timer);
-    checkTurnEnd.timer = setTimeout(() => {
-        if (actors.some(a => a && a.busy)) return;
+    checkTurnEnd.timer = setTimeout(async () => {
+        if (phase !== 'player' || actors.some(a => a && a.busy)) return;
+        if (enemies.some(e => !e.dead)) await enemyTurn();
+        await wait(250);
         acted.clear();
         turn += 1;
         $('turnNum').textContent = String(turn);
+        applyRegen();
         team.slots.forEach((s, i) => setCardState(i));
         if (autoOn) setTimeout(() => attackAll(true), 300);
     }, TURN_PAUSE);
@@ -2055,6 +2376,7 @@ function checkTurnEnd() {
 function setAuto(on) {
     autoOn = on;
     $('autoBtn').classList.toggle('is-on', on);
+    $('autoBtn').setAttribute('aria-pressed', on ? 'true' : 'false');
     if (on) attackAll(true);
 }
 
@@ -2075,8 +2397,9 @@ function renderCards() {
         const lf = i === team.leader ? 'is-l' : (i === team.friend ? 'is-f' : '');
         return `<button type="button" class="bcard" data-slot="${i}" data-act="attack" ${pos} title="${esc(tx(TT.attackHint))}">
                 <span class="bc-base spr"></span>
-                <span class="bc-clip"><img class="bc-face" src="${esc(BATTLE_IMG(u.id))}" data-thumb="${esc(u.image || '')}" alt="" draggable="false"></span>
                 <span class="bc-glow"></span>
+                <canvas class="bc-bolt"></canvas>
+                <span class="bc-clip"><img class="bc-face" src="${esc(BATTLE_IMG(u.id))}" data-thumb="${esc(u.image || '')}" alt="" draggable="false"></span>
                 <span class="bc-frame spr"></span>
                 <span class="bc-elem spr" style="--i:${el}"></span>
                 ${lf ? `<span class="bc-lf ${lf}"></span>` : ''}
@@ -2084,7 +2407,7 @@ function renderCards() {
                     <span class="bc-namebg spr"></span>
                     <span class="bc-name notranslate">${esc(unitName(u))}</span>
                     <span class="bc-hpnum notranslate">${st.hp}/${st.hp}</span>
-                    <span class="bc-hp spr"><span class="bc-empty spr"></span><span class="bc-fill-wrap" style="--p:1"><span class="bc-fill spr is-hp"></span></span></span>
+                    <span class="bc-hp spr"><span class="bc-empty spr"></span><span class="bc-fill-wrap is-hpbar" style="--p:1"><span class="bc-fill spr is-hp"></span></span></span>
                     <span class="bc-bblabel spr"></span>
                     <span class="bc-bb spr"><span class="bc-empty spr"></span><span class="bc-fill-wrap is-bb" style="--p:0"><span class="bc-fill spr is-bb"></span></span><span class="bc-fill-wrap is-sbb" style="--p:0"><span class="bc-fill spr is-sbb"></span></span></span>
                 </span>
@@ -2099,7 +2422,18 @@ function renderCards() {
             }
         }, { once: true });
     });
-    team.slots.forEach((s, i) => { if (s) { updateCardGauge(i); setCardState(i); } });
+    team.slots.forEach((s, i) => { if (s) { updateCardGauge(i); updateCardHp(i); setCardState(i); } });
+}
+
+// vita sul riquadro: numeri e barra (rossa quando è bassa)
+function updateCardHp(i) {
+    const a = actors[i];
+    const card = cardOf(i);
+    if (!a || !card || card.classList.contains('is-empty') || !a.maxHp) return;
+    const p = Math.max(0, a.hp / a.maxHp);
+    card.querySelector('.bc-hpnum').textContent = `${Math.round(a.hp)}/${a.maxHp}`;
+    card.querySelector('.bc-fill-wrap.is-hpbar').style.setProperty('--p', p.toFixed(3));
+    card.classList.toggle('is-low', p > 0 && p < 0.3);
 }
 
 function cardOf(i) {
@@ -2118,10 +2452,93 @@ function updateCardGauge(i) {
     card.querySelector('.bc-fill-wrap.is-bb').style.setProperty('--p', p1.toFixed(3));
     card.querySelector('.bc-fill-wrap.is-sbb').style.setProperty('--p', p2.toFixed(3));
     card.classList.toggle('is-ready', !!ready);
+    card.dataset.bolt = ready || '';
+    if (ready) startBolts();
     const label = card.querySelector('.bc-bblabel');
     label.classList.toggle('lv-sbb', ready === 'sbb');
     label.classList.toggle('lv-bb', ready !== 'sbb');
     label.classList.toggle('is-full', !!ready);
+}
+
+/* fulmini sul riquadro quando la BB è pronta (come nel gioco): luce blu-bianca per la BB,
+   gialla chiara per la SBB. Sono leggeri e stanno dietro a tutto: immagine, cornice, nome e barre. */
+const BOLT_COLORS = {
+    bb: { glow: 'rgba(110, 160, 255, 0.35)', core: 'rgba(200, 225, 255, 0.4)' },
+    sbb: { glow: 'rgba(255, 220, 90, 0.32)', core: 'rgba(255, 245, 190, 0.38)' }
+};
+const BOLT_FPS = 9;
+let boltRaf = 0, boltLast = 0;
+
+function boltPoints(x1, y1, x2, y2, rough) {
+    let pts = [[x1, y1], [x2, y2]];
+    let d = rough;
+    for (let it = 0; it < 5; it++) {
+        const next = [pts[0]];
+        for (let k = 1; k < pts.length; k++) {
+            const [ax, ay] = pts[k - 1], [bx, by] = pts[k];
+            const len = Math.hypot(bx - ax, by - ay) || 1;
+            const off = (Math.random() - 0.5) * d;
+            next.push([(ax + bx) / 2 - (by - ay) / len * off, (ay + by) / 2 + (bx - ax) / len * off], pts[k]);
+        }
+        pts = next;
+        d /= 2;
+    }
+    return pts;
+}
+
+function drawBolt(ctx, pts, color, w) {
+    ctx.beginPath();
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+    ctx.shadowColor = color.glow;
+    ctx.shadowBlur = w * 3;
+    ctx.strokeStyle = color.glow;
+    ctx.lineWidth = w * 2.2;
+    ctx.stroke();
+    ctx.shadowBlur = w;
+    ctx.strokeStyle = color.core;
+    ctx.lineWidth = w * 0.5;
+    ctx.stroke();
+}
+
+function drawCardBolts(canvas, kind) {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+    if (!w || !h) return;
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'lighter';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    const color = BOLT_COLORS[kind] || BOLT_COLORS.bb;
+    // a volte niente (resta il fondo scuro), a volte uno o due lampi sfumati
+    const r = Math.random();
+    const n = r < 0.3 ? 0 : (r < 0.75 ? 1 : 2);
+    const lw = Math.max(1.5, h / 22);
+    for (let k = 0; k < n; k++) {
+        const pts = boltPoints(Math.random() * w * 0.3, Math.random() * h, w * (0.65 + Math.random() * 0.35), Math.random() * h, h * 0.7);
+        drawBolt(ctx, pts, color, lw);
+        // un ramo più piccolo
+        const p = pts[Math.floor(pts.length * (0.3 + Math.random() * 0.4))];
+        drawBolt(ctx, boltPoints(p[0], p[1], p[0] + (Math.random() - 0.3) * w * 0.3, p[1] + (Math.random() - 0.5) * h * 0.8, h * 0.3), color, lw * 0.6);
+    }
+}
+
+function startBolts() {
+    if (boltRaf) return;
+    const tick = now => {
+        const cards = document.querySelectorAll('#teamCards .bcard.is-ready');
+        if (!cards.length) { boltRaf = 0; return; }
+        boltRaf = requestAnimationFrame(tick);
+        if (now - boltLast < 1000 / BOLT_FPS) return;
+        boltLast = now;
+        cards.forEach(card => {
+            const c = card.querySelector('.bc-bolt');
+            if (c) drawCardBolts(c, card.dataset.bolt);
+        });
+    };
+    boltRaf = requestAnimationFrame(tick);
 }
 
 // riquadro: normale, premuto (mentre attacca) o grigio (ha già attaccato in questo turno)
@@ -2130,7 +2547,8 @@ function setCardState(i) {
     const card = cardOf(i);
     if (!card) return;
     card.classList.toggle('is-busy', !!(a && a.busy));
-    card.classList.toggle('is-done', !!(a && !a.busy && acted.has(i)));
+    card.classList.toggle('is-done', !!(a && !a.busy && !a.dead && acted.has(i)));
+    card.classList.toggle('is-dead', !!(a && a.dead));
 }
 
 /* ---------- elenco della squadra (a destra): tipo, leader, amico, cambia, togli ---------- */
@@ -2288,6 +2706,7 @@ function renderTexts() {
 
 function renderAll() {
     renderSceneUnits();
+    syncTeamHp();
     renderCards();
     renderEditor();
     renderTotals();
@@ -2446,15 +2865,16 @@ function initEvents() {
             const d = Math.hypot(x - en.spot.x, (y - (en.spot.y - 0.08)) * 0.7);
             if (d < dist) { dist = d; best = i; }
         });
-        if (best >= 0) setTarget(best);
+        setTarget(best);   // nessun nemico vicino al clic: il mirino si toglie
     });
     // nemici
     $('enemySelect').addEventListener('change', e => {
         const ids = enemies.map(x => x.id);
-        const keep = targetIdx;
+        const keep = Math.max(0, infoIdx), wasTarget = targetIdx === infoIdx;
         ids[keep] = e.target.value;
         setEnemies(ids);
-        setTarget(Math.min(keep, enemies.length - 1));
+        showEnemyInfo(Math.min(keep, enemies.length - 1));
+        if (wasTarget) setTarget(Math.min(keep, enemies.length - 1));
     });
     $('enemyCount').addEventListener('change', e => {
         const n = +e.target.value;

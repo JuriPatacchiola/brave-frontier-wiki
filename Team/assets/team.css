@@ -510,6 +510,17 @@ body {
     font-size: calc(var(--scene-h, 400px) * 0.045);
 }
 
+/* danno preso da un'unità della squadra (rosso) e cura (verde, con il +) */
+.dmg.is-taken {
+    color: #ff7a7a;
+    font-size: calc(var(--scene-h, 400px) * 0.05);
+}
+
+.dmg.is-heal {
+    color: #7dff8a;
+    font-size: calc(var(--scene-h, 400px) * 0.05);
+}
+
 .dmg.is-spark {
     font-size: calc(var(--scene-h, 400px) * 0.068);
 }
@@ -640,9 +651,8 @@ body {
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 0 8px rgba(120, 180, 255, 0.9);
 }
 
-/* frecce sul nemico scelto (dal foglio del gioco) */
+/* mirino sul nemico scelto (img/Battle img/battle_target_mark.png): gira su se stesso */
 .target-mark {
-    --side: 30px;
     position: absolute;
     z-index: 380;
     width: 0;
@@ -654,37 +664,31 @@ body {
     display: none;
 }
 
-.target-mark .spr {
-    --u: var(--g);
-    top: calc(-23 * var(--g));
-    width: calc(19 * var(--g));
-    height: calc(46 * var(--g));
+.target-mark img {
+    position: absolute;
+    left: calc(-33 * var(--g));
+    top: calc(-33 * var(--g));
+    width: calc(66 * var(--g));
+    height: calc(66 * var(--g));
+    max-width: none;
+    animation: tmSpin 2.4s linear infinite;
 }
 
-.tm-l {
-    --sx: 190;
-    --sy: 859;
-    right: var(--side);
-    animation: tmL 0.6s ease-in-out infinite alternate;
-}
-
-.tm-r {
-    --sx: 155;
-    --sy: 859;
-    left: var(--side);
-    animation: tmR 0.6s ease-in-out infinite alternate;
-}
-
-@keyframes tmL {
+@keyframes tmSpin {
     to {
-        transform: translateX(calc(-6 * var(--g)));
+        transform: rotate(360deg);
     }
 }
 
-@keyframes tmR {
-    to {
-        transform: translateX(calc(6 * var(--g)));
-    }
+/* cristalli di battaglia e di cura che escono dal nemico colpito */
+.crystal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: none;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7));
 }
 
 /* --- 6. STRISCIA DEL NEMICO, RIQUADRI E OVERDRIVE (grafica di img/Battle img/battle_ui.png) --- */
@@ -725,7 +729,7 @@ body {
     width: calc(640 * var(--g));
     height: calc(117 * var(--g));
     z-index: 5;
-    pointer-events: auto;
+    pointer-events: none;   /* i clic passano al campo (nemici davanti), tranne su AUTO */
 }
 
 .bf-turn {
@@ -765,43 +769,28 @@ body {
     line-height: calc(28 * var(--g));
 }
 
-/* bottone AUTO (come nel gioco) */
+/* bottone AUTO: immagini del gioco (auto_off.png spento, auto_on.png acceso) */
 .bf-auto {
     position: absolute;
-    left: calc(470 * var(--g));
-    top: calc(26 * var(--g));
-    width: calc(84 * var(--g));
-    height: calc(36 * var(--g));
+    left: calc(468 * var(--g));
+    top: calc(22 * var(--g));
+    width: calc(77 * var(--g));
+    height: calc(42 * var(--g));
     padding: 0;
-    border: calc(2 * var(--g)) solid #e8c25a;
-    border-radius: calc(7 * var(--g));
-    background: linear-gradient(180deg, #5b8af0 0%, #1f4fc4 50%, #10318a 100%);
-    box-shadow: inset 0 calc(2 * var(--g)) 0 rgba(255, 255, 255, 0.35), 0 0 0 calc(1.5 * var(--g)) #000;
-    color: #fff;
-    font-family: 'Arial Black', 'Segoe UI Black', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: calc(18 * var(--g));
-    text-shadow: calc(1.5 * var(--g)) calc(1.5 * var(--g)) 0 #000;
+    border: 0;
+    background: url("../../img/Battle img/auto_off.png") center / 100% 100% no-repeat;
     cursor: pointer;
+    pointer-events: auto;
+}
+
+.bf-auto.is-on {
+    background-image: url("../../img/Battle img/auto_on.png");
 }
 
 .bf-auto:hover,
 .bf-auto:focus-visible {
     filter: brightness(1.15);
     outline: none;
-}
-
-.bf-auto.is-on {
-    background: linear-gradient(180deg, #ffe17a 0%, #e0a51c 50%, #a26a05 100%);
-    color: #fff;
-    animation: autoBlink 1s ease-in-out infinite alternate;
-}
-
-@keyframes autoBlink {
-    to {
-        filter: brightness(1.25);
-    }
 }
 
 /* vita del nemico: barra rossa dentro la cornice dorata del drago */
@@ -942,34 +931,115 @@ body {
     height: calc(90 * var(--u));
 }
 
-/* barra BB piena: il riquadro si illumina come nel gioco */
+/* barra BB piena (come nel gioco): fondo scuro con una luce leggera e lampi sfumati che vanno e vengono.
+   BB = azzurro, SBB = giallo. Stanno dietro a TUTTO: immagine dell'unità, cornice, nome e barre. */
 .bc-glow {
+    --glow: 90, 140, 255;
     position: absolute;
-    left: calc(10 * var(--u));
-    top: calc(8 * var(--u));
-    width: calc(300 * var(--u));
-    height: calc(98 * var(--u));
-    border-radius: 0 calc(18 * var(--u)) 0 0;
+    left: calc(5 * var(--u));
+    top: calc(5 * var(--u));
+    width: calc(310 * var(--u));
+    height: calc(106 * var(--u));
+    border-radius: calc(4 * var(--u)) calc(22 * var(--u)) calc(4 * var(--u)) calc(4 * var(--u));
     background:
-        radial-gradient(ellipse 22% 60% at 4% 50%, rgba(255, 235, 90, 0.95), transparent 100%),
-        radial-gradient(ellipse 22% 60% at 36% 50%, rgba(255, 235, 90, 0.8), transparent 100%),
-        radial-gradient(ellipse 70% 110% at 35% 50%, rgba(255, 210, 30, 0.55), rgba(255, 190, 0, 0.25) 55%, transparent 100%);
-    mix-blend-mode: screen;
+        radial-gradient(ellipse 55% 85% at 28% 50%, rgba(var(--glow), 0.3), transparent 75%),
+        radial-gradient(ellipse 40% 70% at 78% 40%, rgba(var(--glow), 0.14), transparent 80%),
+        #05060c;
     opacity: 0;
     pointer-events: none;
 }
 
+.bcard[data-bolt="sbb"] .bc-glow {
+    --glow: 255, 205, 60;
+}
+
 .bcard.is-ready .bc-glow {
-    animation: bcGlow 0.9s ease-in-out infinite alternate;
+    opacity: 1;
+    animation: bcGlow 1.6s ease-in-out infinite alternate;
 }
 
 @keyframes bcGlow {
     from {
-        opacity: 0.55;
+        filter: brightness(0.75);
     }
 
     to {
-        opacity: 1;
+        filter: brightness(1.15);
+    }
+}
+
+.bc-bolt {
+    position: absolute;
+    left: calc(5 * var(--u));
+    top: calc(5 * var(--u));
+    width: calc(310 * var(--u));
+    height: calc(106 * var(--u));
+    border-radius: calc(4 * var(--u)) calc(22 * var(--u)) calc(4 * var(--u)) calc(4 * var(--u));
+    mix-blend-mode: screen;
+    filter: blur(calc(1.6 * var(--u)));
+    pointer-events: none;
+    display: none;
+}
+
+.bcard.is-ready .bc-bolt {
+    display: block;
+}
+
+/* con la barra BB piena la vita diventa gialla (come nel gioco), con poca vita rossa */
+.bcard.is-ready .bc-fill.is-hp {
+    --sx: 2;
+    --sy: 560;
+}
+
+.bcard.is-low .bc-fill.is-hp {
+    --sx: 2;
+    --sy: 575;
+}
+
+/* unità sconfitta: riquadro grigio e immagine in bianco e nero */
+.bcard.is-dead .bc-frame {
+    --sx: 326;
+    --sy: 590;
+}
+
+.bcard.is-dead .bc-clip {
+    filter: grayscale(1) brightness(0.5);
+}
+
+.bcard.is-dead .bc-info,
+.bcard.is-dead .bc-elem,
+.bcard.is-dead .bc-lf {
+    opacity: 0.45;
+}
+
+.bcard.is-dead .bc-glow,
+.bcard.is-dead .bc-bolt {
+    display: none;
+}
+
+/* colpita da un nemico: il riquadro trema */
+.bcard.is-hurt {
+    animation: cardHurt 0.3s linear;
+}
+
+@keyframes cardHurt {
+    25% {
+        translate: calc(-3 * var(--u)) 0;
+    }
+
+    75% {
+        translate: calc(3 * var(--u)) 0;
+    }
+}
+
+/* cristallo di cura arrivato: la barra della vita brilla */
+.bcard.is-healed .bc-hp {
+    animation: hpHeal 0.6s ease-out;
+}
+
+@keyframes hpHeal {
+    30% {
+        filter: brightness(2) drop-shadow(0 0 4px #7dff7d);
     }
 }
 
@@ -1008,7 +1078,7 @@ body {
     --sx: 441;
     --sy: 17;
     left: calc(118 * var(--u));
-    top: calc(5 * var(--u));
+    top: calc(9 * var(--u));
     width: calc(192 * var(--u));
     height: calc(25 * var(--u));
 }
@@ -1024,23 +1094,25 @@ body {
 
 .bc-name {
     left: calc(124 * var(--u));
-    top: calc(5 * var(--u));
+    top: calc(11 * var(--u));
     max-width: calc(186 * var(--u));
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
     font-family: 'Arial Narrow', 'Segoe UI', sans-serif;
-    font-size: calc(15 * var(--u));
-    line-height: calc(24 * var(--u));
+    font-size: calc(16 * var(--u));
+    line-height: calc(20 * var(--u));
     font-weight: 700;
 }
 
+/* numeri della vita: grandi, a destra della scritta HP, sopra la barra */
 .bc-hpnum {
-    right: calc(16 * var(--u));
-    top: calc(26 * var(--u));
+    right: calc(14 * var(--u));
+    top: calc(34 * var(--u));
     font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-    font-size: calc(17 * var(--u));
-    line-height: calc(18 * var(--u));
-    letter-spacing: calc(1.5 * var(--u));
+    font-weight: 400;
+    font-size: calc(21 * var(--u));
+    line-height: calc(20 * var(--u));
+    letter-spacing: calc(2.4 * var(--u));
 }
 
 /* "HP" e la sua barra verde */
@@ -1048,7 +1120,7 @@ body {
     --sx: 440;
     --sy: 51;
     left: calc(123 * var(--u));
-    top: calc(39 * var(--u));
+    top: calc(49 * var(--u));
     width: calc(184 * var(--u));
     height: calc(26 * var(--u));
 }
@@ -1057,7 +1129,7 @@ body {
     --sx: 440;
     --sy: 91;
     left: calc(123 * var(--u));
-    top: calc(82 * var(--u));
+    top: calc(89 * var(--u));
     width: calc(184 * var(--u));
     height: calc(15 * var(--u));
 }
@@ -1117,7 +1189,7 @@ body {
     --sx: 300;
     --sy: 861;
     left: calc(124 * var(--u));
-    top: calc(69 * var(--u));
+    top: calc(77 * var(--u));
     width: calc(110 * var(--u));
     height: calc(11 * var(--u));
 }
@@ -1126,7 +1198,7 @@ body {
     --sx: 298;
     --sy: 893;
     left: calc(123 * var(--u));
-    top: calc(66 * var(--u));
+    top: calc(74 * var(--u));
     width: calc(114 * var(--u));
     height: calc(15 * var(--u));
 }
