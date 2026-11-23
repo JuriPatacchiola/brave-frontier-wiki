@@ -34,6 +34,7 @@
     const I18N = {
         // Menu
         'nav.units': ['Unità', 'Units', 'Unidades', 'Unités', '单位', 'ユニット'],
+        'nav.team': ['Squadra', 'Team', 'Equipo', 'Équipe', '队伍', 'パーティ'],
         'nav.story': ['Storia', 'Story', 'Historia', 'Histoire', '故事', 'ストーリー'],
         'nav.events': ['Eventi', 'Events', 'Eventos', 'Événements', '活动', 'イベント'],
         'nav.items': ['Oggetti', 'Items', 'Objetos', 'Objets', '道具', 'アイテム'],
@@ -42,6 +43,7 @@
         // Home
         'home.title': ["Benvenuto nell'Archivio di Grand Gaia", 'Welcome to the Grand Gaia Archive', 'Bienvenido al Archivo de Grand Gaia', 'Bienvenue dans les Archives de Grand Gaia', '欢迎来到格兰盖亚档案馆', 'グランガイア・アーカイブへようこそ'],
         'home.units': ['Lista Unità', 'Units List', 'Lista de Unidades', 'Liste des Unités', '单位列表', 'ユニット一覧'],
+        'home.team': ['Crea la Squadra', 'Team Builder', 'Crea tu Equipo', 'Créer une Équipe', '组建队伍', 'パーティ編成'],
 
         // Filtri lista unità
         'filter.search': ['Cerca Unità (Nome o ID)...', 'Search Units (Name or ID)...', 'Buscar unidades (nombre o ID)...', 'Rechercher une unité (nom ou ID)...', '搜索单位（名称或ID）...', 'ユニット検索（名前またはID）...'],
@@ -225,6 +227,13 @@
                 cursor: pointer; outline: none; color-scheme: dark; font-family: inherit;
             }
             .site-lang-select:hover, .site-lang-select:focus-visible { box-shadow: 0 0 10px rgba(212,175,55,0.4); }
+
+            /* Tablet: menu (6 voci) e lingua restano sempre dentro l'header, anche con parole lunghe (va a capo) */
+            @media (min-width: 601px) and (max-width: 1000px) {
+                .site-lang-wrap { min-width: 0; gap: 10px; }
+                .site-lang-wrap .main-nav { flex-wrap: wrap; justify-content: flex-end; row-gap: 6px; min-width: 0; }
+                .site-lang-wrap .main-nav .nav-link { margin-left: 14px; font-size: 0.88rem; }
+            }
 
             /* Nasconde barra e popup di Google Translate su tutte le pagine */
             .goog-te-banner-frame, iframe.skiptranslate, .VIpgJd-yA0ebn-i42vf-fir42d,

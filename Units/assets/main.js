@@ -2289,11 +2289,14 @@ function changeArenaBackground() {
    l'animazione e lo sfondo del dungeon intero. La finestra ha sempre la forma
    dello sfondo (640x440): lo sfondo la riempie tutta, nitido, senza tagli,
    senza zoom e senza essere allungato.
+   Come nel gioco TUTTE le unità stanno a DESTRA (gli attacchi vanno verso sinistra,
+   dove starebbero i nemici): ANIM_VIEW_UNIT_X dice dove (0.5 = centro, 1 = bordo destro).
+   Durante l'attacco chi si muove va verso il nemico e torna (vedi SPOSTAMENTO DURANTE L'ATTACCO).
    L'animazione dell'unità sta SEMPRE tutta dentro la finestra: quando la apri,
    il sito guarda tutti i fotogrammi di default, idle e atk (fino a dove arrivano
    gli attacchi) e poi mette l'unità nel punto giusto e alla grandezza giusta.
-   Se un attacco va molto a sinistra, l'unità parte un po' più a destra (come nel
-   gioco); se non basta, l'unità diventa un po' più piccola.
+   Se un attacco andrebbe fuori, l'unità si sposta quanto basta; se non basta,
+   l'unità diventa un po' più piccola.
    Il riquadro dell'animazione, con i suoi bottoni e le animazioni del dungeon,
    viene spostato nella finestra e poi rimesso al suo posto: così funziona tutto
    come nella scheda (cambio animazione, cambio sfondo, Full Art, effetti).
@@ -2308,6 +2311,7 @@ const ANIM_VIEW_SIZES = {
     full: 0         // tutto lo schermo (il browser va a schermo intero)
 };
 const ANIM_VIEW_PIXEL_SCALE = 0.85;   // grandezza dei personaggi nella scheda su PC (come --pixel-scale)
+const ANIM_VIEW_UNIT_X = 0.68;        // dove sta l'unità, da sinistra (0.68 = a destra, come nel gioco)
 const ANIM_FIT_FPS = 15;              // fotogrammi al secondo controllati per vedere dove arriva l'animazione
 const ANIM_FIT_ALPHA = 24;            // pixel più trasparenti di così non contano (quasi invisibili)
 const ANIM_FIT_MARGIN = 0.02;         // spazio libero tra l'animazione e il bordo della finestra (2%)
@@ -2406,6 +2410,7 @@ function openAnimViewer(size) {
         box.classList.add('is-viewer');
         viewer.classList.add('is-open');
         document.body.classList.add('anim-viewer-open');
+        startAnimMove();   // chi si muove va verso il nemico durante l'attacco
     }
     animViewSize = size;
     markAnimSizeButtons();
@@ -2442,6 +2447,7 @@ function exitAnimFullscreen() {
 
 function closeAnimViewer() {
     if (!animViewHome) return;
+    stopAnimMove();
     exitAnimFullscreen();
     const viewer = document.getElementById('animViewer');
     const box = document.querySelector('.unit_box_top');
@@ -2490,21 +2496,30 @@ function sizeAnimViewer() {
 function placeAnimInViewer(box, w, h) {
     // grandezza normale: i personaggi crescono come lo sfondo (nella scheda lo sfondo è alto circa 430px)
     let scale = ANIM_VIEW_PIXEL_SCALE * h / 430;
-    let x = 0;
+    let x = w * ANIM_VIEW_UNIT_X - w / 2;   // a destra, come nel gioco
     const ext = animViewFit && animViewFit.ext;
     if (ext) {
         const mx = w * ANIM_FIT_MARGIN, my = h * ANIM_FIT_MARGIN;
         const ground = h * animViewGround / 100;
         // se l'animazione non entra, l'unità diventa più piccola
+        // (anche quando dietro di lei andrebbe oltre il bordo destro: così non si sposta mai verso sinistra)
         scale = Math.min(scale,
             (w - 2 * mx) / Math.max(1, ext.left + ext.right),
+            (w * (1 - ANIM_VIEW_UNIT_X) - mx) / Math.max(1, ext.right),
             (ground - my) / Math.max(1, ext.up),
             (h - ground - my) / Math.max(1, ext.down));
-        // in orizzontale: al centro, oppure spostata quanto basta perché niente esca dai lati
+        // in orizzontale: a destra come nel gioco; se un attacco andrebbe oltre il bordo sinistro,
+        // ancora un po' più a destra (mai più a sinistra)
         const minX = mx + scale * ext.left;
         const maxX = w - mx - scale * ext.right;
-        x = Math.min(Math.max(w / 2, minX), maxX) - w / 2;
+        x = Math.min(Math.max(w * ANIM_VIEW_UNIT_X, minX), maxX) - w / 2;
     }
+    // per lo spostamento durante l'attacco: dove sta l'unità e fin dove può andare a sinistra
+    animViewPlace = {
+        w,
+        home: x + w / 2,
+        minSpot: ext ? w * ANIM_FIT_MARGIN + scale * ext.left : w * ANIM_FIT_MARGIN
+    };
     box.style.setProperty('--viewer-scale', scale.toFixed(4));
     box.style.setProperty('--viewer-anim-x', x.toFixed(1) + 'px');
 }
@@ -2565,6 +2580,8 @@ async function measureUnitAnimations(unit) {
             down: Math.max(ext.down, e.down)
         } : e;
     });
+    // quanto dura l'attacco (serve per trovare l'attacco dentro il default)
+    if (ext && list[2] && list[2].duration) ext.atkDur = list[2].duration;
     return ext;
 }
 
@@ -2659,7 +2676,7 @@ function measureAnimVideo(src) {
                     scan.add(v);
                 }
                 const box = scan.result();
-                finish(box ? { w, h, ground, fileScale, ...box } : null);
+                finish(box ? { w, h, ground, fileScale, duration, ...box } : null);
             } catch (err) {
                 finish(null);
             }
@@ -2730,6 +2747,217 @@ window.addEventListener('sitelanguagechange', updateAnimViewerTexts);
 document.addEventListener('click', e => {
     if (animFullscreenElement() && e.target.closest && e.target.closest('#btn_btm5_container')) exitAnimFullscreen();
 }, true);
+
+/* ==========================================================================
+   SPOSTAMENTO DURANTE L'ATTACCO (solo nella finestra "Guarda in grande")
+   Come nel gioco:
+     - le unità che si MUOVONO (spade, asce, lance, pugni...) nel default, quando
+       parte l'attacco, scattano verso il nemico (a sinistra), attaccano e tornano
+       al loro posto a destra; nell'atk stanno già a sinistra, davanti al nemico;
+     - le unità che si TELETRASPORTANO nel default spariscono e ricompaiono davanti
+       al nemico; nell'atk stanno già a sinistra;
+     - le unità che NON si muovono (archi, magie...) attaccano ferme a destra.
+   Il tipo di movimento è quello dei dati del gioco ("move type" dell'attacco):
+   1 = si muove, 2 = teletrasporto, 3 = fermo. Qui sotto ci sono solo le unità
+   2 e 3: tutte le altre si muovono.
+   ========================================================================== */
+const ANIM_MOVE_TELEPORT = new Set(('10181,10182,10302,10503,10504,10505,11096,11097,20365,20366,20644,20645,20646,20886,20887,21106,21107,'
+    + '30424,30425,30624,30625,30626,30627,30822,30823,31066,31067,40233,40234,40235,40236,40313,40314,40315,40316,40423,40424,40425,'
+    + '40473,40474,40475,40856,40857,50011,50012,50013,50014,50015,50112,50113,50114,50115,50116,50263,50264,50265,50333,50334,50413,'
+    + '50414,50415,50525,50864,50865,50866,51106,51107,51147,51256,51257,51317,51336,51337,60084,60085,60095,60096,60097,60142,60143,'
+    + '60144,60151,60152,60153,60154,60155,60175,60176,60177,60191,60192,60224,60273,60274,60275,60293,60294,60295,60533,60534,60535,'
+    + '60536,60643,60644,60645,60914,60915,60916,61006,61007,61036,61086,61087,61125,61126,61196,61197,61207,61286,61287,720167,750122,'
+    + '750166,750167,810108,810277,810278,810408,810418,810437,810438,810517,810518,810718,810798,820357,820358,820567,820568,820577,'
+    + '820578,820668,820687,820688,820747,820748,820798,820898,820938,820948,830044,830045,830047,830048,830325,830326,830327,830328,'
+    + '830408,830504,830505,830688,840325,840326,840327,840437,840438,850154,850155,850156,850157,850158,850328,850417,850418,850437,'
+    + '850438,850568,850928,860034,860108,860148,860255,860256,860258,860356,860357,860417,860418,860437,860438,860517,860518,860547,'
+    + '860548,860577,860578,861008').split(','));
+const ANIM_MOVE_STAY = new Set(('10040,10041,10042,10081,10082,10083,10092,10093,10094,10095,10130,10131,10132,10133,10191,10222,10223,'
+    + '10312,10313,10323,10324,10373,10374,10375,10452,10522,10563,10564,10612,10613,10704,10705,10855,10884,10885,10886,20040,20041,'
+    + '20042,20081,20082,20083,20092,20093,20094,20095,20112,20113,20114,20115,20130,20131,20132,20133,20152,20153,20154,20155,20156,'
+    + '20157,20162,20163,20164,20165,20191,20212,20213,20214,20215,20217,20253,20254,20255,20273,20274,20275,20276,20302,20433,20434,'
+    + '20435,20442,20694,20695,20696,20704,20705,20706,20754,20755,20756,20804,20805,20806,21036,21037,21086,21087,30021,30022,30023,'
+    + '30024,30025,30040,30041,30042,30050,30051,30052,30071,30072,30073,30081,30082,30083,30092,30093,30094,30095,30112,30113,30114,'
+    + '30115,30116,30122,30123,30124,30125,30130,30131,30132,30133,30181,30182,30191,30293,30294,30295,30303,30304,30313,30314,30315,'
+    + '30316,30393,30394,30432,30494,30495,30533,30534,30535,30674,30675,30676,30764,30765,30786,30907,30916,30917,30946,30947,30986,'
+    + '30987,30996,30997,40021,40022,40023,40024,40025,40061,40062,40063,40081,40082,40083,40092,40093,40094,40095,40130,40131,40132,'
+    + '40133,40162,40163,40164,40165,40166,40167,40191,40262,40283,40284,40285,40293,40294,40295,40343,40344,40345,40346,40353,40354,'
+    + '40355,40432,40513,40514,40515,40714,40715,40716,40802,40803,40866,40867,41036,41037,50040,50041,50042,50071,50072,50073,50092,'
+    + '50093,50094,50095,50102,50103,50104,50105,50106,50120,50121,50122,50123,50191,50242,50243,50253,50254,50255,50256,50344,50354,'
+    + '50463,50464,50465,50612,50623,50624,50643,50644,50645,50672,50673,50682,50683,50786,50844,50845,50955,51075,51076,51112,51113,'
+    + '51227,51367,60040,60041,60042,60061,60062,60063,60071,60072,60073,60092,60093,60094,60120,60121,60122,60123,60162,60163,60164,'
+    + '60165,60201,60243,60244,60245,60425,60435,60445,60584,60585,60613,60614,60692,60693,60894,60895,60896,60974,60975,60976,61026,'
+    + '61027,61107,710164,710165,710166,710176,710234,710237,720012,720153,720154,720155,720157,720217,720226,720227,720237,720244,'
+    + '720247,720254,720255,730113,730114,730115,730125,730146,730186,730227,730257,730264,730302,740133,740134,740135,740176,740226,'
+    + '740227,740284,740285,750003,750012,750136,750137,750153,750154,750155,750156,750186,760006,760153,760154,760164,760165,760166,'
+    + '760247,760264,810003,810004,810005,810006,810034,810124,810125,810204,810205,810206,810265,810266,810337,810338,810427,810428,'
+    + '810557,810558,810617,810618,810657,810658,810687,810688,810708,810900,820003,820004,820005,820006,820034,820044,820045,820047,'
+    + '820048,820124,820125,820147,820148,820204,820205,820206,820287,820288,820437,820438,820507,820508,820547,820548,820657,820658,'
+    + '820717,820718,820757,820758,820867,820868,820900,820958,830034,830124,830125,830134,830135,830146,830147,830148,830277,830278,'
+    + '830297,830298,830377,830378,830437,830438,830525,830526,830527,830528,830557,830558,830587,830588,830597,830598,830628,830697,'
+    + '830698,830757,830758,830798,830818,830827,830828,830838,830867,830868,830888,830900,830978,830998,840003,840004,840005,840006,'
+    + '840034,840044,840045,840047,840048,840114,840115,840116,840117,840118,840148,840155,840156,840204,840205,840206,840287,840288,'
+    + '840357,840358,840367,840368,840567,840568,840587,840627,840628,840657,840658,840688,840708,840748,840757,840758,840767,840768,'
+    + '840788,840848,840868,840878,840888,840900,840998,850003,850004,850005,850006,850013,850014,850015,850017,850018,850034,850047,'
+    + '850048,850134,850135,850146,850147,850148,850165,850166,850167,850196,850197,850198,850205,850206,850287,850288,850297,850298,'
+    + '850315,850316,850317,850318,850357,850358,850397,850398,850547,850548,850557,850558,850627,850628,850637,850638,850647,850648,'
+    + '850657,850658,850688,850808,850900,850958,850988,851018,860104,860105,860107,860127,860128,860156,860158,860165,860166,860167,'
+    + '860377,860378,860568,860687,860688,860728,860757,860758,860787,860788,860798,860808,860867,860868,860900,860958,87102601,'
+    + '87102602,87102603,87202601,87202602,87202603,87302601,87302602,87302603,87402601,87402602,87402603,87502601,87502602,87502603,'
+    + '87602601,87602602,87602603').split(','));
+const ANIM_MOVE_SPOT_X = 0.40;   // dove arriva chi si muove (0 = bordo sinistro, 1 = bordo destro)
+const ANIM_MOVE_GO = 0.4;        // secondi per andare verso il nemico
+const ANIM_MOVE_BACK = 0.35;     // secondi per tornare al proprio posto
+let animViewPlace = null;        // posizione dell'unità nella finestra (la calcola placeAnimInViewer)
+let animMove = null;             // movimento in corso
+
+// 1 = si muove, 2 = teletrasporto, 3 = fermo
+function unitMoveType(u) {
+    const id = String(u && u.realId);
+    if (ANIM_MOVE_STAY.has(id)) return 3;
+    if (ANIM_MOVE_TELEPORT.has(id)) return 2;
+    return 1;
+}
+
+// di quanti pixel si sposta verso sinistra (tutto l'attacco resta dentro la finestra)
+function animMoveDistance() {
+    const p = animViewPlace;
+    if (!p) return 0;
+    const spot = Math.max(p.w * ANIM_MOVE_SPOT_X, p.minSpot);
+    return Math.max(0, p.home - spot);
+}
+
+function startAnimMove() {
+    stopAnimMove();
+    const run = { raf: 0, motion: null, phase: 'start', t0: 0, lastT: 0, offset: 0, paused: null };
+    animMove = run;
+    const tick = now => {
+        if (animMove !== run) return;
+        run.raf = requestAnimationFrame(tick);
+        stepAnimMove(run, now);
+    };
+    run.raf = requestAnimationFrame(tick);
+}
+
+function stopAnimMove() {
+    const run = animMove;
+    if (!run) return;
+    animMove = null;
+    cancelAnimationFrame(run.raf);
+    resetAnimMove(run);
+}
+
+// l'unità torna al suo posto e l'animazione riprende a girare da sola
+function resetAnimMove(run) {
+    ['default', 'atk'].forEach(type => {
+        const c = document.getElementById(`container_${type}`);
+        if (c) { c.style.removeProperty('transform'); c.style.removeProperty('opacity'); }
+    });
+    const v = run.paused;
+    if (v && v.paused && v.getAttribute('src') && v.style.display !== 'none') {
+        const p = v.play();
+        if (p && p.catch) p.catch(() => { });
+    }
+    run.motion = null;
+    run.phase = 'start';
+    run.offset = 0;
+    run.paused = null;
+}
+
+// quale animazione si vede: 'default' o 'atk' (nell'idle non c'è attacco)
+function animMoveMotion() {
+    for (const type of ['atk', 'default']) {
+        const c = document.getElementById(`container_${type}`);
+        const v = document.getElementById(`video_${type}`);
+        if (c && c.style.display !== 'none' && v && v.style.display !== 'none' && v.getAttribute('src')
+            && v.readyState >= 1 && Number.isFinite(v.duration) && v.duration > 0) return { type, c, v };
+    }
+    return null;
+}
+
+function stepAnimMove(run, now) {
+    const shown = animViewSize ? animMoveMotion() : null;
+    const type = unitMoveType(currentUnitOpen);
+    const d = animMoveDistance();
+    // il "default" è idle + attacco: l'attacco comincia quando mancano i secondi dell'atk
+    const atkDur = animViewFit && animViewFit.ext && animViewFit.ext.atkDur;
+    let atkStart = null;
+    if (shown) {
+        if (shown.type === 'atk') atkStart = 0;
+        else if (atkDur && shown.v.duration > atkDur + 0.2) atkStart = shown.v.duration - atkDur;
+    }
+    if (!shown || atkStart === null || type === 3 || d < 2) {
+        if (run.motion) resetAnimMove(run);
+        return;
+    }
+    if (run.motion !== shown.type) {
+        resetAnimMove(run);
+        run.motion = shown.type;
+    }
+    const { c, v } = shown;
+    const ease = p => p * p * (3 - 2 * p);
+    const el = (now - run.t0) / 1000;
+    const next = phase => { run.phase = phase; run.t0 = now; };
+    const pause = t => { v.pause(); v.currentTime = t; run.paused = v; };
+    const play = () => { run.paused = null; const p = v.play(); if (p && p.catch) p.catch(() => { }); };
+    if (shown.type === 'atk') {
+        // atk: chi si muove sta già davanti al nemico (a sinistra) e attacca senza spostarsi
+        if (run.paused) play();
+        run.phase = 'start';
+        run.offset = d;
+        c.style.transform = `translateX(${(-d).toFixed(1)}px)`;
+        c.style.opacity = '';
+        return;
+    }
+    let opacity = 1;
+    switch (run.phase) {
+        case 'start':
+            run.offset = 0;
+            next('idle');
+            break;
+        case 'idle':
+            // si aspetta la fine dell'idle, poi si va verso il nemico
+            run.offset = 0;
+            if (v.paused) play();
+            if (v.currentTime >= atkStart - 0.03) { pause(atkStart); next('go'); }
+            break;
+        case 'go': {
+            const p = Math.min(1, el / ANIM_MOVE_GO);
+            if (type === 2) { run.offset = p < 0.5 ? 0 : d; opacity = Math.abs(1 - 2 * p); }
+            else run.offset = ease(p) * d;
+            if (p >= 1) {
+                run.offset = d;
+                run.lastT = v.currentTime;
+                play();
+                next('hit');
+            }
+            break;
+        }
+        case 'hit':
+            // l'attacco davanti al nemico, fino alla fine dell'animazione
+            run.offset = d;
+            if (el > 0.15 && (v.ended || v.currentTime + 0.05 < run.lastT)) {
+                pause(0);
+                next('back');
+            } else {
+                run.lastT = v.currentTime;
+            }
+            break;
+        case 'back': {
+            const p = Math.min(1, el / ANIM_MOVE_BACK);
+            if (type === 2) { run.offset = p < 0.5 ? d : 0; opacity = Math.abs(1 - 2 * p); }
+            else run.offset = (1 - ease(p)) * d;
+            if (p >= 1) {
+                run.offset = 0;
+                play();
+                next('idle');
+            }
+            break;
+        }
+    }
+    c.style.transform = run.offset ? `translateX(${(-run.offset).toFixed(1)}px)` : '';
+    c.style.opacity = opacity < 1 ? opacity.toFixed(2) : '';
+}
 
 /* ==========================================================================
    ANIMAZIONI DEI DUNGEON (le "micro animazioni" del gioco sopra gli sfondi)

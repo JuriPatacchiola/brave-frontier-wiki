@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Team/assets/team.css">
+    <title>Brave Frontier Library - Squadra</title>
+</head>
+
+<body class="home-bg">
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo-area">
+                <img class="logo" src="../img/logo.png" alt="">
+            </a>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="../Units/library-unit.html" class="nav-link" data-i18n="nav.units">Unità</a>
+                <a href="../Team/team.html" class="nav-link active" data-i18n="nav.team">Squadra</a>
+                <a href="../Story/story.html" class="nav-link" data-i18n="nav.story">Story</a>
+                <a href="#" class="nav-link" data-i18n="nav.events">Events</a>
+                <a href="#" class="nav-link" data-i18n="nav.items">Items</a>
+                <a href="#" class="nav-link" data-i18n="nav.sphere">Sphere</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="team-content">
+        <h2 id="teamTitle" class="team-title notranslate">Squadra</h2>
+        <p id="teamIntro" class="team-intro"></p>
+
+        <!-- Barra dei comandi -->
+        <div class="team-toolbar">
+            <label class="team-switch">
+                <input type="checkbox" id="impToggle">
+                <span class="team-switch-track" aria-hidden="true"></span>
+                <span id="impLabel" class="notranslate">Imp al massimo</span>
+            </label>
+            <button type="button" id="bgBtn" class="team-btn notranslate">Cambia sfondo</button>
+            <button type="button" id="linkBtn" class="team-btn is-gold notranslate">Copia link della squadra</button>
+            <button type="button" id="clearBtn" class="team-btn notranslate">Svuota</button>
+        </div>
+
+        <!-- Scena di battaglia: sfondo del dungeon, animazioni del dungeon e le 6 unità in formazione -->
+        <div id="teamScene" class="team-scene">
+            <canvas class="scene-fx scene-fx-back"></canvas>
+            <canvas class="scene-fx scene-fx-back-add"></canvas>
+            <div id="sceneUnits" class="scene-units"></div>
+            <canvas class="scene-fx scene-fx-front"></canvas>
+            <canvas class="scene-fx scene-fx-front-add"></canvas>
+            <div id="sceneSlots" class="scene-slots"></div>
+        </div>
+
+        <!-- I 6 riquadri delle unità (come in battaglia nel gioco) -->
+        <div id="teamCards" class="team-cards"></div>
+
+        <!-- Statistiche di tutta la squadra -->
+        <section id="teamTotals" class="team-panel"></section>
+
+        <!-- Consigli automatici sulla squadra scelta -->
+        <section id="teamAdvice" class="team-panel"></section>
+
+        <!-- Guida fissa -->
+        <section id="teamGuide" class="team-panel team-guide"></section>
+    </main>
+
+    <!-- Finestra per scegliere un'unità -->
+    <div id="picker" class="picker" aria-hidden="true">
+        <div class="picker-box" role="dialog" aria-modal="true" aria-labelledby="pickTitle">
+            <div class="picker-head">
+                <h3 id="pickTitle" class="notranslate">Scegli un'unità</h3>
+                <button type="button" id="pickClose" class="picker-close" aria-label="Chiudi">&times;</button>
+            </div>
+            <div class="picker-filters">
+                <input type="text" id="pickSearch" class="notranslate" autocomplete="off">
+                <select id="pickRarity">
+                    <option value="all" class="notranslate">Tutte le rarità</option>
+                    <option value="1" class="notranslate">1★</option>
+                    <option value="2" class="notranslate">2★</option>
+                    <option value="3" class="notranslate">3★</option>
+                    <option value="4" class="notranslate">4★</option>
+                    <option value="5" class="notranslate">5★</option>
+                    <option value="6" class="notranslate">6★</option>
+                    <option value="7" class="notranslate">7★</option>
+                    <option value="Omni" class="notranslate">Omni</option>
+                </select>
+            </div>
+            <div id="pickElements" class="picker-elements"></div>
+            <div id="pickList" class="picker-list"></div>
+        </div>
+    </div>
+
+    <!-- script.js va caricato PRIMA di team.js: gestisce lingua, header e Google Translate -->
+    <script src="../script.js"></script>
+    <script src="../Team/assets/team.js"></script>
+</body>
+
+</html>
