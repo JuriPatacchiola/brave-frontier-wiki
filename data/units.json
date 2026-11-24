@@ -127552,9 +127552,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30293/30293_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30293/30293_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30293/30293_atk.png"
+      "default": "../video/Events/six knight/Aneil/Lawful Warrior Aneil/Lawful-Warrior-Aneil-default.webm",
+      "idle": "../video/Events/six knight/Aneil/Lawful Warrior Aneil/Lawful-Warrior-Aneil-idle.webm",
+      "atk": "../video/Events/six knight/Aneil/Lawful Warrior Aneil/Lawful-Warrior-Aneil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -127736,9 +127736,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30294/30294_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30294/30294_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30294/30294_atk.png"
+      "default": "../video/Events/six knight/Aneil/Lawful God Aneil/Lawful-God-Aneil-default.webm",
+      "idle": "../video/Events/six knight/Aneil/Lawful God Aneil/Lawful-God-Aneil-idle.webm",
+      "atk": "../video/Events/six knight/Aneil/Lawful God Aneil/Lawful-God-Aneil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -127920,9 +127920,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40293/40293_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40293/40293_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40293/40293_atk.png"
+      "default": "../video/Events/six knight/Lucana/Fast Princess Lucana/Fast-Princess-Lucana-default.webm",
+      "idle": "../video/Events/six knight/Lucana/Fast Princess Lucana/Fast-Princess-Lucana-idle.webm",
+      "atk": "../video/Events/six knight/Lucana/Fast Princess Lucana/Fast-Princess-Lucana-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -128104,9 +128104,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40294/40294_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40294/40294_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40294/40294_atk.png"
+      "default": "../video/Events/six knight/Lucana/Fast God Lucana/Fast-God-Lucana-default.webm",
+      "idle": "../video/Events/six knight/Lucana/Fast God Lucana/Fast-God-Lucana-idle.webm",
+      "atk": "../video/Events/six knight/Lucana/Fast God Lucana/Fast-God-Lucana-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -128288,9 +128288,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50323/50323_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50323/50323_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50323/50323_atk.png"
+      "default": "../video/Events/six knight/Nevsky/Heavy Guard Nevsky/Heavy-Guard-Nevsky-default.webm",
+      "idle": "../video/Events/six knight/Nevsky/Heavy Guard Nevsky/Heavy-Guard-Nevsky-idle.webm",
+      "atk": "../video/Events/six knight/Nevsky/Heavy Guard Nevsky/Heavy-Guard-Nevsky-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -128472,9 +128472,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50324/50324_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50324/50324_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50324/50324_atk.png"
+      "default": "../video/Events/six knight/Nevsky/Heavy God Nevsky/Heavy-God-Nevsky-default.webm",
+      "idle": "../video/Events/six knight/Nevsky/Heavy God Nevsky/Heavy-God-Nevsky-idle.webm",
+      "atk": "../video/Events/six knight/Nevsky/Heavy God Nevsky/Heavy-God-Nevsky-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -128656,9 +128656,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60293/60293_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60293/60293_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60293/60293_atk.png"
+      "default": "../video/Events/six knight/Eru/Dual Blade Eru/Dual-Blade-Eru-default.webm",
+      "idle": "../video/Events/six knight/Eru/Dual Blade Eru/Dual-Blade-Eru-idle.webm",
+      "atk": "../video/Events/six knight/Eru/Dual Blade Eru/Dual-Blade-Eru-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -172323,9 +172323,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30295/30295_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30295/30295_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30295/30295_atk.png"
+      "default": "../video/Events/six knight/Aneil/Supreme Lawmaker Aneil/Supreme-Lawmaker-Aneil-default.webm",
+      "idle": "../video/Events/six knight/Aneil/Supreme Lawmaker Aneil/Supreme-Lawmaker-Aneil-idle.webm",
+      "atk": "../video/Events/six knight/Aneil/Supreme Lawmaker Aneil/Supreme-Lawmaker-Aneil-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -172526,9 +172526,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40295/40295_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40295/40295_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40295/40295_atk.png"
+      "default": "../video/Events/six knight/Lucana/Lightning Speed Lucana/Lightning-Speed-Lucana-default.webm",
+      "idle": "../video/Events/six knight/Lucana/Lightning Speed Lucana/Lightning-Speed-Lucana-idle.webm",
+      "atk": "../video/Events/six knight/Lucana/Lightning Speed Lucana/Lightning-Speed-Lucana-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -172729,9 +172729,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50325/50325_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50325/50325_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50325/50325_atk.png"
+      "default": "../video/Events/six knight/Nevsky/Sacred Armor Nevsky/Sacred-Armor-Nevsky-default.webm",
+      "idle": "../video/Events/six knight/Nevsky/Sacred Armor Nevsky/Sacred-Armor-Nevsky-idle.webm",
+      "atk": "../video/Events/six knight/Nevsky/Sacred Armor Nevsky/Sacred-Armor-Nevsky-atk.webm"
     },
     "effects": {
       "atk": "",
