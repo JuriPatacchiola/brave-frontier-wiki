@@ -128840,9 +128840,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60294/60294_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60294/60294_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60294/60294_atk.png"
+      "default": "../video/Events/six knight/Eru/Dual Blade God Eru/Dual-Blade-God-Eru-default.webm",
+      "idle": "../video/Events/six knight/Eru/Dual Blade God Eru/Dual-Blade-God-Eru-idle.webm",
+      "atk": "../video/Events/six knight/Eru/Dual Blade God Eru/Dual-Blade-God-Eru-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -172932,9 +172932,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60295/60295_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60295/60295_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60295/60295_atk.png"
+      "default": "../video/Events/six knight/Eru/Twin Dragons Eru/Twin-Dragons-Eru-default.webm",
+      "idle": "../video/Events/six knight/Eru/Twin Dragons Eru/Twin-Dragons-Eru-idle.webm",
+      "atk": "../video/Events/six knight/Eru/Twin Dragons Eru/Twin-Dragons-Eru-atk.webm"
     },
     "effects": {
       "atk": "",

@@ -510,6 +510,85 @@ body {
     font-size: calc(var(--scene-h, 400px) * 0.045);
 }
 
+/* scritte degli effetti: aumenti (azzurro), stati alterati (viola), indebolimenti (arancio), schivata */
+.dmg.is-buff {
+    color: #8fd6ff;
+    font-size: calc(var(--scene-h, 400px) * 0.036);
+}
+
+.dmg.is-ail,
+.dmg.is-poison {
+    color: #d68cff;
+    font-size: calc(var(--scene-h, 400px) * 0.04);
+}
+
+.dmg.is-debuff {
+    color: #ffb15c;
+    font-size: calc(var(--scene-h, 400px) * 0.038);
+}
+
+.dmg.is-miss {
+    color: #fff;
+    font-size: calc(var(--scene-h, 400px) * 0.042);
+}
+
+.dmg.is-crit {
+    font-size: calc(var(--scene-h, 400px) * 0.064);
+}
+
+.dmg.is-crit small {
+    color: #ff6a3d;
+}
+
+.dmg.is-taken small,
+.dmg.is-buff small {
+    color: #fff;
+    font-size: 0.42em;
+}
+
+/* cartellino sopra la testa: gli effetti attivi a turno (come le icone del gioco) */
+.fx-badge {
+    position: absolute;
+    left: 0;
+    transform: translate(-50%, -100%);
+    padding: 0.1em 0.45em;
+    border-radius: 0.5em;
+    font: 900 calc(var(--scene-h, 400px) * 0.026) / 1.2 'Arial Black', 'Segoe UI Black', Impact, sans-serif;
+    white-space: nowrap;
+    color: #fff;
+    -webkit-text-stroke: 0.06em #000;
+    paint-order: stroke fill;
+    background: rgba(20, 60, 140, 0.75);
+    border: 1px solid rgba(140, 200, 255, 0.8);
+    pointer-events: none;
+    z-index: 2;
+    animation: fxBadge 0.9s ease-out;
+}
+
+.fx-badge.is-down {
+    background: rgba(140, 70, 10, 0.78);
+    border-color: rgba(255, 180, 90, 0.85);
+}
+
+.fx-badge.is-ail {
+    background: rgba(90, 20, 120, 0.8);
+    border-color: rgba(214, 140, 255, 0.85);
+}
+
+.fx-badge[hidden] {
+    display: none;
+}
+
+@keyframes fxBadge {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /* danno preso da un'unità della squadra (rosso) e cura (verde, con il +) */
 .dmg.is-taken {
     color: #ff7a7a;
@@ -519,6 +598,10 @@ body {
 .dmg.is-heal {
     color: #7dff8a;
     font-size: calc(var(--scene-h, 400px) * 0.05);
+}
+
+.dmg.is-poison {
+    color: #d68cff;
 }
 
 .dmg.is-spark {
@@ -1209,6 +1292,24 @@ body {
     width: calc(169 * var(--u));
 }
 
+/* UBB (barra OVERDRIVE piena): scritta rossa */
+.bc-bblabel.lv-ubb {
+    --sx: 299;
+    --sy: 929;
+    width: calc(183 * var(--u));
+}
+
+.bc-bblabel.lv-ubb.is-full {
+    --sx: 297;
+    --sy: 944;
+    width: calc(187 * var(--u));
+}
+
+/* Maledizione: la barra BB non si riempie */
+.bcard.is-cursed .bc-bb {
+    filter: grayscale(1) brightness(0.7);
+}
+
 @media (hover: hover) {
     .bcard:not(.is-busy):not(.is-done):hover .bc-frame {
         filter: brightness(1.2);
@@ -1607,6 +1708,217 @@ body {
     padding: 0 12px 12px;
     line-height: 1.55;
     color: #ddd;
+}
+
+/* --- 7b. ABILITÀ ED EFFETTI IN BATTAGLIA --- */
+.te-stats em {
+    font-style: normal;
+    font-size: 0.85em;
+    margin-left: 3px;
+}
+
+.te-stats .is-up,
+.fx-stats .is-up {
+    color: #7dff8a;
+}
+
+.te-stats .is-down,
+.fx-stats .is-down {
+    color: #ff8a7a;
+}
+
+.fx-intro {
+    margin: 0 0 10px;
+    line-height: 1.5;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.fx-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.fx-unit {
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.fx-unit.is-ls {
+    border-color: rgba(212, 175, 55, 0.55);
+}
+
+.fx-unit summary {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    padding: 8px 10px;
+}
+
+.fx-unit summary:hover .fx-name,
+.fx-unit summary:focus-visible .fx-name {
+    color: #fff;
+}
+
+.fx-unit summary:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: -2px;
+}
+
+.fx-thumb {
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.fx-name {
+    font-weight: bold;
+    color: #e6c35a;
+}
+
+.fx-live {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    flex-basis: 100%;
+}
+
+.fx-live:empty {
+    display: none;
+}
+
+.fx-stats {
+    border-collapse: collapse;
+    margin: 0 10px 8px;
+    font-size: 0.85rem;
+}
+
+.fx-stats th,
+.fx-stats td {
+    padding: 2px 10px 2px 0;
+    text-align: right;
+}
+
+.fx-stats thead th {
+    color: #888;
+    font-weight: normal;
+}
+
+.fx-stats tbody th {
+    text-align: left;
+    color: #aab;
+}
+
+.fx-skill {
+    padding: 0 10px 10px;
+}
+
+.fx-skill-h {
+    color: #e6c35a;
+    margin-bottom: 4px;
+}
+
+.fx-skill-h b {
+    color: #d4af37;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+}
+
+.fx-desc {
+    margin: 0 0 6px;
+    color: #ccc;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.fx-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fx-list li {
+    border-left: 2px solid #3a3a3a;
+    padding-left: 8px;
+}
+
+.fx-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.fx-src {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.75rem;
+    color: #888;
+    line-height: 1.35;
+}
+
+.fx-chip {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    border: 1px solid;
+}
+
+.fx-chip i {
+    font-style: normal;
+    opacity: 0.8;
+}
+
+.fx-chip.is-on {
+    color: #b9ffc2;
+    background: rgba(76, 175, 80, 0.18);
+    border-color: rgba(76, 175, 80, 0.6);
+}
+
+.fx-chip.is-wait {
+    color: #ffe0a0;
+    background: rgba(240, 160, 32, 0.14);
+    border-color: rgba(240, 160, 32, 0.55);
+}
+
+.fx-chip.is-burst {
+    color: #bfe3ff;
+    background: rgba(91, 141, 239, 0.18);
+    border-color: rgba(91, 141, 239, 0.6);
+}
+
+.fx-chip.is-off {
+    color: #999;
+    background: rgba(120, 120, 120, 0.12);
+    border-color: rgba(120, 120, 120, 0.45);
+    text-decoration: line-through;
+    text-decoration-color: rgba(200, 200, 200, 0.4);
+}
+
+.fx-chip.is-info {
+    color: #bbb;
+    background: rgba(120, 120, 120, 0.12);
+    border-color: rgba(120, 120, 120, 0.45);
+}
+
+.fx-chip.is-ail {
+    color: #efc6ff;
+    background: rgba(156, 39, 176, 0.2);
+    border-color: rgba(214, 140, 255, 0.6);
 }
 
 /* --- 8. FINESTRA PER SCEGLIERE UN'UNITÀ --- */
