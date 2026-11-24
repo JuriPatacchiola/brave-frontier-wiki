@@ -1025,6 +1025,11 @@ body {
     --glow: 255, 205, 60;
 }
 
+/* UBB pronta: fulmini e luce rossi */
+.bcard[data-bolt="ubb"] .bc-glow {
+    --glow: 255, 50, 40;
+}
+
 .bcard.is-ready .bc-glow {
     opacity: 1;
     animation: bcGlow 1.6s ease-in-out infinite alternate;
@@ -1057,8 +1062,8 @@ body {
     display: block;
 }
 
-/* con la barra BB piena la vita diventa gialla (come nel gioco), con poca vita rossa */
-.bcard.is-ready .bc-fill.is-hp {
+/* la vita è verde solo se è piena (anche con la BB pronta): gialla appena si subisce un danno, rossa sotto il 25% */
+.bcard.is-mid .bc-fill.is-hp {
     --sx: 2;
     --sy: 560;
 }
@@ -1253,6 +1258,13 @@ body {
 .bc-fill.is-sbb {
     --sx: 362;
     --sy: 545;
+}
+
+/* UBB pronta (barra OVERDRIVE piena): la barra BB diventa rossa */
+.bcard.is-ubb .bc-fill.is-bb,
+.bcard.is-ubb .bc-fill.is-sbb {
+    --sx: 2;
+    --sy: 575;
 }
 
 /* scritta BRAVE BURST: chiara mentre la barra si riempie, piena quando la BB è pronta,

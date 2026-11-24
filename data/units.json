@@ -74768,8 +74768,8 @@
     },
     "animations": {
       "default": "../video/Base enemy/Lilin/Nyx/Nyx-default.webm",
-      "idle": "../video/Base enemy/Lilin/Nyx/Nyx-default.webm",
-      "atk": "../video/Base enemy/Lilin/Nyx/Nyx-default.webm"
+      "idle": "../video/Base enemy/Lilin/Nyx/Nyx-idle.webm",
+      "atk": "../video/Base enemy/Lilin/Nyx/Nyx-atk.webm"
     },
     "effects": {
       "atk": "",

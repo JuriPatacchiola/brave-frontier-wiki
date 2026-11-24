@@ -1225,6 +1225,17 @@ rule(/adds? (?:an? )?(.+?)\s*(?:effects?\s+)?to (?:own )?(bb\/sbb\/ubb|bb\/sbb|b
 
 rule(/(?:probable\s+|may\s+|chance\s+(?:of\s+)?)?normal attacks?\s+(?:may\s+|can\s+|will\s+)?(?:on|hits?|hitting|to|attacks?) all (?:foes|enemies)/i, (m, c) => ({ k: 'hitall', chance: /may|probab|chance/i.test(c) ? Math.round(FX_BASE.chance * fxWord(c)) : 100 }));
 
+/* attacchi scritti in altro modo: "22 Earth and Dark combo on all foes", "2 Water attacks on all enemies", "30 light and dark atk on all foes" */
+rule(/(?:(\d+)\s+(?:combo\s+)?)?((?:(?:incredibly |very |extremely )?(?:powerful|massive|mighty|strong)\s+)?(?:(?:fire|water|earth|thunder|light|dark)(?:,?\s*(?:and\s+)?)?)+\s*(?:elemental\s+)?)(?:combo|attacks|atk)\s+(?:on|to|against)\s+(all|a single|single|\d+ random|random|one|an?)?\s*(?:foes?|enemies|enemy|targets?)(?:\s*\(([^)]*)\))?/i, (m, c) => {
+    const words = m[2] || '';
+    const mode = /all/i.test(m[3] || '') ? 'all' : /random/i.test(m[3] || '') ? 'random' : 'single';
+    const fx = { k: 'attack', hits: m[1] ? +m[1] : 0, mode, els: fxElements(words), power: /massive/i.test(words) ? 'massive' : /powerful|mighty|strong/i.test(words) ? 'powerful' : '' };
+    const inner = m[4] || '';
+    if (/crit/i.test(inner)) fx.selfCrit = +((inner.match(/(\d+)%\s*crit/i) || [])[1] || Math.round(FX_BASE.crit * 1.5));
+    if (/relative to (?:remaining|current|own) hp/i.test(inner)) fx.hpRel = true;
+    return fx;
+});
+
 /* attacco della BB: "15 combo Fire attack on all foes (damage relative to remaining HP)" */
 rule(/(?:(\d+)\s*combo\s+)?((?:random\s+)?(?:(?:slightly |very |extremely )?(?:powerful|massive|mighty|strong|enormous|huge|great|weak|light|ultimate)\s+)?(?:random\s+)?(?:(?:fire|water|earth|thunder|light|dark|random|non-elemental|elemental)(?:,?\s*(?:and\s+|or\s+)?)?)*\s*(?:elemental\s+)?(?:power\s+)?(?:powerful\s+)?(?:attack|strike|blow|damage))\s+(?:on|to|against|at)\s+(all|a single|single|\d+ random|random|one|an?|all of the)?\s*(?:foes?|enemies|enemy|targets?|opponents?)(?:\s*\(([^)]*)\))?/i, (m, c) => {
     const words = m[2] || '';
@@ -2196,7 +2207,7 @@ function applyBurstEffects(i, a, kind) {
 function enemyHasAil(e) { return !!Object.keys(e.ails || {}).length; }
 
 function applyToEnemy(e, f) {
-    if (!e || e.dead) return;
+    if (!e || e.dead || e.ko) return;
     if (Math.random() * 100 >= (f.chance == null ? 100 : f.chance)) return;
     const turns = f.turns || 1;
     if (f.k === 'debuff') {
@@ -2295,7 +2306,8 @@ function updateCardGauge(i) {
     card.querySelector('.bc-fill-wrap.is-sbb').style.setProperty('--p', p2.toFixed(3));
     card.classList.toggle('is-ready', !!ready);
     card.classList.toggle('is-cursed', !!(a.ails && a.ails.curse));
-    card.dataset.bolt = ready === 'ubb' ? 'sbb' : ready || '';
+    card.classList.toggle('is-ubb', ready === 'ubb');
+    card.dataset.bolt = ready || '';
     if (ready) startBolts();
     const label = card.querySelector('.bc-bblabel');
     label.classList.toggle('lv-ubb', ready === 'ubb');
@@ -2582,10 +2594,7 @@ function attackPlan(i, a, kind) {
             if (f.k !== 'attack') return;
             plan.segs.push({ hits: f.hits || Math.max(1, num(bd.hits) || 1), mode: f.mode, els: f.els || [], power: f.power, hpRel: f.hpRel || mod.hpRel, hpLow: f.hpLow, selfCrit: f.selfCrit, defIgnore: f.defIgnore, dc });
         });
-        if (!plan.segs.length) {
-            const info = burstInfo(u, kind);
-            if (info.mode !== 'none') plan.segs.push({ hits: info.hits, mode: info.mode, els: [], dc: info.dc });
-        }
+        // nessun attacco scritto (solo cure, aumenti, barriere...): la BB non colpisce i nemici e non fa danni
         plan.enemyFx = list.filter(f => ENEMY_KINDS.includes(f.k) && !f.onAtk);
     }
     plan.hits = plan.segs.reduce((s, x) => s + x.hits, 0);
@@ -2616,7 +2625,7 @@ function enemyBaseStats(e) {
 function enemyHit(e, j, hits) {
     let a = actors[j];
     if (!a || a.dead) { j = pickUnit(); a = actors[j]; }
-    if (!a || e.dead) return j;
+    if (!a || e.dead || e.ko) return j;
     const act = activeFx(j);
     if (Math.random() * 100 < Math.min(CAP.evasion, fxSum(act, 'evasion'))) {
         floatOnUnit(j, 'MISS', 'is-miss');
@@ -2654,7 +2663,7 @@ function enemyHit(e, j, hits) {
         const ok = Math.random() * 100 < (f.chance == null ? 100 : f.chance);
         if (f.k === 'bbhit') fillGauge(j, Array.isArray(f.v) ? f.v.map(x => x / Math.max(1, hits)) : f.v / Math.max(1, hits));
         else if (f.k === 'hitheal' && ok) healUnit(j, dmg * f.v / 100);
-        else if (f.k === 'counter' && ok && dmg > 0 && !e.dead) {
+        else if (f.k === 'counter' && ok && dmg > 0 && !e.dead && !e.ko) {
             const back = Math.max(1, Math.round(dmg * f.v / 100));
             e.hp = Math.max(0, e.hp - back);
             showDamage(e, back, '', false);
@@ -2695,7 +2704,7 @@ function enemyStatusAttack(e, j) {
 }
 
 async function enemyAttack(e) {
-    if (e.dead || e.busy) return;
+    if (e.dead || e.ko || e.busy) return;
     if (e.ails.paralysis) { floatOnEnemy(e, ailName('paralysis'), 'is-ail'); return; }
     let ti = pickUnit();
     if (ti < 0) return;
@@ -2724,9 +2733,9 @@ async function enemyAttack(e) {
     const info = burstInfo(e.u, 'atk');
     for (let k = 0; k < info.hits; k++) {
         const f = info.hits === 1 ? (HIT_START + HIT_END) / 2 : HIT_START + (HIT_END - HIT_START) * k / (info.hits - 1);
-        setTimeout(() => { if (!e.dead) ti = enemyHit(e, ti, info.hits); }, f * dur * 1000);
+        setTimeout(() => { if (!e.dead && !e.ko) ti = enemyHit(e, ti, info.hits); }, f * dur * 1000);
     }
-    setTimeout(() => { if (!e.dead) enemyStatusAttack(e, ti); }, HIT_END * dur * 1000 + 50);
+    setTimeout(() => { if (!e.dead && !e.ko) enemyStatusAttack(e, ti); }, HIT_END * dur * 1000 + 50);
     await wait(dur * 1000);
     e.wrap.classList.remove('is-attacking');
     if (atk && atk.video) atk.el.pause();
@@ -2746,7 +2755,7 @@ async function enemyTurn() {
     $('bfScreen').classList.add('is-enemy-turn');
     // veleno e "DoT" sui nemici
     enemies.forEach(e => {
-        if (e.dead) return;
+        if (e.dead || e.ko) return;
         let d = 0;
         if (e.ails.poison) d += e.maxHp * ENEMY_POISON_PCT / 100;
         if (e.dot) d += e.maxHp * DOT_PCT / 100;
@@ -2757,7 +2766,7 @@ async function enemyTurn() {
         if (e.hp <= 0) defeatEnemy(e);
     });
     updateTargetInfo();
-    const list = enemies.filter(e => !e.dead);
+    const list = enemies.filter(e => !e.dead && !e.ko);
     const runs = list.map((e, k) => wait(k * ENEMY_TURN_GAP).then(() => enemyAttack(e)));
     await Promise.all(runs);
     phase = 'player';
@@ -3389,7 +3398,10 @@ const BATTLE_IMG_DIR = '../img/Battle img/';
 const OD_PER_HIT = 0.4;                   // % della barra OVERDRIVE per ogni colpo
 const ENEMY_HP_MULT = 10;                 // HP del nemico = HP (Lord) dell'unità x questo numero
 const ENEMY_MIN_HP = 10000;
-const WAVE_RESPAWN = 1500;                // millisecondi prima che tornino i nemici sconfitti
+const ENEMY_DEATH_TIME = 650;             // millisecondi: il nemico sconfitto sparisce (a fine turno, dopo tutti gli attacchi)
+const ENTER_DASH = 450;                   // millisecondi: i nemici che si muovono entrano in campo con uno scatto da sinistra
+const ENTER_TELEPORT = 550;               // millisecondi: gli altri compaiono con un lampo (teletrasporto)
+const ENTER_GAP = 150;                    // millisecondi tra un nemico e l'altro quando entrano
 const ENEMY_ATK_MULT = 1.5;               // forza dei nemici quando attaccano la squadra (ATK x questo numero)
 const ENEMY_TURN_GAP = 450;               // millisecondi tra l'attacco di un nemico e il successivo
 const HC_HEAL = 0.6;                      // cristallo di cura: cura REC dell'unità x questo numero
@@ -3703,6 +3715,7 @@ function makeEnemy(id, i, n) {
     e.hp = e.maxHp;
     e.def = st.def;
     e.dead = false;
+    e.ko = false;
     e.spot = enemySpot(i, n);
     $('sceneUnits').appendChild(e.wrap);
     return e;
@@ -3718,6 +3731,7 @@ function setEnemies(ids) {
         const e = makeEnemy(id, i, list.length);
         if (e) enemies.push(e);
     });
+    enemies.forEach(enemyEnter);
     targetIdx = -1;
     infoIdx = 0;
     team.enemies = enemies.map(e => e.id);
@@ -3750,7 +3764,8 @@ function showEnemyInfo(i) {
 function pickTarget(anyEnemy) {
     const t = enemies[targetIdx];
     if (!anyEnemy && t && !t.dead) return t;
-    const alive = enemies.filter(x => !x.dead);
+    let alive = enemies.filter(x => !x.dead && !x.ko);
+    if (!alive.length) alive = enemies.filter(x => !x.dead);
     return alive.length ? alive[Math.floor(Math.random() * alive.length)] : null;
 }
 
@@ -3799,23 +3814,59 @@ function enemyHitFlash(e) {
     w.classList.add('is-hit');
 }
 
+// HP a 0: il nemico RESTA in campo (si vedono tutti i colpi, le combo e i danni di tutti), sparisce a fine turno
 function defeatEnemy(e) {
-    if (e.dead) return;
-    e.dead = true;
-    e.wrap.classList.add('is-dead');
-    if (enemies[targetIdx] === e) targetIdx = -1;   // bersaglio sconfitto: il mirino sparisce
+    if (e.dead || e.ko) return;
+    e.ko = true;
+    e.hp = 0;
+    e.wrap.classList.add('is-ko');
+}
+
+// a fine turno: i nemici a 0% spariscono; se non ne resta nessuno arrivano nuovi nemici a caso
+async function resolveDeaths() {
+    const ko = enemies.filter(e => e.ko && !e.dead);
+    if (!ko.length) return false;
+    ko.forEach(e => {
+        e.dead = true;
+        e.wrap.classList.add('is-dead');
+        if (enemies[targetIdx] === e) targetIdx = -1;
+    });
     placeTargetMark();
-    if (enemies.every(x => x.dead)) {
-        // tutti sconfitti: dopo un attimo tornano (nuova ondata)
-        const wave = enemies;
-        setTimeout(() => {
-            if (enemies !== wave) return;
-            wave.forEach(x => { fxInit(x); x.hp = x.maxHp; x.dead = false; x.wrap.classList.remove('is-dead'); });
-            targetIdx = -1;
-            infoIdx = 0;
-            updateTargetInfo();
-            placeTargetMark();
-        }, WAVE_RESPAWN);
+    await wait(ENEMY_DEATH_TIME);
+    if (!enemies.every(x => x.dead)) {
+        const k = enemies.findIndex(x => !x.dead);
+        if (k >= 0) showEnemyInfo(k);
+        return false;
+    }
+    const n = Math.max(1, enemies.length);
+    setEnemies(Array.from({ length: n }, () => randomEnemyId()));
+    await wait(ENTER_GAP * n + Math.max(ENTER_DASH, ENTER_TELEPORT));
+    return true;
+}
+
+// i nemici entrano in campo: chi si muove fa lo scatto in avanti da sinistra, gli altri compaiono come con un teletrasporto
+function enemyEnter(e, k) {
+    if (!e.wrap.animate) return;
+    // si aspetta che l'animazione del nemico sia caricata, così l'entrata si vede tutta
+    e.wrap.style.opacity = '0';
+    Promise.race([e.idle.ready, wait(1500)]).then(() => {
+        if (e.removed) return;
+        e.wrap.style.opacity = '';
+        enemyEnterNow(e, k);
+    });
+}
+function enemyEnterNow(e, k) {
+    const W = $('teamScene').clientWidth;
+    const delay = k * ENTER_GAP;
+    if (unitMoveType(e.u) === 1) {
+        const from = `translate(${(-(e.spot.x + 0.35) * W).toFixed(1)}px, 0px)`;
+        e.wrap.animate([{ transform: from }, { transform: 'translate(0px, 0px)' }], { duration: ENTER_DASH, delay, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)', fill: 'backwards' });
+    } else {
+        e.wrap.animate([
+            { opacity: 0, filter: 'brightness(4) saturate(0)', transform: 'scale(1, 0.1)' },
+            { opacity: 1, filter: 'brightness(2.5) saturate(0.4)', transform: 'scale(1, 1.15)', offset: 0.45 },
+            { opacity: 1, filter: 'brightness(1) saturate(1)', transform: 'scale(1, 1)' }
+        ], { duration: ENTER_TELEPORT, delay, easing: 'ease-out', fill: 'backwards' });
     }
 }
 
@@ -4032,7 +4083,7 @@ async function attack(i, burst, again) {
         setTimeout(() => {
             if (actors[i] !== a || a.dead) return;
             applyBurstEffects(i, a, kind);
-            if (!hits) enemies.filter(e => !e.dead).forEach(e => plan.enemyFx.forEach(f => applyToEnemy(e, f)));
+            if (!hits) enemies.filter(e => !e.dead && !e.ko).forEach(e => plan.enemyFx.forEach(f => applyToEnemy(e, f)));
         }, dur * 500);
     }
     for (let k = 0; k < hits; k++) {
@@ -4093,8 +4144,12 @@ function checkTurnEnd() {
         if (phase !== 'player' || actors.some(a => a && a.busy)) return;
         phase = 'end';
         await endOfPlayerTurn();
+        const newWave = await resolveDeaths();
         phase = 'player';
-        if (enemies.some(e => !e.dead)) await enemyTurn();
+        if (!newWave && enemies.some(e => !e.dead && !e.ko)) {
+            await enemyTurn();
+            await resolveDeaths();
+        }
         await wait(250);
         newTurn();
     }, TURN_PAUSE);
@@ -4160,7 +4215,8 @@ function updateCardHp(i) {
     const p = Math.max(0, a.hp / a.maxHp);
     card.querySelector('.bc-hpnum').textContent = `${Math.round(a.hp)}/${a.maxHp}`;
     card.querySelector('.bc-fill-wrap.is-hpbar').style.setProperty('--p', p.toFixed(3));
-    card.classList.toggle('is-low', p > 0 && p < 0.3);
+    card.classList.toggle('is-mid', p > 0 && a.hp < a.maxHp);
+    card.classList.toggle('is-low', p > 0 && p < 0.25);
 }
 
 function cardOf(i) {
@@ -4172,7 +4228,8 @@ function cardOf(i) {
    gialla chiara per la SBB. Sono leggeri e stanno dietro a tutto: immagine, cornice, nome e barre. */
 const BOLT_COLORS = {
     bb: { glow: 'rgba(110, 160, 255, 0.35)', core: 'rgba(200, 225, 255, 0.4)' },
-    sbb: { glow: 'rgba(255, 220, 90, 0.32)', core: 'rgba(255, 245, 190, 0.38)' }
+    sbb: { glow: 'rgba(255, 220, 90, 0.32)', core: 'rgba(255, 245, 190, 0.38)' },
+    ubb: { glow: 'rgba(255, 60, 50, 0.36)', core: 'rgba(255, 190, 180, 0.4)' }
 };
 const BOLT_FPS = 9;
 let boltRaf = 0, boltLast = 0;
