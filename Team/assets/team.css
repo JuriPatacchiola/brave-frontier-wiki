@@ -546,33 +546,20 @@ body {
     font-size: 0.42em;
 }
 
-/* cartellino sopra la testa: gli effetti attivi a turno (come le icone del gioco) */
+/* icona sopra la testa: un effetto alla volta (cambia ogni secondo), come nel gioco */
 .fx-badge {
     position: absolute;
     left: 0;
     transform: translate(-50%, -100%);
-    padding: 0.1em 0.45em;
-    border-radius: 0.5em;
-    font: 900 calc(var(--scene-h, 400px) * 0.026) / 1.2 'Arial Black', 'Segoe UI Black', Impact, sans-serif;
-    white-space: nowrap;
-    color: #fff;
-    -webkit-text-stroke: 0.06em #000;
-    paint-order: stroke fill;
-    background: rgba(20, 60, 140, 0.75);
-    border: 1px solid rgba(140, 200, 255, 0.8);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
     pointer-events: none;
     z-index: 2;
-    animation: fxBadge 0.9s ease-out;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
 }
 
-.fx-badge.is-down {
-    background: rgba(140, 70, 10, 0.78);
-    border-color: rgba(255, 180, 90, 0.85);
-}
-
-.fx-badge.is-ail {
-    background: rgba(90, 20, 120, 0.8);
-    border-color: rgba(214, 140, 255, 0.85);
+.fx-badge.is-pop {
+    animation: fxBadge 0.25s ease-out;
 }
 
 .fx-badge[hidden] {
@@ -581,11 +568,13 @@ body {
 
 @keyframes fxBadge {
     from {
-        opacity: 0.2;
+        opacity: 0.3;
+        transform: translate(-50%, -100%) scale(0.8);
     }
 
     to {
         opacity: 1;
+        transform: translate(-50%, -100%) scale(1);
     }
 }
 

@@ -1945,51 +1945,157 @@ function fxShort(f) {
     }
 }
 
-/* ---------- cartellino sopra la testa: mostra a turno gli effetti attivi (come le icone del gioco) ---------- */
-let badgeTick = 0;
+/* ---------- icone sopra la testa (come nel gioco): una alla volta, cambiano ogni secondo ----------
+   Si vedono solo gli effetti delle BB / SBB / UBB (non quelli fissi dell'abilità leader e dell'extra skill),
+   gli stati alterati e gli indebolimenti. Le icone sono in img/Battle img:
+   battle_buff_icon.png (a), battle_buff_icon_sg.png (s), battle_bad_icon.png (b) — quadretti da 32x32 */
+const ICON_SHEETS = {
+    a: { src: 'battle_buff_icon.png', cols: 15, rows: 13 },
+    s: { src: 'battle_buff_icon_sg.png', cols: 15, rows: 6 },
+    b: { src: 'battle_bad_icon.png', cols: 6, rows: 1 }
+};
+const ICON_TIME = 1000;   // millisecondi per ogni icona
+const EL_ORDER = ['fire', 'water', 'earth', 'thunder', 'light', 'dark'];
+const elIdx = e => Math.max(0, EL_ORDER.indexOf(e));
+const STAT_UP = { atk: ['a', 0, 0], def: ['a', 2, 0], rec: ['a', 4, 0], hp: ['s', 6, 3] };
+const STAT_DOWN = { atk: ['a', 1, 0], def: ['a', 3, 0], rec: ['a', 5, 0], hp: ['s', 8, 2] };
+// ATK/DEF/REC su delle unità di un elemento: fuoco riga 0 (12-14), poi acqua, terra, tuono, luce, buio nella riga 1
+function elStatUp(el, stat) {
+    const k = { atk: 0, def: 1, rec: 2 }[stat];
+    if (k == null) return STAT_UP[stat];
+    const n = 12 + elIdx(el) * 3 + k;
+    return ['a', n % 15, Math.floor(n / 15)];
+}
+const AIL_ORDER = ['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis'];
+const ailIcon = x => ['b', Math.max(0, AIL_ORDER.indexOf(x)), 0];
+const EL_SPARK = { fire: ['s', 11, 1], water: ['s', 12, 1], dark: ['s', 13, 1], earth: ['s', 14, 1], thunder: ['s', 0, 2], light: ['s', 1, 2] };
+const EL_CRIT = { fire: ['s', 2, 2], water: ['s', 3, 2], dark: ['s', 4, 2], earth: ['s', 5, 2], thunder: ['s', 6, 2], light: ['s', 7, 2] };
+const EL_DMG = { fire: ['a', 13, 6], water: ['a', 14, 6], earth: ['a', 0, 7], thunder: ['a', 1, 7], light: ['a', 2, 7], dark: ['a', 3, 7] };
+
+function fxIcons(f, owner) {
+    const els = f.els && f.els.length ? f.els : null;
+    const one = (els && els.length === 1) ? els[0] : null;
+    switch (f.k) {
+        case 'stat': return f.stats.map(s => (one ? elStatUp(one, s) : STAT_UP[s]));
+        case 'selfdown': return f.stats.map(s => STAT_DOWN[s]);
+        case 'stack': return f.stats.map(s => ['a', { atk: 12, def: 13, rec: 14 }[s] || 12, 9]);
+        case 'relstat': return f.stats.map(s => ['a', { atk: 4, def: 5, rec: 6 }[s] || 4, 9]);
+        case 'hprelstat': return f.stats.map(s => ['a', { atk: 4, def: 5, rec: 6 }[s] || 4, 10]);
+        case 'crit': return [one ? EL_CRIT[one] : ['a', 6, 0]];
+        case 'critdmg': return [['a', 12, 6]];
+        case 'spark': return [one ? EL_SPARK[one] : ['a', 14, 4]];
+        case 'sparkcrit': return [['a', 0, 9]];
+        case 'bbatk': return [['a', 6, 6]];
+        case 'elem': {
+            const e = one || (owner ? elementKey(owner.u) : 'fire');
+            return [EL_DMG[e] || EL_DMG.fire];
+        }
+        case 'afflicted': case 'dmgup': case 'dmgvs': case 'endatk': return [['a', 5, 4]];
+        case 'bcdrop': case 'bceff': return [['a', 9, 0]];
+        case 'hcdrop': case 'hceff': return [['a', 8, 0]];
+        case 'sparkbc': return [['a', 1, 5]];
+        case 'itemdrop': case 'zel': case 'karma': return [['a', 10, 0]];
+        case 'bbfill': return [['a', 11, 6]];
+        case 'bbturn': case 'bbonhit': return [['a', 0, 4]];
+        case 'bbhit': return [['a', 1, 4]];
+        case 'bbspark': case 'bbcrit': return [['a', 7, 8]];
+        case 'bbcost': return [['s', 2, 4]];
+        case 'odfill': return [['a', 8, 9]];
+        case 'odturn': return [['a', 14, 10]];
+        case 'regen': case 'hpturn': return [['a', 7, 0]];
+        case 'hitheal': return [['a', 9, 9]];
+        case 'drain': return [['a', 10, 9]];
+        case 'sparkheal': return [['a', 11, 9]];
+        case 'dr': case 'drchance': case 'dr1': return [['a', 13, 4]];
+        case 'dr2': return [['a', 0, 11]];
+        case 'drel': return f.weakOnly || !f.els || f.els.length > 2 ? [['a', 8, 10]] : f.els.map(e => ['a', 3 + elIdx(e), 3]);
+        case 'critred': case 'nocrit': return [['a', 7, 10]];
+        case 'noelem': return [['a', 8, 10]];
+        case 'sparkred': return [['a', 9, 10]];
+        case 'guard': return [['a', 8, 8]];
+        case 'immune': return (f.ails && f.ails.length ? f.ails : ['poison']).map(x => ['a', 9 + Math.max(0, AIL_ORDER.indexOf(x)), 3]);
+        case 'nodebuff': return (f.stats && f.stats.length ? f.stats : ['atk', 'def', 'rec']).filter(s => s !== 'hp').map(s => ['a', { atk: 1, def: 2, rec: 3 }[s], 9]);
+        case 'evasion': return [['s', 1, 0]];
+        case 'ko': return [f.v >= 100 ? ['a', 11, 0] : ['a', 10, 7]];
+        case 'counter': return [['a', 7, 6]];
+        case 'counterail': return f.ails.filter(x => x !== 'random').map(x => ['a', 4 + Math.max(0, AIL_ORDER.indexOf(x)), 7]);
+        case 'counterdebuff': return f.stats.filter(s => s !== 'hp').map(s => ['a', { atk: 2, def: 3, rec: 4 }[s], 11]);
+        case 'defign': return [['a', 4, 4]];
+        case 'addel': return f.els.map(e => ['a', 7 + elIdx(e), 4]);
+        case 'hits': return [['a', 6, 4]];
+        case 'hitall': return [['a', 10, 10]];
+        case 'double': return [['s', 9, 1]];
+        case 'taunt': return [['a', 1, 11]];
+        case 'stealth': return [['s', 13, 0]];
+        case 'debuff': return f.onAtk ? f.stats.filter(s => s !== 'hp').map(s => ['a', { atk: 8, def: 9, rec: 10 }[s], 6]) : [];
+        case 'inflict': {
+            if (!f.onAtk) return [];
+            const list = f.ails.includes('random') ? AIL_ORDER : f.ails;
+            return list.map(x => { const n = 12 + Math.max(0, AIL_ORDER.indexOf(x)); return ['a', n % 15, n < 15 ? 5 : 6]; });
+        }
+        default: return [];
+    }
+}
+
 function badgeItems(x, isEnemy) {
     const out = [];
+    const seen = new Set();
+    const add = ic => { if (!ic) return; const k = ic.join(','); if (!seen.has(k)) { seen.add(k); out.push(ic); } };
     if (isEnemy) {
-        (x.debuffs || []).forEach(d => out.push({ t: d.stat.toUpperCase() + '↓', c: 'is-down' }));
-        Object.keys(x.ails || {}).forEach(k => out.push({ t: AIL_SHORT[k] || k, c: 'is-ail' }));
-        Object.keys(x.vuln || {}).forEach(k => out.push({ t: (k === 'spark' ? 'SPARK' : k === 'crit' ? 'CRT' : 'ELEM') + ' VULN', c: 'is-down' }));
-        if (x.dot) out.push({ t: 'DOT', c: 'is-ail' });
+        (x.debuffs || []).forEach(d => add(STAT_DOWN[d.stat]));
+        Object.keys(x.ails || {}).forEach(k => add(ailIcon(k)));
+        if (x.vuln) {
+            if (x.vuln.spark) add(['a', 13, 7]);
+            if (x.vuln.crit) add(['a', 5, 11]);
+            if (x.vuln.elem) add(['a', 6, 11]);
+        }
+        if (x.dot) add(['a', 5, 6]);
         return out;
     }
-    const seen = new Set();
-    (x.buffs || []).forEach(b => {
-        const s = fxShort(b.f);
-        if (s && !seen.has(s)) { seen.add(s); out.push({ t: s, c: 'is-up' }); }
-    });
-    if (x.shield && x.shield.hp > 0) out.push({ t: 'BARRIER', c: 'is-up' });
-    (x.debuffs || []).forEach(d => out.push({ t: d.stat.toUpperCase() + '↓', c: 'is-down' }));
-    Object.keys(x.ails || {}).forEach(k => out.push({ t: AIL_SHORT[k] || k, c: 'is-ail' }));
+    // solo gli effetti delle BB / SBB / UBB (quelli dell'abilità leader e dell'extra skill non si vedono)
+    (x.buffs || []).forEach(bf => fxIcons(bf.f, x).forEach(add));
+    if (x.shield && x.shield.hp > 0) {
+        add(x.shield.els && x.shield.els.length ? ['a', elIdx(x.shield.els[0]), 8] : ['a', 7, 11]);
+    }
+    (x.debuffs || []).forEach(d => add(STAT_DOWN[d.stat]));
+    Object.keys(x.ails || {}).forEach(k => add(ailIcon(k)));
     return out;
 }
+
+let badgeTick = 0;
 function updateBadges() {
+    // la prima volta si caricano le immagini delle icone (così non lampeggiano)
+    if (!badgeTick) Object.values(ICON_SHEETS).forEach(sh => { const im = new Image(); im.src = BATTLE_IMG_DIR + sh.src; });
     badgeTick++;
-    const put = (x, isEnemy, spot) => {
+    const H = $('teamScene').clientHeight;
+    const size = Math.max(14, Math.round(H * 0.07));
+    const put = x => {
         if (!x || !x.wrap) return;
         let el = x.wrap.querySelector('.fx-badge');
-        const items = x.dead ? [] : badgeItems(x, isEnemy);
+        const items = x.dead ? [] : badgeItems(x, x.mirror);
         if (!items.length) { if (el) el.hidden = true; return; }
         if (!el) {
             el = document.createElement('span');
-            el.className = 'fx-badge notranslate';
+            el.className = 'fx-badge';
             x.wrap.appendChild(el);
         }
-        const it = items[badgeTick % items.length];
+        const [sheet, c, r] = items[badgeTick % items.length];
+        const sh = ICON_SHEETS[sheet];
         el.hidden = false;
-        el.textContent = it.t;
-        el.className = 'fx-badge notranslate ' + it.c;
-        const H = $('teamScene').clientHeight;
+        el.style.width = el.style.height = `${size}px`;
+        el.style.backgroundImage = `url("${BATTLE_IMG_DIR}${sh.src}")`;
+        el.style.backgroundSize = `${sh.cols * size}px ${sh.rows * size}px`;
+        el.style.backgroundPosition = `${-c * size}px ${-r * size}px`;
+        el.classList.remove('is-pop');
+        void el.offsetWidth;
+        el.classList.add('is-pop');
         const up = x.idle && x.idle.m ? (x.idle.icon ? H * 0.16 : x.idle.m.up * actorScale(x) * x.idle.scale) : H * 0.15;
-        el.style.top = `${(-up - H * 0.02).toFixed(1)}px`;
+        el.style.top = `${(-up - H * 0.01).toFixed(1)}px`;
     };
-    actors.forEach(a => put(a, false));
-    enemies.forEach(e => put(e, true));
+    actors.forEach(put);
+    enemies.forEach(put);
 }
-setInterval(updateBadges, 900);
+setInterval(updateBadges, ICON_TIME);
 
 /* ---------- applicare gli effetti di una BB / SBB / UBB ---------- */
 const BUFF_KINDS = ['stat', 'stack', 'relstat', 'hprelstat', 'crit', 'critdmg', 'spark', 'sparkcrit', 'bbatk', 'elem', 'afflicted', 'dmgup', 'dmgvs', 'bcdrop', 'hcdrop', 'sparkbc', 'bceff', 'hceff', 'itemdrop', 'zel', 'karma', 'exp', 'bbfill', 'odfill', 'bbcost', 'bbturn', 'bbhit', 'bbspark', 'bbcrit', 'bbonhit', 'odturn', 'regen', 'hpturn', 'hitheal', 'drain', 'sparkheal', 'dr', 'dr2', 'drel', 'drchance', 'dr1', 'critred', 'sparkred', 'nocrit', 'noelem', 'guard', 'dotred', 'immune', 'nodebuff', 'nodefign', 'evasion', 'ko', 'counter', 'counterail', 'counterdebuff', 'defign', 'addel', 'hits', 'hitall', 'double', 'taunt', 'stealth', 'endatk', 'selfdown'];
@@ -2073,7 +2179,7 @@ function applyBurstEffects(i, a, kind) {
             targets.forEach(j => {
                 const x = actors[j];
                 const hp = f.rec ? Math.round(rec * f.rec / 100) : f.v;
-                x.shield = { hp, max: hp };
+                x.shield = { hp, max: hp, els: f.els || [] };
                 note(j, 'BARRIER');
             });
         } else if (f.k === 'selfdown') giveBuff(i, f, kind, i);
