@@ -349961,9 +349961,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820134/820134_default.png",
-      "idle": "../video/Tridon/Tridon/Tridon-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820134/820134_atk.png"
+      "default": "../video/Greek/Tridon/Tridon/Tridon-default.webm",
+      "idle": "../video/Greek/Tridon/Tridon/Tridon-idle.webm",
+      "atk": "../video/Greek/Tridon/Tridon/Tridon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -351352,9 +351352,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830146/830146_default.png",
-      "idle": "../video/Andaria/Fatalshot Andaria/Fatalshot-Andaria-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830146/830146_atk.png"
+      "default": "../video/Greek/Andaria/Fatalshot Andaria/Fatalshot-Andaria-default.webm",
+      "idle": "../video/Greek/Andaria/Fatalshot Andaria/Fatalshot-Andaria-idle.webm",
+      "atk": "../video/Greek/Andaria/Fatalshot Andaria/Fatalshot-Andaria-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -366804,9 +366804,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830147/830147_default.png",
-      "idle": "../video/Andaria/Ruinous Andaria/Ruinous-Andaria-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830147/830147_atk.png"
+      "default": "../video/Greek/Andaria/Ruinous Andaria/Ruinous-Andaria-default.webm",
+      "idle": "../video/Greek/Andaria/Ruinous Andaria/Ruinous-Andaria-idle.webm",
+      "atk": "../video/Greek/Andaria/Ruinous Andaria/Ruinous-Andaria-atk.webm"
     },
     "effects": {
       "atk": "",
