@@ -350922,9 +350922,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830134/830134_default.png",
-      "idle": "../video/Andaria/Andaria/Andaria-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830134/830134_atk.png"
+      "default": "../video/Greek/Andaria/Andaria/Andaria-default.webm",
+      "idle": "../video/Greek/Andaria/Andaria/Andaria-idle.webm",
+      "atk": "../video/Greek/Andaria/Andaria/Andaria-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -351128,9 +351128,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830135/830135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830135/830135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/830135/830135_atk.png"
+      "default": "../video/Greek/Andaria/Swiftshot Andaria/Swiftshot-Andaria-default.webm",
+      "idle": "../video/Greek/Andaria/Swiftshot Andaria/Swiftshot-Andaria-idle.webm",
+      "atk": "../video/Greek/Andaria/Swiftshot Andaria/Swiftshot-Andaria-atk.webm"
     },
     "effects": {
       "atk": "",
