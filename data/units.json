@@ -129024,9 +129024,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10493/10493_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10493/10493_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10493/10493_atk.png"
+      "default": "../video/Summon/4 star start/Orwen/Emperor Orwen/Emperor-Orwen-default.webm",
+      "idle": "../video/Summon/4 star start/Orwen/Emperor Orwen/Emperor-Orwen-idle.webm",
+      "atk": "../video/Summon/4 star start/Orwen/Emperor Orwen/Emperor-Orwen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -129208,9 +129208,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10494/10494_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10494/10494_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10494/10494_atk.png"
+      "default": "../video/Summon/4 star start/Orwen/Divine Emperor Orwen/Divine-Emperor-Orwen-default.webm",
+      "idle": "../video/Summon/4 star start/Orwen/Divine Emperor Orwen/Divine-Emperor-Orwen-idle.webm",
+      "atk": "../video/Summon/4 star start/Orwen/Divine Emperor Orwen/Divine-Emperor-Orwen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -129410,9 +129410,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10495/10495_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10495/10495_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10495/10495_atk.png"
+      "default": "../video/Summon/4 star start/Orwen/God Emperor Orwen/God-Emperor-Orwen-default.webm",
+      "idle": "../video/Summon/4 star start/Orwen/God Emperor Orwen/God-Emperor-Orwen-idle.webm",
+      "atk": "../video/Summon/4 star start/Orwen/God Emperor Orwen/God-Emperor-Orwen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -129595,9 +129595,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20473/20473_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20473/20473_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20473/20473_atk.png"
+      "default": "../video/Summon/4 star start/Arius/Prince Arius/Prince-Arius-default.webm",
+      "idle": "../video/Summon/4 star start/Arius/Prince Arius/Prince-Arius-idle.webm",
+      "atk": "../video/Summon/4 star start/Arius/Prince Arius/Prince-Arius-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -129779,9 +129779,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20474/20474_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20474/20474_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20474/20474_atk.png"
+      "default": "../video/Summon/4 star start/Arius/Divine Prince Arius/Divine-Prince-Arius-default.webm",
+      "idle": "../video/Summon/4 star start/Arius/Divine Prince Arius/Divine-Prince-Arius-idle.webm",
+      "atk": "../video/Summon/4 star start/Arius/Divine Prince Arius/Divine-Prince-Arius-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -129981,9 +129981,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20475/20475_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20475/20475_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20475/20475_atk.png"
+      "default": "../video/Summon/4 star start/Arius/Ice God Arius/Ice-God-Arius-default.webm",
+      "idle": "../video/Summon/4 star start/Arius/Ice God Arius/Ice-God-Arius-idle.webm",
+      "atk": "../video/Summon/4 star start/Arius/Ice God Arius/Ice-God-Arius-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -130166,9 +130166,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30463/30463_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30463/30463_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30463/30463_atk.png"
+      "default": "../video/Summon/4 star start/Faris/Flora Princess Faris/Flora-Princess-Faris-default.webm",
+      "idle": "../video/Summon/4 star start/Faris/Flora Princess Faris/Flora-Princess-Faris-idle.webm",
+      "atk": "../video/Summon/4 star start/Faris/Flora Princess Faris/Flora-Princess-Faris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -130350,9 +130350,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30464/30464_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30464/30464_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30464/30464_atk.png"
+      "default": "../video/Summon/4 star start/Faris/Flora Queen Faris/Flora-Queen-Faris-default.webm",
+      "idle": "../video/Summon/4 star start/Faris/Flora Queen Faris/Flora-Queen-Faris-idle.webm",
+      "atk": "../video/Summon/4 star start/Faris/Flora Queen Faris/Flora-Queen-Faris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -130552,9 +130552,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30465/30465_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30465/30465_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30465/30465_atk.png"
+      "default": "../video/Summon/4 star start/Faris/Flora Goddess Faris/Flora-Goddess-Faris-default.webm",
+      "idle": "../video/Summon/4 star start/Faris/Flora Goddess Faris/Flora-Goddess-Faris-idle.webm",
+      "atk": "../video/Summon/4 star start/Faris/Flora Goddess Faris/Flora-Goddess-Faris-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -130737,9 +130737,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40463/40463_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40463/40463_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40463/40463_atk.png"
+      "default": "../video/Summon/4 star start/Garnan/Lead Engineer Garnan/Lead-Engineer-Garnan-default.webm",
+      "idle": "../video/Summon/4 star start/Garnan/Lead Engineer Garnan/Lead-Engineer-Garnan-idle.webm",
+      "atk": "../video/Summon/4 star start/Garnan/Lead Engineer Garnan/Lead-Engineer-Garnan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -130921,9 +130921,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40464/40464_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40464/40464_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40464/40464_atk.png"
+      "default": "../video/Summon/4 star start/Garnan/Head Engineer Garnan/Head-Engineer-Garnan-default.webm",
+      "idle": "../video/Summon/4 star start/Garnan/Head Engineer Garnan/Head-Engineer-Garnan-idle.webm",
+      "atk": "../video/Summon/4 star start/Garnan/Head Engineer Garnan/Head-Engineer-Garnan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -131123,9 +131123,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40465/40465_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40465/40465_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40465/40465_atk.png"
+      "default": "../video/Summon/4 star start/Garnan/God Engineer Garnan/God-Engineer-Garnan-default.webm",
+      "idle": "../video/Summon/4 star start/Garnan/God Engineer Garnan/God-Engineer-Garnan-idle.webm",
+      "atk": "../video/Summon/4 star start/Garnan/God Engineer Garnan/God-Engineer-Garnan-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -131308,9 +131308,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50503/50503_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50503/50503_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50503/50503_atk.png"
+      "default": "../video/Summon/4 star start/Hogar/Brave Legend Hogar/Brave-Legend-Hogar-default.webm",
+      "idle": "../video/Summon/4 star start/Hogar/Brave Legend Hogar/Brave-Legend-Hogar-idle.webm",
+      "atk": "../video/Summon/4 star start/Hogar/Brave Legend Hogar/Brave-Legend-Hogar-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -131492,9 +131492,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50504/50504_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50504/50504_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50504/50504_atk.png"
+      "default": "../video/Summon/4 star start/Hogar/Brave King Hogar/Brave-King-Hogar-default.webm",
+      "idle": "../video/Summon/4 star start/Hogar/Brave King Hogar/Brave-King-Hogar-idle.webm",
+      "atk": "../video/Summon/4 star start/Hogar/Brave King Hogar/Brave-King-Hogar-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -131694,9 +131694,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50505/50505_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50505/50505_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50505/50505_atk.png"
+      "default": "../video/Summon/4 star start/Hogar/Brave God Hogar/Brave-God-Hogar-default.webm",
+      "idle": "../video/Summon/4 star start/Hogar/Brave God Hogar/Brave-God-Hogar-idle.webm",
+      "atk": "../video/Summon/4 star start/Hogar/Brave God Hogar/Brave-God-Hogar-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -131879,9 +131879,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60523/60523_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60523/60523_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60523/60523_atk.png"
+      "default": "../video/Summon/4 star start/Elza/Inferno Elza/Inferno-Elza-default.webm",
+      "idle": "../video/Summon/4 star start/Elza/Inferno Elza/Inferno-Elza-idle.webm",
+      "atk": "../video/Summon/4 star start/Elza/Inferno Elza/Inferno-Elza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -132112,9 +132112,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60524/60524_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60524/60524_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60524/60524_atk.png"
+      "default": "../video/Summon/4 star start/Elza/Inferno Queen Elza/Inferno-Queen-Elza-default.webm",
+      "idle": "../video/Summon/4 star start/Elza/Inferno Queen Elza/Inferno-Queen-Elza-idle.webm",
+      "atk": "../video/Summon/4 star start/Elza/Inferno Queen Elza/Inferno-Queen-Elza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -132363,9 +132363,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60525/60525_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60525/60525_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60525/60525_atk.png"
+      "default": "../video/Summon/4 star start/Elza/Inferno Goddess Elza/Inferno-Goddess-Elza-default.webm",
+      "idle": "../video/Summon/4 star start/Elza/Inferno Goddess Elza/Inferno-Goddess-Elza-idle.webm",
+      "atk": "../video/Summon/4 star start/Elza/Inferno Goddess Elza/Inferno-Goddess-Elza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -132597,9 +132597,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10483/10483_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10483/10483_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10483/10483_atk.png"
+      "default": "../video/Collabs/Dancer/Barbara/Barbara-default.webm",
+      "idle": "../video/Collabs/Dancer/Barbara/Barbara-idle.webm",
+      "atk": "../video/Collabs/Dancer/Barbara/Barbara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -132745,9 +132745,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10484/10484_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10484/10484_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10484/10484_atk.png"
+      "default": "../video/Collabs/Dancer/Barbara (5)/Barbara-default.webm",
+      "idle": "../video/Collabs/Dancer/Barbara (5)/Barbara-idle.webm",
+      "atk": "../video/Collabs/Dancer/Barbara (5)/Barbara-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -234039,9 +234039,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60526/60526_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60526/60526_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60526/60526_atk.png"
+      "default": "../video/Summon/4 star start/Elza/Marzanna Reaper Elza/Marzanna-Reaper-Elza-default.webm",
+      "idle": "../video/Summon/4 star start/Elza/Marzanna Reaper Elza/Marzanna-Reaper-Elza-idle.webm",
+      "atk": "../video/Summon/4 star start/Elza/Marzanna Reaper Elza/Marzanna-Reaper-Elza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -273086,9 +273086,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60527/60527_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60527/60527_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60527/60527_atk.png"
+      "default": "../video/Summon/4 star start/Elza/Graceful Princess Elza/Graceful-Princess-Elza-default.webm",
+      "idle": "../video/Summon/4 star start/Elza/Graceful Princess Elza/Graceful-Princess-Elza-idle.webm",
+      "atk": "../video/Summon/4 star start/Elza/Graceful Princess Elza/Graceful-Princess-Elza-atk.webm"
     },
     "effects": {
       "atk": "",
