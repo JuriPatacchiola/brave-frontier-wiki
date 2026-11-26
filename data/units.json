@@ -132893,9 +132893,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60543/60543_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60543/60543_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60543/60543_atk.png"
+      "default": "../video/God Boss/Zurg/Disciple Zurg/Disciple-Zurg-default.webm",
+      "idle": "../video/God Boss/Zurg/Disciple Zurg/Disciple-Zurg-idle.webm",
+      "atk": "../video/God Boss/Zurg/Disciple Zurg/Disciple-Zurg-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133055,9 +133055,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60544/60544_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60544/60544_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60544/60544_atk.png"
+      "default": "../video/God Boss/Zurg/God of Decay Zurg/God-of-Decay-Zurg-default.webm",
+      "idle": "../video/God Boss/Zurg/God of Decay Zurg/God-of-Decay-Zurg-idle.webm",
+      "atk": "../video/God Boss/Zurg/God of Decay Zurg/God-of-Decay-Zurg-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133217,9 +133217,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10522/10522_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10522/10522_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10522/10522_atk.png"
+      "default": "../video/Seal material and fusion material/Lawson/Lawson Frog/Lawson-Frog-default.webm",
+      "idle": "../video/Seal material and fusion material/Lawson/Lawson Frog/Lawson-Frog-idle.webm",
+      "atk": "../video/Seal material and fusion material/Lawson/Lawson Frog/Lawson-Frog-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133358,9 +133358,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50553/50553_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50553/50553_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50553/50553_atk.png"
+      "default": "../video/Seal material and fusion material/Lawson/Lawson Jewel God/Lawson-Jewel-God-default.webm",
+      "idle": "../video/Seal material and fusion material/Lawson/Lawson Jewel God/Lawson-Jewel-God-idle.webm",
+      "atk": "../video/Seal material and fusion material/Lawson/Lawson Jewel God/Lawson-Jewel-God-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133499,9 +133499,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50534/50534_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50534/50534_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50534/50534_atk.png"
+      "default": "../video/Seal material and fusion material/Lawson/Lawson Metal God/Lawson-Metal-God-default.webm",
+      "idle": "../video/Seal material and fusion material/Lawson/Lawson Metal God/Lawson-Metal-God-idle.webm",
+      "atk": "../video/Seal material and fusion material/Lawson/Lawson Metal God/Lawson-Metal-God-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133640,9 +133640,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50544/50544_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50544/50544_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50544/50544_atk.png"
+      "default": "../video/Seal material and fusion material/Lawson/Lawson Crystal God/Lawson-Crystal-God-default.webm",
+      "idle": "../video/Seal material and fusion material/Lawson/Lawson Crystal God/Lawson-Crystal-God-idle.webm",
+      "atk": "../video/Seal material and fusion material/Lawson/Lawson Crystal God/Lawson-Crystal-God-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133781,9 +133781,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10503/10503_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10503/10503_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10503/10503_atk.png"
+      "default": "../video/Summon/4 star start/Ulkina/Fire Witch Ulkina/Fire-Witch-Ulkina-default.webm",
+      "idle": "../video/Summon/4 star start/Ulkina/Fire Witch Ulkina/Fire-Witch-Ulkina-idle.webm",
+      "atk": "../video/Summon/4 star start/Ulkina/Fire Witch Ulkina/Fire-Witch-Ulkina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -133965,9 +133965,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10504/10504_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10504/10504_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10504/10504_atk.png"
+      "default": "../video/Summon/4 star start/Ulkina/Fire Dragoon Ulkina/Fire-Dragoon-Ulkina-default.webm",
+      "idle": "../video/Summon/4 star start/Ulkina/Fire Dragoon Ulkina/Fire-Dragoon-Ulkina-idle.webm",
+      "atk": "../video/Summon/4 star start/Ulkina/Fire Dragoon Ulkina/Fire-Dragoon-Ulkina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -134167,9 +134167,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10505/10505_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10505/10505_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/10505/10505_atk.png"
+      "default": "../video/Summon/4 star start/Ulkina/Fire Goddess Ulkina/Fire-Goddess-Ulkina-default.webm",
+      "idle": "../video/Summon/4 star start/Ulkina/Fire Goddess Ulkina/Fire-Goddess-Ulkina-idle.webm",
+      "atk": "../video/Summon/4 star start/Ulkina/Fire Goddess Ulkina/Fire-Goddess-Ulkina-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -134352,9 +134352,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20483/20483_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20483/20483_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20483/20483_atk.png"
+      "default": "../video/Summon/4 star start/Kuhla/Aquamancer Kuhla/Aquamancer-Kuhla-default.webm",
+      "idle": "../video/Summon/4 star start/Kuhla/Aquamancer Kuhla/Aquamancer-Kuhla-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuhla/Aquamancer Kuhla/Aquamancer-Kuhla-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -134536,9 +134536,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20484/20484_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20484/20484_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20484/20484_atk.png"
+      "default": "../video/Summon/4 star start/Kuhla/Aqua Ruler Kuhla/Aqua-Ruler-Kuhla-default.webm",
+      "idle": "../video/Summon/4 star start/Kuhla/Aqua Ruler Kuhla/Aqua-Ruler-Kuhla-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuhla/Aqua Ruler Kuhla/Aqua-Ruler-Kuhla-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -134738,9 +134738,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20485/20485_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20485/20485_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/20485/20485_atk.png"
+      "default": "../video/Summon/4 star start/Kuhla/Aqua Goddess Kuhla/Aqua-Goddess-Kuhla-default.webm",
+      "idle": "../video/Summon/4 star start/Kuhla/Aqua Goddess Kuhla/Aqua-Goddess-Kuhla-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuhla/Aqua Goddess Kuhla/Aqua-Goddess-Kuhla-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -134923,9 +134923,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30473/30473_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30473/30473_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30473/30473_atk.png"
+      "default": "../video/Summon/4 star start/Tia/Forest Guardian Tia/Forest-Guardian-Tia-default.webm",
+      "idle": "../video/Summon/4 star start/Tia/Forest Guardian Tia/Forest-Guardian-Tia-idle.webm",
+      "atk": "../video/Summon/4 star start/Tia/Forest Guardian Tia/Forest-Guardian-Tia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -135107,9 +135107,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30474/30474_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30474/30474_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30474/30474_atk.png"
+      "default": "../video/Summon/4 star start/Tia/Divine Guardian Tia/Divine-Guardian-Tia-default.webm",
+      "idle": "../video/Summon/4 star start/Tia/Divine Guardian Tia/Divine-Guardian-Tia-idle.webm",
+      "atk": "../video/Summon/4 star start/Tia/Divine Guardian Tia/Divine-Guardian-Tia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -135309,9 +135309,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30475/30475_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30475/30475_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/30475/30475_atk.png"
+      "default": "../video/Summon/4 star start/Tia/Guardian Goddess Tia/Guardian-Goddess-Tia-default.webm",
+      "idle": "../video/Summon/4 star start/Tia/Guardian Goddess Tia/Guardian-Goddess-Tia-idle.webm",
+      "atk": "../video/Summon/4 star start/Tia/Guardian Goddess Tia/Guardian-Goddess-Tia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -135494,9 +135494,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40473/40473_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40473/40473_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40473/40473_atk.png"
+      "default": "../video/Summon/4 star start/Rowgen/Bolt Gun Rowgen/Bolt-Gun-Rowgen-default.webm",
+      "idle": "../video/Summon/4 star start/Rowgen/Bolt Gun Rowgen/Bolt-Gun-Rowgen-idle.webm",
+      "atk": "../video/Summon/4 star start/Rowgen/Bolt Gun Rowgen/Bolt-Gun-Rowgen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -135678,9 +135678,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40474/40474_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40474/40474_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40474/40474_atk.png"
+      "default": "../video/Summon/4 star start/Rowgen/Thunder Gun Rowgen/Thunder-Gun-Rowgen-default.webm",
+      "idle": "../video/Summon/4 star start/Rowgen/Thunder Gun Rowgen/Thunder-Gun-Rowgen-idle.webm",
+      "atk": "../video/Summon/4 star start/Rowgen/Thunder Gun Rowgen/Thunder-Gun-Rowgen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -135880,9 +135880,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40475/40475_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40475/40475_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/40475/40475_atk.png"
+      "default": "../video/Summon/4 star start/Rowgen/Lightning Gun Rowgen/Lightning-Gun-Rowgen-default.webm",
+      "idle": "../video/Summon/4 star start/Rowgen/Lightning Gun Rowgen/Lightning-Gun-Rowgen-idle.webm",
+      "atk": "../video/Summon/4 star start/Rowgen/Lightning Gun Rowgen/Lightning-Gun-Rowgen-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -136065,9 +136065,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50513/50513_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50513/50513_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50513/50513_atk.png"
+      "default": "../video/Summon/4 star start/Narza/Mad Knight Narza/Mad-Knight-Narza-default.webm",
+      "idle": "../video/Summon/4 star start/Narza/Mad Knight Narza/Mad-Knight-Narza-idle.webm",
+      "atk": "../video/Summon/4 star start/Narza/Mad Knight Narza/Mad-Knight-Narza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -136249,9 +136249,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50514/50514_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50514/50514_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50514/50514_atk.png"
+      "default": "../video/Summon/4 star start/Narza/Mad King Narza/Mad-King-Narza-default.webm",
+      "idle": "../video/Summon/4 star start/Narza/Mad King Narza/Mad-King-Narza-idle.webm",
+      "atk": "../video/Summon/4 star start/Narza/Mad King Narza/Mad-King-Narza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -136451,9 +136451,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50515/50515_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50515/50515_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/50515/50515_atk.png"
+      "default": "../video/Summon/4 star start/Narza/Mad God Narza/Mad-God-Narza-default.webm",
+      "idle": "../video/Summon/4 star start/Narza/Mad God Narza/Mad-God-Narza-idle.webm",
+      "atk": "../video/Summon/4 star start/Narza/Mad God Narza/Mad-God-Narza-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -136636,9 +136636,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60533/60533_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60533/60533_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60533/60533_atk.png"
+      "default": "../video/Summon/4 star start/Kuda/Assassin Kuda/Assassin-Kuda-default.webm",
+      "idle": "../video/Summon/4 star start/Kuda/Assassin Kuda/Assassin-Kuda-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuda/Assassin Kuda/Assassin-Kuda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -136843,9 +136843,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60534/60534_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60534/60534_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60534/60534_atk.png"
+      "default": "../video/Summon/4 star start/Kuda/Loyal Assassin Kuda/Loyal-Assassin-Kuda-default.webm",
+      "idle": "../video/Summon/4 star start/Kuda/Loyal Assassin Kuda/Loyal-Assassin-Kuda-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuda/Loyal Assassin Kuda/Loyal-Assassin-Kuda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -137068,9 +137068,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60535/60535_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60535/60535_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60535/60535_atk.png"
+      "default": "../video/Summon/4 star start/Kuda/Master Assassin Kuda/Master-Assassin-Kuda-default.webm",
+      "idle": "../video/Summon/4 star start/Kuda/Master Assassin Kuda/Master-Assassin-Kuda-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuda/Master Assassin Kuda/Master-Assassin-Kuda-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -261593,9 +261593,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60536/60536_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60536/60536_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/60536/60536_atk.png"
+      "default": "../video/Summon/4 star start/Kuda/Shadow Assailant Kuda/Shadow-Assailant-Kuda-default.webm",
+      "idle": "../video/Summon/4 star start/Kuda/Shadow Assailant Kuda/Shadow-Assailant-Kuda-idle.webm",
+      "atk": "../video/Summon/4 star start/Kuda/Shadow Assailant Kuda/Shadow-Assailant-Kuda-atk.webm"
     },
     "effects": {
       "atk": "",
