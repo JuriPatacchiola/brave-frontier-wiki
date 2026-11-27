@@ -349000,9 +349000,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810134/810134_default.png",
-      "idle": "../video/Ultor/Ultor/Ultor-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810134/810134_atk.png"
+      "default": "../video/Greek/Ultor/Ultor/Ultor-default.webm",
+      "idle": "../video/Greek/Ultor/Ultor/Ultor-idle.webm",
+      "atk": "../video/Greek/Ultor/Ultor/Ultor-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -349206,9 +349206,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810135/810135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810135/810135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810135/810135_atk.png"
+      "default": "../video/Greek/Ultor/Valiant Ultor/Valiant-Ultor-default.webm",
+      "idle": "../video/Greek/Ultor/Valiant Ultor/Valiant-Ultor-idle.webm",
+      "atk": "../video/Greek/Ultor/Valiant Ultor/Valiant-Ultor-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -349430,9 +349430,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810146/810146_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810146/810146_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/810146/810146_atk.png"
+      "default": "../video/Greek/Ultor/Cyclopean Ultor/Cyclopean-Ultor-default.webm",
+      "idle": "../video/Greek/Ultor/Cyclopean Ultor/Cyclopean-Ultor-idle.webm",
+      "atk": "../video/Greek/Ultor/Cyclopean Ultor/Cyclopean-Ultor-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -350167,9 +350167,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820135/820135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820135/820135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820135/820135_atk.png"
+      "default": "../video/Greek/Tridon/Merciless Tridon/Merciless-Tridon-default.webm",
+      "idle": "../video/Greek/Tridon/Merciless Tridon/Merciless-Tridon-idle.webm",
+      "atk": "../video/Greek/Tridon/Merciless Tridon/Merciless-Tridon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -350391,9 +350391,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820146/820146_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820146/820146_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820146/820146_atk.png"
+      "default": "../video/Greek/Tridon/Colossal Tridon/Colossal-Tridon-default.webm",
+      "idle": "../video/Greek/Tridon/Colossal Tridon/Colossal-Tridon-idle.webm",
+      "atk": "../video/Greek/Tridon/Colossal Tridon/Colossal-Tridon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -351967,9 +351967,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840134/840134_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840134/840134_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840134/840134_atk.png"
+      "default": "../video/Greek/Zedus/Zedus/Zedus-default.webm",
+      "idle": "../video/Greek/Zedus/Zedus/Zedus-idle.webm",
+      "atk": "../video/Greek/Zedus/Zedus/Zedus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -352173,9 +352173,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840135/840135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840135/840135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840135/840135_atk.png"
+      "default": "../video/Greek/Zedus/Boltstrike Zedus/Boltstrike-Zedus-default.webm",
+      "idle": "../video/Greek/Zedus/Boltstrike Zedus/Boltstrike-Zedus-idle.webm",
+      "atk": "../video/Greek/Zedus/Boltstrike Zedus/Boltstrike-Zedus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -352397,9 +352397,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840146/840146_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840146/840146_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840146/840146_atk.png"
+      "default": "../video/Greek/Zedus/Boltdrive Zedus/Boltdrive-Zedus-default.webm",
+      "idle": "../video/Greek/Zedus/Boltdrive Zedus/Boltdrive-Zedus-idle.webm",
+      "atk": "../video/Greek/Zedus/Boltdrive Zedus/Boltdrive-Zedus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -352928,9 +352928,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850134/850134_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850134/850134_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850134/850134_atk.png"
+      "default": "../video/Greek/Aurelia/Aurelia/Aurelia-default.webm",
+      "idle": "../video/Greek/Aurelia/Aurelia/Aurelia-idle.webm",
+      "atk": "../video/Greek/Aurelia/Aurelia/Aurelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -353134,9 +353134,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850135/850135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850135/850135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850135/850135_atk.png"
+      "default": "../video/Greek/Aurelia/Elegant Aurelia/Elegant-Aurelia-default.webm",
+      "idle": "../video/Greek/Aurelia/Elegant Aurelia/Elegant-Aurelia-idle.webm",
+      "atk": "../video/Greek/Aurelia/Elegant Aurelia/Elegant-Aurelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -353358,9 +353358,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850146/850146_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850146/850146_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850146/850146_atk.png"
+      "default": "../video/Greek/Aurelia/Statuesque Aurelia/Statuesque-Aurelia-default.webm",
+      "idle": "../video/Greek/Aurelia/Statuesque Aurelia/Statuesque-Aurelia-idle.webm",
+      "atk": "../video/Greek/Aurelia/Statuesque Aurelia/Statuesque-Aurelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -353973,9 +353973,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860134/860134_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860134/860134_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860134/860134_atk.png"
+      "default": "../video/Greek/Hadaron/Hadaron/Hadaron-default.webm",
+      "idle": "../video/Greek/Hadaron/Hadaron/Hadaron-idle.webm",
+      "atk": "../video/Greek/Hadaron/Hadaron/Hadaron-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -354179,9 +354179,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860135/860135_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860135/860135_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860135/860135_atk.png"
+      "default": "../video/Greek/Hadaron/Heartless Hadaron/Heartless-Hadaron-default.webm",
+      "idle": "../video/Greek/Hadaron/Heartless Hadaron/Heartless-Hadaron-idle.webm",
+      "atk": "../video/Greek/Hadaron/Heartless Hadaron/Heartless-Hadaron-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -354403,9 +354403,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860146/860146_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860146/860146_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860146/860146_atk.png"
+      "default": "../video/Greek/Hadaron/Netherking Hadaron/Netherking-Hadaron-default.webm",
+      "idle": "../video/Greek/Hadaron/Netherking Hadaron/Netherking-Hadaron-idle.webm",
+      "atk": "../video/Greek/Hadaron/Netherking Hadaron/Netherking-Hadaron-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -366542,9 +366542,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820147/820147_default.png",
-      "idle": "../video/Tridon/Neptunian Tridon/Neptunian-Tridon-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/820147/820147_atk.png"
+      "default": "../video/Greek/Tridon/Neptunian Tridon/Neptunian-Tridon-default.webm",
+      "idle": "../video/Greek/Tridon/Neptunian Tridon/Neptunian-Tridon-idle.webm",
+      "atk": "../video/Greek/Tridon/Neptunian Tridon/Neptunian-Tridon-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -367066,9 +367066,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840147/840147_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840147/840147_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/840147/840147_atk.png"
+      "default": "../video/Greek/Zedus/Imperator Zedus/Imperator-Zedus-default.webm",
+      "idle": "../video/Greek/Zedus/Imperator Zedus/Imperator-Zedus-idle.webm",
+      "atk": "../video/Greek/Zedus/Imperator Zedus/Imperator-Zedus-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -367328,9 +367328,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850147/850147_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850147/850147_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/850147/850147_atk.png"
+      "default": "../video/Greek/Aurelia/Archangel Aurelia/Archangel-Aurelia-default.webm",
+      "idle": "../video/Greek/Aurelia/Archangel Aurelia/Archangel-Aurelia-idle.webm",
+      "atk": "../video/Greek/Aurelia/Archangel Aurelia/Archangel-Aurelia-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -367590,9 +367590,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860147/860147_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860147/860147_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/860147/860147_atk.png"
+      "default": "../video/Greek/Hadaron/Deathless Hadaron/Deathless-Hadaron-default.webm",
+      "idle": "../video/Greek/Hadaron/Deathless Hadaron/Deathless-Hadaron-idle.webm",
+      "atk": "../video/Greek/Hadaron/Deathless Hadaron/Deathless-Hadaron-atk.webm"
     },
     "effects": {
       "atk": "",
