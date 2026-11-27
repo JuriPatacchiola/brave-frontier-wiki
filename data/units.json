@@ -478696,9 +478696,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710113/710113_default.png",
-      "idle": "../video/Skalmold-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710113/710113_atk.png"
+      "default": "../video/EU/Valkirie Sister/Skalmold/Skalmold/Skalmold-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Skalmold/Skalmold/Skalmold-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Skalmold/Skalmold/Skalmold-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -478903,9 +478903,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710114/710114_default.png",
-      "idle": "../video/Holy-Skalmold-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710114/710114_atk.png"
+      "default": "../video/EU/Valkirie Sister/Skalmold/Holy Skalmold/Holy-Skalmold-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Skalmold/Holy Skalmold/Holy-Skalmold-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Skalmold/Holy Skalmold/Holy-Skalmold-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -479128,9 +479128,9 @@
       }
     },
     "animations": {
-      "default": "../video/Mischievous-Skalmold-default.webm",
-      "idle": "../video/Mischievous-Skalmold-idle.webm",
-      "atk": "../video/Mischievous-Skalmold-atk.webm"
+      "default": "../video/EU/Valkirie Sister/Skalmold/Mischievous Skalmold/Mischievous-Skalmold-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Skalmold/Mischievous Skalmold/Mischievous-Skalmold-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Skalmold/Mischievous Skalmold/Mischievous-Skalmold-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -479336,9 +479336,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720113/720113_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720113/720113_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720113/720113_atk.png"
+      "default": "../video/EU/Valkirie Sister/Svafa/Svafa/Svafa-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Svafa/Svafa/Svafa-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Svafa/Svafa/Svafa-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -479520,9 +479520,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720114/720114_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720114/720114_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720114/720114_atk.png"
+      "default": "../video/EU/Valkirie Sister/Svafa/Holy Svafa/Holy-Svafa-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Svafa/Holy Svafa/Holy-Svafa-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Svafa/Holy Svafa/Holy-Svafa-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -479722,9 +479722,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720115/720115_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720115/720115_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/720115/720115_atk.png"
+      "default": "../video/EU/Valkirie Sister/Svafa/Goddess Svafa/Goddess-Svafa-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Svafa/Goddess Svafa/Goddess-Svafa-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Svafa/Goddess Svafa/Goddess-Svafa-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -479907,9 +479907,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730113/730113_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730113/730113_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730113/730113_atk.png"
+      "default": "../video/EU/Valkirie Sister/Eir/Eir/Eir-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Eir/Eir/Eir-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Eir/Eir/Eir-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -480091,9 +480091,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730114/730114_default.png",
-      "idle": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730114/730114_idle.png",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/730114/730114_atk.png"
+      "default": "../video/EU/Valkirie Sister/Eir/Holy Eir/Holy-Eir-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Eir/Holy Eir/Holy-Eir-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Eir/Holy Eir/Holy-Eir-atk.webm"
     },
     "effects": {
       "atk": "",
@@ -505230,9 +505230,9 @@
       }
     },
     "animations": {
-      "default": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710116/710116_default.png",
-      "idle": "../video/Skalmold-Last-Stand-idle.webm",
-      "atk": "https://library.bravefrontier.jp/bf1_rsc/unit/apng/710116/710116_atk.png"
+      "default": "../video/EU/Valkirie Sister/Skalmold/Skalmold Last Stand/Skalmold-Last-Stand-default.webm",
+      "idle": "../video/EU/Valkirie Sister/Skalmold/Skalmold Last Stand/Skalmold-Last-Stand-idle.webm",
+      "atk": "../video/EU/Valkirie Sister/Skalmold/Skalmold Last Stand/Skalmold-Last-Stand-atk.webm"
     },
     "effects": {
       "atk": "",
